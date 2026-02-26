@@ -1,276 +1,155 @@
-export const name = "antidelete-ib";
-export const description = "Gère le système anti-suppression pour les conversations privées (IB)";
-export const usage = "!antidelete-ib [on/off/status/stats/last/clear/contacts/search]";
+import fs from "fs";
+import path from "path";
+import { loadSudo } from "../index.js";
 
-export async function execute(sock, msg, args) {
-  const from = msg.key.remoteJid;
-  const sender = msg.key.participant || from;
-  const isGroup = from.endsWith("@g.us");
-  
+const DB_FILE = path.resolve("./antidelete-ib.json");
+
+export const name = "antidelete-ib";
+
+export async function execute(sock, msg, args, from) {
   try {
-    // Vérifier si le système de protection est disponible
+    // === RÉCUPÉRER L'EXPÉDITEUR ===
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // === VÉRIFICATION DES DROITS (OWNER ET SUDO UNIQUEMENT) ===
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+
+    if (!isOwner && !isSudo) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Accès refusé. Owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    // === VÉRIFIER SYSTÈME DE PROTECTION ===
     if (!global.protectionSystem?.antiDeleteIB) {
-      await sock.sendMessage(from, { 
-        text: "> KNUT XMD : ❌ Système anti-delete ib non initialisé." 
-      });
+      await sock.sendMessage(from, { text: "> Knut XMD : Système anti-delete IB non initialisé." }, { quoted: msg });
       return;
     }
 
     const antiDelete = global.protectionSystem.antiDeleteIB;
-    const currentStatus = antiDelete.getStats().isEnabled;
-    const botNumber = antiDelete.getStats().botNumber;
+    const stats = antiDelete.getStats();
+    const currentStatus = stats.isEnabled;
+    const botNumber = stats.botNumber;
 
-    // Afficher l'aide si pas d'arguments
-    if (!args[0]) {
-      const stats = antiDelete.getStats();
-      const statusEmoji = currentStatus ? "✅" : "❌";
-      const statusText = currentStatus ? "ACTIVÉ" : "DÉSACTIVÉ";
+    // === ARGUMENT ===
+    const arg = args[0]?.toLowerCase();
+
+    if (!arg || !["on", "off", "status", "stats", "contacts", "last", "search", "clear", "help"].includes(arg)) {
+      const status = currentStatus ? "✅ activé" : "🛑 désactivé";
       
-      const message = 
-        `╭═══❰ *ANTI-DELETE IB* ❱═══╮\n` +
-        `┃\n` +
-        `┃ ${statusEmoji} *Statut :* ${statusText}\n` +
-        `┃ 👥 *Contacts :* ${stats.totalContacts}\n` +
-        `┃ 📊 *Messages :* ${stats.totalMessages}\n` +
-        `┃ 📱 *Bot IB :* ${botNumber || 'Non défini'}\n` +
-        `┃\n` +
-        `┃ *Utilisation :*\n` +
-        `┃ !antidelete-ib on           → Activer\n` +
-        `┃ !antidelete-ib off          → Désactiver\n` +
-        `┃ !antidelete-ib status       → Statut détaillé\n` +
-        `┃ !antidelete-ib stats        → Statistiques\n` +
-        `┃ !antidelete-ib contacts     → Liste des contacts\n` +
-        `┃ !antidelete-ib last [n]     → Voir les n derniers\n` +
-        `┃ !antidelete-ib search [nom] → Rechercher par nom\n` +
-        `┃ !antidelete-ib clear        → Vider la base\n` +
-        `┃ !antidelete-ib help         → Aide détaillée\n` +
-        `╰═══════════════════╯`;
-      
-      await sock.sendMessage(from, { text: message });
-      return;
-    }
-
-    const command = args[0].toLowerCase();
-
-    // Aide détaillée
-    if (command === "help") {
-      const message = 
-        `╭═══❰ *AIDE ANTI-DELETE IB* ❱═══╮\n` +
-        `┃\n` +
-        `┃ 📌 *Description :*\n` +
-        `┃ Protège les conversations privées contre\n` +
-        `┃ la suppression de messages. Les messages\n` +
-        `┃ supprimés sont restaurés dans l'IB du bot.\n` +
-        `┃ L'expéditeur affiché est le nom WhatsApp\n` +
-        `┃ de la personne qui a supprimé le message.\n` +
-        `┃\n` +
-        `┃ 📋 *Commandes :*\n` +
-        `┃ • on           → Active la protection\n` +
-        `┃ • off          → Désactive la protection\n` +
-        `┃ • status       → Affiche le statut détaillé\n` +
-        `┃ • stats        → Statistiques complètes\n` +
-        `┃ • contacts     → Liste des contacts suivis\n` +
-        `┃ • last [n]     → Derniers messages (défaut:5)\n` +
-        `┃ • search [nom] → Rechercher par nom\n` +
-        `┃ • clear        → Vide toute la base\n` +
-        `┃\n` +
-        `┃ ⚠️ *Note :* Les messages restaurés sont\n` +
-        `┃ envoyés dans l'IB du bot (${botNumber || 'Non défini'})\n` +
-        `┃ avec le nom WhatsApp de l'expéditeur.\n` +
-        `╰═══════════════════╯`;
-      
-      await sock.sendMessage(from, { text: message });
-      return;
-    }
-
-    // Activer
-    if (command === "on") {
-      if (!botNumber) {
-        await sock.sendMessage(from, { 
-          text: "> KNUT XMD : ❌ Impossible d'activer : NUMÉRO du bot non défini dans .env" 
-        });
-        return;
-      }
-
-      if (currentStatus) {
-        await sock.sendMessage(from, { 
-          text: "> KNUT XMD : ⚠️ L'anti-delete ib est déjà activé." 
-        });
-        return;
-      }
-
-      antiDelete.setStatus(true);
       await sock.sendMessage(from, { 
-        text: `> KNUT XMD : ✅ Anti-delete ib activé avec succès !\nLes messages supprimés seront restaurés dans l'IB du bot (${botNumber})\nL'expéditeur affiché sera le nom WhatsApp de la personne.` 
-      });
-      
-      console.log(chalk.cyan(`[ANTIDELETE IB] Activé par ${sender}`));
+        text: `> Knut XMD: Anti-Delete IB\n\n` +
+              `État actuel : ${status}\n` +
+              `Contacts : ${stats.totalContacts}\n` +
+              `Messages : ${stats.totalMessages}\n` +
+              `Médias : ${stats.totalMedia}\n` +
+              `Bot IB : ${botNumber || "Non défini"}\n\n` +
+              `Utilisation :\n` +
+              `• antidelete-ib on        → ✅ Activer\n` +
+              `• antidelete-ib off       → 🛑 Désactiver\n` +
+              `• antidelete-ib status    → 📊 Statut\n` +
+              `• antidelete-ib stats     → 📈 Statistiques\n` +
+              `• antidelete-ib contacts  → 👥 Liste contacts\n` +
+              `• antidelete-ib last [n]  → Voir derniers messages\n` +
+              `• antidelete-ib search [nom] → 🔍 Rechercher\n` +
+              `• antidelete-ib clear     → 🗑️ Vider la base\n` +
+              `• antidelete-ib help      → ℹ️ Aide détaillée`
+      }, { quoted: msg });
       return;
     }
 
-    // Désactiver
-    if (command === "off") {
-      if (!currentStatus) {
-        await sock.sendMessage(from, { 
-          text: "> KNUT XMD : ⚠️ L'anti-delete ib est déjà désactivé." 
-        });
-        return;
-      }
-
-      antiDelete.setStatus(false);
+    // === HELP ===
+    if (arg === "help") {
       await sock.sendMessage(from, { 
-        text: "> KNUT XMD : ✅ Anti-delete ib désactivé avec succès." 
-      });
-      
-      console.log(chalk.yellow(`[ANTIDELETE IB] Désactivé par ${sender}`));
+        text: `> Knut XMD: Aide Anti-Delete IB\n\n` +
+              `📌 *Description :*\n` +
+              `Protège les conversations privées contre la suppression.\n` +
+              `Les messages supprimés sont restaurés dans l'IB du bot.\n\n` +
+              `👤 *Expéditeur affiché :*\n` +
+              `Le nom WhatsApp de la personne qui a supprimé le message.\n\n` +
+              `📋 *Commandes :*\n` +
+              `• on        → ✅ Activer\n` +
+              `• off       → 🛑 Désactiver\n` +
+              `• status    → 📊 Statut détaillé\n` +
+              `• stats     → 📈 Statistiques\n` +
+              `• contacts  → 👥 Liste des contacts\n` +
+              `• last [n]  → Voir les n derniers messages\n` +
+              `• search [nom] → 🔍 Rechercher par nom\n` +
+              `• clear     → 🗑️ Vider la base (avec --force)`
+      }, { quoted: msg });
       return;
     }
 
-    // Statut détaillé
-    if (command === "status") {
-      const stats = antiDelete.getStats();
-      const statusEmoji = currentStatus ? "✅" : "❌";
+    // === STATUS DÉTAILLÉ ===
+    if (arg === "status") {
+      const statusEmoji = currentStatus ? "✅" : "🛑";
       
-      const message = 
-        `╭═══❰ *STATUT ANTI-DELETE IB* ❱═══╮\n` +
-        `┃\n` +
-        `┃ ${statusEmoji} *État :* ${currentStatus ? 'Actif' : 'Inactif'}\n` +
-        `┃ 📱 *Bot IB :* ${stats.botNumber || 'Non défini'}\n` +
-        `┃ 👥 *Contacts suivis :* ${stats.totalContacts}\n` +
-        `┃ 📊 *Messages stockés :* ${stats.totalMessages}\n` +
-        `┃ 🖼️ *Médias stockés :* ${stats.totalMedia}\n` +
-        `┃ ℹ️ *Info :* Les messages restaurés affichent\n` +
-        `┃ le nom WhatsApp de l'expéditeur.\n` +
-        `╰═══════════════════╯`;
-      
-      await sock.sendMessage(from, { text: message });
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Anti-Delete IB - Statut\n\n` +
+              `État : ${statusEmoji} ${currentStatus ? "Activé" : "Désactivé"}\n` +
+              `Bot IB : ${botNumber || "Non défini"}\n` +
+              `Contacts suivis : ${stats.totalContacts}\n` +
+              `Messages stockés : ${stats.totalMessages}\n` +
+              `Médias stockés : ${stats.totalMedia}\n` +
+              `Rotations : ${stats.totalRotations || 0}\n` +
+              `Base : ${path.basename(DB_FILE)}`
+      }, { quoted: msg });
       return;
     }
 
-    // Statistiques
-    if (command === "stats") {
-      const stats = antiDelete.getStats();
-      
-      const message = 
-        `╭═══❰ *STATISTIQUES IB* ❱═══╮\n` +
-        `┃\n` +
-        `┃ 👥 *Contacts :* ${stats.totalContacts}\n` +
-        `┃ 📈 *Messages :* ${stats.totalMessages}\n` +
-        `┃ 🖼️ *Médias :* ${stats.totalMedia}\n` +
-        `┃ 📦 *Capacité max :* ${stats.maxMessages}\n` +
-        `┃ 🔁 *Rotations :* ${stats.totalRotations || 0}\n` +
-        `┃\n` +
-        `┃ 💾 *Base de données :*\n` +
-        `╰═══════════════════╯`;
-      
-      await sock.sendMessage(from, { text: message });
+    // === STATISTIQUES ===
+    if (arg === "stats") {
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Anti-Delete IB - Statistiques\n\n` +
+              `Contacts : ${stats.totalContacts}\n` +
+              `Messages : ${stats.totalMessages}\n` +
+              `Médias : ${stats.totalMedia}\n` +
+              `Capacité max : ${stats.maxMessages}\n` +
+              `Rotations : ${stats.totalRotations || 0}\n` +
+              `Rotation auto : ${stats.rotationEnabled ? "✅ Oui" : "🛑 Non"}`
+      }, { quoted: msg });
       return;
     }
 
-    // Liste des contacts
-    if (command === "contacts") {
+    // === CONTACTS ===
+    if (arg === "contacts") {
       const db = antiDelete.loadDB();
       const contacts = Object.keys(db.messages || {}).sort();
       
       if (contacts.length === 0) {
         await sock.sendMessage(from, { 
-          text: "> KNUT XMD : 📭 Aucun contact enregistré pour le moment." 
-        });
+          text: "> Knut XMD : 📭 Aucun contact enregistré." 
+        }, { quoted: msg });
         return;
       }
 
-      let messageText = `╭═══❰ *CONTACTS SUIVIS (IB)* ❱═══╮\n┃\n`;
-      
-      contacts.forEach((contact, index) => {
+      let msgText = `> Knut XMD: Contacts suivis (${contacts.length})\n\n`;
+      contacts.slice(0, 15).forEach((contact, i) => {
         const msgCount = db.messages[contact]?.length || 0;
         const lastMsg = db.messages[contact]?.slice(-1)[0];
-        const lastDate = lastMsg?.timestamp ? 
-          new Date(lastMsg.timestamp * 1000).toLocaleString('fr-FR', {
-            hour: '2-digit',
-            minute: '2-digit',
-            day: '2-digit',
-            month: '2-digit'
-          }) : 'Jamais';
-        const lastPushName = lastMsg?.pushName || 'Inconnu';
-        
-        messageText += 
-          `┃ ${index + 1}. 📱 ${contact.split('@')[0]}\n` +
-          `┃    👤 ${lastPushName}\n` +
-          `┃    💬 ${msgCount} messages\n` +
-          `┃    🕐 Dernier: ${lastDate}\n` +
-          `┃\n`;
+        const name = lastMsg?.pushName || "Inconnu";
+        msgText += `${i+1}. 👤 ${name}\n   📱 ${contact.split('@')[0]}\n   💬 ${msgCount} messages\n\n`;
       });
-      
-      messageText += `╰═══════════════════╯`;
-      
-      await sock.sendMessage(from, { text: messageText });
+
+      if (contacts.length > 15) {
+        msgText += `... et ${contacts.length - 15} autres contacts\n`;
+      }
+
+      await sock.sendMessage(from, { text: msgText }, { quoted: msg });
       return;
     }
 
-    // Recherche par nom
-    if (command === "search") {
-      if (!args[1]) {
-        await sock.sendMessage(from, { 
-          text: "> KNUT XMD : ⚠️ Utilisation : !antidelete-ib search [nom]" 
-        });
-        return;
-      }
-
-      const searchTerm = args.slice(1).join(" ").toLowerCase();
-      const db = antiDelete.loadDB();
-      const results = [];
-      
-      for (const [senderJid, messages] of Object.entries(db.messages || {})) {
-        messages.forEach(msg => {
-          if (msg.pushName && msg.pushName.toLowerCase().includes(searchTerm)) {
-            results.push({
-              ...msg,
-              senderJid
-            });
-          }
-        });
-      }
-
-      if (results.length === 0) {
-        await sock.sendMessage(from, { 
-          text: `> KNUT XMD : 📭 Aucun message trouvé pour "${args.slice(1).join(" ")}".` 
-        });
-        return;
-      }
-
-      let messageText = `╭═══❰ *RÉSULTATS RECHERCHE* ❱═══╮\n┃\n`;
-      results.slice(0, 10).forEach((msg, index) => {
-        const date = msg.timestamp ? new Date(msg.timestamp * 1000).toLocaleString('fr-FR', {
-          hour: '2-digit',
-          minute: '2-digit',
-          day: '2-digit',
-          month: '2-digit'
-        }) : 'Date inconnue';
-        
-        messageText += 
-          `┃ ${index + 1}. 👤 ${msg.pushName}\n` +
-          `┃    📝 ${msg.content?.substring(0, 30)}${msg.content?.length > 30 ? '...' : ''}\n` +
-          `┃    🕐 ${date}\n` +
-          `┃\n`;
-      });
-      
-      if (results.length > 10) {
-        messageText += `┃ ... et ${results.length - 10} autres résultats\n┃\n`;
-      }
-      
-      messageText += `╰═══════════════════╯`;
-      
-      await sock.sendMessage(from, { text: messageText });
-      return;
-    }
-
-    // Voir les derniers messages
-    if (command === "last") {
+    // === LAST ===
+    if (arg === "last") {
       const limit = args[1] ? parseInt(args[1]) : 5;
       if (isNaN(limit) || limit < 1 || limit > 20) {
         await sock.sendMessage(from, { 
-          text: "> KNUT XMD : ⚠️ Utilisation : !antidelete-ib last [nombre (1-20)]" 
-        });
+          text: "> Knut XMD : ⚠️ Utilisation : antidelete-ib last [nombre 1-20]" 
+        }, { quoted: msg });
         return;
       }
 
@@ -278,75 +157,117 @@ export async function execute(sock, msg, args) {
       
       if (!lastMessages || lastMessages.length === 0) {
         await sock.sendMessage(from, { 
-          text: "> KNUT XMD : 📭 Aucun message ib stocké pour le moment." 
-        });
+          text: "> Knut XMD : 📭 Aucun message stocké." 
+        }, { quoted: msg });
         return;
       }
 
-      let messageText = `╭═══❰ *DERNIERS MESSAGES IB* ❱═══╮\n┃\n`;
-      
-      lastMessages.forEach((msg, index) => {
-        const date = msg.timestamp ? new Date(msg.timestamp * 1000).toLocaleString('fr-FR', {
-          hour: '2-digit',
-          minute: '2-digit',
-          day: '2-digit',
-          month: '2-digit'
-        }) : 'Date inconnue';
-        
-        const mediaIcon = msg.mediaType ? {
-          image: "🖼️",
-          video: "🎥",
-          audio: "🎵",
-          document: "📄",
-          sticker: "🏷️"
-        }[msg.mediaType] || "📎" : "💬";
-        
-        messageText += 
-          `┃ ${index + 1}. ${mediaIcon} *${msg.pushName || 'Inconnu'}*\n` +
-          `┃    📱 ${msg.senderJid?.split('@')[0] || 'Inconnu'}\n` +
-          `┃    📝 ${msg.content?.substring(0, 30)}${msg.content?.length > 30 ? '...' : ''}\n` +
-          `┃    🕐 ${date}\n` +
-          `┃\n`;
+      let msgText = `> Knut XMD: Derniers messages IB (${lastMessages.length})\n\n`;
+      lastMessages.forEach((m, i) => {
+        const date = m.timestamp ? new Date(m.timestamp * 1000).toLocaleString() : "Date inconnue";
+        msgText += `${i+1}. 👤 ${m.pushName || "Inconnu"}\n   📱 ${m.senderJid?.split('@')[0]}\n   📝 ${m.content?.substring(0, 50)}${m.content?.length > 50 ? "..." : ""}\n   🕐 ${date}\n\n`;
       });
-      
-      messageText += `╰═══════════════════╯`;
-      
-      await sock.sendMessage(from, { text: messageText });
+
+      await sock.sendMessage(from, { text: msgText }, { quoted: msg });
       return;
     }
 
-    // Vider la base
-    if (command === "clear") {
+    // === SEARCH ===
+    if (arg === "search") {
+      if (!args[1]) {
+        await sock.sendMessage(from, { 
+          text: "> Knut XMD : ⚠️ Utilisation : antidelete-ib search [nom]" 
+        }, { quoted: msg });
+        return;
+      }
+
+      const searchTerm = args.slice(1).join(" ").toLowerCase();
+      const db = antiDelete.loadDB();
+      const results = [];
+      
+      for (const [jid, messages] of Object.entries(db.messages || {})) {
+        messages.forEach(msg => {
+          if (msg.pushName && msg.pushName.toLowerCase().includes(searchTerm)) {
+            results.push({ ...msg, jid });
+          }
+        });
+      }
+
+      if (results.length === 0) {
+        await sock.sendMessage(from, { 
+          text: `> Knut XMD : 📭 Aucun résultat pour "${args.slice(1).join(" ")}".` 
+        }, { quoted: msg });
+        return;
+      }
+
+      let msgText = `> Knut XMD: Résultats pour "${args.slice(1).join(" ")}" (${results.length})\n\n`;
+      results.slice(0, 10).forEach((m, i) => {
+        const date = m.timestamp ? new Date(m.timestamp * 1000).toLocaleString() : "Date inconnue";
+        msgText += `${i+1}. 👤 ${m.pushName}\n   📝 ${m.content?.substring(0, 50)}${m.content?.length > 50 ? "..." : ""}\n   🕐 ${date}\n\n`;
+      });
+
+      if (results.length > 10) {
+        msgText += `... et ${results.length - 10} autres résultats\n`;
+      }
+
+      await sock.sendMessage(from, { text: msgText }, { quoted: msg });
+      return;
+    }
+
+    // === CLEAR ===
+    if (arg === "clear") {
       if (args[1] !== "--force") {
         await sock.sendMessage(from, { 
-          text: "> KNUT XMD : ⚠️ *ATTENTION !*\nCette action supprimera TOUS les messages ib stockés.\n\nFaites `!antidelete-ib clear --force` pour confirmer." 
-        });
+          text: "> Knut XMD : ⚠️ Confirmation requise.\nFaites `antidelete-ib clear --force` pour vider la base." 
+        }, { quoted: msg });
         return;
       }
 
       const cleared = antiDelete.clearDB();
       if (cleared) {
         await sock.sendMessage(from, { 
-          text: "> KNUT XMD : ✅ Base anti-delete ib vidée avec succès !" 
-        });
-        console.log(chalk.yellow(`[ANTIDELETE IB] Base vidée par ${sender}`));
+          text: "> Knut XMD: ✅ Base anti-delete IB vidée." 
+        }, { quoted: msg });
       } else {
         await sock.sendMessage(from, { 
-          text: "> KNUT XMD : ❌ Erreur lors du vidage de la base." 
-        });
+          text: "> Knut XMD : ❌ Erreur lors du vidage." 
+        }, { quoted: msg });
       }
       return;
     }
 
-    // Commande inconnue
-    await sock.sendMessage(from, { 
-      text: `> KNUT XMD : ❌ Commande inconnue. Utilisez \`!antidelete-ib help\` pour voir l'aide.` 
-    });
+    // === ON / OFF ===
+    const newState = arg === "on";
+    
+    if (arg === "on" && currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'anti-delete IB est déjà ✅ activé." 
+      }, { quoted: msg });
+      return;
+    }
+    
+    if (arg === "off" && !currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'anti-delete IB est déjà 🛑 désactivé." 
+      }, { quoted: msg });
+      return;
+    }
 
-  } catch (error) {
-    console.error("[ANTIDELETE IB] Erreur :", error);
+    if (arg === "on" && !botNumber) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ❌ NUMÉRO du bot non défini dans .env" 
+      }, { quoted: msg });
+      return;
+    }
+
+    antiDelete.setStatus(newState);
+    const statusEmoji = newState ? "✅" : "🛑";
     await sock.sendMessage(from, { 
-      text: "> KNUT XMD : ❌ Erreur lors de l'exécution de la commande." 
-    });
+      text: `> Knut XMD: Anti-Delete IB ${statusEmoji} ${newState ? "activé" : "désactivé"}.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur antidelete-ib:", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Une erreur est survenue." }, { quoted: msg });
   }
 }
