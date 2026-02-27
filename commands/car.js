@@ -1,1 +1,40 @@
-const a40_0x237fdb=a40_0x1a09;function a40_0x3c50(){const _0x4f871a=['key','specs','\x0a━━━━━━━━━━━━━━━━━━\x0a📅\x20Année:\x20','>\x20❌\x20Knut\x20XMD\x20:\x20Voiture\x20non\x20trouvée.','\x0a🏁\x200-100\x20km/h:\x20','toString','(((.+)+)+)+$','\x20hp\x0a⚡\x20Transmission:\x20','\x0a⛽\x20Carburant:\x20','5704330jDQIDM','1502748ExMUmY','search','Toyota','\x20sec\x0a💰\x20Prix\x20estimé:\x20$','\x0a🐎\x20Puissance:\x20','year','N/A','json','fuel_type','apply','Corolla','transmission','error','car','325510iUtRvU','zero_to_sixty_mph','remoteJid','27TtfRlX','sendMessage','&model=','2289FNhlBB','constructor','4AVVHtm','https://api.carsxe.com/specs?key=','>\x20Knut\x20XMD\x20:\x20Service\x20voitures\x20indisponible.','251627KhmlZk','horsepower','1394121wFfods','1984oUjcNV','price','make','&year=2020','3081395EiNpyl'];a40_0x3c50=function(){return _0x4f871a;};return a40_0x3c50();}(function(_0x5deacf,_0x2fdaec){const _0x5ee987=a40_0x1a09,_0x594685=_0x5deacf();while(!![]){try{const _0x53be3b=-parseInt(_0x5ee987(0x184))/0x1+parseInt(_0x5ee987(0x1a4))/0x2+parseInt(_0x5ee987(0x186))/0x3*(-parseInt(_0x5ee987(0x181))/0x4)+-parseInt(_0x5ee987(0x18b))/0x5+-parseInt(_0x5ee987(0x196))/0x6+parseInt(_0x5ee987(0x17f))/0x7*(parseInt(_0x5ee987(0x187))/0x8)+-parseInt(_0x5ee987(0x1a7))/0x9*(-parseInt(_0x5ee987(0x195))/0xa);if(_0x53be3b===_0x2fdaec)break;else _0x594685['push'](_0x594685['shift']());}catch(_0xbd93d9){_0x594685['push'](_0x594685['shift']());}}}(a40_0x3c50,0x5ad6f));const a40_0x1ceaf5=(function(){let _0x527669=!![];return function(_0x1afc2d,_0x1f8b1d){const _0x2d9d5d=_0x527669?function(){const _0x286995=a40_0x1a09;if(_0x1f8b1d){const _0x14e9c0=_0x1f8b1d[_0x286995(0x19f)](_0x1afc2d,arguments);return _0x1f8b1d=null,_0x14e9c0;}}:function(){};return _0x527669=![],_0x2d9d5d;};}()),a40_0x57471c=a40_0x1ceaf5(this,function(){const _0x5b76f1=a40_0x1a09;return a40_0x57471c[_0x5b76f1(0x191)]()[_0x5b76f1(0x197)](_0x5b76f1(0x192))['toString']()[_0x5b76f1(0x180)](a40_0x57471c)[_0x5b76f1(0x197)]('(((.+)+)+)+$');});a40_0x57471c();function a40_0x1a09(_0x32e236,_0x30471b){_0x32e236=_0x32e236-0x17d;const _0x2347d8=a40_0x3c50();let _0x57471c=_0x2347d8[_0x32e236];return _0x57471c;}export const name=a40_0x237fdb(0x1a3);export async function execute(sock,msg,args){const _0x4bc609=a40_0x237fdb,from=msg[_0x4bc609(0x18c)][_0x4bc609(0x1a6)];try{const _0xe1e1eb=args[0x0]||_0x4bc609(0x198),_0x2dbacc=args[0x1]||_0x4bc609(0x1a0),_0x1f2e03='TON_API_KEY',_0x47d183=_0x4bc609(0x182)+_0x1f2e03+'&make='+_0xe1e1eb+_0x4bc609(0x17e)+_0x2dbacc+_0x4bc609(0x18a),_0x457bef=await fetch(_0x47d183),_0x22a51e=await _0x457bef[_0x4bc609(0x19d)]();if(!_0x22a51e[_0x4bc609(0x18d)]){await sock['sendMessage'](from,{'text':_0x4bc609(0x18f)},{'quoted':msg});return;}const _0x4ab808=_0x22a51e[_0x4bc609(0x18d)][0x0],_0x144b84='>\x20🚗\x20Knut\x20XMD\x20:\x20'+_0x4ab808[_0x4bc609(0x189)]+'\x20'+_0x4ab808['model']+_0x4bc609(0x18e)+_0x4ab808[_0x4bc609(0x19b)]+'\x0a⚙️\x20Moteur:\x20'+_0x4ab808['engine']+_0x4bc609(0x194)+_0x4ab808[_0x4bc609(0x19e)]+_0x4bc609(0x19a)+_0x4ab808[_0x4bc609(0x185)]+_0x4bc609(0x193)+_0x4ab808[_0x4bc609(0x1a1)]+_0x4bc609(0x190)+(_0x4ab808[_0x4bc609(0x1a5)]||_0x4bc609(0x19c))+_0x4bc609(0x199)+(_0x4ab808[_0x4bc609(0x188)]||_0x4bc609(0x19c));await sock['sendMessage'](from,{'text':_0x144b84},{'quoted':msg});}catch(_0x181863){console[_0x4bc609(0x1a2)]('Erreur\x20car\x20:',_0x181863),await sock[_0x4bc609(0x17d)](from,{'text':_0x4bc609(0x183)},{'quoted':msg});}}
+export const name = "car";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  try {
+    const marque = args[0] || "Toyota";
+    const modele = args[1] || "Corolla";
+    
+    // API CarsXE (gratuit 500 req/mois)
+    const API_KEY = "TON_API_KEY";
+    const url = `https://api.carsxe.com/specs?key=${API_KEY}&make=${marque}&model=${modele}&year=2020`;
+    
+    const response = await fetch(url);
+    const data = await response.json();
+    
+    if (!data.specs) {
+      await sock.sendMessage(from, { text: "> ❌ Knut XMD : Voiture non trouvée." }, { quoted: msg });
+      return;
+    }
+    
+    const spec = data.specs[0];
+    
+    const reply = `> 🚗 Knut XMD : ${spec.make} ${spec.model}
+━━━━━━━━━━━━━━━━━━
+📅 Année: ${spec.year}
+⚙️ Moteur: ${spec.engine}
+⛽ Carburant: ${spec.fuel_type}
+🐎 Puissance: ${spec.horsepower} hp
+⚡ Transmission: ${spec.transmission}
+🏁 0-100 km/h: ${spec.zero_to_sixty_mph || "N/A"} sec
+💰 Prix estimé: $${spec.price || "N/A"}`;
+    
+    await sock.sendMessage(from, { text: reply }, { quoted: msg });
+    
+  } catch (err) {
+    console.error("Erreur car :", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Service voitures indisponible." }, { quoted: msg });
+  }
+}

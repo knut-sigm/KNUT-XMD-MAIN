@@ -1,1 +1,58 @@
-const a30_0x48435d=a30_0x1fc6;function a30_0x3958(){const _0x19f76d=['toString','error','Unknown\x20error','960145EuoyOj','Automatically\x20block/unblock\x20a\x20user\x2030\x20times','block','5381815TWJXwU','18HtVubD','updateBlockStatus','10GcJyht','28353479LqYbLE','search','Autoblock\x20command\x20error:','126ZIGkss','extendedTextMessage','(((.+)+)+)+$','816386NAQlVx','unblock','...','split','\x20(30\x20cycles\x20completed)','@s.whatsapp.net','participant','message','key','❌\x20*KNUT\x20XMD*:\x20No\x20user\x20specified\x0a\x0a','sendMessage','•\x20Reply:\x20.autoblock\x20(to\x20a\x20message)\x0a','contextInfo','⏳\x20*KNUT\x20XMD*:\x20Starting\x20autoblock\x20for\x20','258aaKKQM','22956SjrkhZ','apply','mentionedJid','✅\x20*KNUT\x20XMD*:\x20Autoblock\x20finished\x20for\x20','Admin','Usage:\x0a','remoteJid','3792136BqLGWH','length','•\x20Number:\x20.autoblock\x201234567890','241410FvtVkn','autoblock','•\x20Mention:\x20.autoblock\x20@user\x0a','❌\x20*KNUT\x20XMD*:\x20Failed\x20during\x20autoblock\x0aError:\x20'];a30_0x3958=function(){return _0x19f76d;};return a30_0x3958();}(function(_0x4d504b,_0x385738){const _0x142ff7=a30_0x1fc6,_0x2bd55b=_0x4d504b();while(!![]){try{const _0x1b2517=parseInt(_0x142ff7(0xd8))/0x1+parseInt(_0x142ff7(0xe5))/0x2+-parseInt(_0x142ff7(0xc6))/0x3*(parseInt(_0x142ff7(0xc7))/0x4)+-parseInt(_0x142ff7(0xdb))/0x5+-parseInt(_0x142ff7(0xd1))/0x6*(parseInt(_0x142ff7(0xe2))/0x7)+-parseInt(_0x142ff7(0xce))/0x8*(parseInt(_0x142ff7(0xdc))/0x9)+-parseInt(_0x142ff7(0xde))/0xa*(-parseInt(_0x142ff7(0xdf))/0xb);if(_0x1b2517===_0x385738)break;else _0x2bd55b['push'](_0x2bd55b['shift']());}catch(_0x2ff868){_0x2bd55b['push'](_0x2bd55b['shift']());}}}(a30_0x3958,0xabd02));const a30_0x1aa45d=(function(){let _0x4d9750=!![];return function(_0x580203,_0x3b61a7){const _0x414616=_0x4d9750?function(){const _0xca1a32=a30_0x1fc6;if(_0x3b61a7){const _0x5be475=_0x3b61a7[_0xca1a32(0xc8)](_0x580203,arguments);return _0x3b61a7=null,_0x5be475;}}:function(){};return _0x4d9750=![],_0x414616;};}()),a30_0x2fda96=a30_0x1aa45d(this,function(){const _0x7e1e84=a30_0x1fc6;return a30_0x2fda96[_0x7e1e84(0xd5)]()[_0x7e1e84(0xe0)](_0x7e1e84(0xe4))[_0x7e1e84(0xd5)]()['constructor'](a30_0x2fda96)['search'](_0x7e1e84(0xe4));});a30_0x2fda96();export const name=a30_0x48435d(0xd2);export const description=a30_0x48435d(0xd9);function a30_0x1fc6(_0x5d4acb,_0x25c132){_0x5d4acb=_0x5d4acb-0xbb;const _0x3bcd3c=a30_0x3958();let _0x2fda96=_0x3bcd3c[_0x5d4acb];return _0x2fda96;}export const category=a30_0x48435d(0xcb);export async function execute(sock,msg,args){const _0x2ed2a4=a30_0x48435d,from=msg[_0x2ed2a4(0xc0)][_0x2ed2a4(0xcd)];let _0x5a7fc7=null;if(msg['message']?.['extendedTextMessage']?.[_0x2ed2a4(0xc4)]?.['mentionedJid']?.[_0x2ed2a4(0xcf)]>0x0)_0x5a7fc7=msg[_0x2ed2a4(0xbf)][_0x2ed2a4(0xe3)][_0x2ed2a4(0xc4)][_0x2ed2a4(0xc9)][0x0];else{if(msg[_0x2ed2a4(0xbf)]?.[_0x2ed2a4(0xe3)]?.['contextInfo']?.[_0x2ed2a4(0xbe)])_0x5a7fc7=msg[_0x2ed2a4(0xbf)][_0x2ed2a4(0xe3)][_0x2ed2a4(0xc4)]['participant'];else{if(args[0x0]){const _0x22150a=args[0x0]['replace'](/[^0-9]/g,'');_0x22150a[_0x2ed2a4(0xcf)]>=0xa&&(_0x5a7fc7=_0x22150a+_0x2ed2a4(0xbd));}}}if(!_0x5a7fc7)return await sock['sendMessage'](from,{'text':_0x2ed2a4(0xc1)+_0x2ed2a4(0xcc)+_0x2ed2a4(0xd3)+_0x2ed2a4(0xc3)+_0x2ed2a4(0xd0)},{'quoted':msg});try{await sock[_0x2ed2a4(0xc2)](from,{'text':_0x2ed2a4(0xc5)+_0x5a7fc7[_0x2ed2a4(0xbb)]('@')[0x0]+_0x2ed2a4(0xe7)},{'quoted':msg});for(let _0x2d85b3=0x1;_0x2d85b3<=0x1e;_0x2d85b3++){await sock[_0x2ed2a4(0xdd)](_0x5a7fc7,_0x2ed2a4(0xda)),await new Promise(_0x15a604=>setTimeout(_0x15a604,0x1f4)),await sock['updateBlockStatus'](_0x5a7fc7,_0x2ed2a4(0xe6)),await new Promise(_0x516163=>setTimeout(_0x516163,0x1f4));}await sock[_0x2ed2a4(0xc2)](from,{'text':_0x2ed2a4(0xca)+_0x5a7fc7[_0x2ed2a4(0xbb)]('@')[0x0]+_0x2ed2a4(0xbc)},{'quoted':msg});}catch(_0x135b3b){console[_0x2ed2a4(0xd6)](_0x2ed2a4(0xe1),_0x135b3b),await sock[_0x2ed2a4(0xc2)](from,{'text':_0x2ed2a4(0xd4)+(_0x135b3b[_0x2ed2a4(0xbf)]||_0x2ed2a4(0xd7))},{'quoted':msg});}};
+export const name = "autoblock";
+export const description = "Automatically block/unblock a user 30 times";
+export const category = "Admin";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  // Détection de l'utilisateur cible
+  let targetUser = null;
+
+  // 1. Mention
+  if (msg.message?.extendedTextMessage?.contextInfo?.mentionedJid?.length > 0) {
+    targetUser = msg.message.extendedTextMessage.contextInfo.mentionedJid[0];
+  }
+  // 2. Message cité
+  else if (msg.message?.extendedTextMessage?.contextInfo?.participant) {
+    targetUser = msg.message.extendedTextMessage.contextInfo.participant;
+  }
+  // 3. Numéro fourni en argument
+  else if (args[0]) {
+    const num = args[0].replace(/[^0-9]/g, '');
+    if (num.length >= 10) {
+      targetUser = num + '@s.whatsapp.net';
+    }
+  }
+
+  if (!targetUser) {
+    return await sock.sendMessage(from, {
+      text: "❌ *KNUT XMD*: No user specified\n\n" +
+            "Usage:\n" +
+            "• Mention: .autoblock @user\n" +
+            "• Reply: .autoblock (to a message)\n" +
+            "• Number: .autoblock 1234567890"
+    }, { quoted: msg });
+  }
+
+  try {
+    await sock.sendMessage(from, { text: `⏳ *KNUT XMD*: Starting autoblock for ${targetUser.split('@')[0]}...` }, { quoted: msg });
+
+    // Boucle 30 fois
+    for (let i = 1; i <= 30; i++) {
+      await sock.updateBlockStatus(targetUser, 'block');
+      await new Promise(r => setTimeout(r, 500)); // délai 0.5s
+      await sock.updateBlockStatus(targetUser, 'unblock');
+      await new Promise(r => setTimeout(r, 500)); // délai 0.5s
+    }
+
+    await sock.sendMessage(from, { 
+      text: `✅ *KNUT XMD*: Autoblock finished for ${targetUser.split('@')[0]} (30 cycles completed)` 
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Autoblock command error:", err);
+    await sock.sendMessage(from, { 
+      text: `❌ *KNUT XMD*: Failed during autoblock\nError: ${err.message || 'Unknown error'}`
+    }, { quoted: msg });
+  }
+};

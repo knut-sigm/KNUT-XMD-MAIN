@@ -1,1 +1,69 @@
-const a15_0x385ac6=a15_0x389c;(function(_0x1b4746,_0x4985c1){const _0xf12f94=a15_0x389c,_0x220c15=_0x1b4746();while(!![]){try{const _0x588efc=parseInt(_0xf12f94(0xbb))/0x1*(parseInt(_0xf12f94(0xcc))/0x2)+parseInt(_0xf12f94(0xc1))/0x3*(parseInt(_0xf12f94(0xdc))/0x4)+parseInt(_0xf12f94(0xd7))/0x5+parseInt(_0xf12f94(0xde))/0x6+parseInt(_0xf12f94(0xd4))/0x7*(parseInt(_0xf12f94(0xc5))/0x8)+-parseInt(_0xf12f94(0xc6))/0x9*(-parseInt(_0xf12f94(0xcf))/0xa)+-parseInt(_0xf12f94(0xd8))/0xb;if(_0x588efc===_0x4985c1)break;else _0x220c15['push'](_0x220c15['shift']());}catch(_0x3ce7a5){_0x220c15['push'](_0x220c15['shift']());}}}(a15_0x3206,0x4cf9d));const a15_0x34291b=(function(){let _0x1582d7=!![];return function(_0x7ddb8a,_0x2d2a95){const _0x33ee00=_0x1582d7?function(){const _0x5e7a1d=a15_0x389c;if(_0x2d2a95){const _0x107654=_0x2d2a95[_0x5e7a1d(0xc0)](_0x7ddb8a,arguments);return _0x2d2a95=null,_0x107654;}}:function(){};return _0x1582d7=![],_0x33ee00;};}()),a15_0x2c19bf=a15_0x34291b(this,function(){const _0x11ed47=a15_0x389c;return a15_0x2c19bf['toString']()[_0x11ed47(0xd6)](_0x11ed47(0xbf))['toString']()[_0x11ed47(0xc3)](a15_0x2c19bf)[_0x11ed47(0xd6)](_0x11ed47(0xbf));});a15_0x2c19bf();import a15_0x401163 from'fs';import a15_0x30fc66 from'path';import{getGroupProtections,setGroupProtection}from'../groupManager.js';function a15_0x3206(){const _0x46a8dd=['constructor','endsWith','16LIvnut','1233DCerfA','désactivé','>\x20Knut\x20XMD:\x20Anti-Message\x0a\x0aÉtat\x20:\x20','toLowerCase','some','\x20dans\x20ce\x20groupe.*','4ffUtxE','participant','includes','10220RieUZy','key','@g.us','error','map','68873CkFEij','antiMessage','search','1118955RKCCnB','13204829fQDvQE','>\x20Knut\x20XMD:Anti-Message\x20','Cette\x20commande\x20est\x20réservée\x20aux\x20groupes.','off','11240lRFJLP','Une\x20erreur\x20est\x20survenue.','3086982iXHNoR','sendMessage','replace','290611AkRpAM','owners','activé','Accès\x20refusé.\x20Admin,\x20owner\x20ou\x20sudo\x20requis.','(((.+)+)+)+$','apply','39saEKdc','./group.json'];a15_0x3206=function(){return _0x46a8dd;};return a15_0x3206();}import{loadSudo}from'../index.js';function a15_0x389c(_0x161fc6,_0xa2e64f){_0x161fc6=_0x161fc6-0xbb;const _0x295ca0=a15_0x3206();let _0x2c19bf=_0x295ca0[_0x161fc6];return _0x2c19bf;}const GROUP_FILE=a15_0x30fc66['resolve'](a15_0x385ac6(0xc2));export const name='antimessage';export async function execute(sock,msg,args,from){const _0xbe46c2=a15_0x385ac6;try{if(!from[_0xbe46c2(0xc4)](_0xbe46c2(0xd1))){await sock['sendMessage'](from,{'text':_0xbe46c2(0xda)},{'quoted':msg});return;}const _0x128658=msg[_0xbe46c2(0xd0)][_0xbe46c2(0xcd)]||from,_0x501ccd=_0x128658['split']('@')[0x0][_0xbe46c2(0xe0)](/[^0-9]/g,''),_0x2d496e=(global[_0xbe46c2(0xbc)]||[])[_0xbe46c2(0xd3)](_0x5b6a98=>_0x5b6a98[_0xbe46c2(0xe0)](/[^0-9]/g,'')),_0x5e523b=loadSudo()[_0xbe46c2(0xd3)](_0x14f432=>_0x14f432[_0xbe46c2(0xe0)](/[^0-9]/g,'')),_0x2598b1=_0x2d496e[_0xbe46c2(0xce)](_0x501ccd),_0x25b8db=_0x5e523b['includes'](_0x501ccd),_0x180805=await isGroupAdmin(sock,from,_0x128658);if(!_0x2598b1&&!_0x25b8db&&!_0x180805){await sock['sendMessage'](from,{'text':_0xbe46c2(0xbe)},{'quoted':msg});return;}const _0x1fb7da=args[0x0]?.[_0xbe46c2(0xc9)]();if(!_0x1fb7da||!['on',_0xbe46c2(0xdb)]['includes'](_0x1fb7da)){const _0x52723e=getGroupProtections(from)[_0xbe46c2(0xd5)]?_0xbe46c2(0xbd):_0xbe46c2(0xc7);await sock['sendMessage'](from,{'text':_0xbe46c2(0xc8)+_0x52723e+'\x0a\x0aUtilisation\x20:\x20`!antimessage\x20on`\x20ou\x20`!antimessage\x20off`'},{'quoted':msg});return;}const _0x499635=_0x1fb7da==='on';setGroupProtection(from,_0xbe46c2(0xd5),_0x499635),await sock[_0xbe46c2(0xdf)](from,{'text':_0xbe46c2(0xd9)+(_0x499635?_0xbe46c2(0xbd):'désactivé')+_0xbe46c2(0xcb)},{'quoted':msg});}catch(_0x1ca947){console[_0xbe46c2(0xd2)]('Erreur\x20antimessage:',_0x1ca947),await sock[_0xbe46c2(0xdf)](from,{'text':_0xbe46c2(0xdd)},{'quoted':msg});}}async function isGroupAdmin(sock,_0x15f7d5,_0x55396f){const _0x97ff9c=a15_0x385ac6;try{const _0x1fc811=await sock['groupMetadata'](_0x15f7d5);return _0x1fc811['participants'][_0x97ff9c(0xca)](_0x433606=>_0x433606['id']===_0x55396f&&_0x433606['admin']);}catch{return![];}}
+// commands/antimessage.js
+import fs from "fs";
+import path from "path";
+import { getGroupProtections, setGroupProtection } from "../groupManager.js";
+import { loadSudo } from "../index.js"; // Import direct
+
+const GROUP_FILE = path.resolve("./group.json");
+
+export const name = "antimessage";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === GROUPE UNIQUEMENT ===
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { text: "Cette commande est réservée aux groupes." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER L'EXPÉDITEUR ===
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // === VÉRIFICATION DES DROITS ===
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+    const isAdmin = await isGroupAdmin(sock, from, sender); // Assure-toi que cette fonction existe
+
+    if (!isOwner && !isSudo && !isAdmin) {
+      await sock.sendMessage(from, { text: "Accès refusé. Admin, owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    // === ARGUMENT ===
+    const arg = args[0]?.toLowerCase();
+
+    if (!arg || !["on", "off"].includes(arg)) {
+      const current = getGroupProtections(from).antiMessage ? "activé" : "désactivé";
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Anti-Message\n\nÉtat : ${current}\n\nUtilisation : \`!antimessage on\` ou \`!antimessage off\``
+      }, { quoted: msg });
+      return;
+    }
+
+    // === MISE À JOUR ===
+    const newState = arg === "on";
+    setGroupProtection(from, "antiMessage", newState);
+
+    await sock.sendMessage(from, { 
+      text: `> Knut XMD:Anti-Message ${newState ? "activé" : "désactivé"} dans ce groupe.*`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur antimessage:", err);
+    await sock.sendMessage(from, { text: "Une erreur est survenue." }, { quoted: msg });
+  }
+}
+
+// === Utilitaire isGroupAdmin (si pas déjà dans index.js) ===
+async function isGroupAdmin(sock, groupJid, userJid) {
+  try {
+    const metadata = await sock.groupMetadata(groupJid);
+    return metadata.participants.some(p => p.id === userJid && p.admin);
+  } catch {
+    return false;
+  }
+}

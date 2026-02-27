@@ -1,1 +1,61 @@
-const a50_0x37ca93=a50_0xa821;(function(_0x3fa62e,_0x2ae05c){const _0x2c9b8a=a50_0xa821,_0x53c228=_0x3fa62e();while(!![]){try{const _0x2ecbe6=parseInt(_0x2c9b8a(0x1db))/0x1+parseInt(_0x2c9b8a(0x1ee))/0x2+parseInt(_0x2c9b8a(0x1d9))/0x3*(-parseInt(_0x2c9b8a(0x1dd))/0x4)+parseInt(_0x2c9b8a(0x1e5))/0x5*(-parseInt(_0x2c9b8a(0x1e8))/0x6)+-parseInt(_0x2c9b8a(0x1ea))/0x7+-parseInt(_0x2c9b8a(0x1d8))/0x8+parseInt(_0x2c9b8a(0x1de))/0x9*(parseInt(_0x2c9b8a(0x1ed))/0xa);if(_0x2ecbe6===_0x2ae05c)break;else _0x53c228['push'](_0x53c228['shift']());}catch(_0x15fd2e){_0x53c228['push'](_0x53c228['shift']());}}}(a50_0x5a81,0xdbba4));const a50_0x45d1ca=(function(){let _0x2347e0=!![];return function(_0x188580,_0x45c81f){const _0x149a16=_0x2347e0?function(){const _0x5e090f=a50_0xa821;if(_0x45c81f){const _0x386460=_0x45c81f[_0x5e090f(0x1e7)](_0x188580,arguments);return _0x45c81f=null,_0x386460;}}:function(){};return _0x2347e0=![],_0x149a16;};}()),a50_0x438ddb=a50_0x45d1ca(this,function(){const _0x165e7c=a50_0xa821;return a50_0x438ddb['toString']()['search'](_0x165e7c(0x1d7))[_0x165e7c(0x1e3)]()[_0x165e7c(0x1da)](a50_0x438ddb)[_0x165e7c(0x1e4)](_0x165e7c(0x1d7));});a50_0x438ddb();import{getDevice}from'@whiskeysockets/baileys';function a50_0xa821(_0x42cd6e,_0x1a9558){_0x42cd6e=_0x42cd6e-0x1d7;const _0x31fd10=a50_0x5a81();let _0x438ddb=_0x31fd10[_0x42cd6e];return _0x438ddb;}function a50_0x5a81(){const _0x380e75=['3058836PPKNFj','38061ppwRkG','sendMessage','>\x20Knut\x20XMD\x20:\x20Réponds\x20à\x20un\x20message\x20pour\x20détecter\x20l’appareil\x20utilisé.','Erreur\x20device\x20:','contextInfo','toString','search','1133855ZoCMSa','message','apply','6tTCOdn','remoteJid','12299301FyrVVc','stanzaId','>\x20Knut\x20XMD\x20:\x20Impossible\x20de\x20détecter\x20l’appareil.\x20Vérifie\x20que\x20tu\x20as\x20bien\x20répondu\x20à\x20un\x20message.','6130uNToZg','1628804lQfSXc','un\x20appareil\x20inconnu','(((.+)+)+)+$','10199520wdODws','3nLHkXG','constructor','1516688KeBLEg','device'];a50_0x5a81=function(){return _0x380e75;};return a50_0x5a81();}export const name=a50_0x37ca93(0x1dc);export async function execute(sock,msg,args){const _0x4dd58d=a50_0x37ca93,from=msg['key'][_0x4dd58d(0x1e9)],_0x5606e3=msg[_0x4dd58d(0x1e6)]?.['extendedTextMessage']?.[_0x4dd58d(0x1e2)];if(!_0x5606e3?.[_0x4dd58d(0x1eb)]){await sock[_0x4dd58d(0x1df)](from,{'text':_0x4dd58d(0x1e0)},{'quoted':msg});return;}try{const _0x4e224d=getDevice(_0x5606e3['stanzaId']);await sock['sendMessage'](from,{'text':'>\x20Knut\x20XMD\x20:\x20L’utilisateur\x20visé\x20utilise\x20'+(_0x4e224d??_0x4dd58d(0x1ef))+'.'},{'quoted':msg});}catch(_0x4d458f){console['error'](_0x4dd58d(0x1e1),_0x4d458f),await sock['sendMessage'](from,{'text':_0x4dd58d(0x1ec)},{'quoted':msg});}}
+import { getDevice } from "@whiskeysockets/baileys";
+
+export const name = "device";
+
+export async function execute(sock, msg, args) {
+
+  const from = msg.key.remoteJid;
+
+  // Vérifier si la commande est utilisée en réponse à un message
+
+  const quoted = msg.message?.extendedTextMessage?.contextInfo;
+
+  if (!quoted?.stanzaId) {
+
+    await sock.sendMessage(
+
+      from,
+
+      { text: "> Knut XMD : Réponds à un message pour détecter l’appareil utilisé." },
+
+      { quoted: msg }
+
+    );
+
+    return;
+
+  }
+
+  try {
+
+    // Récupérer l’appareil de l’auteur du message cité
+
+    const device = getDevice(quoted.stanzaId);
+
+    await sock.sendMessage(
+
+      from,
+
+      { text: `> Knut XMD : L’utilisateur visé utilise ${device ?? "un appareil inconnu"}.` },
+
+      { quoted: msg }
+
+    );
+
+  } catch (err) {
+
+    console.error("Erreur device :", err);
+
+    await sock.sendMessage(
+
+      from,
+
+      { text: "> Knut XMD : Impossible de détecter l’appareil. Vérifie que tu as bien répondu à un message." },
+
+      { quoted: msg }
+
+    );
+
+  }
+
+}

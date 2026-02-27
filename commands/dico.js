@@ -1,1 +1,42 @@
-function a52_0x5112(_0x3b416f,_0x13e0b3){_0x3b416f=_0x3b416f-0x173;const _0x3f42b4=a52_0x1f31();let _0x1b73ad=_0x3f42b4[_0x3b416f];return _0x1b73ad;}const a52_0xe07a6e=a52_0x5112;(function(_0x490675,_0x3b971b){const _0x4dbec0=a52_0x5112,_0x2dc226=_0x490675();while(!![]){try{const _0x34bad9=parseInt(_0x4dbec0(0x17e))/0x1+-parseInt(_0x4dbec0(0x173))/0x2*(parseInt(_0x4dbec0(0x191))/0x3)+-parseInt(_0x4dbec0(0x18c))/0x4*(parseInt(_0x4dbec0(0x175))/0x5)+-parseInt(_0x4dbec0(0x176))/0x6+parseInt(_0x4dbec0(0x17f))/0x7+parseInt(_0x4dbec0(0x190))/0x8*(parseInt(_0x4dbec0(0x189))/0x9)+parseInt(_0x4dbec0(0x18a))/0xa*(parseInt(_0x4dbec0(0x188))/0xb);if(_0x34bad9===_0x3b971b)break;else _0x2dc226['push'](_0x2dc226['shift']());}catch(_0x4b343b){_0x2dc226['push'](_0x2dc226['shift']());}}}(a52_0x1f31,0xbdbc8));function a52_0x1f31(){const _0xf6eb62=['meanings','703145vGgtBl','9321264zozFVH','(((.+)+)+)+$','slice','word','sendMessage','error','\x0a━━━━━━━━━━━━━━━━━━\x0a','📚\x20','1515922IAJVyW','8588713JTyoMe','definition','https://api.dictionaryapi.dev/api/v2/entries/en/','>\x20Knut\x20XMD\x20:\x20Mot\x20non\x20trouvé.','substring','definitions','remoteJid','length','search','539QYVNVi','809667JNNWca','94010ycRCcF','apply','28ZpRsgD','━━━━━━━━━━━━━━━━━━\x0a','>\x20📖\x20Knut\x20XMD\x20:\x20','partOfSpeech','40WQAYcl','8901qUHzII','toString','dico','forEach','key','228ehTWiu'];a52_0x1f31=function(){return _0xf6eb62;};return a52_0x1f31();}const a52_0x1ad45e=(function(){let _0x43b04d=!![];return function(_0xdb87be,_0x319d22){const _0x2161d7=_0x43b04d?function(){const _0x528a22=a52_0x5112;if(_0x319d22){const _0x151848=_0x319d22[_0x528a22(0x18b)](_0xdb87be,arguments);return _0x319d22=null,_0x151848;}}:function(){};return _0x43b04d=![],_0x2161d7;};}()),a52_0x1b73ad=a52_0x1ad45e(this,function(){const _0xaf78b=a52_0x5112;return a52_0x1b73ad[_0xaf78b(0x192)]()[_0xaf78b(0x187)](_0xaf78b(0x177))['toString']()['constructor'](a52_0x1b73ad)[_0xaf78b(0x187)](_0xaf78b(0x177));});a52_0x1b73ad();export const name=a52_0xe07a6e(0x193);export async function execute(sock,msg,args){const _0x240f3b=a52_0xe07a6e,from=msg[_0x240f3b(0x195)][_0x240f3b(0x185)];try{if(!args[_0x240f3b(0x186)]){await sock[_0x240f3b(0x17a)](from,{'text':'>\x20📖\x20Knut\x20XMD\x20:\x20Usage:\x20!dico\x20<mot>\x0aEx:\x20!dict\x20algorithm'},{'quoted':msg});return;}const _0x2b3816=args[0x0],_0x3f857e=_0x240f3b(0x181)+_0x2b3816,_0x4cf2df=await fetch(_0x3f857e),_0x3c8e65=await _0x4cf2df['json']();if(_0x3c8e65[0x0]){const _0x48b1ab=_0x3c8e65[0x0];let _0x4bf753=_0x240f3b(0x18e)+_0x48b1ab[_0x240f3b(0x179)]+_0x240f3b(0x17c);_0x48b1ab[_0x240f3b(0x174)][_0x240f3b(0x178)](0x0,0x2)[_0x240f3b(0x194)]((_0x198f89,_0x2963dc)=>{const _0x50aded=_0x240f3b;_0x4bf753+=_0x50aded(0x17d)+_0x198f89[_0x50aded(0x18f)]+'\x0a',_0x198f89[_0x50aded(0x184)][_0x50aded(0x178)](0x0,0x2)['forEach']((_0x232438,_0x4c893b)=>{const _0x492381=_0x50aded;_0x4bf753+='\x20\x20'+(_0x4c893b+0x1)+'.\x20'+_0x232438[_0x492381(0x180)][_0x492381(0x183)](0x0,0x64)+'\x0a';}),_0x4bf753+=_0x50aded(0x18d);}),await sock[_0x240f3b(0x17a)](from,{'text':_0x4bf753},{'quoted':msg});}else await sock['sendMessage'](from,{'text':_0x240f3b(0x182)},{'quoted':msg});}catch(_0x4fbf99){console[_0x240f3b(0x17b)]('Erreur\x20dict\x20:',_0x4fbf99),await sock[_0x240f3b(0x17a)](from,{'text':'>\x20Knut\x20XMD\x20:\x20Service\x20dictionnaire\x20indisponible.'},{'quoted':msg});}}
+export const name = "dico";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  try {
+    if (!args.length) {
+      await sock.sendMessage(from, { 
+        text: "> 📖 Knut XMD : Usage: !dico <mot>\nEx: !dict algorithm" 
+      }, { quoted: msg });
+      return;
+    }
+    
+    const word = args[0];
+    
+    // API Free Dictionary
+    const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    
+    if (data[0]) {
+      const entry = data[0];
+      let reply = `> 📖 Knut XMD : ${entry.word}\n━━━━━━━━━━━━━━━━━━\n`;
+      
+      entry.meanings.slice(0, 2).forEach((meaning, i) => {
+        reply += `📚 ${meaning.partOfSpeech}\n`;
+        meaning.definitions.slice(0, 2).forEach((def, j) => {
+          reply += `  ${j+1}. ${def.definition.substring(0, 100)}\n`;
+        });
+        reply += `━━━━━━━━━━━━━━━━━━\n`;
+      });
+      
+      await sock.sendMessage(from, { text: reply }, { quoted: msg });
+    } else {
+      await sock.sendMessage(from, { text: "> Knut XMD : Mot non trouvé." }, { quoted: msg });
+    }
+    
+  } catch (err) {
+    console.error("Erreur dict :", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Service dictionnaire indisponible." }, { quoted: msg });
+  }
+}

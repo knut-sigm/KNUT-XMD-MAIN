@@ -1,1 +1,124 @@
-const a14_0x60ac24=a14_0x16c6;(function(_0x2391ea,_0x75b8e4){const _0x13568c=a14_0x16c6,_0x55190f=_0x2391ea();while(!![]){try{const _0x3d14b7=-parseInt(_0x13568c(0x194))/0x1+-parseInt(_0x13568c(0x185))/0x2*(parseInt(_0x13568c(0x18a))/0x3)+-parseInt(_0x13568c(0x1a3))/0x4*(parseInt(_0x13568c(0x179))/0x5)+-parseInt(_0x13568c(0x17c))/0x6+-parseInt(_0x13568c(0x183))/0x7*(parseInt(_0x13568c(0x1a4))/0x8)+parseInt(_0x13568c(0x1aa))/0x9*(parseInt(_0x13568c(0x17f))/0xa)+parseInt(_0x13568c(0x18f))/0xb*(parseInt(_0x13568c(0x195))/0xc);if(_0x3d14b7===_0x75b8e4)break;else _0x55190f['push'](_0x55190f['shift']());}catch(_0x3d8e2a){_0x55190f['push'](_0x55190f['shift']());}}}(a14_0x523f,0x98194));const a14_0x1eca1d=(function(){let _0x4cbf3c=!![];return function(_0xce91b1,_0x4f5f57){const _0x490eb6=_0x4cbf3c?function(){const _0x2cf3df=a14_0x16c6;if(_0x4f5f57){const _0x1cfacb=_0x4f5f57[_0x2cf3df(0x180)](_0xce91b1,arguments);return _0x4f5f57=null,_0x1cfacb;}}:function(){};return _0x4cbf3c=![],_0x490eb6;};}()),a14_0x3d2a7a=a14_0x1eca1d(this,function(){const _0x26c05f=a14_0x16c6;return a14_0x3d2a7a[_0x26c05f(0x1a0)]()[_0x26c05f(0x191)](_0x26c05f(0x199))[_0x26c05f(0x1a0)]()[_0x26c05f(0x187)](a14_0x3d2a7a)['search']('(((.+)+)+)+$');});a14_0x3d2a7a();import a14_0x41fd72 from'fs';import a14_0x3aa26a from'path';function a14_0x16c6(_0x40a455,_0x180042){_0x40a455=_0x40a455-0x16d;const _0x2e3742=a14_0x523f();let _0x3d2a7a=_0x2e3742[_0x40a455];return _0x3d2a7a;}import{getGroupProtections,setGroupProtection}from'../groupManager.js';import{loadSudo}from'../index.js';function a14_0x523f(){const _0x4ee52b=['>\x20Knut\x20XMD:\x20Aide\x20Anti-Link\x0a\x0a','status','Supprime\x20automatiquement\x20les\x20messages\x20contenant\x20des\x20liens\x20interdits.\x0a\x0a','replace','Désactivé','11098161hcEBSP','•\x20antilink\x20help\x20\x20→\x20ℹ️\x20Aide','•\x20antilink\x20status\x20→\x20📊\x20Statut\x0a','•\x20shorte.st\x0a\x0a','🔗\x20*Liens\x20bloqués\x20:*\x0a','split','>\x20Knut\x20XMD:\x20Anti-Link\x20-\x20Statut\x0a\x0a','État\x20actuel\x20:\x20','help','error','•\x20antilink\x20off\x20\x20\x20→\x20🛑\x20Désactiver\x0a','endsWith','key','antilink','228695iDAvlH','📌\x20*Description\x20:*\x0a','•\x20bit.ly\x0a','7030314BzybZP','>\x20Knut\x20XMD:\x20Anti-Link\x20','>\x20Knut\x20XMD\x20:\x20⚠️\x20L\x27anti-link\x20est\x20déjà\x20✅\x20activé.','10hXdnoq','apply','\x20dans\x20ce\x20groupe.','@g.us','49wudlhP','•\x20tinyurl.com\x0a','413426jpBhiq','off','constructor','•\x20status\x20→\x20📊\x20Voir\x20le\x20statut\x20actuel','désactivé','15aZmXAm','Utilisation\x20:\x0a','📋\x20*Commandes\x20:*\x0a','activé','>\x20Knut\x20XMD\x20:\x20Accès\x20refusé.\x20Owner\x20ou\x20sudo\x20requis.','24445454ogWAKl','État\x20:\x20','search','owners','•\x20off\x20→\x20🛑\x20Désactiver\x20la\x20protection\x0a','397119IrpMVw','12AKNebe','antiLink','./group.json','map','(((.+)+)+)+$','sendMessage','•\x20t.me\x20(liens\x20Telegram)\x0a','•\x20chat.whatsapp.com\x0a','✅\x20activé','includes','•\x20ouo.io,\x20shorte.st\x20(liens\x20monetisés)\x0a\x0a','toString','•\x20on\x20\x20→\x20✅\x20Activer\x20la\x20protection\x0a','•\x20t.me\x0a','12ZLAjRp','106088nkietC'];a14_0x523f=function(){return _0x4ee52b;};return a14_0x523f();}const GROUP_FILE=a14_0x3aa26a['resolve'](a14_0x60ac24(0x197));export const name=a14_0x60ac24(0x178);export async function execute(sock,msg,args,from){const _0x4cd7e1=a14_0x60ac24;try{if(!from[_0x4cd7e1(0x176)](_0x4cd7e1(0x182))){await sock[_0x4cd7e1(0x19a)](from,{'text':'>\x20Knut\x20XMD\x20:\x20Cette\x20commande\x20est\x20réservée\x20aux\x20groupes.'},{'quoted':msg});return;}const _0x54f9c0=msg[_0x4cd7e1(0x177)]['participant']||from,_0x2ff0a4=_0x54f9c0[_0x4cd7e1(0x170)]('@')[0x0][_0x4cd7e1(0x1a8)](/[^0-9]/g,''),_0x28e0ce=(global[_0x4cd7e1(0x192)]||[])[_0x4cd7e1(0x198)](_0x3fea22=>_0x3fea22[_0x4cd7e1(0x1a8)](/[^0-9]/g,'')),_0x4a2c43=loadSudo()[_0x4cd7e1(0x198)](_0x290b8b=>_0x290b8b[_0x4cd7e1(0x1a8)](/[^0-9]/g,'')),_0xffa7b4=_0x28e0ce[_0x4cd7e1(0x19e)](_0x2ff0a4),_0x4833be=_0x4a2c43[_0x4cd7e1(0x19e)](_0x2ff0a4);if(!_0xffa7b4&&!_0x4833be){await sock[_0x4cd7e1(0x19a)](from,{'text':_0x4cd7e1(0x18e)},{'quoted':msg});return;}const _0x3c3ad7=getGroupProtections(from),_0x252571=_0x3c3ad7[_0x4cd7e1(0x196)]||![],_0x107bdd=args[0x0]?.['toLowerCase']();if(!_0x107bdd||!['on',_0x4cd7e1(0x186),_0x4cd7e1(0x1a6),_0x4cd7e1(0x173)]['includes'](_0x107bdd)){const _0x25ff0b=_0x252571?_0x4cd7e1(0x19d):'🛑\x20désactivé';await sock['sendMessage'](from,{'text':'>\x20Knut\x20XMD:\x20Anti-Link\x0a\x0a'+(_0x4cd7e1(0x172)+_0x25ff0b+'\x0a\x0a')+_0x4cd7e1(0x16f)+_0x4cd7e1(0x19c)+_0x4cd7e1(0x17b)+_0x4cd7e1(0x1a2)+_0x4cd7e1(0x184)+'•\x20ouo.io\x0a'+_0x4cd7e1(0x16e)+_0x4cd7e1(0x18b)+'•\x20antilink\x20on\x20\x20\x20\x20→\x20✅\x20Activer\x0a'+_0x4cd7e1(0x175)+_0x4cd7e1(0x16d)+_0x4cd7e1(0x1ab)},{'quoted':msg});return;}if(_0x107bdd===_0x4cd7e1(0x173)){await sock[_0x4cd7e1(0x19a)](from,{'text':_0x4cd7e1(0x1a5)+_0x4cd7e1(0x17a)+_0x4cd7e1(0x1a7)+_0x4cd7e1(0x16f)+'•\x20chat.whatsapp.com\x20(liens\x20de\x20groupe)\x0a'+'•\x20bit.ly,\x20tinyurl.com\x20(raccourcisseurs)\x0a'+_0x4cd7e1(0x19b)+_0x4cd7e1(0x19f)+_0x4cd7e1(0x18c)+_0x4cd7e1(0x1a1)+_0x4cd7e1(0x193)+_0x4cd7e1(0x188)},{'quoted':msg});return;}if(_0x107bdd===_0x4cd7e1(0x1a6)){const _0x4addc7=_0x252571?'✅':'🛑',_0x23c710=_0x252571?'Activé':_0x4cd7e1(0x1a9);await sock['sendMessage'](from,{'text':_0x4cd7e1(0x171)+(_0x4cd7e1(0x190)+_0x4addc7+'\x20'+_0x23c710+'\x0a')+('Groupe\x20:\x20'+from[_0x4cd7e1(0x170)]('@')[0x0]+'\x0a')+'Liens\x20bloqués\x20:\x206\x20types\x20de\x20liens'},{'quoted':msg});return;}const _0x510f35=_0x107bdd==='on';if(_0x107bdd==='on'&&_0x252571){await sock[_0x4cd7e1(0x19a)](from,{'text':_0x4cd7e1(0x17e)},{'quoted':msg});return;}if(_0x107bdd===_0x4cd7e1(0x186)&&!_0x252571){await sock[_0x4cd7e1(0x19a)](from,{'text':'>\x20Knut\x20XMD\x20:\x20⚠️\x20L\x27anti-link\x20est\x20déjà\x20🛑\x20désactivé.'},{'quoted':msg});return;}setGroupProtection(from,_0x4cd7e1(0x196),_0x510f35);const _0x521556=_0x510f35?'✅':'🛑';await sock[_0x4cd7e1(0x19a)](from,{'text':_0x4cd7e1(0x17d)+_0x521556+'\x20'+(_0x510f35?_0x4cd7e1(0x18d):_0x4cd7e1(0x189))+_0x4cd7e1(0x181)},{'quoted':msg});}catch(_0x597f5f){console[_0x4cd7e1(0x174)]('Erreur\x20antilink:',_0x597f5f),await sock['sendMessage'](from,{'text':'>\x20Knut\x20XMD\x20:\x20Une\x20erreur\x20est\x20survenue.'},{'quoted':msg});}}
+import fs from "fs";
+import path from "path";
+import { getGroupProtections, setGroupProtection } from "../groupManager.js";
+import { loadSudo } from "../index.js";
+
+const GROUP_FILE = path.resolve("./group.json");
+
+export const name = "antilink";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === GROUPE UNIQUEMENT ===
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Cette commande est réservée aux groupes." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER L'EXPÉDITEUR ===
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // === VÉRIFICATION DES DROITS (OWNER ET SUDO UNIQUEMENT) ===
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+
+    if (!isOwner && !isSudo) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Accès refusé. Owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER LES PROTECTIONS DU GROUPE ===
+    const protections = getGroupProtections(from);
+    const currentStatus = protections.antiLink || false;
+
+    // === ARGUMENT ===
+    const arg = args[0]?.toLowerCase();
+
+    if (!arg || !["on", "off", "status", "help"].includes(arg)) {
+      const status = currentStatus ? "✅ activé" : "🛑 désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Anti-Link\n\n` +
+              `État actuel : ${status}\n\n` +
+              `🔗 *Liens bloqués :*\n` +
+              `• chat.whatsapp.com\n` +
+              `• bit.ly\n` +
+              `• t.me\n` +
+              `• tinyurl.com\n` +
+              `• ouo.io\n` +
+              `• shorte.st\n\n` +
+              `Utilisation :\n` +
+              `• antilink on    → ✅ Activer\n` +
+              `• antilink off   → 🛑 Désactiver\n` +
+              `• antilink status → 📊 Statut\n` +
+              `• antilink help  → ℹ️ Aide`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === HELP ===
+    if (arg === "help") {
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Aide Anti-Link\n\n` +
+              `📌 *Description :*\n` +
+              `Supprime automatiquement les messages contenant des liens interdits.\n\n` +
+              `🔗 *Liens bloqués :*\n` +
+              `• chat.whatsapp.com (liens de groupe)\n` +
+              `• bit.ly, tinyurl.com (raccourcisseurs)\n` +
+              `• t.me (liens Telegram)\n` +
+              `• ouo.io, shorte.st (liens monetisés)\n\n` +
+              `📋 *Commandes :*\n` +
+              `• on  → ✅ Activer la protection\n` +
+              `• off → 🛑 Désactiver la protection\n` +
+              `• status → 📊 Voir le statut actuel`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === STATUS ===
+    if (arg === "status") {
+      const statusEmoji = currentStatus ? "✅" : "🛑";
+      const statusText = currentStatus ? "Activé" : "Désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Anti-Link - Statut\n\n` +
+              `État : ${statusEmoji} ${statusText}\n` +
+              `Groupe : ${from.split('@')[0]}\n` +
+              `Liens bloqués : 6 types de liens`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === ON / OFF ===
+    const newState = arg === "on";
+    
+    if (arg === "on" && currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'anti-link est déjà ✅ activé." 
+      }, { quoted: msg });
+      return;
+    }
+    
+    if (arg === "off" && !currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'anti-link est déjà 🛑 désactivé." 
+      }, { quoted: msg });
+      return;
+    }
+
+    setGroupProtection(from, "antiLink", newState);
+    const statusEmoji = newState ? "✅" : "🛑";
+    
+    await sock.sendMessage(from, { 
+      text: `> Knut XMD: Anti-Link ${statusEmoji} ${newState ? "activé" : "désactivé"} dans ce groupe.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur antilink:", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Une erreur est survenue." }, { quoted: msg });
+  }
+}

@@ -1,1 +1,46 @@
-function a57_0x229d(){const _0x418123=['error','remoteJid','\x0a👥\x20Acteurs:\x20','1303096SAyCxh','(((.+)+)+)+$','Awards','join','toString','1024614aBbSJj','search','\x0a📝\x20Synopsis:\x20','...\x0a🔗\x20IMDB:\x20https://www.imdb.com/title/','\x0a⏱\x20Durée:\x20','Title','656929FjyLSG','Erreur\x20film\x20:','film','219092HOrHIC','False','\x0a🎭\x20Genre:\x20','\x0a━━━━━━━━━━━━━━━━━━\x0a📅\x20Année:\x20','split','98022kCLhYZ','\x20votes)\x0a🎖️\x20Awards:\x20','>\x20Knut\x20XMD\x20:\x20Service\x20films\x20indisponible.','&apikey=','408303VKwzIe','Genre','5FVXXiQ','>\x20🎬\x20Knut\x20XMD\x20:\x20Usage:\x20!film\x20<titre>\x20[année]\x0aEx:\x20!film\x20Inception\x202010','268659TIoack','\x0a📊\x20Note:\x20','&plot=short','2HzpIuM','Plot','imdbID','imdbVotes','Actors','slice','constructor','sendMessage','TON_API_KEY','10hPiKHR','key','https://www.omdbapi.com/?t='];a57_0x229d=function(){return _0x418123;};return a57_0x229d();}const a57_0x1b2b3c=a57_0x43a6;(function(_0x438341,_0x87375a){const _0x368abf=a57_0x43a6,_0x34d002=_0x438341();while(!![]){try{const _0x2f9b87=-parseInt(_0x368abf(0x149))/0x1+parseInt(_0x368abf(0x154))/0x2*(parseInt(_0x368abf(0x151))/0x3)+-parseInt(_0x368abf(0x144))/0x4*(-parseInt(_0x368abf(0x14f))/0x5)+parseInt(_0x368abf(0x13b))/0x6+parseInt(_0x368abf(0x141))/0x7+-parseInt(_0x368abf(0x163))/0x8+-parseInt(_0x368abf(0x14d))/0x9*(parseInt(_0x368abf(0x15d))/0xa);if(_0x2f9b87===_0x87375a)break;else _0x34d002['push'](_0x34d002['shift']());}catch(_0x17e50b){_0x34d002['push'](_0x34d002['shift']());}}}(a57_0x229d,0x1910a));function a57_0x43a6(_0x4cdf09,_0x4dcad4){_0x4cdf09=_0x4cdf09-0x13a;const _0x5849e6=a57_0x229d();let _0xd9f5a5=_0x5849e6[_0x4cdf09];return _0xd9f5a5;}const a57_0x25478d=(function(){let _0x2f1404=!![];return function(_0x37a96b,_0x486b57){const _0x1041f1=_0x2f1404?function(){if(_0x486b57){const _0x5b8e1e=_0x486b57['apply'](_0x37a96b,arguments);return _0x486b57=null,_0x5b8e1e;}}:function(){};return _0x2f1404=![],_0x1041f1;};}()),a57_0xd9f5a5=a57_0x25478d(this,function(){const _0x412a07=a57_0x43a6;return a57_0xd9f5a5[_0x412a07(0x13a)]()[_0x412a07(0x13c)](_0x412a07(0x164))[_0x412a07(0x13a)]()[_0x412a07(0x15a)](a57_0xd9f5a5)[_0x412a07(0x13c)](_0x412a07(0x164));});a57_0xd9f5a5();export const name=a57_0x1b2b3c(0x143);export async function execute(sock,msg,args){const _0x31452a=a57_0x1b2b3c,from=msg[_0x31452a(0x15e)][_0x31452a(0x161)];try{if(!args['length']){await sock['sendMessage'](from,{'text':_0x31452a(0x150)},{'quoted':msg});return;}const _0x4c7cf2=args[_0x31452a(0x166)]('\x20'),_0x33d6e9=_0x31452a(0x15c),_0x24c839=_0x31452a(0x15f)+encodeURIComponent(_0x4c7cf2)+_0x31452a(0x14c)+_0x33d6e9+_0x31452a(0x153),_0x1564a9=await fetch(_0x24c839),_0x537a3d=await _0x1564a9['json']();if(_0x537a3d['Response']===_0x31452a(0x145)){await sock[_0x31452a(0x15b)](from,{'text':'>\x20❌\x20Knut\x20XMD\x20:\x20Film\x20non\x20trouvé.'},{'quoted':msg});return;}const _0x9fdc04='>\x20🎬\x20Knut\x20XMD\x20:\x20'+_0x537a3d[_0x31452a(0x140)]+_0x31452a(0x147)+_0x537a3d['Year']+_0x31452a(0x146)+_0x537a3d[_0x31452a(0x14e)]+_0x31452a(0x13f)+_0x537a3d['Runtime']+'\x0a🎬\x20Réalisateur:\x20'+_0x537a3d['Director']+_0x31452a(0x162)+_0x537a3d[_0x31452a(0x158)][_0x31452a(0x148)](',')[_0x31452a(0x159)](0x0,0x3)[_0x31452a(0x166)](',')+_0x31452a(0x152)+_0x537a3d['imdbRating']+'/10\x20('+_0x537a3d[_0x31452a(0x157)]+_0x31452a(0x14a)+_0x537a3d[_0x31452a(0x165)]+_0x31452a(0x13d)+_0x537a3d[_0x31452a(0x155)]['substring'](0x0,0xc8)+_0x31452a(0x13e)+_0x537a3d[_0x31452a(0x156)];await sock[_0x31452a(0x15b)](from,{'text':_0x9fdc04},{'quoted':msg});}catch(_0xeb2ab3){console[_0x31452a(0x160)](_0x31452a(0x142),_0xeb2ab3),await sock['sendMessage'](from,{'text':_0x31452a(0x14b)},{'quoted':msg});}}
+export const name = "film";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  try {
+    if (!args.length) {
+      await sock.sendMessage(from, { 
+        text: "> 🎬 Knut XMD : Usage: !film <titre> [année]\nEx: !film Inception 2010" 
+      }, { quoted: msg });
+      return;
+    }
+    
+    const search = args.join(" ");
+    
+    // API OMDb (gratuit 1000 req/jour)
+    const API_KEY = "TON_API_KEY"; // omdbapi.com
+    const url = `https://www.omdbapi.com/?t=${encodeURIComponent(search)}&apikey=${API_KEY}&plot=short`;
+    
+    const response = await fetch(url);
+    const data = await response.json();
+    
+    if (data.Response === "False") {
+      await sock.sendMessage(from, { text: "> ❌ Knut XMD : Film non trouvé." }, { quoted: msg });
+      return;
+    }
+    
+    const reply = `> 🎬 Knut XMD : ${data.Title}
+━━━━━━━━━━━━━━━━━━
+📅 Année: ${data.Year}
+🎭 Genre: ${data.Genre}
+⏱ Durée: ${data.Runtime}
+🎬 Réalisateur: ${data.Director}
+👥 Acteurs: ${data.Actors.split(',').slice(0,3).join(',')}
+📊 Note: ${data.imdbRating}/10 (${data.imdbVotes} votes)
+🎖️ Awards: ${data.Awards}
+📝 Synopsis: ${data.Plot.substring(0, 200)}...
+🔗 IMDB: https://www.imdb.com/title/${data.imdbID}`;
+    
+    await sock.sendMessage(from, { text: reply }, { quoted: msg });
+    
+  } catch (err) {
+    console.error("Erreur film :", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Service films indisponible." }, { quoted: msg });
+  }
+}

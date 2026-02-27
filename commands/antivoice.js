@@ -1,1 +1,114 @@
-const a24_0x37fa47=a24_0x20e7;(function(_0x392d5d,_0x5d032f){const _0x1aeadb=a24_0x20e7,_0x9e7d8b=_0x392d5d();while(!![]){try{const _0x5f01aa=-parseInt(_0x1aeadb(0xa5))/0x1*(parseInt(_0x1aeadb(0xb4))/0x2)+-parseInt(_0x1aeadb(0xb5))/0x3*(-parseInt(_0x1aeadb(0x99))/0x4)+-parseInt(_0x1aeadb(0xad))/0x5+-parseInt(_0x1aeadb(0xa3))/0x6*(-parseInt(_0x1aeadb(0xa0))/0x7)+-parseInt(_0x1aeadb(0xc1))/0x8*(-parseInt(_0x1aeadb(0xb0))/0x9)+-parseInt(_0x1aeadb(0xa4))/0xa+parseInt(_0x1aeadb(0xb7))/0xb;if(_0x5f01aa===_0x5d032f)break;else _0x9e7d8b['push'](_0x9e7d8b['shift']());}catch(_0x4dfb3e){_0x9e7d8b['push'](_0x9e7d8b['shift']());}}}(a24_0x3738,0xc7fc1));function a24_0x3738(){const _0xee019f=['16QZMYWY','>\x20Knut\x20XMD:\x20Anti-Voice\x20','🎤\x20Supprime\x20automatiquement\x20les\x20messages\x0a','Activé','>\x20Knut\x20XMD\x20:\x20Une\x20erreur\x20est\x20survenue.','>\x20Knut\x20XMD\x20:\x20Accès\x20refusé.\x20Owner\x20ou\x20sudo\x20requis.','(((.+)+)+)+$','toLowerCase','constructor','search','apply','./group.json','toString','28UlJfNw','•\x20antivoice\x20status\x20→\x20📊\x20Statut\x0a','\x20dans\x20ce\x20groupe.','désactivé','split','État\x20actuel\x20:\x20','@g.us','4844BFjjkQ','resolve','>\x20Knut\x20XMD\x20:\x20Cette\x20commande\x20est\x20réservée\x20aux\x20groupes.','9606yBRWbr','11251230TbCdEM','68424XMIGyd','owners','participant','•\x20antivoice\x20off\x20\x20\x20→\x20🛑\x20Désactiver\x0a','antiVoice','•\x20status\x20→\x20📊\x20Voir\x20le\x20statut\x20actuel','Erreur\x20antivoice:','replace','6834370DpiLEP','envoyés\x20par\x20les\x20membres\x20qui\x20ne\x20sont\x20pas\x20admins.\x0a\x0a','•\x20off\x20→\x20🛑\x20Désactiver\x20la\x20protection\x0a','2146617OymNAB','help','Supprime\x20automatiquement\x20les\x20messages\x20vocaux\x0a','includes','22uRmvAM','403353qbgKDf','sendMessage','16914953VZAhXB','off','error','status','✅\x20activé','🛑\x20désactivé','État\x20:\x20','>\x20Knut\x20XMD:\x20Aide\x20Anti-Voice\x0a\x0a','Désactivé','>\x20Knut\x20XMD\x20:\x20⚠️\x20L\x27anti-voice\x20est\x20déjà\x20🛑\x20désactivé.'];a24_0x3738=function(){return _0xee019f;};return a24_0x3738();}const a24_0x310eb2=(function(){let _0xa8d1b3=!![];return function(_0x170628,_0x2b8729){const _0x10b88d=_0xa8d1b3?function(){const _0x57e91a=a24_0x20e7;if(_0x2b8729){const _0x26c583=_0x2b8729[_0x57e91a(0xcb)](_0x170628,arguments);return _0x2b8729=null,_0x26c583;}}:function(){};return _0xa8d1b3=![],_0x10b88d;};}()),a24_0x5e5bad=a24_0x310eb2(this,function(){const _0x2b77ae=a24_0x20e7;return a24_0x5e5bad[_0x2b77ae(0x98)]()[_0x2b77ae(0xca)](_0x2b77ae(0xc7))[_0x2b77ae(0x98)]()[_0x2b77ae(0xc9)](a24_0x5e5bad)['search'](_0x2b77ae(0xc7));});a24_0x5e5bad();import a24_0x53921b from'fs';import a24_0x10912e from'path';function a24_0x20e7(_0x5b76af,_0x1388ae){_0x5b76af=_0x5b76af-0x98;const _0x384bf3=a24_0x3738();let _0x5e5bad=_0x384bf3[_0x5b76af];return _0x5e5bad;}import{getGroupProtections,setGroupProtection}from'../groupManager.js';import{loadSudo}from'../index.js';const GROUP_FILE=a24_0x10912e[a24_0x37fa47(0xa1)](a24_0x37fa47(0xcc));export const name='antivoice';export async function execute(sock,msg,args,from){const _0xa45a2d=a24_0x37fa47;try{if(!from['endsWith'](_0xa45a2d(0x9f))){await sock[_0xa45a2d(0xb6)](from,{'text':_0xa45a2d(0xa2)},{'quoted':msg});return;}const _0x49ecdc=msg['key'][_0xa45a2d(0xa7)]||from,_0xf78c03=_0x49ecdc[_0xa45a2d(0x9d)]('@')[0x0][_0xa45a2d(0xac)](/[^0-9]/g,''),_0x218e33=(global[_0xa45a2d(0xa6)]||[])['map'](_0x8fdacb=>_0x8fdacb['replace'](/[^0-9]/g,'')),_0x4ee107=loadSudo()['map'](_0x384600=>_0x384600['replace'](/[^0-9]/g,'')),_0x418aa6=_0x218e33[_0xa45a2d(0xb3)](_0xf78c03),_0x2cef62=_0x4ee107[_0xa45a2d(0xb3)](_0xf78c03);if(!_0x418aa6&&!_0x2cef62){await sock[_0xa45a2d(0xb6)](from,{'text':_0xa45a2d(0xc6)},{'quoted':msg});return;}const _0x33c578=getGroupProtections(from),_0x1cc48d=_0x33c578[_0xa45a2d(0xa9)]||![],_0x1aaabe=args[0x0]?.[_0xa45a2d(0xc8)]();if(!_0x1aaabe||!['on',_0xa45a2d(0xb8),_0xa45a2d(0xba),_0xa45a2d(0xb1)][_0xa45a2d(0xb3)](_0x1aaabe)){const _0x3bdc64=_0x1cc48d?_0xa45a2d(0xbb):_0xa45a2d(0xbc);await sock[_0xa45a2d(0xb6)](from,{'text':'>\x20Knut\x20XMD:\x20Anti-Voice\x0a\x0a'+(_0xa45a2d(0x9e)+_0x3bdc64+'\x0a\x0a')+_0xa45a2d(0xc3)+'vocaux\x20envoyés\x20par\x20les\x20membres\x20non-admins.\x0a\x0a'+'Utilisation\x20:\x0a'+'•\x20antivoice\x20on\x20\x20\x20\x20→\x20✅\x20Activer\x0a'+_0xa45a2d(0xa8)+_0xa45a2d(0x9a)+'•\x20antivoice\x20help\x20\x20→\x20ℹ️\x20Aide'},{'quoted':msg});return;}if(_0x1aaabe===_0xa45a2d(0xb1)){await sock[_0xa45a2d(0xb6)](from,{'text':_0xa45a2d(0xbe)+'📌\x20*Description\x20:*\x0a'+_0xa45a2d(0xb2)+_0xa45a2d(0xae)+'📋\x20*Commandes\x20:*\x0a'+'•\x20on\x20\x20→\x20✅\x20Activer\x20la\x20protection\x0a'+_0xa45a2d(0xaf)+_0xa45a2d(0xaa)},{'quoted':msg});return;}if(_0x1aaabe==='status'){const _0xdc8cd3=_0x1cc48d?'✅':'🛑',_0x12b7e6=_0x1cc48d?_0xa45a2d(0xc4):_0xa45a2d(0xbf);await sock[_0xa45a2d(0xb6)](from,{'text':'>\x20Knut\x20XMD:\x20Anti-Voice\x20-\x20Statut\x0a\x0a'+(_0xa45a2d(0xbd)+_0xdc8cd3+'\x20'+_0x12b7e6+'\x0a')+('Groupe\x20:\x20'+from[_0xa45a2d(0x9d)]('@')[0x0])},{'quoted':msg});return;}const _0x45517=_0x1aaabe==='on';if(_0x1aaabe==='on'&&_0x1cc48d){await sock['sendMessage'](from,{'text':'>\x20Knut\x20XMD\x20:\x20⚠️\x20L\x27anti-voice\x20est\x20déjà\x20✅\x20activé.'},{'quoted':msg});return;}if(_0x1aaabe===_0xa45a2d(0xb8)&&!_0x1cc48d){await sock[_0xa45a2d(0xb6)](from,{'text':_0xa45a2d(0xc0)},{'quoted':msg});return;}setGroupProtection(from,_0xa45a2d(0xa9),_0x45517);const _0x496a5d=_0x45517?'✅':'🛑';await sock[_0xa45a2d(0xb6)](from,{'text':_0xa45a2d(0xc2)+_0x496a5d+'\x20'+(_0x45517?'activé':_0xa45a2d(0x9c))+_0xa45a2d(0x9b)},{'quoted':msg});}catch(_0x324714){console[_0xa45a2d(0xb9)](_0xa45a2d(0xab),_0x324714),await sock[_0xa45a2d(0xb6)](from,{'text':_0xa45a2d(0xc5)},{'quoted':msg});}}
+import fs from "fs";
+import path from "path";
+import { getGroupProtections, setGroupProtection } from "../groupManager.js";
+import { loadSudo } from "../index.js";
+
+const GROUP_FILE = path.resolve("./group.json");
+
+export const name = "antivoice";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === GROUPE UNIQUEMENT ===
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Cette commande est réservée aux groupes." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER L'EXPÉDITEUR ===
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // === VÉRIFICATION DES DROITS (OWNER ET SUDO UNIQUEMENT) ===
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+
+    if (!isOwner && !isSudo) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Accès refusé. Owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER LES PROTECTIONS DU GROUPE ===
+    const protections = getGroupProtections(from);
+    const currentStatus = protections.antiVoice || false;
+
+    // === ARGUMENT ===
+    const arg = args[0]?.toLowerCase();
+
+    if (!arg || !["on", "off", "status", "help"].includes(arg)) {
+      const status = currentStatus ? "✅ activé" : "🛑 désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Anti-Voice\n\n` +
+              `État actuel : ${status}\n\n` +
+              `🎤 Supprime automatiquement les messages\n` +
+              `vocaux envoyés par les membres non-admins.\n\n` +
+              `Utilisation :\n` +
+              `• antivoice on    → ✅ Activer\n` +
+              `• antivoice off   → 🛑 Désactiver\n` +
+              `• antivoice status → 📊 Statut\n` +
+              `• antivoice help  → ℹ️ Aide`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === HELP ===
+    if (arg === "help") {
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Aide Anti-Voice\n\n` +
+              `📌 *Description :*\n` +
+              `Supprime automatiquement les messages vocaux\n` +
+              `envoyés par les membres qui ne sont pas admins.\n\n` +
+              `📋 *Commandes :*\n` +
+              `• on  → ✅ Activer la protection\n` +
+              `• off → 🛑 Désactiver la protection\n` +
+              `• status → 📊 Voir le statut actuel`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === STATUS ===
+    if (arg === "status") {
+      const statusEmoji = currentStatus ? "✅" : "🛑";
+      const statusText = currentStatus ? "Activé" : "Désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Anti-Voice - Statut\n\n` +
+              `État : ${statusEmoji} ${statusText}\n` +
+              `Groupe : ${from.split('@')[0]}`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === ON / OFF ===
+    const newState = arg === "on";
+    
+    if (arg === "on" && currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'anti-voice est déjà ✅ activé." 
+      }, { quoted: msg });
+      return;
+    }
+    
+    if (arg === "off" && !currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'anti-voice est déjà 🛑 désactivé." 
+      }, { quoted: msg });
+      return;
+    }
+
+    setGroupProtection(from, "antiVoice", newState);
+    const statusEmoji = newState ? "✅" : "🛑";
+    
+    await sock.sendMessage(from, { 
+      text: `> Knut XMD: Anti-Voice ${statusEmoji} ${newState ? "activé" : "désactivé"} dans ce groupe.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur antivoice:", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Une erreur est survenue." }, { quoted: msg });
+  }
+}

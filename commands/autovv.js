@@ -1,1 +1,115 @@
-const a35_0x55bef3=a35_0x5e6d;(function(_0x33a9d9,_0x1b7cac){const _0x1a9ab7=a35_0x5e6d,_0xf58ac8=_0x33a9d9();while(!![]){try{const _0x4dc6c4=-parseInt(_0x1a9ab7(0x155))/0x1+parseInt(_0x1a9ab7(0x169))/0x2+parseInt(_0x1a9ab7(0x15f))/0x3*(-parseInt(_0x1a9ab7(0x17a))/0x4)+parseInt(_0x1a9ab7(0x15a))/0x5*(-parseInt(_0x1a9ab7(0x152))/0x6)+parseInt(_0x1a9ab7(0x14f))/0x7+-parseInt(_0x1a9ab7(0x173))/0x8+parseInt(_0x1a9ab7(0x16f))/0x9*(parseInt(_0x1a9ab7(0x150))/0xa);if(_0x4dc6c4===_0x1b7cac)break;else _0xf58ac8['push'](_0xf58ac8['shift']());}catch(_0xe9235f){_0xf58ac8['push'](_0xf58ac8['shift']());}}}(a35_0x5155,0xddeb7));const a35_0x3a7b83=(function(){let _0xfaaa0d=!![];return function(_0x252692,_0x312df3){const _0x1bb4b7=_0xfaaa0d?function(){const _0xcc5f4=a35_0x5e6d;if(_0x312df3){const _0x298d6c=_0x312df3[_0xcc5f4(0x15e)](_0x252692,arguments);return _0x312df3=null,_0x298d6c;}}:function(){};return _0xfaaa0d=![],_0x1bb4b7;};}()),a35_0x10f243=a35_0x3a7b83(this,function(){const _0x49af90=a35_0x5e6d;return a35_0x10f243[_0x49af90(0x156)]()[_0x49af90(0x181)]('(((.+)+)+)+$')[_0x49af90(0x156)]()[_0x49af90(0x166)](a35_0x10f243)[_0x49af90(0x181)]('(((.+)+)+)+$');});a35_0x10f243();import a35_0x5421eb from'fs';function a35_0x5e6d(_0x39c31d,_0xb2db3b){_0x39c31d=_0x39c31d-0x14c;const _0x3b4bff=a35_0x5155();let _0x10f243=_0x3b4bff[_0x39c31d];return _0x10f243;}import a35_0x157cd0 from'path';import{getGroupProtections,setGroupProtection}from'../groupManager.js';import{loadSudo}from'../index.js';const GROUP_FILE=a35_0x157cd0[a35_0x55bef3(0x180)](a35_0x55bef3(0x17c));export const name=a35_0x55bef3(0x158);function a35_0x5155(){const _0x552986=['@g.us','>\x20Knut\x20XMD:\x20Auto-VV\x20','Groupe\x20:\x20','autoVV','constructor','Activé','>\x20Knut\x20XMD\x20:\x20Une\x20erreur\x20est\x20survenue.','1827308lFYBZP','help','>\x20Knut\x20XMD:\x20Auto-VV\x20-\x20Statut\x0a\x0a','key','désactivé','includes','9187389htWCha','sendMessage','Désactivé','État\x20actuel\x20:\x20','14290600TVLVwJ','>\x20Knut\x20XMD\x20:\x20⚠️\x20L\x27auto-VV\x20est\x20déjà\x20✅\x20activé.','>\x20Knut\x20XMD:\x20Aide\x20Auto-VV\x0a\x0a','✅\x20activé','Récupère\x20et\x20renvoie\x20les\x20messages\x20à\x20vue\x20unique\x0a','👁️\x20Récupère\x20automatiquement\x20les\x20messages\x0a','replace','5302828esVPIs','toLowerCase','./group.json','•\x20autovv\x20status\x20→\x20📊\x20Statut\x0a','Utilisation\x20:\x0a','map','resolve','search','•\x20autovv\x20help\x20\x20→\x20ℹ️\x20Aide','participant','activé','Types\x20supportés\x20:\x20image,\x20vidéo,\x20audio,\x20document,\x20sticker','status','>\x20Knut\x20XMD\x20:\x20Accès\x20refusé.\x20Owner\x20ou\x20sudo\x20requis.','•\x20off\x20→\x20🛑\x20Désactiver\x0a','Erreur\x20autovv:','owners','3402063EkvDiE','50PrxHOa','•\x20on\x20\x20→\x20✅\x20Activer\x0a','4591446WcASVz','endsWith','split','1717512vDODiE','toString','\x20dans\x20ce\x20groupe.','autovv','État\x20:\x20','5QwZJmQ','📋\x20*Commandes\x20:*\x0a','>\x20Knut\x20XMD\x20:\x20Cette\x20commande\x20est\x20réservée\x20aux\x20groupes.','(images,\x20vidéos,\x20audios,\x20documents,\x20stickers).\x0a\x0a','apply','3QwLgXr','>\x20Knut\x20XMD:\x20Auto-VV\x20(Vue\x20Unique)\x0a\x0a','off'];a35_0x5155=function(){return _0x552986;};return a35_0x5155();}export async function execute(sock,msg,args,from){const _0x2b4571=a35_0x55bef3;try{if(!from[_0x2b4571(0x153)](_0x2b4571(0x162))){await sock[_0x2b4571(0x170)](from,{'text':_0x2b4571(0x15c)},{'quoted':msg});return;}const _0xffe626=msg[_0x2b4571(0x16c)][_0x2b4571(0x183)]||from,_0x469a17=_0xffe626['split']('@')[0x0][_0x2b4571(0x179)](/[^0-9]/g,''),_0x10d615=(global[_0x2b4571(0x14e)]||[])[_0x2b4571(0x17f)](_0xdc6832=>_0xdc6832['replace'](/[^0-9]/g,'')),_0x3beebf=loadSudo()['map'](_0x531a98=>_0x531a98[_0x2b4571(0x179)](/[^0-9]/g,'')),_0x7a00da=_0x10d615[_0x2b4571(0x16e)](_0x469a17),_0x385385=_0x3beebf[_0x2b4571(0x16e)](_0x469a17);if(!_0x7a00da&&!_0x385385){await sock[_0x2b4571(0x170)](from,{'text':_0x2b4571(0x187)},{'quoted':msg});return;}const _0xcf4c4a=getGroupProtections(from),_0x251a73=_0xcf4c4a[_0x2b4571(0x165)]||![],_0x48e05d=args[0x0]?.[_0x2b4571(0x17b)]();if(!_0x48e05d||!['on',_0x2b4571(0x161),_0x2b4571(0x186),_0x2b4571(0x16a)]['includes'](_0x48e05d)){const _0x50d11f=_0x251a73?_0x2b4571(0x176):'🛑\x20désactivé';await sock[_0x2b4571(0x170)](from,{'text':_0x2b4571(0x160)+(_0x2b4571(0x172)+_0x50d11f+'\x0a\x0a')+_0x2b4571(0x178)+'à\x20vue\x20unique\x20(images,\x20vidéos,\x20audios).\x0a\x0a'+_0x2b4571(0x17e)+'•\x20autovv\x20on\x20\x20\x20\x20→\x20✅\x20Activer\x0a'+'•\x20autovv\x20off\x20\x20\x20→\x20🛑\x20Désactiver\x0a'+_0x2b4571(0x17d)+_0x2b4571(0x182)},{'quoted':msg});return;}if(_0x48e05d===_0x2b4571(0x16a)){await sock['sendMessage'](from,{'text':_0x2b4571(0x175)+'📌\x20*Description\x20:*\x0a'+_0x2b4571(0x177)+_0x2b4571(0x15d)+_0x2b4571(0x15b)+_0x2b4571(0x151)+_0x2b4571(0x14c)+'•\x20status\x20→\x20📊\x20Voir\x20le\x20statut'},{'quoted':msg});return;}if(_0x48e05d===_0x2b4571(0x186)){const _0x5f014c=_0x251a73?'✅':'🛑',_0x257b4b=_0x251a73?_0x2b4571(0x167):_0x2b4571(0x171);await sock[_0x2b4571(0x170)](from,{'text':_0x2b4571(0x16b)+(_0x2b4571(0x159)+_0x5f014c+'\x20'+_0x257b4b+'\x0a')+(_0x2b4571(0x164)+from[_0x2b4571(0x154)]('@')[0x0]+'\x0a')+_0x2b4571(0x185)},{'quoted':msg});return;}const _0x48cd90=_0x48e05d==='on';if(_0x48e05d==='on'&&_0x251a73){await sock['sendMessage'](from,{'text':_0x2b4571(0x174)},{'quoted':msg});return;}if(_0x48e05d===_0x2b4571(0x161)&&!_0x251a73){await sock[_0x2b4571(0x170)](from,{'text':'>\x20Knut\x20XMD\x20:\x20⚠️\x20L\x27auto-VV\x20est\x20déjà\x20🛑\x20désactivé.'},{'quoted':msg});return;}setGroupProtection(from,_0x2b4571(0x165),_0x48cd90);const _0x101664=_0x48cd90?'✅':'🛑';await sock['sendMessage'](from,{'text':_0x2b4571(0x163)+_0x101664+'\x20'+(_0x48cd90?_0x2b4571(0x184):_0x2b4571(0x16d))+_0x2b4571(0x157)},{'quoted':msg});}catch(_0x700446){console['error'](_0x2b4571(0x14d),_0x700446),await sock['sendMessage'](from,{'text':_0x2b4571(0x168)},{'quoted':msg});}}
+import fs from "fs";
+import path from "path";
+import { getGroupProtections, setGroupProtection } from "../groupManager.js";
+import { loadSudo } from "../index.js";
+
+const GROUP_FILE = path.resolve("./group.json");
+
+export const name = "autovv";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === GROUPE UNIQUEMENT ===
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Cette commande est réservée aux groupes." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER L'EXPÉDITEUR ===
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // === VÉRIFICATION DES DROITS (OWNER ET SUDO UNIQUEMENT) ===
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+
+    if (!isOwner && !isSudo) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Accès refusé. Owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER LES PROTECTIONS DU GROUPE ===
+    const protections = getGroupProtections(from);
+    const currentStatus = protections.autoVV || false;
+
+    // === ARGUMENT ===
+    const arg = args[0]?.toLowerCase();
+
+    if (!arg || !["on", "off", "status", "help"].includes(arg)) {
+      const status = currentStatus ? "✅ activé" : "🛑 désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Auto-VV (Vue Unique)\n\n` +
+              `État actuel : ${status}\n\n` +
+              `👁️ Récupère automatiquement les messages\n` +
+              `à vue unique (images, vidéos, audios).\n\n` +
+              `Utilisation :\n` +
+              `• autovv on    → ✅ Activer\n` +
+              `• autovv off   → 🛑 Désactiver\n` +
+              `• autovv status → 📊 Statut\n` +
+              `• autovv help  → ℹ️ Aide`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === HELP ===
+    if (arg === "help") {
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Aide Auto-VV\n\n` +
+              `📌 *Description :*\n` +
+              `Récupère et renvoie les messages à vue unique\n` +
+              `(images, vidéos, audios, documents, stickers).\n\n` +
+              `📋 *Commandes :*\n` +
+              `• on  → ✅ Activer\n` +
+              `• off → 🛑 Désactiver\n` +
+              `• status → 📊 Voir le statut`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === STATUS ===
+    if (arg === "status") {
+      const statusEmoji = currentStatus ? "✅" : "🛑";
+      const statusText = currentStatus ? "Activé" : "Désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Auto-VV - Statut\n\n` +
+              `État : ${statusEmoji} ${statusText}\n` +
+              `Groupe : ${from.split('@')[0]}\n` +
+              `Types supportés : image, vidéo, audio, document, sticker`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === ON / OFF ===
+    const newState = arg === "on";
+    
+    if (arg === "on" && currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'auto-VV est déjà ✅ activé." 
+      }, { quoted: msg });
+      return;
+    }
+    
+    if (arg === "off" && !currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'auto-VV est déjà 🛑 désactivé." 
+      }, { quoted: msg });
+      return;
+    }
+
+    setGroupProtection(from, "autoVV", newState);
+    const statusEmoji = newState ? "✅" : "🛑";
+    
+    await sock.sendMessage(from, { 
+      text: `> Knut XMD: Auto-VV ${statusEmoji} ${newState ? "activé" : "désactivé"} dans ce groupe.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur autovv:", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Une erreur est survenue." }, { quoted: msg });
+  }
+}

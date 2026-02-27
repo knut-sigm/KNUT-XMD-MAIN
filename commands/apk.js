@@ -1,1 +1,49 @@
-function a25_0xec46(){const _0x54fca8=['https://en.aptoide.com/search/','remoteJid','https://apksfree.com/search/','168360qcgwhD','sendMessage','📥\x20Téléchargement','apk','Erreur\x20APK:','\x0a>\x20╚═══════════════════╝','1012867TZaPzN','21781460qszZPT','https://play.google.com/store/search?q=','https://store.epicgames.com/en-US/browse?q=','580cmRluE','172176nhxwca','9445779gBIGBc','(((.+)+)+)+$','https://apkpure.com/search?q=','.html','18222ShTPSK','https://en.uptodown.com/android/search/','constructor','https://www.apkmonk.com/search/?q=','698240aAZoIh','6vHqLfd','https://mobogenie.com/search/','https://www.apkmirror.com/?s=','>\x20Knut\x20XMD:\x0a>\x20╔════\x20𝗔𝗣𝗞\x20𝗦𝗘𝗔𝗥𝗖𝗛\x20════╗\x0a>\x20🔍\x20*Requête:*\x20','&c=apps','42DWQKCB','>\x20Knut\x20XMD:❌\x20Usage:.apk\x20<nom\x20de\x20l\x27application>\x0a\x0aExemple:\x20.apk\x20WhatsApp','error','Recherche\x20des\x20APK\x20sur\x20différents\x20stores','>\x20⚠️\x20*Erreur*\x0a>\x20Impossible\x20de\x20générer\x20les\x20liens\x20de\x20recherche.','search'];a25_0xec46=function(){return _0x54fca8;};return a25_0xec46();}const a25_0xf4b565=a25_0x1a15;(function(_0x212c08,_0x3041d5){const _0x31fc00=a25_0x1a15,_0x566824=_0x212c08();while(!![]){try{const _0x423f08=-parseInt(_0x31fc00(0x173))/0x1+-parseInt(_0x31fc00(0x155))/0x2+-parseInt(_0x31fc00(0x15a))/0x3*(-parseInt(_0x31fc00(0x154))/0x4)+parseInt(_0x31fc00(0x15e))/0x5*(-parseInt(_0x31fc00(0x15f))/0x6)+-parseInt(_0x31fc00(0x164))/0x7*(parseInt(_0x31fc00(0x16d))/0x8)+-parseInt(_0x31fc00(0x156))/0x9+parseInt(_0x31fc00(0x151))/0xa;if(_0x423f08===_0x3041d5)break;else _0x566824['push'](_0x566824['shift']());}catch(_0x1d1cc6){_0x566824['push'](_0x566824['shift']());}}}(a25_0xec46,0x9d578));const a25_0x2cfc10=(function(){let _0x526bca=!![];return function(_0x121728,_0x4d6d9a){const _0x3dc437=_0x526bca?function(){if(_0x4d6d9a){const _0x364984=_0x4d6d9a['apply'](_0x121728,arguments);return _0x4d6d9a=null,_0x364984;}}:function(){};return _0x526bca=![],_0x3dc437;};}()),a25_0x3ee0ba=a25_0x2cfc10(this,function(){const _0x9bd696=a25_0x1a15;return a25_0x3ee0ba['toString']()[_0x9bd696(0x169)](_0x9bd696(0x157))['toString']()[_0x9bd696(0x15c)](a25_0x3ee0ba)['search'](_0x9bd696(0x157));});a25_0x3ee0ba();function a25_0x1a15(_0x3a66b9,_0x4e3a54){_0x3a66b9=_0x3a66b9-0x151;const _0x2e25ad=a25_0xec46();let _0x3ee0ba=_0x2e25ad[_0x3a66b9];return _0x3ee0ba;}export default{'name':a25_0xf4b565(0x170),'description':a25_0xf4b565(0x167),'category':a25_0xf4b565(0x16f),async 'execute'(sock,msg,args){const _0x47a956=a25_0xf4b565,from=msg['key'][_0x47a956(0x16b)];try{if(!args||args['length']===0x0)return await sock['sendMessage'](from,{'text':_0x47a956(0x165)},{'quoted':msg});const _0x50b925=args['join']('\x20'),_0x154e0f=_0x47a956(0x152)+encodeURIComponent(_0x50b925)+_0x47a956(0x163),_0x48d090=_0x47a956(0x158)+encodeURIComponent(_0x50b925),_0x11efc7=_0x47a956(0x161)+encodeURIComponent(_0x50b925),_0x5049c4=_0x47a956(0x15b)+encodeURIComponent(_0x50b925),_0x17b9ab='https://www.happymod.com/search.html?q='+encodeURIComponent(_0x50b925),_0x277591=_0x47a956(0x15d)+encodeURIComponent(_0x50b925),_0x334dcc=_0x47a956(0x16a)+encodeURIComponent(_0x50b925),_0x18eeb9=_0x47a956(0x16c)+encodeURIComponent(_0x50b925)+'/',_0x14f042=_0x47a956(0x153)+encodeURIComponent(_0x50b925),_0x31d54a=_0x47a956(0x160)+encodeURIComponent(_0x50b925)+_0x47a956(0x159),_0x4bf73d=_0x47a956(0x162)+_0x50b925+'\x0a>\x20🎮\x20*STORES\x20OFFICIELS*\x0a>\x20\x20Play\x20Store:\x0a>\x20'+_0x154e0f+_0x47a956(0x172);await sock[_0x47a956(0x16e)](from,{'text':_0x4bf73d},{'quoted':msg});}catch(_0x3b48d0){console[_0x47a956(0x166)](_0x47a956(0x171),_0x3b48d0),await sock[_0x47a956(0x16e)](from,{'text':_0x47a956(0x168)},{'quoted':msg});}}};
+// 📁 commands/apk.js
+export default {
+  name: 'apk',
+  description: 'Recherche des APK sur différents stores',
+  category: '📥 Téléchargement',
+
+  async execute(sock, msg, args) {
+    const from = msg.key.remoteJid;
+
+    try {
+      if (!args || args.length === 0) {
+        return await sock.sendMessage(from, {
+          text: `> Knut XMD:❌ Usage:.apk <nom de l'application>\n\nExemple: .apk WhatsApp`,
+        }, { quoted: msg });
+      }
+
+      const query = args.join(' ');
+
+      // 🌐 Liens de recherche
+      const playStoreUrl = `https://play.google.com/store/search?q=${encodeURIComponent(query)}&c=apps`;
+      const apkpureUrl = `https://apkpure.com/search?q=${encodeURIComponent(query)}`;
+      const apkmirrorUrl = `https://www.apkmirror.com/?s=${encodeURIComponent(query)}`;
+      const uptodownUrl = `https://en.uptodown.com/android/search/${encodeURIComponent(query)}`;
+      const happymodUrl = `https://www.happymod.com/search.html?q=${encodeURIComponent(query)}`;
+      const apkmonkUrl = `https://www.apkmonk.com/search/?q=${encodeURIComponent(query)}`;
+      const aptoideUrl = `https://en.aptoide.com/search/${encodeURIComponent(query)}`;
+      const apksfreeUrl = `https://apksfree.com/search/${encodeURIComponent(query)}/`;
+      const epicGamesUrl = `https://store.epicgames.com/en-US/browse?q=${encodeURIComponent(query)}`;
+      const mobogenieUrl = `https://mobogenie.com/search/${encodeURIComponent(query)}.html`;
+
+      // 🧾 Message stylisé avec contours identiques au ping
+      const reply = `> Knut XMD:
+> ╔════ 𝗔𝗣𝗞 𝗦𝗘𝗔𝗥𝗖𝗛 ════╗
+> 🔍 *Requête:* ${query}
+> 🎮 *STORES OFFICIELS*
+>  Play Store:
+> ${playStoreUrl}
+> ╚═══════════════════╝`;
+
+      await sock.sendMessage(from, { text: reply }, { quoted: msg });
+
+    } catch (error) {
+      console.error('Erreur APK:', error);
+      await sock.sendMessage(from, {
+        text: `> ⚠️ *Erreur*\n> Impossible de générer les liens de recherche.`,
+      }, { quoted: msg });
+    }
+  },
+};

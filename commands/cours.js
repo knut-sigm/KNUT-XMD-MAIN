@@ -1,1 +1,37 @@
-const a44_0x11ad89=a44_0x210d;function a44_0x210d(_0x1bb2c6,_0xba85c9){_0x1bb2c6=_0x1bb2c6-0x121;const _0x599419=a44_0x3830();let _0x27efac=_0x599419[_0x1bb2c6];return _0x27efac;}(function(_0x585061,_0x2486c3){const _0x16efaf=a44_0x210d,_0x22cea1=_0x585061();while(!![]){try{const _0xd8fecc=-parseInt(_0x16efaf(0x126))/0x1+parseInt(_0x16efaf(0x13c))/0x2*(parseInt(_0x16efaf(0x149))/0x3)+parseInt(_0x16efaf(0x146))/0x4*(-parseInt(_0x16efaf(0x141))/0x5)+-parseInt(_0x16efaf(0x135))/0x6+-parseInt(_0x16efaf(0x12e))/0x7*(parseInt(_0x16efaf(0x139))/0x8)+-parseInt(_0x16efaf(0x12c))/0x9+parseInt(_0x16efaf(0x121))/0xa;if(_0xd8fecc===_0x2486c3)break;else _0x22cea1['push'](_0x22cea1['shift']());}catch(_0x109077){_0x22cea1['push'](_0x22cea1['shift']());}}}(a44_0x3830,0xe275f));function a44_0x3830(){const _0x5df88a=['1975926UGeSnj','error','\x0a━━━━━━━━━━━━━━━━━━\x0a\x0a','🔗\x20https://www.coursera.org/learn/','45241710KVzXeS','elements','https://api.coursera.org/api/courses.v1?q=search&query=','constructor','Débutant','906269YNRGBc','difficultyLevel','averageRating','🎯\x20Niveau:\x20','name','json','14256108yrWtVo','>\x20Knut\x20XMD\x20:\x20Service\x20Coursera\x20indisponible.','42XKjLNF','⭐\x20Note:\x20','Erreur\x20coursera\x20:','📚\x20','🏫\x20Université:\x20','N/A','/5\x0a','6268824MClipp','>\x20🎓\x20Knut\x20XMD\x20:\x20Cours\x20','cours','programmation','132376MGmyvs','slice','sendMessage','4XULfHn','toString','key','(((.+)+)+)+$','━━━━━━━━━━━━━━━━━━\x0a','1279505WEaVOQ','search','join','length','slug','20zFjiLE','remoteJid','>\x20❌\x20Knut\x20XMD\x20:\x20Aucun\x20cours\x20trouvé.'];a44_0x3830=function(){return _0x5df88a;};return a44_0x3830();}const a44_0x3f9d34=(function(){let _0x122c47=!![];return function(_0x2e2ba8,_0x1dcb86){const _0x509b1a=_0x122c47?function(){if(_0x1dcb86){const _0x4b435e=_0x1dcb86['apply'](_0x2e2ba8,arguments);return _0x1dcb86=null,_0x4b435e;}}:function(){};return _0x122c47=![],_0x509b1a;};}()),a44_0x27efac=a44_0x3f9d34(this,function(){const _0x3effbb=a44_0x210d;return a44_0x27efac['toString']()[_0x3effbb(0x142)](_0x3effbb(0x13f))[_0x3effbb(0x13d)]()[_0x3effbb(0x124)](a44_0x27efac)[_0x3effbb(0x142)](_0x3effbb(0x13f));});a44_0x27efac();export const name=a44_0x11ad89(0x137);export async function execute(sock,msg,args){const _0x4ece19=a44_0x11ad89,from=msg[_0x4ece19(0x13e)][_0x4ece19(0x147)];try{const _0x188dd5=args[_0x4ece19(0x143)]('\x20')||_0x4ece19(0x138),_0x103180=_0x4ece19(0x123)+encodeURIComponent(_0x188dd5)+'&limit=3',_0x38951d=await fetch(_0x103180),_0x553bae=await _0x38951d[_0x4ece19(0x12b)]();if(!_0x553bae[_0x4ece19(0x122)]||_0x553bae[_0x4ece19(0x122)][_0x4ece19(0x144)]===0x0){await sock[_0x4ece19(0x13b)](from,{'text':_0x4ece19(0x148)},{'quoted':msg});return;}let _0x52bf73=_0x4ece19(0x136)+_0x188dd5+_0x4ece19(0x14b);_0x553bae[_0x4ece19(0x122)][_0x4ece19(0x13a)](0x0,0x3)['forEach']((_0x48c857,_0x2c4388)=>{const _0x49f25b=_0x4ece19;_0x52bf73+=_0x49f25b(0x131)+(_0x2c4388+0x1)+'.\x20'+_0x48c857[_0x49f25b(0x12a)]+'\x0a',_0x52bf73+=_0x49f25b(0x132)+(_0x48c857['partnerNames']?.[0x0]||'Divers')+'\x0a',_0x52bf73+=_0x49f25b(0x12f)+(_0x48c857[_0x49f25b(0x128)]||_0x49f25b(0x133))+_0x49f25b(0x134),_0x52bf73+=_0x49f25b(0x129)+(_0x48c857[_0x49f25b(0x127)]||_0x49f25b(0x125))+'\x0a',_0x52bf73+=_0x49f25b(0x14c)+_0x48c857[_0x49f25b(0x145)]+'\x0a',_0x52bf73+=_0x49f25b(0x140);}),await sock[_0x4ece19(0x13b)](from,{'text':_0x52bf73},{'quoted':msg});}catch(_0x423bac){console[_0x4ece19(0x14a)](_0x4ece19(0x130),_0x423bac),await sock[_0x4ece19(0x13b)](from,{'text':_0x4ece19(0x12d)},{'quoted':msg});}}
+export const name = "cours";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  try {
+    const sujet = args.join(" ") || "programmation";
+    
+    // API Coursera Catalog (gratuit)
+    const url = `https://api.coursera.org/api/courses.v1?q=search&query=${encodeURIComponent(sujet)}&limit=3`;
+    
+    const response = await fetch(url);
+    const data = await response.json();
+    
+    if (!data.elements || data.elements.length === 0) {
+      await sock.sendMessage(from, { text: "> ❌ Knut XMD : Aucun cours trouvé." }, { quoted: msg });
+      return;
+    }
+    
+    let reply = `> 🎓 Knut XMD : Cours ${sujet}\n━━━━━━━━━━━━━━━━━━\n\n`;
+    
+    data.elements.slice(0, 3).forEach((cours, i) => {
+      reply += `📚 ${i+1}. ${cours.name}\n`;
+      reply += `🏫 Université: ${cours.partnerNames?.[0] || "Divers"}\n`;
+      reply += `⭐ Note: ${cours.averageRating || "N/A"}/5\n`;
+      reply += `🎯 Niveau: ${cours.difficultyLevel || "Débutant"}\n`;
+      reply += `🔗 https://www.coursera.org/learn/${cours.slug}\n`;
+      reply += `━━━━━━━━━━━━━━━━━━\n`;
+    });
+    
+    await sock.sendMessage(from, { text: reply }, { quoted: msg });
+    
+  } catch (err) {
+    console.error("Erreur coursera :", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Service Coursera indisponible." }, { quoted: msg });
+  }
+}

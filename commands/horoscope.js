@@ -1,1 +1,49 @@
-const a63_0x294f89=a63_0x743a;function a63_0x5eca(){const _0x253f8c=['♋\x20Cancer','6096204PyDdSK','\x0a⏱️\x20Heure:\x20','39880OUgRqJ','♐\x20Sagittaire','constructor','toString','lucky_time','remoteJid','♎\x20Balance','13240AcbPyo','49592100SdjfAr','horoscope','♈\x20Bélier','5TQBMRs','♍\x20Vierge','6667aZjJHh','1962BwRPuH','key','taurus','\x0a📊\x20Compatibilité:\x20','\x0a💫\x20Chance:\x20','>\x20🌌\x20Knut\x20XMD\x20:\x20','>\x20Knut\x20XMD\x20:\x20Service\x20horoscope\x20indisponible.','10430530PaNmQM','search','sendMessage','toLowerCase','\x0a━━━━━━━━━━━━━━━━━━\x0a📅\x20Date:\x20','json','\x0a🎯\x20Humeur:\x20','244VsPZCu','5383cJmFFx','♌\x20Lion','\x0a📝\x20Prediction:\x20','870sAYebS','♏\x20Scorpion','apply','&day=today','♒\x20Verseau','compatibility','22820twmgYU','(((.+)+)+)+$'];a63_0x5eca=function(){return _0x253f8c;};return a63_0x5eca();}(function(_0x519eb8,_0x54f0fb){const _0xe6fe06=a63_0x743a,_0x1e759b=_0x519eb8();while(!![]){try{const _0x39dbe9=-parseInt(_0xe6fe06(0x1e9))/0x1*(-parseInt(_0xe6fe06(0x1f8))/0x2)+parseInt(_0xe6fe06(0x1fc))/0x3*(-parseInt(_0xe6fe06(0x202))/0x4)+parseInt(_0xe6fe06(0x1e7))/0x5*(-parseInt(_0xe6fe06(0x205))/0x6)+parseInt(_0xe6fe06(0x1f9))/0x7*(-parseInt(_0xe6fe06(0x1e3))/0x8)+-parseInt(_0xe6fe06(0x1ea))/0x9*(-parseInt(_0xe6fe06(0x1dc))/0xa)+-parseInt(_0xe6fe06(0x1f1))/0xb+parseInt(_0xe6fe06(0x1e4))/0xc;if(_0x39dbe9===_0x54f0fb)break;else _0x1e759b['push'](_0x1e759b['shift']());}catch(_0x5774e2){_0x1e759b['push'](_0x1e759b['shift']());}}}(a63_0x5eca,0xe1978));const a63_0x16a8cd=(function(){let _0xa92d9e=!![];return function(_0xaafe3a,_0x4efd2c){const _0x24706f=_0xa92d9e?function(){const _0x262455=a63_0x743a;if(_0x4efd2c){const _0x2f53ac=_0x4efd2c[_0x262455(0x1fe)](_0xaafe3a,arguments);return _0x4efd2c=null,_0x2f53ac;}}:function(){};return _0xa92d9e=![],_0x24706f;};}()),a63_0x215084=a63_0x16a8cd(this,function(){const _0x26a53a=a63_0x743a;return a63_0x215084[_0x26a53a(0x1df)]()['search'](_0x26a53a(0x203))[_0x26a53a(0x1df)]()[_0x26a53a(0x1de)](a63_0x215084)[_0x26a53a(0x1f2)](_0x26a53a(0x203));});a63_0x215084();function a63_0x743a(_0x418ffb,_0x572d11){_0x418ffb=_0x418ffb-0x1db;const _0x33bac5=a63_0x5eca();let _0x215084=_0x33bac5[_0x418ffb];return _0x215084;}export const name=a63_0x294f89(0x1e5);export async function execute(sock,msg,args){const _0x4c756c=a63_0x294f89,from=msg[_0x4c756c(0x1eb)][_0x4c756c(0x1e1)];try{const _0x4b189d=args[0x0]?.[_0x4c756c(0x1f4)]()||_0x4c756c(0x1ec),_0xe61c5='https://aztro.sameerkumar.website/?sign='+_0x4b189d+_0x4c756c(0x1ff),_0x9580d4=await fetch(_0xe61c5,{'method':'POST'}),_0x31da18=await _0x9580d4[_0x4c756c(0x1f6)](),_0x35b35d={'aries':_0x4c756c(0x1e6),'taurus':'♉\x20Taureau','gemini':'♊\x20Gémeaux','cancer':_0x4c756c(0x204),'leo':_0x4c756c(0x1fa),'virgo':_0x4c756c(0x1e8),'libra':_0x4c756c(0x1e2),'scorpio':_0x4c756c(0x1fd),'sagittarius':_0x4c756c(0x1dd),'capricorn':'♑\x20Capricorne','aquarius':_0x4c756c(0x200),'pisces':'♓\x20Poissons'},_0x47a53f=_0x4c756c(0x1ef)+(_0x35b35d[_0x4b189d]||_0x4b189d)+_0x4c756c(0x1f5)+_0x31da18['current_date']+'\x0a🌟\x20Couleur:\x20'+_0x31da18['color']+_0x4c756c(0x1ed)+_0x31da18[_0x4c756c(0x201)]+_0x4c756c(0x1f7)+_0x31da18['mood']+_0x4c756c(0x1ee)+_0x31da18['lucky_number']+_0x4c756c(0x1db)+_0x31da18[_0x4c756c(0x1e0)]+_0x4c756c(0x1fb)+_0x31da18['description'];await sock['sendMessage'](from,{'text':_0x47a53f},{'quoted':msg});}catch(_0x3d1a6d){console['error']('Erreur\x20horoscope\x20:',_0x3d1a6d),await sock[_0x4c756c(0x1f3)](from,{'text':_0x4c756c(0x1f0)},{'quoted':msg});}}
+export const name = "horoscope";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  try {
+    const sign = args[0]?.toLowerCase() || "taurus";
+    
+    // API Aztro (gratuit)
+    const url = `https://aztro.sameerkumar.website/?sign=${sign}&day=today`;
+    
+    const response = await fetch(url, {
+      method: 'POST'
+    });
+    
+    const data = await response.json();
+    
+    const signs = {
+      "aries": "♈ Bélier",
+      "taurus": "♉ Taureau",
+      "gemini": "♊ Gémeaux",
+      "cancer": "♋ Cancer",
+      "leo": "♌ Lion",
+      "virgo": "♍ Vierge",
+      "libra": "♎ Balance",
+      "scorpio": "♏ Scorpion",
+      "sagittarius": "♐ Sagittaire",
+      "capricorn": "♑ Capricorne",
+      "aquarius": "♒ Verseau",
+      "pisces": "♓ Poissons"
+    };
+    
+    const reply = `> 🌌 Knut XMD : ${signs[sign] || sign}
+━━━━━━━━━━━━━━━━━━
+📅 Date: ${data.current_date}
+🌟 Couleur: ${data.color}
+📊 Compatibilité: ${data.compatibility}
+🎯 Humeur: ${data.mood}
+💫 Chance: ${data.lucky_number}
+⏱️ Heure: ${data.lucky_time}
+📝 Prediction: ${data.description}`;
+    
+    await sock.sendMessage(from, { text: reply }, { quoted: msg });
+    
+  } catch (err) {
+    console.error("Erreur horoscope :", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Service horoscope indisponible." }, { quoted: msg });
+  }
+}

@@ -1,1 +1,65 @@
-function a20_0x3b88(_0x4df1cf,_0x43a16c){_0x4df1cf=_0x4df1cf-0x1f3;const _0x368b9d=a20_0x5a6d();let _0x36a611=_0x368b9d[_0x4df1cf];return _0x36a611;}const a20_0x3db219=a20_0x3b88;function a20_0x5a6d(){const _0x2d1057=['off','12PkxTgf','toLowerCase','@g.us','apply','Accès\x20refusé.\x20Admin,\x20owner\x20ou\x20sudo\x20requis.','antitagall','Une\x20erreur\x20est\x20survenue.','admin','replace','participants','endsWith','key','\x0a\x0aUtilisation\x20:\x20`!antitagall\x20on`\x20ou\x20`!antitagall\x20off`','9621koGSsh','488SWcbtE','search','antiTagAll','357467sPTLlC','sendMessage','participant','154152cjyMfr','193714EJYELD','33504072QXXFGw','3044559EfJTCI','>\x20Knut\x20XMD:\x20L\x27anti-tagall\x20est\x20déjà\x20','\x20dans\x20ce\x20groupe.','36WLUKlp','désactivé','map','includes','activé','260hejTps','>\x20Knut\x20XMD:\x20Anti-TagAll\x0a\x0aÉtat\x20:\x20','Cette\x20commande\x20est\x20réservée\x20aux\x20groupes.','689875bEaXnd','2rtdrSG','Erreur\x20antitagall:'];a20_0x5a6d=function(){return _0x2d1057;};return a20_0x5a6d();}(function(_0x5a2770,_0x2a421b){const _0xd51046=a20_0x3b88,_0x3ac213=_0x5a2770();while(!![]){try{const _0x5240fa=-parseInt(_0xd51046(0x20c))/0x1*(parseInt(_0xd51046(0x1fe))/0x2)+-parseInt(_0xd51046(0x1f6))/0x3*(-parseInt(_0xd51046(0x203))/0x4)+-parseInt(_0xd51046(0x20b))/0x5*(-parseInt(_0xd51046(0x20f))/0x6)+-parseInt(_0xd51046(0x200))/0x7+parseInt(_0xd51046(0x1f7))/0x8*(-parseInt(_0xd51046(0x1fd))/0x9)+parseInt(_0xd51046(0x208))/0xa*(-parseInt(_0xd51046(0x1fa))/0xb)+parseInt(_0xd51046(0x1ff))/0xc;if(_0x5240fa===_0x2a421b)break;else _0x3ac213['push'](_0x3ac213['shift']());}catch(_0x5c1cdf){_0x3ac213['push'](_0x3ac213['shift']());}}}(a20_0x5a6d,0x8d386));const a20_0x55199e=(function(){let _0x4a76fc=!![];return function(_0x191cdb,_0x271552){const _0x5d9b26=_0x4a76fc?function(){const _0x33adbf=a20_0x3b88;if(_0x271552){const _0x3cef0e=_0x271552[_0x33adbf(0x212)](_0x191cdb,arguments);return _0x271552=null,_0x3cef0e;}}:function(){};return _0x4a76fc=![],_0x5d9b26;};}()),a20_0x36a611=a20_0x55199e(this,function(){const _0x50e8f6=a20_0x3b88;return a20_0x36a611['toString']()[_0x50e8f6(0x1f8)]('(((.+)+)+)+$')['toString']()['constructor'](a20_0x36a611)['search']('(((.+)+)+)+$');});a20_0x36a611();import{getGroupProtections,setGroupProtection}from'../groupManager.js';import{loadSudo}from'../index.js';export const name=a20_0x3db219(0x214);export async function execute(sock,msg,args,from){const _0x2e0759=a20_0x3db219;try{if(!from[_0x2e0759(0x1f3)](_0x2e0759(0x211))){await sock[_0x2e0759(0x1fb)](from,{'text':_0x2e0759(0x20a)},{'quoted':msg});return;}const _0xb9c012=msg[_0x2e0759(0x1f4)][_0x2e0759(0x1fc)]||from,_0x4d5a63=_0xb9c012['split']('@')[0x0]['replace'](/[^0-9]/g,''),_0xf2f781=(global['owners']||[])[_0x2e0759(0x205)](_0x297054=>_0x297054[_0x2e0759(0x217)](/[^0-9]/g,'')),_0xf1ec83=loadSudo()[_0x2e0759(0x205)](_0x1e88a4=>_0x1e88a4[_0x2e0759(0x217)](/[^0-9]/g,'')),_0x301831=_0xf2f781['includes'](_0x4d5a63),_0x28b14c=_0xf1ec83[_0x2e0759(0x206)](_0x4d5a63),_0x5cc1c2=await isGroupAdmin(sock,from,_0xb9c012);if(!_0x301831&&!_0x28b14c&&!_0x5cc1c2){await sock[_0x2e0759(0x1fb)](from,{'text':_0x2e0759(0x213)},{'quoted':msg});return;}const _0x5976f5=args[0x0]?.[_0x2e0759(0x210)](),_0x51763f=getGroupProtections(from)[_0x2e0759(0x1f9)]||![];if(!_0x5976f5||!['on',_0x2e0759(0x20e)][_0x2e0759(0x206)](_0x5976f5)){const _0x1c8af3=_0x51763f?_0x2e0759(0x207):_0x2e0759(0x204);await sock['sendMessage'](from,{'text':_0x2e0759(0x209)+_0x1c8af3+_0x2e0759(0x1f5)},{'quoted':msg});return;}const _0x3d34a7=_0x5976f5==='on';if(_0x3d34a7===_0x51763f){await sock[_0x2e0759(0x1fb)](from,{'text':_0x2e0759(0x201)+(_0x3d34a7?'activé':_0x2e0759(0x204))+'.'},{'quoted':msg});return;}setGroupProtection(from,_0x2e0759(0x1f9),_0x3d34a7),await sock[_0x2e0759(0x1fb)](from,{'text':'>\x20Knut\x20XMD:\x20Anti-TagAll\x20'+(_0x3d34a7?'activé':_0x2e0759(0x204))+_0x2e0759(0x202)},{'quoted':msg});}catch(_0x28107d){console['error'](_0x2e0759(0x20d),_0x28107d),await sock['sendMessage'](from,{'text':_0x2e0759(0x215)},{'quoted':msg});}}async function isGroupAdmin(sock,_0x507643,_0x12892){const _0xa3d6ba=a20_0x3db219;try{const _0x20e724=await sock['groupMetadata'](_0x507643);return _0x20e724[_0xa3d6ba(0x218)]['some'](_0x52f0f1=>_0x52f0f1['id']===_0x12892&&_0x52f0f1[_0xa3d6ba(0x216)]);}catch{return![];}}
+import { getGroupProtections, setGroupProtection } from "../groupManager.js";
+import { loadSudo } from "../index.js";
+
+export const name = "antitagall";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { text: "Cette commande est réservée aux groupes." }, { quoted: msg });
+      return;
+    }
+
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+    const isAdmin = await isGroupAdmin(sock, from, sender);
+
+    if (!isOwner && !isSudo && !isAdmin) {
+      await sock.sendMessage(from, { text: "Accès refusé. Admin, owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    const arg = args[0]?.toLowerCase();
+    const currentState = getGroupProtections(from).antiTagAll || false;
+
+    if (!arg || !["on", "off"].includes(arg)) {
+      const status = currentState ? "activé" : "désactivé";
+      await sock.sendMessage(from, {
+        text: `> Knut XMD: Anti-TagAll\n\nÉtat : ${status}\n\nUtilisation : \`!antitagall on\` ou \`!antitagall off\``
+      }, { quoted: msg });
+      return;
+    }
+
+    const newState = arg === "on";
+    if (newState === currentState) {
+      await sock.sendMessage(from, {
+        text: `> Knut XMD: L'anti-tagall est déjà ${newState ? "activé" : "désactivé"}.`
+      }, { quoted: msg });
+      return;
+    }
+
+    setGroupProtection(from, "antiTagAll", newState);
+
+    await sock.sendMessage(from, {
+      text: `> Knut XMD: Anti-TagAll ${newState ? "activé" : "désactivé"} dans ce groupe.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur antitagall:", err);
+    await sock.sendMessage(from, { text: "Une erreur est survenue." }, { quoted: msg });
+  }
+}
+
+async function isGroupAdmin(sock, groupJid, userJid) {
+  try {
+    const metadata = await sock.groupMetadata(groupJid);
+    return metadata.participants.some(p => p.id === userJid && p.admin);
+  } catch {
+    return false;
+  }
+}

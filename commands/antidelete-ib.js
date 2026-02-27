@@ -1,1 +1,273 @@
-const a12_0x54e834=a12_0x507a;(function(_0x339124,_0x2a9814){const _0x24a70c=a12_0x507a,_0x27fe30=_0x339124();while(!![]){try{const _0x2bf52c=parseInt(_0x24a70c(0x94))/0x1*(parseInt(_0x24a70c(0xb8))/0x2)+-parseInt(_0x24a70c(0xa6))/0x3+-parseInt(_0x24a70c(0xdc))/0x4+parseInt(_0x24a70c(0xce))/0x5*(-parseInt(_0x24a70c(0x9f))/0x6)+parseInt(_0x24a70c(0xe0))/0x7+-parseInt(_0x24a70c(0x87))/0x8*(parseInt(_0x24a70c(0xf8))/0x9)+parseInt(_0x24a70c(0xe5))/0xa*(parseInt(_0x24a70c(0xdd))/0xb);if(_0x2bf52c===_0x2a9814)break;else _0x27fe30['push'](_0x27fe30['shift']());}catch(_0x2c4ba4){_0x27fe30['push'](_0x27fe30['shift']());}}}(a12_0x21a5,0xaf09f));const a12_0x592ab0=(function(){let _0x562079=!![];return function(_0x5c9c19,_0xc8359f){const _0x53fe1c=_0x562079?function(){const _0x3c6ce9=a12_0x507a;if(_0xc8359f){const _0xfaf7c9=_0xc8359f[_0x3c6ce9(0xf6)](_0x5c9c19,arguments);return _0xc8359f=null,_0xfaf7c9;}}:function(){};return _0x562079=![],_0x53fe1c;};}()),a12_0x4591f7=a12_0x592ab0(this,function(){const _0x16f212=a12_0x507a;return a12_0x4591f7['toString']()[_0x16f212(0xde)](_0x16f212(0xf7))['toString']()[_0x16f212(0xed)](a12_0x4591f7)[_0x16f212(0xde)]('(((.+)+)+)+$');});a12_0x4591f7();import a12_0x33ea76 from'fs';import a12_0x3bc9f8 from'path';import{loadSudo}from'../index.js';function a12_0x507a(_0x1b3727,_0x3c11b4){_0x1b3727=_0x1b3727-0x78;const _0x2c8652=a12_0x21a5();let _0x4591f7=_0x2c8652[_0x1b3727];return _0x4591f7;}const DB_FILE=a12_0x3bc9f8[a12_0x54e834(0xd8)]('./antidelete-ib.json');export const name=a12_0x54e834(0xd7);function a12_0x21a5(){const _0x31efd3=['•\x20antidelete-ib\x20status\x20\x20\x20\x20→\x20📊\x20Statut\x0a','totalMedia','>\x20Knut\x20XMD:\x20Aide\x20Anti-Delete\x20IB\x0a\x0a','\x0a\x20\x20\x20💬\x20','6jcSvEO','toLocaleString','getStats','Les\x20messages\x20supprimés\x20sont\x20restaurés\x20dans\x20l\x27IB\x20du\x20bot.\x0a\x0a','>\x20Knut\x20XMD\x20:\x20⚠️\x20Utilisation\x20:\x20antidelete-ib\x20last\x20[nombre\x201-20]','totalRotations','setStatus','Messages\x20stockés\x20:\x20','\x0a\x20\x20\x20📱\x20','\x20autres\x20contacts\x0a','Contacts\x20:\x20','Inconnu','Capacité\x20max\x20:\x20','sort','désactivé','>\x20Knut\x20XMD\x20:\x20Une\x20erreur\x20est\x20survenue.','status','•\x20antidelete-ib\x20search\x20[nom]\x20→\x20🔍\x20Rechercher\x0a','Date\x20inconnue','>\x20Knut\x20XMD:\x20Résultats\x20pour\x20\x22','clearDB','\x0a\x20\x20\x20🕐\x20','35MahwMu','map','pushName','>\x20Knut\x20XMD\x20:\x20⚠️\x20Utilisation\x20:\x20antidelete-ib\x20search\x20[nom]','split','contacts','protectionSystem','slice','>\x20Knut\x20XMD\x20:\x20Accès\x20refusé.\x20Owner\x20ou\x20sudo\x20requis.','antidelete-ib','resolve','owners','•\x20off\x20\x20\x20\x20\x20\x20\x20→\x20🛑\x20Désactiver\x0a','clear','2742512bxzKfg','22fHXcwC','search','Erreur\x20antidelete-ib:','6784764tgEOkA','content','keys','Rotations\x20:\x20','Médias\x20:\x20','14298710qTPItm','messages','Non\x20défini','replace','•\x20on\x20\x20\x20\x20\x20\x20\x20\x20→\x20✅\x20Activer\x0a','Messages\x20:\x20','•\x20status\x20\x20\x20\x20→\x20📊\x20Statut\x20détaillé\x0a','•\x20antidelete-ib\x20clear\x20\x20\x20\x20\x20→\x20🗑️\x20Vider\x20la\x20base\x0a','constructor','Médias\x20stockés\x20:\x20','>\x20Knut\x20XMD\x20:\x20📭\x20Aucun\x20résultat\x20pour\x20\x22','>\x20Knut\x20XMD:\x20Anti-Delete\x20IB\x20','antiDeleteIB','•\x20search\x20[nom]\x20→\x20🔍\x20Rechercher\x20par\x20nom\x0a','>\x20Knut\x20XMD\x20:\x20⚠️\x20L\x27anti-delete\x20IB\x20est\x20déjà\x20✅\x20activé.','sendMessage','.\x20👤\x20','apply','(((.+)+)+)+$','9cMUMVs','viewLastMessages','>\x20Knut\x20XMD\x20:\x20❌\x20NUMÉRO\x20du\x20bot\x20non\x20défini\x20dans\x20.env','Désactivé','push','>\x20Knut\x20XMD:\x20Anti-Delete\x20IB\x20-\x20Statut\x0a\x0a','>\x20Knut\x20XMD:\x20Contacts\x20suivis\x20(','...\x20et\x20','--force','...','totalMessages','>\x20Knut\x20XMD:\x20✅\x20Base\x20anti-delete\x20IB\x20vidée.',')\x0a\x0a','Bot\x20IB\x20:\x20','\x22\x20(','•\x20antidelete-ib\x20off\x20\x20\x20\x20\x20\x20\x20→\x20🛑\x20Désactiver\x0a','error','stats','10763384xXride','Rotation\x20auto\x20:\x20','toLowerCase','last','\x20autres\x20résultats\x0a','entries','length','maxMessages','Contacts\x20suivis\x20:\x20','senderJid','activé','•\x20clear\x20\x20\x20\x20\x20→\x20🗑️\x20Vider\x20la\x20base\x20(avec\x20--force)','✅\x20Oui','240369ByicgB','Activé','•\x20antidelete-ib\x20last\x20[n]\x20\x20→\x20Voir\x20derniers\x20messages\x0a','key','•\x20last\x20[n]\x20\x20→\x20Voir\x20les\x20n\x20derniers\x20messages\x0a','help','off','\x0a\x20\x20\x20📝\x20','substring','📋\x20*Commandes\x20:*\x0a','👤\x20*Expéditeur\x20affiché\x20:*\x0a','667146iaSpJc','\x20messages\x0a\x0a','>\x20Knut\x20XMD\x20:\x20📭\x20Aucun\x20message\x20stocké.','forEach','timestamp','•\x20contacts\x20\x20→\x20👥\x20Liste\x20des\x20contacts\x0a','includes','3071262nOFpvh','loadDB','🛑\x20Non','Protège\x20les\x20conversations\x20privées\x20contre\x20la\x20suppression.\x0a','État\x20actuel\x20:\x20','>\x20Knut\x20XMD:\x20Derniers\x20messages\x20IB\x20(','totalContacts','join','participant','•\x20stats\x20\x20\x20\x20\x20→\x20📈\x20Statistiques\x0a','>\x20Knut\x20XMD:\x20Anti-Delete\x20IB\x20-\x20Statistiques\x0a\x0a','>\x20Knut\x20XMD\x20:\x20⚠️\x20L\x27anti-delete\x20IB\x20est\x20déjà\x20🛑\x20désactivé.','📌\x20*Description\x20:*\x0a','>\x20Knut\x20XMD\x20:\x20📭\x20Aucun\x20contact\x20enregistré.'];a12_0x21a5=function(){return _0x31efd3;};return a12_0x21a5();}export async function execute(sock,msg,args,from){const _0x4ea948=a12_0x54e834;try{const _0x142c88=msg[_0x4ea948(0x97)][_0x4ea948(0xae)]||from,_0x14dd85=_0x142c88[_0x4ea948(0xd2)]('@')[0x0][_0x4ea948(0xe8)](/[^0-9]/g,''),_0x30bed1=(global[_0x4ea948(0xd9)]||[])[_0x4ea948(0xcf)](_0x1aad0f=>_0x1aad0f[_0x4ea948(0xe8)](/[^0-9]/g,'')),_0x1a49a0=loadSudo()[_0x4ea948(0xcf)](_0x2b4883=>_0x2b4883[_0x4ea948(0xe8)](/[^0-9]/g,'')),_0x206139=_0x30bed1[_0x4ea948(0xa5)](_0x14dd85),_0x6e6295=_0x1a49a0[_0x4ea948(0xa5)](_0x14dd85);if(!_0x206139&&!_0x6e6295){await sock[_0x4ea948(0xf4)](from,{'text':_0x4ea948(0xd6)},{'quoted':msg});return;}if(!global[_0x4ea948(0xd4)]?.[_0x4ea948(0xf1)]){await sock[_0x4ea948(0xf4)](from,{'text':'>\x20Knut\x20XMD\x20:\x20Système\x20anti-delete\x20IB\x20non\x20initialisé.'},{'quoted':msg});return;}const _0x3f9661=global[_0x4ea948(0xd4)][_0x4ea948(0xf1)],_0xd6f70a=_0x3f9661[_0x4ea948(0xba)](),_0x4722e2=_0xd6f70a['isEnabled'],_0x34342e=_0xd6f70a['botNumber'],_0x443db8=args[0x0]?.[_0x4ea948(0x89)]();if(!_0x443db8||!['on','off','status',_0x4ea948(0x86),'contacts','last',_0x4ea948(0xde),'clear',_0x4ea948(0x99)][_0x4ea948(0xa5)](_0x443db8)){const _0x319469=_0x4722e2?'✅\x20activé':'🛑\x20désactivé';await sock[_0x4ea948(0xf4)](from,{'text':'>\x20Knut\x20XMD:\x20Anti-Delete\x20IB\x0a\x0a'+(_0x4ea948(0xaa)+_0x319469+'\x0a')+(_0x4ea948(0xc2)+_0xd6f70a['totalContacts']+'\x0a')+('Messages\x20:\x20'+_0xd6f70a[_0x4ea948(0x7f)]+'\x0a')+('Médias\x20:\x20'+_0xd6f70a['totalMedia']+'\x0a')+(_0x4ea948(0x82)+(_0x34342e||_0x4ea948(0xe7))+'\x0a\x0a')+'Utilisation\x20:\x0a'+'•\x20antidelete-ib\x20on\x20\x20\x20\x20\x20\x20\x20\x20→\x20✅\x20Activer\x0a'+_0x4ea948(0x84)+_0x4ea948(0xb4)+'•\x20antidelete-ib\x20stats\x20\x20\x20\x20\x20→\x20📈\x20Statistiques\x0a'+'•\x20antidelete-ib\x20contacts\x20\x20→\x20👥\x20Liste\x20contacts\x0a'+_0x4ea948(0x96)+_0x4ea948(0xc9)+_0x4ea948(0xec)+'•\x20antidelete-ib\x20help\x20\x20\x20\x20\x20\x20→\x20ℹ️\x20Aide\x20détaillée'},{'quoted':msg});return;}if(_0x443db8===_0x4ea948(0x99)){await sock[_0x4ea948(0xf4)](from,{'text':_0x4ea948(0xb6)+_0x4ea948(0xb2)+_0x4ea948(0xa9)+_0x4ea948(0xbb)+_0x4ea948(0x9e)+'Le\x20nom\x20WhatsApp\x20de\x20la\x20personne\x20qui\x20a\x20supprimé\x20le\x20message.\x0a\x0a'+_0x4ea948(0x9d)+_0x4ea948(0xe9)+_0x4ea948(0xda)+_0x4ea948(0xeb)+_0x4ea948(0xaf)+_0x4ea948(0xa4)+_0x4ea948(0x98)+_0x4ea948(0xf2)+_0x4ea948(0x92)},{'quoted':msg});return;}if(_0x443db8===_0x4ea948(0xc8)){const _0x280e0c=_0x4722e2?'✅':'🛑';await sock[_0x4ea948(0xf4)](from,{'text':_0x4ea948(0x7a)+('État\x20:\x20'+_0x280e0c+'\x20'+(_0x4722e2?_0x4ea948(0x95):_0x4ea948(0x78))+'\x0a')+(_0x4ea948(0x82)+(_0x34342e||_0x4ea948(0xe7))+'\x0a')+(_0x4ea948(0x8f)+_0xd6f70a[_0x4ea948(0xac)]+'\x0a')+(_0x4ea948(0xbf)+_0xd6f70a[_0x4ea948(0x7f)]+'\x0a')+(_0x4ea948(0xee)+_0xd6f70a['totalMedia']+'\x0a')+(_0x4ea948(0xe3)+(_0xd6f70a[_0x4ea948(0xbd)]||0x0)+'\x0a')+('Base\x20:\x20'+a12_0x3bc9f8['basename'](DB_FILE))},{'quoted':msg});return;}if(_0x443db8===_0x4ea948(0x86)){await sock[_0x4ea948(0xf4)](from,{'text':_0x4ea948(0xb0)+('Contacts\x20:\x20'+_0xd6f70a['totalContacts']+'\x0a')+(_0x4ea948(0xea)+_0xd6f70a[_0x4ea948(0x7f)]+'\x0a')+(_0x4ea948(0xe4)+_0xd6f70a[_0x4ea948(0xb5)]+'\x0a')+(_0x4ea948(0xc4)+_0xd6f70a[_0x4ea948(0x8e)]+'\x0a')+(_0x4ea948(0xe3)+(_0xd6f70a['totalRotations']||0x0)+'\x0a')+(_0x4ea948(0x88)+(_0xd6f70a['rotationEnabled']?_0x4ea948(0x93):_0x4ea948(0xa8)))},{'quoted':msg});return;}if(_0x443db8===_0x4ea948(0xd3)){const _0x258a89=_0x3f9661['loadDB'](),_0x4d1ccf=Object[_0x4ea948(0xe2)](_0x258a89[_0x4ea948(0xe6)]||{})[_0x4ea948(0xc5)]();if(_0x4d1ccf[_0x4ea948(0x8d)]===0x0){await sock[_0x4ea948(0xf4)](from,{'text':_0x4ea948(0xb3)},{'quoted':msg});return;}let msgText=_0x4ea948(0x7b)+_0x4d1ccf[_0x4ea948(0x8d)]+_0x4ea948(0x81);_0x4d1ccf[_0x4ea948(0xd5)](0x0,0xf)[_0x4ea948(0xa2)]((_0x5daa9b,_0x44d407)=>{const _0xd06701=_0x4ea948,msgCount=_0x258a89['messages'][_0x5daa9b]?.[_0xd06701(0x8d)]||0x0,_0x387b2e=_0x258a89[_0xd06701(0xe6)][_0x5daa9b]?.[_0xd06701(0xd5)](-0x1)[0x0],name=_0x387b2e?.[_0xd06701(0xd0)]||_0xd06701(0xc3);msgText+=_0x44d407+0x1+_0xd06701(0xf5)+name+_0xd06701(0xc0)+_0x5daa9b['split']('@')[0x0]+_0xd06701(0xb7)+msgCount+_0xd06701(0xa0);});_0x4d1ccf[_0x4ea948(0x8d)]>0xf&&(msgText+=_0x4ea948(0x7c)+(_0x4d1ccf[_0x4ea948(0x8d)]-0xf)+_0x4ea948(0xc1));await sock[_0x4ea948(0xf4)](from,{'text':msgText},{'quoted':msg});return;}if(_0x443db8===_0x4ea948(0x8a)){const _0x36ba7d=args[0x1]?parseInt(args[0x1]):0x5;if(isNaN(_0x36ba7d)||_0x36ba7d<0x1||_0x36ba7d>0x14){await sock[_0x4ea948(0xf4)](from,{'text':_0x4ea948(0xbc)},{'quoted':msg});return;}const _0x14130e=_0x3f9661[_0x4ea948(0xf9)](_0x36ba7d);if(!_0x14130e||_0x14130e[_0x4ea948(0x8d)]===0x0){await sock[_0x4ea948(0xf4)](from,{'text':_0x4ea948(0xa1)},{'quoted':msg});return;}let msgText=_0x4ea948(0xab)+_0x14130e[_0x4ea948(0x8d)]+_0x4ea948(0x81);_0x14130e[_0x4ea948(0xa2)]((_0x563c8e,_0x1423a)=>{const _0x18a917=_0x4ea948,_0x3ec76e=_0x563c8e[_0x18a917(0xa3)]?new Date(_0x563c8e['timestamp']*0x3e8)[_0x18a917(0xb9)]():_0x18a917(0xca);msgText+=_0x1423a+0x1+_0x18a917(0xf5)+(_0x563c8e[_0x18a917(0xd0)]||_0x18a917(0xc3))+'\x0a\x20\x20\x20📱\x20'+_0x563c8e[_0x18a917(0x90)]?.[_0x18a917(0xd2)]('@')[0x0]+_0x18a917(0x9b)+_0x563c8e[_0x18a917(0xe1)]?.['substring'](0x0,0x32)+(_0x563c8e['content']?.[_0x18a917(0x8d)]>0x32?'...':'')+_0x18a917(0xcd)+_0x3ec76e+'\x0a\x0a';}),await sock[_0x4ea948(0xf4)](from,{'text':msgText},{'quoted':msg});return;}if(_0x443db8===_0x4ea948(0xde)){if(!args[0x1]){await sock[_0x4ea948(0xf4)](from,{'text':_0x4ea948(0xd1)},{'quoted':msg});return;}const _0x163d92=args[_0x4ea948(0xd5)](0x1)[_0x4ea948(0xad)]('\x20')[_0x4ea948(0x89)](),_0x231006=_0x3f9661[_0x4ea948(0xa7)](),_0x2ffa1a=[];for(const [_0xc833f0,_0x403fa2]of Object[_0x4ea948(0x8c)](_0x231006['messages']||{})){_0x403fa2[_0x4ea948(0xa2)](msg=>{const _0x11ce37=_0x4ea948;msg[_0x11ce37(0xd0)]&&msg[_0x11ce37(0xd0)][_0x11ce37(0x89)]()['includes'](_0x163d92)&&_0x2ffa1a[_0x11ce37(0x79)]({...msg,'jid':_0xc833f0});});}if(_0x2ffa1a['length']===0x0){await sock[_0x4ea948(0xf4)](from,{'text':_0x4ea948(0xef)+args['slice'](0x1)[_0x4ea948(0xad)]('\x20')+'\x22.'},{'quoted':msg});return;}let msgText=_0x4ea948(0xcb)+args[_0x4ea948(0xd5)](0x1)['join']('\x20')+_0x4ea948(0x83)+_0x2ffa1a[_0x4ea948(0x8d)]+_0x4ea948(0x81);_0x2ffa1a['slice'](0x0,0xa)[_0x4ea948(0xa2)]((_0x1453ff,_0x52a197)=>{const _0x2e9534=_0x4ea948,_0x543b15=_0x1453ff[_0x2e9534(0xa3)]?new Date(_0x1453ff[_0x2e9534(0xa3)]*0x3e8)[_0x2e9534(0xb9)]():_0x2e9534(0xca);msgText+=_0x52a197+0x1+_0x2e9534(0xf5)+_0x1453ff[_0x2e9534(0xd0)]+_0x2e9534(0x9b)+_0x1453ff[_0x2e9534(0xe1)]?.[_0x2e9534(0x9c)](0x0,0x32)+(_0x1453ff['content']?.['length']>0x32?_0x2e9534(0x7e):'')+_0x2e9534(0xcd)+_0x543b15+'\x0a\x0a';});_0x2ffa1a[_0x4ea948(0x8d)]>0xa&&(msgText+=_0x4ea948(0x7c)+(_0x2ffa1a['length']-0xa)+_0x4ea948(0x8b));await sock[_0x4ea948(0xf4)](from,{'text':msgText},{'quoted':msg});return;}if(_0x443db8===_0x4ea948(0xdb)){if(args[0x1]!==_0x4ea948(0x7d)){await sock[_0x4ea948(0xf4)](from,{'text':'>\x20Knut\x20XMD\x20:\x20⚠️\x20Confirmation\x20requise.\x0aFaites\x20`antidelete-ib\x20clear\x20--force`\x20pour\x20vider\x20la\x20base.'},{'quoted':msg});return;}const _0x4aff65=_0x3f9661[_0x4ea948(0xcc)]();_0x4aff65?await sock['sendMessage'](from,{'text':_0x4ea948(0x80)},{'quoted':msg}):await sock[_0x4ea948(0xf4)](from,{'text':'>\x20Knut\x20XMD\x20:\x20❌\x20Erreur\x20lors\x20du\x20vidage.'},{'quoted':msg});return;}const _0x3c5935=_0x443db8==='on';if(_0x443db8==='on'&&_0x4722e2){await sock[_0x4ea948(0xf4)](from,{'text':_0x4ea948(0xf3)},{'quoted':msg});return;}if(_0x443db8===_0x4ea948(0x9a)&&!_0x4722e2){await sock[_0x4ea948(0xf4)](from,{'text':_0x4ea948(0xb1)},{'quoted':msg});return;}if(_0x443db8==='on'&&!_0x34342e){await sock[_0x4ea948(0xf4)](from,{'text':_0x4ea948(0xfa)},{'quoted':msg});return;}_0x3f9661[_0x4ea948(0xbe)](_0x3c5935);const _0x490390=_0x3c5935?'✅':'🛑';await sock[_0x4ea948(0xf4)](from,{'text':_0x4ea948(0xf0)+_0x490390+'\x20'+(_0x3c5935?_0x4ea948(0x91):_0x4ea948(0xc6))+'.'},{'quoted':msg});}catch(_0x4a9ec2){console[_0x4ea948(0x85)](_0x4ea948(0xdf),_0x4a9ec2),await sock['sendMessage'](from,{'text':_0x4ea948(0xc7)},{'quoted':msg});}}
+import fs from "fs";
+import path from "path";
+import { loadSudo } from "../index.js";
+
+const DB_FILE = path.resolve("./antidelete-ib.json");
+
+export const name = "antidelete-ib";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === RÉCUPÉRER L'EXPÉDITEUR ===
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // === VÉRIFICATION DES DROITS (OWNER ET SUDO UNIQUEMENT) ===
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+
+    if (!isOwner && !isSudo) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Accès refusé. Owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    // === VÉRIFIER SYSTÈME DE PROTECTION ===
+    if (!global.protectionSystem?.antiDeleteIB) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Système anti-delete IB non initialisé." }, { quoted: msg });
+      return;
+    }
+
+    const antiDelete = global.protectionSystem.antiDeleteIB;
+    const stats = antiDelete.getStats();
+    const currentStatus = stats.isEnabled;
+    const botNumber = stats.botNumber;
+
+    // === ARGUMENT ===
+    const arg = args[0]?.toLowerCase();
+
+    if (!arg || !["on", "off", "status", "stats", "contacts", "last", "search", "clear", "help"].includes(arg)) {
+      const status = currentStatus ? "✅ activé" : "🛑 désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Anti-Delete IB\n\n` +
+              `État actuel : ${status}\n` +
+              `Contacts : ${stats.totalContacts}\n` +
+              `Messages : ${stats.totalMessages}\n` +
+              `Médias : ${stats.totalMedia}\n` +
+              `Bot IB : ${botNumber || "Non défini"}\n\n` +
+              `Utilisation :\n` +
+              `• antidelete-ib on        → ✅ Activer\n` +
+              `• antidelete-ib off       → 🛑 Désactiver\n` +
+              `• antidelete-ib status    → 📊 Statut\n` +
+              `• antidelete-ib stats     → 📈 Statistiques\n` +
+              `• antidelete-ib contacts  → 👥 Liste contacts\n` +
+              `• antidelete-ib last [n]  → Voir derniers messages\n` +
+              `• antidelete-ib search [nom] → 🔍 Rechercher\n` +
+              `• antidelete-ib clear     → 🗑️ Vider la base\n` +
+              `• antidelete-ib help      → ℹ️ Aide détaillée`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === HELP ===
+    if (arg === "help") {
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Aide Anti-Delete IB\n\n` +
+              `📌 *Description :*\n` +
+              `Protège les conversations privées contre la suppression.\n` +
+              `Les messages supprimés sont restaurés dans l'IB du bot.\n\n` +
+              `👤 *Expéditeur affiché :*\n` +
+              `Le nom WhatsApp de la personne qui a supprimé le message.\n\n` +
+              `📋 *Commandes :*\n` +
+              `• on        → ✅ Activer\n` +
+              `• off       → 🛑 Désactiver\n` +
+              `• status    → 📊 Statut détaillé\n` +
+              `• stats     → 📈 Statistiques\n` +
+              `• contacts  → 👥 Liste des contacts\n` +
+              `• last [n]  → Voir les n derniers messages\n` +
+              `• search [nom] → 🔍 Rechercher par nom\n` +
+              `• clear     → 🗑️ Vider la base (avec --force)`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === STATUS DÉTAILLÉ ===
+    if (arg === "status") {
+      const statusEmoji = currentStatus ? "✅" : "🛑";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Anti-Delete IB - Statut\n\n` +
+              `État : ${statusEmoji} ${currentStatus ? "Activé" : "Désactivé"}\n` +
+              `Bot IB : ${botNumber || "Non défini"}\n` +
+              `Contacts suivis : ${stats.totalContacts}\n` +
+              `Messages stockés : ${stats.totalMessages}\n` +
+              `Médias stockés : ${stats.totalMedia}\n` +
+              `Rotations : ${stats.totalRotations || 0}\n` +
+              `Base : ${path.basename(DB_FILE)}`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === STATISTIQUES ===
+    if (arg === "stats") {
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Anti-Delete IB - Statistiques\n\n` +
+              `Contacts : ${stats.totalContacts}\n` +
+              `Messages : ${stats.totalMessages}\n` +
+              `Médias : ${stats.totalMedia}\n` +
+              `Capacité max : ${stats.maxMessages}\n` +
+              `Rotations : ${stats.totalRotations || 0}\n` +
+              `Rotation auto : ${stats.rotationEnabled ? "✅ Oui" : "🛑 Non"}`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === CONTACTS ===
+    if (arg === "contacts") {
+      const db = antiDelete.loadDB();
+      const contacts = Object.keys(db.messages || {}).sort();
+      
+      if (contacts.length === 0) {
+        await sock.sendMessage(from, { 
+          text: "> Knut XMD : 📭 Aucun contact enregistré." 
+        }, { quoted: msg });
+        return;
+      }
+
+      let msgText = `> Knut XMD: Contacts suivis (${contacts.length})\n\n`;
+      contacts.slice(0, 15).forEach((contact, i) => {
+        const msgCount = db.messages[contact]?.length || 0;
+        const lastMsg = db.messages[contact]?.slice(-1)[0];
+        const name = lastMsg?.pushName || "Inconnu";
+        msgText += `${i+1}. 👤 ${name}\n   📱 ${contact.split('@')[0]}\n   💬 ${msgCount} messages\n\n`;
+      });
+
+      if (contacts.length > 15) {
+        msgText += `... et ${contacts.length - 15} autres contacts\n`;
+      }
+
+      await sock.sendMessage(from, { text: msgText }, { quoted: msg });
+      return;
+    }
+
+    // === LAST ===
+    if (arg === "last") {
+      const limit = args[1] ? parseInt(args[1]) : 5;
+      if (isNaN(limit) || limit < 1 || limit > 20) {
+        await sock.sendMessage(from, { 
+          text: "> Knut XMD : ⚠️ Utilisation : antidelete-ib last [nombre 1-20]" 
+        }, { quoted: msg });
+        return;
+      }
+
+      const lastMessages = antiDelete.viewLastMessages(limit);
+      
+      if (!lastMessages || lastMessages.length === 0) {
+        await sock.sendMessage(from, { 
+          text: "> Knut XMD : 📭 Aucun message stocké." 
+        }, { quoted: msg });
+        return;
+      }
+
+      let msgText = `> Knut XMD: Derniers messages IB (${lastMessages.length})\n\n`;
+      lastMessages.forEach((m, i) => {
+        const date = m.timestamp ? new Date(m.timestamp * 1000).toLocaleString() : "Date inconnue";
+        msgText += `${i+1}. 👤 ${m.pushName || "Inconnu"}\n   📱 ${m.senderJid?.split('@')[0]}\n   📝 ${m.content?.substring(0, 50)}${m.content?.length > 50 ? "..." : ""}\n   🕐 ${date}\n\n`;
+      });
+
+      await sock.sendMessage(from, { text: msgText }, { quoted: msg });
+      return;
+    }
+
+    // === SEARCH ===
+    if (arg === "search") {
+      if (!args[1]) {
+        await sock.sendMessage(from, { 
+          text: "> Knut XMD : ⚠️ Utilisation : antidelete-ib search [nom]" 
+        }, { quoted: msg });
+        return;
+      }
+
+      const searchTerm = args.slice(1).join(" ").toLowerCase();
+      const db = antiDelete.loadDB();
+      const results = [];
+      
+      for (const [jid, messages] of Object.entries(db.messages || {})) {
+        messages.forEach(msg => {
+          if (msg.pushName && msg.pushName.toLowerCase().includes(searchTerm)) {
+            results.push({ ...msg, jid });
+          }
+        });
+      }
+
+      if (results.length === 0) {
+        await sock.sendMessage(from, { 
+          text: `> Knut XMD : 📭 Aucun résultat pour "${args.slice(1).join(" ")}".` 
+        }, { quoted: msg });
+        return;
+      }
+
+      let msgText = `> Knut XMD: Résultats pour "${args.slice(1).join(" ")}" (${results.length})\n\n`;
+      results.slice(0, 10).forEach((m, i) => {
+        const date = m.timestamp ? new Date(m.timestamp * 1000).toLocaleString() : "Date inconnue";
+        msgText += `${i+1}. 👤 ${m.pushName}\n   📝 ${m.content?.substring(0, 50)}${m.content?.length > 50 ? "..." : ""}\n   🕐 ${date}\n\n`;
+      });
+
+      if (results.length > 10) {
+        msgText += `... et ${results.length - 10} autres résultats\n`;
+      }
+
+      await sock.sendMessage(from, { text: msgText }, { quoted: msg });
+      return;
+    }
+
+    // === CLEAR ===
+    if (arg === "clear") {
+      if (args[1] !== "--force") {
+        await sock.sendMessage(from, { 
+          text: "> Knut XMD : ⚠️ Confirmation requise.\nFaites `antidelete-ib clear --force` pour vider la base." 
+        }, { quoted: msg });
+        return;
+      }
+
+      const cleared = antiDelete.clearDB();
+      if (cleared) {
+        await sock.sendMessage(from, { 
+          text: "> Knut XMD: ✅ Base anti-delete IB vidée." 
+        }, { quoted: msg });
+      } else {
+        await sock.sendMessage(from, { 
+          text: "> Knut XMD : ❌ Erreur lors du vidage." 
+        }, { quoted: msg });
+      }
+      return;
+    }
+
+    // === ON / OFF ===
+    const newState = arg === "on";
+    
+    if (arg === "on" && currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'anti-delete IB est déjà ✅ activé." 
+      }, { quoted: msg });
+      return;
+    }
+    
+    if (arg === "off" && !currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'anti-delete IB est déjà 🛑 désactivé." 
+      }, { quoted: msg });
+      return;
+    }
+
+    if (arg === "on" && !botNumber) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ❌ NUMÉRO du bot non défini dans .env" 
+      }, { quoted: msg });
+      return;
+    }
+
+    antiDelete.setStatus(newState);
+    const statusEmoji = newState ? "✅" : "🛑";
+    await sock.sendMessage(from, { 
+      text: `> Knut XMD: Anti-Delete IB ${statusEmoji} ${newState ? "activé" : "désactivé"}.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur antidelete-ib:", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Une erreur est survenue." }, { quoted: msg });
+  }
+}

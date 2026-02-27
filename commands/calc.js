@@ -1,1 +1,125 @@
-(function(_0x9cc826,_0x2361a3){const _0x1d9eab=a39_0x5850,_0x4d95be=_0x9cc826();while(!![]){try{const _0x58083a=-parseInt(_0x1d9eab(0x1b9))/0x1+parseInt(_0x1d9eab(0x1a8))/0x2+-parseInt(_0x1d9eab(0x19a))/0x3+-parseInt(_0x1d9eab(0x1b1))/0x4+-parseInt(_0x1d9eab(0x1b6))/0x5*(parseInt(_0x1d9eab(0x1b2))/0x6)+parseInt(_0x1d9eab(0x1a7))/0x7+parseInt(_0x1d9eab(0x1a9))/0x8;if(_0x58083a===_0x2361a3)break;else _0x4d95be['push'](_0x4d95be['shift']());}catch(_0x1d7e28){_0x4d95be['push'](_0x4d95be['shift']());}}}(a39_0x52d1,0x4ccfb));const a39_0x55ee4e=(function(){let _0x2bfee2=!![];return function(_0x295e08,_0x5d9771){const _0x41f098=_0x2bfee2?function(){if(_0x5d9771){const _0x22f184=_0x5d9771['apply'](_0x295e08,arguments);return _0x5d9771=null,_0x22f184;}}:function(){};return _0x2bfee2=![],_0x41f098;};}()),a39_0x1d45ed=a39_0x55ee4e(this,function(){const _0x4099d9=a39_0x5850;return a39_0x1d45ed[_0x4099d9(0x1c4)]()[_0x4099d9(0x1bd)](_0x4099d9(0x19f))[_0x4099d9(0x1c4)]()[_0x4099d9(0x1c5)](a39_0x1d45ed)[_0x4099d9(0x1bd)]('(((.+)+)+)+$');});function a39_0x52d1(){const _0xb31368=['Expression\x20mathématique\x20invalide','>\x20⚠️\x20KNUT\x20XMD:\x20Veuillez\x20fournir\x20une\x20expression.\x0aExemple:\x20`!calc\x202+2*5`\x20ou\x20`!calc\x20sin(45)`','20whSAxM','Entier','join','323521EhWzvl','Math.log10','Math.PI','length','search','remoteJid','message','value','error','fr-FR','Math.sin','toString','constructor','format','toUpperCase','Expression\x20non\x20autorisée','\x0a🔣\x20Binaire:\x20','1709424fnxdUe','>\x20🧮\x20KNUT\x20XMD:\x20Calculatrice\x0a━━━━━━━━━━━━━━━━━━\x0a📝\x20Expression:\x20','test','\x0aErreur:\x20','❌\x20Erreur\x20calc\x20:','(((.+)+)+)+$','sendMessage','\x0a✅\x20Résultat:\x20','key','replace','Math.cos','>\x20⚠️\x20KNUT\x20XMD:\x20Erreur\x20lors\x20du\x20calcul.','round','2701251iiNRoH','1023440erlHpG','10744888yUvSqv','>\x20❌\x20KNUT\x20XMD:\x20Erreur\x20de\x20calcul\x0aExpression:\x20','toLocaleString','\x0a━━━━━━━━━━━━━━━━━━\x0a🔢\x20Format:\x20','Notation\x20scientifique','abs','>\x20⏳\x20KNUT\x20XMD:\x20Calcul\x20en\x20cours...','toExponential','1701744frZKjL','911010DfqUDo','Math.sqrt'];a39_0x52d1=function(){return _0xb31368;};return a39_0x52d1();}a39_0x1d45ed();function a39_0x5850(_0x1907b8,_0xe0cd4){_0x1907b8=_0x1907b8-0x196;const _0x3bce53=a39_0x52d1();let _0x1d45ed=_0x3bce53[_0x1907b8];return _0x1d45ed;}export const name='calc';export async function execute(sock,msg,args){const _0xb58a6f=a39_0x5850;try{const from=msg[_0xb58a6f(0x1a2)][_0xb58a6f(0x1be)];if(!args['length'])return await sock[_0xb58a6f(0x1a0)](from,{'text':_0xb58a6f(0x1b5)},{'quoted':msg});const _0x44860b=args[_0xb58a6f(0x1b8)]('\x20'),_0x4a0d5c=await sock[_0xb58a6f(0x1a0)](from,{'text':_0xb58a6f(0x1af)},{'quoted':msg}),_0x13cad7=safeEvaluate(_0x44860b);if(_0x13cad7[_0xb58a6f(0x1c1)]){await sock[_0xb58a6f(0x1a0)](from,{'text':_0xb58a6f(0x1aa)+_0x44860b+_0xb58a6f(0x19d)+_0x13cad7[_0xb58a6f(0x1bf)]},{'quoted':_0x4a0d5c});return;}const _0x55e482=_0xb58a6f(0x19b)+_0x44860b+_0xb58a6f(0x1a1)+_0x13cad7[_0xb58a6f(0x1c0)]+_0xb58a6f(0x1ac)+_0x13cad7[_0xb58a6f(0x196)];await sock[_0xb58a6f(0x1a0)](from,{'text':_0x55e482},{'quoted':_0x4a0d5c});}catch(_0x2694fa){console['error'](_0xb58a6f(0x19e),_0x2694fa),await sock['sendMessage'](msg[_0xb58a6f(0x1a2)][_0xb58a6f(0x1be)],{'text':_0xb58a6f(0x1a5)},{'quoted':msg});}};function safeEvaluate(_0x5944dd){const _0x504590=a39_0x5850;try{let _0x16d0c9=_0x5944dd['replace'](/[^0-9+\-*/().,%π√^!&|<>=\s]/g,'')[_0x504590(0x1a3)](/π/g,_0x504590(0x1bb))[_0x504590(0x1a3)](/√/g,_0x504590(0x1b3))['replace'](/sin/g,_0x504590(0x1c3))[_0x504590(0x1a3)](/cos/g,_0x504590(0x1a4))['replace'](/tan/g,'Math.tan')['replace'](/log/g,_0x504590(0x1ba))['replace'](/ln/g,'Math.log')[_0x504590(0x1a3)](/\^/g,'**');const _0x239b13=[/process\./i,/require\(/i,/eval\(/i,/Function\(/i,/while\(/i,/for\(/i,/import\(/i,/exports\./i,/module\./i];for(const _0x1babd9 of _0x239b13){if(_0x1babd9[_0x504590(0x19c)](_0x16d0c9))return{'error':!![],'message':_0x504590(0x198)};}let _0x518c9d=eval(_0x16d0c9),_0x4c75db='Nombre\x20décimal';Number['isInteger'](_0x518c9d)&&(_0x4c75db=_0x504590(0x1b7));Math[_0x504590(0x1ae)](_0x518c9d)>=0xf4240||Math[_0x504590(0x1ae)](_0x518c9d)<=0.000001&&_0x518c9d!==0x0?(_0x518c9d=_0x518c9d[_0x504590(0x1b0)](0x4),_0x4c75db=_0x504590(0x1ad)):_0x518c9d=Math[_0x504590(0x1a6)](_0x518c9d*0xf4240)/0xf4240;!isNaN(_0x518c9d)&&Math[_0x504590(0x1ae)](_0x518c9d)>=0x3e8&&_0x4c75db!=='Notation\x20scientifique'&&(_0x518c9d=_0x518c9d[_0x504590(0x1ab)](_0x504590(0x1c2)),_0x4c75db='Nombre\x20formaté');let _0x11d3d0='';if(!isNaN(_0x518c9d)&&_0x518c9d>0x0){const _0x3ca806=Math[_0x504590(0x1a6)](_0x518c9d)[_0x504590(0x1c4)](0x2),_0x373441=Math[_0x504590(0x1a6)](_0x518c9d)[_0x504590(0x1c4)](0x10)[_0x504590(0x197)]();_0x3ca806[_0x504590(0x1bc)]<=0x10&&(_0x11d3d0=_0x504590(0x199)+_0x3ca806+'\x0a🔶\x20Hexadécimal:\x20'+_0x373441);}return{'error':![],'value':_0x518c9d,'format':_0x4c75db+_0x11d3d0};}catch(_0x3e6e27){return{'error':!![],'message':_0x504590(0x1b4)};}}
+export const name = "calc";
+
+export async function execute(sock, msg, args) {
+  try {
+    const from = msg.key.remoteJid;
+    
+    if (!args.length) {
+      return await sock.sendMessage(from, { 
+        text: "> ⚠️ KNUT XMD: Veuillez fournir une expression.\nExemple: `!calc 2+2*5` ou `!calc sin(45)`" 
+      }, { quoted: msg });
+    }
+
+    const expression = args.join(" ");
+    
+    // Message de traitement
+    const processingMsg = await sock.sendMessage(from, { 
+      text: "> ⏳ KNUT XMD: Calcul en cours..." 
+    }, { quoted: msg });
+
+    // Nettoyer et évaluer l'expression mathématique
+    const result = safeEvaluate(expression);
+    
+    if (result.error) {
+      await sock.sendMessage(from, { 
+        text: `> ❌ KNUT XMD: Erreur de calcul\nExpression: ${expression}\nErreur: ${result.message}` 
+      }, { quoted: processingMsg });
+      return;
+    }
+
+    // Réponse stylisée
+    const reply = `> 🧮 KNUT XMD: Calculatrice\n━━━━━━━━━━━━━━━━━━\n📝 Expression: ${expression}\n✅ Résultat: ${result.value}\n━━━━━━━━━━━━━━━━━━\n🔢 Format: ${result.format}`;
+    
+    await sock.sendMessage(from, { text: reply }, { quoted: processingMsg });
+
+  } catch (err) {
+    console.error("❌ Erreur calc :", err);
+    await sock.sendMessage(msg.key.remoteJid, {
+      text: "> ⚠️ KNUT XMD: Erreur lors du calcul."
+    }, { quoted: msg });
+  }
+};
+
+// Fonction d'évaluation sécurisée
+function safeEvaluate(expression) {
+  try {
+    // Nettoyer l'expression (sécurité)
+    let cleanExpr = expression
+      .replace(/[^0-9+\-*/().,%π√^!&|<>=\s]/g, '')
+      .replace(/π/g, 'Math.PI')
+      .replace(/√/g, 'Math.sqrt')
+      .replace(/sin/g, 'Math.sin')
+      .replace(/cos/g, 'Math.cos')
+      .replace(/tan/g, 'Math.tan')
+      .replace(/log/g, 'Math.log10')
+      .replace(/ln/g, 'Math.log')
+      .replace(/\^/g, '**');
+    
+    // Vérifier les expressions dangereuses
+    const dangerousPatterns = [
+      /process\./i,
+      /require\(/i,
+      /eval\(/i,
+      /Function\(/i,
+      /while\(/i,
+      /for\(/i,
+      /import\(/i,
+      /exports\./i,
+      /module\./i
+    ];
+    
+    for (const pattern of dangerousPatterns) {
+      if (pattern.test(cleanExpr)) {
+        return { error: true, message: "Expression non autorisée" };
+      }
+    }
+    
+    // Évaluer l'expression
+    let value = eval(cleanExpr);
+    
+    // Formater le résultat
+    let format = "Nombre décimal";
+    
+    // Vérifier si c'est un entier
+    if (Number.isInteger(value)) {
+      format = "Entier";
+    }
+    
+    // Vérifier si c'est un nombre scientifique
+    if (Math.abs(value) >= 1e6 || (Math.abs(value) <= 1e-6 && value !== 0)) {
+      value = value.toExponential(4);
+      format = "Notation scientifique";
+    } else {
+      // Arrondir à 6 décimales max
+      value = Math.round(value * 1e6) / 1e6;
+    }
+    
+    // Formater avec séparateurs de milliers
+    if (!isNaN(value) && Math.abs(value) >= 1000 && format !== "Notation scientifique") {
+      value = value.toLocaleString('fr-FR');
+      format = "Nombre formaté";
+    }
+    
+    // Conversions supplémentaires
+    let conversions = "";
+    if (!isNaN(value) && value > 0) {
+      const binary = Math.round(value).toString(2);
+      const hex = Math.round(value).toString(16).toUpperCase();
+      if (binary.length <= 16) {
+        conversions = `\n🔣 Binaire: ${binary}\n🔶 Hexadécimal: ${hex}`;
+      }
+    }
+    
+    return { 
+      error: false, 
+      value: value,
+      format: format + conversions
+    };
+    
+  } catch (err) {
+    return { 
+      error: true, 
+      message: "Expression mathématique invalide" 
+    };
+  }
+}

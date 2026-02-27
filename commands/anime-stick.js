@@ -1,1 +1,65 @@
-function a4_0x5057(){const _0x3bbe66=['1101291eNvYJv','❌\x20*KNUT\x20XMD*:\x20Text\x20too\x20long\x0a','sendMessage','Maximum\x20100\x20characters','Usage:\x20.attp\x20<text>\x0a','⚡\x20*KNUT\x20XMD*\x20-\x20Creating\x20animated\x20sticker...','(((.+)+)+)+$','8048nhpSZY','https://api.erdwpe.com/api/maker/attp?text=','https://api.lolhuman.xyz/api/attp?apikey=YOUR_API_KEY&text=','error','Generate\x20animated\x20text\x20sticker','Sticker','5167526nxPXpO','10046500AbwbHB','ATTP\x20Error:','image/webp','join','apply','8TuJGuH','https://api.neoxr.eu/api/attp?text=','124702GvvwbO','length','Example:\x20.attp\x20Hello\x20World\x0a\x0a','API\x20might\x20be\x20temporarily\x20unavailable','5442CODBAz','Generates\x20animated\x20sticker\x20from\x20text','search','toString','constructor','2660428OTAQWP','2763GGFlFZ','remoteJid','1970KnntiI','❌\x20*KNUT\x20XMD*:\x20Failed\x20to\x20generate\x20sticker\x0a','anime-stick'];a4_0x5057=function(){return _0x3bbe66;};return a4_0x5057();}const a4_0x58d5e2=a4_0x2910;(function(_0x3bf6a1,_0x5a4113){const _0x2888ba=a4_0x2910,_0x4a029d=_0x3bf6a1();while(!![]){try{const _0x3023d6=-parseInt(_0x2888ba(0x14e))/0x1*(-parseInt(_0x2888ba(0x14c))/0x2)+-parseInt(_0x2888ba(0x139))/0x3+parseInt(_0x2888ba(0x157))/0x4+parseInt(_0x2888ba(0x136))/0x5*(-parseInt(_0x2888ba(0x152))/0x6)+-parseInt(_0x2888ba(0x146))/0x7+-parseInt(_0x2888ba(0x140))/0x8*(parseInt(_0x2888ba(0x158))/0x9)+parseInt(_0x2888ba(0x147))/0xa;if(_0x3023d6===_0x5a4113)break;else _0x4a029d['push'](_0x4a029d['shift']());}catch(_0x4ca83a){_0x4a029d['push'](_0x4a029d['shift']());}}}(a4_0x5057,0x60efa));const a4_0x335c61=(function(){let _0x33f825=!![];return function(_0xbc422,_0x2c1bab){const _0x5f4c78=_0x33f825?function(){const _0x17a95f=a4_0x2910;if(_0x2c1bab){const _0x5964c3=_0x2c1bab[_0x17a95f(0x14b)](_0xbc422,arguments);return _0x2c1bab=null,_0x5964c3;}}:function(){};return _0x33f825=![],_0x5f4c78;};}()),a4_0x54949d=a4_0x335c61(this,function(){const _0xd6df11=a4_0x2910;return a4_0x54949d[_0xd6df11(0x155)]()[_0xd6df11(0x154)]('(((.+)+)+)+$')[_0xd6df11(0x155)]()[_0xd6df11(0x156)](a4_0x54949d)['search'](_0xd6df11(0x13f));});a4_0x54949d();export const name=a4_0x58d5e2(0x138);function a4_0x2910(_0x1fe05c,_0x1b3436){_0x1fe05c=_0x1fe05c-0x136;const _0x323b2d=a4_0x5057();let _0x54949d=_0x323b2d[_0x1fe05c];return _0x54949d;}export const description=a4_0x58d5e2(0x144);export const category=a4_0x58d5e2(0x145);export async function execute(sock,msg,args){const _0x87906e=a4_0x58d5e2,from=msg['key'][_0x87906e(0x159)];if(!args||args[_0x87906e(0x14f)]===0x0)return await sock['sendMessage'](from,{'text':'🎭\x20*KNUT\x20XMD\x20ATTP*\x0a\x0a'+_0x87906e(0x13d)+_0x87906e(0x150)+_0x87906e(0x153)},{'quoted':msg});const _0x61e6f2=encodeURIComponent(args[_0x87906e(0x14a)]('\x20'));if(_0x61e6f2['length']>0x64)return await sock[_0x87906e(0x13b)](from,{'text':_0x87906e(0x13a)+_0x87906e(0x13c)},{'quoted':msg});try{const _0x2feb5b=await sock['sendMessage'](from,{'text':_0x87906e(0x13e)},{'quoted':msg}),_0x4a5910=[_0x87906e(0x142)+_0x61e6f2,_0x87906e(0x14d)+_0x61e6f2,_0x87906e(0x141)+_0x61e6f2],_0x33a027=_0x87906e(0x141)+_0x61e6f2;await sock[_0x87906e(0x13b)](from,{'sticker':{'url':_0x33a027},'mimetype':_0x87906e(0x149)},{'quoted':_0x2feb5b});}catch(_0xb7c5cc){console[_0x87906e(0x143)](_0x87906e(0x148),_0xb7c5cc);try{const _0x19f96f='https://api.neoxr.eu/api/attp?text='+_0x61e6f2;await sock[_0x87906e(0x13b)](from,{'sticker':{'url':_0x19f96f},'mimetype':_0x87906e(0x149)},{'quoted':msg});}catch(_0x467172){await sock[_0x87906e(0x13b)](from,{'text':_0x87906e(0x137)+_0x87906e(0x151)},{'quoted':msg});}}}
+export const name = "anime-stick";
+export const description = "Generate animated text sticker";
+export const category = "Sticker";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+  
+  if (!args || args.length === 0) {
+    return await sock.sendMessage(from, { 
+      text: "🎭 *KNUT XMD ATTP*\n\n" +
+            "Usage: .attp <text>\n" +
+            "Example: .attp Hello World\n\n" +
+            "Generates animated sticker from text"
+    }, { quoted: msg });
+  }
+
+  const text = encodeURIComponent(args.join(' '));
+  
+  // Vérification de la longueur du texte
+  if (text.length > 100) {
+    return await sock.sendMessage(from, { 
+      text: "❌ *KNUT XMD*: Text too long\n" +
+            "Maximum 100 characters"
+    }, { quoted: msg });
+  }
+
+  try {
+    const sentMsg = await sock.sendMessage(from, { 
+      text: "⚡ *KNUT XMD* - Creating animated sticker..." 
+    }, { quoted: msg });
+
+    // URL de l'API ATTP (plusieurs options disponibles)
+    const apiUrls = [
+      `https://api.lolhuman.xyz/api/attp?apikey=YOUR_API_KEY&text=${text}`,
+      `https://api.neoxr.eu/api/attp?text=${text}`,
+      `https://api.erdwpe.com/api/maker/attp?text=${text}`
+    ];
+
+    // Utiliser la première API (sans clé API)
+    const stickerUrl = `https://api.erdwpe.com/api/maker/attp?text=${text}`;
+    
+    // Envoyer le sticker
+    await sock.sendMessage(from, {
+      sticker: { url: stickerUrl },
+      mimetype: 'image/webp'
+    }, { quoted: sentMsg });
+
+  } catch (err) {
+    console.error("ATTP Error:", err);
+    
+    // Essayer une API de secours
+    try {
+      const fallbackUrl = `https://api.neoxr.eu/api/attp?text=${text}`;
+      await sock.sendMessage(from, {
+        sticker: { url: fallbackUrl },
+        mimetype: 'image/webp'
+      }, { quoted: msg });
+    } catch (fallbackErr) {
+      await sock.sendMessage(from, { 
+        text: "❌ *KNUT XMD*: Failed to generate sticker\n" +
+              "API might be temporarily unavailable"
+      }, { quoted: msg });
+    }
+  }
+}

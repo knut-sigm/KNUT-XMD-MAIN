@@ -1,1 +1,289 @@
-const a61_0x3a6377=a61_0x4026;(function(_0xc0597a,_0x96f987){const _0x3e4b4d=a61_0x4026,_0x5d1a4e=_0xc0597a();while(!![]){try{const _0x52aa80=-parseInt(_0x3e4b4d(0x180))/0x1*(-parseInt(_0x3e4b4d(0x175))/0x2)+parseInt(_0x3e4b4d(0x174))/0x3*(-parseInt(_0x3e4b4d(0x183))/0x4)+parseInt(_0x3e4b4d(0x190))/0x5+-parseInt(_0x3e4b4d(0x1a3))/0x6+parseInt(_0x3e4b4d(0x1a1))/0x7+-parseInt(_0x3e4b4d(0x1a2))/0x8+parseInt(_0x3e4b4d(0x1a6))/0x9;if(_0x52aa80===_0x96f987)break;else _0x5d1a4e['push'](_0x5d1a4e['shift']());}catch(_0x18ec74){_0x5d1a4e['push'](_0x5d1a4e['shift']());}}}(a61_0x5e9f,0x3eaee));const a61_0x41c4e8=(function(){let _0xf1a22=!![];return function(_0x416896,_0x2cb3d8){const _0x591373=_0xf1a22?function(){const _0x26af49=a61_0x4026;if(_0x2cb3d8){const _0x13186d=_0x2cb3d8[_0x26af49(0x19d)](_0x416896,arguments);return _0x2cb3d8=null,_0x13186d;}}:function(){};return _0xf1a22=![],_0x591373;};}()),a61_0x5e39d2=a61_0x41c4e8(this,function(){const _0x1f54f4=a61_0x4026;return a61_0x5e39d2[_0x1f54f4(0x1ad)]()[_0x1f54f4(0x19c)]('(((.+)+)+)+$')[_0x1f54f4(0x1ad)]()[_0x1f54f4(0x199)](a61_0x5e39d2)[_0x1f54f4(0x19c)]('(((.+)+)+)+$');});a61_0x5e39d2();import a61_0x1f6e1a from'axios';export const name='hd';function a61_0x4026(_0x3fe214,_0x30a07b){_0x3fe214=_0x3fe214-0x173;const _0x15810e=a61_0x5e9f();let _0x5e39d2=_0x15810e[_0x3fe214];return _0x5e39d2;}export const aliases=['enhance',a61_0x3a6377(0x1ae),'quality'];export const description='Améliore\x20une\x20image\x20en\x20qualité\x20HD\x20avec\x20IA';function a61_0x5e9f(){const _0x42b44a=['2203691VJqqee','2771336sVKShg','1300764IdytpO','MB\x0a>\x20✨\x20Qualité\x202x','Image\x20vide','5243166WETVKQ','key','https://api.deenio.com/upscale','>\x20Knut\x20XMD:\x20⚠️\x20API\x20non\x20configurée\x20!\x0a>\x20Obtenez\x20une\x20clé\x20sur\x20deenio.com\x20et\x20modifiez\x20API_KEY','post','data','>\x20Knut\x20XMD:\x20❌\x20URL\x20requise\x20!\x0a>\x20Usage:\x20.hd\x20<url-image>','toString','upscale','image','>\x20Knut\x20XMD:\x20❌\x20Image\x20vide\x20reçue','message','includes','now','arraybuffer','44262DNSvIz','14iKUIia','ms\x20','VOTRE_CLE_API_ICI','ECONNABORTED','\x0a>\x20📦\x20','join','Erreur\x20technique','downloadMediaMessage','toFixed','status','>\x20Knut\x20XMD:\x20✅\x20Traitement\x20terminé\x0a>\x20⚡\x20','6963iundWG','Buffer\x20vide','>\x20Knut\x20XMD:\x20⚡\x20Amélioration\x20HD\x20en\x20cours...','76QSdFNm','❌\x20Erreur\x20API\x20Deenio:','>\x20Knut\x20XMD:\x20❌\x20URL\x20invalide\x20!\x0a>\x20Utilisez:\x20.hd\x20<url>\x20ou\x20répondez\x20à\x20une\x20image','catch','error','contextInfo','response','from','❌\x20Erreur\x20téléchargement\x20image:','remoteJid','sendMessage','❌\x20Erreur\x20hd\x20:','quotedMessage','770795qAKUBA','substring','\x0a>\x20⚠️\x20Trop\x20de\x20requêtes','\x0a>\x20📝\x20','>\x20Knut\x20XMD:\x20✅\x20Image\x20HD\x20améliorée\x0a>\x20⚡\x20','Upload\x20vers\x20hébergeur\x20requis','extendedTextMessage','...','length','constructor','>\x20Knut\x20XMD:\x20❌\x20Aucune\x20image\x20trouvée\x20!\x0a>\x20Répondez\x20à\x20une\x20image\x20ou\x20fournissez\x20une\x20URL','Téléchargement\x20échoué:\x20','search','apply','imageMessage','url','>\x20Knut\x20XMD:\x20❌\x20L\x27API\x20n\x27a\x20pas\x20retourné\x20d\x27image\x20valide'];a61_0x5e9f=function(){return _0x42b44a;};return a61_0x5e9f();}export const category=a61_0x3a6377(0x1af);export const cooldown=0x1e;const DEENIO_API=a61_0x3a6377(0x1a8),API_KEY=a61_0x3a6377(0x177);export async function execute(sock,msg,args){const _0x2f8c94=a61_0x3a6377;let _0x4e3cdd=null;try{const from=msg[_0x2f8c94(0x1a7)]['remoteJid'];_0x4e3cdd=await sock['sendMessage'](from,{'text':_0x2f8c94(0x182)},{'quoted':msg});const _0x1bcd88=Date[_0x2f8c94(0x1b3)]();if(API_KEY==='VOTRE_CLE_API_ICI'){await sock[_0x2f8c94(0x18d)](from,{'text':_0x2f8c94(0x1a9),'edit':_0x4e3cdd[_0x2f8c94(0x1a7)]});return;}let _0x290a86;if(args[_0x2f8c94(0x198)]>0x0){const _0xd41f13=args['join']('\x20');try{new URL(_0xd41f13),_0x290a86=_0xd41f13;}catch{await sock[_0x2f8c94(0x18d)](from,{'text':_0x2f8c94(0x185),'edit':_0x4e3cdd[_0x2f8c94(0x1a7)]});return;}}else{if(msg[_0x2f8c94(0x1b1)]?.['extendedTextMessage']?.[_0x2f8c94(0x188)]?.[_0x2f8c94(0x18f)]){const _0x1e6513=msg[_0x2f8c94(0x1b1)][_0x2f8c94(0x196)][_0x2f8c94(0x188)];if(_0x1e6513[_0x2f8c94(0x18f)]?.[_0x2f8c94(0x19e)])try{_0x290a86=await downloadImageUrl(sock,_0x1e6513[_0x2f8c94(0x18f)]['imageMessage'],from);}catch(_0x18d611){console[_0x2f8c94(0x187)](_0x2f8c94(0x18b),_0x18d611);}}if(!_0x290a86&&msg[_0x2f8c94(0x1b1)]?.[_0x2f8c94(0x19e)])try{_0x290a86=await downloadImageUrl(sock,msg[_0x2f8c94(0x1b1)][_0x2f8c94(0x19e)],from);}catch(_0xad283f){console['error'](_0x2f8c94(0x18b),_0xad283f);}if(!_0x290a86){await sock[_0x2f8c94(0x18d)](from,{'text':_0x2f8c94(0x19a),'edit':_0x4e3cdd['key']});return;}}let _0x5f3d4b;try{_0x5f3d4b=await a61_0x1f6e1a['post'](DEENIO_API,{'api_key':API_KEY,'image_url':_0x290a86,'scale':0x2},{'responseType':_0x2f8c94(0x173),'timeout':0xafc8});}catch(_0xf7e18){console[_0x2f8c94(0x187)](_0x2f8c94(0x184),_0xf7e18);let _0x5e5f2a='>\x20Knut\x20XMD:\x20❌\x20Échec\x20de\x20l\x27amélioration\x20HD';if(_0xf7e18[_0x2f8c94(0x189)]?.[_0x2f8c94(0x17e)]===0x1ad)_0x5e5f2a+='\x0a>\x20⚠️\x20Limite\x20de\x20requêtes\x20atteinte';else{if(_0xf7e18[_0x2f8c94(0x189)]?.['status']===0x191)_0x5e5f2a+='\x0a>\x20🔧\x20Clé\x20API\x20invalide';else _0xf7e18['code']===_0x2f8c94(0x178)?_0x5e5f2a+='\x0a>\x20⏱️\x20Délai\x20dépassé':_0x5e5f2a+=_0x2f8c94(0x193)+_0xf7e18[_0x2f8c94(0x1b1)]?.['substring'](0x0,0x28)+_0x2f8c94(0x197);}await sock[_0x2f8c94(0x18d)](from,{'text':_0x5e5f2a,'edit':_0x4e3cdd[_0x2f8c94(0x1a7)]});return;}if(!_0x5f3d4b['headers']['content-type']?.[_0x2f8c94(0x1b2)]('image')){await sock[_0x2f8c94(0x18d)](from,{'text':_0x2f8c94(0x1a0),'edit':_0x4e3cdd['key']});return;}const _0x10fbaa=Buffer[_0x2f8c94(0x18a)](_0x5f3d4b[_0x2f8c94(0x1ab)]);if(_0x10fbaa['length']===0x0){await sock[_0x2f8c94(0x18d)](from,{'text':_0x2f8c94(0x1b0),'edit':_0x4e3cdd[_0x2f8c94(0x1a7)]});return;}const _0x13f9cd=Date[_0x2f8c94(0x1b3)]()-_0x1bcd88,_0x5b1d6c=_0x10fbaa[_0x2f8c94(0x198)]/(0x400*0x400),_0x40d79e=_0x13f9cd<0x1388?'🟢':_0x13f9cd<0x3a98?'🟡':'🔴';await sock[_0x2f8c94(0x18d)](from,{'image':_0x10fbaa,'caption':_0x2f8c94(0x194)+_0x13f9cd+'ms\x20'+_0x40d79e+'\x0a>\x20📦\x20'+_0x5b1d6c[_0x2f8c94(0x17d)](0x1)+_0x2f8c94(0x1a4)}),await sock[_0x2f8c94(0x18d)](from,{'text':_0x2f8c94(0x17f)+_0x13f9cd+_0x2f8c94(0x176)+_0x40d79e+_0x2f8c94(0x179)+_0x5b1d6c[_0x2f8c94(0x17d)](0x1)+'MB','edit':_0x4e3cdd[_0x2f8c94(0x1a7)]});}catch(_0x196e12){console[_0x2f8c94(0x187)](_0x2f8c94(0x18e),_0x196e12);const _0xc92150='>\x20Knut\x20XMD:\x20❌\x20Erreur\x20inattendue\x0a>\x20📝\x20'+(_0x196e12['message']?.[_0x2f8c94(0x191)](0x0,0x32)||_0x2f8c94(0x17b));if(_0x4e3cdd)try{await sock[_0x2f8c94(0x18d)](msg[_0x2f8c94(0x1a7)][_0x2f8c94(0x18c)],{'text':_0xc92150,'edit':_0x4e3cdd[_0x2f8c94(0x1a7)]});}catch(_0x222871){await sock[_0x2f8c94(0x18d)](msg['key']['remoteJid'],{'text':_0xc92150},{'quoted':msg});}else await sock[_0x2f8c94(0x18d)](msg[_0x2f8c94(0x1a7)]['remoteJid'],{'text':_0xc92150},{'quoted':msg});}}async function downloadImageUrl(sock,_0x588b4e,from){return new Promise((_0x47e375,_0x36a47b)=>{const _0x1699ae=a61_0x4026;_0x588b4e[_0x1699ae(0x19f)]?_0x47e375(_0x588b4e['url']):sock[_0x1699ae(0x17c)](_0x588b4e)['then'](async _0x5e1ad3=>{const _0x1e4646=_0x1699ae;if(!_0x5e1ad3){_0x36a47b(new Error(_0x1e4646(0x181)));return;}_0x36a47b(new Error(_0x1e4646(0x195)));})[_0x1699ae(0x186)](_0x36a47b);});}async function downloadImageBuffer(sock,_0x2f7420){const _0x55b07a=a61_0x3a6377;try{const _0x5e2ab5=await sock[_0x55b07a(0x17c)](_0x2f7420);if(!_0x5e2ab5||_0x5e2ab5['length']===0x0)throw new Error(_0x55b07a(0x1a5));return _0x5e2ab5;}catch(_0x8c1ac6){throw new Error(_0x55b07a(0x19b)+_0x8c1ac6[_0x55b07a(0x1b1)]);}}export async function executeSimple(sock,msg,args){const _0x57bcca=a61_0x3a6377,from=msg['key']['remoteJid'],_0x103b8b=await sock[_0x57bcca(0x18d)](from,{'text':'>\x20Knut\x20XMD:\x20⚡\x20Amélioration\x20HD\x20en\x20cours...'},{'quoted':msg}),_0x3db812=Date[_0x57bcca(0x1b3)]();if(args[_0x57bcca(0x198)]===0x0){await sock[_0x57bcca(0x18d)](from,{'text':_0x57bcca(0x1ac),'edit':_0x103b8b[_0x57bcca(0x1a7)]});return;}const _0x20c3b5=args[_0x57bcca(0x17a)]('\x20');try{new URL(_0x20c3b5);}catch{await sock[_0x57bcca(0x18d)](from,{'text':'>\x20Knut\x20XMD:\x20❌\x20URL\x20invalide\x20!','edit':_0x103b8b[_0x57bcca(0x1a7)]});return;}try{const _0x51da3c=await a61_0x1f6e1a[_0x57bcca(0x1aa)](DEENIO_API,{'api_key':API_KEY,'image_url':_0x20c3b5,'scale':0x2},{'responseType':'arraybuffer','timeout':0x7530}),_0x1b2196=Date[_0x57bcca(0x1b3)]()-_0x3db812,_0x327c97=Buffer[_0x57bcca(0x18a)](_0x51da3c[_0x57bcca(0x1ab)]),_0x430c60=_0x327c97['length']/(0x400*0x400),_0x43a382=_0x1b2196<0x1388?'🟢':_0x1b2196<0x3a98?'🟡':'🔴';await sock[_0x57bcca(0x18d)](from,{'image':_0x327c97,'caption':'>\x20Knut\x20XMD:\x20✅\x20Image\x20HD\x20améliorée\x0a>\x20⚡\x20'+_0x1b2196+_0x57bcca(0x176)+_0x43a382+_0x57bcca(0x179)+_0x430c60[_0x57bcca(0x17d)](0x1)+'MB'}),await sock['sendMessage'](from,{'text':_0x57bcca(0x17f)+_0x1b2196+_0x57bcca(0x176)+_0x43a382+_0x57bcca(0x179)+_0x430c60['toFixed'](0x1)+'MB','edit':_0x103b8b[_0x57bcca(0x1a7)]});}catch(_0x3fdd6e){console[_0x57bcca(0x187)](_0x57bcca(0x18e),_0x3fdd6e);let _0x4a6056='>\x20Knut\x20XMD:\x20❌\x20Échec\x20de\x20l\x27amélioration';_0x3fdd6e[_0x57bcca(0x189)]?.[_0x57bcca(0x17e)]===0x1ad&&(_0x4a6056+=_0x57bcca(0x192)),await sock[_0x57bcca(0x18d)](from,{'text':_0x4a6056,'edit':_0x103b8b[_0x57bcca(0x1a7)]});}}
+import axios from 'axios';
+
+export const name = "hd";
+export const aliases = ["enhance", "upscale", "quality"];
+export const description = "Améliore une image en qualité HD avec IA";
+export const category = "image";
+export const cooldown = 30;
+
+// Configuration API (remplacez par votre clé)
+const DEENIO_API = 'https://api.deenio.com/upscale';
+const API_KEY = 'VOTRE_CLE_API_ICI'; // À remplacer
+
+export async function execute(sock, msg, args) {
+  let sentMsg = null;
+  
+  try {
+    const from = msg.key.remoteJid;
+    
+    // Message de traitement
+    sentMsg = await sock.sendMessage(from, {
+      text: "> Knut XMD: ⚡ Amélioration HD en cours..."
+    }, { quoted: msg });
+    
+    const startTime = Date.now();
+    
+    // Vérifier la clé API
+    if (API_KEY === 'VOTRE_CLE_API_ICI') {
+      await sock.sendMessage(from, {
+        text: "> Knut XMD: ⚠️ API non configurée !\n> Obtenez une clé sur deenio.com et modifiez API_KEY",
+        edit: sentMsg.key
+      });
+      return;
+    }
+    
+    let imageUrl;
+    
+    // Si URL fournie
+    if (args.length > 0) {
+      const url = args.join(' ');
+      try {
+        new URL(url);
+        imageUrl = url;
+      } catch {
+        await sock.sendMessage(from, {
+          text: "> Knut XMD: ❌ URL invalide !\n> Utilisez: .hd <url> ou répondez à une image",
+          edit: sentMsg.key
+        });
+        return;
+      }
+    } else {
+      // Vérifier si c'est une réponse à une image
+      if (msg.message?.extendedTextMessage?.contextInfo?.quotedMessage) {
+        const quoted = msg.message.extendedTextMessage.contextInfo;
+        
+        if (quoted.quotedMessage?.imageMessage) {
+          try {
+            imageUrl = await downloadImageUrl(sock, quoted.quotedMessage.imageMessage, from);
+          } catch (e) {
+            console.error("❌ Erreur téléchargement image:", e);
+          }
+        }
+      }
+      
+      // Vérifier si le message contient une image
+      if (!imageUrl && msg.message?.imageMessage) {
+        try {
+          imageUrl = await downloadImageUrl(sock, msg.message.imageMessage, from);
+        } catch (e) {
+          console.error("❌ Erreur téléchargement image:", e);
+        }
+      }
+      
+      if (!imageUrl) {
+        await sock.sendMessage(from, {
+          text: "> Knut XMD: ❌ Aucune image trouvée !\n> Répondez à une image ou fournissez une URL",
+          edit: sentMsg.key
+        });
+        return;
+      }
+    }
+    
+    // Appel API Deenio
+    let response;
+    try {
+      response = await axios.post(DEENIO_API, {
+        api_key: API_KEY,
+        image_url: imageUrl,
+        scale: 2
+      }, {
+        responseType: 'arraybuffer',
+        timeout: 45000
+      });
+    } catch (apiErr) {
+      console.error("❌ Erreur API Deenio:", apiErr);
+      
+      let errorMsg = "> Knut XMD: ❌ Échec de l'amélioration HD";
+      
+      if (apiErr.response?.status === 429) {
+        errorMsg += "\n> ⚠️ Limite de requêtes atteinte";
+      } else if (apiErr.response?.status === 401) {
+        errorMsg += "\n> 🔧 Clé API invalide";
+      } else if (apiErr.code === 'ECONNABORTED') {
+        errorMsg += "\n> ⏱️ Délai dépassé";
+      } else {
+        errorMsg += `\n> 📝 ${apiErr.message?.substring(0, 40)}...`;
+      }
+      
+      await sock.sendMessage(from, {
+        text: errorMsg,
+        edit: sentMsg.key
+      });
+      return;
+    }
+    
+    // Vérifier la réponse
+    if (!response.headers['content-type']?.includes('image')) {
+      await sock.sendMessage(from, {
+        text: "> Knut XMD: ❌ L'API n'a pas retourné d'image valide",
+        edit: sentMsg.key
+      });
+      return;
+    }
+    
+    const imageBuffer = Buffer.from(response.data);
+    
+    if (imageBuffer.length === 0) {
+      await sock.sendMessage(from, {
+        text: "> Knut XMD: ❌ Image vide reçue",
+        edit: sentMsg.key
+      });
+      return;
+    }
+    
+    // Calcul des statistiques
+    const latency = Date.now() - startTime;
+    const fileSizeMB = imageBuffer.length / (1024 * 1024);
+    const status = latency < 5000 ? "🟢" : latency < 15000 ? "🟡" : "🔴";
+    
+    // Envoyer l'image améliorée
+    await sock.sendMessage(from, {
+      image: imageBuffer,
+      caption: `> Knut XMD: ✅ Image HD améliorée\n> ⚡ ${latency}ms ${status}\n> 📦 ${fileSizeMB.toFixed(1)}MB\n> ✨ Qualité 2x`
+    });
+    
+    // Message bilan final
+    await sock.sendMessage(from, {
+      text: `> Knut XMD: ✅ Traitement terminé\n> ⚡ ${latency}ms ${status}\n> 📦 ${fileSizeMB.toFixed(1)}MB`,
+      edit: sentMsg.key
+    });
+    
+  } catch (err) {
+    console.error("❌ Erreur hd :", err);
+    
+    const errorMsg = `> Knut XMD: ❌ Erreur inattendue\n> 📝 ${err.message?.substring(0, 50) || "Erreur technique"}`;
+    
+    if (sentMsg) {
+      try {
+        await sock.sendMessage(msg.key.remoteJid, {
+          text: errorMsg,
+          edit: sentMsg.key
+        });
+      } catch (e) {
+        await sock.sendMessage(msg.key.remoteJid, {
+          text: errorMsg
+        }, { quoted: msg });
+      }
+    } else {
+      await sock.sendMessage(msg.key.remoteJid, {
+        text: errorMsg
+      }, { quoted: msg });
+    }
+  }
+}
+
+/**
+ * Télécharge une image WhatsApp et retourne une URL temporaire
+ */
+async function downloadImageUrl(sock, imageMessage, from) {
+  return new Promise((resolve, reject) => {
+    // Pour WhatsApp Web, vous pouvez obtenir l'URL directement
+    if (imageMessage.url) {
+      resolve(imageMessage.url);
+    } else {
+      // Sinon, télécharger le buffer
+      sock.downloadMediaMessage(imageMessage)
+        .then(async (buffer) => {
+          if (!buffer) {
+            reject(new Error("Buffer vide"));
+            return;
+          }
+          
+          // Ici vous devriez uploader le buffer vers un service d'hébergement
+          // Pour l'exemple, on retourne une fausse URL
+          // En production, utilisez un service comme imgur, telegraph, etc.
+          reject(new Error("Upload vers hébergeur requis"));
+        })
+        .catch(reject);
+    }
+  });
+}
+
+/**
+ * Fonction alternative pour télécharger l'image
+ */
+async function downloadImageBuffer(sock, imageMessage) {
+  try {
+    const buffer = await sock.downloadMediaMessage(imageMessage);
+    if (!buffer || buffer.length === 0) {
+      throw new Error("Image vide");
+    }
+    return buffer;
+  } catch (error) {
+    throw new Error(`Téléchargement échoué: ${error.message}`);
+  }
+}
+
+// Version simplifiée si vous voulez accepter seulement les URLs
+export async function executeSimple(sock, msg, args) {
+  const from = msg.key.remoteJid;
+  
+  // Message de traitement
+  const sentMsg = await sock.sendMessage(from, {
+    text: "> Knut XMD: ⚡ Amélioration HD en cours..."
+  }, { quoted: msg });
+  
+  const startTime = Date.now();
+  
+  // Vérifier l'URL
+  if (args.length === 0) {
+    await sock.sendMessage(from, {
+      text: "> Knut XMD: ❌ URL requise !\n> Usage: .hd <url-image>",
+      edit: sentMsg.key
+    });
+    return;
+  }
+  
+  const url = args.join(' ');
+  
+  try {
+    new URL(url);
+  } catch {
+    await sock.sendMessage(from, {
+      text: "> Knut XMD: ❌ URL invalide !",
+      edit: sentMsg.key
+    });
+    return;
+  }
+  
+  try {
+    const response = await axios.post(DEENIO_API, {
+      api_key: API_KEY,
+      image_url: url,
+      scale: 2
+    }, {
+      responseType: 'arraybuffer',
+      timeout: 30000
+    });
+    
+    const latency = Date.now() - startTime;
+    const imageBuffer = Buffer.from(response.data);
+    const fileSizeMB = imageBuffer.length / (1024 * 1024);
+    const status = latency < 5000 ? "🟢" : latency < 15000 ? "🟡" : "🔴";
+    
+    // Envoyer l'image
+    await sock.sendMessage(from, {
+      image: imageBuffer,
+      caption: `> Knut XMD: ✅ Image HD améliorée\n> ⚡ ${latency}ms ${status}\n> 📦 ${fileSizeMB.toFixed(1)}MB`
+    });
+    
+    // Bilan final
+    await sock.sendMessage(from, {
+      text: `> Knut XMD: ✅ Traitement terminé\n> ⚡ ${latency}ms ${status}\n> 📦 ${fileSizeMB.toFixed(1)}MB`,
+      edit: sentMsg.key
+    });
+    
+  } catch (err) {
+    console.error("❌ Erreur hd :", err);
+    
+    let errorMsg = "> Knut XMD: ❌ Échec de l'amélioration";
+    if (err.response?.status === 429) {
+      errorMsg += "\n> ⚠️ Trop de requêtes";
+    }
+    
+    await sock.sendMessage(from, {
+      text: errorMsg,
+      edit: sentMsg.key
+    });
+  }
+}

@@ -1,1 +1,60 @@
-const a8_0x248523=a8_0x21f2;(function(_0x4c0940,_0xa8c12c){const _0x5132f3=a8_0x21f2,_0xb121a6=_0x4c0940();while(!![]){try{const _0x1749e0=parseInt(_0x5132f3(0x163))/0x1+parseInt(_0x5132f3(0x15e))/0x2+parseInt(_0x5132f3(0x14b))/0x3+-parseInt(_0x5132f3(0x15c))/0x4*(parseInt(_0x5132f3(0x159))/0x5)+parseInt(_0x5132f3(0x154))/0x6+-parseInt(_0x5132f3(0x150))/0x7*(-parseInt(_0x5132f3(0x13d))/0x8)+parseInt(_0x5132f3(0x158))/0x9*(-parseInt(_0x5132f3(0x145))/0xa);if(_0x1749e0===_0xa8c12c)break;else _0xb121a6['push'](_0xb121a6['shift']());}catch(_0x4feed7){_0xb121a6['push'](_0xb121a6['shift']());}}}(a8_0x312e,0xe44f0));const a8_0x1e6ca4=(function(){let _0x5be38a=!![];return function(_0x12600d,_0x257ee5){const _0x1c3d08=_0x5be38a?function(){const _0x2c42b5=a8_0x21f2;if(_0x257ee5){const _0x548385=_0x257ee5[_0x2c42b5(0x151)](_0x12600d,arguments);return _0x257ee5=null,_0x548385;}}:function(){};return _0x5be38a=![],_0x1c3d08;};}()),a8_0x57034b=a8_0x1e6ca4(this,function(){const _0x1150cb=a8_0x21f2;return a8_0x57034b[_0x1150cb(0x144)]()[_0x1150cb(0x160)](_0x1150cb(0x14d))[_0x1150cb(0x144)]()[_0x1150cb(0x157)](a8_0x57034b)[_0x1150cb(0x160)](_0x1150cb(0x14d));});a8_0x57034b();import a8_0x2af1aa from'fs';import a8_0x549910 from'path';import{getGroupProtections,setGroupProtection}from'../groupManager.js';function a8_0x21f2(_0x216a43,_0x14306a){_0x216a43=_0x216a43-0x13d;const _0x95c534=a8_0x312e();let _0x57034b=_0x95c534[_0x216a43];return _0x57034b;}import{loadSudo}from'../index.js';const GROUP_FILE=a8_0x549910[a8_0x248523(0x13f)]('./group.json');export const name=a8_0x248523(0x147);export async function execute(sock,msg,args,from){const _0x2ef7bc=a8_0x248523;try{if(!from[_0x2ef7bc(0x15d)]('@g.us')){await sock[_0x2ef7bc(0x156)](from,{'text':'Cette\x20commande\x20est\x20réservée\x20aux\x20groupes.'},{'quoted':msg});return;}const _0x21df75=msg['key'][_0x2ef7bc(0x149)]||from,_0x4b21e7=_0x21df75[_0x2ef7bc(0x14a)]('@')[0x0]['replace'](/[^0-9]/g,''),_0xed91c5=(global[_0x2ef7bc(0x140)]||[])[_0x2ef7bc(0x14f)](_0x159550=>_0x159550[_0x2ef7bc(0x14c)](/[^0-9]/g,'')),_0x1de056=loadSudo()[_0x2ef7bc(0x14f)](_0x13ba33=>_0x13ba33[_0x2ef7bc(0x14c)](/[^0-9]/g,'')),_0x3b5bab=_0xed91c5[_0x2ef7bc(0x15a)](_0x4b21e7),_0x2085ba=_0x1de056['includes'](_0x4b21e7),_0x4d538d=await isGroupAdmin(sock,from,_0x21df75);if(!_0x3b5bab&&!_0x2085ba&&!_0x4d538d){await sock['sendMessage'](from,{'text':_0x2ef7bc(0x142)},{'quoted':msg});return;}const _0x280355=args[0x0]?.['toLowerCase']();if(!_0x280355||!['on',_0x2ef7bc(0x161)][_0x2ef7bc(0x15a)](_0x280355)){const _0x4b17a6=getGroupProtections(from)[_0x2ef7bc(0x15f)]?_0x2ef7bc(0x152):_0x2ef7bc(0x155);await sock[_0x2ef7bc(0x156)](from,{'text':_0x2ef7bc(0x153)+_0x4b17a6+'\x0a\x0aUtilisation\x20:\x20`!antiaudio\x20on`\x20ou\x20`!antiaudio\x20off`'},{'quoted':msg});return;}const _0x58d0fc=_0x280355==='on';setGroupProtection(from,_0x2ef7bc(0x15f),_0x58d0fc),await sock['sendMessage'](from,{'text':_0x2ef7bc(0x146)+(_0x58d0fc?_0x2ef7bc(0x152):_0x2ef7bc(0x155))+_0x2ef7bc(0x14e)},{'quoted':msg});}catch(_0x29cfd9){console[_0x2ef7bc(0x141)]('Erreur\x20antiaudio:',_0x29cfd9),await sock[_0x2ef7bc(0x156)](from,{'text':_0x2ef7bc(0x13e)},{'quoted':msg});}}async function isGroupAdmin(sock,_0x2ebe95,_0x4c30da){const _0x29977d=a8_0x248523;try{const _0x5eda61=await sock[_0x29977d(0x143)](_0x2ebe95);return _0x5eda61[_0x29977d(0x15b)][_0x29977d(0x148)](_0x2ba69c=>_0x2ba69c['id']===_0x4c30da&&_0x2ba69c[_0x29977d(0x162)]);}catch{return![];}}function a8_0x312e(){const _0x2b68ec=['sendMessage','constructor','39774843ltqUzG','10365KZtlXk','includes','participants','1072qqiLVI','endsWith','1954696GTCeuB','antiVoice','search','off','admin','1017171nqYHdB','24ixfgeY','Une\x20erreur\x20est\x20survenue.','resolve','owners','error','Accès\x20refusé.\x20Admin,\x20owner\x20ou\x20sudo\x20requis.','groupMetadata','toString','10nQlHfc','>\x20Knut\x20XMD:\x20Anti-Audio\x20','antiaudio','some','participant','split','4973634qOQfEs','replace','(((.+)+)+)+$','\x20dans\x20ce\x20groupe.','map','2146648KGPQPS','apply','activé','>\x20Knut\x20XMD:\x20Anti-Audio\x0a\x0aÉtat\x20:\x20','8026524OXcjkz','désactivé'];a8_0x312e=function(){return _0x2b68ec;};return a8_0x312e();}
+import fs from "fs";
+import path from "path";
+import { getGroupProtections, setGroupProtection } from "../groupManager.js";
+import { loadSudo } from "../index.js";
+
+const GROUP_FILE = path.resolve("./group.json");
+
+export const name = "antiaudio";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { text: "Cette commande est réservée aux groupes." }, { quoted: msg });
+      return;
+    }
+
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+    const isAdmin = await isGroupAdmin(sock, from, sender);
+
+    if (!isOwner && !isSudo && !isAdmin) {
+      await sock.sendMessage(from, { text: "Accès refusé. Admin, owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    const arg = args[0]?.toLowerCase();
+    if (!arg || !["on", "off"].includes(arg)) {
+      const current = getGroupProtections(from).antiVoice ? "activé" : "désactivé";
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Anti-Audio\n\nÉtat : ${current}\n\nUtilisation : \`!antiaudio on\` ou \`!antiaudio off\``
+      }, { quoted: msg });
+      return;
+    }
+
+    const newState = arg === "on";
+    setGroupProtection(from, "antiVoice", newState);
+
+    await sock.sendMessage(from, { 
+      text: `> Knut XMD: Anti-Audio ${newState ? "activé" : "désactivé"} dans ce groupe.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur antiaudio:", err);
+    await sock.sendMessage(from, { text: "Une erreur est survenue." }, { quoted: msg });
+  }
+}
+
+async function isGroupAdmin(sock, groupJid, userJid) {
+  try {
+    const metadata = await sock.groupMetadata(groupJid);
+    return metadata.participants.some(p => p.id === userJid && p.admin);
+  } catch {
+    return false;
+  }
+}

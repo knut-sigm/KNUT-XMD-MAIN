@@ -1,1 +1,53 @@
-const a38_0x294fca=a38_0x33c4;(function(_0x506b58,_0x14b539){const _0x14acc4=a38_0x33c4,_0x1e201e=_0x506b58();while(!![]){try{const _0x3b2716=-parseInt(_0x14acc4(0x109))/0x1*(-parseInt(_0x14acc4(0x118))/0x2)+-parseInt(_0x14acc4(0x10a))/0x3*(-parseInt(_0x14acc4(0xff))/0x4)+-parseInt(_0x14acc4(0x108))/0x5*(parseInt(_0x14acc4(0xfe))/0x6)+parseInt(_0x14acc4(0xf9))/0x7+-parseInt(_0x14acc4(0x102))/0x8*(-parseInt(_0x14acc4(0x111))/0x9)+parseInt(_0x14acc4(0xfd))/0xa*(parseInt(_0x14acc4(0x117))/0xb)+-parseInt(_0x14acc4(0x11c))/0xc*(parseInt(_0x14acc4(0x10c))/0xd);if(_0x3b2716===_0x14b539)break;else _0x1e201e['push'](_0x1e201e['shift']());}catch(_0x1f6e34){_0x1e201e['push'](_0x1e201e['shift']());}}}(a38_0x331f,0x400d5));const a38_0x6a7afd=(function(){let _0x3cc6c8=!![];return function(_0x473b29,_0x40ad3f){const _0x5b7eb0=_0x3cc6c8?function(){const _0x1cb56f=a38_0x33c4;if(_0x40ad3f){const _0x5b7539=_0x40ad3f[_0x1cb56f(0x100)](_0x473b29,arguments);return _0x40ad3f=null,_0x5b7539;}}:function(){};return _0x3cc6c8=![],_0x5b7eb0;};}()),a38_0x5b84a4=a38_0x6a7afd(this,function(){const _0x1e8920=a38_0x33c4;return a38_0x5b84a4['toString']()['search'](_0x1e8920(0x113))[_0x1e8920(0x116)]()[_0x1e8920(0x114)](a38_0x5b84a4)['search'](_0x1e8920(0x113));});a38_0x5b84a4();export const name=a38_0x294fca(0xfb);export const description=a38_0x294fca(0xfc);function a38_0x331f(){const _0x1f7d7c=['extendedTextMessage','mentionedJid','contextInfo','replace','key','5emJxSR','289521pphFYI','12639SOSFTK','•\x20Number:\x20.block\x201234567890','507pBYGco','Unknown\x20error','Error:\x20','•\x20Mention:\x20.block\x20@user\x0a','Block\x20command\x20error:','4605588AuOByl','sendMessage','(((.+)+)+)+$','constructor','message','toString','318890UbTEfw','2IAtHsZ','✅\x20*KNUT\x20XMD*:\x20User\x20blocked\x20successfully\x0a','❌\x20*KNUT\x20XMD*:\x20No\x20user\x20specified\x0a\x0a','participant','298524UkaMdw','User:\x20','❌\x20*KNUT\x20XMD*:\x20Failed\x20to\x20block\x20user\x0a','remoteJid','split','length','2679068BfqccR','@s.whatsapp.net','block','Block\x20a\x20WhatsApp\x20user','90aUAtuo','2360916nnxUtg','172fDTRqe','apply','•\x20Reply:\x20.block\x20(to\x20a\x20message)\x0a','8spteab'];a38_0x331f=function(){return _0x1f7d7c;};return a38_0x331f();}function a38_0x33c4(_0x2d70a4,_0x132623){_0x2d70a4=_0x2d70a4-0xf7;const _0x524f81=a38_0x331f();let _0x5b84a4=_0x524f81[_0x2d70a4];return _0x5b84a4;}export const category='Admin';export async function execute(sock,msg,args){const _0x20959f=a38_0x294fca,from=msg[_0x20959f(0x107)][_0x20959f(0x11f)];let _0x5ac480=null;if(msg[_0x20959f(0x115)]?.[_0x20959f(0x103)]?.['contextInfo']?.[_0x20959f(0x104)]?.[_0x20959f(0xf8)]>0x0)_0x5ac480=msg[_0x20959f(0x115)]['extendedTextMessage']['contextInfo'][_0x20959f(0x104)][0x0];else{if(msg[_0x20959f(0x115)]?.[_0x20959f(0x103)]?.['contextInfo']?.['participant'])_0x5ac480=msg[_0x20959f(0x115)][_0x20959f(0x103)][_0x20959f(0x105)][_0x20959f(0x11b)];else{if(args[0x0]){const _0x2680da=args[0x0][_0x20959f(0x106)](/[^0-9]/g,'');_0x2680da[_0x20959f(0xf8)]>=0xa&&(_0x5ac480=_0x2680da+_0x20959f(0xfa));}}}if(!_0x5ac480)return await sock[_0x20959f(0x112)](from,{'text':_0x20959f(0x11a)+'Usage:\x0a'+_0x20959f(0x10f)+_0x20959f(0x101)+_0x20959f(0x10b)},{'quoted':msg});try{await sock['updateBlockStatus'](_0x5ac480,_0x20959f(0xfb)),await sock['sendMessage'](from,{'text':_0x20959f(0x119)+(_0x20959f(0x11d)+_0x5ac480[_0x20959f(0xf7)]('@')[0x0])},{'quoted':msg});}catch(_0x4ae025){console['error'](_0x20959f(0x110),_0x4ae025),await sock[_0x20959f(0x112)](from,{'text':_0x20959f(0x11e)+(_0x20959f(0x10e)+(_0x4ae025[_0x20959f(0x115)]||_0x20959f(0x10d)))},{'quoted':msg});}}
+export const name = "block";
+export const description = "Block a WhatsApp user";
+export const category = "Admin";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+  
+  // Détection de l'utilisateur cible
+  let targetUser = null;
+  
+  // 1. Mention dans le message
+  if (msg.message?.extendedTextMessage?.contextInfo?.mentionedJid?.length > 0) {
+    targetUser = msg.message.extendedTextMessage.contextInfo.mentionedJid[0];
+  }
+  // 2. Message cité (réponse)
+  else if (msg.message?.extendedTextMessage?.contextInfo?.participant) {
+    targetUser = msg.message.extendedTextMessage.contextInfo.participant;
+  }
+  // 3. Numéro fourni en argument
+  else if (args[0]) {
+    const num = args[0].replace(/[^0-9]/g, '');
+    if (num.length >= 10) {
+      targetUser = num + '@s.whatsapp.net';
+    }
+  }
+
+  if (!targetUser) {
+    return await sock.sendMessage(from, { 
+      text: "❌ *KNUT XMD*: No user specified\n\n" +
+            "Usage:\n" +
+            "• Mention: .block @user\n" +
+            "• Reply: .block (to a message)\n" +
+            "• Number: .block 1234567890" 
+    }, { quoted: msg });
+  }
+
+  try {
+    // Blocage de l'utilisateur
+    await sock.updateBlockStatus(targetUser, 'block');
+    
+    await sock.sendMessage(from, { 
+      text: `✅ *KNUT XMD*: User blocked successfully\n` +
+            `User: ${targetUser.split('@')[0]}`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Block command error:", err);
+    await sock.sendMessage(from, { 
+      text: `❌ *KNUT XMD*: Failed to block user\n` +
+            `Error: ${err.message || 'Unknown error'}`
+    }, { quoted: msg });
+  }
+}

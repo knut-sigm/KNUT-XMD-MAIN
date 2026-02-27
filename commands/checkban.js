@@ -1,1 +1,68 @@
-(function(_0x28e352,_0x444646){const _0x1712cf=a41_0x21b6,_0xca898f=_0x28e352();while(!![]){try{const _0xd3c1f2=-parseInt(_0x1712cf(0x1d6))/0x1+-parseInt(_0x1712cf(0x1ca))/0x2*(parseInt(_0x1712cf(0x1bf))/0x3)+parseInt(_0x1712cf(0x1bd))/0x4*(-parseInt(_0x1712cf(0x1d4))/0x5)+-parseInt(_0x1712cf(0x1d3))/0x6+-parseInt(_0x1712cf(0x1b0))/0x7*(-parseInt(_0x1712cf(0x1d1))/0x8)+-parseInt(_0x1712cf(0x1b7))/0x9*(parseInt(_0x1712cf(0x1cd))/0xa)+-parseInt(_0x1712cf(0x1cb))/0xb*(-parseInt(_0x1712cf(0x1d5))/0xc);if(_0xd3c1f2===_0x444646)break;else _0xca898f['push'](_0xca898f['shift']());}catch(_0x42b0a7){_0xca898f['push'](_0xca898f['shift']());}}}(a41_0x28f1,0x5af80));const a41_0x64ed46=(function(){let _0x3024a6=!![];return function(_0x5afcc4,_0x39e270){const _0x314fe9=_0x3024a6?function(){const _0x7e5092=a41_0x21b6;if(_0x39e270){const _0x3aeb6b=_0x39e270[_0x7e5092(0x1d8)](_0x5afcc4,arguments);return _0x39e270=null,_0x3aeb6b;}}:function(){};return _0x3024a6=![],_0x314fe9;};}()),a41_0x2f6e6c=a41_0x64ed46(this,function(){const _0x3284d0=a41_0x21b6;return a41_0x2f6e6c[_0x3284d0(0x1cc)]()[_0x3284d0(0x1c0)]('(((.+)+)+)+$')[_0x3284d0(0x1cc)]()['constructor'](a41_0x2f6e6c)['search'](_0x3284d0(0x1b3));});function a41_0x21b6(_0x1d7a26,_0x15cf96){_0x1d7a26=_0x1d7a26-0x1af;const _0x3a4be7=a41_0x28f1();let _0x2f6e6c=_0x3a4be7[_0x1d7a26];return _0x2f6e6c;}a41_0x2f6e6c();const cache=new Map();export const name='checkban';function a41_0x28f1(){const _0xc90876=['entries','40vmbTCu','⚠️\x20*+','2550600NjajcY','155YzOPkY','156iIcwRO','274324iCtkqq','result','apply','@s.whatsapp.net','*\x20-\x20TIMEOUT\x0aVérification\x20impossible','❌\x20Format\x20invalide','Impossible\x20de\x20vérifier:\x20','replace','delete','*\x20-\x20ACTIF\x0a','690935HPIVDI','time','onWhatsApp','(((.+)+)+)+$','33$1','remoteJid','extendedTextMessage','1418535jbFYRb','now','then','profilePictureUrl','race','catch','8668zHBrpT','Statut:\x20Compte\x20WhatsApp\x20valide','9ZLsWLy','search','get','message','🟢\x20*+','*\x20-\x20ERREUR\x0a','sendMessage','participant','Photo:\x20','exists','split','58732LHJOvd','754259yFznbE','toString','10wCZLBw','🔴\x20*+','❌\x20*+'];a41_0x28f1=function(){return _0xc90876;};return a41_0x28f1();}export async function execute(sock,msg,args){const _0x34a721=a41_0x21b6,from=msg['key'][_0x34a721(0x1b5)],_0x14d4c0=args[0x0]||msg[_0x34a721(0x1c2)]?.[_0x34a721(0x1b6)]?.['contextInfo']?.[_0x34a721(0x1c6)];if(!_0x14d4c0)return sock[_0x34a721(0x1c5)](from,{'text':'📱\x20Format:\x20!checkban\x200612345678'},{'quoted':msg});const _0xce3d38=_0x14d4c0[_0x34a721(0x1dd)](/\D/g,'')[_0x34a721(0x1dd)](/^0(\d{9})$/,_0x34a721(0x1b4))[_0x34a721(0x1dd)](/^(\d{9})$/,_0x34a721(0x1b4));if(_0xce3d38['length']<0xa)return sock[_0x34a721(0x1c5)](from,{'text':_0x34a721(0x1db)},{'quoted':msg});const _0x5d1ebf=_0xce3d38+_0x34a721(0x1d9),_0x4c3c3a='check_'+_0xce3d38,_0x2c3bdd=cache[_0x34a721(0x1c1)](_0x4c3c3a);if(_0x2c3bdd&&Date[_0x34a721(0x1b8)]()-_0x2c3bdd[_0x34a721(0x1b1)]<0x493e0)return sock[_0x34a721(0x1c5)](from,{'text':_0x2c3bdd[_0x34a721(0x1d7)]},{'quoted':msg});try{const _0x416290=await Promise[_0x34a721(0x1bb)]([sock[_0x34a721(0x1b2)](_0x5d1ebf)[_0x34a721(0x1b9)](_0x2f709a=>_0x2f709a?.[0x0]?.[_0x34a721(0x1c8)]),new Promise(_0x35a915=>setTimeout(()=>_0x35a915(null),0x1388))]);let _0x502d06;if(_0x416290===null)_0x502d06=_0x34a721(0x1d2)+_0xce3d38+_0x34a721(0x1da);else{if(!_0x416290)_0x502d06=_0x34a721(0x1ce)+_0xce3d38+'*\x20-\x20BANNI/SUPPRIMÉ\x0aLe\x20numéro\x20n\x27est\x20pas\x20sur\x20WhatsApp';else{const _0x15c489=await sock[_0x34a721(0x1ba)](_0x5d1ebf,'image')[_0x34a721(0x1b9)](()=>'✅')[_0x34a721(0x1bc)](()=>'❌');_0x502d06=_0x34a721(0x1c3)+_0xce3d38+_0x34a721(0x1af)+(_0x34a721(0x1c7)+_0x15c489+'\x0a')+_0x34a721(0x1be);}}cache['set'](_0x4c3c3a,{'time':Date[_0x34a721(0x1b8)](),'result':_0x502d06}),await sock[_0x34a721(0x1c5)](from,{'text':_0x502d06},{'quoted':msg});}catch(_0x96afe0){const _0x36883b=_0x34a721(0x1cf)+_0xce3d38+_0x34a721(0x1c4)+(_0x34a721(0x1dc)+(_0x96afe0['message']?.[_0x34a721(0x1c9)](':')[0x0]||'Inconnue'));await sock[_0x34a721(0x1c5)](from,{'text':_0x36883b},{'quoted':msg});}}setInterval(()=>{const _0xfaf5f1=a41_0x21b6,_0x2b0dee=Date[_0xfaf5f1(0x1b8)]();for(const [_0x547603,_0x11da13]of cache[_0xfaf5f1(0x1d0)]()){if(_0x2b0dee-_0x11da13[_0xfaf5f1(0x1b1)]>0x493e0)cache[_0xfaf5f1(0x1de)](_0x547603);}},0xea60);
+const cache = new Map();
+
+export const name = "checkban";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+  
+  // Extraction rapide
+  const raw = args[0] || msg.message?.extendedTextMessage?.contextInfo?.participant;
+  if (!raw) return sock.sendMessage(from, { text: "📱 Format: !checkban 0612345678" }, { quoted: msg });
+  
+  const num = raw.replace(/\D/g, '')
+    .replace(/^0(\d{9})$/, '33$1')
+    .replace(/^(\d{9})$/, '33$1');
+  
+  if (num.length < 10) return sock.sendMessage(from, { text: "❌ Format invalide" }, { quoted: msg });
+  
+  const jid = `${num}@s.whatsapp.net`;
+  const cacheKey = `check_${num}`;
+  
+  // Vérification cache (5 minutes)
+  const cached = cache.get(cacheKey);
+  if (cached && Date.now() - cached.time < 300000) {
+    return sock.sendMessage(from, { text: cached.result }, { quoted: msg });
+  }
+  
+  try {
+    // Requête unique + timeout
+    const exists = await Promise.race([
+      sock.onWhatsApp(jid).then(r => r?.[0]?.exists),
+      new Promise(resolve => setTimeout(() => resolve(null), 5000))
+    ]);
+    
+    let result;
+    if (exists === null) {
+      result = `⚠️ *+${num}* - TIMEOUT\nVérification impossible`;
+    } else if (!exists) {
+      result = `🔴 *+${num}* - BANNI/SUPPRIMÉ\nLe numéro n'est pas sur WhatsApp`;
+    } else {
+      // Vérification rapide photo seulement
+      const hasPic = await sock.profilePictureUrl(jid, 'image')
+        .then(() => '✅').catch(() => '❌');
+      
+      result = `🟢 *+${num}* - ACTIF\n` +
+               `Photo: ${hasPic}\n` +
+               `Statut: Compte WhatsApp valide`;
+    }
+    
+    // Cache le résultat
+    cache.set(cacheKey, { time: Date.now(), result });
+    
+    await sock.sendMessage(from, { text: result }, { quoted: msg });
+    
+  } catch (e) {
+    const result = `❌ *+${num}* - ERREUR\n` +
+                   `Impossible de vérifier: ${e.message?.split(':')[0] || 'Inconnue'}`;
+    
+    await sock.sendMessage(from, { text: result }, { quoted: msg });
+  }
+}
+
+// Nettoyage automatique du cache
+setInterval(() => {
+  const now = Date.now();
+  for (const [key, value] of cache.entries()) {
+    if (now - value.time > 300000) cache.delete(key);
+  }
+}, 60000);

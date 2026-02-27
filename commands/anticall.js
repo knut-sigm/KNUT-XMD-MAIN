@@ -1,1 +1,51 @@
-const a10_0x51fc03=a10_0x3423;function a10_0x38a6(){const _0x86834a=['apply','(((.+)+)+)+$','1206622FDzfSz','replace','remoteJid','enabled','Une\x20erreur\x20est\x20survenue.','error','8rsMZVV','\x0a\x0aUtilisation\x20:\x20`!anticall\x20on`\x20ou\x20`!anticall\x20off`','10ZkmAuc','>\x20Knut\x20XMD:\x20Anti-Call\x20','includes','>\x20Knut\x20XMD:\x20L\x27anti-call\x20est\x20déjà\x20','antiCall','search','2494794KizqAk','owners','toString','2uJOiiQ','toLowerCase','10cmxskT','participant','4540232aXyaqG','anticall','activé','7287471sQCnbW','10284934JlDVfA','split','Erreur\x20anticall\x20command:','7638799QlUwyd','3617847kqxsNO','désactivé','off','sendMessage','map'];a10_0x38a6=function(){return _0x86834a;};return a10_0x38a6();}(function(_0x57f59f,_0x30e2ab){const _0x2c56c5=a10_0x3423,_0x2935be=_0x57f59f();while(!![]){try{const _0x238d3a=parseInt(_0x2c56c5(0x1a3))/0x1*(-parseInt(_0x2c56c5(0x192))/0x2)+parseInt(_0x2c56c5(0x18b))/0x3+-parseInt(_0x2c56c5(0x1a7))/0x4+-parseInt(_0x2c56c5(0x1a5))/0x5*(-parseInt(_0x2c56c5(0x1a0))/0x6)+-parseInt(_0x2c56c5(0x18a))/0x7*(-parseInt(_0x2c56c5(0x198))/0x8)+-parseInt(_0x2c56c5(0x1aa))/0x9*(-parseInt(_0x2c56c5(0x19a))/0xa)+-parseInt(_0x2c56c5(0x1ab))/0xb;if(_0x238d3a===_0x30e2ab)break;else _0x2935be['push'](_0x2935be['shift']());}catch(_0x51c3d2){_0x2935be['push'](_0x2935be['shift']());}}}(a10_0x38a6,0xa1959));const a10_0x424330=(function(){let _0x796274=!![];return function(_0x1193b0,_0x3fecc7){const _0x30a74c=_0x796274?function(){const _0x32d57a=a10_0x3423;if(_0x3fecc7){const _0x252d07=_0x3fecc7[_0x32d57a(0x190)](_0x1193b0,arguments);return _0x3fecc7=null,_0x252d07;}}:function(){};return _0x796274=![],_0x30a74c;};}()),a10_0xc24827=a10_0x424330(this,function(){const _0x26bbf9=a10_0x3423;return a10_0xc24827[_0x26bbf9(0x1a2)]()[_0x26bbf9(0x19f)](_0x26bbf9(0x191))[_0x26bbf9(0x1a2)]()['constructor'](a10_0xc24827)[_0x26bbf9(0x19f)](_0x26bbf9(0x191));});a10_0xc24827();import{loadSudo}from'../index.js';function a10_0x3423(_0x5bd3ec,_0x4a5de8){_0x5bd3ec=_0x5bd3ec-0x18a;const _0xf6e08a=a10_0x38a6();let _0xc24827=_0xf6e08a[_0x5bd3ec];return _0xc24827;}export const name=a10_0x51fc03(0x1a8);export async function execute(sock,msg,args,from){const _0x135af5=a10_0x51fc03;try{const _0x3588e9=msg['key'][_0x135af5(0x1a6)]||from,_0xb0b1e1=_0x3588e9[_0x135af5(0x1ac)]('@')[0x0][_0x135af5(0x193)](/[^0-9]/g,''),_0x10f66d=(global[_0x135af5(0x1a1)]||[])[_0x135af5(0x18f)](_0x4f471e=>_0x4f471e[_0x135af5(0x193)](/[^0-9]/g,'')),_0x113d2d=loadSudo()[_0x135af5(0x18f)](_0x1297e4=>_0x1297e4[_0x135af5(0x193)](/[^0-9]/g,'')),_0x5a30d6=_0x10f66d[_0x135af5(0x19c)](_0xb0b1e1),_0x3bdfef=_0x113d2d[_0x135af5(0x19c)](_0xb0b1e1);if(!_0x5a30d6&&!_0x3bdfef){await sock['sendMessage'](from,{'text':'Accès\x20refusé.\x20Seul\x20le\x20propriétaire\x20ou\x20sudo\x20peut\x20modifier\x20ce\x20réglage.'},{'quoted':msg});return;}if(!global[_0x135af5(0x19e)])global[_0x135af5(0x19e)]={'enabled':!![]};const _0x300e3b=args[0x0]?.[_0x135af5(0x1a4)](),_0x220cbf=global[_0x135af5(0x19e)][_0x135af5(0x195)];if(!_0x300e3b||!['on',_0x135af5(0x18d)]['includes'](_0x300e3b)){const _0x2dfe6e=_0x220cbf?_0x135af5(0x1a9):'désactivé';await sock[_0x135af5(0x18e)](from,{'text':'>\x20Knut\x20XMD:\x20Anti-Call\x0a\x0aÉtat\x20:\x20'+_0x2dfe6e+_0x135af5(0x199)},{'quoted':msg});return;}const _0x2d3f89=_0x300e3b==='on';if(_0x2d3f89===_0x220cbf){await sock[_0x135af5(0x18e)](from,{'text':_0x135af5(0x19d)+(_0x2d3f89?_0x135af5(0x1a9):_0x135af5(0x18c))+'.'},{'quoted':msg});return;}global[_0x135af5(0x19e)][_0x135af5(0x195)]=_0x2d3f89,await sock[_0x135af5(0x18e)](from,{'text':_0x135af5(0x19b)+(_0x2d3f89?_0x135af5(0x1a9):'désactivé')+'\x20globalement.'},{'quoted':msg});}catch(_0x3eb422){console[_0x135af5(0x197)](_0x135af5(0x1ad),_0x3eb422),await sock[_0x135af5(0x18e)](msg['key'][_0x135af5(0x194)],{'text':_0x135af5(0x196)},{'quoted':msg});}}
+import { loadSudo } from "../index.js";
+
+export const name = "anticall";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+
+    if (!isOwner && !isSudo) {
+      await sock.sendMessage(from, { text: "Accès refusé. Seul le propriétaire ou sudo peut modifier ce réglage." }, { quoted: msg });
+      return;
+    }
+
+    // Initialiser l'état global si besoin
+    if (!global.antiCall) global.antiCall = { enabled: true };
+
+    const arg = args[0]?.toLowerCase();
+    const current = global.antiCall.enabled;
+
+    if (!arg || !["on", "off"].includes(arg)) {
+      const status = current ? "activé" : "désactivé";
+      await sock.sendMessage(from, {
+        text: `> Knut XMD: Anti-Call\n\nÉtat : ${status}\n\nUtilisation : \`!anticall on\` ou \`!anticall off\``
+      }, { quoted: msg });
+      return;
+    }
+
+    const newState = arg === "on";
+    if (newState === current) {
+      await sock.sendMessage(from, {
+        text: `> Knut XMD: L'anti-call est déjà ${newState ? "activé" : "désactivé"}.`
+      }, { quoted: msg });
+      return;
+    }
+
+    global.antiCall.enabled = newState;
+    await sock.sendMessage(from, {
+      text: `> Knut XMD: Anti-Call ${newState ? "activé" : "désactivé"} globalement.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur anticall command:", err);
+    await sock.sendMessage(msg.key.remoteJid, { text: "Une erreur est survenue." }, { quoted: msg });
+  }
+}

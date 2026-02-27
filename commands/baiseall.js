@@ -1,1 +1,110 @@
-function a37_0x509c(_0x25ae18,_0x195367){_0x25ae18=_0x25ae18-0xcb;const _0x41d8fa=a37_0x2712();let _0x2139cc=_0x41d8fa[_0x25ae18];return _0x2139cc;}(function(_0x1761d9,_0xdd0a23){const _0x3a867f=a37_0x509c,_0x59bc5b=_0x1761d9();while(!![]){try{const _0x174ef7=-parseInt(_0x3a867f(0xd7))/0x1+-parseInt(_0x3a867f(0xdb))/0x2*(parseInt(_0x3a867f(0xd3))/0x3)+-parseInt(_0x3a867f(0xcb))/0x4+-parseInt(_0x3a867f(0xd4))/0x5*(parseInt(_0x3a867f(0xd6))/0x6)+-parseInt(_0x3a867f(0xd8))/0x7+-parseInt(_0x3a867f(0xdf))/0x8+parseInt(_0x3a867f(0xdc))/0x9*(parseInt(_0x3a867f(0xd9))/0xa);if(_0x174ef7===_0xdd0a23)break;else _0x59bc5b['push'](_0x59bc5b['shift']());}catch(_0x1e962e){_0x59bc5b['push'](_0x59bc5b['shift']());}}}(a37_0x2712,0xd39ac));function a37_0x2712(){const _0x4a62f6=['65752569wToLrm','error','constructor','7143536dSvKhk','4402032LzdlgX','https://files.catbox.moe/o18xsa.jpg','\x0a╔════════════════════════╗\x0a\x20\x20\x20\x20\x20🤤🍆\x20𝐊𝐍𝐔𝐓-𝐗𝐌𝐃\x20🍑🤤\x0a╚════════════════════════╝\x0a\x0a>\x20🜂\x20*État\x20du\x20Système*\x20:\x20Excité\x20\x20\x0a>\x20⚙️\x20Uptime\x20:\x20','⚠️\x20Perturbation\x20du\x20champ\x20hypnotique\x20détectée.','❌\x20Erreur\x20commande\x20baiseall\x20:','floor','uptime','(((.+)+)+)+$','267ZHeMmK','1914225eQvCxR','sendMessage','24ZwJUbW','1202502qCoLzE','10611216RxNapx','10mExtid','audio/mpeg','4402JRpnks'];a37_0x2712=function(){return _0x4a62f6;};return a37_0x2712();}const a37_0x4e4644=(function(){let _0xe7d5cc=!![];return function(_0x171b52,_0x4896c5){const _0x505814=_0xe7d5cc?function(){if(_0x4896c5){const _0x1b6053=_0x4896c5['apply'](_0x171b52,arguments);return _0x4896c5=null,_0x1b6053;}}:function(){};return _0xe7d5cc=![],_0x505814;};}()),a37_0x2139cc=a37_0x4e4644(this,function(){const _0x47d4fc=a37_0x509c;return a37_0x2139cc['toString']()['search'](_0x47d4fc(0xd2))['toString']()[_0x47d4fc(0xde)](a37_0x2139cc)['search'](_0x47d4fc(0xd2));});a37_0x2139cc();export const name='baiseall';export async function execute(sock,msg,args){const _0x23f63a=a37_0x509c;try{const from=msg['key']['remoteJid'],_0x298160=process[_0x23f63a(0xd1)](),_0x575720=Math[_0x23f63a(0xd0)](_0x298160/0xe10),_0x6715a2=Math[_0x23f63a(0xd0)](_0x298160%0xe10/0x3c),_0xbf236a=Math[_0x23f63a(0xd0)](_0x298160%0x3c),_0x2d25e8=_0x575720+'h\x20'+_0x6715a2+'m\x20'+_0xbf236a+'s',_0x57d9f2=_0x23f63a(0xcd)+_0x2d25e8+'\x20\x20\x0a>\x20🕯️\x20Énergie\x20:\x20Flux\x20magnétique\x20—\x20synchronisé-sensuel\x20\x0a>\x20🧠\x20Canal\x20psychique\x20:\x20Actif\x20\x20\x0a\x0a>\x20🌑\x20Portails\x20de\x20Connexion\x20sensuelle\x20:\x0a\x0awww.4tube.com\x0awww.8teenxxx.com\x0awww.alotporn.com\x0awww.beeg.com\x0awww.bustnow.com\x0awww.cliphunter.com\x0awww.definebabes.com\x0awww.deviantclip.com\x0awww.drtuber.com\x0awww.empflix.com\x0awww.fantasti.cc\x0awww.fapdu.com\x0awww.freeporn.com\x0awww.freudbox.com\x0awww.fuq.com\x0awww.fux.com\x0awww.grayvee.com\x0awww.hellxx.com\x0awww.hustlertube.com\x0awww.jugy.com\x0awww.jizzhut.com\x0awww.kaktuz.com\x0awww.keezmovies.com\x0awww.kinxxx.com\x0awww.laraporn.com\x0awww.leakedporn.com\x0awww.lovelyclips.com\x0awww.lubetube.com\x0awww.mofosex.com\x0awww.monstertube.com\x0awww.madthumbs.com\x0awww.moviefap.com\x0awww.moviesand.com\x0awww.orgasm.com\x0awww.perfectgirls.net\x0awww.pichunter.com\x0awww.planetsuzy.com\x0awww.porn.com\x0awww.porn-plus.com\x0awww.porncor.com\x0awww.pornhub.com\x0awww.pornrabbit.com\x0awww.porntitan.com\x0awww.pussy.org\x0awww.redtube.com\x0awww.tube8.com\x0awww.xhamster.com\x0awww.xnxx.com\x0awww.xvideos.com\x0awww.youjizz.com\x0awww.hentaigasm.com\x0aIanimes.co\x0awww.hentaicorner.fr\x0a\x0a>\x20“Baisons\x20vivant...\x20La\x20mort\x20arrive\x20”\x20\x20\x0a>\x20\x20𝐊𝐍𝐔𝐓\x20𝐗𝐌𝐃';await sock['sendMessage'](from,{'image':{'url':_0x23f63a(0xcc)},'caption':_0x57d9f2,'gifPlayback':!![]},{'quoted':msg}),await sock[_0x23f63a(0xd5)](from,{'audio':{'url':'https://files.catbox.moe/tg7tv6.mp3'},'mimetype':_0x23f63a(0xda)},{'quoted':msg});}catch(_0x4968c2){console[_0x23f63a(0xdd)](_0x23f63a(0xcf),_0x4968c2),await sock[_0x23f63a(0xd5)](msg['key']['remoteJid'],{'text':_0x23f63a(0xce)},{'quoted':msg});}}
+export const name = "baiseall";
+
+export async function execute(sock, msg, args) {
+  try {
+    const from = msg.key.remoteJid;
+
+    // Uptime du bot
+    const totalSeconds = process.uptime();
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = Math.floor(totalSeconds % 60);
+    const uptime = `${hours}h ${minutes}m ${seconds}s`;
+
+    const text = `
+╔════════════════════════╗
+     🤤🍆 𝐊𝐍𝐔𝐓-𝐗𝐌𝐃 🍑🤤
+╚════════════════════════╝
+
+> 🜂 *État du Système* : Excité  
+> ⚙️ Uptime : ${uptime}  
+> 🕯️ Énergie : Flux magnétique — synchronisé-sensuel 
+> 🧠 Canal psychique : Actif  
+
+> 🌑 Portails de Connexion sensuelle :
+
+www.4tube.com
+www.8teenxxx.com
+www.alotporn.com
+www.beeg.com
+www.bustnow.com
+www.cliphunter.com
+www.definebabes.com
+www.deviantclip.com
+www.drtuber.com
+www.empflix.com
+www.fantasti.cc
+www.fapdu.com
+www.freeporn.com
+www.freudbox.com
+www.fuq.com
+www.fux.com
+www.grayvee.com
+www.hellxx.com
+www.hustlertube.com
+www.jugy.com
+www.jizzhut.com
+www.kaktuz.com
+www.keezmovies.com
+www.kinxxx.com
+www.laraporn.com
+www.leakedporn.com
+www.lovelyclips.com
+www.lubetube.com
+www.mofosex.com
+www.monstertube.com
+www.madthumbs.com
+www.moviefap.com
+www.moviesand.com
+www.orgasm.com
+www.perfectgirls.net
+www.pichunter.com
+www.planetsuzy.com
+www.porn.com
+www.porn-plus.com
+www.porncor.com
+www.pornhub.com
+www.pornrabbit.com
+www.porntitan.com
+www.pussy.org
+www.redtube.com
+www.tube8.com
+www.xhamster.com
+www.xnxx.com
+www.xvideos.com
+www.youjizz.com
+www.hentaigasm.com
+Ianimes.co
+www.hentaicorner.fr
+
+> “Baisons vivant... La mort arrive ”  
+>  𝐊𝐍𝐔𝐓 𝐗𝐌𝐃`;
+
+    await sock.sendMessage(
+      from,
+      {
+        image: { url: "https://files.catbox.moe/o18xsa.jpg" },
+        caption: text,
+        gifPlayback: true
+      },
+      { quoted: msg }
+    );
+
+    await sock.sendMessage(
+      from,
+      {
+        audio: { url: "https://files.catbox.moe/tg7tv6.mp3" },
+        mimetype: "audio/mpeg"
+      },
+      { quoted: msg }
+    );
+
+  } catch (err) {
+    console.error("❌ Erreur commande baiseall :", err);
+    await sock.sendMessage(
+      msg.key.remoteJid,
+      { text: "⚠️ Perturbation du champ hypnotique détectée." },
+      { quoted: msg }
+    );
+  }
+}

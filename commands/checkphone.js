@@ -1,1 +1,229 @@
-const a42_0x30dd46=a42_0x5c46;(function(_0x39f1cb,_0x40117f){const _0x88ad60=a42_0x5c46,_0xa77a9e=_0x39f1cb();while(!![]){try{const _0x3b840a=parseInt(_0x88ad60(0x13f))/0x1+parseInt(_0x88ad60(0x13b))/0x2+-parseInt(_0x88ad60(0x15c))/0x3+-parseInt(_0x88ad60(0x166))/0x4*(-parseInt(_0x88ad60(0x132))/0x5)+parseInt(_0x88ad60(0x142))/0x6*(parseInt(_0x88ad60(0x15b))/0x7)+parseInt(_0x88ad60(0x16c))/0x8+parseInt(_0x88ad60(0x161))/0x9;if(_0x3b840a===_0x40117f)break;else _0xa77a9e['push'](_0xa77a9e['shift']());}catch(_0x1b111e){_0xa77a9e['push'](_0xa77a9e['shift']());}}}(a42_0x5304,0x2c799));function a42_0x5304(){const _0x246e70=['📈\x20*INDICATEURS*\x0a','(((.+)+)+)+$','documentMessage','presenceSubscribe','heif','3.\x20Demandez\x20le\x20modèle\x20directement\x20😉','Weekend','catch','height','round','iPhone/Samsung\x20Galaxy\x20S/Note','constructor','Multi-appareils','map','Format\x20HEIC','getDay','2.\x20Vérifiez\x20les\x20métadonnées\x20EXIF\x20(si\x20partagées)\x0a','545QfeTWf','includes','\x20caractères','\x0a\x0a📋\x20*DONNÉES\x20ANALYSÉES*\x0a','fetchBlocklist','Android\x20(divers)','width','audioMessage','profilePictureUrl','83148WWRouQ','Faible\x20(statistique)','📱\x20*Utilisation*\x20:\x0aRéponds\x20à\x20un\x20message\x20avec\x20!phonecheck\x0a\x0aExemple\x20:\x20Réponds\x20à\x20un\x20message\x20et\x20écris\x20!phonecheck','checkphone','53220iarllt','participant','sendMessage','342fMcUIo','🎥\x20Vidéo:\x20','Vérifiez\x20que:\x0a','OnePlus','key','mimetype','fetchStatus','Élevée','•\x20Vous\x20avez\x20les\x20permissions\x20nécessaires','Samsung','brand','📊\x20Confiance:\x20','error','🔍\x20Marque\x20détectée:\x20*','slice','Xiaomi','push','📝\x20Bio:\x20','value','split','Moyenne','Google\x20Pixel','Faible','entries','💡\x20*Pour\x20améliorer\x20la\x20détection:*\x0a','4151psCWBk','612390ulzAyj','•\x20Basée\x20sur\x20des\x20patterns\x20techniques\x0a','Samsung/Google\x20Pixel','join','imageMessage','710127RrVbEq','•\x20Cette\x20analyse\x20est\x20indicative\x0a','image','getPresence','message','6452xfFxQn','search','Apple\x20(iPhone)','Inconnu','then','•\x20L\x27utilisateur\x20n\x27a\x20pas\x20bloqué\x20ses\x20infos\x0a','23872mLliJI','toString','❌\x20Erreur\x20d\x27analyse\x0a','seconds','📱\x20*DÉTECTION\x20DE\x20MARQUE*\x0a','Détail:\x20','Erreur\x20phonecheck:','status','Aucun\x20indicateur\x20fort\x20détecté','extendedTextMessage','videoMessage','contextInfo','apply','🇨🇳'];a42_0x5304=function(){return _0x246e70;};return a42_0x5304();}const a42_0x1627e3=(function(){let _0x4b1e3b=!![];return function(_0x198502,_0x5e8af3){const _0x461dfe=_0x4b1e3b?function(){const _0x2063de=a42_0x5c46;if(_0x5e8af3){const _0x29ce36=_0x5e8af3[_0x2063de(0x11f)](_0x198502,arguments);return _0x5e8af3=null,_0x29ce36;}}:function(){};return _0x4b1e3b=![],_0x461dfe;};}()),a42_0x36e186=a42_0x1627e3(this,function(){const _0x30356d=a42_0x5c46;return a42_0x36e186['toString']()[_0x30356d(0x167)](_0x30356d(0x122))[_0x30356d(0x16d)]()[_0x30356d(0x12c)](a42_0x36e186)['search'](_0x30356d(0x122));});function a42_0x5c46(_0x4e59ef,_0x4f3326){_0x4e59ef=_0x4e59ef-0x11c;const _0x29466a=a42_0x5304();let _0x36e186=_0x29466a[_0x4e59ef];return _0x36e186;}a42_0x36e186();export const name=a42_0x30dd46(0x13e);export async function execute(sock,msg,args){const _0x588f1c=a42_0x30dd46,from=msg[_0x588f1c(0x146)]['remoteJid'],_0x2c9b74=msg[_0x588f1c(0x165)][_0x588f1c(0x11c)]?.[_0x588f1c(0x11e)]?.['quotedMessage'];if(!_0x2c9b74){await sock['sendMessage'](from,{'text':_0x588f1c(0x13d)},{'quoted':msg});return;}const _0x2ea7e4=msg[_0x588f1c(0x165)][_0x588f1c(0x11c)][_0x588f1c(0x11e)][_0x588f1c(0x140)];if(!_0x2ea7e4){await sock[_0x588f1c(0x141)](from,{'text':'❌\x20Impossible\x20de\x20détecter\x20l\x27expéditeur\x20du\x20message'},{'quoted':msg});return;}try{await sock['sendMessage'](from,{'text':'🔍\x20Analyse\x20du\x20téléphone\x20en\x20cours...\x0aVérification\x20des\x20données\x20techniques\x20⚙️'},{'quoted':msg});const [_0x2fa21c,_0x206aaf,_0x45a5c9,_0x4c723c]=await Promise['allSettled']([sock[_0x588f1c(0x13a)](_0x2ea7e4,_0x588f1c(0x163))['catch'](()=>null),sock[_0x588f1c(0x148)](_0x2ea7e4)['catch'](()=>null),sock[_0x588f1c(0x124)](_0x2ea7e4)[_0x588f1c(0x16a)](()=>sock[_0x588f1c(0x164)](_0x2ea7e4))['catch'](()=>null),sock[_0x588f1c(0x136)]()[_0x588f1c(0x128)](()=>null)]),_0x5b259a=msg['messageTimestamp'],_0x3fc5eb=Object['keys'](_0x2c9b74)[0x0],_0x29f261=[_0x588f1c(0x160),_0x588f1c(0x11d),_0x588f1c(0x139),_0x588f1c(0x123)][_0x588f1c(0x133)](_0x3fc5eb);let _0x2cb2c9=_0x588f1c(0x169),_0x473870=_0x588f1c(0x158),_0x58efdf=[],_0x167642=[];_0x2fa21c[_0x588f1c(0x154)]?(_0x58efdf[_0x588f1c(0x152)]('✅\x20Photo\x20de\x20profil\x20disponible'),_0x167642[_0x588f1c(0x152)]('Photo\x20HD')):_0x58efdf[_0x588f1c(0x152)]('❌\x20Pas\x20de\x20photo\x20de\x20profil');if(_0x29f261){const _0x4ede6e=_0x2c9b74[_0x3fc5eb];if(_0x3fc5eb==='imageMessage'){_0x58efdf[_0x588f1c(0x152)]('📸\x20Image:\x20'+_0x4ede6e[_0x588f1c(0x138)]+'x'+_0x4ede6e[_0x588f1c(0x129)]);if(_0x4ede6e[_0x588f1c(0x147)]?.['includes']('heic')||_0x4ede6e['mimetype']?.['includes'](_0x588f1c(0x125)))_0x2cb2c9=_0x588f1c(0x168),_0x473870=_0x588f1c(0x149),_0x167642['push'](_0x588f1c(0x12f));else _0x4ede6e[_0x588f1c(0x138)]*_0x4ede6e[_0x588f1c(0x129)]>0xb71b00&&(_0x2cb2c9=_0x588f1c(0x15e),_0x473870=_0x588f1c(0x156),_0x167642[_0x588f1c(0x152)]('Haute\x20résolution'));}else _0x3fc5eb==='videoMessage'&&(_0x58efdf[_0x588f1c(0x152)](_0x588f1c(0x143)+Math[_0x588f1c(0x12a)](_0x4ede6e[_0x588f1c(0x16f)])+'s'),(_0x4ede6e['width']>=0xf00||_0x4ede6e[_0x588f1c(0x129)]>=0x870)&&(_0x2cb2c9=_0x588f1c(0x12b),_0x473870=_0x588f1c(0x156),_0x167642[_0x588f1c(0x152)]('4K')));}if(_0x206aaf[_0x588f1c(0x154)]?.[_0x588f1c(0x173)]){const _0x4d2dc1=_0x206aaf['value'][_0x588f1c(0x173)]['length'];_0x58efdf[_0x588f1c(0x152)](_0x588f1c(0x153)+_0x4d2dc1+_0x588f1c(0x134)),_0x4d2dc1>0x64&&(_0x2cb2c9=_0x588f1c(0x137),_0x473870=_0x588f1c(0x156),_0x167642[_0x588f1c(0x152)]('Bio\x20longue'));}const _0x11e2f8=new Date(_0x5b259a*0x3e8)['getHours']();(_0x11e2f8>=0x17||_0x11e2f8<=0x6)&&_0x167642[_0x588f1c(0x152)]('Utilisation\x20nocturne');if(_0x2ea7e4[_0x588f1c(0x133)](':')&&_0x2ea7e4['includes']('@')){const _0x11990f=_0x2ea7e4[_0x588f1c(0x155)](':')[0x1]?.[_0x588f1c(0x155)]('@')[0x0];_0x11990f&&(_0x58efdf[_0x588f1c(0x152)]('📱\x20Appareil\x20ID:\x20'+_0x11990f),['0','1','2'][_0x588f1c(0x133)](_0x11990f)&&(_0x167642[_0x588f1c(0x152)](_0x588f1c(0x12d)),_0x2cb2c9='WhatsApp\x20Multi-Device',_0x473870=_0x588f1c(0x156)));}const _0x498bb1=new Date(_0x5b259a*0x3e8),_0x55886a=_0x498bb1[_0x588f1c(0x130)]();(_0x55886a===0x0||_0x55886a===0x6)&&_0x167642['push'](_0x588f1c(0x127));if(_0x2cb2c9===_0x588f1c(0x169)){const _0x577c5c=[{'brand':'Apple\x20(iPhone)','probability':0x23},{'brand':_0x588f1c(0x14b),'probability':0x19},{'brand':_0x588f1c(0x151),'probability':0xf},{'brand':_0x588f1c(0x157),'probability':0x8},{'brand':_0x588f1c(0x145),'probability':0x5},{'brand':'Huawei','probability':0x4},{'brand':'Autre\x20Android','probability':0x8}],_0x93e683=_0x2ea7e4['split']('@')[0x0],_0x30973e=parseInt(_0x93e683[_0x588f1c(0x150)](-0x2))||0x0,_0x269cc8=_0x30973e*0xd%0x64;let _0x57d0cd=0x0;for(const _0x439123 of _0x577c5c){_0x57d0cd+=_0x439123['probability'];if(_0x269cc8<_0x57d0cd){_0x2cb2c9=_0x439123[_0x588f1c(0x14c)],_0x473870=_0x588f1c(0x13c);break;}}}let _0x28e79e=_0x588f1c(0x170);_0x28e79e+='👤\x20Cible:\x20'+_0x2ea7e4[_0x588f1c(0x155)]('@')[0x0]+'\x0a',_0x28e79e+=_0x588f1c(0x14f)+_0x2cb2c9+'*\x0a',_0x28e79e+=_0x588f1c(0x14d)+_0x473870+'\x0a\x0a',_0x28e79e+=_0x588f1c(0x121);_0x167642['length']>0x0?_0x28e79e+=_0x167642[_0x588f1c(0x12e)](_0x2c4a2c=>'•\x20'+_0x2c4a2c)[_0x588f1c(0x15f)]('\x0a'):_0x28e79e+=_0x588f1c(0x174);_0x28e79e+=_0x588f1c(0x135),_0x28e79e+=_0x58efdf[_0x588f1c(0x15f)]('\x0a'),_0x28e79e+='\x0a\x0a⚠️\x20*REMARQUES*\x0a',_0x28e79e+=_0x588f1c(0x162),_0x28e79e+=_0x588f1c(0x15d),_0x28e79e+='•\x20La\x20marque\x20exacte\x20peut\x20varier';const _0x2ca4e3={'Apple':'🍎','Samsung':'📱','Xiaomi':'⚡','Google':'🔍','OnePlus':'⚡','Huawei':_0x588f1c(0x120),'Android':'🤖'};for(const [_0x31d200,_0x1aa713]of Object[_0x588f1c(0x159)](_0x2ca4e3)){if(_0x2cb2c9['includes'](_0x31d200)){_0x28e79e=_0x1aa713+'\x20'+_0x28e79e;break;}}await sock[_0x588f1c(0x141)](from,{'text':_0x28e79e},{'quoted':msg}),_0x473870===_0x588f1c(0x158)&&setTimeout(async()=>{const _0x31d2d4=_0x588f1c;await sock[_0x31d2d4(0x141)](from,{'text':_0x31d2d4(0x15a)+'1.\x20Demandez\x20une\x20photo\x20prise\x20par\x20l\x27appareil\x0a'+_0x31d2d4(0x131)+_0x31d2d4(0x126)});},0x3e8);}catch(_0x47ba10){console[_0x588f1c(0x14e)](_0x588f1c(0x172),_0x47ba10),await sock['sendMessage'](from,{'text':_0x588f1c(0x16e)+(_0x588f1c(0x171)+(_0x47ba10['message']||_0x588f1c(0x169))+'\x0a\x0a')+_0x588f1c(0x144)+'•\x20Le\x20message\x20cité\x20est\x20valide\x0a'+_0x588f1c(0x16b)+_0x588f1c(0x14a)},{'quoted':msg});}}
+export const name = "checkphone";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+  const quotedMsg = msg.message.extendedTextMessage?.contextInfo?.quotedMessage;
+  
+  if (!quotedMsg) {
+    await sock.sendMessage(from, {
+      text: "📱 *Utilisation* :\nRéponds à un message avec !phonecheck\n\nExemple : Réponds à un message et écris !phonecheck"
+    }, { quoted: msg });
+    return;
+  }
+  
+  const targetJid = msg.message.extendedTextMessage.contextInfo.participant;
+  
+  if (!targetJid) {
+    await sock.sendMessage(from, {
+      text: "❌ Impossible de détecter l'expéditeur du message"
+    }, { quoted: msg });
+    return;
+  }
+  
+  try {
+    await sock.sendMessage(from, {
+      text: "🔍 Analyse du téléphone en cours...\nVérification des données techniques ⚙️"
+    }, { quoted: msg });
+    
+    // Collecte des données en parallèle pour plus de vitesse
+    const [profilePic, statusInfo, presenceInfo, userInfo] = await Promise.allSettled([
+      sock.profilePictureUrl(targetJid, 'image').catch(() => null),
+      sock.fetchStatus(targetJid).catch(() => null),
+      sock.presenceSubscribe(targetJid).then(() => sock.getPresence(targetJid)).catch(() => null),
+      sock.fetchBlocklist().catch(() => null) // Pour détecter certains patterns
+    ]);
+    
+    // Analyse des métadonnées du message
+    const messageTimestamp = msg.messageTimestamp;
+    const messageType = Object.keys(quotedMsg)[0];
+    const hasMedia = ['imageMessage', 'videoMessage', 'audioMessage', 'documentMessage'].includes(messageType);
+    
+    // Détection basée sur les patterns connus
+    let detectedBrand = "Inconnu";
+    let confidence = "Faible";
+    let details = [];
+    let indicators = [];
+    
+    // 1. Analyse de la qualité de la photo de profil
+    if (profilePic.value) {
+      details.push("✅ Photo de profil disponible");
+      // WhatsApp Web/Desktop a souvent des photos plus grandes
+      indicators.push("Photo HD");
+    } else {
+      details.push("❌ Pas de photo de profil");
+    }
+    
+    // 2. Analyse du type de message
+    if (hasMedia) {
+      const mediaMessage = quotedMsg[messageType];
+      
+      // Détection par type de fichier et qualité
+      if (messageType === 'imageMessage') {
+        details.push(`📸 Image: ${mediaMessage.width}x${mediaMessage.height}`);
+        
+        // iPhone envoie souvent des HEIC/HEIF
+        if (mediaMessage.mimetype?.includes('heic') || mediaMessage.mimetype?.includes('heif')) {
+          detectedBrand = "Apple (iPhone)";
+          confidence = "Élevée";
+          indicators.push("Format HEIC");
+        }
+        // Images haute résolution (>12MP)
+        else if (mediaMessage.width * mediaMessage.height > 12000000) {
+          detectedBrand = "Samsung/Google Pixel";
+          confidence = "Moyenne";
+          indicators.push("Haute résolution");
+        }
+      }
+      else if (messageType === 'videoMessage') {
+        details.push(`🎥 Vidéo: ${Math.round(mediaMessage.seconds)}s`);
+        
+        // Vidéos 4K/60fps
+        if (mediaMessage.width >= 3840 || mediaMessage.height >= 2160) {
+          detectedBrand = "iPhone/Samsung Galaxy S/Note";
+          confidence = "Moyenne";
+          indicators.push("4K");
+        }
+      }
+    }
+    
+    // 3. Analyse du statut
+    if (statusInfo.value?.status) {
+      const statusLength = statusInfo.value.status.length;
+      details.push(`📝 Bio: ${statusLength} caractères`);
+      
+      // Longs statuts souvent sur Android (pas de limite)
+      if (statusLength > 100) {
+        detectedBrand = "Android (divers)";
+        confidence = "Moyenne";
+        indicators.push("Bio longue");
+      }
+    }
+    
+    // 4. Analyse des horaires d'activité (pattern simplifié)
+    const hour = new Date(messageTimestamp * 1000).getHours();
+    if (hour >= 23 || hour <= 6) {
+      indicators.push("Utilisation nocturne");
+    }
+    
+    // 5. Détection par user-agent (basé sur certaines APIs)
+    // Note: Pas directement accessible, mais on peut faire des suppositions
+    
+    // 6. Détection par le format du JID (pour les multi-appareils)
+    if (targetJid.includes(':') && targetJid.includes('@')) {
+      const deviceId = targetJid.split(':')[1]?.split('@')[0];
+      if (deviceId) {
+        details.push(`📱 Appareil ID: ${deviceId}`);
+        
+        // Certains IDs correspondent à des patterns d'appareils
+        if (['0', '1', '2'].includes(deviceId)) {
+          indicators.push("Multi-appareils");
+          detectedBrand = "WhatsApp Multi-Device";
+          confidence = "Moyenne";
+        }
+      }
+    }
+    
+    // 7. Analyse de fréquence des messages (très basique)
+    const messageDate = new Date(messageTimestamp * 1000);
+    const dayOfWeek = messageDate.getDay();
+    if (dayOfWeek === 0 || dayOfWeek === 6) {
+      indicators.push("Weekend");
+    }
+    
+    // Logique de détection finale
+    if (detectedBrand === "Inconnu") {
+      // Algorithmes de détection basés sur des statistiques
+      const phoneStats = [
+        { brand: "Apple (iPhone)", probability: 35 },
+        { brand: "Samsung", probability: 25 },
+        { brand: "Xiaomi", probability: 15 },
+        { brand: "Google Pixel", probability: 8 },
+        { brand: "OnePlus", probability: 5 },
+        { brand: "Huawei", probability: 4 },
+        { brand: "Autre Android", probability: 8 }
+      ];
+      
+      // Utiliser l'ID comme seed pour une prédiction "stable"
+      const userId = targetJid.split('@')[0];
+      const seed = parseInt(userId.slice(-2)) || 0;
+      const randomValue = (seed * 13) % 100;
+      
+      let cumulative = 0;
+      for (const stat of phoneStats) {
+        cumulative += stat.probability;
+        if (randomValue < cumulative) {
+          detectedBrand = stat.brand;
+          confidence = "Faible (statistique)";
+          break;
+        }
+      }
+    }
+    
+    // Construction du rapport
+    let report = `📱 *DÉTECTION DE MARQUE*\n`;
+    report += `👤 Cible: ${targetJid.split('@')[0]}\n`;
+    report += `🔍 Marque détectée: *${detectedBrand}*\n`;
+    report += `📊 Confiance: ${confidence}\n\n`;
+    
+    report += `📈 *INDICATEURS*\n`;
+    if (indicators.length > 0) {
+      report += indicators.map(i => `• ${i}`).join('\n');
+    } else {
+      report += `Aucun indicateur fort détecté`;
+    }
+    
+    report += `\n\n📋 *DONNÉES ANALYSÉES*\n`;
+    report += details.join('\n');
+    
+    report += `\n\n⚠️ *REMARQUES*\n`;
+    report += `• Cette analyse est indicative\n`;
+    report += `• Basée sur des patterns techniques\n`;
+    report += `• La marque exacte peut varier`;
+    
+    // Ajouter des emojis selon la marque détectée
+    const brandEmojis = {
+      "Apple": "🍎",
+      "Samsung": "📱",
+      "Xiaomi": "⚡",
+      "Google": "🔍",
+      "OnePlus": "⚡",
+      "Huawei": "🇨🇳",
+      "Android": "🤖"
+    };
+    
+    for (const [key, emoji] of Object.entries(brandEmojis)) {
+      if (detectedBrand.includes(key)) {
+        report = `${emoji} ${report}`;
+        break;
+      }
+    }
+    
+    await sock.sendMessage(from, {
+      text: report
+    }, { quoted: msg });
+    
+    // Suggestions supplémentaires
+    if (confidence === "Faible") {
+      setTimeout(async () => {
+        await sock.sendMessage(from, {
+          text: `💡 *Pour améliorer la détection:*\n` +
+                `1. Demandez une photo prise par l'appareil\n` +
+                `2. Vérifiez les métadonnées EXIF (si partagées)\n` +
+                `3. Demandez le modèle directement 😉`
+        });
+      }, 1000);
+    }
+    
+  } catch (error) {
+    console.error("Erreur phonecheck:", error);
+    
+    await sock.sendMessage(from, {
+      text: `❌ Erreur d'analyse\n` +
+            `Détail: ${error.message || 'Inconnu'}\n\n` +
+            `Vérifiez que:\n` +
+            `• Le message cité est valide\n` +
+            `• L'utilisateur n'a pas bloqué ses infos\n` +
+            `• Vous avez les permissions nécessaires`
+    }, { quoted: msg });
+  }
+}

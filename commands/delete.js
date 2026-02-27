@@ -1,1 +1,21 @@
-const a46_0x4bdff4=a46_0x5d5d;function a46_0x5d5d(_0x3df131,_0x592499){_0x3df131=_0x3df131-0xc3;const _0x1aca5f=a46_0x4d58();let _0x5cd780=_0x1aca5f[_0x3df131];return _0x5cd780;}(function(_0x487d0e,_0x18417b){const _0xbaa59d=a46_0x5d5d,_0x92e8a5=_0x487d0e();while(!![]){try{const _0x1541f7=parseInt(_0xbaa59d(0xde))/0x1*(-parseInt(_0xbaa59d(0xc3))/0x2)+parseInt(_0xbaa59d(0xc5))/0x3*(parseInt(_0xbaa59d(0xd3))/0x4)+parseInt(_0xbaa59d(0xd9))/0x5*(parseInt(_0xbaa59d(0xd2))/0x6)+parseInt(_0xbaa59d(0xd7))/0x7*(-parseInt(_0xbaa59d(0xc8))/0x8)+-parseInt(_0xbaa59d(0xdd))/0x9+-parseInt(_0xbaa59d(0xd8))/0xa+parseInt(_0xbaa59d(0xdc))/0xb*(parseInt(_0xbaa59d(0xd4))/0xc);if(_0x1541f7===_0x18417b)break;else _0x92e8a5['push'](_0x92e8a5['shift']());}catch(_0x184547){_0x92e8a5['push'](_0x92e8a5['shift']());}}}(a46_0x4d58,0x6dce1));const a46_0xe3e909=(function(){let _0x3c85ea=!![];return function(_0x587333,_0x2866b3){const _0x1f2669=_0x3c85ea?function(){const _0x52c615=a46_0x5d5d;if(_0x2866b3){const _0x236305=_0x2866b3[_0x52c615(0xd6)](_0x587333,arguments);return _0x2866b3=null,_0x236305;}}:function(){};return _0x3c85ea=![],_0x1f2669;};}()),a46_0x5cd780=a46_0xe3e909(this,function(){const _0x6c45b3=a46_0x5d5d;return a46_0x5cd780[_0x6c45b3(0xc9)]()[_0x6c45b3(0xd0)](_0x6c45b3(0xcc))[_0x6c45b3(0xc9)]()['constructor'](a46_0x5cd780)[_0x6c45b3(0xd0)](_0x6c45b3(0xcc));});a46_0x5cd780();function a46_0x4d58(){const _0x3a206a=['stanzaId','apply','7BbZbiI','7161200EyJMPm','5Trknfa','participant','sendMessage','31115282LdNMCL','6846264eIUsOl','3Bsumfl','492424bZdqNE','delete','6MyuwVO','>\x20Knut\x20XMD\x20:\x20Réponds\x20au\x20message\x20à\x20supprimer.','contextInfo','6148192zWYesT','toString','key','error','(((.+)+)+)+$','extendedTextMessage','\x20Erreur\x20delete\x20:','message','search','remoteJid','3184842isosrv','148536ZTUkTy','12HLKVWc'];a46_0x4d58=function(){return _0x3a206a;};return a46_0x4d58();}export const name=a46_0x4bdff4(0xc4);export async function execute(sock,msg,args){const _0x95c804=a46_0x4bdff4;try{if(!msg[_0x95c804(0xcf)]?.[_0x95c804(0xcd)]?.['contextInfo']?.[_0x95c804(0xd5)])return await sock[_0x95c804(0xdb)](msg[_0x95c804(0xca)][_0x95c804(0xd1)],{'text':_0x95c804(0xc6)},{'quoted':msg});await sock[_0x95c804(0xdb)](msg[_0x95c804(0xca)][_0x95c804(0xd1)],{'delete':{'remoteJid':msg[_0x95c804(0xca)][_0x95c804(0xd1)],'fromMe':![],'id':msg[_0x95c804(0xcf)][_0x95c804(0xcd)][_0x95c804(0xc7)][_0x95c804(0xd5)],'participant':msg[_0x95c804(0xcf)][_0x95c804(0xcd)][_0x95c804(0xc7)][_0x95c804(0xda)]}});}catch(_0x3f966a){console[_0x95c804(0xcb)](_0x95c804(0xce),_0x3f966a);}}
+export const name = "delete";
+
+export async function execute(sock, msg, args) {
+  try {
+    if (!msg.message?.extendedTextMessage?.contextInfo?.stanzaId) {
+      return await sock.sendMessage(msg.key.remoteJid, { text: "> Knut XMD : Réponds au message à supprimer." }, { quoted: msg });
+    }
+
+    await sock.sendMessage(msg.key.remoteJid, {
+      delete: {
+        remoteJid: msg.key.remoteJid,
+        fromMe: false,
+        id: msg.message.extendedTextMessage.contextInfo.stanzaId,
+        participant: msg.message.extendedTextMessage.contextInfo.participant
+      }
+    });
+
+  } catch (err) {
+    console.error(" Erreur delete :", err);
+  }
+}

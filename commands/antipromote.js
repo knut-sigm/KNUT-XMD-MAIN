@@ -1,1 +1,120 @@
-const a17_0xdfc24f=a17_0x449f;(function(_0x1fa552,_0x4c54d9){const _0x523b5c=a17_0x449f,_0x5903bb=_0x1fa552();while(!![]){try{const _0x558ea1=-parseInt(_0x523b5c(0x7e))/0x1*(-parseInt(_0x523b5c(0x9c))/0x2)+parseInt(_0x523b5c(0x89))/0x3*(parseInt(_0x523b5c(0x87))/0x4)+-parseInt(_0x523b5c(0x88))/0x5*(parseInt(_0x523b5c(0x78))/0x6)+parseInt(_0x523b5c(0x92))/0x7+-parseInt(_0x523b5c(0x8c))/0x8+-parseInt(_0x523b5c(0xa7))/0x9*(-parseInt(_0x523b5c(0x8f))/0xa)+parseInt(_0x523b5c(0xb0))/0xb*(-parseInt(_0x523b5c(0xb1))/0xc);if(_0x558ea1===_0x4c54d9)break;else _0x5903bb['push'](_0x5903bb['shift']());}catch(_0x6fc441){_0x5903bb['push'](_0x5903bb['shift']());}}}(a17_0x17ef,0x202c0));const a17_0xb49ab8=(function(){let _0x5a5745=!![];return function(_0x5b02dc,_0x37f0bd){const _0x4c05a8=_0x5a5745?function(){const _0x5edf27=a17_0x449f;if(_0x37f0bd){const _0x1821cb=_0x37f0bd[_0x5edf27(0xac)](_0x5b02dc,arguments);return _0x37f0bd=null,_0x1821cb;}}:function(){};return _0x5a5745=![],_0x4c05a8;};}()),a17_0xd30284=a17_0xb49ab8(this,function(){const _0x1bd0ba=a17_0x449f;return a17_0xd30284[_0x1bd0ba(0xae)]()[_0x1bd0ba(0x7c)](_0x1bd0ba(0x98))['toString']()['constructor'](a17_0xd30284)['search'](_0x1bd0ba(0x98));});a17_0xd30284();function a17_0x17ef(){const _0x1c5d76=['1098HxeTiJ','>\x20Knut\x20XMD\x20:\x20Cette\x20commande\x20est\x20réservée\x20aux\x20groupes.','•\x20antipromote\x20off\x20\x20\x20→\x20🛑\x20Désactiver\x0a','le\x20bot\x20rétrograde\x20automatiquement\x20les\x20deux\x20personnes.\x0a\x0a','toute\x20tentative\x20de\x20promotion\x20non-autorisée.\x0a','apply','Action\x20:\x20Rétrogradation\x20du\x20promu\x20et\x20du\x20promoteur','toString','owners','11CGQkls','2297964sJsjVS','@g.us','includes','sont\x20tous\x20les\x20deux\x20rétrogradés.\x0a\x0a','./group.json','off','•\x20off\x20→\x20🛑\x20Désactiver\x20la\x20protection\x0a','🔥\x20Détecte\x20et\x20rétrograde\x20automatiquement\x0a','264DYmeiM','participant','resolve','Erreur\x20antipromote1:','search','⚠️\x20*Nécessite\x20que\x20le\x20bot\x20soit\x20admin*\x0a\x0a','63885XcJAwQ','>\x20Knut\x20XMD:\x20Anti-Promote\x20','endsWith','📌\x20*Description\x20:*\x0a','replace','•\x20status\x20→\x20📊\x20Voir\x20le\x20statut\x20actuel','Protège\x20le\x20groupe\x20contre\x20les\x20promotions\x20non-autorisées.\x0a','•\x20antipromote\x20on\x20\x20\x20\x20→\x20✅\x20Activer\x0a','antipromote','50296tqMWZQ','5430myNZPo','33bnlcqc','>\x20Knut\x20XMD:\x20Aide\x20Anti-Promote\x201\x0a\x0a','État\x20:\x20','593688HBCtOJ','antipromote1','activé','10660mfYwYa','key','\x20dans\x20ce\x20groupe.','343924bHHKPJ','🛑\x20désactivé','Activé','split','État\x20actuel\x20:\x20','Quand\x20quelqu\x27un\x20promeut\x20un\x20membre\x20sans\x20permission,\x0a','(((.+)+)+)+$','help','•\x20antipromote\x20help\x20\x20→\x20ℹ️\x20Aide','status','4fWpPUo','📋\x20*Commandes\x20:*\x0a','toLowerCase','Groupe\x20:\x20','Utilisation\x20:\x0a','>\x20Knut\x20XMD\x20:\x20⚠️\x20L\x27anti-promote\x20est\x20déjà\x20🛑\x20désactivé.','>\x20Knut\x20XMD\x20:\x20Une\x20erreur\x20est\x20survenue.','sendMessage','✅\x20activé','map','désactivé'];a17_0x17ef=function(){return _0x1c5d76;};return a17_0x17ef();}import a17_0x384db0 from'fs';function a17_0x449f(_0x48334f,_0x475816){_0x48334f=_0x48334f-0x75;const _0x297970=a17_0x17ef();let _0xd30284=_0x297970[_0x48334f];return _0xd30284;}import a17_0x1181e8 from'path';import{getGroupProtections,setGroupProtection}from'../groupManager.js';import{loadSudo}from'../index.js';const GROUP_FILE=a17_0x1181e8[a17_0xdfc24f(0x7a)](a17_0xdfc24f(0xb5));export const name=a17_0xdfc24f(0x86);export async function execute(sock,msg,args,from){const _0x376ad3=a17_0xdfc24f;try{if(!from[_0x376ad3(0x80)](_0x376ad3(0xb2))){await sock[_0x376ad3(0xa3)](from,{'text':_0x376ad3(0xa8)},{'quoted':msg});return;}const _0x4be124=msg[_0x376ad3(0x90)][_0x376ad3(0x79)]||from,_0x5d3ab8=_0x4be124['split']('@')[0x0]['replace'](/[^0-9]/g,''),_0x4a790a=(global[_0x376ad3(0xaf)]||[])['map'](_0x5a07c0=>_0x5a07c0[_0x376ad3(0x82)](/[^0-9]/g,'')),_0x4e0b31=loadSudo()[_0x376ad3(0xa5)](_0x2773eb=>_0x2773eb[_0x376ad3(0x82)](/[^0-9]/g,'')),_0x566cf0=_0x4a790a[_0x376ad3(0xb3)](_0x5d3ab8),_0xbd14b3=_0x4e0b31['includes'](_0x5d3ab8);if(!_0x566cf0&&!_0xbd14b3){await sock['sendMessage'](from,{'text':'>\x20Knut\x20XMD\x20:\x20Accès\x20refusé.\x20Owner\x20ou\x20sudo\x20requis.'},{'quoted':msg});return;}const _0x292089=getGroupProtections(from),_0x1e9ad6=_0x292089[_0x376ad3(0x8d)]||![],_0x2905b6=args[0x0]?.[_0x376ad3(0x9e)]();if(!_0x2905b6||!['on',_0x376ad3(0x75),_0x376ad3(0x9b),_0x376ad3(0x99)][_0x376ad3(0xb3)](_0x2905b6)){const _0x222508=_0x1e9ad6?_0x376ad3(0xa4):_0x376ad3(0x93);await sock[_0x376ad3(0xa3)](from,{'text':'>\x20Knut\x20XMD:\x20Anti-Promote\x201\x0a\x0a'+(_0x376ad3(0x96)+_0x222508+'\x0a\x0a')+_0x376ad3(0x77)+_0x376ad3(0xab)+'La\x20personne\x20promue\x20ET\x20le\x20promoteur\x0a'+_0x376ad3(0xb4)+'⚠️\x20*Nécessite\x20que\x20le\x20bot\x20soit\x20admin*\x0a\x0a'+_0x376ad3(0xa0)+_0x376ad3(0x85)+_0x376ad3(0xa9)+'•\x20antipromote\x20status\x20→\x20📊\x20Statut\x0a'+_0x376ad3(0x9a)},{'quoted':msg});return;}if(_0x2905b6===_0x376ad3(0x99)){await sock[_0x376ad3(0xa3)](from,{'text':_0x376ad3(0x8a)+_0x376ad3(0x81)+_0x376ad3(0x84)+_0x376ad3(0x97)+_0x376ad3(0xaa)+_0x376ad3(0x7d)+_0x376ad3(0x9d)+'•\x20on\x20\x20→\x20✅\x20Activer\x20la\x20protection\x0a'+_0x376ad3(0x76)+_0x376ad3(0x83)},{'quoted':msg});return;}if(_0x2905b6==='status'){const _0x564e5a=_0x1e9ad6?'✅':'🛑',_0xb95e90=_0x1e9ad6?_0x376ad3(0x94):'Désactivé';await sock[_0x376ad3(0xa3)](from,{'text':'>\x20Knut\x20XMD:\x20Anti-Promote\x20\x20-\x20Statut\x0a\x0a'+(_0x376ad3(0x8b)+_0x564e5a+'\x20'+_0xb95e90+'\x0a')+(_0x376ad3(0x9f)+from[_0x376ad3(0x95)]('@')[0x0]+'\x0a')+_0x376ad3(0xad)},{'quoted':msg});return;}const _0x8147a0=_0x2905b6==='on';if(_0x2905b6==='on'&&_0x1e9ad6){await sock[_0x376ad3(0xa3)](from,{'text':'>\x20Knut\x20XMD\x20:\x20⚠️\x20L\x27anti-promote\x20est\x20déjà\x20✅\x20activé.'},{'quoted':msg});return;}if(_0x2905b6===_0x376ad3(0x75)&&!_0x1e9ad6){await sock[_0x376ad3(0xa3)](from,{'text':_0x376ad3(0xa1)},{'quoted':msg});return;}setGroupProtection(from,'antipromote',_0x8147a0);const _0x5db2e1=_0x8147a0?'✅':'🛑';await sock['sendMessage'](from,{'text':_0x376ad3(0x7f)+_0x5db2e1+'\x20'+(_0x8147a0?_0x376ad3(0x8e):_0x376ad3(0xa6))+_0x376ad3(0x91)},{'quoted':msg});}catch(_0x3d8a41){console['error'](_0x376ad3(0x7b),_0x3d8a41),await sock[_0x376ad3(0xa3)](from,{'text':_0x376ad3(0xa2)},{'quoted':msg});}}
+import fs from "fs";
+import path from "path";
+import { getGroupProtections, setGroupProtection } from "../groupManager.js";
+import { loadSudo } from "../index.js";
+
+const GROUP_FILE = path.resolve("./group.json");
+
+export const name = "antipromote";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === GROUPE UNIQUEMENT ===
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Cette commande est réservée aux groupes." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER L'EXPÉDITEUR ===
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // === VÉRIFICATION DES DROITS (OWNER ET SUDO UNIQUEMENT) ===
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+
+    if (!isOwner && !isSudo) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Accès refusé. Owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER LES PROTECTIONS DU GROUPE ===
+    const protections = getGroupProtections(from);
+    const currentStatus = protections.antipromote1 || false;
+
+    // === ARGUMENT ===
+    const arg = args[0]?.toLowerCase();
+
+    if (!arg || !["on", "off", "status", "help"].includes(arg)) {
+      const status = currentStatus ? "✅ activé" : "🛑 désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Anti-Promote 1\n\n` +
+              `État actuel : ${status}\n\n` +
+              `🔥 Détecte et rétrograde automatiquement\n` +
+              `toute tentative de promotion non-autorisée.\n` +
+              `La personne promue ET le promoteur\n` +
+              `sont tous les deux rétrogradés.\n\n` +
+              `⚠️ *Nécessite que le bot soit admin*\n\n` +
+              `Utilisation :\n` +
+              `• antipromote on    → ✅ Activer\n` +
+              `• antipromote off   → 🛑 Désactiver\n` +
+              `• antipromote status → 📊 Statut\n` +
+              `• antipromote help  → ℹ️ Aide`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === HELP ===
+    if (arg === "help") {
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Aide Anti-Promote 1\n\n` +
+              `📌 *Description :*\n` +
+              `Protège le groupe contre les promotions non-autorisées.\n` +
+              `Quand quelqu'un promeut un membre sans permission,\n` +
+              `le bot rétrograde automatiquement les deux personnes.\n\n` +
+              `⚠️ *Nécessite que le bot soit admin*\n\n` +
+              `📋 *Commandes :*\n` +
+              `• on  → ✅ Activer la protection\n` +
+              `• off → 🛑 Désactiver la protection\n` +
+              `• status → 📊 Voir le statut actuel`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === STATUS ===
+    if (arg === "status") {
+      const statusEmoji = currentStatus ? "✅" : "🛑";
+      const statusText = currentStatus ? "Activé" : "Désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Anti-Promote  - Statut\n\n` +
+              `État : ${statusEmoji} ${statusText}\n` +
+              `Groupe : ${from.split('@')[0]}\n` +
+              `Action : Rétrogradation du promu et du promoteur`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === ON / OFF ===
+    const newState = arg === "on";
+    
+    if (arg === "on" && currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'anti-promote est déjà ✅ activé." 
+      }, { quoted: msg });
+      return;
+    }
+    
+    if (arg === "off" && !currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'anti-promote est déjà 🛑 désactivé." 
+      }, { quoted: msg });
+      return;
+    }
+
+    setGroupProtection(from, "antipromote", newState);
+    const statusEmoji = newState ? "✅" : "🛑";
+    
+    await sock.sendMessage(from, { 
+      text: `> Knut XMD: Anti-Promote ${statusEmoji} ${newState ? "activé" : "désactivé"} dans ce groupe.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur antipromote1:", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Une erreur est survenue." }, { quoted: msg });
+  }
+}

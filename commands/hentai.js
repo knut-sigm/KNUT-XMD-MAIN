@@ -1,1 +1,114 @@
-const a62_0x445428=a62_0x4a70;(function(_0x1b3d01,_0x165af9){const _0x59172e=a62_0x4a70,_0x30e631=_0x1b3d01();while(!![]){try{const _0x113cc6=-parseInt(_0x59172e(0x182))/0x1*(parseInt(_0x59172e(0x160))/0x2)+-parseInt(_0x59172e(0x172))/0x3+parseInt(_0x59172e(0x18b))/0x4*(parseInt(_0x59172e(0x163))/0x5)+parseInt(_0x59172e(0x16c))/0x6+-parseInt(_0x59172e(0x15f))/0x7+-parseInt(_0x59172e(0x181))/0x8*(parseInt(_0x59172e(0x18e))/0x9)+parseInt(_0x59172e(0x164))/0xa;if(_0x113cc6===_0x165af9)break;else _0x30e631['push'](_0x30e631['shift']());}catch(_0x2ee68d){_0x30e631['push'](_0x30e631['shift']());}}}(a62_0x1653,0x3f336));const a62_0x407876=(function(){let _0x3806be=!![];return function(_0x587878,_0x360d85){const _0x5b7934=_0x3806be?function(){const _0x4e80cc=a62_0x4a70;if(_0x360d85){const _0x26f8d4=_0x360d85[_0x4e80cc(0x18c)](_0x587878,arguments);return _0x360d85=null,_0x26f8d4;}}:function(){};return _0x3806be=![],_0x5b7934;};}()),a62_0x4c22df=a62_0x407876(this,function(){const _0x479f80=a62_0x4a70;return a62_0x4c22df[_0x479f80(0x168)]()[_0x479f80(0x167)](_0x479f80(0x169))[_0x479f80(0x168)]()['constructor'](a62_0x4c22df)[_0x479f80(0x167)](_0x479f80(0x169));});function a62_0x1653(){const _0x1349ca=['2348hjgewY','apply','code','27zbDAQC','video/mp4','>\x20Knut\x20XMD\x20❌\x20Impossible\x20de\x20charger\x20le\x20contenu.\x0a\x0a','https://api.princetechn.com/api/anime/ass?apikey=prince','ECONNABORTED','https://api.princetechn.com/api/nsfw/naija?apikey=prince','Réponse\x20API\x20image\x20invalide','data','Réponse\x20API\x20naija\x20invalide','key','endsWith','•\x20Pas\x20de\x20restriction\x20sur\x20cette\x20API','3273382MZnhMd','16134ZorGIv','success',']\x20Erreur\x20:','130GxzixE','11781530EcTePT','remoteJid','>\x20Knut\x20XMD\x20⚠️\x20Type\x20invalide.\x0a\x0aTypes\x20valides\x20:\x20ass,\x20milf,\x20hneko,\x20hwaifu,\x20naija,\x20celeb\x0aExemple\x20:\x20!hentai\x20ass','search','toString','(((.+)+)+)+$','Envoie\x20du\x20contenu\x20NSFW\x20aléatoire\x20(anime\x20&\x20real)','floor','277218VcVPTX','https://api.princetechn.com/api/anime/hwaifu?apikey=prince','Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/120.0.0.0\x20Safari/537.36','Vérifie\x20que\x20:\x0a','sendMessage','includes','95199rxoXYG','>\x20Knut\x20XMD\x20🔥\x20CELEB\x20EXPOSED\x0a\x0aTitre\x20:\x20(\x20{data.data.title\x20||\x20\x22Sans\x20titre\x22}\x0aSource\x20:\x20){APIS.celeb}','!hentai\x20[type]\x0aTypes\x20disponibles\x20:\x20ass,\x20milf,\x20hneko,\x20hwaifu,\x20naija,\x20celeb\x0a(sans\x20argument\x20=\x20aléatoire\x20anime)','hwaifu','downloadUrl','toLowerCase','naija','message','hneko','>\x20Knut\x20XMD\x20🍑\x20NAIJA\x20LEAK\x0a\x0a','\x0a\x0aImage\x20aléatoire\x20via\x20PrinceTech\x20API','keys','https://api.princetechn.com/api/anime/milf?apikey=prince','timeout','milf','1176144BgiBoy','5GUkPQF','•\x20L\x27API\x20n\x27est\x20pas\x20down\x0a','toUpperCase','celeb','random','error','https://apis.davidcyril.name.ng/celeb','hentai','result'];a62_0x1653=function(){return _0x1349ca;};return a62_0x1653();}a62_0x4c22df();import a62_0x331fca from'axios';export const name=a62_0x445428(0x189);export const aliases=['h','ass',a62_0x445428(0x180),a62_0x445428(0x17a),'hwaifu',a62_0x445428(0x178),a62_0x445428(0x185)];export const description=a62_0x445428(0x16a);export const usage=a62_0x445428(0x174);const APIS={'ass':a62_0x445428(0x191),'hwaifu':a62_0x445428(0x16d),'hneko':'https://api.princetechn.com/api/anime/hneko?apikey=prince','milf':a62_0x445428(0x17e),'naija':a62_0x445428(0x193),'celeb':a62_0x445428(0x188)},UA=a62_0x445428(0x16e);function a62_0x4a70(_0x28b468,_0x5640f7){_0x28b468=_0x28b468-0x15f;const _0x12d93b=a62_0x1653();let _0x4c22df=_0x12d93b[_0x28b468];return _0x4c22df;}export async function execute(sock,msg,args){const _0x4ae1b2=a62_0x445428,from=msg[_0x4ae1b2(0x197)][_0x4ae1b2(0x165)];let _0x2a3b36=args[0x0]?args[0x0]['toLowerCase']():_0x4ae1b2(0x186);const _0x55d6bb=Object[_0x4ae1b2(0x17d)](APIS),_0x5f4b28=['ass',_0x4ae1b2(0x175),_0x4ae1b2(0x17a),_0x4ae1b2(0x180)];if(_0x2a3b36==='random'||!_0x55d6bb['includes'](_0x2a3b36)){if(!args[0x0])_0x2a3b36=_0x5f4b28[Math[_0x4ae1b2(0x16b)](Math[_0x4ae1b2(0x186)]()*_0x5f4b28['length'])];else{await sock['sendMessage'](from,{'text':_0x4ae1b2(0x166)});return;}}try{await sock[_0x4ae1b2(0x170)](from,{'react':{'text':_0x2a3b36===_0x4ae1b2(0x185)?'🔥':'🔞','key':msg[_0x4ae1b2(0x197)]}});const _0x37f319=APIS[_0x2a3b36],{data:_0x2d2b13}=await a62_0x331fca['get'](_0x37f319,{'headers':{'User-Agent':UA},'timeout':0x3a98});if(_0x2a3b36===_0x4ae1b2(0x185)){if(!_0x2d2b13[_0x4ae1b2(0x161)]||!_0x2d2b13[_0x4ae1b2(0x195)]?.[_0x4ae1b2(0x176)])throw new Error('Réponse\x20API\x20celeb\x20invalide');await sock['sendMessage'](from,{'video':{'url':_0x2d2b13[_0x4ae1b2(0x195)][_0x4ae1b2(0x176)]},'caption':_0x4ae1b2(0x173),'mimetype':_0x4ae1b2(0x18f),'gifPlayback':![]},{'quoted':msg});return;}if(_0x2a3b36===_0x4ae1b2(0x178)){if(!_0x2d2b13['success']||!_0x2d2b13[_0x4ae1b2(0x18a)])throw new Error(_0x4ae1b2(0x196));const _0x1ce62f=_0x2d2b13['result'];_0x1ce62f[_0x4ae1b2(0x177)]()[_0x4ae1b2(0x198)]('.mp4')?await sock[_0x4ae1b2(0x170)](from,{'video':{'url':_0x1ce62f},'caption':_0x4ae1b2(0x17b)+_0x1ce62f,'mimetype':_0x4ae1b2(0x18f),'gifPlayback':![]},{'quoted':msg}):await sock[_0x4ae1b2(0x170)](from,{'image':{'url':_0x1ce62f},'caption':_0x4ae1b2(0x17b)+_0x1ce62f},{'quoted':msg});return;}if(!_0x2d2b13['success']||!_0x2d2b13[_0x4ae1b2(0x18a)])throw new Error(_0x4ae1b2(0x194));await sock['sendMessage'](from,{'image':{'url':_0x2d2b13[_0x4ae1b2(0x18a)]},'caption':'>\x20Knut\x20XMD\x20🔞\x20'+_0x2a3b36[_0x4ae1b2(0x184)]()+_0x4ae1b2(0x17c)},{'quoted':msg});}catch(_0x474c2d){console[_0x4ae1b2(0x187)]('[HENTAI\x20-\x20'+_0x2a3b36[_0x4ae1b2(0x184)]()+_0x4ae1b2(0x162),_0x474c2d[_0x4ae1b2(0x179)]||_0x474c2d);let _0x4dd436=_0x4ae1b2(0x190)+_0x4ae1b2(0x16f)+_0x4ae1b2(0x183)+'•\x20Ta\x20connexion\x20est\x20stable\x0a'+_0x4ae1b2(0x199);(_0x474c2d[_0x4ae1b2(0x18d)]===_0x4ae1b2(0x192)||_0x474c2d[_0x4ae1b2(0x179)]?.[_0x4ae1b2(0x171)](_0x4ae1b2(0x17f)))&&(_0x4dd436+='\x0a•\x20Délai\x20dépassé\x20(API\x20lente)'),await sock[_0x4ae1b2(0x170)](from,{'text':_0x4dd436});}}
+import axios from 'axios';
+
+export const name = "hentai";
+export const aliases = ["h", "ass", "milf", "hneko", "hwaifu", "naija", "celeb"];
+export const description = "Envoie du contenu NSFW aléatoire (anime & real)";
+export const usage = "!hentai [type]\nTypes disponibles : ass, milf, hneko, hwaifu, naija, celeb\n(sans argument = aléatoire anime)";
+
+const APIS = {
+  ass:     'https://api.princetechn.com/api/anime/ass?apikey=prince',
+  hwaifu:  'https://api.princetechn.com/api/anime/hwaifu?apikey=prince',
+  hneko:   'https://api.princetechn.com/api/anime/hneko?apikey=prince',
+  milf:    'https://api.princetechn.com/api/anime/milf?apikey=prince',
+  naija:   'https://api.princetechn.com/api/nsfw/naija?apikey=prince',
+  celeb:   'https://apis.davidcyril.name.ng/celeb'
+};
+
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  let type = args[0] ? args[0].toLowerCase() : "random";
+  const validTypes = Object.keys(APIS);
+  const animeTypes = ["ass", "hwaifu", "hneko", "milf"];
+
+  // Si aucun type ou random → anime aléatoire
+  if (type === "random" || !validTypes.includes(type)) {
+    if (!args[0]) {
+      type = animeTypes[Math.floor(Math.random() * animeTypes.length)];
+    } else {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD ⚠️ Type invalide.\n\nTypes valides : ass, milf, hneko, hwaifu, naija, celeb\nExemple : !hentai ass" 
+      });
+      return;
+    }
+  }
+
+  try {
+    await sock.sendMessage(from, { 
+      react: { text: type === "celeb" ? "🔥" : "🔞", key: msg.key } 
+    });
+
+    const apiUrl = APIS[type];
+    const { data } = await axios.get(apiUrl, { 
+      headers: { 'User-Agent': UA },
+      timeout: 15000 
+    });
+
+    // ─── CELEB (vidéo) ───────────────────────────────────────────────
+    if (type === "celeb") {
+      if (!data.success || !data.data?.downloadUrl) {
+        throw new Error("Réponse API celeb invalide");
+      }
+
+      await sock.sendMessage(from, { 
+        video: { url: data.data.downloadUrl },
+        caption: `> Knut XMD 🔥 CELEB EXPOSED\n\nTitre : \( {data.data.title || "Sans titre"}\nSource : \){APIS.celeb}`,
+        mimetype: "video/mp4",
+        gifPlayback: false
+      }, { quoted: msg });
+
+      return;
+    }
+
+    // ─── NAIJA (image ou vidéo) ─────────────────────────────────────
+    if (type === "naija") {
+      if (!data.success || !data.result) {
+        throw new Error("Réponse API naija invalide");
+      }
+
+      const url = data.result;
+
+      if (url.toLowerCase().endsWith('.mp4')) {
+        await sock.sendMessage(from, { 
+          video: { url },
+          caption: `> Knut XMD 🍑 NAIJA LEAK\n\n${url}`,
+          mimetype: "video/mp4",
+          gifPlayback: false
+        }, { quoted: msg });
+      } else {
+        await sock.sendMessage(from, { 
+          image: { url },
+          caption: `> Knut XMD 🍑 NAIJA LEAK\n\n${url}`
+        }, { quoted: msg });
+      }
+      return;
+    }
+
+    // ─── Images anime (ass, milf, hneko, hwaifu) ─────────────────────
+    if (!data.success || !data.result) {
+      throw new Error("Réponse API image invalide");
+    }
+
+    await sock.sendMessage(from, { 
+      image: { url: data.result },
+      caption: `> Knut XMD 🔞 ${type.toUpperCase()}\n\nImage aléatoire via PrinceTech API`
+    }, { quoted: msg });
+
+  } catch (e) {
+    console.error(`[HENTAI - ${type.toUpperCase()}] Erreur :`, e.message || e);
+
+    let errorMsg = "> Knut XMD ❌ Impossible de charger le contenu.\n\n" +
+                   "Vérifie que :\n" +
+                   "• L'API n'est pas down\n" +
+                   "• Ta connexion est stable\n" +
+                   "• Pas de restriction sur cette API";
+
+    if (e.code === "ECONNABORTED" || e.message?.includes("timeout")) {
+      errorMsg += "\n• Délai dépassé (API lente)";
+    }
+
+    await sock.sendMessage(from, { text: errorMsg });
+  }
+}

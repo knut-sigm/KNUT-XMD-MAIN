@@ -1,1 +1,190 @@
-const a13_0x52d34a=a13_0x361f;function a13_0x361f(_0x1660b4,_0x58568f){_0x1660b4=_0x1660b4-0xe7;const _0x24b2e4=a13_0x52fd();let _0x34146c=_0x24b2e4[_0x1660b4];return _0x34146c;}(function(_0x478960,_0x676e80){const _0x2fcc01=a13_0x361f,_0x44e83b=_0x478960();while(!![]){try{const _0x1b472c=parseInt(_0x2fcc01(0x12f))/0x1+parseInt(_0x2fcc01(0x133))/0x2*(-parseInt(_0x2fcc01(0x145))/0x3)+-parseInt(_0x2fcc01(0x118))/0x4+parseInt(_0x2fcc01(0x134))/0x5+parseInt(_0x2fcc01(0x10c))/0x6*(-parseInt(_0x2fcc01(0xf5))/0x7)+-parseInt(_0x2fcc01(0x10e))/0x8*(-parseInt(_0x2fcc01(0x104))/0x9)+parseInt(_0x2fcc01(0xf4))/0xa;if(_0x1b472c===_0x676e80)break;else _0x44e83b['push'](_0x44e83b['shift']());}catch(_0x43baf6){_0x44e83b['push'](_0x44e83b['shift']());}}}(a13_0x52fd,0xc4e23));const a13_0x10cdd6=(function(){let _0x2773c4=!![];return function(_0x1c7415,_0x12bbd7){const _0x504cb9=_0x2773c4?function(){const _0x10222e=a13_0x361f;if(_0x12bbd7){const _0x13d6d2=_0x12bbd7[_0x10222e(0xf1)](_0x1c7415,arguments);return _0x12bbd7=null,_0x13d6d2;}}:function(){};return _0x2773c4=![],_0x504cb9;};}()),a13_0x34146c=a13_0x10cdd6(this,function(){const _0x97611d=a13_0x361f;return a13_0x34146c['toString']()[_0x97611d(0x112)](_0x97611d(0x12a))[_0x97611d(0x127)]()[_0x97611d(0xfd)](a13_0x34146c)[_0x97611d(0x112)](_0x97611d(0x12a));});a13_0x34146c();export const name=a13_0x52d34a(0xfa);function a13_0x52fd(){const _0x2887a6=['Actif','\x20*État\x20:*\x20','┃\x20!antidelete\x20status\x20→\x20Voir\x20ce\x20menu\x0a','activé','antidelete','[ANTIDELETE]\x20','substring','constructor','>\x20Knut\x20XMD\x20:\x20📭\x20Aucun\x20message\x20stocké\x20pour\x20le\x20moment.','rotationEnabled','content','2-digit','Active\x20ou\x20désactive\x20le\x20système\x20anti-suppression','Non','18UTFRMb','┃\x20📊\x20*Taux\x20remplissage\x20:*\x20','┃\x20📈\x20*Messages\x20total\x20:*\x20','@g.us','clearDB','┃\x20*Utilisation\x20:*\x0a','key','>\x20Knut\x20XMD\x20:\x20❌\x20Commande\x20inconnue.\x20Utilisez\x20`!antidelete`\x20pour\x20voir\x20l\x27aide.','6SOivsQ','DÉSACTIVÉ','639656iDwvdE','green','┃\x20🖼️\x20*Médias\x20:*\x20','┃\x20\x20\x20\x20💬\x20','search','maxMessages','désactivé','┃\x20\x20\x20\x20├─\x20*Groupes\x20:*\x20','Activé','┃\x20🔁\x20*Rotations\x20:*\x20','3684308iQItir','[ANTIDELETE]\x20Base\x20vidée\x20par\x20','sender','\x20avec\x20succès\x20!','┃\x20\x20\x20\x20└─\x20*IB\x20:*\x20','👤\x20IB','ACTIVÉ','>\x20Knut\x20XMD\x20:\x20⚠️\x20L\x27anti-delete\x20est\x20déjà\x20','...','length','privateMessages','┃\x20📊\x20*Messages\x20:*\x20','>\x20Knut\x20XMD\x20:\x20⚠️\x20Êtes-vous\x20sûr\x20de\x20vouloir\x20vider\x20la\x20base\x20anti-delete\x20?\x0aFaites\x20`!antidelete\x20clear\x20--force`\x20pour\x20confirmer.','[ANTIDELETE]\x20Erreur\x20:','groupMessages','toString','Désactivé','┃\x20\x20\x20\x20🕐\x20','(((.+)+)+)+$','last','viewLastMessages','╭═══❰\x20*STATUT\x20ANTI-DELETE*\x20❱═══╮\x0a','┃\x20!antidelete\x20on\x20\x20→\x20Activer\x0a','707365rNnEJV','isEnabled','yellow','>\x20Knut\x20XMD\x20:\x20✅\x20Base\x20anti-delete\x20vidée\x20avec\x20succès\x20!','1608680TbwIiO','5397265uPjtMX','┃\x20!antidelete\x20stats\x20→\x20Statistiques\x20détaillées\x0a','totalRotations','stats','┃\x20!antidelete\x20last\x20→\x20Voir\x20les\x205\x20derniers\x20messages\x0a','antiDelete','fr-FR','participant','┃\x20📦\x20*Capacité\x20max\x20:*\x20','Inactif','off','╰═══════════════════╯','sendMessage','log','endsWith','>\x20Knut\x20XMD\x20:\x20❌\x20Erreur\x20lors\x20de\x20l\x27exécution\x20de\x20la\x20commande.','┃\x20!antidelete\x20off\x20→\x20Désactiver\x0a','6oWHyxu','forEach','chatId','┃\x20\x20\x20\x20👤\x20','totalMessages','protectionSystem','\x20*Statut\x20:*\x20','>\x20Knut\x20XMD\x20:\x20⚠️\x20Utilisation\x20:\x20!antidelete\x20last\x20[nombre\x20(1-20)]','--force','status','toLowerCase','clear','remoteJid','totalMedia','!antidelete\x20[on/off/status]','apply','\x20par\x20','timestamp','21308770gzFKnI','5189919tDmbcf'];a13_0x52fd=function(){return _0x2887a6;};return a13_0x52fd();}export const description=a13_0x52d34a(0x102);export const usage=a13_0x52d34a(0xf0);export async function execute(sock,msg,args){const _0x330af3=a13_0x52d34a,from=msg['key'][_0x330af3(0xee)],_0x57d1ca=msg[_0x330af3(0x10a)][_0x330af3(0x13b)]||from;try{if(!global[_0x330af3(0xe7)]?.[_0x330af3(0x139)]){await sock[_0x330af3(0x140)](from,{'text':'>\x20Knut\x20XMD\x20:\x20❌\x20Système\x20de\x20protection\x20non\x20initialisé.'});return;}const _0x367003=global[_0x330af3(0xe7)][_0x330af3(0x139)],_0x25a07c=_0x367003['getStats']()[_0x330af3(0x130)];if(!args[0x0]){const _0x5508b2=_0x367003['getStats'](),_0x3ac509=_0x25a07c?'✅':'❌',_0xd37646=_0x25a07c?_0x330af3(0x11e):_0x330af3(0x10d),_0x2be4d6='╭═══❰\x20*ANTI-DELETE*\x20❱═══╮\x0a'+'┃\x0a'+('┃\x20'+_0x3ac509+_0x330af3(0xe8)+_0xd37646+'\x0a')+('┃\x20📊\x20*Messages\x20stockés\x20:*\x20'+_0x5508b2['totalMessages']+'/'+_0x5508b2[_0x330af3(0x113)]+'\x0a')+(_0x330af3(0x115)+(_0x5508b2[_0x330af3(0x126)]||0x0)+'\x0a')+('┃\x20\x20\x20\x20└─\x20*IB\x20:*\x20'+(_0x5508b2[_0x330af3(0x122)]||0x0)+'\x0a')+('┃\x20🖼️\x20*Médias\x20:*\x20'+_0x5508b2['totalMedia']+'\x0a')+('┃\x20🔄\x20*Rotations\x20:*\x20'+(_0x5508b2[_0x330af3(0x136)]||0x0)+'\x0a')+'┃\x0a'+_0x330af3(0x109)+_0x330af3(0x12e)+_0x330af3(0x144)+_0x330af3(0xf8)+_0x330af3(0x135)+_0x330af3(0x138)+'╰═══════════════════╯';await sock[_0x330af3(0x140)](from,{'text':_0x2be4d6});return;}const _0x37a594=args[0x0][_0x330af3(0xec)]();if(_0x37a594==='on'||_0x37a594===_0x330af3(0x13e)){const _0x5cb42f=_0x37a594==='on';if(_0x25a07c===_0x5cb42f){await sock[_0x330af3(0x140)](from,{'text':_0x330af3(0x11f)+(_0x25a07c?_0x330af3(0xf9):_0x330af3(0x114))+'.'});return;}_0x367003['setStatus'](_0x5cb42f),await sock[_0x330af3(0x140)](from,{'text':'>\x20Knut\x20XMD\x20:\x20✅\x20Anti-delete\x20'+(_0x5cb42f?'activé':'désactivé')+_0x330af3(0x11b)}),console[_0x330af3(0x141)](chalk[_0x330af3(0x10f)](_0x330af3(0xfb)+(_0x5cb42f?_0x330af3(0x116):_0x330af3(0x128))+_0x330af3(0xf2)+_0x57d1ca));}else{if(_0x37a594===_0x330af3(0xeb)){const _0x32315e=_0x367003['getStats'](),_0x72eed4=_0x25a07c?'✅':'❌',_0x3cb8bf=_0x330af3(0x12d)+'┃\x0a'+('┃\x20'+_0x72eed4+_0x330af3(0xf7)+(_0x25a07c?_0x330af3(0xf6):_0x330af3(0x13d))+'\x0a')+(_0x330af3(0x123)+_0x32315e[_0x330af3(0x149)]+'/'+_0x32315e[_0x330af3(0x113)]+'\x0a')+(_0x330af3(0x110)+_0x32315e[_0x330af3(0xef)]+'\x0a')+('┃\x20🔄\x20*Rotation\x20:*\x20'+(_0x32315e[_0x330af3(0xff)]?'Oui':_0x330af3(0x103))+'\x0a')+('┃\x20🔁\x20*Rotations\x20faites\x20:*\x20'+(_0x32315e['totalRotations']||0x0)+'\x0a')+_0x330af3(0x13f);await sock['sendMessage'](from,{'text':_0x3cb8bf});}else{if(_0x37a594===_0x330af3(0x137)){const _0x379fae=_0x367003['getStats'](),_0xee0ea7='╭═══❰\x20*STATISTIQUES*\x20❱═══╮\x0a'+'┃\x0a'+(_0x330af3(0x106)+_0x379fae[_0x330af3(0x149)]+'\x0a')+(_0x330af3(0x115)+(_0x379fae[_0x330af3(0x126)]||0x0)+'\x0a')+(_0x330af3(0x11c)+(_0x379fae[_0x330af3(0x122)]||0x0)+'\x0a')+(_0x330af3(0x110)+_0x379fae[_0x330af3(0xef)]+'\x0a')+(_0x330af3(0x13c)+_0x379fae['maxMessages']+'\x0a')+(_0x330af3(0x105)+Math['round'](_0x379fae[_0x330af3(0x149)]/_0x379fae['maxMessages']*0x64)+'%\x0a')+(_0x330af3(0x117)+(_0x379fae[_0x330af3(0x136)]||0x0)+'\x0a')+_0x330af3(0x13f);await sock['sendMessage'](from,{'text':_0xee0ea7});}else{if(_0x37a594===_0x330af3(0x12b)){const _0x3f9da5=args[0x1]?parseInt(args[0x1]):0x5;if(isNaN(_0x3f9da5)||_0x3f9da5<0x1||_0x3f9da5>0x14){await sock[_0x330af3(0x140)](from,{'text':_0x330af3(0xe9)});return;}const _0x5ef9c6=_0x367003[_0x330af3(0x12c)](_0x3f9da5);if(!_0x5ef9c6||_0x5ef9c6[_0x330af3(0x121)]===0x0){await sock[_0x330af3(0x140)](from,{'text':_0x330af3(0xfe)});return;}let _0x1fe1e8='╭═══❰\x20*DERNIERS\x20MESSAGES*\x20❱═══╮\x0a┃\x0a';_0x5ef9c6[_0x330af3(0x146)]((msg,_0x5e2a01)=>{const _0x5dac7d=_0x330af3,_0x10ce8a=msg[_0x5dac7d(0x147)]?.[_0x5dac7d(0x142)](_0x5dac7d(0x107))?'👥\x20Groupe':_0x5dac7d(0x11d),_0x1862a7=msg[_0x5dac7d(0xf3)]?new Date(msg[_0x5dac7d(0xf3)]*0x3e8)['toLocaleString'](_0x5dac7d(0x13a),{'hour':'2-digit','minute':'2-digit','day':_0x5dac7d(0x101),'month':_0x5dac7d(0x101)}):'Date\x20inconnue';_0x1fe1e8+='┃\x20'+(_0x5e2a01+0x1)+'.\x20'+_0x10ce8a+'\x0a'+(_0x5dac7d(0x148)+(msg[_0x5dac7d(0x11a)]||'Inconnu')+'\x0a')+(_0x5dac7d(0x111)+msg['content']?.[_0x5dac7d(0xfc)](0x0,0x1e)+(msg[_0x5dac7d(0x100)]?.[_0x5dac7d(0x121)]>0x1e?_0x5dac7d(0x120):'')+'\x0a')+(_0x5dac7d(0x129)+_0x1862a7+'\x0a')+'┃\x0a';}),_0x1fe1e8+=_0x330af3(0x13f),await sock['sendMessage'](from,{'text':_0x1fe1e8});}else{if(_0x37a594===_0x330af3(0xed)){if(args[0x1]!==_0x330af3(0xea)){await sock[_0x330af3(0x140)](from,{'text':_0x330af3(0x124)});return;}const _0x2642f4=_0x367003[_0x330af3(0x108)]();_0x2642f4?(await sock[_0x330af3(0x140)](from,{'text':_0x330af3(0x132)}),console[_0x330af3(0x141)](chalk[_0x330af3(0x131)](_0x330af3(0x119)+_0x57d1ca))):await sock[_0x330af3(0x140)](from,{'text':'>\x20Knut\x20XMD\x20:\x20❌\x20Erreur\x20lors\x20du\x20vidage\x20de\x20la\x20base.'});}else await sock[_0x330af3(0x140)](from,{'text':_0x330af3(0x10b)});}}}}}catch(_0x5cd67d){console['error'](_0x330af3(0x125),_0x5cd67d),await sock['sendMessage'](from,{'text':_0x330af3(0x143)});}}
+export const name = "antidelete";
+export const description = "Active ou désactive le système anti-suppression";
+export const usage = "!antidelete [on/off/status]";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+  const sender = msg.key.participant || from;
+  
+  try {
+    // Vérifier si le système de protection est disponible
+    if (!global.protectionSystem?.antiDelete) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ❌ Système de protection non initialisé." 
+      });
+      return;
+    }
+
+    const antiDelete = global.protectionSystem.antiDelete;
+    const currentStatus = antiDelete.getStats().isEnabled;
+
+    // Pas d'argument -> afficher le statut actuel
+    if (!args[0]) {
+      const stats = antiDelete.getStats();
+      const statusEmoji = currentStatus ? "✅" : "❌";
+      const statusText = currentStatus ? "ACTIVÉ" : "DÉSACTIVÉ";
+      
+      const message = 
+        `╭═══❰ *ANTI-DELETE* ❱═══╮\n` +
+        `┃\n` +
+        `┃ ${statusEmoji} *Statut :* ${statusText}\n` +
+        `┃ 📊 *Messages stockés :* ${stats.totalMessages}/${stats.maxMessages}\n` +
+        `┃    ├─ *Groupes :* ${stats.groupMessages || 0}\n` +
+        `┃    └─ *IB :* ${stats.privateMessages || 0}\n` +
+        `┃ 🖼️ *Médias :* ${stats.totalMedia}\n` +
+        `┃ 🔄 *Rotations :* ${stats.totalRotations || 0}\n` +
+        `┃\n` +
+        `┃ *Utilisation :*\n` +
+        `┃ !antidelete on  → Activer\n` +
+        `┃ !antidelete off → Désactiver\n` +
+        `┃ !antidelete status → Voir ce menu\n` +
+        `┃ !antidelete stats → Statistiques détaillées\n` +
+        `┃ !antidelete last → Voir les 5 derniers messages\n` +
+        `╰═══════════════════╯`;
+      
+      await sock.sendMessage(from, { text: message });
+      return;
+    }
+
+    const command = args[0].toLowerCase();
+
+    // Commande: on/off
+    if (command === "on" || command === "off") {
+      const newStatus = command === "on";
+      
+      // Vérifier si c'est déjà dans cet état
+      if (currentStatus === newStatus) {
+        await sock.sendMessage(from, { 
+          text: `> Knut XMD : ⚠️ L'anti-delete est déjà ${currentStatus ? 'activé' : 'désactivé'}.` 
+        });
+        return;
+      }
+
+      // Activer/désactiver
+      antiDelete.setStatus(newStatus);
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD : ✅ Anti-delete ${newStatus ? 'activé' : 'désactivé'} avec succès !` 
+      });
+      
+      // Log pour le terminal
+      console.log(chalk.green(`[ANTIDELETE] ${newStatus ? 'Activé' : 'Désactivé'} par ${sender}`));
+    }
+
+    // Commande: status (affiche le statut détaillé)
+    else if (command === "status") {
+      const stats = antiDelete.getStats();
+      const statusEmoji = currentStatus ? "✅" : "❌";
+      
+      const message = 
+        `╭═══❰ *STATUT ANTI-DELETE* ❱═══╮\n` +
+        `┃\n` +
+        `┃ ${statusEmoji} *État :* ${currentStatus ? 'Actif' : 'Inactif'}\n` +
+        `┃ 📊 *Messages :* ${stats.totalMessages}/${stats.maxMessages}\n` +
+        `┃ 🖼️ *Médias :* ${stats.totalMedia}\n` +
+        `┃ 🔄 *Rotation :* ${stats.rotationEnabled ? 'Oui' : 'Non'}\n` +
+        `┃ 🔁 *Rotations faites :* ${stats.totalRotations || 0}\n` +
+        `╰═══════════════════╯`;
+      
+      await sock.sendMessage(from, { text: message });
+    }
+
+    // Commande: stats (statistiques complètes)
+    else if (command === "stats") {
+      const stats = antiDelete.getStats();
+      
+      const message = 
+        `╭═══❰ *STATISTIQUES* ❱═══╮\n` +
+        `┃\n` +
+        `┃ 📈 *Messages total :* ${stats.totalMessages}\n` +
+        `┃    ├─ *Groupes :* ${stats.groupMessages || 0}\n` +
+        `┃    └─ *IB :* ${stats.privateMessages || 0}\n` +
+        `┃ 🖼️ *Médias :* ${stats.totalMedia}\n` +
+        `┃ 📦 *Capacité max :* ${stats.maxMessages}\n` +
+        `┃ 📊 *Taux remplissage :* ${Math.round((stats.totalMessages/stats.maxMessages)*100)}%\n` +
+        `┃ 🔁 *Rotations :* ${stats.totalRotations || 0}\n` +
+        `╰═══════════════════╯`;
+      
+      await sock.sendMessage(from, { text: message });
+    }
+
+    // Commande: last (affiche les derniers messages)
+    else if (command === "last") {
+      const limit = args[1] ? parseInt(args[1]) : 5;
+      if (isNaN(limit) || limit < 1 || limit > 20) {
+        await sock.sendMessage(from, { 
+          text: "> Knut XMD : ⚠️ Utilisation : !antidelete last [nombre (1-20)]" 
+        });
+        return;
+      }
+
+      const lastMessages = antiDelete.viewLastMessages(limit);
+      
+      if (!lastMessages || lastMessages.length === 0) {
+        await sock.sendMessage(from, { 
+          text: "> Knut XMD : 📭 Aucun message stocké pour le moment." 
+        });
+        return;
+      }
+
+      let messageText = `╭═══❰ *DERNIERS MESSAGES* ❱═══╮\n┃\n`;
+      
+      lastMessages.forEach((msg, index) => {
+        const type = msg.chatId?.endsWith('@g.us') ? '👥 Groupe' : '👤 IB';
+        const date = msg.timestamp ? new Date(msg.timestamp * 1000).toLocaleString('fr-FR', {
+          hour: '2-digit',
+          minute: '2-digit',
+          day: '2-digit',
+          month: '2-digit'
+        }) : 'Date inconnue';
+        
+        messageText += 
+          `┃ ${index + 1}. ${type}\n` +
+          `┃    👤 ${msg.sender || 'Inconnu'}\n` +
+          `┃    💬 ${msg.content?.substring(0, 30)}${msg.content?.length > 30 ? '...' : ''}\n` +
+          `┃    🕐 ${date}\n` +
+          `┃\n`;
+      });
+      
+      messageText += `╰═══════════════════╯`;
+      
+      await sock.sendMessage(from, { text: messageText });
+    }
+
+    // Commande: clear (vider la base)
+    else if (command === "clear") {
+      // Demander confirmation
+      if (args[1] !== "--force") {
+        await sock.sendMessage(from, { 
+          text: "> Knut XMD : ⚠️ Êtes-vous sûr de vouloir vider la base anti-delete ?\nFaites `!antidelete clear --force` pour confirmer." 
+        });
+        return;
+      }
+
+      const cleared = antiDelete.clearDB();
+      if (cleared) {
+        await sock.sendMessage(from, { 
+          text: "> Knut XMD : ✅ Base anti-delete vidée avec succès !" 
+        });
+        console.log(chalk.yellow(`[ANTIDELETE] Base vidée par ${sender}`));
+      } else {
+        await sock.sendMessage(from, { 
+          text: "> Knut XMD : ❌ Erreur lors du vidage de la base." 
+        });
+      }
+    }
+
+    // Commande inconnue
+    else {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ❌ Commande inconnue. Utilisez `!antidelete` pour voir l'aide." 
+      });
+    }
+
+  } catch (error) {
+    console.error("[ANTIDELETE] Erreur :", error);
+    await sock.sendMessage(from, { 
+      text: "> Knut XMD : ❌ Erreur lors de l'exécution de la commande." 
+    });
+  }
+}

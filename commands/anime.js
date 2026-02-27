@@ -1,1 +1,80 @@
-const a5_0x2f8d69=a5_0xfbe7;(function(_0x2ad510,_0x475827){const _0x433c34=a5_0xfbe7,_0x3028b3=_0x2ad510();while(!![]){try{const _0x27e11f=parseInt(_0x433c34(0x1d6))/0x1*(-parseInt(_0x433c34(0x1d7))/0x2)+-parseInt(_0x433c34(0x1dd))/0x3+-parseInt(_0x433c34(0x1ea))/0x4+-parseInt(_0x433c34(0x1e4))/0x5+parseInt(_0x433c34(0x1e3))/0x6+parseInt(_0x433c34(0x1dc))/0x7*(parseInt(_0x433c34(0x1e5))/0x8)+parseInt(_0x433c34(0x1e2))/0x9;if(_0x27e11f===_0x475827)break;else _0x3028b3['push'](_0x3028b3['shift']());}catch(_0x194f12){_0x3028b3['push'](_0x3028b3['shift']());}}}(a5_0x9863,0x2940a));function a5_0xfbe7(_0x2e09cf,_0x4a279a){_0x2e09cf=_0x2e09cf-0x1cf;const _0x60ac87=a5_0x9863();let _0x5cb349=_0x60ac87[_0x2e09cf];return _0x5cb349;}const a5_0x3721a5=(function(){let _0x354885=!![];return function(_0x8c3293,_0x52d626){const _0x1dd37c=_0x354885?function(){if(_0x52d626){const _0x541468=_0x52d626['apply'](_0x8c3293,arguments);return _0x52d626=null,_0x541468;}}:function(){};return _0x354885=![],_0x1dd37c;};}()),a5_0x5cb349=a5_0x3721a5(this,function(){const _0x17a978=a5_0xfbe7;return a5_0x5cb349[_0x17a978(0x1d3)]()[_0x17a978(0x1eb)]('(((.+)+)+)+$')[_0x17a978(0x1d3)]()['constructor'](a5_0x5cb349)[_0x17a978(0x1eb)](_0x17a978(0x1da));});function a5_0x9863(){const _0x2c1887=['1285389ugKYyg','828762KDvUFy','url','json','Failed\x20to\x20send\x20image\x20','*:\x20All\x20','3018672LaMDgj','1864968STFfjW','1210580BepKhi','8DPvAyh','length','L\x27API\x20n\x27a\x20pas\x20retourné\x20d\x27URL\x20pour\x20l\x27image\x20','\x20images\x20have\x20been\x20sent!','message','386280ojEXAM','search','\x20images\x20sent','error','.\x20Skipping.','📊\x20Status:\x200/','\x20images\x20sent\x20✅','sendMessage','🖼️\x20Image\x20','✅\x20*','Could\x20not\x20fetch\x20any\x20images\x20from\x20the\x20API.','warn','anime','❌\x20Naruto\x20command\x20error:','toString','Erreur\x20lors\x20de\x20la\x20récupération\x20de\x20l\x27image\x20','https://api.waifu.pics/sfw/waifu','1rJqOiO','91906UwecFm','remoteJid','⚠️\x20Failed\x20to\x20send\x20image\x20','(((.+)+)+)+$','\x20-\x20'];a5_0x9863=function(){return _0x2c1887;};return a5_0x9863();}a5_0x5cb349();export const name=a5_0x2f8d69(0x1d1);export const description='Get\x205\x20random\x20Naruto/anime\x20images';export const category='Anime';export async function execute(sock,msg,args){const _0x2fefb2=a5_0x2f8d69,from=msg['key'][_0x2fefb2(0x1d8)],botname='KNUT\x20XMD';try{const _0x4f95a4=await sock['sendMessage'](from,{'text':'🌀\x20*KNUT\x20XMD*\x20-\x20Preparing\x205\x20images...'},{'quoted':msg}),_0x56766a=[],_0x752f9d=_0x2fefb2(0x1d5);for(let _0x2acbad=0x0;_0x2acbad<0x3;_0x2acbad++){try{const _0x2f0b2b=await fetch(_0x752f9d),_0x19eb18=await _0x2f0b2b[_0x2fefb2(0x1df)]();_0x19eb18&&_0x19eb18[_0x2fefb2(0x1de)]?_0x56766a['push'](_0x19eb18[_0x2fefb2(0x1de)]):console[_0x2fefb2(0x1d0)](_0x2fefb2(0x1e7)+(_0x2acbad+0x1)),await new Promise(_0x4e19a6=>setTimeout(_0x4e19a6,0x64));}catch(_0x5dff04){console['error'](_0x2fefb2(0x1d4)+(_0x2acbad+0x1)+':',_0x5dff04[_0x2fefb2(0x1e9)]);}}if(_0x56766a[_0x2fefb2(0x1e6)]===0x0)throw new Error(_0x2fefb2(0x1cf));let _0x2cd56c=await sock[_0x2fefb2(0x1f1)](from,{'text':_0x2fefb2(0x1ef)+_0x56766a[_0x2fefb2(0x1e6)]+_0x2fefb2(0x1ec)},{'quoted':_0x4f95a4});for(let _0x742da7=0x0;_0x742da7<_0x56766a[_0x2fefb2(0x1e6)];_0x742da7++){try{await sock['sendMessage'](from,{'image':{'url':_0x56766a[_0x742da7]},'caption':_0x2fefb2(0x1f2)+(_0x742da7+0x1)+'/'+_0x56766a[_0x2fefb2(0x1e6)]+_0x2fefb2(0x1db)+botname}),await sock[_0x2fefb2(0x1f1)](from,{'text':'📊\x20Status:\x20'+(_0x742da7+0x1)+'/'+_0x56766a[_0x2fefb2(0x1e6)]+_0x2fefb2(0x1f0)},{'quoted':_0x2cd56c}),_0x742da7<_0x56766a['length']-0x1&&await new Promise(_0x23f7fc=>setTimeout(_0x23f7fc,0x5dc));}catch(_0x4f8d5a){console[_0x2fefb2(0x1ed)](_0x2fefb2(0x1e0)+(_0x742da7+0x1)+':',_0x4f8d5a),await sock[_0x2fefb2(0x1f1)](from,{'text':_0x2fefb2(0x1d9)+(_0x742da7+0x1)+_0x2fefb2(0x1ee)},{'quoted':_0x2cd56c});}}await sock['sendMessage'](from,{'text':_0x2fefb2(0x1f3)+botname+_0x2fefb2(0x1e1)+_0x56766a[_0x2fefb2(0x1e6)]+_0x2fefb2(0x1e8)},{'quoted':_0x2cd56c});}catch(_0x39aeaa){console[_0x2fefb2(0x1ed)](_0x2fefb2(0x1d2),_0x39aeaa),await sock[_0x2fefb2(0x1f1)](from,{'text':'❌\x20*'+botname+'*:\x20An\x20error\x20occurred\x20while\x20processing\x20the\x20command.\x0aError:\x20'+_0x39aeaa[_0x2fefb2(0x1e9)]},{'quoted':msg});}}
+export const name = 'anime';
+export const description = 'Get 5 random Naruto/anime images';
+export const category = 'Anime';
+
+export async function execute(sock, msg, args) {
+    const from = msg.key.remoteJid;
+    const botname = 'KNUT XMD'; // Ajustez selon votre configuration
+
+    try {
+        // Message d'attente
+        const sentMsg = await sock.sendMessage(from, {
+            text: '🌀 *KNUT XMD* - Preparing 5 images...'
+        }, { quoted: msg });
+
+        // Tableau pour stocker les URLs des images
+        const imageUrls = [];
+        const apiUrl = 'https://api.waifu.pics/sfw/waifu'; // API fiable et gratuite
+
+        // Récupérer 5 URLs d'images
+        for (let i = 0; i < 3; i++) {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                if (data && data.url) {
+                    imageUrls.push(data.url);
+                } else {
+                    console.warn(`L'API n'a pas retourné d'URL pour l'image ${i+1}`);
+                }
+                // Petite pause pour ne pas surcharger l'API
+                await new Promise(resolve => setTimeout(resolve, 100));
+            } catch (fetchErr) {
+                console.error(`Erreur lors de la récupération de l'image ${i+1}:`, fetchErr.message);
+            }
+        }
+
+        if (imageUrls.length === 0) {
+            throw new Error('Could not fetch any images from the API.');
+        }
+
+        // Envoi d'un message de statut
+        let statusMsg = await sock.sendMessage(from, {
+            text: `📊 Status: 0/${imageUrls.length} images sent`
+        }, { quoted: sentMsg });
+
+        // Envoyer chaque image une par une
+        for (let i = 0; i < imageUrls.length; i++) {
+            try {
+                await sock.sendMessage(from, {
+                    image: { url: imageUrls[i] },
+                    caption: `🖼️ Image ${i+1}/${imageUrls.length} - ${botname}`
+                });
+                // Mettre à jour le statut
+                await sock.sendMessage(from, {
+                    text: `📊 Status: ${i+1}/${imageUrls.length} images sent ✅`
+                }, { quoted: statusMsg });
+                // **Délai CRITIQUE** : Attendre 1.5 à 2 secondes entre chaque envoi pour éviter
+                // que WhatsApp ne considère le bot comme un spammeur et ne le bloque.
+                if (i < imageUrls.length - 1) {
+                    await new Promise(resolve => setTimeout(resolve, 1500));
+                }
+            } catch (sendErr) {
+                console.error(`Failed to send image ${i+1}:`, sendErr);
+                await sock.sendMessage(from, {
+                    text: `⚠️ Failed to send image ${i+1}. Skipping.`
+                }, { quoted: statusMsg });
+            }
+        }
+
+        // Message final
+        await sock.sendMessage(from, {
+            text: `✅ *${botname}*: All ${imageUrls.length} images have been sent!`
+        }, { quoted: statusMsg });
+
+    } catch (err) {
+        console.error('❌ Naruto command error:', err);
+        await sock.sendMessage(from, {
+            text: `❌ *${botname}*: An error occurred while processing the command.\nError: ${err.message}`
+        }, { quoted: msg });
+    }
+}

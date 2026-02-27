@@ -1,1 +1,63 @@
-const a54_0x25bd42=a54_0x2dcc;(function(_0x5b0dd5,_0x3fedb5){const _0x2a086c=a54_0x2dcc,_0x4e8470=_0x5b0dd5();while(!![]){try{const _0x3c6711=-parseInt(_0x2a086c(0xff))/0x1*(parseInt(_0x2a086c(0x10b))/0x2)+-parseInt(_0x2a086c(0xfd))/0x3*(parseInt(_0x2a086c(0x102))/0x4)+-parseInt(_0x2a086c(0x108))/0x5+-parseInt(_0x2a086c(0xf5))/0x6+parseInt(_0x2a086c(0x10c))/0x7*(-parseInt(_0x2a086c(0x110))/0x8)+-parseInt(_0x2a086c(0xf7))/0x9*(-parseInt(_0x2a086c(0x10d))/0xa)+parseInt(_0x2a086c(0xeb))/0xb;if(_0x3c6711===_0x3fedb5)break;else _0x4e8470['push'](_0x4e8470['shift']());}catch(_0x44a9a4){_0x4e8470['push'](_0x4e8470['shift']());}}}(a54_0xe3e2,0xeaf99));const a54_0x328be7=(function(){let _0x43fd1e=!![];return function(_0x1d83c0,_0x487d0a){const _0x5762c3=_0x43fd1e?function(){const _0x4658c5=a54_0x2dcc;if(_0x487d0a){const _0x54fe3f=_0x487d0a[_0x4658c5(0x100)](_0x1d83c0,arguments);return _0x487d0a=null,_0x54fe3f;}}:function(){};return _0x43fd1e=![],_0x5762c3;};}()),a54_0x52f72b=a54_0x328be7(this,function(){const _0x2598f7=a54_0x2dcc;return a54_0x52f72b[_0x2598f7(0x111)]()[_0x2598f7(0x105)](_0x2598f7(0x104))[_0x2598f7(0x111)]()[_0x2598f7(0x103)](a54_0x52f72b)['search'](_0x2598f7(0x104));});function a54_0x2dcc(_0x2ea483,_0x3750c8){_0x2ea483=_0x2ea483-0xeb;const _0x3823af=a54_0xe3e2();let _0x52f72b=_0x3823af[_0x2ea483];return _0x52f72b;}a54_0x52f72b();import a54_0x2ad8f0 from'axios';import a54_0x1adb2b from'fs';function a54_0xe3e2(){const _0x1394ee=['(((.+)+)+)+$','search','writeFileSync','>\x20Knut\x20XMD:⏳\x20𝐼\x27𝑚\x20𝑐𝑟𝑎𝑧𝑦....𝑚𝑎𝑦𝑏𝑒','1427165pdbfXT','download_','down-url','26UkNFSC','756XIWAZd','63910RREafC','readFileSync','content-type','137952iOdcrK','toString','get','67066835NRhLVC','from','sendMessage','❌\x20Erreur\x20down-url\x20:','startsWith','image/','arraybuffer','binary','error','data','9771090JTXqrX','bin','1125KNwEkV','lookup','📸\x20*Fichier\x20image\x20téléchargé\x20depuis\x20:*\x0a','🎥\x20*Vidéo\x20téléchargée\x20depuis\x20:*\x0a','now','>\x20Knut\x20XMD:\x20⚠️\x20*Utilisation:*\x20`!down-url\x20<lien>`\x0a\x0aExemple:\x0a>\x20!down-url\x20https://example.com/video.mp4','3URXXbJ','application/octet-stream','64772KOOAwY','apply','remoteJid','5260268SOyGpC','constructor'];a54_0xe3e2=function(){return _0x1394ee;};return a54_0xe3e2();}import a54_0x258215 from'path';import a54_0xbec3d3 from'mime-types';export const name=a54_0x25bd42(0x10a);export async function execute(sock,msg,args){const _0x15e61a=a54_0x25bd42,from=msg['key'][_0x15e61a(0x101)],_0xac95ef=args[0x0];if(!_0xac95ef)return await sock[_0x15e61a(0xed)](from,{'text':_0x15e61a(0xfc)},{'quoted':msg});try{await sock[_0x15e61a(0xed)](from,{'text':_0x15e61a(0x107)},{'quoted':msg});const _0x5a1695=await a54_0x2ad8f0[_0x15e61a(0x112)](_0xac95ef,{'responseType':_0x15e61a(0xf1)}),_0x52b633=Buffer[_0x15e61a(0xec)](_0x5a1695[_0x15e61a(0xf4)],_0x15e61a(0xf2)),_0x407c6f=_0x5a1695['headers'][_0x15e61a(0x10f)]||a54_0xbec3d3[_0x15e61a(0xf8)](_0xac95ef)||_0x15e61a(0xfe),_0x3a6d40=a54_0xbec3d3['extension'](_0x407c6f)||_0x15e61a(0xf6),_0x4d526d=_0x15e61a(0x109)+Date[_0x15e61a(0xfb)]()+'.'+_0x3a6d40,_0x49105a=a54_0x258215['join']('./',_0x4d526d);a54_0x1adb2b[_0x15e61a(0x106)](_0x49105a,_0x52b633);let _0xbb5a70={};if(_0x407c6f[_0x15e61a(0xef)](_0x15e61a(0xf0)))_0xbb5a70={'image':a54_0x1adb2b['readFileSync'](_0x49105a),'caption':_0x15e61a(0xf9)+_0xac95ef};else{if(_0x407c6f[_0x15e61a(0xef)]('video/'))_0xbb5a70={'video':a54_0x1adb2b[_0x15e61a(0x10e)](_0x49105a),'caption':_0x15e61a(0xfa)+_0xac95ef};else _0x407c6f[_0x15e61a(0xef)]('audio/')?_0xbb5a70={'audio':a54_0x1adb2b[_0x15e61a(0x10e)](_0x49105a),'mimetype':_0x407c6f,'ptt':![]}:_0xbb5a70={'document':a54_0x1adb2b[_0x15e61a(0x10e)](_0x49105a),'mimetype':_0x407c6f,'fileName':_0x4d526d};}await sock[_0x15e61a(0xed)](from,_0xbb5a70,{'quoted':msg}),a54_0x1adb2b['unlinkSync'](_0x49105a);}catch(_0x2a97ad){console[_0x15e61a(0xf3)](_0x15e61a(0xee),_0x2a97ad),await sock[_0x15e61a(0xed)](from,{'text':'>\x20Knut\x20XMD:❌\x20*Erreur\x20lors\x20du\x20téléchargement.*\x0aVérifie\x20que\x20le\x20lien\x20est\x20valide\x20et\x20accessible\x20publiquement.'},{'quoted':msg});}}
+import axios from "axios";
+import fs from "fs";
+import path from "path";
+import mime from "mime-types";
+
+export const name = "down-url";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  // Vérifier que l'utilisateur a bien entré une URL
+  const url = args[0];
+  if (!url) {
+    return await sock.sendMessage(from, {
+      text: "> Knut XMD: ⚠️ *Utilisation:* `!down-url <lien>`\n\nExemple:\n> !down-url https://example.com/video.mp4"
+    }, { quoted: msg });
+  }
+
+  try {
+    await sock.sendMessage(from, {
+      text: "> Knut XMD:⏳ 𝐼'𝑚 𝑐𝑟𝑎𝑧𝑦....𝑚𝑎𝑦𝑏𝑒"
+    }, { quoted: msg });
+
+    // Téléchargement du contenu avec axios
+    const response = await axios.get(url, { responseType: "arraybuffer" });
+    const buffer = Buffer.from(response.data, "binary");
+
+    // Déterminer le type MIME
+    const contentType = response.headers["content-type"] || mime.lookup(url) || "application/octet-stream";
+    const extension = mime.extension(contentType) || "bin";
+
+    // Nom temporaire
+    const fileName = `download_${Date.now()}.${extension}`;
+    const filePath = path.join("./", fileName);
+
+    // Sauvegarde temporaire
+    fs.writeFileSync(filePath, buffer);
+
+    // Déterminer le type de média à envoyer
+    let messageOptions = {};
+    if (contentType.startsWith("image/")) {
+      messageOptions = { image: fs.readFileSync(filePath), caption: `📸 *Fichier image téléchargé depuis :*\n${url}` };
+    } else if (contentType.startsWith("video/")) {
+      messageOptions = { video: fs.readFileSync(filePath), caption: `🎥 *Vidéo téléchargée depuis :*\n${url}` };
+    } else if (contentType.startsWith("audio/")) {
+      messageOptions = { audio: fs.readFileSync(filePath), mimetype: contentType, ptt: false };
+    } else {
+      messageOptions = { document: fs.readFileSync(filePath), mimetype: contentType, fileName };
+    }
+
+    // Envoi du média
+    await sock.sendMessage(from, messageOptions, { quoted: msg });
+
+    // Supprimer le fichier temporaire après envoi
+    fs.unlinkSync(filePath);
+
+  } catch (err) {
+    console.error("❌ Erreur down-url :", err);
+    await sock.sendMessage(from, {
+      text: "> Knut XMD:❌ *Erreur lors du téléchargement.*\nVérifie que le lien est valide et accessible publiquement."
+    }, { quoted: msg });
+  }
+}
