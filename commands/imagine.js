@@ -1,1 +1,73 @@
-const a65_0x38a604=a65_0x4d39;(function(_0x121bdf,_0x3b1908){const _0x5b52ea=a65_0x4d39,_0x592f06=_0x121bdf();while(!![]){try{const _0x38c735=-parseInt(_0x5b52ea(0x12f))/0x1*(-parseInt(_0x5b52ea(0x116))/0x2)+-parseInt(_0x5b52ea(0x114))/0x3+parseInt(_0x5b52ea(0x129))/0x4+parseInt(_0x5b52ea(0x121))/0x5*(-parseInt(_0x5b52ea(0x130))/0x6)+-parseInt(_0x5b52ea(0x11b))/0x7+parseInt(_0x5b52ea(0x110))/0x8*(-parseInt(_0x5b52ea(0x119))/0x9)+parseInt(_0x5b52ea(0x125))/0xa;if(_0x38c735===_0x3b1908)break;else _0x592f06['push'](_0x592f06['shift']());}catch(_0x4244aa){_0x592f06['push'](_0x592f06['shift']());}}}(a65_0x45d0,0x50b39));const a65_0x516fa5=(function(){let _0xa081e8=!![];return function(_0x3c6770,_0x5f4bb2){const _0x14231a=_0xa081e8?function(){if(_0x5f4bb2){const _0x352c1a=_0x5f4bb2['apply'](_0x3c6770,arguments);return _0x5f4bb2=null,_0x352c1a;}}:function(){};return _0xa081e8=![],_0x14231a;};}()),a65_0x4c5e6f=a65_0x516fa5(this,function(){const _0x2a9fda=a65_0x4d39;return a65_0x4c5e6f[_0x2a9fda(0x117)]()[_0x2a9fda(0x10f)](_0x2a9fda(0x10e))['toString']()[_0x2a9fda(0x12b)](a65_0x4c5e6f)['search']('(((.+)+)+)+$');});a65_0x4c5e6f();import a65_0x7dfc50 from'axios';export const name=a65_0x38a604(0x13c);export const description=a65_0x38a604(0x136);function a65_0x45d0(){const _0x24b5af=['contextInfo','high\x20quality','Génère\x20une\x20image\x20à\x20partir\x20d’un\x20prompt\x20via\x20AI','conversation','sharp\x20focus','random','extendedTextMessage','sendMessage','imagine','arraybuffer','🎨\x20Génération\x20de\x20l\x27image\x20en\x20cours...','(((.+)+)+)+$','search','16CpeNIb','❌\x20Erreur\x20Imagine:','remoteJid','quotedMessage','1322250PtuPWS','https://shizoapi.onrender.com/api/ai/imagine?apikey=shizo&query=','36rClnSP','toString','>\x20╔════\x20Knut\x20XMD\x20════╗\x0a>\x20\x20Imagine\x20:\x20','2164068UuJssa','get','4376036fDYRgk','best\x20quality','data','masterpiece','🎨\x20AI','floor','55CrTJiv','error','highly\x20detailed','slice','17641630tWVkCc','trim','professional\x20photography','StPatrickMD/1.0','2552980HtGkPS','join','constructor','message','detailed','>\x20⚠️\x20Knut\x20XMD:\x20Exemple\x20:\x20.imagine\x20un\x20coucher\x20de\x20soleil\x20sur\x20les\x20montagnes','2060vBIeID','306618EEKECK','from','cinematic\x20lighting','key'];a65_0x45d0=function(){return _0x24b5af;};return a65_0x45d0();}function a65_0x4d39(_0x19ef27,_0x46b44b){_0x19ef27=_0x19ef27-0x10d;const _0x155b5f=a65_0x45d0();let _0x4c5e6f=_0x155b5f[_0x19ef27];return _0x4c5e6f;}export const category=a65_0x38a604(0x11f);export async function execute(sock,msg,args){const _0x5b7328=a65_0x38a604,from=msg[_0x5b7328(0x133)][_0x5b7328(0x112)];try{const _0x3b98fe=args[_0x5b7328(0x12a)]('\x20')[_0x5b7328(0x126)]()||msg[_0x5b7328(0x12c)]?.[_0x5b7328(0x13a)]?.[_0x5b7328(0x134)]?.[_0x5b7328(0x113)]?.[_0x5b7328(0x137)]?.[_0x5b7328(0x126)]()||'';if(!_0x3b98fe){await sock[_0x5b7328(0x13b)](from,{'text':_0x5b7328(0x12e)},{'quoted':msg});return;}await sock[_0x5b7328(0x13b)](from,{'text':_0x5b7328(0x10d)},{'quoted':msg});const _0x277e26=enhancePrompt(_0x3b98fe),_0x502369=await a65_0x7dfc50[_0x5b7328(0x11a)](_0x5b7328(0x115)+encodeURIComponent(_0x277e26),{'responseType':_0x5b7328(0x13d),'headers':{'User-Agent':_0x5b7328(0x128)}}),_0x18fe42=Buffer[_0x5b7328(0x131)](_0x502369[_0x5b7328(0x11d)]),_0x46ba56=_0x5b7328(0x118)+_0x3b98fe+'\x0a>\x20╚════════════════╝';await sock[_0x5b7328(0x13b)](from,{'image':_0x18fe42,'caption':_0x46ba56},{'quoted':msg});}catch(_0x50f461){console[_0x5b7328(0x122)](_0x5b7328(0x111),_0x50f461),await sock['sendMessage'](from,{'text':'>\x20Knut\x20XMD:⚠️\x20Erreur\x0a>\x20Impossible\x20de\x20générer\x20l\x27image.\x20Réessayez\x20plus\x20tard.'},{'quoted':msg});}};function enhancePrompt(_0x2eb486){const _0x7a72e1=a65_0x38a604,_0x5de778=[_0x7a72e1(0x135),_0x7a72e1(0x12d),_0x7a72e1(0x11e),_0x7a72e1(0x11c),'ultra\x20realistic','4k',_0x7a72e1(0x123),_0x7a72e1(0x127),_0x7a72e1(0x132),_0x7a72e1(0x138)],_0x212c54=Math[_0x7a72e1(0x120)](Math['random']()*0x2)+0x3,_0x3c7d7a=_0x5de778['sort'](()=>Math[_0x7a72e1(0x139)]()-0.5)[_0x7a72e1(0x124)](0x0,_0x212c54);return _0x2eb486+',\x20'+_0x3c7d7a[_0x7a72e1(0x12a)](',\x20');}
+import axios from "axios";
+
+export const name = "imagine";
+export const description = "Génère une image à partir d’un prompt via AI";
+export const category = "🎨 AI";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  try {
+    const rawText = args.join(" ").trim() || 
+                    msg.message?.extendedTextMessage?.contextInfo?.quotedMessage?.conversation?.trim() ||
+                    '';
+
+    if (!rawText) {
+      await sock.sendMessage(from, {
+        text: `> ⚠️ Knut XMD: Exemple : .imagine un coucher de soleil sur les montagnes`
+      }, { quoted: msg });
+      return;
+    }
+
+    await sock.sendMessage(from, { text: "🎨 Génération de l'image en cours..." }, { quoted: msg });
+
+    // Amélioration du prompt
+    const prompt = enhancePrompt(rawText);
+
+    // Appel API
+    const response = await axios.get(`https://shizoapi.onrender.com/api/ai/imagine?apikey=shizo&query=${encodeURIComponent(prompt)}`, {
+      responseType: "arraybuffer",
+      headers: { "User-Agent": "StPatrickMD/1.0" }
+    });
+
+    const imageBuffer = Buffer.from(response.data);
+
+    const replyCaption = `> ╔════ Knut XMD ════╗
+>  Imagine : ${rawText}
+> ╚════════════════╝`;
+
+    await sock.sendMessage(from, {
+      image: imageBuffer,
+      caption: replyCaption
+    }, { quoted: msg });
+
+  } catch (error) {
+    console.error("❌ Erreur Imagine:", error);
+    await sock.sendMessage(from, {
+      text: `> Knut XMD:⚠️ Erreur\n> Impossible de générer l'image. Réessayez plus tard.`
+    }, { quoted: msg });
+  }
+};
+
+// Fonction pour améliorer le prompt avec des mots-clés qualité
+function enhancePrompt(prompt) {
+  const qualityEnhancers = [
+    "high quality",
+    "detailed",
+    "masterpiece",
+    "best quality",
+    "ultra realistic",
+    "4k",
+    "highly detailed",
+    "professional photography",
+    "cinematic lighting",
+    "sharp focus"
+  ];
+
+  const numEnhancers = Math.floor(Math.random() * 2) + 3; // 3 ou 4 mots-clés
+  const selectedEnhancers = qualityEnhancers
+    .sort(() => Math.random() - 0.5)
+    .slice(0, numEnhancers);
+
+  return `${prompt}, ${selectedEnhancers.join(", ")}`;
+}

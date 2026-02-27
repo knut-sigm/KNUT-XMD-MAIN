@@ -1,1 +1,112 @@
-function a143_0x27df(){const _0x5e9e78=['7mRFmDQ','viewOnceMessageV2Extension','52ZZFBJy','error','concat','from','506oaipuO','(((.+)+)+)+$','audio','message','835470HPsDdW','>\x20Knut\x20XMD:\x20❌\x20Pas\x20une\x20photo,\x20vidéo\x20ou\x20audio\x20vue\x20unique.','12311811SVCQMK','env','search','3xLhyIo','vv2','6635490ALcmFh','>\x20Knut\x20XMD\x20:\x20Media\x20récupéré\x20depuis\x20','videoMessage','343923hFqMay','imageMessage','NUMBER','sendMessage','extendedTextMessage','remoteJid','image','constructor','>\x20Knut\x20XMD\x20:\x20✅\x20Media\x20récupéré\x20et\x20envoyé\x20dans\x20l\x27IB\x20de\x20l\x27owner.','2923250AStXjE','@s.whatsapp.net','contextInfo','Erreur\x20lors\x20de\x20l\x27envoi\x20à\x20l\x27owner:','key','95055OzGdxB','includes','>\x20Knut\x20XMD\x20:⚠️Répondez\x20à\x20une\x20photo,\x20vidéo\x20ou\x20audio\x20vue\x20unique.','video','5958104FSSyLD','toString','audioMessage','ptt','audio/mp4'];a143_0x27df=function(){return _0x5e9e78;};return a143_0x27df();}const a143_0x19c9d6=a143_0x1902;(function(_0x39c9e1,_0x14ea21){const _0x1ebc1a=a143_0x1902,_0x555835=_0x39c9e1();while(!![]){try{const _0x49d986=-parseInt(_0x1ebc1a(0x1a1))/0x1+-parseInt(_0x1ebc1a(0x1aa))/0x2*(-parseInt(_0x1ebc1a(0x19c))/0x3)+parseInt(_0x1ebc1a(0x1ba))/0x4*(parseInt(_0x1ebc1a(0x1af))/0x5)+parseInt(_0x1ebc1a(0x19e))/0x6+parseInt(_0x1ebc1a(0x1b8))/0x7*(parseInt(_0x1ebc1a(0x1b3))/0x8)+parseInt(_0x1ebc1a(0x1c4))/0x9+parseInt(_0x1ebc1a(0x1c2))/0xa*(-parseInt(_0x1ebc1a(0x1be))/0xb);if(_0x49d986===_0x14ea21)break;else _0x555835['push'](_0x555835['shift']());}catch(_0x240231){_0x555835['push'](_0x555835['shift']());}}}(a143_0x27df,0xb4bf4));function a143_0x1902(_0x4a5458,_0x52abde){_0x4a5458=_0x4a5458-0x19b;const _0x4c5ffb=a143_0x27df();let _0x24f187=_0x4c5ffb[_0x4a5458];return _0x24f187;}const a143_0x349eae=(function(){let _0x2f753d=!![];return function(_0x41ec1a,_0x5515a9){const _0x2a44e5=_0x2f753d?function(){if(_0x5515a9){const _0x29545c=_0x5515a9['apply'](_0x41ec1a,arguments);return _0x5515a9=null,_0x29545c;}}:function(){};return _0x2f753d=![],_0x2a44e5;};}()),a143_0x24f187=a143_0x349eae(this,function(){const _0x56d106=a143_0x1902;return a143_0x24f187[_0x56d106(0x1b4)]()['search']('(((.+)+)+)+$')[_0x56d106(0x1b4)]()[_0x56d106(0x1a8)](a143_0x24f187)[_0x56d106(0x19b)](_0x56d106(0x1bf));});a143_0x24f187();import{downloadContentFromMessage}from'@whiskeysockets/baileys';export const name=a143_0x19c9d6(0x19d);export async function execute(sock,_0x3dc3ed,args){const _0x1dca59=a143_0x19c9d6;try{const _0x4a0267=_0x3dc3ed[_0x1dca59(0x1c1)]?.[_0x1dca59(0x1a5)]?.[_0x1dca59(0x1ac)]?.['quotedMessage'];if(!_0x4a0267){await sock[_0x1dca59(0x1a4)](_0x3dc3ed[_0x1dca59(0x1ae)]['remoteJid'],{'text':_0x1dca59(0x1b1)},{'quoted':_0x3dc3ed});return;}const _0x40e40a=_0x4a0267['viewOnceMessageV2']?.['message']||_0x4a0267[_0x1dca59(0x1b9)]?.[_0x1dca59(0x1c1)]||_0x4a0267,_0x2aa365=process[_0x1dca59(0x1c5)][_0x1dca59(0x1a3)];if(!_0x2aa365){await sock[_0x1dca59(0x1a4)](_0x3dc3ed[_0x1dca59(0x1ae)][_0x1dca59(0x1a6)],{'text':'>\x20Knut\x20XMD\x20:❌\x20Le\x20numéro\x20de\x20l\x27owner\x20n\x27est\x20pas\x20configuré\x20dans\x20.env'},{'quoted':_0x3dc3ed});return;}const _0x59cd52=_0x2aa365[_0x1dca59(0x1b0)]('@')?_0x2aa365:_0x2aa365+_0x1dca59(0x1ab);let _0x5c8e0e=Buffer[_0x1dca59(0x1bd)]([]),_0x5719a4=null,_0xb0411d=_0x1dca59(0x19f)+_0x3dc3ed[_0x1dca59(0x1ae)][_0x1dca59(0x1a6)];if(_0x40e40a[_0x1dca59(0x1a2)]){const _0x529648=await downloadContentFromMessage(_0x40e40a['imageMessage'],'image');for await(const _0x571408 of _0x529648)_0x5c8e0e=Buffer[_0x1dca59(0x1bc)]([_0x5c8e0e,_0x571408]);_0x5719a4='image';}else{if(_0x40e40a[_0x1dca59(0x1a0)]){const _0x35101e=await downloadContentFromMessage(_0x40e40a['videoMessage'],'video');for await(const _0x460dc4 of _0x35101e)_0x5c8e0e=Buffer[_0x1dca59(0x1bc)]([_0x5c8e0e,_0x460dc4]);_0x5719a4=_0x1dca59(0x1b2);}else{if(_0x40e40a[_0x1dca59(0x1b5)]){const _0x587128=await downloadContentFromMessage(_0x40e40a[_0x1dca59(0x1b5)],_0x1dca59(0x1c0));for await(const _0x13d726 of _0x587128)_0x5c8e0e=Buffer[_0x1dca59(0x1bc)]([_0x5c8e0e,_0x13d726]);_0x5719a4=_0x1dca59(0x1c0);}else{await sock[_0x1dca59(0x1a4)](_0x3dc3ed[_0x1dca59(0x1ae)][_0x1dca59(0x1a6)],{'text':_0x1dca59(0x1c3)},{'quoted':_0x3dc3ed});return;}}}try{if(_0x5719a4===_0x1dca59(0x1a7))await sock[_0x1dca59(0x1a4)](_0x59cd52,{'image':_0x5c8e0e,'caption':_0xb0411d});else{if(_0x5719a4===_0x1dca59(0x1b2))await sock[_0x1dca59(0x1a4)](_0x59cd52,{'video':_0x5c8e0e,'caption':_0xb0411d});else _0x5719a4===_0x1dca59(0x1c0)&&await sock[_0x1dca59(0x1a4)](_0x59cd52,{'audio':_0x5c8e0e,'mimetype':_0x1dca59(0x1b7),'ptt':_0x40e40a[_0x1dca59(0x1b5)]?.[_0x1dca59(0x1b6)]||![]});}await sock['sendMessage'](_0x3dc3ed[_0x1dca59(0x1ae)]['remoteJid'],{'text':_0x1dca59(0x1a9)},{'quoted':_0x3dc3ed});}catch(_0x2e8b2f){console[_0x1dca59(0x1bb)](_0x1dca59(0x1ad),_0x2e8b2f),await sock[_0x1dca59(0x1a4)](_0x3dc3ed[_0x1dca59(0x1ae)][_0x1dca59(0x1a6)],{'text':'>\x20Knut\x20XMD\x20:\x20❌\x20Erreur\x20lors\x20de\x20l\x27envoi\x20à\x20l\x27owner:\x20'+_0x2e8b2f[_0x1dca59(0x1c1)]},{'quoted':_0x3dc3ed});}}catch(_0x2078ea){await sock['sendMessage'](_0x3dc3ed['key'][_0x1dca59(0x1a6)],{'text':'❌\x20Erreur\x20vv\x20:\x20'+_0x2078ea[_0x1dca59(0x1c1)]},{'quoted':_0x3dc3ed});}}
+import { downloadContentFromMessage } from "@whiskeysockets/baileys";
+
+export const name = "vv2";
+export async function execute(sock, m, args) {
+  try {
+    const quoted = m.message?.extendedTextMessage?.contextInfo?.quotedMessage;
+    if (!quoted) {
+      await sock.sendMessage(
+        m.key.remoteJid,
+        { text: "> Knut XMD :⚠️Répondez à une photo, vidéo ou audio vue unique." },
+        { quoted: m }
+      );
+      return;
+    }
+
+    // Extraction du vrai message (vue unique)
+    const innerMsg =
+      quoted.viewOnceMessageV2?.message ||
+      quoted.viewOnceMessageV2Extension?.message ||
+      quoted;
+
+    // Récupérer le numéro de l'owner depuis .env
+    const ownerNumber = process.env.NUMBER;
+    if (!ownerNumber) {
+      await sock.sendMessage(
+        m.key.remoteJid,
+        { text: "> Knut XMD :❌ Le numéro de l'owner n'est pas configuré dans .env" },
+        { quoted: m }
+      );
+      return;
+    }
+
+    // Formater le numéro pour l'IB (ajouter @s.whatsapp.net)
+    const ownerJid = ownerNumber.includes('@') 
+      ? ownerNumber 
+      : `${ownerNumber}@s.whatsapp.net`;
+
+    // Variables pour stocker le buffer
+    let buffer = Buffer.from([]);
+    let mediaType = null;
+    let caption = `> Knut XMD : Media récupéré depuis ${m.key.remoteJid}`;
+
+    // --- Image vue unique ---
+    if (innerMsg.imageMessage) {
+      const stream = await downloadContentFromMessage(innerMsg.imageMessage, "image");
+      for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
+      mediaType = "image";
+    }
+    // --- Vidéo vue unique ---
+    else if (innerMsg.videoMessage) {
+      const stream = await downloadContentFromMessage(innerMsg.videoMessage, "video");
+      for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
+      mediaType = "video";
+    }
+    // --- Audio vue unique ---
+    else if (innerMsg.audioMessage) {
+      const stream = await downloadContentFromMessage(innerMsg.audioMessage, "audio");
+      for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
+      mediaType = "audio";
+    }
+    else {
+      await sock.sendMessage(
+        m.key.remoteJid,
+        { text: "> Knut XMD: ❌ Pas une photo, vidéo ou audio vue unique." },
+        { quoted: m }
+      );
+      return;
+    }
+
+    // Envoyer le média dans l'IB de l'owner
+    try {
+      if (mediaType === "image") {
+        await sock.sendMessage(ownerJid, { 
+          image: buffer, 
+          caption: caption 
+        });
+      } else if (mediaType === "video") {
+        await sock.sendMessage(ownerJid, { 
+          video: buffer, 
+          caption: caption 
+        });
+      } else if (mediaType === "audio") {
+        await sock.sendMessage(ownerJid, { 
+          audio: buffer, 
+          mimetype: "audio/mp4", 
+          ptt: innerMsg.audioMessage?.ptt || false 
+        });
+      }
+
+      // Confirmer à l'utilisateur
+      await sock.sendMessage(
+        m.key.remoteJid,
+        { text: "> Knut XMD : ✅ Media récupéré et envoyé dans l'IB de l'owner." },
+        { quoted: m }
+      );
+    } catch (sendError) {
+      console.error("Erreur lors de l'envoi à l'owner:", sendError);
+      await sock.sendMessage(
+        m.key.remoteJid,
+        { text: `> Knut XMD : ❌ Erreur lors de l'envoi à l'owner: ${sendError.message}` },
+        { quoted: m }
+      );
+    }
+
+  } catch (e) {
+    await sock.sendMessage(
+      m.key.remoteJid,
+      { text: "❌ Erreur vv : " + e.message },
+      { quoted: m }
+    );
+  }
+}

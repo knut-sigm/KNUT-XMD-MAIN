@@ -1,1 +1,83 @@
-const a121_0x47bfaf=a121_0x5861;(function(_0x25d9c8,_0x2f1a13){const _0x487a2b=a121_0x5861,_0x578955=_0x25d9c8();while(!![]){try{const _0x2ad40a=-parseInt(_0x487a2b(0x16c))/0x1*(parseInt(_0x487a2b(0x14e))/0x2)+parseInt(_0x487a2b(0x156))/0x3*(parseInt(_0x487a2b(0x163))/0x4)+-parseInt(_0x487a2b(0x162))/0x5+-parseInt(_0x487a2b(0x16b))/0x6*(-parseInt(_0x487a2b(0x159))/0x7)+parseInt(_0x487a2b(0x16e))/0x8*(-parseInt(_0x487a2b(0x168))/0x9)+-parseInt(_0x487a2b(0x14c))/0xa+parseInt(_0x487a2b(0x15b))/0xb*(parseInt(_0x487a2b(0x161))/0xc);if(_0x2ad40a===_0x2f1a13)break;else _0x578955['push'](_0x578955['shift']());}catch(_0x27319c){_0x578955['push'](_0x578955['shift']());}}}(a121_0x37de,0x6cf6e));function a121_0x5861(_0x2ac11a,_0x394a67){_0x2ac11a=_0x2ac11a-0x14b;const _0x27e432=a121_0x37de();let _0x92a6=_0x27e432[_0x2ac11a];return _0x92a6;}const a121_0x392695=(function(){let _0x7d5ace=!![];return function(_0x163167,_0x371558){const _0x6d77e1=_0x7d5ace?function(){const _0x23a19c=a121_0x5861;if(_0x371558){const _0xf1f2f1=_0x371558[_0x23a19c(0x150)](_0x163167,arguments);return _0x371558=null,_0xf1f2f1;}}:function(){};return _0x7d5ace=![],_0x6d77e1;};}()),a121_0x92a6=a121_0x392695(this,function(){const _0x121824=a121_0x5861;return a121_0x92a6[_0x121824(0x160)]()[_0x121824(0x14b)](_0x121824(0x151))['toString']()[_0x121824(0x169)](a121_0x92a6)[_0x121824(0x14b)](_0x121824(0x151));});a121_0x92a6();function a121_0x37de(){const _0x3d85ba=['31880NWoIIc','search','2150530LALKND','join','18gzfTmo','https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3','apply','(((.+)+)+)+$','remoteJid','>\x20⚠️\x20KNUT\x20XMD:\x20Fournissez\x20une\x20URL\x20Spotify\x20ou\x20un\x20nom\x20de\x20musique.\x0aEx:\x20.spotify\x20https://open.spotify.com/track/123\x0aou:\x20.spotify\x20Daft\x20Punk\x20-\x20Get\x20Lucky','https://open.spotify.com/track/5UVz0dJf2t8Z5R8vBTzKlx','>\x20⚠️\x20KNUT\x20XMD:\x20Impossible\x20de\x20télécharger:\x20','3mJFblV','spotify:','now','3031cWHDfD','sendMessage','37004xXHIQZ','❌\x20Erreur\x20spotify\x20:','Erreur\x20inconnue','>\x20🎧\x20Spotify\x20Audio\x20Ready!\x0a⏱️\x20','includes','toString','7332kaoEuH','3557935KqfhOo','18412GqoBZR','length','message','key','spotifymusic','1701TCBGzI','constructor','>\x20🎵\x20𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔\x20𝑆𝑝𝑜𝑡𝑖𝑓𝑦\x20𝑎𝑢𝑑𝑖𝑜...','11298ZXHnHh','83247gfpByW','spotifydl'];a121_0x37de=function(){return _0x3d85ba;};return a121_0x37de();}export const name='spotify';export const aliases=[a121_0x47bfaf(0x16d),a121_0x47bfaf(0x167)];export async function execute(sock,msg,args){const _0x1c3824=a121_0x47bfaf;try{const from=msg['key']['remoteJid'],_0x40ad93=Date['now']();if(!args||args[_0x1c3824(0x164)]===0x0){await sock[_0x1c3824(0x15a)](from,{'text':_0x1c3824(0x153)},{'quoted':msg});return;}const _0x1292f0=args[_0x1c3824(0x14d)]('\x20');let _0x400efb=_0x1292f0;!_0x1292f0[_0x1c3824(0x15f)]('open.spotify.com')&&!_0x1292f0[_0x1c3824(0x15f)](_0x1c3824(0x157))&&(_0x400efb=_0x1c3824(0x154));const _0x42d5ed=await sock['sendMessage'](from,{'text':_0x1c3824(0x16a)},{'quoted':msg}),_0x236e41=extractSpotifyId(_0x400efb);await new Promise(_0xdc8ace=>setTimeout(_0xdc8ace,0xbb8));const _0x14662d=Date[_0x1c3824(0x158)]()-_0x40ad93;await sock[_0x1c3824(0x15a)](from,{'text':_0x1c3824(0x15e)+_0x14662d+'ms\x0a📦\x20Envoi\x20en\x20cours...'},{'quoted':_0x42d5ed});const _0x1289f6=_0x1c3824(0x14f);await sock[_0x1c3824(0x15a)](from,{'audio':{'url':_0x1289f6},'mimetype':'audio/mpeg','fileName':'spotify_track.mp3','ptt':![]},{'quoted':_0x42d5ed}),await sock[_0x1c3824(0x15a)](from,{'text':'>\x20✅\x20KNUT\x20XMD:\x20Audio\x20Spotify\x20téléchargé!\x0a🎵\x20Titre:\x20Get\x20Lucky\x0a👤\x20Artiste:\x20Daft\x20Punk\x0a⏱️\x20Durée:\x204:08'},{'quoted':_0x42d5ed});}catch(_0x55d819){console['error'](_0x1c3824(0x15c),_0x55d819),await sock[_0x1c3824(0x15a)](msg[_0x1c3824(0x166)][_0x1c3824(0x152)],{'text':_0x1c3824(0x155)+(_0x55d819[_0x1c3824(0x165)]||_0x1c3824(0x15d))},{'quoted':msg});}};function extractSpotifyId(_0x8f8cab){const _0x67a21a=_0x8f8cab['match'](/spotify\.com\/track\/([a-zA-Z0-9]+)/)||_0x8f8cab['match'](/spotify:track:([a-zA-Z0-9]+)/);return _0x67a21a?_0x67a21a[0x1]:null;}
+export const name = "spotify";
+export const aliases = ["spotifydl", "spotifymusic"];
+
+export async function execute(sock, msg, args) {
+  try {
+    const from = msg.key.remoteJid;
+    const startTime = Date.now();
+
+    // Vérifier si une URL/requête est fournie
+    if (!args || args.length === 0) {
+      await sock.sendMessage(from, { 
+        text: "> ⚠️ KNUT XMD: Fournissez une URL Spotify ou un nom de musique.\nEx: .spotify https://open.spotify.com/track/123\nou: .spotify Daft Punk - Get Lucky" 
+      }, { quoted: msg });
+      return;
+    }
+
+    const input = args.join(" ");
+    let spotifyUrl = input;
+    
+    // Si ce n'est pas une URL, on suppose que c'est une recherche
+    if (!input.includes("open.spotify.com") && !input.includes("spotify:")) {
+      // Dans une vraie implémentation, vous feriez une recherche d'abord
+      // Pour l'exemple, on simule
+      spotifyUrl = "https://open.spotify.com/track/5UVz0dJf2t8Z5R8vBTzKlx"; // URL exemple
+    }
+
+    // Message de traitement
+    const processingMsg = await sock.sendMessage(from, { 
+      text: `> 🎵 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔 𝑆𝑝𝑜𝑡𝑖𝑓𝑦 𝑎𝑢𝑑𝑖𝑜...` 
+    }, { quoted: msg });
+
+    // SIMULATION - À REMPLACER PAR LE VRAI TÉLÉCHARGEMENT
+    // ----------------------------------------------------
+    // 1. Extraire l'ID de la piste
+    const trackId = extractSpotifyId(spotifyUrl);
+    
+    // 2. Utiliser un service de téléchargement Spotify
+    // Ex: spotify-dl, spotDL, ou une API
+    // const audioData = await downloadSpotifyTrack(trackId);
+    // ----------------------------------------------------
+    
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    
+    const processingTime = Date.now() - startTime;
+    
+    // Message informatif
+    await sock.sendMessage(from, {
+      text: `> 🎧 Spotify Audio Ready!\n⏱️ ${processingTime}ms\n📦 Envoi en cours...`
+    }, { quoted: processingMsg });
+    
+    // ICI - ENVOI RÉEL DE L'AUDIO
+    // À REMPLACER PAR VOTRE LOGIQUE DE TÉLÉCHARGEMENT
+    
+    // Exemple avec une URL audio de test
+    // En production, utilisez le buffer de l'audio Spotify téléchargé
+    const audioTestUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3";
+    
+    await sock.sendMessage(from, {
+      audio: { url: audioTestUrl },
+      mimetype: 'audio/mpeg',
+      fileName: 'spotify_track.mp3',
+      ptt: false
+    }, { quoted: processingMsg });
+    
+    // Message de confirmation
+    await sock.sendMessage(from, {
+      text: `> ✅ KNUT XMD: Audio Spotify téléchargé!\n🎵 Titre: Get Lucky\n👤 Artiste: Daft Punk\n⏱️ Durée: 4:08`
+    }, { quoted: processingMsg });
+
+  } catch (err) {
+    console.error("❌ Erreur spotify :", err);
+    await sock.sendMessage(msg.key.remoteJid, {
+      text: `> ⚠️ KNUT XMD: Impossible de télécharger: ${err.message || "Erreur inconnue"}`
+    }, { quoted: msg });
+  }
+};
+
+// Fonction pour extraire l'ID Spotify
+function extractSpotifyId(url) {
+  const match = url.match(/spotify\.com\/track\/([a-zA-Z0-9]+)/) || 
+                url.match(/spotify:track:([a-zA-Z0-9]+)/);
+  return match ? match[1] : null;
+}

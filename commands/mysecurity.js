@@ -1,1 +1,52 @@
-const a95_0x134e3b=a95_0x4b90;(function(_0x2e5f99,_0x4cb4bb){const _0x1902a1=a95_0x4b90,_0x29e4dc=_0x2e5f99();while(!![]){try{const _0x142572=-parseInt(_0x1902a1(0x176))/0x1+parseInt(_0x1902a1(0x170))/0x2*(-parseInt(_0x1902a1(0x177))/0x3)+-parseInt(_0x1902a1(0x189))/0x4+-parseInt(_0x1902a1(0x16b))/0x5+-parseInt(_0x1902a1(0x166))/0x6*(-parseInt(_0x1902a1(0x185))/0x7)+parseInt(_0x1902a1(0x179))/0x8*(parseInt(_0x1902a1(0x16e))/0x9)+-parseInt(_0x1902a1(0x186))/0xa*(-parseInt(_0x1902a1(0x181))/0xb);if(_0x142572===_0x4cb4bb)break;else _0x29e4dc['push'](_0x29e4dc['shift']());}catch(_0x2cc772){_0x29e4dc['push'](_0x29e4dc['shift']());}}}(a95_0x2f12,0xeaa4c));const a95_0x118a7f=(function(){let _0x132279=!![];return function(_0x18d050,_0x321328){const _0x83d8aa=_0x132279?function(){if(_0x321328){const _0x28032a=_0x321328['apply'](_0x18d050,arguments);return _0x321328=null,_0x28032a;}}:function(){};return _0x132279=![],_0x83d8aa;};}()),a95_0x2ec93e=a95_0x118a7f(this,function(){const _0x52244e=a95_0x4b90;return a95_0x2ec93e[_0x52244e(0x187)]()[_0x52244e(0x17e)](_0x52244e(0x169))[_0x52244e(0x187)]()[_0x52244e(0x16d)](a95_0x2ec93e)[_0x52244e(0x17e)](_0x52244e(0x169));});a95_0x2ec93e();function a95_0x4b90(_0x1e3ca4,_0x154df4){_0x1e3ca4=_0x1e3ca4-0x166;const _0x3a19a6=a95_0x2f12();let _0x2ec93e=_0x3a19a6[_0x1e3ca4];return _0x2ec93e;}import{loadSudo}from'../index.js';export const name=a95_0x134e3b(0x16c);function a95_0x2f12(){const _0x157ffe=['replace','❌\x20Erreur.','⛔\x20Accès\x20refusé.','111342ySKaQN','204670NIfHDS','toString','map','6427872MOGASk','564Nnmppt','toLowerCase','📌\x20*MySecurity*\x0aon\x20|\x20off\x20|\x20state','(((.+)+)+)+$','participant','2203800jbMgtI','mysecurity','constructor','9BIovgv','off','1027112qmwMBB','📞\x20Call:\x20','split','key','sendMessage','enabled','1887402HOYElJ','3mOWDxJ','mysecurity\x20error:','12814808VaYHJQ','antiUnknown','antiCall','\x0a👤\x20Unknown:\x20','✅\x20Anti‑Call\x20&\x20Anti‑Unknown\x20ON','search','❌\x20Anti‑Call\x20&\x20Anti‑Unknown\x20OFF','owners','1243mSRQVY'];a95_0x2f12=function(){return _0x157ffe;};return a95_0x2f12();}export async function execute(sock,msg,args,from){const _0x5c6aa2=a95_0x134e3b;try{const _0x172449=msg[_0x5c6aa2(0x173)][_0x5c6aa2(0x16a)]||from,_0x4acc6f=_0x172449[_0x5c6aa2(0x172)]('@')[0x0][_0x5c6aa2(0x182)](/[^0-9]/g,''),_0x1bb356=(global[_0x5c6aa2(0x180)]||[])[_0x5c6aa2(0x188)](_0x447b61=>_0x447b61[_0x5c6aa2(0x182)](/[^0-9]/g,'')),_0x46c27a=loadSudo()[_0x5c6aa2(0x188)](_0x17d85c=>_0x17d85c[_0x5c6aa2(0x182)](/[^0-9]/g,''));if(!_0x1bb356['includes'](_0x4acc6f)&&!_0x46c27a['includes'](_0x4acc6f)){await sock[_0x5c6aa2(0x174)](from,{'text':_0x5c6aa2(0x184)},{'quoted':msg});return;}if(!global[_0x5c6aa2(0x17b)])global[_0x5c6aa2(0x17b)]={'enabled':![]};if(!global[_0x5c6aa2(0x17a)])global[_0x5c6aa2(0x17a)]={'enabled':![]};const _0x16899f=args[0x0]?.[_0x5c6aa2(0x167)]();if(_0x16899f==='state'){await sock[_0x5c6aa2(0x174)](from,{'text':_0x5c6aa2(0x171)+(global[_0x5c6aa2(0x17b)][_0x5c6aa2(0x175)]?'✅':'❌')+_0x5c6aa2(0x17c)+(global['antiUnknown']['enabled']?'✅':'❌')},{'quoted':msg});return;}if(_0x16899f==='on'){global['antiCall'][_0x5c6aa2(0x175)]=!![],global[_0x5c6aa2(0x17a)]['enabled']=!![],await sock[_0x5c6aa2(0x174)](from,{'text':_0x5c6aa2(0x17d)},{'quoted':msg});return;}if(_0x16899f===_0x5c6aa2(0x16f)){global[_0x5c6aa2(0x17b)][_0x5c6aa2(0x175)]=![],global[_0x5c6aa2(0x17a)][_0x5c6aa2(0x175)]=![],await sock[_0x5c6aa2(0x174)](from,{'text':_0x5c6aa2(0x17f)},{'quoted':msg});return;}await sock[_0x5c6aa2(0x174)](from,{'text':_0x5c6aa2(0x168)},{'quoted':msg});}catch(_0x10f14d){console['error'](_0x5c6aa2(0x178),_0x10f14d),await sock[_0x5c6aa2(0x174)](msg['key']['remoteJid'],{'text':_0x5c6aa2(0x183)},{'quoted':msg});}}
+import { loadSudo } from "../index.js";
+
+export const name = "mysecurity";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    if (!owners.includes(senderNum) && !sudoList.includes(senderNum)) {
+      await sock.sendMessage(from, { text: "⛔ Accès refusé." }, { quoted: msg });
+      return;
+    }
+
+    if (!global.antiCall) global.antiCall = { enabled: false };
+    if (!global.antiUnknown) global.antiUnknown = { enabled: false };
+
+    const arg = args[0]?.toLowerCase();
+
+    if (arg === "state") {
+      await sock.sendMessage(from, { 
+        text: `📞 Call: ${global.antiCall.enabled ? '✅' : '❌'}\n👤 Unknown: ${global.antiUnknown.enabled ? '✅' : '❌'}`
+      }, { quoted: msg });
+      return;
+    }
+
+    if (arg === "on") {
+      global.antiCall.enabled = true;
+      global.antiUnknown.enabled = true;
+      await sock.sendMessage(from, { text: "✅ Anti‑Call & Anti‑Unknown ON" }, { quoted: msg });
+      return;
+    }
+
+    if (arg === "off") {
+      global.antiCall.enabled = false;
+      global.antiUnknown.enabled = false;
+      await sock.sendMessage(from, { text: "❌ Anti‑Call & Anti‑Unknown OFF" }, { quoted: msg });
+      return;
+    }
+
+    // Aide minimaliste
+    await sock.sendMessage(from, {
+      text: `📌 *MySecurity*\non | off | state`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("mysecurity error:", err);
+    await sock.sendMessage(msg.key.remoteJid, { text: "❌ Erreur." }, { quoted: msg });
+  }
+}

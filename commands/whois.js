@@ -1,1 +1,84 @@
-const a147_0xed389f=a147_0x3252;(function(_0x4eaf0e,_0x6c1351){const _0x30a39b=a147_0x3252,_0xb4984f=_0x4eaf0e();while(!![]){try{const _0x33c1d0=parseInt(_0x30a39b(0x1ac))/0x1+parseInt(_0x30a39b(0x1af))/0x2*(parseInt(_0x30a39b(0x1ab))/0x3)+parseInt(_0x30a39b(0x1b9))/0x4+parseInt(_0x30a39b(0x1b2))/0x5*(-parseInt(_0x30a39b(0x19e))/0x6)+parseInt(_0x30a39b(0x1ad))/0x7+-parseInt(_0x30a39b(0x1c2))/0x8*(parseInt(_0x30a39b(0x1bf))/0x9)+-parseInt(_0x30a39b(0x1aa))/0xa;if(_0x33c1d0===_0x6c1351)break;else _0xb4984f['push'](_0xb4984f['shift']());}catch(_0x26b113){_0xb4984f['push'](_0xb4984f['shift']());}}}(a147_0x362e,0xcf6f7));const a147_0x3c50d4=(function(){let _0x3f280d=!![];return function(_0x224403,_0x365003){const _0x1c5589=_0x3f280d?function(){const _0x62e4f3=a147_0x3252;if(_0x365003){const _0x237f95=_0x365003[_0x62e4f3(0x1be)](_0x224403,arguments);return _0x365003=null,_0x237f95;}}:function(){};return _0x3f280d=![],_0x1c5589;};}()),a147_0x2646c5=a147_0x3c50d4(this,function(){const _0xd3c79f=a147_0x3252;return a147_0x2646c5[_0xd3c79f(0x1b8)]()[_0xd3c79f(0x1b5)](_0xd3c79f(0x1b4))[_0xd3c79f(0x1b8)]()[_0xd3c79f(0x1a0)](a147_0x2646c5)[_0xd3c79f(0x1b5)](_0xd3c79f(0x1b4));});function a147_0x3252(_0x2853d8,_0x1c4d9c){_0x2853d8=_0x2853d8-0x19e;const _0x1244ee=a147_0x362e();let _0x2646c5=_0x1244ee[_0x2853d8];return _0x2646c5;}function a147_0x362e(){const _0x508fb1=['792564IVBBRN','extendedTextMessage','split','>\x20Knut\x20XMD\x20:\x0a>\x20👤\x20Numéro\x20enregistré\x20:\x20+','message','apply','63CbXDli','participant','whois','1226896GazsFi','2694tkifbN','error','constructor','contextInfo','mentionedJid','sendMessage','replace','image','jid','quotedMessage','profilePictureUrl','key','8784000eTSuLD','2387751FBdhgD','519382wMzpqw','9177336ypHqid','onWhatsApp','2oAWKIs','\x0a\x0a>\x20by\x20Knut\x0a','length','255ccgTka','>\x20Knut\x20MD\x20:\x20❌\x20Erreur\x20whois\x20:','(((.+)+)+)+$','search','>\x20Knut\x20MD\x20:\x20Erreur\x20whois.','catch','toString'];a147_0x362e=function(){return _0x508fb1;};return a147_0x362e();}a147_0x2646c5();export const name=a147_0xed389f(0x1c1);export async function execute(sock,msg,args){const _0x477632=a147_0xed389f,from=msg[_0x477632(0x1a9)]['remoteJid'];try{let _0x3a9dff;if(msg['message']?.['extendedTextMessage']?.[_0x477632(0x1a1)]?.['mentionedJid']?.[_0x477632(0x1b1)])_0x3a9dff=msg[_0x477632(0x1bd)]['extendedTextMessage'][_0x477632(0x1a1)][_0x477632(0x1a2)][0x0];else{if(msg[_0x477632(0x1bd)]?.['extendedTextMessage']?.['contextInfo']?.[_0x477632(0x1a7)])_0x3a9dff=msg[_0x477632(0x1bd)][_0x477632(0x1ba)][_0x477632(0x1a1)][_0x477632(0x1c0)];else args[_0x477632(0x1b1)]?_0x3a9dff=args[0x0][_0x477632(0x1a4)](/[^0-9]/g,'')+'@s.whatsapp.net':_0x3a9dff=msg[_0x477632(0x1a9)][_0x477632(0x1c0)]||from;}const _0x20f680=await sock[_0x477632(0x1ae)](_0x3a9dff),_0x22f06b=await sock[_0x477632(0x1a8)](_0x3a9dff,_0x477632(0x1a5))[_0x477632(0x1b7)](()=>null),_0x3fb5b0=_0x20f680[0x0]?.[_0x477632(0x1a6)]?.[_0x477632(0x1bb)]('@')[0x0]||_0x3a9dff[_0x477632(0x1bb)]('@')[0x0],_0x4e2045=_0x3a9dff['split']('@')[0x0];let _0x295f14=_0x477632(0x1bc)+_0x3fb5b0+'\x0a>\x20📱\x20Numéro\x20JID\x20:\x20+'+_0x4e2045+_0x477632(0x1b0);if(!_0x22f06b){_0x295f14+='\x0a🐺🫩\x20Aucune\x20photo\x20de\x20profil\x20détectée.',await sock[_0x477632(0x1a3)](from,{'text':'\x0a'+_0x295f14},{'quoted':msg});return;}await sock[_0x477632(0x1a3)](from,{'image':{'url':_0x22f06b},'caption':'\x0a'+_0x295f14},{'quoted':msg});}catch(_0x770399){console[_0x477632(0x19f)](_0x477632(0x1b3),_0x770399),await sock['sendMessage'](from,{'text':_0x477632(0x1b6)},{'quoted':msg});}}
+export const name = "whois";
+
+export async function execute(sock, msg, args) {
+
+  const from = msg.key.remoteJid;
+
+  try {
+
+    // Déterminer la cible : mention, réponse ou numéro fourni
+
+    let targetJid;
+
+    if (msg.message?.extendedTextMessage?.contextInfo?.mentionedJid?.length) {
+
+      targetJid = msg.message.extendedTextMessage.contextInfo.mentionedJid[0];
+
+    } else if (msg.message?.extendedTextMessage?.contextInfo?.quotedMessage) {
+
+      targetJid = msg.message.extendedTextMessage.contextInfo.participant;
+
+    } else if (args.length) {
+
+      targetJid = args[0].replace(/[^0-9]/g, "") + "@s.whatsapp.net";
+
+    } else {
+
+      targetJid = msg.key.participant || from;
+
+    }
+
+    // Récupérer les infos du contact
+
+    const contact = await sock.onWhatsApp(targetJid);
+
+    const profileUrl = await sock.profilePictureUrl(targetJid, "image").catch(() => null);
+
+    // Numéro enregistré sur WhatsApp
+
+    const userNumber = contact[0]?.jid?.split("@")[0] || targetJid.split("@")[0];
+
+    // Numéro complet pour mention
+
+    const number = targetJid.split("@")[0];
+
+    // Texte KNUT MDX V2
+
+    let whoisText = `> Knut XMD :
+> 👤 Numéro enregistré : +${userNumber}
+> 📱 Numéro JID : +${number}
+
+> by Knut
+`;
+
+    // Si pas de photo de profil
+
+    if (!profileUrl) {
+
+      whoisText += "\n🐺🫩 Aucune photo de profil détectée.";
+
+      await sock.sendMessage(from, { text: `\n${whoisText}` }, { quoted: msg });
+
+      return;
+
+    }
+
+    // Sinon, envoyer la photo + légende
+
+    await sock.sendMessage(from, {
+
+      image: { url: profileUrl },
+
+      caption: `\n${whoisText}`
+
+    }, { quoted: msg });
+
+  } catch (err) {
+
+    console.error("> Knut MD : ❌ Erreur whois :", err);
+
+    await sock.sendMessage(from, { text: "> Knut MD : Erreur whois." }, { quoted: msg });
+
+  }
+
+}

@@ -1,1 +1,63 @@
-const a145_0x3227a4=a145_0x8197;(function(_0xc219ac,_0x1fa199){const _0x90318c=a145_0x8197,_0x1b21ee=_0xc219ac();while(!![]){try{const _0x11ed4d=parseInt(_0x90318c(0x12b))/0x1*(-parseInt(_0x90318c(0x136))/0x2)+-parseInt(_0x90318c(0x12c))/0x3*(-parseInt(_0x90318c(0x138))/0x4)+-parseInt(_0x90318c(0x13c))/0x5*(-parseInt(_0x90318c(0x143))/0x6)+-parseInt(_0x90318c(0x145))/0x7+parseInt(_0x90318c(0x130))/0x8+-parseInt(_0x90318c(0x137))/0x9*(-parseInt(_0x90318c(0x144))/0xa)+parseInt(_0x90318c(0x147))/0xb;if(_0x11ed4d===_0x1fa199)break;else _0x1b21ee['push'](_0x1b21ee['shift']());}catch(_0x360d93){_0x1b21ee['push'](_0x1b21ee['shift']());}}}(a145_0x3a7b,0xc818c));const a145_0xf3791=(function(){let _0x2254d6=!![];return function(_0x25344d,_0x13f555){const _0xb97c1d=_0x2254d6?function(){if(_0x13f555){const _0x2dedf4=_0x13f555['apply'](_0x25344d,arguments);return _0x13f555=null,_0x2dedf4;}}:function(){};return _0x2254d6=![],_0xb97c1d;};}()),a145_0x522a43=a145_0xf3791(this,function(){const _0x355346=a145_0x8197;return a145_0x522a43[_0x355346(0x13f)]()[_0x355346(0x131)]('(((.+)+)+)+$')[_0x355346(0x13f)]()[_0x355346(0x12f)](a145_0x522a43)['search']('(((.+)+)+)+$');});function a145_0x8197(_0x1e46fe,_0x1f55b2){_0x1e46fe=_0x1e46fe-0x12a;const _0x144a24=a145_0x3a7b();let _0x522a43=_0x144a24[_0x1e46fe];return _0x522a43;}a145_0x522a43();function a145_0x3a7b(){const _0x298f03=['split','participant','message','remoteJid','https://some-random-api.com/canvas/overlay/wasted?avatar=','profilePictureUrl','key','arraybuffer','extendedTextMessage','error','9pbZypG','1092891NtvQCC','wasted','@g.us','constructor','5870208hSpEQI','search','>\x20Knut\x20XMD:❌\x20Impossible\x20de\x20créer\x20l\x27image\x20Wasted.\x20Réessayez\x20plus\x20tard.','data','sendMessage','contextInfo','328774YxBeAE','11921058PlyJiK','4LwCtRl','🚨\x20','⚰️\x20*Wasted*\x20:\x20','mentionedJid','3215eKIjnC','>\x20Knut\x20XMD:⚠️\x20Impossible\x20d\x27expulser\x20l\x27utilisateur.\x20Vérifiez\x20que\x20j\x27ai\x20les\x20droits\x20admin\x20!','\x20a\x20été\x20expulsé\x20du\x20groupe\x20!','toString','remove','❌\x20Impossible\x20de\x20kicker\x20l\x27utilisateur\x20:','length','1758oJfDbH','10jRaLkr','10542819jdaypZ','get','13135782gzoteO','❌\x20Erreur\x20Wasted\x20:'];a145_0x3a7b=function(){return _0x298f03;};return a145_0x3a7b();}import a145_0x3cfbde from'axios';export const name=a145_0x3227a4(0x12d);export async function execute(sock,msg,args){const _0x1ad82d=a145_0x3227a4;try{const from=msg[_0x1ad82d(0x14f)][_0x1ad82d(0x14c)],_0x4711d0=from['endsWith'](_0x1ad82d(0x12e));let _0x17d12f=null;const _0x16615f=msg[_0x1ad82d(0x14b)]?.[_0x1ad82d(0x151)]?.[_0x1ad82d(0x135)]?.[_0x1ad82d(0x13b)];if(_0x16615f?.[_0x1ad82d(0x142)]>0x0)_0x17d12f=_0x16615f[0x0];const _0x3c4aea=msg[_0x1ad82d(0x14b)]?.[_0x1ad82d(0x151)]?.[_0x1ad82d(0x135)]?.[_0x1ad82d(0x14a)];if(!_0x17d12f&&_0x3c4aea)_0x17d12f=_0x3c4aea;if(!_0x17d12f){await sock['sendMessage'](from,{'text':'>\x20Knut\x20XMD:⚠️\x20Veuillez\x20mentionner\x20quelqu’un\x20ou\x20répondre\x20à\x20son\x20message\x20pour\x20utiliser\x20la\x20commande\x20Wasted\x20!'},{'quoted':msg});return;}let _0x4fcd10;try{_0x4fcd10=await sock[_0x1ad82d(0x14e)](_0x17d12f,'image');}catch{_0x4fcd10='https://i.imgur.com/2wzGhpF.jpeg';}const _0x19d732=_0x1ad82d(0x14d)+encodeURIComponent(_0x4fcd10),_0x2e4e87=await a145_0x3cfbde[_0x1ad82d(0x146)](_0x19d732,{'responseType':_0x1ad82d(0x150)});await sock[_0x1ad82d(0x134)](from,{'image':Buffer['from'](_0x2e4e87[_0x1ad82d(0x133)]),'caption':_0x1ad82d(0x13a)+_0x17d12f[_0x1ad82d(0x149)]('@')[0x0]+'\x20💀\x0a\x0aRepose\x20en\x20paix…'},{'quoted':msg});if(_0x4711d0)try{await sock['groupParticipantsUpdate'](from,[_0x17d12f],_0x1ad82d(0x140)),await sock[_0x1ad82d(0x134)](from,{'text':_0x1ad82d(0x139)+_0x17d12f['split']('@')[0x0]+_0x1ad82d(0x13e)});}catch(_0x37de6c){console['error'](_0x1ad82d(0x141),_0x37de6c),await sock['sendMessage'](from,{'text':_0x1ad82d(0x13d)});}}catch(_0x1df3fb){console[_0x1ad82d(0x12a)](_0x1ad82d(0x148),_0x1df3fb),await sock['sendMessage'](msg['key'][_0x1ad82d(0x14c)],{'text':_0x1ad82d(0x132)},{'quoted':msg});}}
+import axios from "axios";
+
+export const name = "wasted";
+
+export async function execute(sock, msg, args) {
+  try {
+    const from = msg.key.remoteJid;
+    const isGroup = from.endsWith("@g.us");
+
+    // Identifier l'utilisateur ciblé
+    let userToWaste = null;
+
+    // Mention
+    const mentioned = msg.message?.extendedTextMessage?.contextInfo?.mentionedJid;
+    if (mentioned?.length > 0) userToWaste = mentioned[0];
+
+    // Réponse
+    const participant = msg.message?.extendedTextMessage?.contextInfo?.participant;
+    if (!userToWaste && participant) userToWaste = participant;
+
+    if (!userToWaste) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD:⚠️ Veuillez mentionner quelqu’un ou répondre à son message pour utiliser la commande Wasted !" 
+      }, { quoted: msg });
+      return;
+    }
+
+    // Obtenir la photo de profil
+    let profilePic;
+    try {
+      profilePic = await sock.profilePictureUrl(userToWaste, "image");
+    } catch {
+      profilePic = "https://i.imgur.com/2wzGhpF.jpeg"; // image par défaut
+    }
+
+    // Générer l'image Wasted
+    const apiUrl = `https://some-random-api.com/canvas/overlay/wasted?avatar=${encodeURIComponent(profilePic)}`;
+    const response = await axios.get(apiUrl, { responseType: "arraybuffer" });
+
+    // Envoyer l'image Wasted
+    await sock.sendMessage(from, {
+      image: Buffer.from(response.data),
+      caption: `⚰️ *Wasted* : ${userToWaste.split("@")[0]} 💀\n\nRepose en paix…`
+    }, { quoted: msg });
+
+    // Supprimer la personne si c’est un groupe
+    if (isGroup) {
+      try {
+        await sock.groupParticipantsUpdate(from, [userToWaste], "remove");
+        await sock.sendMessage(from, { text: `🚨 ${userToWaste.split("@")[0]} a été expulsé du groupe !` });
+      } catch (kickError) {
+        console.error("❌ Impossible de kicker l'utilisateur :", kickError);
+        await sock.sendMessage(from, { text: "> Knut XMD:⚠️ Impossible d'expulser l'utilisateur. Vérifiez que j'ai les droits admin !" });
+      }
+    }
+
+  } catch (err) {
+    console.error("❌ Erreur Wasted :", err);
+    await sock.sendMessage(msg.key.remoteJid, {
+      text: "> Knut XMD:❌ Impossible de créer l'image Wasted. Réessayez plus tard."
+    }, { quoted: msg });
+  }
+}

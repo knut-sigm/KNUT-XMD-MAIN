@@ -1,1 +1,84 @@
-const a83_0x145acc=a83_0x9f35;(function(_0x3b5f87,_0x46ade4){const _0x536626=a83_0x9f35,_0x5c45d9=_0x3b5f87();while(!![]){try{const _0x337f6d=-parseInt(_0x536626(0x91))/0x1+parseInt(_0x536626(0xa5))/0x2*(-parseInt(_0x536626(0xa2))/0x3)+parseInt(_0x536626(0x94))/0x4*(parseInt(_0x536626(0x83))/0x5)+-parseInt(_0x536626(0x86))/0x6*(-parseInt(_0x536626(0xa1))/0x7)+-parseInt(_0x536626(0xa3))/0x8*(-parseInt(_0x536626(0x97))/0x9)+parseInt(_0x536626(0x8c))/0xa*(-parseInt(_0x536626(0xa4))/0xb)+-parseInt(_0x536626(0x92))/0xc*(-parseInt(_0x536626(0x99))/0xd);if(_0x337f6d===_0x46ade4)break;else _0x5c45d9['push'](_0x5c45d9['shift']());}catch(_0x56798a){_0x5c45d9['push'](_0x5c45d9['shift']());}}}(a83_0x5e6d,0x48329));const a83_0x1a9a4d=(function(){let _0xa45e90=!![];return function(_0x4be97d,_0x1188b2){const _0x465671=_0xa45e90?function(){const _0x513740=a83_0x9f35;if(_0x1188b2){const _0x3eb6ce=_0x1188b2[_0x513740(0xa6)](_0x4be97d,arguments);return _0x1188b2=null,_0x3eb6ce;}}:function(){};return _0xa45e90=![],_0x465671;};}()),a83_0x2eafe6=a83_0x1a9a4d(this,function(){const _0x500db0=a83_0x9f35;return a83_0x2eafe6[_0x500db0(0xa8)]()[_0x500db0(0x93)](_0x500db0(0x9a))[_0x500db0(0xa8)]()[_0x500db0(0x9b)](a83_0x2eafe6)[_0x500db0(0x93)](_0x500db0(0x9a));});function a83_0x9f35(_0x5d416b,_0x3de9d5){_0x5d416b=_0x5d416b-0x82;const _0x3f6ce1=a83_0x5e6d();let _0x2eafe6=_0x3f6ce1[_0x5d416b];return _0x2eafe6;}function a83_0x5e6d(){const _0x4a71b2=['10ciYjwu','replace','\x0aLID:\x20','855924LzAfDP','contextInfo','remoteJid','\x20+\x20','key','substring','720EjOaIb','sendMessage','>\x20Knut\x20XMD\x20:\x20','message','Utilisateur','76924MCpNTU','3132IKzfXS','search','949496niqSBd','❌\x20Erreur\x20:\x20','extendedTextMessage','7353GDnalR','onWhatsApp','5759SWxpzV','(((.+)+)+)+$','constructor','error','length','startsWith','name','jid','21GaksbD','3zBrUAv','1784mrOKyS','78199JUOaSh','632062NVNeZT','apply','mentionedJid','toString','@s.whatsapp.net'];a83_0x5e6d=function(){return _0x4a71b2;};return a83_0x5e6d();}a83_0x2eafe6();export const name='lid';export const aliases=[a83_0x145acc(0xa0),'id'];export async function execute(sock,_0x15f20f,args){const _0x3bbb24=a83_0x145acc;try{let _0x22483a,_0xc9e73b=_0x3bbb24(0x90);const _0x25f3df=_0x15f20f[_0x3bbb24(0x8f)]?.[_0x3bbb24(0x96)]?.[_0x3bbb24(0x87)]?.[_0x3bbb24(0xa7)]||[];if(_0x25f3df[_0x3bbb24(0x9d)]>0x0){_0x22483a=_0x25f3df[0x0];try{const _0x562bde=await sock[_0x3bbb24(0x98)](_0x22483a);_0x562bde&&_0x562bde[0x0]&&_0x562bde[0x0]['name']&&(_0xc9e73b=_0x562bde[0x0][_0x3bbb24(0x9f)]);}catch(_0x35f385){}}else{if(args[_0x3bbb24(0x9d)]>0x0){let _0x2986c4=args[0x0]['trim']();if(_0x2986c4[_0x3bbb24(0x9e)]('@')){const _0x296bfb=_0x2986c4[_0x3bbb24(0x8b)](0x1);_0x22483a=_0x296bfb+_0x3bbb24(0x82);}else{const _0x593483=_0x2986c4[_0x3bbb24(0x84)](/[^0-9]/g,'');_0x22483a=_0x593483+_0x3bbb24(0x82);}try{const _0x22a876=await sock[_0x3bbb24(0x98)](_0x22483a);_0x22a876&&_0x22a876[0x0]&&_0x22a876[0x0]['name']&&(_0xc9e73b=_0x22a876[0x0][_0x3bbb24(0x9f)]);}catch(_0x286564){}}else{_0x22483a=_0x15f20f[_0x3bbb24(0x8a)]['participant']||_0x15f20f[_0x3bbb24(0x8a)][_0x3bbb24(0x88)];try{const _0x39f23a=await sock[_0x3bbb24(0x98)](_0x22483a);_0x39f23a&&_0x39f23a[0x0]&&_0x39f23a[0x0][_0x3bbb24(0x9f)]&&(_0xc9e73b=_0x39f23a[0x0]['name']);}catch(_0x52f91d){}}}const _0x3a691d=_0x22483a['split']('@')[0x0],_0xb871a8=_0x3bbb24(0x8e)+_0xc9e73b+_0x3bbb24(0x89)+_0x3a691d+_0x3bbb24(0x85)+_0x22483a;await sock[_0x3bbb24(0x8d)](_0x15f20f[_0x3bbb24(0x8a)][_0x3bbb24(0x88)],{'text':_0xb871a8},{'quoted':_0x15f20f});}catch(_0x41c7e0){console[_0x3bbb24(0x9c)](_0x41c7e0),await sock[_0x3bbb24(0x8d)](_0x15f20f['key'][_0x3bbb24(0x88)],{'text':_0x3bbb24(0x95)+_0x41c7e0[_0x3bbb24(0x8f)]},{'quoted':_0x15f20f});}}
+export const name = "lid";
+export const aliases = ["jid", "id"];
+export async function execute(sock, m, args) {
+  try {
+    let userJid;
+    let userName = "Utilisateur";
+    
+    // Si un utilisateur est mentionné
+    const mentions = m.message?.extendedTextMessage?.contextInfo?.mentionedJid || [];
+    
+    if (mentions.length > 0) {
+      // Utiliser la première mention
+      userJid = mentions[0];
+      
+      // Essayer de récupérer le nom du contact mentionné
+      try {
+        const contact = await sock.onWhatsApp(userJid);
+        if (contact && contact[0] && contact[0].name) {
+          userName = contact[0].name;
+        }
+      } catch (e) {
+        // Garder "Utilisateur" par défaut
+      }
+    } 
+    // Si un argument est fourni (numéro)
+    else if (args.length > 0) {
+      let input = args[0].trim();
+      
+      // Si c'est une mention via @
+      if (input.startsWith('@')) {
+        const mentionedNumber = input.substring(1);
+        userJid = `${mentionedNumber}@s.whatsapp.net`;
+      } 
+      // Si c'est un numéro
+      else {
+        // Nettoyer le numéro
+        const cleanedNumber = input.replace(/[^0-9]/g, '');
+        userJid = `${cleanedNumber}@s.whatsapp.net`;
+      }
+      
+      // Essayer de récupérer le nom
+      try {
+        const contact = await sock.onWhatsApp(userJid);
+        if (contact && contact[0] && contact[0].name) {
+          userName = contact[0].name;
+        }
+      } catch (e) {
+        // Garder "Utilisateur" par défaut
+      }
+    } 
+    // Si aucun argument, utiliser l'expéditeur du message
+    else {
+      userJid = m.key.participant || m.key.remoteJid;
+      
+      // Récupérer le nom de l'expéditeur
+      try {
+        const contact = await sock.onWhatsApp(userJid);
+        if (contact && contact[0] && contact[0].name) {
+          userName = contact[0].name;
+        }
+      } catch (e) {
+        // Garder "Utilisateur" par défaut
+      }
+    }
+
+    // Format simple et direct
+    const numéro = userJid.split('@')[0];
+    const message = `> Knut XMD : ${userName} + ${numéro}\nLID: ${userJid}`;
+
+    await sock.sendMessage(
+      m.key.remoteJid,
+      { text: message },
+      { quoted: m }
+    );
+
+  } catch (e) {
+    console.error(e);
+    await sock.sendMessage(
+      m.key.remoteJid,
+      { text: `❌ Erreur : ${e.message}` },
+      { quoted: m }
+    );
+  }
+}

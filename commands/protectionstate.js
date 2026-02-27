@@ -1,1 +1,87 @@
-const a109_0x1c436b=a109_0x559c;(function(_0x233a19,_0x9461e9){const _0x17e254=a109_0x559c,_0x3deb9c=_0x233a19();while(!![]){try{const _0x3cc7f3=parseInt(_0x17e254(0xf9))/0x1*(parseInt(_0x17e254(0xf6))/0x2)+parseInt(_0x17e254(0x11d))/0x3+-parseInt(_0x17e254(0x11f))/0x4+parseInt(_0x17e254(0x11a))/0x5+parseInt(_0x17e254(0xfd))/0x6+-parseInt(_0x17e254(0xf2))/0x7*(parseInt(_0x17e254(0x121))/0x8)+parseInt(_0x17e254(0x118))/0x9*(parseInt(_0x17e254(0x10a))/0xa);if(_0x3cc7f3===_0x9461e9)break;else _0x3deb9c['push'](_0x3deb9c['shift']());}catch(_0x20bf16){_0x3deb9c['push'](_0x3deb9c['shift']());}}}(a109_0x37a6,0x3d68b));const a109_0x3f2e3b=(function(){let _0x5aa682=!![];return function(_0x7d0e0,_0xd4bf1){const _0x3d2537=_0x5aa682?function(){if(_0xd4bf1){const _0x32f40b=_0xd4bf1['apply'](_0x7d0e0,arguments);return _0xd4bf1=null,_0x32f40b;}}:function(){};return _0x5aa682=![],_0x3d2537;};}()),a109_0x566779=a109_0x3f2e3b(this,function(){const _0x4a38ec=a109_0x559c;return a109_0x566779['toString']()['search'](_0x4a38ec(0x127))[_0x4a38ec(0xf8)]()[_0x4a38ec(0x10b)](a109_0x566779)['search'](_0x4a38ec(0x127));});a109_0x566779();function a109_0x559c(_0x265c42,_0x479114){_0x265c42=_0x265c42-0xee;const _0x37a9e2=a109_0x37a6();let _0x566779=_0x37a9e2[_0x265c42];return _0x566779;}function a109_0x37a6(){const _0x1e0063=['replace','📛\x20Anti-Spam','Groupe\x20inconnu','>\x20Knut\x20XMD\x20:\x20Cette\x20commande\x20est\x20réservée\x20aux\x20groupes\x20uniquement.','autoKnutChat','410OBAzxG','constructor','owners','antiLink','knuta','🔥\x20Anti-Promote','antiBot','💬\x20Auto-Chat\x20(Texte)','antiSpam','🤩\x20Auto-Réaction','antiVideo','\x0a>\x20🔧\x20Utilise\x20les\x20commandes\x20comme\x20`!antilink\x20on/off`,\x20`!knuta\x20on/off`,\x20etc.\x20pour\x20modifier.','key','🤖\x20Anti-Bot','61434RRmvwn','antiSticker','701980zSxsWd','admin','>\x20📍\x20Groupe\x20:\x20*','631974wWRdSQ','❌\x20Goodbye\x20Message','1084140BQuwWl','participant','4760FodmNz','goodbye','welcome','(\x20{prot.emoji}\x20){prot.label}\x0a','autoReact','autoVV','(((.+)+)+)+$','subject','includes','🎤\x20Anti-Vocal','protectionstate','🎙️\x20KnutA\x20(IA\x20Vocale\x20Auto)','endsWith','participants','>\x20*ÉTAT\x20DES\x20PROTECTIONS*\x0a','🔗\x20Anti-Link','3101DVrudN','split','groupMetadata','error','214276txUvFO','map','toString','1mdiAlp','🚫\x20Anti-Message\x20(texte)','🎥\x20Anti-Vidéo','forEach','288558LqcUPS','@g.us','🖼️\x20Anti-Sticker','antiMessage','antipromote1','sendMessage','Erreur\x20commande\x20protectionstate\x20:','antiVoice'];a109_0x37a6=function(){return _0x1e0063;};return a109_0x37a6();}import{getGroupProtections}from'../groupManager.js';import{loadSudo}from'../index.js';export const name=a109_0x1c436b(0x12b);export async function execute(sock,msg,args,from){const _0x31e1d2=a109_0x1c436b;try{if(!from[_0x31e1d2(0xee)](_0x31e1d2(0xfe))){await sock[_0x31e1d2(0x102)](from,{'text':_0x31e1d2(0x108)},{'quoted':msg});return;}const _0x3a591e=msg[_0x31e1d2(0x116)][_0x31e1d2(0x120)]||from,_0x4fa7ec=_0x3a591e[_0x31e1d2(0xf3)]('@')[0x0][_0x31e1d2(0x105)](/[^0-9]/g,''),_0x522f7f=(global[_0x31e1d2(0x10c)]||[])[_0x31e1d2(0xf7)](_0x5793d0=>_0x5793d0[_0x31e1d2(0x105)](/[^0-9]/g,'')),_0x503819=loadSudo()[_0x31e1d2(0xf7)](_0x51c332=>_0x51c332[_0x31e1d2(0x105)](/[^0-9]/g,'')),_0x3b911a=_0x522f7f[_0x31e1d2(0x129)](_0x4fa7ec),_0x47a4a6=_0x503819[_0x31e1d2(0x129)](_0x4fa7ec),_0x43cd01=await isGroupAdmin(sock,from,_0x3a591e);if(!_0x3b911a&&!_0x47a4a6&&!_0x43cd01){await sock[_0x31e1d2(0x102)](from,{'text':'>\x20Knut\x20XMD\x20:\x20Accès\x20refusé.\x0aSeuls\x20les\x20admins,\x20owners\x20ou\x20sudo\x20peuvent\x20voir\x20l\x27état\x20des\x20protections.'},{'quoted':msg});return;}const _0x31b40c=getGroupProtections(from),_0x32ae72=[{'key':_0x31e1d2(0x100),'label':_0x31e1d2(0xfa),'emoji':_0x31b40c[_0x31e1d2(0x100)]?'✅':'❌'},{'key':_0x31e1d2(0x10d),'label':_0x31e1d2(0xf1),'emoji':_0x31b40c[_0x31e1d2(0x10d)]?'✅':'❌'},{'key':_0x31e1d2(0x110),'label':_0x31e1d2(0x117),'emoji':_0x31b40c['antiBot']?'✅':'❌'},{'key':_0x31e1d2(0x119),'label':_0x31e1d2(0xff),'emoji':_0x31b40c[_0x31e1d2(0x119)]?'✅':'❌'},{'key':'antiVoice','label':_0x31e1d2(0x12a),'emoji':_0x31b40c[_0x31e1d2(0x104)]?'✅':'❌'},{'key':_0x31e1d2(0x114),'label':_0x31e1d2(0xfb),'emoji':_0x31b40c[_0x31e1d2(0x114)]?'✅':'❌'},{'key':_0x31e1d2(0x112),'label':_0x31e1d2(0x106),'emoji':_0x31b40c[_0x31e1d2(0x112)]?'✅':'❌'},{'key':'autoReact','label':_0x31e1d2(0x113),'emoji':_0x31b40c[_0x31e1d2(0x125)]?'✅':'❌'},{'key':_0x31e1d2(0x126),'label':'👁️‍🗨️\x20Auto-VV\x20(Vue\x20Unique)','emoji':_0x31b40c[_0x31e1d2(0x126)]?'✅':'❌'},{'key':_0x31e1d2(0x101),'label':_0x31e1d2(0x10f),'emoji':_0x31b40c[_0x31e1d2(0x101)]?'✅':'❌'},{'key':_0x31e1d2(0x123),'label':'🎉\x20Welcome\x20Message','emoji':_0x31b40c[_0x31e1d2(0x123)]?'✅':'❌'},{'key':_0x31e1d2(0x122),'label':_0x31e1d2(0x11e),'emoji':_0x31b40c[_0x31e1d2(0x122)]?'✅':'❌'},{'key':_0x31e1d2(0x109),'label':_0x31e1d2(0x111),'emoji':_0x31b40c[_0x31e1d2(0x109)]?'✅':'❌'},{'key':'knuta','label':_0x31e1d2(0x12c),'emoji':_0x31b40c[_0x31e1d2(0x10e)]?'✅':'❌'}],_0x34c896=await sock[_0x31e1d2(0xf4)](from),_0x2d129=_0x34c896[_0x31e1d2(0x128)]||_0x31e1d2(0x107);let _0x4df005=_0x31e1d2(0xf0);_0x4df005+=_0x31e1d2(0x11c)+_0x2d129+'*\x0a\x0a',_0x32ae72[_0x31e1d2(0xfc)](_0xffdce0=>{const _0x5a43a2=_0x31e1d2;_0x4df005+=_0x5a43a2(0x124);}),_0x4df005+=_0x31e1d2(0x115),await sock['sendMessage'](from,{'text':_0x4df005},{'quoted':msg});}catch(_0x5e2be9){console[_0x31e1d2(0xf5)](_0x31e1d2(0x103),_0x5e2be9),await sock['sendMessage'](from,{'text':'>\x20Knut\x20XMD\x20:\x20⚠️\x20Une\x20erreur\x20est\x20survenue\x20lors\x20de\x20la\x20récupération\x20des\x20protections.'},{'quoted':msg});}}async function isGroupAdmin(sock,_0x52748c,_0x4c5792){const _0x14990d=a109_0x1c436b;try{const _0xb25964=await sock[_0x14990d(0xf4)](_0x52748c);return _0xb25964[_0x14990d(0xef)]['some'](_0x13441e=>_0x13441e['id']===_0x4c5792&&_0x13441e[_0x14990d(0x11b)]);}catch{return![];}}
+import { getGroupProtections } from "../groupManager.js";
+import { loadSudo } from "../index.js";
+
+export const name = "protectionstate";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // Vérifie que c'est dans un groupe
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : Cette commande est réservée aux groupes uniquement." 
+      }, { quoted: msg });
+      return;
+    }
+
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // Récupération des owners et sudo
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+    const isAdmin = await isGroupAdmin(sock, from, sender);
+
+    // Permission : admin, owner ou sudo requis
+    if (!isOwner && !isSudo && !isAdmin) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : Accès refusé.\nSeuls les admins, owners ou sudo peuvent voir l'état des protections." 
+      }, { quoted: msg });
+      return;
+    }
+
+    // Récupération des protections du groupe
+    const protections = getGroupProtections(from);
+
+    // Liste des protections à afficher (ajoute ou retire selon tes besoins)
+    const protectionList = [
+      { key: "antiMessage",   label: "🚫 Anti-Message (texte)",        emoji: protections.antiMessage ? "✅" : "❌" },
+      { key: "antiLink",      label: "🔗 Anti-Link",                  emoji: protections.antiLink ? "✅" : "❌" },
+      { key: "antiBot",       label: "🤖 Anti-Bot",                   emoji: protections.antiBot ? "✅" : "❌" },
+      { key: "antiSticker",   label: "🖼️ Anti-Sticker",              emoji: protections.antiSticker ? "✅" : "❌" },
+      { key: "antiVoice",     label: "🎤 Anti-Vocal",                 emoji: protections.antiVoice ? "✅" : "❌" },
+      { key: "antiVideo",     label: "🎥 Anti-Vidéo",                 emoji: protections.antiVideo ? "✅" : "❌" },
+      { key: "antiSpam",      label: "📛 Anti-Spam",                  emoji: protections.antiSpam ? "✅" : "❌" },
+      { key: "autoReact",     label: "🤩 Auto-Réaction",              emoji: protections.autoReact ? "✅" : "❌" },
+      { key: "autoVV",        label: "👁️‍🗨️ Auto-VV (Vue Unique)",     emoji: protections.autoVV ? "✅" : "❌" },
+      { key: "antipromote1",  label: "🔥 Anti-Promote",               emoji: protections.antipromote1 ? "✅" : "❌" },
+      { key: "welcome",       label: "🎉 Welcome Message",            emoji: protections.welcome ? "✅" : "❌" },
+      { key: "goodbye",       label: "❌ Goodbye Message",             emoji: protections.goodbye ? "✅" : "❌" },
+      { key: "autoKnutChat",  label: "💬 Auto-Chat (Texte)",          emoji: protections.autoKnutChat ? "✅" : "❌" },
+      { key: "knuta",         label: "🎙️ KnutA (IA Vocale Auto)",    emoji: protections.knuta ? "✅" : "❌" }
+    ];
+
+    // Construction du message
+    const groupMetadata = await sock.groupMetadata(from);
+    const groupName = groupMetadata.subject || "Groupe inconnu";
+
+    let statusText = `> *ÉTAT DES PROTECTIONS*\n`;
+    statusText += `> 📍 Groupe : *${groupName}*\n\n`;
+
+    protectionList.forEach(prot => {
+      statusText += `\( {prot.emoji} \){prot.label}\n`;
+    });
+
+    statusText += `\n> 🔧 Utilise les commandes comme \`!antilink on/off\`, \`!knuta on/off\`, etc. pour modifier.`;
+
+    await sock.sendMessage(from, { text: statusText }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur commande protectionstate :", err);
+    await sock.sendMessage(from, { 
+      text: "> Knut XMD : ⚠️ Une erreur est survenue lors de la récupération des protections." 
+    }, { quoted: msg });
+  }
+}
+
+// Fonction pour vérifier si l'utilisateur est admin
+async function isGroupAdmin(sock, groupJid, userJid) {
+  try {
+    const metadata = await sock.groupMetadata(groupJid);
+    return metadata.participants.some(p => p.id === userJid && p.admin);
+  } catch {
+    return false;
+  }
+}

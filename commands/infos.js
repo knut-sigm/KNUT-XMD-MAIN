@@ -1,1 +1,48 @@
-const a67_0x2092b3=a67_0x4e47;(function(_0x4b1d56,_0x2aff45){const _0x1c6f00=a67_0x4e47,_0x539a86=_0x4b1d56();while(!![]){try{const _0x274a76=-parseInt(_0x1c6f00(0x147))/0x1+-parseInt(_0x1c6f00(0x15d))/0x2*(parseInt(_0x1c6f00(0x15a))/0x3)+-parseInt(_0x1c6f00(0x151))/0x4*(-parseInt(_0x1c6f00(0x14a))/0x5)+parseInt(_0x1c6f00(0x14c))/0x6*(parseInt(_0x1c6f00(0x13b))/0x7)+-parseInt(_0x1c6f00(0x158))/0x8+-parseInt(_0x1c6f00(0x13c))/0x9+parseInt(_0x1c6f00(0x13f))/0xa;if(_0x274a76===_0x2aff45)break;else _0x539a86['push'](_0x539a86['shift']());}catch(_0x542789){_0x539a86['push'](_0x539a86['shift']());}}}(a67_0x4c90,0xe34ef));function a67_0x4c90(){const _0x15d03c=['split','message','toFixed','\x0a\x0a>\x20Dev\x20by\x20Knut','442280TIHgNV','key','platform','300005bLmYQD','>\x20Knut\x20XMD\x20⚡\x20Informations\x20du\x20bot\x0a\x20\x0a>\x20📱\x20Numéro\x20\x20\x20\x20\x20:\x20','8649990LlUeFP','\x0a>\x20🫩\x20Latence\x20\x20\x20\x20:\x20','jid','N/A','\x0a>\x20⏱️\x20Uptime\x20\x20\x20\x20\x20:\x20','8evzMoK','Affiche\x20les\x20informations\x20du\x20bot\x20et\x20de\x20son\x20système.','remoteJid','infos\x20sendMessage:','\x20GB\x0a>\x20💻\x20Platforme\x20\x20:\x20','catch','memoryUsage','3396960twyZMt','>\x20Knut\x20XMD:\x20⏳\x20Vérification\x20des\x20performances...','114aucRLY','search','error','37902gVGiyJ','apply','Inconnu','participant','warn','constructor','user','toString','release','totalmem','Impossible\x20d\x27importer\x20\x27os\x27\x20dynamiquement\x20:','7fDNiZO','7702569vjkcDJ','(((.+)+)+)+$','infos','18122670Qyfarc','now','uptime','floor'];a67_0x4c90=function(){return _0x15d03c;};return a67_0x4c90();}const a67_0x32e675=(function(){let _0x3c232c=!![];return function(_0x11c621,_0x4c18aa){const _0x267a02=_0x3c232c?function(){const _0x49cfca=a67_0x4e47;if(_0x4c18aa){const _0x4f5c87=_0x4c18aa[_0x49cfca(0x15e)](_0x11c621,arguments);return _0x4c18aa=null,_0x4f5c87;}}:function(){};return _0x3c232c=![],_0x267a02;};}()),a67_0x12cca0=a67_0x32e675(this,function(){const _0x348782=a67_0x4e47;return a67_0x12cca0[_0x348782(0x164)]()[_0x348782(0x15b)](_0x348782(0x13d))[_0x348782(0x164)]()[_0x348782(0x162)](a67_0x12cca0)['search'](_0x348782(0x13d));});a67_0x12cca0();export const name=a67_0x2092b3(0x13e);function a67_0x4e47(_0x3de63a,_0x251865){_0x3de63a=_0x3de63a-0x139;const _0x4db4a1=a67_0x4c90();let _0x12cca0=_0x4db4a1[_0x3de63a];return _0x12cca0;}export const description=a67_0x2092b3(0x152);export async function execute(sock,msg,args,_0x37c17b={}){const _0x13c6b7=a67_0x2092b3,{botNumber:botNumber=''}=_0x37c17b,from=msg?.[_0x13c6b7(0x148)]?.[_0x13c6b7(0x153)]||(msg?.[_0x13c6b7(0x148)]?.[_0x13c6b7(0x160)]||''),_0x165ecf=process[_0x13c6b7(0x141)](),_0x49b163=Math[_0x13c6b7(0x142)](_0x165ecf/0xe10),_0x4b63d6=Math[_0x13c6b7(0x142)](_0x165ecf%0xe10/0x3c),_0x58302e=Math[_0x13c6b7(0x142)](_0x165ecf%0x3c),_0x2e754e=_0x49b163+'h\x20'+_0x4b63d6+'m\x20'+_0x58302e+'s';let _0x1fd576=(process[_0x13c6b7(0x157)]()['rss']/0x400/0x400)[_0x13c6b7(0x145)](0x2),_0x1f74fe='N/A',_0x21c392=_0x13c6b7(0x14f);try{const _0x440e7e=await import('os');_0x1f74fe=(_0x440e7e[_0x13c6b7(0x139)]()/0x400/0x400/0x400)[_0x13c6b7(0x145)](0x2),_0x21c392=_0x440e7e[_0x13c6b7(0x149)]()+'\x20'+_0x440e7e[_0x13c6b7(0x165)]();}catch(_0x264d44){console[_0x13c6b7(0x161)](_0x13c6b7(0x13a),_0x264d44?.[_0x13c6b7(0x144)]||_0x264d44);}const _0x59f423=Date['now']();await sock['sendMessage'](from,{'text':_0x13c6b7(0x159)},{'quoted':msg})[_0x13c6b7(0x156)](()=>{});const _0x463176=Date[_0x13c6b7(0x140)]()-_0x59f423,_0x4a6bc8=botNumber||(sock?.[_0x13c6b7(0x163)]?.['id']||sock?.[_0x13c6b7(0x163)]?.[_0x13c6b7(0x14e)]||'')[_0x13c6b7(0x143)]?.(':')?.[0x0]||_0x13c6b7(0x15f),_0xd078f4=_0x13c6b7(0x14b)+_0x4a6bc8+_0x13c6b7(0x150)+_0x2e754e+_0x13c6b7(0x14d)+_0x463176+'\x20ms\x0a>\x20💾\x20Mémoire\x20\x20\x20\x20:\x20'+_0x1fd576+'\x20MB\x20/\x20'+_0x1f74fe+_0x13c6b7(0x155)+_0x21c392+_0x13c6b7(0x146);await sock['sendMessage'](from,{'text':_0xd078f4},{'quoted':msg})[_0x13c6b7(0x156)](_0x4c8d85=>console[_0x13c6b7(0x15c)](_0x13c6b7(0x154),_0x4c8d85));}
+export const name = "infos";
+export const description = "Affiche les informations du bot et de son système.";
+
+export async function execute(sock, msg, args, options = {}) {
+  const { botNumber = "" } = options;
+  const from = msg?.key?.remoteJid || (msg?.key?.participant || "");
+
+  // === Uptime ===
+  const uptime = process.uptime(); // sec
+  const h = Math.floor(uptime / 3600);
+  const m = Math.floor((uptime % 3600) / 60);
+  const s = Math.floor(uptime % 60);
+  const uptimeStr = `${h}h ${m}m ${s}s`;
+
+  // === Mémoire & platform ===
+  let usedMemMB = (process.memoryUsage().rss / 1024 / 1024).toFixed(2);
+  let totalMemGB = "N/A";
+  let platform = "N/A";
+  try {
+    const os = await import("os");
+    totalMemGB = (os.totalmem() / 1024 / 1024 / 1024).toFixed(2);
+    platform = `${os.platform()} ${os.release()}`;
+  } catch (e) {
+    console.warn("Impossible d'importer 'os' dynamiquement :", e?.message || e);
+  }
+
+  // === Latence ===
+  const start = Date.now();
+  await sock.sendMessage(from, { text: "> Knut XMD: ⏳ Vérification des performances..." }, { quoted: msg }).catch(() => {});
+  const latency = Date.now() - start;
+
+  // === Numéro du bot ===
+  const botJid = botNumber || (sock?.user?.id || sock?.user?.jid || "").split?.(":")?.[0] || "Inconnu";
+
+  // === Message formaté avec '>' devant chaque ligne ===
+  const text = 
+`> Knut XMD ⚡ Informations du bot
+ 
+> 📱 Numéro     : ${botJid}
+> ⏱️ Uptime     : ${uptimeStr}
+> 🫩 Latence    : ${latency} ms
+> 💾 Mémoire    : ${usedMemMB} MB / ${totalMemGB} GB
+> 💻 Platforme  : ${platform}
+
+> Dev by Knut`;
+
+  await sock.sendMessage(from, { text }, { quoted: msg }).catch(err => console.error("infos sendMessage:", err));
+}

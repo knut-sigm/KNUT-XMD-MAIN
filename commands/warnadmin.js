@@ -1,1 +1,66 @@
-(function(_0x3f59cb,_0x5ddbc4){const _0x50ac88=a144_0x1add,_0x2ee6fd=_0x3f59cb();while(!![]){try{const _0x34fe1e=-parseInt(_0x50ac88(0xec))/0x1+parseInt(_0x50ac88(0xea))/0x2*(parseInt(_0x50ac88(0xfe))/0x3)+-parseInt(_0x50ac88(0xe1))/0x4*(parseInt(_0x50ac88(0xe5))/0x5)+-parseInt(_0x50ac88(0xed))/0x6*(-parseInt(_0x50ac88(0x102))/0x7)+parseInt(_0x50ac88(0x101))/0x8*(parseInt(_0x50ac88(0xee))/0x9)+-parseInt(_0x50ac88(0xde))/0xa+parseInt(_0x50ac88(0xf7))/0xb;if(_0x34fe1e===_0x5ddbc4)break;else _0x2ee6fd['push'](_0x2ee6fd['shift']());}catch(_0x30f983){_0x2ee6fd['push'](_0x2ee6fd['shift']());}}}(a144_0x9e5a,0xe0dee));const a144_0x5ee5ec=(function(){let _0x70b81a=!![];return function(_0x5ba81f,_0xa05c47){const _0x3c50c6=_0x70b81a?function(){if(_0xa05c47){const _0x4d2905=_0xa05c47['apply'](_0x5ba81f,arguments);return _0xa05c47=null,_0x4d2905;}}:function(){};return _0x70b81a=![],_0x3c50c6;};}()),a144_0x12889d=a144_0x5ee5ec(this,function(){const _0x315809=a144_0x1add;return a144_0x12889d[_0x315809(0xf2)]()['search'](_0x315809(0xef))['toString']()[_0x315809(0xf0)](a144_0x12889d)[_0x315809(0x100)]('(((.+)+)+)+$');});a144_0x12889d();import{getGroupProtections,setGroupProtection}from'../groupManager.js';import{loadSudo}from'../index.js';function a144_0x1add(_0x22fca8,_0x4bc0d9){_0x22fca8=_0x22fca8-0xde;const _0x100356=a144_0x9e5a();let _0x12889d=_0x100356[_0x22fca8];return _0x12889d;}export const name='warnadmin';function a144_0x9e5a(){const _0x507727=['off','1039629mFOyJn','\x0a\x0aUtilisation\x20:\x20`!warnadmin\x20on`\x20ou\x20`!warnadmin\x20off`','search','16cjHBSR','3409JioPDG','Cette\x20commande\x20est\x20réservée\x20aux\x20groupes.','14048970TByiPR','désactivé','sendMessage','4ONGMlb','>\x20Knut\x20XMD:\x20Notifications\x20admin\x0a\x0aÉtat\x20:\x20','groupMetadata','@g.us','899025YRiJjD','replace','key','some','Accès\x20refusé.\x20Admin,\x20owner\x20ou\x20sudo\x20requis.','6nahdRK','map','1525749AOxZTu','9210KBQIpQ','2544102fTSskP','(((.+)+)+)+$','constructor','Une\x20erreur\x20est\x20survenue.','toString','error','>\x20Knut\x20XMD:\x20Les\x20notifications\x20sont\x20déjà\x20','owners','admin','18468901BlGKUz','activées','split','\x20dans\x20ce\x20groupe.','Erreur\x20warnadmin:','participant'];a144_0x9e5a=function(){return _0x507727;};return a144_0x9e5a();}export async function execute(sock,msg,args,from){const _0x26fa34=a144_0x1add;try{if(!from['endsWith'](_0x26fa34(0xe4))){await sock['sendMessage'](from,{'text':_0x26fa34(0x103)},{'quoted':msg});return;}const _0xbc2c68=msg[_0x26fa34(0xe7)][_0x26fa34(0xfc)]||from,_0x167ac0=_0xbc2c68[_0x26fa34(0xf9)]('@')[0x0][_0x26fa34(0xe6)](/[^0-9]/g,''),_0x21b264=(global[_0x26fa34(0xf5)]||[])[_0x26fa34(0xeb)](_0x124c01=>_0x124c01['replace'](/[^0-9]/g,'')),_0x51321e=loadSudo()['map'](_0x32c5d6=>_0x32c5d6[_0x26fa34(0xe6)](/[^0-9]/g,'')),_0x49c9a6=_0x21b264['includes'](_0x167ac0),_0x3aeaf7=_0x51321e['includes'](_0x167ac0),_0x478e5=await isGroupAdmin(sock,from,_0xbc2c68);if(!_0x49c9a6&&!_0x3aeaf7&&!_0x478e5){await sock[_0x26fa34(0xe0)](from,{'text':_0x26fa34(0xe9)},{'quoted':msg});return;}const _0x249155=args[0x0]?.['toLowerCase'](),_0x320612=getGroupProtections(from)['warnAdmin']||![];if(!_0x249155||!['on',_0x26fa34(0xfd)]['includes'](_0x249155)){const _0x19ef83=_0x320612?'activé':_0x26fa34(0xdf);await sock[_0x26fa34(0xe0)](from,{'text':_0x26fa34(0xe2)+_0x19ef83+_0x26fa34(0xff)},{'quoted':msg});return;}const _0x3a8ac2=_0x249155==='on';if(_0x3a8ac2===_0x320612){await sock[_0x26fa34(0xe0)](from,{'text':_0x26fa34(0xf4)+(_0x3a8ac2?'activées':'désactivées')+'.'},{'quoted':msg});return;}setGroupProtection(from,'warnAdmin',_0x3a8ac2),await sock[_0x26fa34(0xe0)](from,{'text':'>\x20Knut\x20XMD:\x20Notifications\x20admin\x20'+(_0x3a8ac2?_0x26fa34(0xf8):'désactivées')+_0x26fa34(0xfa)},{'quoted':msg});}catch(_0x4d435a){console[_0x26fa34(0xf3)](_0x26fa34(0xfb),_0x4d435a),await sock[_0x26fa34(0xe0)](from,{'text':_0x26fa34(0xf1)},{'quoted':msg});}}async function isGroupAdmin(sock,_0x392736,_0x6fa98d){const _0x5bced2=a144_0x1add;try{const _0x5e20a8=await sock[_0x5bced2(0xe3)](_0x392736);return _0x5e20a8['participants'][_0x5bced2(0xe8)](_0x5a1c21=>_0x5a1c21['id']===_0x6fa98d&&_0x5a1c21[_0x5bced2(0xf6)]);}catch{return![];}}
+import { getGroupProtections, setGroupProtection } from "../groupManager.js";
+import { loadSudo } from "../index.js";
+
+export const name = "warnadmin";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { text: "Cette commande est réservée aux groupes." }, { quoted: msg });
+      return;
+    }
+
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+    const isAdmin = await isGroupAdmin(sock, from, sender);
+
+    if (!isOwner && !isSudo && !isAdmin) {
+      await sock.sendMessage(from, { text: "Accès refusé. Admin, owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    const arg = args[0]?.toLowerCase();
+    const currentState = getGroupProtections(from).warnAdmin || false;
+
+    if (!arg || !["on", "off"].includes(arg)) {
+      const status = currentState ? "activé" : "désactivé";
+      await sock.sendMessage(from, {
+        text: `> Knut XMD: Notifications admin\n\nÉtat : ${status}\n\nUtilisation : \`!warnadmin on\` ou \`!warnadmin off\``
+      }, { quoted: msg });
+      return;
+    }
+
+    const newState = arg === "on";
+    if (newState === currentState) {
+      await sock.sendMessage(from, {
+        text: `> Knut XMD: Les notifications sont déjà ${newState ? "activées" : "désactivées"}.`
+      }, { quoted: msg });
+      return;
+    }
+
+    setGroupProtection(from, "warnAdmin", newState);
+
+    await sock.sendMessage(from, {
+      text: `> Knut XMD: Notifications admin ${newState ? "activées" : "désactivées"} dans ce groupe.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur warnadmin:", err);
+    await sock.sendMessage(from, { text: "Une erreur est survenue." }, { quoted: msg });
+  }
+}
+
+async function isGroupAdmin(sock, groupJid, userJid) {
+  try {
+    const metadata = await sock.groupMetadata(groupJid);
+    return metadata.participants.some(p => p.id === userJid && p.admin);
+  } catch {
+    return false;
+  }
+}

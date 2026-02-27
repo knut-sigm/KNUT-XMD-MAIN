@@ -1,1 +1,10 @@
-function a82_0x59f8(){const _0x1baf75=['5oRqsfa','groupLeave','104xtZzNK','remoteJid','❌\x20Erreur\x20leave\x20:','(((.+)+)+)+$','9lizRyA','key','error','sendMessage','20590730rxdozR','3394948XHATpi','2022660vgoPuf','toString','682437inSUmW','>\x20Knut\x20XMD:\x20Good\x20bye','1211417hKzvuO','apply','1563690FvCxHt','3283071MZgWXq'];a82_0x59f8=function(){return _0x1baf75;};return a82_0x59f8();}function a82_0x1ba5(_0x1c98b9,_0x2dbebe){_0x1c98b9=_0x1c98b9-0x106;const _0x1d0552=a82_0x59f8();let _0x3fa114=_0x1d0552[_0x1c98b9];return _0x3fa114;}(function(_0x16c46a,_0x485ae7){const _0x4c49a8=a82_0x1ba5,_0x27101e=_0x16c46a();while(!![]){try{const _0x20290d=-parseInt(_0x4c49a8(0x109))/0x1+-parseInt(_0x4c49a8(0x119))/0x2+parseInt(_0x4c49a8(0x10c))/0x3+-parseInt(_0x4c49a8(0x118))/0x4*(-parseInt(_0x4c49a8(0x10d))/0x5)+parseInt(_0x4c49a8(0x10b))/0x6+-parseInt(_0x4c49a8(0x107))/0x7*(parseInt(_0x4c49a8(0x10f))/0x8)+parseInt(_0x4c49a8(0x113))/0x9*(parseInt(_0x4c49a8(0x117))/0xa);if(_0x20290d===_0x485ae7)break;else _0x27101e['push'](_0x27101e['shift']());}catch(_0x514749){_0x27101e['push'](_0x27101e['shift']());}}}(a82_0x59f8,0xbca2c));const a82_0x57aea0=(function(){let _0x86aea9=!![];return function(_0x2ce2f0,_0x1d8231){const _0x2971a4=_0x86aea9?function(){const _0xedfb37=a82_0x1ba5;if(_0x1d8231){const _0x2ee883=_0x1d8231[_0xedfb37(0x10a)](_0x2ce2f0,arguments);return _0x1d8231=null,_0x2ee883;}}:function(){};return _0x86aea9=![],_0x2971a4;};}()),a82_0x3fa114=a82_0x57aea0(this,function(){const _0x483c60=a82_0x1ba5;return a82_0x3fa114[_0x483c60(0x106)]()['search'](_0x483c60(0x112))[_0x483c60(0x106)]()['constructor'](a82_0x3fa114)['search'](_0x483c60(0x112));});a82_0x3fa114();export const name='left';export async function execute(sock,msg,args){const _0x839c2f=a82_0x1ba5;try{await sock[_0x839c2f(0x116)](msg[_0x839c2f(0x114)][_0x839c2f(0x110)],{'text':_0x839c2f(0x108)}),await sock[_0x839c2f(0x10e)](msg['key']['remoteJid']);}catch(_0x25b99e){console[_0x839c2f(0x115)](_0x839c2f(0x111),_0x25b99e);}}
+export const name = "left";
+
+export async function execute(sock, msg, args) {
+  try {
+    await sock.sendMessage(msg.key.remoteJid, { text: "> Knut XMD: Good bye" });
+    await sock.groupLeave(msg.key.remoteJid);
+  } catch (err) {
+    console.error("❌ Erreur leave :", err);
+  }
+}

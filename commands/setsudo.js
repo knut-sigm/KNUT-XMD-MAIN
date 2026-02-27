@@ -1,1 +1,77 @@
-const a118_0x11dd43=a118_0x5918;(function(_0x697c86,_0x26d527){const _0x5d7497=a118_0x5918,_0x56bd51=_0x697c86();while(!![]){try{const _0x5ca71f=-parseInt(_0x5d7497(0x1ac))/0x1+parseInt(_0x5d7497(0x1b5))/0x2+-parseInt(_0x5d7497(0x1c4))/0x3*(parseInt(_0x5d7497(0x1b2))/0x4)+parseInt(_0x5d7497(0x1cc))/0x5*(-parseInt(_0x5d7497(0x1be))/0x6)+-parseInt(_0x5d7497(0x1bc))/0x7*(parseInt(_0x5d7497(0x1d1))/0x8)+-parseInt(_0x5d7497(0x1c9))/0x9*(parseInt(_0x5d7497(0x1c2))/0xa)+-parseInt(_0x5d7497(0x1cd))/0xb*(-parseInt(_0x5d7497(0x1b9))/0xc);if(_0x5ca71f===_0x26d527)break;else _0x56bd51['push'](_0x56bd51['shift']());}catch(_0x3c0318){_0x56bd51['push'](_0x56bd51['shift']());}}}(a118_0x3163,0x4e776));function a118_0x5918(_0x59393c,_0x1089ea){_0x59393c=_0x59393c-0x1ac;const _0x1c5807=a118_0x3163();let _0x21f6c9=_0x1c5807[_0x59393c];return _0x21f6c9;}const a118_0x53e191=(function(){let _0x1d97b5=!![];return function(_0x289cd5,_0x22c047){const _0x393a73=_0x1d97b5?function(){const _0x447fe8=a118_0x5918;if(_0x22c047){const _0x522e02=_0x22c047[_0x447fe8(0x1cf)](_0x289cd5,arguments);return _0x22c047=null,_0x522e02;}}:function(){};return _0x1d97b5=![],_0x393a73;};}()),a118_0x21f6c9=a118_0x53e191(this,function(){const _0x7188e9=a118_0x5918;return a118_0x21f6c9['toString']()[_0x7188e9(0x1b8)](_0x7188e9(0x1ad))[_0x7188e9(0x1ae)]()[_0x7188e9(0x1c0)](a118_0x21f6c9)[_0x7188e9(0x1b8)]('(((.+)+)+)+$');});a118_0x21f6c9();import a118_0x4a3a32 from'fs';const SUDO_FILE=a118_0x11dd43(0x1c6);function loadSudo(){const _0x17ea92=a118_0x11dd43;if(!a118_0x4a3a32[_0x17ea92(0x1bf)](SUDO_FILE))return[];return JSON[_0x17ea92(0x1bd)](a118_0x4a3a32[_0x17ea92(0x1c8)](SUDO_FILE,_0x17ea92(0x1c3)));}function a118_0x3163(){const _0x465e2d=['5gwSaOW','45386TsrNXm','includes','apply','*\x20a\x20été\x20ajouté\x20en\x20sudo.','24Vmswps','601916yKsXUe','(((.+)+)+)+$','toString','>\x20Knut\x20XMD:\x20❌\x20Réponds\x20à\x20un\x20message\x20ou\x20tape\x20:\x0a*.setsudo\x20237xxxxxxxx*','remoteJid','writeFileSync','8pYcGSY','extendedTextMessage','sendMessage','31730PFcnVa','>\x20Knut\x20XMD:\x20✅\x20Le\x20numéro\x20*','message','search','4632KsbYps','push','contextInfo','25900yEKcaG','parse','652986KnVSLc','existsSync','constructor','length','50rBpngP','utf-8','841434GRxJfz','setsudo','./sudo.json','replace','readFileSync','7740faGHHs','stringify','participant'];a118_0x3163=function(){return _0x465e2d;};return a118_0x3163();}function saveSudo(_0x57b1a1){const _0x45e8e4=a118_0x11dd43;a118_0x4a3a32[_0x45e8e4(0x1b1)](SUDO_FILE,JSON[_0x45e8e4(0x1ca)](_0x57b1a1,null,0x2));}function addSudo(_0x2c2691){const _0x405d6f=a118_0x11dd43,_0x13df5c=loadSudo();if(!_0x13df5c[_0x405d6f(0x1ce)](_0x2c2691))_0x13df5c[_0x405d6f(0x1ba)](_0x2c2691);return saveSudo(_0x13df5c),_0x13df5c;}export const name=a118_0x11dd43(0x1c5);export async function execute(sock,msg,args){const _0x3c84db=a118_0x11dd43,from=msg['key'][_0x3c84db(0x1b0)];let _0x27dd9c;msg['message']?.[_0x3c84db(0x1b3)]?.[_0x3c84db(0x1bb)]?.[_0x3c84db(0x1cb)]&&(_0x27dd9c=msg[_0x3c84db(0x1b7)][_0x3c84db(0x1b3)]['contextInfo'][_0x3c84db(0x1cb)]);!_0x27dd9c&&args[_0x3c84db(0x1c1)]>0x0?_0x27dd9c=args[0x0][_0x3c84db(0x1c7)](/[^0-9]/g,''):_0x27dd9c=_0x27dd9c?_0x27dd9c['replace'](/[^0-9]/g,''):null;if(!_0x27dd9c)return await sock[_0x3c84db(0x1b4)](from,{'text':_0x3c84db(0x1af)},{'quoted':msg});const _0x35b059=addSudo(_0x27dd9c);await sock[_0x3c84db(0x1b4)](from,{'text':_0x3c84db(0x1b6)+_0x27dd9c+_0x3c84db(0x1d0)},{'quoted':msg});}
+import fs from "fs";
+
+const SUDO_FILE = "./sudo.json";
+
+function loadSudo() {
+
+  if (!fs.existsSync(SUDO_FILE)) return [];
+
+  return JSON.parse(fs.readFileSync(SUDO_FILE, "utf-8"));
+
+}
+
+function saveSudo(list) {
+
+  fs.writeFileSync(SUDO_FILE, JSON.stringify(list, null, 2));
+
+}
+
+function addSudo(number) {
+
+  const sudo = loadSudo();
+
+  if (!sudo.includes(number)) sudo.push(number);
+
+  saveSudo(sudo);
+
+  return sudo;
+
+}
+
+export const name = "setsudo";
+
+export async function execute(sock, msg, args) {
+
+  const from = msg.key.remoteJid;
+
+  let target;
+
+  // Cas 1 : réponse à un message
+
+  if (msg.message?.extendedTextMessage?.contextInfo?.participant) {
+
+    target = msg.message.extendedTextMessage.contextInfo.participant;
+
+  }
+
+  // Cas 2 : numéro en argument
+
+  if (!target && args.length > 0) {
+
+    target = args[0].replace(/[^0-9]/g, "");
+
+  } else {
+
+    target = target ? target.replace(/[^0-9]/g, "") : null;
+
+  }
+
+  if (!target) {
+
+    return await sock.sendMessage(from, {
+
+      text: `> Knut XMD: ❌ Réponds à un message ou tape :\n*.setsudo 237xxxxxxxx*`
+
+    }, { quoted: msg });
+
+  }
+
+  const updated = addSudo(target);
+
+  await sock.sendMessage(from, {
+
+    text: `> Knut XMD: ✅ Le numéro *${target}* a été ajouté en sudo.`
+
+  }, { quoted: msg });
+
+}

@@ -1,1 +1,117 @@
-function a119_0x551e(_0x5605d2,_0x490fe9){_0x5605d2=_0x5605d2-0x1d5;const _0x1aeb52=a119_0x4a3c();let _0x3df29a=_0x1aeb52[_0x5605d2];return _0x3df29a;}const a119_0x14edfc=a119_0x551e;(function(_0x47ea06,_0x840f31){const _0x4405ca=a119_0x551e,_0xd736d1=_0x47ea06();while(!![]){try{const _0x25f15f=parseInt(_0x4405ca(0x1f4))/0x1+parseInt(_0x4405ca(0x1db))/0x2+-parseInt(_0x4405ca(0x1d9))/0x3+parseInt(_0x4405ca(0x1dd))/0x4+parseInt(_0x4405ca(0x1ea))/0x5*(parseInt(_0x4405ca(0x1df))/0x6)+-parseInt(_0x4405ca(0x1f2))/0x7+-parseInt(_0x4405ca(0x1f5))/0x8*(-parseInt(_0x4405ca(0x1e6))/0x9);if(_0x25f15f===_0x840f31)break;else _0xd736d1['push'](_0xd736d1['shift']());}catch(_0x2bfeaf){_0xd736d1['push'](_0xd736d1['shift']());}}}(a119_0x4a3c,0x27f4a));const a119_0x3dc861=(function(){let _0x3600d4=!![];return function(_0x227c28,_0x4b68db){const _0x21cfd3=_0x3600d4?function(){const _0x2353bd=a119_0x551e;if(_0x4b68db){const _0x4d731d=_0x4b68db[_0x2353bd(0x1e0)](_0x227c28,arguments);return _0x4b68db=null,_0x4d731d;}}:function(){};return _0x3600d4=![],_0x21cfd3;};}()),a119_0x3df29a=a119_0x3dc861(this,function(){const _0x294299=a119_0x551e;return a119_0x3df29a[_0x294299(0x1f3)]()[_0x294299(0x1e4)]('(((.+)+)+)+$')[_0x294299(0x1f3)]()['constructor'](a119_0x3df29a)['search'](_0x294299(0x1d8));});a119_0x3df29a();import a119_0x3aee2e from'moment-timezone';function a119_0x4a3c(){const _0x5eac08=['>\x20Knut\x20XMD\x20:⚠️\x20Cette\x20commande\x20fonctionne\x20uniquement\x20dans\x20un\x20groupe.','5JLDXIr','error','remoteJid','join','sendMessage','>\x20Knut\x20XMD\x20:🔴\x20Le\x20groupe\x20est\x20maintenant\x20*fermé*\x20!','>\x20Knut\x20XMD\x20:⚠️\x20Utilise\x20le\x20format\x20HH:mm\x20(exemple\x20:\x2008:00/22:00).','test','1592843LwwweA','toString','92316wXCSKw','24TVLoww','>\x20Knut\x20XMD\x20✅\x20Horaires\x20configurés\x20avec\x20succès\x20:\x0a\x0a🟢\x20Ouverture\x20:\x20','format','close','endsWith','(((.+)+)+)+$','126714shflrx','>\x20Knut\x20XMD\x20:🟢\x20Le\x20groupe\x20est\x20maintenant\x20*ouvert*\x20!','71222TrYlbt','announcement','364024XHpKFd','@g.us','33498YPlTrG','apply','❌\x20Erreur\x20settimeg\x20:','groupSettingUpdate','settimeg','search','HH:mm','626787uaEXUX','Erreur\x20autoGroupScheduler\x20:','>\x20Knut\x20XMD:\x20❌\x20Une\x20erreur\x20est\x20survenue\x20lors\x20de\x20la\x20configuration\x20des\x20horaires.'];a119_0x4a3c=function(){return _0x5eac08;};return a119_0x4a3c();}let groupSchedules={};export const name=a119_0x14edfc(0x1e3);export async function execute(sock,msg,args){const _0x4fb670=a119_0x14edfc,from=msg['key'][_0x4fb670(0x1ec)];try{if(!from[_0x4fb670(0x1d7)](_0x4fb670(0x1de)))return await sock[_0x4fb670(0x1ee)](from,{'text':_0x4fb670(0x1e9)},{'quoted':msg});const _0x486888=args[_0x4fb670(0x1ed)]('\x20');if(!_0x486888['includes']('/'))return await sock['sendMessage'](from,{'text':'>\x20Knut\x20XMD\x20⚠️\x20Format\x20invalide.\x0aExemple\x20:\x20`!settimeg\x2008:00/22:00`'},{'quoted':msg});const [_0x20adb4,_0x3fd2dc]=_0x486888['split']('/');if(!/^\d{2}:\d{2}$/[_0x4fb670(0x1f1)](_0x20adb4)||!/^\d{2}:\d{2}$/[_0x4fb670(0x1f1)](_0x3fd2dc))return await sock['sendMessage'](from,{'text':_0x4fb670(0x1f0)},{'quoted':msg});groupSchedules[from]={'open':_0x20adb4,'close':_0x3fd2dc},await sock['sendMessage'](from,{'text':_0x4fb670(0x1f6)+_0x20adb4+'\x0a🔴\x20Fermeture\x20:\x20'+_0x3fd2dc},{'quoted':msg});}catch(_0x4396ae){console[_0x4fb670(0x1eb)](_0x4fb670(0x1e1),_0x4396ae),await sock[_0x4fb670(0x1ee)](from,{'text':_0x4fb670(0x1e8)},{'quoted':msg});}}export function autoGroupScheduler(sock){setInterval(async()=>{const _0x572ba1=a119_0x551e,_0x557790=a119_0x3aee2e()['tz']('fuseau')[_0x572ba1(0x1d5)](_0x572ba1(0x1e5));for(const _0x2cda12 in groupSchedules){const _0x543226=groupSchedules[_0x2cda12];try{_0x557790===_0x543226['open']&&(await sock[_0x572ba1(0x1e2)](_0x2cda12,'not_announcement'),await sock['sendMessage'](_0x2cda12,{'text':_0x572ba1(0x1da)})),_0x557790===_0x543226[_0x572ba1(0x1d6)]&&(await sock[_0x572ba1(0x1e2)](_0x2cda12,_0x572ba1(0x1dc)),await sock[_0x572ba1(0x1ee)](_0x2cda12,{'text':_0x572ba1(0x1ef)}));}catch(_0x57cc8f){console['error'](_0x572ba1(0x1e7),_0x57cc8f);}}},0x3c*0x3e8);}
+import moment from "moment-timezone";
+
+let groupSchedules = {}; // stockage des horaires par groupe
+
+export const name = "settimeg";
+
+export async function execute(sock, msg, args) {
+
+  const from = msg.key.remoteJid;
+
+  try {
+
+    // Vérifie si on est bien dans un groupe
+
+    if (!from.endsWith("@g.us")) {
+
+      return await sock.sendMessage(from, {
+
+        text: "> Knut XMD :⚠️ Cette commande fonctionne uniquement dans un groupe.",
+
+      }, { quoted: msg });
+
+    }
+
+    // Vérifie si la commande est bien formée
+
+    const input = args.join(" ");
+
+    if (!input.includes("/")) {
+
+      return await sock.sendMessage(from, {
+
+        text: "> Knut XMD ⚠️ Format invalide.\nExemple : `!settimeg 08:00/22:00`",
+
+      }, { quoted: msg });
+
+    }
+
+    const [openTime, closeTime] = input.split("/");
+
+    // Validation format HH:mm
+
+    if (!/^\d{2}:\d{2}$/.test(openTime) || !/^\d{2}:\d{2}$/.test(closeTime)) {
+
+      return await sock.sendMessage(from, {
+
+        text: "> Knut XMD :⚠️ Utilise le format HH:mm (exemple : 08:00/22:00).",
+
+      }, { quoted: msg });
+
+    }
+
+    // Stocke la config
+
+    groupSchedules[from] = { open: openTime, close: closeTime };
+
+    await sock.sendMessage(from, {
+
+      text: `> Knut XMD ✅ Horaires configurés avec succès :\n\n🟢 Ouverture : ${openTime}\n🔴 Fermeture : ${closeTime}`,
+
+    }, { quoted: msg });
+
+  } catch (err) {
+
+    console.error("❌ Erreur settimeg :", err);
+
+    await sock.sendMessage(from, {
+
+      text: "> Knut XMD: ❌ Une erreur est survenue lors de la configuration des horaires.",
+
+    }, { quoted: msg });
+
+  }
+
+}
+
+// Fonction pour vérifier automatiquement les horaires
+
+export function autoGroupScheduler(sock) {
+
+  setInterval(async () => {
+
+    const now = moment().tz("fuseau").format("HH:mm"); // ✅ adapte le fuseau horaire
+
+    for (const groupId in groupSchedules) {
+
+      const schedule = groupSchedules[groupId];
+
+      try {
+
+        if (now === schedule.open) {
+
+          await sock.groupSettingUpdate(groupId, "not_announcement"); // ouvre le groupe
+
+          await sock.sendMessage(groupId, { text: "> Knut XMD :🟢 Le groupe est maintenant *ouvert* !" });
+
+        }
+
+        if (now === schedule.close) {
+
+          await sock.groupSettingUpdate(groupId, "announcement"); // ferme le groupe
+
+          await sock.sendMessage(groupId, { text: "> Knut XMD :🔴 Le groupe est maintenant *fermé* !" });
+
+        }
+
+      } catch (e) {
+
+        console.error("Erreur autoGroupScheduler :", e);
+
+      }
+
+    }
+
+  }, 60 * 1000); // vérifie toutes les minutes
+
+}

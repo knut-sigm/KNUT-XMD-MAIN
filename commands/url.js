@@ -1,1 +1,62 @@
-const a141_0x1156f5=a141_0x5e99;(function(_0x1cb006,_0x1e6b42){const _0x3cbf0b=a141_0x5e99,_0x1e0365=_0x1cb006();while(!![]){try{const _0x551ac2=parseInt(_0x3cbf0b(0x1a6))/0x1*(parseInt(_0x3cbf0b(0x1ac))/0x2)+parseInt(_0x3cbf0b(0x1c3))/0x3+-parseInt(_0x3cbf0b(0x1a0))/0x4+parseInt(_0x3cbf0b(0x19d))/0x5*(parseInt(_0x3cbf0b(0x1a8))/0x6)+parseInt(_0x3cbf0b(0x1c8))/0x7+-parseInt(_0x3cbf0b(0x1bd))/0x8+-parseInt(_0x3cbf0b(0x1c2))/0x9*(-parseInt(_0x3cbf0b(0x19e))/0xa);if(_0x551ac2===_0x1e6b42)break;else _0x1e0365['push'](_0x1e0365['shift']());}catch(_0x4e61c4){_0x1e0365['push'](_0x1e0365['shift']());}}}(a141_0x5be2,0x9d2ea));const a141_0x31a3d8=(function(){let _0x1872e0=!![];return function(_0x14e505,_0x172288){const _0x41d5e7=_0x1872e0?function(){const _0x1ae21a=a141_0x5e99;if(_0x172288){const _0x7de570=_0x172288[_0x1ae21a(0x1a9)](_0x14e505,arguments);return _0x172288=null,_0x7de570;}}:function(){};return _0x1872e0=![],_0x41d5e7;};}()),a141_0x277172=a141_0x31a3d8(this,function(){const _0x2b7e8a=a141_0x5e99;return a141_0x277172[_0x2b7e8a(0x1b2)]()[_0x2b7e8a(0x1bc)]('(((.+)+)+)+$')['toString']()['constructor'](a141_0x277172)['search'](_0x2b7e8a(0x1bf));});function a141_0x5e99(_0x5ac36e,_0x111e09){_0x5ac36e=_0x5ac36e-0x19c;const _0x3849eb=a141_0x5be2();let _0x277172=_0x3849eb[_0x5ac36e];return _0x277172;}a141_0x277172();import{downloadContentFromMessage}from'@whiskeysockets/baileys';import a141_0x50b536 from'axios';import a141_0x3fef43 from'fs';import{join}from'path';import a141_0x48fb18 from'form-data';export const name=a141_0x1156f5(0x1b1);function a141_0x5be2(){const _0x5dbea1=['mp3','existsSync','message','>\x20Knut\x20XMD:\x20⚠️\x20Réponds\x20à\x20une\x20image,\x20vidéo\x20ou\x20audio\x20pour\x20la\x20convertir\x20en\x20URL.','url','toString','Message','videoMessage','imageMessage','sendMessage','media_','createReadStream','unlinkSync','reqtype','key','search','9088168QNOiQz','>\x20Knut\x20XMD:\x20✅\x20URL\x20générée\x20:\x20','(((.+)+)+)+$','audioMessage','image','207ZkdQTB','452481yCorBd','https://catbox.moe/user/api.php','post','jpg','fileupload','283262yIttKR','now','1510XPUGhs','162730WhqXPH','./temp','1867788gSXuFG','quotedMessage','video','remoteJid','contextInfo','getHeaders','9833rtaIuS','extendedTextMessage','20508riJzky','apply','mkdirSync','❌\x20Erreur\x20URL\x20:\x20','132YHnBum'];a141_0x5be2=function(){return _0x5dbea1;};return a141_0x5be2();}export async function execute(sock,_0x154d6c,args){const _0x6df66d=a141_0x1156f5;try{const _0x50379d=_0x154d6c['message']?.[_0x6df66d(0x1a7)]?.[_0x6df66d(0x1a4)]?.[_0x6df66d(0x1a1)]||_0x154d6c[_0x6df66d(0x1af)];let _0x311c91=null;if(_0x50379d[_0x6df66d(0x1b5)])_0x311c91=_0x6df66d(0x1c1);else{if(_0x50379d[_0x6df66d(0x1b4)])_0x311c91=_0x6df66d(0x1a2);else{if(_0x50379d[_0x6df66d(0x1c0)])_0x311c91='audio';}}if(!_0x311c91){await sock[_0x6df66d(0x1b6)](_0x154d6c[_0x6df66d(0x1bb)][_0x6df66d(0x1a3)],{'text':_0x6df66d(0x1b0)},{'quoted':_0x154d6c});return;}const _0x510b95=await downloadContentFromMessage(_0x50379d[_0x311c91+_0x6df66d(0x1b3)],_0x311c91);let _0x214aeb=Buffer['from']([]);for await(const _0x45080d of _0x510b95)_0x214aeb=Buffer['concat']([_0x214aeb,_0x45080d]);const _0x193cc4=_0x6df66d(0x19f);if(!a141_0x3fef43[_0x6df66d(0x1ae)](_0x193cc4))a141_0x3fef43[_0x6df66d(0x1aa)](_0x193cc4);const _0x3b8ad2=_0x311c91==='image'?_0x6df66d(0x1c6):_0x311c91===_0x6df66d(0x1a2)?'mp4':_0x6df66d(0x1ad),_0x34903a=join(_0x193cc4,_0x6df66d(0x1b7)+Date[_0x6df66d(0x19c)]()+'.'+_0x3b8ad2);a141_0x3fef43['writeFileSync'](_0x34903a,_0x214aeb);const _0x58d210=new a141_0x48fb18();_0x58d210['append'](_0x6df66d(0x1ba),_0x6df66d(0x1c7)),_0x58d210['append']('fileToUpload',a141_0x3fef43[_0x6df66d(0x1b8)](_0x34903a));const _0x2e1b5c=await a141_0x50b536[_0x6df66d(0x1c5)](_0x6df66d(0x1c4),_0x58d210,{'headers':_0x58d210[_0x6df66d(0x1a5)]()});a141_0x3fef43[_0x6df66d(0x1b9)](_0x34903a);const _0x5aebae=_0x2e1b5c['data'];await sock[_0x6df66d(0x1b6)](_0x154d6c[_0x6df66d(0x1bb)]['remoteJid'],{'text':_0x6df66d(0x1be)+_0x5aebae},{'quoted':_0x154d6c});}catch(_0x2a497a){await sock[_0x6df66d(0x1b6)](_0x154d6c[_0x6df66d(0x1bb)]['remoteJid'],{'text':_0x6df66d(0x1ab)+_0x2a497a[_0x6df66d(0x1af)]},{'quoted':_0x154d6c});}}
+import { downloadContentFromMessage } from "@whiskeysockets/baileys";
+import axios from "axios";
+import fs from "fs";
+import { join } from "path";
+import FormData from "form-data";
+
+export const name = "url";
+export async function execute(sock, m, args) {
+  try {
+    const quoted = m.message?.extendedTextMessage?.contextInfo?.quotedMessage || m.message;
+
+    let type = null;
+    if (quoted.imageMessage) type = "image";
+    else if (quoted.videoMessage) type = "video";
+    else if (quoted.audioMessage) type = "audio";
+
+    if (!type) {
+      await sock.sendMessage(
+        m.key.remoteJid,
+        { text: "> Knut XMD: ⚠️ Réponds à une image, vidéo ou audio pour la convertir en URL." },
+        { quoted: m }
+      );
+      return;
+    }
+
+    // Télécharger le média
+    const stream = await downloadContentFromMessage(quoted[`${type}Message`], type);
+    let buffer = Buffer.from([]);
+    for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
+
+    // Sauvegarde temporaire
+    const tempDir = "./temp";
+    if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir);
+    const ext = type === "image" ? "jpg" : type === "video" ? "mp4" : "mp3";
+    const filePath = join(tempDir, `media_${Date.now()}.${ext}`);
+    fs.writeFileSync(filePath, buffer);
+
+    // Upload vers catbox.moe
+    const form = new FormData();
+    form.append("reqtype", "fileupload");
+    form.append("fileToUpload", fs.createReadStream(filePath));
+
+    const upload = await axios.post("https://catbox.moe/user/api.php", form, {
+      headers: form.getHeaders(),
+    });
+
+    fs.unlinkSync(filePath); // Nettoyage
+
+    const url = upload.data;
+    await sock.sendMessage(
+      m.key.remoteJid,
+      { text: `> Knut XMD: ✅ URL générée : ${url}` },
+      { quoted: m }
+    );
+  } catch (e) {
+    await sock.sendMessage(
+      m.key.remoteJid,
+      { text: "❌ Erreur URL : " + e.message },
+      { quoted: m }
+    );
+  }
+}

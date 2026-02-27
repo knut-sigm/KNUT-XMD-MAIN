@@ -1,1 +1,40 @@
-(function(_0x230dd9,_0x22fd2f){const _0xc9a69b=a99_0x374a,_0x37b269=_0x230dd9();while(!![]){try{const _0x405b30=parseInt(_0xc9a69b(0xd9))/0x1*(-parseInt(_0xc9a69b(0xdc))/0x2)+-parseInt(_0xc9a69b(0xd8))/0x3+parseInt(_0xc9a69b(0xe7))/0x4+-parseInt(_0xc9a69b(0xec))/0x5+parseInt(_0xc9a69b(0xe4))/0x6+parseInt(_0xc9a69b(0xe6))/0x7*(parseInt(_0xc9a69b(0xdd))/0x8)+-parseInt(_0xc9a69b(0xeb))/0x9*(-parseInt(_0xc9a69b(0xd1))/0xa);if(_0x405b30===_0x22fd2f)break;else _0x37b269['push'](_0x37b269['shift']());}catch(_0x3d9329){_0x37b269['push'](_0x37b269['shift']());}}}(a99_0xa53f,0xba78c));const a99_0x3a75f0=(function(){let _0x236dfb=!![];return function(_0x54b537,_0x38b5b9){const _0x488d5c=_0x236dfb?function(){const _0x2ad4b7=a99_0x374a;if(_0x38b5b9){const _0x1c5afa=_0x38b5b9[_0x2ad4b7(0xe9)](_0x54b537,arguments);return _0x38b5b9=null,_0x1c5afa;}}:function(){};return _0x236dfb=![],_0x488d5c;};}()),a99_0x475c87=a99_0x3a75f0(this,function(){const _0x4494b5=a99_0x374a;return a99_0x475c87['toString']()[_0x4494b5(0xdb)](_0x4494b5(0xdf))[_0x4494b5(0xea)]()[_0x4494b5(0xd6)](a99_0x475c87)[_0x4494b5(0xdb)]('(((.+)+)+)+$');});a99_0x475c87();import{downloadContentFromMessage}from'@whiskeysockets/baileys';function a99_0x374a(_0x2af910,_0x515977){_0x2af910=_0x2af910-0xd1;const _0xa0282c=a99_0xa53f();let _0x475c87=_0xa0282c[_0x2af910];return _0x475c87;}export const name='photo';function a99_0xa53f(){const _0x567193=['concat','message','>\x20Knut\x20XMD:\x20Conversion\x20reussie','extendedTextMessage','constructor','>\x20Knut\x20XMD:\x20Répondez\x20au\x20sticker\x20à\x20convertir\x20en\x20image.','3361212hcYwLS','149449aLGmuO','key','search','16wuddzD','2456ZZftsw','stickerMessage','(((.+)+)+)+$','from','sticker','remoteJid','>\x20Knut\x20XMD:\x20❌\x20Erreur\x20conversion\x20sticker\x20→\x20photo\x20:\x20','6898782TQhhpe','contextInfo','21035bxdQEk','284744EQfKtf','sendMessage','apply','toString','13185VjqwYF','1098095CBhXmD','7890abOwqW'];a99_0xa53f=function(){return _0x567193;};return a99_0xa53f();}export async function execute(sock,_0x301f6d,args){const _0x178933=a99_0x374a;try{const _0x318350=_0x301f6d[_0x178933(0xd3)]?.[_0x178933(0xd5)]?.[_0x178933(0xe5)]?.['quotedMessage']?.[_0x178933(0xde)];if(!_0x318350){await sock[_0x178933(0xe8)](_0x301f6d[_0x178933(0xda)][_0x178933(0xe2)],{'text':_0x178933(0xd7)},{'quoted':_0x301f6d});return;}const _0xb8e335=await downloadContentFromMessage(_0x318350,_0x178933(0xe1));let _0x5e3829=Buffer[_0x178933(0xe0)]([]);for await(const _0x13dd04 of _0xb8e335){_0x5e3829=Buffer[_0x178933(0xd2)]([_0x5e3829,_0x13dd04]);}await sock[_0x178933(0xe8)](_0x301f6d[_0x178933(0xda)]['remoteJid'],{'image':_0x5e3829,'caption':_0x178933(0xd4)},{'quoted':_0x301f6d});}catch(_0x8451f){await sock[_0x178933(0xe8)](_0x301f6d['key'][_0x178933(0xe2)],{'text':_0x178933(0xe3)+_0x8451f[_0x178933(0xd3)]},{'quoted':_0x301f6d});}}
+import { downloadContentFromMessage } from "@whiskeysockets/baileys";
+
+export const name = "photo";
+export async function execute(sock, m, args) {
+  try {
+    // Vérifie si on répond à un sticker
+    const quoted = m.message?.extendedTextMessage?.contextInfo?.quotedMessage?.stickerMessage;
+    if (!quoted) {
+      await sock.sendMessage(
+        m.key.remoteJid,
+        { text: "> Knut XMD: Répondez au sticker à convertir en image." },
+        { quoted: m }
+      );
+      return;
+    }
+
+    // Télécharge le sticker
+    const stream = await downloadContentFromMessage(quoted, "sticker");
+    let buffer = Buffer.from([]);
+    for await (const chunk of stream) {
+      buffer = Buffer.concat([buffer, chunk]);
+    }
+
+    // Renvoie le sticker comme photo
+    await sock.sendMessage(
+      m.key.remoteJid,
+      {
+        image: buffer,
+        caption: "> Knut XMD: Conversion reussie",
+      },
+      { quoted: m }
+    );
+  } catch (e) {
+    await sock.sendMessage(
+      m.key.remoteJid,
+      { text: "> Knut XMD: ❌ Erreur conversion sticker → photo : " + e.message },
+      { quoted: m }
+    );
+  }
+}

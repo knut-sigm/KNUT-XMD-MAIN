@@ -1,1 +1,95 @@
-function a74_0x5f44(_0x47aa46,_0x1c11f5){_0x47aa46=_0x47aa46-0x93;const _0x3932d8=a74_0x2825();let _0x33ea9d=_0x3932d8[_0x47aa46];return _0x33ea9d;}(function(_0x23b3b2,_0x74484){const _0x27856e=a74_0x5f44,_0x3dd083=_0x23b3b2();while(!![]){try{const _0x507ff0=-parseInt(_0x27856e(0xb9))/0x1*(-parseInt(_0x27856e(0xa8))/0x2)+parseInt(_0x27856e(0x96))/0x3+parseInt(_0x27856e(0x9d))/0x4+-parseInt(_0x27856e(0xa2))/0x5+parseInt(_0x27856e(0x9b))/0x6*(parseInt(_0x27856e(0xa0))/0x7)+parseInt(_0x27856e(0xb4))/0x8*(-parseInt(_0x27856e(0xa9))/0x9)+parseInt(_0x27856e(0x93))/0xa*(-parseInt(_0x27856e(0xac))/0xb);if(_0x507ff0===_0x74484)break;else _0x3dd083['push'](_0x3dd083['shift']());}catch(_0x275cba){_0x3dd083['push'](_0x3dd083['shift']());}}}(a74_0x2825,0xf229e));const a74_0x5682b0=(function(){let _0x53a89a=!![];return function(_0xc07f27,_0x392c79){const _0x51f6e1=_0x53a89a?function(){const _0x353c2a=a74_0x5f44;if(_0x392c79){const _0x22a4ff=_0x392c79[_0x353c2a(0x9a)](_0xc07f27,arguments);return _0x392c79=null,_0x22a4ff;}}:function(){};return _0x53a89a=![],_0x51f6e1;};}()),a74_0x33ea9d=a74_0x5682b0(this,function(){const _0xef7033=a74_0x5f44;return a74_0x33ea9d[_0xef7033(0x9e)]()[_0xef7033(0xb8)](_0xef7033(0x9f))[_0xef7033(0x9e)]()[_0xef7033(0xaf)](a74_0x33ea9d)['search'](_0xef7033(0x9f));});a74_0x33ea9d();function a74_0x2825(){const _0x2af7c2=['key','quotedMessage','search','1XqmRfc','message','participants','endsWith','20QypyOJ','sendMessage','groupMetadata','3928860qChSNP','push','@g.us','_⚫KNUT\x20MDX☠️:_\x20Erreur\x20kick\x20:','apply','9714ALUcBq','mentionedJid','6379304ISVLdR','toString','(((.+)+)+)+$','6881pYWVmP','>\x20Knut\x20XMD:\x20❌\x20Suppression\x20Impossible.','1899645DfEdUM','length','participant','>\x20Knut\x20XMD:\x20Mentionnez\x20ou\x20répondez\x20au\x20message\x20du\x20membre\x20à\x20supprimer\x20!','\x0a>\x20👥\x20Membres\x20restants\x20:\x20','\x20🖤','1290610PrsIYU','9dWjPiK','split','contextInfo','11537504RNYxjR','remoteJid','🖤\x20@','constructor','error','extendedTextMessage','>\x20Knut\x20XMD:Commande\x20de\x20groupe\x20.','remove','13373352WogkHa','groupParticipantsUpdate'];a74_0x2825=function(){return _0x2af7c2;};return a74_0x2825();}export const name='kick';export async function execute(sock,msg,args){const _0x113cd6=a74_0x5f44;try{const from=msg['key'][_0x113cd6(0xad)];if(!from[_0x113cd6(0xbc)](_0x113cd6(0x98)))return await sock[_0x113cd6(0x94)](from,{'text':_0x113cd6(0xb2)},{'quoted':msg});const _0x4603e4=await sock[_0x113cd6(0x95)](from);let _0x244e4d=[];const _0x4d408a=msg[_0x113cd6(0xba)]?.[_0x113cd6(0xb1)]?.[_0x113cd6(0xab)]?.[_0x113cd6(0x9c)];if(_0x4d408a&&_0x4d408a['length']>0x0)_0x244e4d[_0x113cd6(0x97)](..._0x4d408a);const _0x47427d=msg[_0x113cd6(0xba)]?.[_0x113cd6(0xb1)]?.['contextInfo']?.[_0x113cd6(0xb7)];if(_0x47427d){const _0x326618=msg[_0x113cd6(0xba)][_0x113cd6(0xb1)][_0x113cd6(0xab)][_0x113cd6(0xa4)];if(_0x326618)_0x244e4d[_0x113cd6(0x97)](_0x326618);}if(_0x244e4d[_0x113cd6(0xa3)]===0x0)return await sock[_0x113cd6(0x94)](from,{'text':_0x113cd6(0xa5)},{'quoted':msg});_0x244e4d=[...new Set(_0x244e4d)],await sock[_0x113cd6(0xb5)](from,_0x244e4d,_0x113cd6(0xb3));const _0x30458a=await sock[_0x113cd6(0x95)](from),_0x37d0dc=_0x30458a[_0x113cd6(0xbb)][_0x113cd6(0xa3)],_0x465a6a=_0x244e4d['map'](_0x25dc46=>_0x113cd6(0xae)+_0x25dc46[_0x113cd6(0xaa)]('@')[0x0]+_0x113cd6(0xa7))['join']('\x0a'),_0x336c4e='>\x20Knut\x20XMD:\x0a>\x20⚠️\x20Membres\x20expulsés\x20:'+_0x465a6a+_0x113cd6(0xa6)+_0x37d0dc;await sock[_0x113cd6(0x94)](from,{'text':_0x336c4e,'mentions':_0x244e4d});}catch(_0x172e5e){console[_0x113cd6(0xb0)](_0x113cd6(0x99),_0x172e5e),await sock['sendMessage'](msg[_0x113cd6(0xb6)][_0x113cd6(0xad)],{'text':_0x113cd6(0xa1)},{'quoted':msg});}}
+export const name = "kick";
+
+export async function execute(sock, msg, args) {
+
+  try {
+
+    const from = msg.key.remoteJid;
+
+    if (!from.endsWith("@g.us")) {
+
+      return await sock.sendMessage(from, {
+
+        text: "> Knut XMD:Commande de groupe ."
+
+      }, { quoted: msg });
+
+    }
+
+    const groupMetadata = await sock.groupMetadata(from);
+
+    // Récupérer les JID des membres à expulser
+
+    let targets = [];
+
+    // 1️⃣ Si mention
+
+    const mentioned = msg.message?.extendedTextMessage?.contextInfo?.mentionedJid;
+
+    if (mentioned && mentioned.length > 0) targets.push(...mentioned);
+
+    // 2️⃣ Si réponse à un message
+
+    const replied = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage;
+
+    if (replied) {
+
+      const sender = msg.message.extendedTextMessage.contextInfo.participant;
+
+      if (sender) targets.push(sender);
+
+    }
+
+    if (targets.length === 0) {
+
+      return await sock.sendMessage(from, {
+
+        text: "> Knut XMD: Mentionnez ou répondez au message du membre à supprimer !"
+
+      }, { quoted: msg });
+
+    }
+
+    // Filtrer les doublons
+
+    targets = [...new Set(targets)];
+
+    // Expulser chaque membre
+
+    await sock.groupParticipantsUpdate(from, targets, "remove");
+
+    // Actualiser les infos du groupe après expulsion
+
+    const updatedGroup = await sock.groupMetadata(from);
+
+    const remainingCount = updatedGroup.participants.length;
+
+    // Message de confirmation stylisé
+
+    const mentionsText = targets.map(jid => `🖤 @${jid.split("@")[0]} 🖤`).join("\n");
+
+    const confirmationText = `> Knut XMD:
+> ⚠️ Membres expulsés :${mentionsText}
+> 👥 Membres restants : ${remainingCount}`;
+
+    await sock.sendMessage(from, { 
+
+      text: confirmationText,
+
+      mentions: targets
+
+    });
+
+  } catch (err) {
+
+    console.error("_⚫KNUT MDX☠️:_ Erreur kick :", err);
+
+    await sock.sendMessage(msg.key.remoteJid, {
+
+      text: "> Knut XMD: ❌ Suppression Impossible."
+
+    }, { quoted: msg });
+
+  }
+
+}

@@ -1,1 +1,119 @@
-const a124_0x7524cb=a124_0x562e;(function(_0x1f7fae,_0x267aa2){const _0x30c26d=a124_0x562e,_0x31fa3b=_0x1f7fae();while(!![]){try{const _0x5c0766=parseInt(_0x30c26d(0x10a))/0x1*(parseInt(_0x30c26d(0x128))/0x2)+parseInt(_0x30c26d(0x133))/0x3+parseInt(_0x30c26d(0x12a))/0x4*(-parseInt(_0x30c26d(0x140))/0x5)+parseInt(_0x30c26d(0x132))/0x6*(parseInt(_0x30c26d(0x144))/0x7)+-parseInt(_0x30c26d(0x105))/0x8*(-parseInt(_0x30c26d(0x113))/0x9)+-parseInt(_0x30c26d(0x11e))/0xa*(-parseInt(_0x30c26d(0x145))/0xb)+-parseInt(_0x30c26d(0x107))/0xc*(parseInt(_0x30c26d(0x137))/0xd);if(_0x5c0766===_0x267aa2)break;else _0x31fa3b['push'](_0x31fa3b['shift']());}catch(_0x4c5606){_0x31fa3b['push'](_0x31fa3b['shift']());}}}(a124_0xc5e7,0x2dc40));function a124_0x562e(_0x12f8f3,_0x38cfed){_0x12f8f3=_0x12f8f3-0x105;const _0x16faa8=a124_0xc5e7();let _0x5259d6=_0x16faa8[_0x12f8f3];return _0x5259d6;}const a124_0x1efd06=(function(){let _0x46003b=!![];return function(_0x3aae18,_0x22fdf1){const _0x51061e=_0x46003b?function(){const _0x1c5696=a124_0x562e;if(_0x22fdf1){const _0x4ae01e=_0x22fdf1[_0x1c5696(0x130)](_0x3aae18,arguments);return _0x22fdf1=null,_0x4ae01e;}}:function(){};return _0x46003b=![],_0x51061e;};}()),a124_0x5259d6=a124_0x1efd06(this,function(){const _0x4bf94e=a124_0x562e;return a124_0x5259d6[_0x4bf94e(0x136)]()[_0x4bf94e(0x12c)](_0x4bf94e(0x13b))['toString']()[_0x4bf94e(0x106)](a124_0x5259d6)[_0x4bf94e(0x12c)](_0x4bf94e(0x13b));});function a124_0xc5e7(){const _0x1be8e3=['882010RshwYB','concat','exif','load','imageMessage','sticker','>\x20Knut\x20XMD:\x20⚠️\x20Réponds\x20à\x20une\x20image\x20ou\x20vidéo\x20avec\x20`.sticker`.','randomBytes','utf8','Échec\x20conversion\x20WebP.','262QACOfn','includes','76hktJnA','from','search','ffmpeg\x20-y\x20-i\x20\x22','extendedTextMessage','existsSync','apply','>\x20Knut\x20XMD:\x20⚠️\x20Impossible\x20de\x20télécharger\x20le\x20média.','174obFdHT','528381ACipZZ','sendMessage','updateMediaMessage','toString','10114HuQCfz','.webp','remoteJid','writeFileSync','(((.+)+)+)+$','Make\x20by','now','\x22\x20-vf\x20\x22scale=512:512:force_original_aspect_ratio=decrease,format=rgba,pad=512:512:(ow-iw)/2:(oh-ih)/2:color=#00000000\x22\x20-loop\x200\x20-c:v\x20libwebp\x20-preset\x20default\x20-an\x20-vsync\x200\x20-pix_fmt\x20yuva420p\x20-quality\x2080\x20-compression_level\x206\x20\x22','mimetype','16555pzbIwG','save','pushName','seconds','74249ecUEnw','33nrGRJm','81448ReqfJj','constructor','8868SiyXyg','.mp4','contextInfo','199URIxiM','\x22\x20-vf\x20\x22scale=512:512:force_original_aspect_ratio=decrease,fps=15,pad=512:512:(ow-iw)/2:(oh-ih)/2:color=#00000000\x22\x20-loop\x200\x20-c:v\x20libwebp\x20-preset\x20default\x20-an\x20-vsync\x200\x20-pix_fmt\x20yuva420p\x20-quality\x2070\x20-compression_level\x206\x20\x22','input_','❌\x20*Erreur\x20sticker\x20:*\x20','message','error','unlinkSync','quotedMessage','length','45QXdwQp','stringify','Image','stanzaId','key','video','readFileSync','./temp','join','documentMessage','❌\x20Erreur\x20sticker.js\x20:'];a124_0xc5e7=function(){return _0x1be8e3;};return a124_0xc5e7();}a124_0x5259d6();import a124_0x46f51d from'fs';import a124_0x2175f9 from'path';import{exec}from'child_process';import a124_0x17141f from'crypto';import a124_0x5ce0ec from'node-webpmux';import{downloadMediaMessage}from'@whiskeysockets/baileys';export const name=a124_0x7524cb(0x123);export async function execute(sock,_0x27b9d6,args){const _0x4fca3d=a124_0x7524cb;try{const _0x1edd86=_0x27b9d6['key'][_0x4fca3d(0x139)],username=_0x27b9d6[_0x4fca3d(0x142)]||'Utilisateur';let _0x25b7bb=_0x27b9d6;if(_0x27b9d6[_0x4fca3d(0x10e)]?.[_0x4fca3d(0x12e)]?.[_0x4fca3d(0x109)]?.[_0x4fca3d(0x111)]){const _0x43391d=_0x27b9d6[_0x4fca3d(0x10e)][_0x4fca3d(0x12e)][_0x4fca3d(0x109)];_0x25b7bb={'key':{'remoteJid':_0x1edd86,'id':_0x43391d[_0x4fca3d(0x116)],'participant':_0x43391d['participant']},'message':_0x43391d[_0x4fca3d(0x111)]};}const _0x4b6304=_0x25b7bb[_0x4fca3d(0x10e)]?.[_0x4fca3d(0x122)]||_0x25b7bb[_0x4fca3d(0x10e)]?.['videoMessage']||_0x25b7bb['message']?.[_0x4fca3d(0x11c)];if(!_0x4b6304)return await sock[_0x4fca3d(0x134)](_0x1edd86,{'text':_0x4fca3d(0x124)},{'quoted':_0x27b9d6});const _0x59e2ec=await downloadMediaMessage(_0x25b7bb,'buffer',{},{'reuploadRequest':sock[_0x4fca3d(0x135)]});if(!_0x59e2ec)return await sock[_0x4fca3d(0x134)](_0x1edd86,{'text':_0x4fca3d(0x131)},{'quoted':_0x27b9d6});const _0x4a0cdb=_0x4fca3d(0x11a);if(!a124_0x46f51d[_0x4fca3d(0x12f)](_0x4a0cdb))a124_0x46f51d['mkdirSync'](_0x4a0cdb);const _0xa657b7=a124_0x2175f9[_0x4fca3d(0x11b)](_0x4a0cdb,_0x4fca3d(0x10c)+Date[_0x4fca3d(0x13d)]()+_0x4fca3d(0x108)),_0x36109a=a124_0x2175f9[_0x4fca3d(0x11b)](_0x4a0cdb,'sticker_'+Date[_0x4fca3d(0x13d)]()+_0x4fca3d(0x138));a124_0x46f51d[_0x4fca3d(0x13a)](_0xa657b7,_0x59e2ec);const _0x540fd4=_0x4b6304[_0x4fca3d(0x13f)]?.[_0x4fca3d(0x129)](_0x4fca3d(0x118))||_0x4b6304[_0x4fca3d(0x13f)]?.[_0x4fca3d(0x129)]('gif')||_0x4b6304[_0x4fca3d(0x143)]>0x0,_0x4582b4=_0x540fd4?'ffmpeg\x20-y\x20-i\x20\x22'+_0xa657b7+_0x4fca3d(0x10b)+_0x36109a+'\x22':_0x4fca3d(0x12d)+_0xa657b7+_0x4fca3d(0x13e)+_0x36109a+'\x22';await new Promise((_0x2c3830,_0x2b2c0e)=>{exec(_0x4582b4,_0x4de9be=>_0x4de9be?_0x2b2c0e(_0x4de9be):_0x2c3830());});if(!a124_0x46f51d[_0x4fca3d(0x12f)](_0x36109a))throw new Error(_0x4fca3d(0x127));const _0x4b46cb=a124_0x46f51d[_0x4fca3d(0x119)](_0x36109a),_0x4a254a=new a124_0x5ce0ec[(_0x4fca3d(0x115))]();await _0x4a254a[_0x4fca3d(0x121)](_0x4b46cb);const _0x46cbc1={'sticker-pack-id':a124_0x17141f[_0x4fca3d(0x125)](0x10)[_0x4fca3d(0x136)]('hex'),'sticker-pack-name':_0x4fca3d(0x13c),'sticker-pack-publisher':username,'emojis':['⚡']},_0x4db9f2=Buffer[_0x4fca3d(0x12b)]([0x49,0x49,0x2a,0x0,0x8,0x0,0x0,0x0,0x1,0x0,0x41,0x57,0x7,0x0,0x0,0x0,0x0,0x0,0x16,0x0,0x0,0x0]),_0x294bee=Buffer[_0x4fca3d(0x12b)](JSON[_0x4fca3d(0x114)](_0x46cbc1),_0x4fca3d(0x126)),_0x718a3c=Buffer[_0x4fca3d(0x11f)]([_0x4db9f2,_0x294bee]);_0x718a3c['writeUIntLE'](_0x294bee[_0x4fca3d(0x112)],0xe,0x4),_0x4a254a[_0x4fca3d(0x120)]=_0x718a3c;const _0x2e11db=await _0x4a254a[_0x4fca3d(0x141)](null);await sock[_0x4fca3d(0x134)](_0x1edd86,{'sticker':_0x2e11db},{'quoted':_0x27b9d6}),a124_0x46f51d[_0x4fca3d(0x110)](_0xa657b7),a124_0x46f51d['unlinkSync'](_0x36109a);}catch(_0x3f6161){console[_0x4fca3d(0x10f)](_0x4fca3d(0x11d),_0x3f6161),await sock[_0x4fca3d(0x134)](_0x27b9d6[_0x4fca3d(0x117)]['remoteJid'],{'text':_0x4fca3d(0x10d)+_0x3f6161[_0x4fca3d(0x10e)]},{'quoted':_0x27b9d6});}}
+import fs from "fs";
+import path from "path";
+import { exec } from "child_process";
+import crypto from "crypto";
+import webp from "node-webpmux";
+import { downloadMediaMessage } from "@whiskeysockets/baileys";
+
+export const name = "sticker";
+
+export async function execute(sock, m, args) {
+  try {
+    const jid = m.key.remoteJid;
+    const username = m.pushName || "Utilisateur";
+
+    // Message cible (direct ou cité)
+    let targetMessage = m;
+    if (m.message?.extendedTextMessage?.contextInfo?.quotedMessage) {
+      const quoted = m.message.extendedTextMessage.contextInfo;
+      targetMessage = {
+        key: {
+          remoteJid: jid,
+          id: quoted.stanzaId,
+          participant: quoted.participant,
+        },
+        message: quoted.quotedMessage,
+      };
+    }
+
+    const mediaMsg =
+      targetMessage.message?.imageMessage ||
+      targetMessage.message?.videoMessage ||
+      targetMessage.message?.documentMessage;
+
+    if (!mediaMsg) {
+      return await sock.sendMessage(
+        jid,
+        { text: "> Knut XMD: ⚠️ Réponds à une image ou vidéo avec `.sticker`." },
+        { quoted: m }
+      );
+    }
+
+    // Téléchargement du média
+    const mediaBuffer = await downloadMediaMessage(
+      targetMessage,
+      "buffer",
+      {},
+      { reuploadRequest: sock.updateMediaMessage }
+    );
+
+    if (!mediaBuffer) {
+      return await sock.sendMessage(
+        jid,
+        { text: "> Knut XMD: ⚠️ Impossible de télécharger le média." },
+        { quoted: m }
+      );
+    }
+
+    // Dossier temporaire
+    const tempDir = "./temp";
+    if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir);
+
+    const inputPath = path.join(tempDir, `input_${Date.now()}.mp4`);
+    const outputPath = path.join(tempDir, `sticker_${Date.now()}.webp`);
+    fs.writeFileSync(inputPath, mediaBuffer);
+
+    const isAnimated =
+      mediaMsg.mimetype?.includes("video") ||
+      mediaMsg.mimetype?.includes("gif") ||
+      mediaMsg.seconds > 0;
+
+    // Conversion via ffmpeg
+    const cmd = isAnimated
+      ? `ffmpeg -y -i "${inputPath}" -vf "scale=512:512:force_original_aspect_ratio=decrease,fps=15,pad=512:512:(ow-iw)/2:(oh-ih)/2:color=#00000000" -loop 0 -c:v libwebp -preset default -an -vsync 0 -pix_fmt yuva420p -quality 70 -compression_level 6 "${outputPath}"`
+      : `ffmpeg -y -i "${inputPath}" -vf "scale=512:512:force_original_aspect_ratio=decrease,format=rgba,pad=512:512:(ow-iw)/2:(oh-ih)/2:color=#00000000" -loop 0 -c:v libwebp -preset default -an -vsync 0 -pix_fmt yuva420p -quality 80 -compression_level 6 "${outputPath}"`;
+
+    await new Promise((resolve, reject) => {
+      exec(cmd, (err) => (err ? reject(err) : resolve()));
+    });
+
+    if (!fs.existsSync(outputPath)) throw new Error("Échec conversion WebP.");
+
+    // Ajout des métadonnées EXIF avec ${username}
+    const webpBuffer = fs.readFileSync(outputPath);
+    const img = new webp.Image();
+    await img.load(webpBuffer);
+
+    const metadata = {
+      "sticker-pack-id": crypto.randomBytes(16).toString("hex"),
+      "sticker-pack-name": "Make by",
+      "sticker-pack-publisher": username,
+      emojis: ["⚡"],
+    };
+
+    const exifAttr = Buffer.from([
+      0x49, 0x49, 0x2a, 0x00, 0x08, 0x00, 0x00, 0x00, 0x01, 0x00, 0x41, 0x57,
+      0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0x16, 0x00, 0x00, 0x00,
+    ]);
+    const jsonBuffer = Buffer.from(JSON.stringify(metadata), "utf8");
+    const exif = Buffer.concat([exifAttr, jsonBuffer]);
+    exif.writeUIntLE(jsonBuffer.length, 14, 4);
+
+    img.exif = exif;
+    const finalBuffer = await img.save(null);
+
+    // Envoi du sticker
+    await sock.sendMessage(jid, { sticker: finalBuffer }, { quoted: m });
+
+    // Nettoyage
+    fs.unlinkSync(inputPath);
+    fs.unlinkSync(outputPath);
+  } catch (e) {
+    console.error("❌ Erreur sticker.js :", e);
+    await sock.sendMessage(
+      m.key.remoteJid,
+      { text: `❌ *Erreur sticker :* ${e.message}` },
+      { quoted: m }
+    );
+  }
+}

@@ -1,1 +1,83 @@
-(function(_0x17ae38,_0x3412f5){const _0x3a2182=a125_0x5ccf,_0x5cf0ef=_0x17ae38();while(!![]){try{const _0x3db0b7=-parseInt(_0x3a2182(0xbf))/0x1*(-parseInt(_0x3a2182(0xb6))/0x2)+parseInt(_0x3a2182(0xb5))/0x3*(-parseInt(_0x3a2182(0xbb))/0x4)+-parseInt(_0x3a2182(0xaa))/0x5*(parseInt(_0x3a2182(0xac))/0x6)+-parseInt(_0x3a2182(0xa0))/0x7*(parseInt(_0x3a2182(0xa7))/0x8)+-parseInt(_0x3a2182(0xb8))/0x9*(parseInt(_0x3a2182(0xb7))/0xa)+parseInt(_0x3a2182(0xb2))/0xb*(-parseInt(_0x3a2182(0xa3))/0xc)+-parseInt(_0x3a2182(0xa2))/0xd*(-parseInt(_0x3a2182(0xbe))/0xe);if(_0x3db0b7===_0x3412f5)break;else _0x5cf0ef['push'](_0x5cf0ef['shift']());}catch(_0x85bca9){_0x5cf0ef['push'](_0x5cf0ef['shift']());}}}(a125_0x5c37,0x6946f));function a125_0x5ccf(_0x4a94e3,_0x3eb706){_0x4a94e3=_0x4a94e3-0x9e;const _0x57d2af=a125_0x5c37();let _0x30fe9f=_0x57d2af[_0x4a94e3];return _0x30fe9f;}const a125_0x42afd6=(function(){let _0x495b2e=!![];return function(_0x4ef132,_0x43d6ae){const _0x586396=_0x495b2e?function(){const _0x22e0a7=a125_0x5ccf;if(_0x43d6ae){const _0xe9205c=_0x43d6ae[_0x22e0a7(0xb1)](_0x4ef132,arguments);return _0x43d6ae=null,_0xe9205c;}}:function(){};return _0x495b2e=![],_0x586396;};}()),a125_0x30fe9f=a125_0x42afd6(this,function(){const _0x2823eb=a125_0x5ccf;return a125_0x30fe9f[_0x2823eb(0xa8)]()[_0x2823eb(0xad)]('(((.+)+)+)+$')['toString']()['constructor'](a125_0x30fe9f)[_0x2823eb(0xad)]('(((.+)+)+)+$');});function a125_0x5c37(){const _0x4bc397=['92096JnYivU','contextInfo','@g.us','13484114CrIpkm','663914jLLCLZ','conversation','map','length','7okVdOY','caption','13airvwo','8365416MullTw','text','>\x20Knut\x20XMD\x20:⚠️\x20Erreur\x20lors\x20de\x20l\x27envoi\x20du\x20tag.','extendedTextMessage','65528VYthNq','toString','sendMessage','125cINLPY','imageMessage','10308eNYLQl','search','>\x20Knut\x20XMD\x20:❌\x20Commande\x20réservée\x20aux\x20groupes\x20seulement.','error','endsWith','apply','11VazlYi','key','>\x20𝐼\x27𝑚\x20𝑐𝑟𝑎𝑧𝑦....𝑚𝑎𝑦𝑏𝑒','30qbYFnD','2FvyTrM','10UjrNVt','1956159BynFjn','quotedMessage','groupMetadata'];a125_0x5c37=function(){return _0x4bc397;};return a125_0x5c37();}a125_0x30fe9f();export const name='tag';export async function execute(sock,msg,args){const _0x56e057=a125_0x5ccf,from=msg[_0x56e057(0xb3)]['remoteJid'];if(!from[_0x56e057(0xb0)](_0x56e057(0xbd)))return await sock[_0x56e057(0xa9)](from,{'text':_0x56e057(0xae)},{'quoted':msg});try{const _0x46110d=await sock[_0x56e057(0xba)](from),_0x295afa=_0x46110d['participants'];let _0x6b08d1;const _0x2b4a15=msg['message']?.[_0x56e057(0xa6)]?.[_0x56e057(0xbc)]?.[_0x56e057(0xb9)];if(_0x2b4a15)_0x6b08d1=_0x2b4a15[_0x56e057(0xc0)]||_0x2b4a15[_0x56e057(0xa6)]?.[_0x56e057(0xa4)]||_0x2b4a15[_0x56e057(0xab)]?.[_0x56e057(0xa1)]||_0x2b4a15['videoMessage']?.[_0x56e057(0xa1)]||_0x56e057(0xb4);else args[_0x56e057(0x9f)]?_0x6b08d1=args['join']('\x20'):_0x6b08d1=_0x56e057(0xb4);await sock[_0x56e057(0xa9)](from,{'text':_0x6b08d1,'mentions':_0x295afa[_0x56e057(0x9e)](_0x4fa482=>_0x4fa482['id'])},{'quoted':msg});}catch(_0x3cf91b){console[_0x56e057(0xaf)]('❌\x20Erreur\x20commande\x20tag\x20:',_0x3cf91b),await sock['sendMessage'](from,{'text':_0x56e057(0xa5)},{'quoted':msg});}}
+export const name = "tag";
+
+export async function execute(sock, msg, args) {
+
+  const from = msg.key.remoteJid;
+
+  // Vérifie si c'est un groupe
+
+  if (!from.endsWith("@g.us")) {
+
+    return await sock.sendMessage(from, { text: "> Knut XMD :❌ Commande réservée aux groupes seulement." }, { quoted: msg });
+
+  }
+
+  try {
+
+    const groupMetadata = await sock.groupMetadata(from);
+
+    const participants = groupMetadata.participants;
+
+    let message;
+
+    // 🔹 Si on répond à un message
+
+    const quotedMsg = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage;
+
+    if (quotedMsg) {
+
+      message =
+
+        quotedMsg.conversation ||
+
+        quotedMsg.extendedTextMessage?.text ||
+
+        quotedMsg.imageMessage?.caption ||
+
+        quotedMsg.videoMessage?.caption ||
+
+        "> 𝐼'𝑚 𝑐𝑟𝑎𝑧𝑦....𝑚𝑎𝑦𝑏𝑒";
+
+    }
+
+    // 🔹 Si on fournit des arguments
+
+    else if (args.length) {
+
+      message = args.join(" ");
+
+    }
+
+    // 🔹 Si rien du tout
+
+    else {
+
+      message = "> 𝐼'𝑚 𝑐𝑟𝑎𝑧𝑦....𝑚𝑎𝑦𝑏𝑒";
+
+    }
+
+    await sock.sendMessage(
+
+      from,
+
+      {
+
+        text: message,
+
+        mentions: participants.map(p => p.id)
+
+      },
+
+      { quoted: msg }
+
+    );
+
+  } catch (e) {
+
+    console.error("❌ Erreur commande tag :", e);
+
+    await sock.sendMessage(from, { text: "> Knut XMD :⚠️ Erreur lors de l'envoi du tag." }, { quoted: msg });
+
+  }
+
+}

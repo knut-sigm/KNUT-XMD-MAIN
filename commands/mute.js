@@ -1,1 +1,20 @@
-function a94_0x419f(_0x133edc,_0x17f8da){_0x133edc=_0x133edc-0x170;const _0x30a5ab=a94_0x2827();let _0x3496fe=_0x30a5ab[_0x133edc];return _0x3496fe;}(function(_0x45d930,_0x45ba49){const _0x2582a6=a94_0x419f,_0x1c49d8=_0x45d930();while(!![]){try{const _0xdf798b=-parseInt(_0x2582a6(0x177))/0x1+-parseInt(_0x2582a6(0x178))/0x2*(parseInt(_0x2582a6(0x17d))/0x3)+parseInt(_0x2582a6(0x17e))/0x4+parseInt(_0x2582a6(0x179))/0x5+-parseInt(_0x2582a6(0x171))/0x6*(-parseInt(_0x2582a6(0x17b))/0x7)+-parseInt(_0x2582a6(0x176))/0x8+parseInt(_0x2582a6(0x17a))/0x9*(parseInt(_0x2582a6(0x182))/0xa);if(_0xdf798b===_0x45ba49)break;else _0x1c49d8['push'](_0x1c49d8['shift']());}catch(_0x21ea06){_0x1c49d8['push'](_0x1c49d8['shift']());}}}(a94_0x2827,0x8ddfa));const a94_0x43df74=(function(){let _0x51f0eb=!![];return function(_0x4a36c7,_0xb7bbdf){const _0x63b3cb=_0x51f0eb?function(){const _0x905c01=a94_0x419f;if(_0xb7bbdf){const _0x41540c=_0xb7bbdf[_0x905c01(0x172)](_0x4a36c7,arguments);return _0xb7bbdf=null,_0x41540c;}}:function(){};return _0x51f0eb=![],_0x63b3cb;};}()),a94_0x3496fe=a94_0x43df74(this,function(){const _0x10cada=a94_0x419f;return a94_0x3496fe['toString']()[_0x10cada(0x180)](_0x10cada(0x174))['toString']()[_0x10cada(0x185)](a94_0x3496fe)['search']('(((.+)+)+)+$');});function a94_0x2827(){const _0x414569=['@g.us','search','>\x20Knut\x20XMD\x20:\x20Commande\x20utilisée\x20pour\x20les\x20groupes.','110MTecXb','announcement','>\x20Knut\x20XMD\x20:\x20Impossible\x20de\x20fermer\x20le\x20groupe.\x20Assurez-vous\x20que\x20vous\x20êtes\x20admin.','constructor','>\x20Knut\x20XMD\x20:\x20Groupe\x20fermé!','key','1134dfqAAi','apply','error','(((.+)+)+)+$','sendMessage','8897696YCfBBe','1022043lmDOcO','8474ETHYWg','1262605Yfiywm','1979847FKhsNI','18417FCGkXe','remoteJid','537UwHxrp','1216796KIPxLV'];a94_0x2827=function(){return _0x414569;};return a94_0x2827();}a94_0x3496fe();export const name='mute';export async function execute(sock,msg,args){const _0x452839=a94_0x419f,from=msg[_0x452839(0x170)][_0x452839(0x17c)];if(!from['endsWith'](_0x452839(0x17f))){await sock[_0x452839(0x175)](from,{'text':_0x452839(0x181)},{'quoted':msg});return;}try{await sock['groupSettingUpdate'](from,_0x452839(0x183)),await sock['sendMessage'](from,{'text':_0x452839(0x186)},{'quoted':msg});}catch(_0x1cf358){console[_0x452839(0x173)]('Erreur\x20lors\x20de\x20la\x20fermeture\x20du\x20groupe\x20:',_0x1cf358),await sock[_0x452839(0x175)](from,{'text':_0x452839(0x184)},{'quoted':msg});}}
+export const name = "mute";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  // Vérifier si c'est un groupe
+  if (!from.endsWith("@g.us")) {
+    await sock.sendMessage(from, { text: "> Knut XMD : Commande utilisée pour les groupes." }, { quoted: msg });
+    return;
+  }
+
+  try {
+    // Mettre le groupe en mode admin uniquement (fermé)
+    await sock.groupSettingUpdate(from, "announcement"); // "announcement" = seuls les admins peuvent envoyer des messages
+    await sock.sendMessage(from, { text: "> Knut XMD : Groupe fermé!" }, { quoted: msg });
+  } catch (err) {
+    console.error("Erreur lors de la fermeture du groupe :", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Impossible de fermer le groupe. Assurez-vous que vous êtes admin." }, { quoted: msg });
+  }
+}

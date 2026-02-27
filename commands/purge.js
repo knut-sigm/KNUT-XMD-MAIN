@@ -1,1 +1,88 @@
-function a110_0x1ee1(){const _0x1148e9=['apply','sendMessage','split','1057653xxwaGd','(((.+)+)+)+$','remove','search','🥷🏾☢️PURGE.☠️❌','user','map','900318IFrKwE','*Erreur\x20lors\x20de\x20la\x20purge.*\x20Vérifie\x20mes\x20permissions.','https://files.catbox.moe/fzpi0q.jpg','participants','endsWith','OWNER_NUMBER','8NepZbI','purge','error','replace','16953RkgHZd','key','1592vbvYPW','length','toString','>\x20Knut\x20XMD\x20:\x20Commande\x20de\x20groupe','7pgnvhB','@s.whatsapp.net','Erreur\x20purge\x20:','>\x20Knut\x20XMD\x20:\x20Aucun\x20membre\x20non-admin\x20à\x20expulser.','718505ugaORB','1...☢️','admin','env','429XHoTAv','filter','\x20membre(s)\x20expulsé(s).*\x0aAdmin\x20et\x20owner\x20protégés','274944tUrBCq','groupParticipantsUpdate','2507860OLAwyx','remoteJid'];a110_0x1ee1=function(){return _0x1148e9;};return a110_0x1ee1();}const a110_0x56bd7a=a110_0x2531;(function(_0xeb5e5,_0x5c672c){const _0x298d40=a110_0x2531,_0x2c0262=_0xeb5e5();while(!![]){try{const _0x8f490e=-parseInt(_0x298d40(0xa0))/0x1+parseInt(_0x298d40(0xb1))/0x2+parseInt(_0x298d40(0xae))/0x3*(parseInt(_0x298d40(0xa2))/0x4)+parseInt(_0x298d40(0xaa))/0x5+parseInt(_0x298d40(0x96))/0x6*(parseInt(_0x298d40(0xa6))/0x7)+parseInt(_0x298d40(0x9c))/0x8*(-parseInt(_0x298d40(0x8f))/0x9)+-parseInt(_0x298d40(0xb3))/0xa;if(_0x8f490e===_0x5c672c)break;else _0x2c0262['push'](_0x2c0262['shift']());}catch(_0x59d377){_0x2c0262['push'](_0x2c0262['shift']());}}}(a110_0x1ee1,0x191e4));function a110_0x2531(_0x5180d2,_0x1249bf){_0x5180d2=_0x5180d2-0x8b;const _0x1fd421=a110_0x1ee1();let _0x1c5528=_0x1fd421[_0x5180d2];return _0x1c5528;}const a110_0x5d57a0=(function(){let _0x1667e9=!![];return function(_0x5892ae,_0x4d7a22){const _0x1ed92f=_0x1667e9?function(){const _0x475acd=a110_0x2531;if(_0x4d7a22){const _0x527779=_0x4d7a22[_0x475acd(0x8c)](_0x5892ae,arguments);return _0x4d7a22=null,_0x527779;}}:function(){};return _0x1667e9=![],_0x1ed92f;};}()),a110_0x1c5528=a110_0x5d57a0(this,function(){const _0x1a352c=a110_0x2531;return a110_0x1c5528['toString']()[_0x1a352c(0x92)](_0x1a352c(0x90))[_0x1a352c(0xa4)]()['constructor'](a110_0x1c5528)[_0x1a352c(0x92)](_0x1a352c(0x90));});a110_0x1c5528();export const name=a110_0x56bd7a(0x9d);export async function execute(sock,msg,args,_0x745547={}){const _0xdbb9c6=a110_0x56bd7a,from=msg?.[_0xdbb9c6(0xa1)]?.[_0xdbb9c6(0x8b)],_0x5b21e8=(process[_0xdbb9c6(0xad)][_0xdbb9c6(0x9b)]||'')[_0xdbb9c6(0x9f)](/[^0-9]/g,'')+_0xdbb9c6(0xa7);if(!from||!from[_0xdbb9c6(0x9a)]('@g.us')){await sock['sendMessage'](from||msg[_0xdbb9c6(0xa1)][_0xdbb9c6(0x8b)],{'text':_0xdbb9c6(0xa5)},{'quoted':msg});return;}try{const _0x2139da=await sock['groupMetadata'](from),_0x52f4fe=_0x2139da[_0xdbb9c6(0x99)]||[],_0xf19c14=(sock?.[_0xdbb9c6(0x94)]?.['id']||sock?.[_0xdbb9c6(0x94)]?.['jid']||'')[_0xdbb9c6(0x8e)]?.(':')?.[0x0]||'',_0x1228e2=_0x52f4fe[_0xdbb9c6(0x95)](_0x855e1d=>_0x855e1d['id']),_0x5b55f1=_0x52f4fe[_0xdbb9c6(0xaf)](_0x17980=>!_0x17980[_0xdbb9c6(0xac)])[_0xdbb9c6(0x95)](_0x59e134=>_0x59e134['id'])[_0xdbb9c6(0xaf)](_0x5d266c=>_0x5d266c!==_0xf19c14&&_0x5d266c!==_0x5b21e8);if(_0x5b55f1[_0xdbb9c6(0xa3)]===0x0){await sock[_0xdbb9c6(0x8d)](from,{'text':_0xdbb9c6(0xa9)},{'quoted':msg});return;}const _0x1a8c20=await sock[_0xdbb9c6(0x8d)](from,{'text':'3...☠️'});await new Promise(_0x604dc3=>setTimeout(_0x604dc3,0x3e8)),await sock[_0xdbb9c6(0x8d)](from,{'text':'2...🥷🏾','edit':_0x1a8c20['key']}),await new Promise(_0x3cded5=>setTimeout(_0x3cded5,0x3e8)),await sock[_0xdbb9c6(0x8d)](from,{'text':_0xdbb9c6(0xab),'edit':_0x1a8c20[_0xdbb9c6(0xa1)]}),await new Promise(_0xdb31d6=>setTimeout(_0xdb31d6,0x3e8)),await sock[_0xdbb9c6(0x8d)](from,{'text':_0xdbb9c6(0x93),'edit':_0x1a8c20[_0xdbb9c6(0xa1)]});const _0x143337='>\x20╔─────\x20PURGE\x20─────╗\x0a●▬▬▬▬๑♔♔๑▬▬▬▬▬●\x0a\x20『\x20𝑻𝑯𝑬\x20𝑨𝑹𝑪𝑨𝑵𝑬\x20𝑶𝑫𝑬𝑹\x20』\x0a☯︎\x20𝒔𝒊𝒍𝒆𝒏𝒄𝒆\x20•\x20𝒂𝒄𝒕𝒊𝒐𝒏\x20•\x20𝒍𝒐𝒚𝒂𝒖𝒕𝒆́\x0a●▬▬▬▬๑♔♔๑▬▬▬▬▬●\x0a\x0a⇨『\x20𝙉𝙤𝙪𝙨\x20𝙨𝙤𝙢𝙢𝙚𝙨\x20𝘼𝙧𝙘𝙖𝙣𝙚.\x20』\x0a𝙉𝙤𝙪𝙨\x20𝙣’𝙚𝙭𝙞𝙨𝙩𝙤𝙣𝙨\x20𝙥𝙖𝙨\x20𝙥𝙤𝙪𝙧\x20𝙚̂𝙩𝙧𝙚\x20𝙫𝙪𝙨.\x0a𝙉𝙤𝙪𝙨\x20𝙣’𝙖𝙫𝙤𝙣𝙨\x20𝙗𝙚𝙨𝙤𝙞𝙣\x20𝙙’𝙖𝙪𝙘𝙪𝙣𝙚\x20𝙖𝙥𝙥𝙧𝙤𝙗𝙖𝙩𝙞𝙤𝙣.\x0a➣𓅔\x20𝙉𝙤𝙪𝙨\x20𝙖𝙫𝙖𝙣𝙘̧𝙤𝙣𝙨\x20𝙙𝙖𝙣𝙨\x20𝙡𝙚\x20𝙨𝙞𝙡𝙚𝙣𝙘𝙚,\x20𝙜𝙪𝙞𝙙𝙚́𝙨\x20𝙥𝙖𝙧\x20𝙡𝙖\x20𝙥𝙧𝙚́𝙘𝙞𝙨𝙞𝙤𝙣,\x20𝙡𝙖\x20𝙢𝙖𝙞̂𝙩𝙧𝙞𝙨𝙚\x20𝙚𝙩\x20𝙡’𝙞𝙣𝙣𝙤𝙫𝙖𝙩𝙞𝙤𝙣.\x0a➣𓆘\x20𝙉𝙤𝙩𝙧𝙚\x20𝙛𝙤𝙧𝙘𝙚\x20𝙣𝙚\x20𝙨𝙚\x20𝙢𝙚𝙨𝙪𝙧𝙚\x20𝙣𝙞\x20𝙖𝙪\x20𝙣𝙤𝙢𝙗𝙧𝙚\x20𝙣𝙞\x20𝙖𝙪\x20𝙗𝙧𝙪𝙞𝙩,\x0a𝙢𝙖𝙞𝙨\x20𝙖̀\x20𝙡’𝙚𝙛𝙛𝙞𝙘𝙖𝙘𝙞𝙩𝙚́\x20𝙙𝙚\x20𝙣𝙤𝙨\x20𝙖𝙘𝙩𝙞𝙤𝙣𝙨\x20𝙚𝙩\x20𝙖̀\x20𝙡𝙖\x20𝙙𝙞𝙨𝙘𝙞𝙥𝙡𝙞𝙣𝙚\x20𝙙𝙚\x20𝙣𝙤𝙨\x20𝙢𝙚𝙢𝙗𝙧𝙚𝙨.\x0a𝘾𝙝𝙖𝙦𝙪𝙚\x20𝙖𝙘𝙩𝙚\x20𝙚𝙨𝙩\x20𝙧𝙚́𝙛𝙡𝙚́𝙘𝙝𝙞.\x20𝘾𝙝𝙖𝙦𝙪𝙚\x20𝙨𝙞𝙡𝙚𝙣𝙘𝙚\x20𝙚𝙨𝙩\x20𝙨𝙩𝙧𝙖𝙩𝙚́𝙜𝙞𝙦𝙪𝙚.\x0a𝙇𝙖\x20𝙛𝙚𝙧𝙢𝙚𝙩𝙚́\x20𝙚𝙨𝙩\x20𝙣𝙤𝙩𝙧𝙚\x20𝙡𝙤𝙞.\x0a➣\x20𓃢\x20𝙇𝙚\x20𝙧𝙚𝙨𝙥𝙚𝙘𝙩\x20𝙚𝙨𝙩\x20𝙖𝙗𝙨𝙤𝙡𝙪.\x0a𝙇𝙖\x20𝙡𝙤𝙮𝙖𝙪𝙩𝙚́\x20𝙚𝙨𝙩\x20𝙩𝙤𝙩𝙖𝙡𝙚.\x0a𝙇𝙖\x20𝙙𝙞𝙨𝙘𝙧𝙚́𝙩𝙞𝙤𝙣\x20𝙚𝙨𝙩\x20𝙞𝙣𝙫𝙞𝙤𝙡𝙖𝙗𝙡𝙚.\x0a𝙇𝙚\x20𝙢𝙮𝙨𝙩𝙚̀𝙧𝙚\x20𝙣𝙤𝙪𝙨\x20𝙥𝙧𝙤𝙩𝙚̀𝙜𝙚\x20𝙚𝙩\x20𝙣𝙤𝙪𝙨\x20𝙙𝙞𝙨𝙩𝙞𝙣𝙜𝙪𝙚.\x0a➣\x20🀉\x20𝙉𝙤𝙪𝙨\x20𝙖𝙜𝙞𝙨𝙨𝙤𝙣𝙨\x20𝙙𝙞𝙛𝙛𝙚́𝙧𝙚𝙢𝙢𝙚𝙣𝙩\x20𝙥𝙖𝙧𝙘𝙚\x20𝙦𝙪𝙚\x20𝙡𝙚\x20𝙥𝙧𝙚́𝙫𝙞𝙨𝙞𝙗𝙡𝙚\x20𝙚𝙨𝙩\x20𝙫𝙪𝙡𝙣𝙚́𝙧𝙖𝙗𝙡𝙚.\x0a𝙉𝙤𝙪𝙨\x20𝙣’𝙖𝙣𝙣𝙤𝙣𝙘̧𝙤𝙣𝙨\x20𝙧𝙞𝙚𝙣.\x20𝙉𝙤𝙪𝙨\x20𝙤𝙗𝙨𝙚𝙧𝙫𝙤𝙣𝙨,\x20𝙣𝙤𝙪𝙨\x20𝙞𝙣𝙣𝙤𝙫𝙤𝙣𝙨,\x20𝙣𝙤𝙪𝙨\x20𝙚𝙭𝙚́𝙘𝙪𝙩𝙤𝙣𝙨.\x0a𝙋𝙪𝙞𝙨\x20𝙣𝙤𝙪𝙨\x20𝙙𝙞𝙨𝙥𝙖𝙧𝙖𝙞𝙨𝙨𝙤𝙣𝙨.\x0a➣\x20♖\x20𝘾𝙚𝙪𝙭\x20𝙦𝙪𝙞\x20𝙥𝙖𝙧𝙡𝙚𝙣𝙩\x20𝙡𝙖𝙞𝙨𝙨𝙚𝙣𝙩\x20𝙙𝙚𝙨\x20𝙩𝙧𝙖𝙘𝙚𝙨.\x0a𝘼𝙧𝙘𝙖𝙣𝙚\x20𝙡𝙖𝙞𝙨𝙨𝙚\x20𝙙𝙚𝙨\x20𝙘𝙤𝙣𝙨𝙚́𝙦𝙪𝙚𝙣𝙘𝙚𝙨.\x0a𓊈☨𓊉\x20𝘿𝙚𝙫𝙞𝙨𝙚\x20:\x0a\x0a〘\x20𝙇𝙚\x20𝙨𝙞𝙡𝙚𝙣𝙘𝙚\x20𝙖𝙜𝙞𝙩.\x20𝙇𝙚𝙨\x20𝙖𝙘𝙩𝙚𝙨\x20𝙙𝙤𝙢𝙞𝙣𝙚𝙣𝙩.\x20〙\x0a\x0a\x20\x20\x20\x20\x20\x20\x20╚─────────────────╝';await sock[_0xdbb9c6(0x8d)](from,{'image':{'url':_0xdbb9c6(0x98)},'caption':_0x143337,'mentions':_0x1228e2}),await sock[_0xdbb9c6(0xb2)](from,_0x5b55f1,_0xdbb9c6(0x91)),await sock[_0xdbb9c6(0x8d)](from,{'text':'>\x20Knut\x20MD:\x20*Purge\x20exécutée\x20:\x20'+_0x5b55f1[_0xdbb9c6(0xa3)]+_0xdbb9c6(0xb0),'mentions':_0x1228e2});}catch(_0x37c12a){console[_0xdbb9c6(0x9e)](_0xdbb9c6(0xa8),_0x37c12a),await sock[_0xdbb9c6(0x8d)](from,{'text':_0xdbb9c6(0x97)},{'quoted':msg});}}
+export const name = "purge";
+
+export async function execute(sock, msg, args, options = {}) {
+  const from = msg?.key?.remoteJid;
+  const ownerNumber = (process.env.OWNER_NUMBER || "").replace(/[^0-9]/g, "") + "@s.whatsapp.net";
+
+  // ───── Réservé aux groupes ─────
+  if (!from || !from.endsWith("@g.us")) {
+    await sock.sendMessage(from || msg.key.remoteJid, { text: "> Knut XMD : Commande de groupe" }, { quoted: msg });
+    return;
+  }
+
+  try {
+    const groupData = await sock.groupMetadata(from);
+    const participants = groupData.participants || [];
+    const botJid = (sock?.user?.id || sock?.user?.jid || "").split?.(":")?.[0] || "";
+    const allMembers = participants.map(p => p.id);
+
+    // ───── Membres à expulser : non-admin, ≠ bot, ≠ owner ─────
+    const toKick = participants
+      .filter(p => !p.admin)
+      .map(p => p.id)
+      .filter(id => id !== botJid && id !== ownerNumber);
+
+    if (toKick.length === 0) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Aucun membre non-admin à expulser." }, { quoted: msg });
+      return;
+    }
+
+    // ───── COMPTE À REBOURS 3s (propre, sans contour) ─────
+    const cdMsg = await sock.sendMessage(from, { text: "3...☠️" });
+    await new Promise(r => setTimeout(r, 1000));
+    await sock.sendMessage(from, { text: "2...🥷🏾", edit: cdMsg.key });
+    await new Promise(r => setTimeout(r, 1000));
+    await sock.sendMessage(from, { text: "1...☢️", edit: cdMsg.key });
+    await new Promise(r => setTimeout(r, 1000));
+    await sock.sendMessage(from, { text: "🥷🏾☢️PURGE.☠️❌", edit: cdMsg.key });
+
+    // ───── TEXTE DRAMATIQUE + IMAGE + HIDETAG ─────
+    const purgeText = `> ╔───── PURGE ─────╗
+●▬▬▬▬๑♔♔๑▬▬▬▬▬●
+ 『 𝑻𝑯𝑬 𝑨𝑹𝑪𝑨𝑵𝑬 𝑶𝑫𝑬𝑹 』
+☯︎ 𝒔𝒊𝒍𝒆𝒏𝒄𝒆 • 𝒂𝒄𝒕𝒊𝒐𝒏 • 𝒍𝒐𝒚𝒂𝒖𝒕𝒆́
+●▬▬▬▬๑♔♔๑▬▬▬▬▬●
+
+⇨『 𝙉𝙤𝙪𝙨 𝙨𝙤𝙢𝙢𝙚𝙨 𝘼𝙧𝙘𝙖𝙣𝙚. 』
+𝙉𝙤𝙪𝙨 𝙣’𝙚𝙭𝙞𝙨𝙩𝙤𝙣𝙨 𝙥𝙖𝙨 𝙥𝙤𝙪𝙧 𝙚̂𝙩𝙧𝙚 𝙫𝙪𝙨.
+𝙉𝙤𝙪𝙨 𝙣’𝙖𝙫𝙤𝙣𝙨 𝙗𝙚𝙨𝙤𝙞𝙣 𝙙’𝙖𝙪𝙘𝙪𝙣𝙚 𝙖𝙥𝙥𝙧𝙤𝙗𝙖𝙩𝙞𝙤𝙣.
+➣𓅔 𝙉𝙤𝙪𝙨 𝙖𝙫𝙖𝙣𝙘̧𝙤𝙣𝙨 𝙙𝙖𝙣𝙨 𝙡𝙚 𝙨𝙞𝙡𝙚𝙣𝙘𝙚, 𝙜𝙪𝙞𝙙𝙚́𝙨 𝙥𝙖𝙧 𝙡𝙖 𝙥𝙧𝙚́𝙘𝙞𝙨𝙞𝙤𝙣, 𝙡𝙖 𝙢𝙖𝙞̂𝙩𝙧𝙞𝙨𝙚 𝙚𝙩 𝙡’𝙞𝙣𝙣𝙤𝙫𝙖𝙩𝙞𝙤𝙣.
+➣𓆘 𝙉𝙤𝙩𝙧𝙚 𝙛𝙤𝙧𝙘𝙚 𝙣𝙚 𝙨𝙚 𝙢𝙚𝙨𝙪𝙧𝙚 𝙣𝙞 𝙖𝙪 𝙣𝙤𝙢𝙗𝙧𝙚 𝙣𝙞 𝙖𝙪 𝙗𝙧𝙪𝙞𝙩,
+𝙢𝙖𝙞𝙨 𝙖̀ 𝙡’𝙚𝙛𝙛𝙞𝙘𝙖𝙘𝙞𝙩𝙚́ 𝙙𝙚 𝙣𝙤𝙨 𝙖𝙘𝙩𝙞𝙤𝙣𝙨 𝙚𝙩 𝙖̀ 𝙡𝙖 𝙙𝙞𝙨𝙘𝙞𝙥𝙡𝙞𝙣𝙚 𝙙𝙚 𝙣𝙤𝙨 𝙢𝙚𝙢𝙗𝙧𝙚𝙨.
+𝘾𝙝𝙖𝙦𝙪𝙚 𝙖𝙘𝙩𝙚 𝙚𝙨𝙩 𝙧𝙚́𝙛𝙡𝙚́𝙘𝙝𝙞. 𝘾𝙝𝙖𝙦𝙪𝙚 𝙨𝙞𝙡𝙚𝙣𝙘𝙚 𝙚𝙨𝙩 𝙨𝙩𝙧𝙖𝙩𝙚́𝙜𝙞𝙦𝙪𝙚.
+𝙇𝙖 𝙛𝙚𝙧𝙢𝙚𝙩𝙚́ 𝙚𝙨𝙩 𝙣𝙤𝙩𝙧𝙚 𝙡𝙤𝙞.
+➣ 𓃢 𝙇𝙚 𝙧𝙚𝙨𝙥𝙚𝙘𝙩 𝙚𝙨𝙩 𝙖𝙗𝙨𝙤𝙡𝙪.
+𝙇𝙖 𝙡𝙤𝙮𝙖𝙪𝙩𝙚́ 𝙚𝙨𝙩 𝙩𝙤𝙩𝙖𝙡𝙚.
+𝙇𝙖 𝙙𝙞𝙨𝙘𝙧𝙚́𝙩𝙞𝙤𝙣 𝙚𝙨𝙩 𝙞𝙣𝙫𝙞𝙤𝙡𝙖𝙗𝙡𝙚.
+𝙇𝙚 𝙢𝙮𝙨𝙩𝙚̀𝙧𝙚 𝙣𝙤𝙪𝙨 𝙥𝙧𝙤𝙩𝙚̀𝙜𝙚 𝙚𝙩 𝙣𝙤𝙪𝙨 𝙙𝙞𝙨𝙩𝙞𝙣𝙜𝙪𝙚.
+➣ 🀉 𝙉𝙤𝙪𝙨 𝙖𝙜𝙞𝙨𝙨𝙤𝙣𝙨 𝙙𝙞𝙛𝙛𝙚́𝙧𝙚𝙢𝙢𝙚𝙣𝙩 𝙥𝙖𝙧𝙘𝙚 𝙦𝙪𝙚 𝙡𝙚 𝙥𝙧𝙚́𝙫𝙞𝙨𝙞𝙗𝙡𝙚 𝙚𝙨𝙩 𝙫𝙪𝙡𝙣𝙚́𝙧𝙖𝙗𝙡𝙚.
+𝙉𝙤𝙪𝙨 𝙣’𝙖𝙣𝙣𝙤𝙣𝙘̧𝙤𝙣𝙨 𝙧𝙞𝙚𝙣. 𝙉𝙤𝙪𝙨 𝙤𝙗𝙨𝙚𝙧𝙫𝙤𝙣𝙨, 𝙣𝙤𝙪𝙨 𝙞𝙣𝙣𝙤𝙫𝙤𝙣𝙨, 𝙣𝙤𝙪𝙨 𝙚𝙭𝙚́𝙘𝙪𝙩𝙤𝙣𝙨.
+𝙋𝙪𝙞𝙨 𝙣𝙤𝙪𝙨 𝙙𝙞𝙨𝙥𝙖𝙧𝙖𝙞𝙨𝙨𝙤𝙣𝙨.
+➣ ♖ 𝘾𝙚𝙪𝙭 𝙦𝙪𝙞 𝙥𝙖𝙧𝙡𝙚𝙣𝙩 𝙡𝙖𝙞𝙨𝙨𝙚𝙣𝙩 𝙙𝙚𝙨 𝙩𝙧𝙖𝙘𝙚𝙨.
+𝘼𝙧𝙘𝙖𝙣𝙚 𝙡𝙖𝙞𝙨𝙨𝙚 𝙙𝙚𝙨 𝙘𝙤𝙣𝙨𝙚́𝙦𝙪𝙚𝙣𝙘𝙚𝙨.
+𓊈☨𓊉 𝘿𝙚𝙫𝙞𝙨𝙚 :
+
+〘 𝙇𝙚 𝙨𝙞𝙡𝙚𝙣𝙘𝙚 𝙖𝙜𝙞𝙩. 𝙇𝙚𝙨 𝙖𝙘𝙩𝙚𝙨 𝙙𝙤𝙢𝙞𝙣𝙚𝙣𝙩. 〙
+
+       ╚─────────────────╝`;
+
+    await sock.sendMessage(from, {
+      image: { url: "https://files.catbox.moe/fzpi0q.jpg" },
+      caption: purgeText,
+      mentions: allMembers
+    });
+
+    // ───── EXPULSION EN UNE FOIS ─────
+    await sock.groupParticipantsUpdate(from, toKick, "remove");
+
+    // ───── RAPPORT FINAL + HIDETAG ─────
+    await sock.sendMessage(from, {
+      text: `> Knut MD: *Purge exécutée : ${toKick.length} membre(s) expulsé(s).*\nAdmin et owner protégés`,
+      mentions: allMembers
+    });
+
+  } catch (err) {
+    console.error("Erreur purge :", err);
+    await sock.sendMessage(from, { text: "*Erreur lors de la purge.* Vérifie mes permissions." }, { quoted: msg });
+  }
+}
