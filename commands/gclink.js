@@ -1,1 +1,22 @@
-const a59_0x48b1d8=a59_0x1e5c;(function(_0x29d49c,_0x4ac12e){const _0x2b3d13=a59_0x1e5c,_0x5d60c7=_0x29d49c();while(!![]){try{const _0x23226f=parseInt(_0x2b3d13(0x12f))/0x1*(parseInt(_0x2b3d13(0x144))/0x2)+-parseInt(_0x2b3d13(0x12b))/0x3*(parseInt(_0x2b3d13(0x135))/0x4)+-parseInt(_0x2b3d13(0x13b))/0x5*(parseInt(_0x2b3d13(0x139))/0x6)+parseInt(_0x2b3d13(0x137))/0x7*(parseInt(_0x2b3d13(0x140))/0x8)+-parseInt(_0x2b3d13(0x138))/0x9+-parseInt(_0x2b3d13(0x142))/0xa*(parseInt(_0x2b3d13(0x13c))/0xb)+parseInt(_0x2b3d13(0x143))/0xc*(parseInt(_0x2b3d13(0x12c))/0xd);if(_0x23226f===_0x4ac12e)break;else _0x5d60c7['push'](_0x5d60c7['shift']());}catch(_0x5dfe83){_0x5d60c7['push'](_0x5d60c7['shift']());}}}(a59_0x2ce0,0x6eb15));const a59_0x4e9076=(function(){let _0xba6d31=!![];return function(_0x18a149,_0x1b9584){const _0x3c3f77=_0xba6d31?function(){const _0x419379=a59_0x1e5c;if(_0x1b9584){const _0x5f6187=_0x1b9584[_0x419379(0x145)](_0x18a149,arguments);return _0x1b9584=null,_0x5f6187;}}:function(){};return _0xba6d31=![],_0x3c3f77;};}()),a59_0x173bab=a59_0x4e9076(this,function(){const _0x5274c5=a59_0x1e5c;return a59_0x173bab[_0x5274c5(0x13e)]()['search'](_0x5274c5(0x133))[_0x5274c5(0x13e)]()[_0x5274c5(0x146)](a59_0x173bab)[_0x5274c5(0x134)](_0x5274c5(0x133));});function a59_0x1e5c(_0x359dcd,_0x3f2c3f){_0x359dcd=_0x359dcd-0x12a;const _0x504364=a59_0x2ce0();let _0x173bab=_0x504364[_0x359dcd];return _0x173bab;}function a59_0x2ce0(){const _0x1ebc10=['remoteJid','❌\x20Erreur\x20link\x20:','gclink','(((.+)+)+)+$','search','8ExANyZ','groupInviteCode','7divgEX','4636098eXJqyV','1806222sZOQvu','sendMessage','5HlyhBG','3597EsYxfL','endsWith','toString','https://chat.whatsapp.com/','2676056eacGhs','>\x20Knut\x20XMD:\x20⚠️Erreur\x20lors\x20de\x20la\x20récupération\x20du\x20lien.','7730EKchgj','60ouQmeE','763214iAojKk','apply','constructor','>\x20Knut\x20XMD:\x20Commande\x20pour\x20groupe\x20','1040448JeBVGX','3899597haaXmk','@g.us','>\x20Knut\x20XMD:\x20⚠️\x20Lien\x20du\x20groupe\x20:\x0a','1LfmVBK'];a59_0x2ce0=function(){return _0x1ebc10;};return a59_0x2ce0();}a59_0x173bab();export const name=a59_0x48b1d8(0x132);export async function execute(sock,msg,args){const _0x51953b=a59_0x48b1d8;try{const from=msg['key'][_0x51953b(0x130)];if(!from[_0x51953b(0x13d)](_0x51953b(0x12d)))return await sock[_0x51953b(0x13a)](from,{'text':_0x51953b(0x12a)},{'quoted':msg});const _0x3a3766=await sock[_0x51953b(0x136)](from),_0x335d5e=_0x51953b(0x13f)+_0x3a3766;await sock[_0x51953b(0x13a)](from,{'text':_0x51953b(0x12e)+_0x335d5e},{'quoted':msg});}catch(_0x5045a7){console['error'](_0x51953b(0x131),_0x5045a7),await sock[_0x51953b(0x13a)](msg['key'][_0x51953b(0x130)],{'text':_0x51953b(0x141)},{'quoted':msg});}}
+export const name = "gclink";
+
+export async function execute(sock, msg, args) {
+  try {
+    const from = msg.key.remoteJid;
+
+    // Vérifie que c'est bien un groupe
+    if (!from.endsWith("@g.us")) {
+      return await sock.sendMessage(from, { text: "> Knut XMD: Commande pour groupe " }, { quoted: msg });
+    }
+
+    // Récupère le lien d'invitation
+    const groupInviteCode = await sock.groupInviteCode(from);
+    const inviteLink = `https://chat.whatsapp.com/${groupInviteCode}`;
+
+    await sock.sendMessage(from, { text: `> Knut XMD: ⚠️ Lien du groupe :\n${inviteLink}` }, { quoted: msg });
+
+  } catch (err) {
+    console.error("❌ Erreur link :", err);
+    await sock.sendMessage(msg.key.remoteJid, { text: "> Knut XMD: ⚠️Erreur lors de la récupération du lien." }, { quoted: msg });
+  }
+}

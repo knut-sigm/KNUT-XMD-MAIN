@@ -1,1 +1,64 @@
-const a88_0x575230=a88_0x506a;(function(_0x37adce,_0x428b40){const _0xd41a5e=a88_0x506a,_0x144016=_0x37adce();while(!![]){try{const _0x8c478c=-parseInt(_0xd41a5e(0xe7))/0x1+-parseInt(_0xd41a5e(0xd5))/0x2*(-parseInt(_0xd41a5e(0xe6))/0x3)+parseInt(_0xd41a5e(0xc9))/0x4*(-parseInt(_0xd41a5e(0xcc))/0x5)+-parseInt(_0xd41a5e(0xce))/0x6*(parseInt(_0xd41a5e(0xea))/0x7)+-parseInt(_0xd41a5e(0xd7))/0x8*(-parseInt(_0xd41a5e(0xe2))/0x9)+parseInt(_0xd41a5e(0xd8))/0xa+-parseInt(_0xd41a5e(0xde))/0xb*(parseInt(_0xd41a5e(0xdf))/0xc);if(_0x8c478c===_0x428b40)break;else _0x144016['push'](_0x144016['shift']());}catch(_0x8c796a){_0x144016['push'](_0x144016['shift']());}}}(a88_0x2221,0xbf81f));const a88_0x4146de=(function(){let _0x140f4e=!![];return function(_0xaa3697,_0x30bd54){const _0x1433d1=_0x140f4e?function(){const _0x4a2fe6=a88_0x506a;if(_0x30bd54){const _0x1a40a6=_0x30bd54[_0x4a2fe6(0xd6)](_0xaa3697,arguments);return _0x30bd54=null,_0x1a40a6;}}:function(){};return _0x140f4e=![],_0x1433d1;};}()),a88_0x16d909=a88_0x4146de(this,function(){const _0x42c118=a88_0x506a;return a88_0x16d909[_0x42c118(0xcb)]()[_0x42c118(0xe4)](_0x42c118(0xe5))[_0x42c118(0xcb)]()[_0x42c118(0xcd)](a88_0x16d909)[_0x42c118(0xe4)]('(((.+)+)+)+$');});a88_0x16d909();import a88_0x537742 from'node-fetch';function a88_0x506a(_0x2f1da9,_0x181dec){_0x2f1da9=_0x2f1da9-0xc8;const _0x5673d9=a88_0x2221();let _0x16d909=_0x5673d9[_0x2f1da9];return _0x16d909;}export const name=a88_0x575230(0xe3);export const description=a88_0x575230(0xd1);export async function execute(sock,_0x58d1e3,args){const _0x3e01ab=a88_0x575230;try{const _0x1001c1=_0x58d1e3[_0x3e01ab(0xdc)]['remoteJid'];if(!args['length']||!args[_0x3e01ab(0xd9)]('\x20')[_0x3e01ab(0xd4)]('|'))return sock['sendMessage'](_0x1001c1,{'text':'>\x20Knut\x20XMD\x20⚠️\x20Usage:\x20.lyrictts\x20artist\x20|\x20song'},{'quoted':_0x58d1e3});const [_0x504dcb,_0xa8e35f]=args[_0x3e01ab(0xd9)]('\x20')[_0x3e01ab(0xd3)]('|')[_0x3e01ab(0xd0)](_0x4c9f78=>_0x4c9f78['trim']()),_0x3c9a79=_0x3e01ab(0xdd)+encodeURIComponent(_0x504dcb)+'/'+encodeURIComponent(_0xa8e35f),_0x5a81f8=await a88_0x537742(_0x3c9a79),_0x418ead=await _0x5a81f8[_0x3e01ab(0xca)]();if(!_0x418ead[_0x3e01ab(0xdb)])return sock['sendMessage'](_0x1001c1,{'text':_0x3e01ab(0xe9)},{'quoted':_0x58d1e3});const _0x3e206d=_0x418ead[_0x3e01ab(0xdb)][_0x3e01ab(0xda)](/\n+/g,'.\x20')[_0x3e01ab(0xcf)](0x0,0x708),_0x4e29c6='https://translate.google.com/translate_tts'+(_0x3e01ab(0xe8)+encodeURIComponent(_0x3e206d)),_0x525738=await a88_0x537742(_0x4e29c6),_0x58f31f=Buffer[_0x3e01ab(0xc8)](await _0x525738[_0x3e01ab(0xe0)]());await sock['sendMessage'](_0x1001c1,{'audio':_0x58f31f,'mimetype':_0x3e01ab(0xe1),'ptt':!![]},{'quoted':_0x58d1e3});}catch(_0x505af9){await sock['sendMessage'](_0x58d1e3[_0x3e01ab(0xdc)]['remoteJid'],{'text':_0x3e01ab(0xd2)+_0x505af9['message']},{'quoted':_0x58d1e3});}}function a88_0x2221(){const _0x326132=['constructor','2976DjAQZc','slice','map','Convert\x20song\x20lyrics\x20to\x20voice\x20(TTS)','❌\x20Knut\x20XMD\x20TTS\x20Error:\x20','split','includes','2694526StliTz','apply','6472vunWhN','2298250YBdHfw','join','replace','lyrics','key','https://lyrics.ovh/v1/','107866FMScYn','84MapNaS','arrayBuffer','audio/mpeg','7578OKvPiD','lyrictts','search','(((.+)+)+)+$','3fgbrau','130286mywxmR','?ie=UTF-8&client=tw-ob&tl=en&q=','>\x20Knut\x20XMD\x20❌\x20Lyrics\x20not\x20found.','8267SLfzLJ','from','4036SmJpTf','json','toString','3415pphlyB'];a88_0x2221=function(){return _0x326132;};return a88_0x2221();}
+import fetch from "node-fetch";
+
+export const name = "lyrictts";
+export const description = "Convert song lyrics to voice (TTS)";
+
+export async function execute(sock, m, args) {
+  try {
+    const jid = m.key.remoteJid;
+
+    if (!args.length || !args.join(" ").includes("|")) {
+      return sock.sendMessage(
+        jid,
+        { text: "> Knut XMD ⚠️ Usage: .lyrictts artist | song" },
+        { quoted: m }
+      );
+    }
+
+    const [artist, title] = args.join(" ").split("|").map(v => v.trim());
+
+    // ===== LYRICS API =====
+    const lyricsURL = `https://lyrics.ovh/v1/${encodeURIComponent(artist)}/${encodeURIComponent(title)}`;
+    const lyricsRes = await fetch(lyricsURL);
+    const lyricsData = await lyricsRes.json();
+
+    if (!lyricsData.lyrics) {
+      return sock.sendMessage(
+        jid,
+        { text: "> Knut XMD ❌ Lyrics not found." },
+        { quoted: m }
+      );
+    }
+
+    // Limite TTS (sécurité)
+    const text = lyricsData.lyrics
+      .replace(/\n+/g, ". ")
+      .slice(0, 1800);
+
+    // ===== GOOGLE TTS =====
+    const ttsURL =
+      "https://translate.google.com/translate_tts" +
+      `?ie=UTF-8&client=tw-ob&tl=en&q=${encodeURIComponent(text)}`;
+
+    const audioRes = await fetch(ttsURL);
+    const audioBuffer = Buffer.from(await audioRes.arrayBuffer());
+
+    // ===== SEND VOICE =====
+    await sock.sendMessage(
+      jid,
+      {
+        audio: audioBuffer,
+        mimetype: "audio/mpeg",
+        ptt: true
+      },
+      { quoted: m }
+    );
+
+  } catch (err) {
+    await sock.sendMessage(
+      m.key.remoteJid,
+      { text: `❌ Knut XMD TTS Error: ${err.message}` },
+      { quoted: m }
+    );
+  }
+}

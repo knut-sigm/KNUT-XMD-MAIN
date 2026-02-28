@@ -1,1 +1,89 @@
-const a93_0x50887a=a93_0x2b3d;(function(_0x488fee,_0x5e6e15){const _0x6339fd=a93_0x2b3d,_0x51cf6e=_0x488fee();while(!![]){try{const _0xdedfb7=parseInt(_0x6339fd(0x17e))/0x1+parseInt(_0x6339fd(0x16f))/0x2*(parseInt(_0x6339fd(0x168))/0x3)+parseInt(_0x6339fd(0x164))/0x4*(-parseInt(_0x6339fd(0x178))/0x5)+parseInt(_0x6339fd(0x179))/0x6+-parseInt(_0x6339fd(0x16d))/0x7*(-parseInt(_0x6339fd(0x172))/0x8)+parseInt(_0x6339fd(0x16e))/0x9*(-parseInt(_0x6339fd(0x161))/0xa)+-parseInt(_0x6339fd(0x17d))/0xb;if(_0xdedfb7===_0x5e6e15)break;else _0x51cf6e['push'](_0x51cf6e['shift']());}catch(_0x5b39b9){_0x51cf6e['push'](_0x51cf6e['shift']());}}}(a93_0x38e8,0x4b37e));const a93_0x25a58a=(function(){let _0x41036d=!![];return function(_0x1e323a,_0x3a0d07){const _0x5612d5=_0x41036d?function(){const _0x16d492=a93_0x2b3d;if(_0x3a0d07){const _0x59b56d=_0x3a0d07[_0x16d492(0x16a)](_0x1e323a,arguments);return _0x3a0d07=null,_0x59b56d;}}:function(){};return _0x41036d=![],_0x5612d5;};}()),a93_0x2de77f=a93_0x25a58a(this,function(){const _0x215cb6=a93_0x2b3d;return a93_0x2de77f['toString']()[_0x215cb6(0x169)](_0x215cb6(0x16c))[_0x215cb6(0x162)]()[_0x215cb6(0x160)](a93_0x2de77f)[_0x215cb6(0x169)](_0x215cb6(0x16c));});a93_0x2de77f();export const name=a93_0x50887a(0x167);function a93_0x2b3d(_0x2af9b3,_0x2e3970){_0x2af9b3=_0x2af9b3-0x15f;const _0x7206c7=a93_0x38e8();let _0x2de77f=_0x7206c7[_0x2af9b3];return _0x2de77f;}export async function execute(sock,msg,args){const _0x5ce775=a93_0x50887a,from=msg[_0x5ce775(0x166)]['remoteJid'];if(!from||!from[_0x5ce775(0x175)](_0x5ce775(0x173))){await sock[_0x5ce775(0x171)](from,{'text':_0x5ce775(0x163)},{'quoted':msg});return;}if(!args[0x0]){await sock['sendMessage'](from,{'text':_0x5ce775(0x176)},{'quoted':msg});return;}const _0x4b6461=args[0x0][_0x5ce775(0x165)](/^(\d{2}):(\d{2})$/);if(!_0x4b6461){await sock[_0x5ce775(0x171)](from,{'text':_0x5ce775(0x16b)},{'quoted':msg});return;}const _0xd2f99f=parseInt(_0x4b6461[0x1],0xa),_0x463d37=parseInt(_0x4b6461[0x2],0xa);if(isNaN(_0xd2f99f)||isNaN(_0x463d37)){await sock[_0x5ce775(0x171)](from,{'text':_0x5ce775(0x17b)},{'quoted':msg});return;}const _0x251e40=(_0xd2f99f*0x3c+_0x463d37)*0x3c*0x3e8;if(_0x251e40<=0x0){await sock[_0x5ce775(0x171)](from,{'text':_0x5ce775(0x17c)},{'quoted':msg});return;}await sock[_0x5ce775(0x171)](from,{'text':_0x5ce775(0x170)+_0xd2f99f+'h\x20'+_0x463d37+'m.'},{'quoted':msg}),setTimeout(async()=>{const _0x50563=_0x5ce775;try{await sock[_0x50563(0x15f)](from,_0x50563(0x177)),await sock[_0x50563(0x171)](from,{'text':'>\x20Knut\x20XMD\x20:\x20🔒\x20Le\x20groupe\x20a\x20été\x20fermé\x20automatiquement\x20après\x20'+_0xd2f99f+'h\x20'+_0x463d37+_0x50563(0x174)});}catch(_0x3b6cbc){console['error'](_0x50563(0x17a),_0x3b6cbc),await sock[_0x50563(0x171)](from,{'text':'>\x20Knut\x20XMD\x20:\x20⚠️\x20Impossible\x20de\x20fermer\x20le\x20groupe\x20(suis-je\x20admin\x20?).'});}},_0x251e40);}function a93_0x38e8(){const _0x4ed34a=['@g.us','m\x20!','endsWith','>\x20Knut\x20XMD\x20:\x20⏰\x20Usage\x20:\x20mute-time\x20HH:MM\x0aExemple\x20:\x20mute-time\x2000:05\x20(dans\x205\x20minutes)','announcement','130VrNqaY','747396lbtEcO','Erreur\x20fermeture\x20groupe\x20:','>\x20Knut\x20XMD\x20:\x20⚠️\x20Valeurs\x20d\x27heures/minutes\x20incorrectes.','>\x20Knut\x20XMD\x20:\x20⚠️\x20Donne\x20un\x20délai\x20supérieur\x20à\x200.','2157166TPlumH','264251olxpkG','groupSettingUpdate','constructor','40UUAwXx','toString','>\x20Knut\x20XMD\x20:\x20❌\x20Cette\x20commande\x20marche\x20uniquement\x20dans\x20un\x20groupe.','37304uKvQei','match','key','mute-time','232872yVhlAs','search','apply','>\x20Knut\x20XMD\x20:\x20⚠️\x20Format\x20invalide.\x20Exemple\x20:\x20mute-time\x2000:10\x20(10\x20minutes)','(((.+)+)+)+$','455Svpgzz','841311gHQYBj','10DgeZCh','>\x20Knut\x20XMD\x20:\x20⏳\x20Le\x20groupe\x20sera\x20fermé\x20dans\x20','sendMessage','42296EFYoRa'];a93_0x38e8=function(){return _0x4ed34a;};return a93_0x38e8();}
+export const name = "mute-time";
+
+export async function execute(sock, msg, args) {
+
+  const from = msg.key.remoteJid;
+
+  if (!from || !from.endsWith("@g.us")) {
+
+    await sock.sendMessage(from, { text: "> Knut XMD : ❌ Cette commande marche uniquement dans un groupe." }, { quoted: msg });
+
+    return;
+
+  }
+
+  if (!args[0]) {
+
+    await sock.sendMessage(from, { text: "> Knut XMD : ⏰ Usage : mute-time HH:MM\nExemple : mute-time 00:05 (dans 5 minutes)" }, { quoted: msg });
+
+    return;
+
+  }
+
+  const match = args[0].match(/^(\d{2}):(\d{2})$/);
+
+  if (!match) {
+
+    await sock.sendMessage(from, { text: "> Knut XMD : ⚠️ Format invalide. Exemple : mute-time 00:10 (10 minutes)" }, { quoted: msg });
+
+    return;
+
+  }
+
+  const addHours = parseInt(match[1], 10);
+
+  const addMinutes = parseInt(match[2], 10);
+
+  if (isNaN(addHours) || isNaN(addMinutes)) {
+
+    await sock.sendMessage(from, { text: "> Knut XMD : ⚠️ Valeurs d'heures/minutes incorrectes." }, { quoted: msg });
+
+    return;
+
+  }
+
+  // Calcul du délai en ms
+
+  const delay = (addHours * 60 + addMinutes) * 60 * 1000;
+
+  if (delay <= 0) {
+
+    await sock.sendMessage(from, { text: "> Knut XMD : ⚠️ Donne un délai supérieur à 0." }, { quoted: msg });
+
+    return;
+
+  }
+
+  await sock.sendMessage(from, {
+
+    text: `> Knut XMD : ⏳ Le groupe sera fermé dans ${addHours}h ${addMinutes}m.`
+
+  }, { quoted: msg });
+
+  setTimeout(async () => {
+
+    try {
+
+      await sock.groupSettingUpdate(from, "announcement");
+
+      await sock.sendMessage(from, {
+
+        text: `> Knut XMD : 🔒 Le groupe a été fermé automatiquement après ${addHours}h ${addMinutes}m !`
+
+      });
+
+    } catch (err) {
+
+      console.error("Erreur fermeture groupe :", err);
+
+      await sock.sendMessage(from, {
+
+        text: "> Knut XMD : ⚠️ Impossible de fermer le groupe (suis-je admin ?)."
+
+      });
+
+    }
+
+  }, delay);
+
+}

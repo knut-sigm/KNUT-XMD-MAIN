@@ -1,1 +1,62 @@
-const a72_0x1960df=a72_0x2623;(function(_0x3cef6b,_0x569db9){const _0x46804b=a72_0x2623,_0x5b6f10=_0x3cef6b();while(!![]){try{const _0x52b941=parseInt(_0x46804b(0x203))/0x1*(parseInt(_0x46804b(0x202))/0x2)+parseInt(_0x46804b(0x1fe))/0x3*(parseInt(_0x46804b(0x1fa))/0x4)+-parseInt(_0x46804b(0x209))/0x5+parseInt(_0x46804b(0x1f0))/0x6+-parseInt(_0x46804b(0x1fc))/0x7+parseInt(_0x46804b(0x1f7))/0x8+-parseInt(_0x46804b(0x1f6))/0x9;if(_0x52b941===_0x569db9)break;else _0x5b6f10['push'](_0x5b6f10['shift']());}catch(_0x31e210){_0x5b6f10['push'](_0x5b6f10['shift']());}}}(a72_0x59c6,0x26f3c));const a72_0x4d7076=(function(){let _0x294f25=!![];return function(_0x113476,_0x4724b0){const _0x2e2d89=_0x294f25?function(){const _0x4d55f2=a72_0x2623;if(_0x4724b0){const _0x729cbe=_0x4724b0[_0x4d55f2(0x1fb)](_0x113476,arguments);return _0x4724b0=null,_0x729cbe;}}:function(){};return _0x294f25=![],_0x2e2d89;};}()),a72_0x2bf0c8=a72_0x4d7076(this,function(){const _0xf4ec9f=a72_0x2623;return a72_0x2bf0c8[_0xf4ec9f(0x20d)]()[_0xf4ec9f(0x205)](_0xf4ec9f(0x1f2))['toString']()[_0xf4ec9f(0x1f3)](a72_0x2bf0c8)[_0xf4ec9f(0x205)](_0xf4ec9f(0x1f2));});function a72_0x59c6(){const _0x19b046=['[JOIN]\x20OK\x20→\x20','toString','error','body','trim','Impossible\x20de\x20rejoindre\x20le\x20groupe.','groupAcceptInvite','sendMessage','addgroup','1101912fkznaN','message','(((.+)+)+)+$','constructor','Group','>\x20Knut\x20XMD\x20:\x20Lien\x20WhatsApp\x20invalide.','2259855FWzymO','27672FFBQIe','includes','ban','1900QHliHd','apply','492016GaRzZk','invite','990kVqemN','split','slice','permission','2hhVefx','191969FZMDyS','Accès\x20refusé.','search','chat','log','>\x20Knut\x20XMD\x20:\x20Groupe\x20rejoint.','274495ydooim','join','>\x20Knut\x20XMD\x20:\x20Utilisation\x20→\x20.join\x20<lien\x20WhatsApp>'];a72_0x59c6=function(){return _0x19b046;};return a72_0x59c6();}a72_0x2bf0c8();function a72_0x2623(_0x35141e,_0x33ae11){_0x35141e=_0x35141e-0x1ea;const _0x5ada74=a72_0x59c6();let _0x2bf0c8=_0x5ada74[_0x35141e];return _0x2bf0c8;}export default{'name':a72_0x1960df(0x20a),'alias':['joingroup',a72_0x1960df(0x1ef)],'category':a72_0x1960df(0x1f4),async 'execute'(sock,_0x17d978){const _0x3acaf4=a72_0x1960df,from=_0x17d978[_0x3acaf4(0x206)],_0x3f703d=_0x17d978[_0x3acaf4(0x1ea)]||'',_0x1d448b=_0x3f703d[_0x3acaf4(0x1ff)](/\s+/)[_0x3acaf4(0x200)](0x1)[_0x3acaf4(0x20a)]('\x20')[_0x3acaf4(0x1eb)]();if(!_0x1d448b)return await sock['sendMessage'](from,{'text':_0x3acaf4(0x20b)},{'quoted':_0x17d978});const _0x13930c=_0x1d448b['match'](/chat\.whatsapp\.com\/([0-9A-Za-z]{20,24})|^([0-9A-Za-z]{20,24})$/),_0x29b091=_0x13930c?.[0x1]||_0x13930c?.[0x2];if(!_0x29b091)return await sock[_0x3acaf4(0x1ee)](from,{'text':_0x3acaf4(0x1f5)},{'quoted':_0x17d978});try{await sock[_0x3acaf4(0x1ed)](_0x29b091),await sock['sendMessage'](from,{'text':_0x3acaf4(0x208)},{'quoted':_0x17d978}),console[_0x3acaf4(0x207)](_0x3acaf4(0x20c)+_0x29b091);}catch(_0x3a5173){console[_0x3acaf4(0x20e)]('[JOIN\x20ERROR]',_0x3a5173);let _0x4caae1=_0x3acaf4(0x1ec);if(_0x3a5173[_0x3acaf4(0x1f1)]?.[_0x3acaf4(0x1f8)](_0x3acaf4(0x1fd)))_0x4caae1='Lien\x20invalide\x20ou\x20expiré.';else{if(_0x3a5173[_0x3acaf4(0x1f1)]?.['includes'](_0x3acaf4(0x1f9)))_0x4caae1='Bot\x20banni\x20de\x20ce\x20groupe.';else{if(_0x3a5173[_0x3acaf4(0x1f1)]?.[_0x3acaf4(0x1f8)]('full'))_0x4caae1='Groupe\x20plein.';else{if(_0x3a5173[_0x3acaf4(0x1f1)]?.['includes'](_0x3acaf4(0x201)))_0x4caae1=_0x3acaf4(0x204);}}}await sock[_0x3acaf4(0x1ee)](from,{'text':'>\x20Knut\x20XMD\x20:\x20'+_0x4caae1},{'quoted':_0x17d978});}}};
+export default {
+  name: 'join',
+  alias: ['joingroup', 'addgroup'],
+  category: 'Group',
+
+  async execute(sock, m) {
+    const from = m.chat;
+
+    // 🔍 Texte après la commande
+    const body = m.body || '';
+    const text = body.split(/\s+/).slice(1).join(' ').trim();
+
+    if (!text) {
+      return await sock.sendMessage(
+        from,
+        { text: '> Knut XMD : Utilisation → .join <lien WhatsApp>' },
+        { quoted: m }
+      );
+    }
+
+    // 🔗 Extraction du code
+    const match = text.match(
+      /chat\.whatsapp\.com\/([0-9A-Za-z]{20,24})|^([0-9A-Za-z]{20,24})$/
+    );
+
+    const inviteCode = match?.[1] || match?.[2];
+
+    if (!inviteCode) {
+      return await sock.sendMessage(
+        from,
+        { text: '> Knut XMD : Lien WhatsApp invalide.' },
+        { quoted: m }
+      );
+    }
+
+    try {
+      await sock.groupAcceptInvite(inviteCode);
+
+      await sock.sendMessage(
+        from,
+        { text: '> Knut XMD : Groupe rejoint.' },
+        { quoted: m }
+      );
+
+      console.log(`[JOIN] OK → ${inviteCode}`);
+    } catch (err) {
+      console.error('[JOIN ERROR]', err);
+
+      let reason = 'Impossible de rejoindre le groupe.';
+      if (err.message?.includes('invite')) reason = 'Lien invalide ou expiré.';
+      else if (err.message?.includes('ban')) reason = 'Bot banni de ce groupe.';
+      else if (err.message?.includes('full')) reason = 'Groupe plein.';
+      else if (err.message?.includes('permission')) reason = 'Accès refusé.';
+
+      await sock.sendMessage(
+        from,
+        { text: `> Knut XMD : ${reason}` },
+        { quoted: m }
+      );
+    }
+  }
+};

@@ -1,1 +1,63 @@
-const a73_0x226590=a73_0x2ea9;(function(_0x220dfa,_0x2cd1f0){const _0x1c7a4c=a73_0x2ea9,_0x55bb7b=_0x220dfa();while(!![]){try{const _0x111e07=-parseInt(_0x1c7a4c(0x1d5))/0x1*(parseInt(_0x1c7a4c(0x1be))/0x2)+-parseInt(_0x1c7a4c(0x1cb))/0x3+parseInt(_0x1c7a4c(0x1c1))/0x4+-parseInt(_0x1c7a4c(0x1d2))/0x5*(parseInt(_0x1c7a4c(0x1c4))/0x6)+-parseInt(_0x1c7a4c(0x1c9))/0x7+-parseInt(_0x1c7a4c(0x1bb))/0x8+parseInt(_0x1c7a4c(0x1ca))/0x9*(parseInt(_0x1c7a4c(0x1b7))/0xa);if(_0x111e07===_0x2cd1f0)break;else _0x55bb7b['push'](_0x55bb7b['shift']());}catch(_0x2fbd31){_0x55bb7b['push'](_0x55bb7b['shift']());}}}(a73_0x4fd0,0xde420));const a73_0x104d5c=(function(){let _0x4db376=!![];return function(_0x587ca9,_0x184ac1){const _0x41c92b=_0x4db376?function(){const _0x2e2a1d=a73_0x2ea9;if(_0x184ac1){const _0x4bc119=_0x184ac1[_0x2e2a1d(0x1de)](_0x587ca9,arguments);return _0x184ac1=null,_0x4bc119;}}:function(){};return _0x4db376=![],_0x41c92b;};}()),a73_0x22c693=a73_0x104d5c(this,function(){const _0x45e22e=a73_0x2ea9;return a73_0x22c693[_0x45e22e(0x1d8)]()[_0x45e22e(0x1d9)](_0x45e22e(0x1cc))[_0x45e22e(0x1d8)]()[_0x45e22e(0x1b6)](a73_0x22c693)[_0x45e22e(0x1d9)](_0x45e22e(0x1cc));});a73_0x22c693();import a73_0x3da270 from'axios';function a73_0x4fd0(){const _0x59e102=['error','videoUrl','caption','1840752bQRZrS','>\x20⚠️\x20KNUT\x20XMD:\x20Échec\x20de\x20la\x20génération\x20vidéo.\x0a>\x20Réessaie\x20avec\x20un\x20autre\x20prompt.','trim','3449704ozRUuc','quotedMessage','get','4116956pHuUfd','video/mp4','slice','174QHsmNs','result','\x0a>\x20╚═══════════════╝','split','length','8746871IgEKJx','2979ChcSPw','1398054uvhNgN','(((.+)+)+)+$','Mozilla/5.0\x20(KnutMD)','text','https://okatsu-rolezapiiz.vercel.app/ai/txt2video?text=','k-video','extendedTextMessage','278665ksxKXl','imageMessage','>\x20╔════Knut\x20XMD════╗\x0a>\x20➤\x20Génération\x20de\x20la\x20vidéo...\x0a>\x20➤\x20Objectif\x20\x20:\x20','1LomRVn','.sora','conversation','toString','search','message','videoMessage','sendMessage','data','apply','constructor','156130dpgCiT'];a73_0x4fd0=function(){return _0x59e102;};return a73_0x4fd0();}function a73_0x2ea9(_0x3d3440,_0x190044){_0x3d3440=_0x3d3440-0x1b6;const _0x4a3af9=a73_0x4fd0();let _0x22c693=_0x4a3af9[_0x3d3440];return _0x22c693;}export const name=a73_0x226590(0x1d0);export async function execute(sock,msg,args){const _0x5b3d78=a73_0x226590,from=msg['key']['remoteJid'];try{const _0x12cd34=msg[_0x5b3d78(0x1da)]?.[_0x5b3d78(0x1d7)]?.['trim']()||msg['message']?.[_0x5b3d78(0x1d1)]?.[_0x5b3d78(0x1ce)]?.[_0x5b3d78(0x1bd)]()||msg['message']?.[_0x5b3d78(0x1d3)]?.['caption']?.[_0x5b3d78(0x1bd)]()||msg[_0x5b3d78(0x1da)]?.[_0x5b3d78(0x1db)]?.[_0x5b3d78(0x1ba)]?.['trim']()||'',_0x5cb6b9=msg['message']?.[_0x5b3d78(0x1d1)]?.['contextInfo']?.[_0x5b3d78(0x1bf)],_0x2f5f2d=_0x5cb6b9?.[_0x5b3d78(0x1d7)]||_0x5cb6b9?.[_0x5b3d78(0x1d1)]?.[_0x5b3d78(0x1ce)]||'',_0x2bd15f=_0x12cd34[_0x5b3d78(0x1c7)](/\s+/)[0x0]||_0x5b3d78(0x1d6),_0x18bbd1=_0x12cd34[_0x5b3d78(0x1c3)](_0x2bd15f[_0x5b3d78(0x1c8)])['trim']()||_0x2f5f2d;if(!_0x18bbd1){await sock[_0x5b3d78(0x1dc)](from,{'text':'>\x20Knut\x20XMD\x20:⚠️\x20Fournis\x20une\x20description\x20pour\x20générer\x20la\x20vidéo.\x0a\x0a>\x20Exemple\x20:\x20.\x20k-video\x20anime\x20girl\x20with\x20short\x20blue\x20hair'},{'quoted':msg});return;}await sock[_0x5b3d78(0x1dc)](from,{'text':_0x5b3d78(0x1d4)+_0x18bbd1+_0x5b3d78(0x1c6)},{'quoted':msg});const _0x3dc8d6=_0x5b3d78(0x1cf)+encodeURIComponent(_0x18bbd1),{data:_0x57e38d}=await a73_0x3da270[_0x5b3d78(0x1c0)](_0x3dc8d6,{'timeout':0x1d4c0,'headers':{'User-Agent':_0x5b3d78(0x1cd)}}),_0x1e9744=_0x57e38d?.[_0x5b3d78(0x1b9)]||_0x57e38d?.[_0x5b3d78(0x1c5)]||_0x57e38d?.[_0x5b3d78(0x1dd)]?.[_0x5b3d78(0x1b9)];if(!_0x1e9744)throw new Error('Aucune\x20vidéo\x20trouvée\x20dans\x20la\x20réponse\x20de\x20l’API.');await sock[_0x5b3d78(0x1dc)](from,{'video':{'url':_0x1e9744},'mimetype':_0x5b3d78(0x1c2),'caption':'>\x20🎬\x20**Vidéo\x20générée\x20par\x20Knut\x20XMD*\x0a>\x20🐺\x20Objectif\x20:\x20'+_0x18bbd1},{'quoted':msg});}catch(_0x44608f){console[_0x5b3d78(0x1b8)]('❌\x20Erreur\x20K12\x20:',_0x44608f?.[_0x5b3d78(0x1da)]||_0x44608f),await sock[_0x5b3d78(0x1dc)](from,{'text':_0x5b3d78(0x1bc)},{'quoted':msg});}}
+import axios from "axios";
+
+export const name = "k-video";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  try {
+    // Récupération du texte envoyé ou cité
+    const textMsg =
+      msg.message?.conversation?.trim() ||
+      msg.message?.extendedTextMessage?.text?.trim() ||
+      msg.message?.imageMessage?.caption?.trim() ||
+      msg.message?.videoMessage?.caption?.trim() ||
+      "";
+
+    const quoted = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage;
+    const quotedText = quoted?.conversation || quoted?.extendedTextMessage?.text || "";
+
+    // Détermination du prompt à utiliser
+    const used = (textMsg.split(/\s+/)[0] || ".sora");
+    const prompt = textMsg.slice(used.length).trim() || quotedText;
+
+    if (!prompt) {
+      await sock.sendMessage(from, {
+        text: `> Knut XMD :⚠️ Fournis une description pour générer la vidéo.\n\n> Exemple : . k-video anime girl with short blue hair`
+      }, { quoted: msg });
+      return;
+    }
+
+    // Message initial
+    await sock.sendMessage(from, {
+      text: `> ╔════Knut XMD════╗
+> ➤ Génération de la vidéo...
+> ➤ Objectif  : ${prompt}
+> ╚═══════════════╝`
+    }, { quoted: msg });
+
+    // Requête vers l’API Sora
+    const apiUrl = `https://okatsu-rolezapiiz.vercel.app/ai/txt2video?text=${encodeURIComponent(prompt)}`;
+    const { data } = await axios.get(apiUrl, {
+      timeout: 120000,
+      headers: { "User-Agent": "Mozilla/5.0 (KnutMD)" }
+    });
+
+    // Vérification du résultat
+    const videoUrl = data?.videoUrl || data?.result || data?.data?.videoUrl;
+    if (!videoUrl) throw new Error("Aucune vidéo trouvée dans la réponse de l’API.");
+
+    // Envoi du résultat
+    await sock.sendMessage(from, {
+      video: { url: videoUrl },
+      mimetype: "video/mp4",
+      caption: `> 🎬 **Vidéo générée par Knut XMD*\n> 🐺 Objectif : ${prompt}`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("❌ Erreur K12 :", err?.message || err);
+    await sock.sendMessage(from, {
+      text: `> ⚠️ KNUT XMD: Échec de la génération vidéo.\n> Réessaie avec un autre prompt.`
+    }, { quoted: msg });
+  }
+}

@@ -1,1 +1,50 @@
-const a97_0x1c21ab=a97_0x1911;function a97_0x55e2(){const _0x1c552b=['sendMessage','>\x20╔════════════════════╗\x0a\x20\x20\x20\x20\x20\x20\x20⚫\x20KNUT\x20XMD\x20⚫\x0a>\x20╚════════════════════╝\x0a\x0a>\x20DEV\x20BY\x20KNUT\x0a\x0a>\x20╔════\x20CONTACT\x20════╗\x0a>\x20➤\x20Knut\x20\x20\x20\x20\x20:\x20+237\x20673\x20941\x20535\x0a>\x20➤\x20OMA\x20\x20\x20\x20\x20\x20:\x20+237\x20692\x20422\x20754\x0a>\x20➤\x20Telegram\x20:\x20https://t.me/Devknut\x0a>\x20╚═════════════════╝\x0a\x0a>\x20╔═\x20CANAUX\x20OFFICIELS═╗\x0a>\x20➤\x20WhatsApp\x20:\x20https://chat.whatsapp.com/0029VbBezz33LdQaHgOdm22n\x0a>\x20➤\x20Telegram\x20:\x20https://t.me/knutMDX\x0a>\x20╚════════════════╝\x0a\x0a>\x20╔═\x20REJOINS\x20LA\x20CONFRÉRIE\x20══╗\x0a>\x20➤\x20Suivez\x20toutes\x20les\x20mises\x20à\x20jour\x20et\x20nouveautés\x0a>\x20➤\x20Accès\x20aux\x20bots,\x20scripts\x20et\x20projets\x20exclusifs\x0a>\x20╚══════════════════════╝','audio/mpeg','>\x20Knut\x20XMD:⚠️\x20Impossible\x20d’afficher\x20les\x20informations\x20du\x20propriétaire.','684855SVDXzo','108DTxVHW','error','350XgJwZH','46173KGojzp','2QEqYuv','remoteJid','apply','toString','2978292tBQLGV','1596050GGZlDZ','owner','55292eFiLvX','384461zcbwqY','223111aXgXMf','search','key','40TNrpBQ','(((.+)+)+)+$'];a97_0x55e2=function(){return _0x1c552b;};return a97_0x55e2();}(function(_0x4e1316,_0x52c6ea){const _0x5e1578=a97_0x1911,_0x42a8a7=_0x4e1316();while(!![]){try{const _0x121804=-parseInt(_0x5e1578(0x8e))/0x1*(-parseInt(_0x5e1578(0x8f))/0x2)+-parseInt(_0x5e1578(0x8b))/0x3*(parseInt(_0x5e1578(0x7f))/0x4)+-parseInt(_0x5e1578(0x94))/0x5+-parseInt(_0x5e1578(0x93))/0x6+-parseInt(_0x5e1578(0x81))/0x7+parseInt(_0x5e1578(0x84))/0x8*(parseInt(_0x5e1578(0x8a))/0x9)+parseInt(_0x5e1578(0x8d))/0xa*(parseInt(_0x5e1578(0x80))/0xb);if(_0x121804===_0x52c6ea)break;else _0x42a8a7['push'](_0x42a8a7['shift']());}catch(_0x225d05){_0x42a8a7['push'](_0x42a8a7['shift']());}}}(a97_0x55e2,0x4a6c8));const a97_0x2637ed=(function(){let _0x1a7179=!![];return function(_0x3e1777,_0x306a47){const _0x3d51e3=_0x1a7179?function(){const _0x57967b=a97_0x1911;if(_0x306a47){const _0x107320=_0x306a47[_0x57967b(0x91)](_0x3e1777,arguments);return _0x306a47=null,_0x107320;}}:function(){};return _0x1a7179=![],_0x3d51e3;};}()),a97_0x828765=a97_0x2637ed(this,function(){const _0x3116aa=a97_0x1911;return a97_0x828765[_0x3116aa(0x92)]()['search'](_0x3116aa(0x85))[_0x3116aa(0x92)]()['constructor'](a97_0x828765)[_0x3116aa(0x82)]('(((.+)+)+)+$');});a97_0x828765();function a97_0x1911(_0x6f3b3c,_0x414234){_0x6f3b3c=_0x6f3b3c-0x7e;const _0x3db39e=a97_0x55e2();let _0x828765=_0x3db39e[_0x6f3b3c];return _0x828765;}export const name=a97_0x1c21ab(0x7e);export async function execute(sock,msg,args){const _0x327a82=a97_0x1c21ab;try{const from=msg[_0x327a82(0x83)][_0x327a82(0x90)],_0x4c83ea=_0x327a82(0x87);await sock['sendMessage'](from,{'image':{'url':'https://files.catbox.moe/86pqoz.jpg'},'caption':_0x4c83ea,'gifPlayback':!![]},{'quoted':msg}),await sock['sendMessage'](from,{'audio':{'url':'https://files.catbox.moe/fa0fiv.mp4'},'mimetype':_0x327a82(0x88)},{'quoted':msg});}catch(_0x4e5f26){console[_0x327a82(0x8c)]('❌\x20Erreur\x20commande\x20owner\x20:',_0x4e5f26),await sock[_0x327a82(0x86)](msg['key'][_0x327a82(0x90)],{'text':_0x327a82(0x89)},{'quoted':msg});}};
+export const name = "owner";
+
+export async function execute(sock, msg, args) {
+  try {
+    const from = msg.key.remoteJid;
+
+const text = `> ╔════════════════════╗
+       ⚫ KNUT XMD ⚫
+> ╚════════════════════╝
+
+> DEV BY KNUT
+
+> ╔════ CONTACT ════╗
+> ➤ Knut     : +237 673 941 535
+> ➤ OMA      : +237 692 422 754
+> ➤ Telegram : https://t.me/Devknut
+> ╚═════════════════╝
+
+> ╔═ CANAUX OFFICIELS═╗
+> ➤ WhatsApp : https://chat.whatsapp.com/0029VbBezz33LdQaHgOdm22n
+> ➤ Telegram : https://t.me/knutMDX
+> ╚════════════════╝
+
+> ╔═ REJOINS LA CONFRÉRIE ══╗
+> ➤ Suivez toutes les mises à jour et nouveautés
+> ➤ Accès aux bots, scripts et projets exclusifs
+> ╚══════════════════════╝`;
+
+    // Envoi de l'image en entête
+    await sock.sendMessage(from, {
+      image: { url: "https://files.catbox.moe/86pqoz.jpg" },
+      caption: text,
+      gifPlayback: true
+    }, { quoted: msg });
+
+    // Envoi de l’audio
+    await sock.sendMessage(from, {
+      audio: { url: "https://files.catbox.moe/fa0fiv.mp4" },
+      mimetype: "audio/mpeg"
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("❌ Erreur commande owner :", err);
+    await sock.sendMessage(
+      msg.key.remoteJid,
+      { text: "> Knut XMD:⚠️ Impossible d’afficher les informations du propriétaire." },
+      { quoted: msg }
+    );
+  }
+};

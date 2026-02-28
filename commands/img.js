@@ -1,1 +1,85 @@
-const a66_0x154c51=a66_0x6148;(function(_0x29e451,_0x4975b1){const _0x1c344e=a66_0x6148,_0x53bf6e=_0x29e451();while(!![]){try{const _0x32aff3=parseInt(_0x1c344e(0x172))/0x1*(-parseInt(_0x1c344e(0x180))/0x2)+-parseInt(_0x1c344e(0x177))/0x3+-parseInt(_0x1c344e(0x165))/0x4+-parseInt(_0x1c344e(0x160))/0x5*(-parseInt(_0x1c344e(0x163))/0x6)+-parseInt(_0x1c344e(0x15f))/0x7+parseInt(_0x1c344e(0x16b))/0x8+-parseInt(_0x1c344e(0x171))/0x9*(-parseInt(_0x1c344e(0x16d))/0xa);if(_0x32aff3===_0x4975b1)break;else _0x53bf6e['push'](_0x53bf6e['shift']());}catch(_0x9bd4b9){_0x53bf6e['push'](_0x53bf6e['shift']());}}}(a66_0x124a,0xcb30f));const a66_0x38dd56=(function(){let _0x4cc6a3=!![];return function(_0x1c53e4,_0x582b72){const _0x5a2c60=_0x4cc6a3?function(){const _0x5243db=a66_0x6148;if(_0x582b72){const _0x359607=_0x582b72[_0x5243db(0x16c)](_0x1c53e4,arguments);return _0x582b72=null,_0x359607;}}:function(){};return _0x4cc6a3=![],_0x5a2c60;};}()),a66_0x5af071=a66_0x38dd56(this,function(){const _0x3f786b=a66_0x6148;return a66_0x5af071['toString']()['search'](_0x3f786b(0x183))[_0x3f786b(0x17c)]()[_0x3f786b(0x170)](a66_0x5af071)[_0x3f786b(0x162)](_0x3f786b(0x183));});a66_0x5af071();function a66_0x6148(_0x44cb78,_0x527145){_0x44cb78=_0x44cb78-0x157;const _0x3b0fc8=a66_0x124a();let _0x5af071=_0x3b0fc8[_0x44cb78];return _0x5af071;}import a66_0x38bb4c from'node-fetch';export const name=a66_0x154c51(0x15c);export async function execute(sock,msg,args,_0x1e04f0='.'){const _0x1a860e=a66_0x154c51,from=msg[_0x1a860e(0x158)][_0x1a860e(0x157)];try{if(!args[0x0]){await sock[_0x1a860e(0x173)](from,{'text':_0x1e04f0+'Utilisation\x20:\x20.img\x20<mot-clé>\x20[nombre]\x0a\x0aExemples\x20:\x0a•\x20.img\x20naruto\x0a•\x20.img\x20voiture\x205'},{'quoted':msg});return;}const _0x285abc=args[args[_0x1a860e(0x169)]-0x1],_0xbda172=!isNaN(_0x285abc)?Math[_0x1a860e(0x181)](parseInt(_0x285abc),0xa):0x5,_0x246672=!isNaN(_0x285abc)?args[_0x1a860e(0x15a)](0x0,-0x1)['join']('\x20'):args[_0x1a860e(0x174)]('\x20');await sock[_0x1a860e(0x173)](from,{'text':_0x1a860e(0x166)+_0x1e04f0+'Recherche\x20de\x20*'+_0xbda172+_0x1a860e(0x17a)+_0x246672+'*...\x0a>\x20⏳\x20Veuillez\x20patienter...'},{'quoted':msg});const _0x46f1f3='https://www.bing.com/images/search?q='+encodeURIComponent(_0x246672)+_0x1a860e(0x159),_0x246ec8=await a66_0x38bb4c(_0x46f1f3),_0x30c146=await _0x246ec8[_0x1a860e(0x16a)](),_0x1da8be=[..._0x30c146[_0x1a860e(0x17d)](/murl&quot;:&quot;(.*?)&quot;/g)][_0x1a860e(0x168)](_0x145408=>_0x145408[0x1])[_0x1a860e(0x16f)](_0x77e0d0=>_0x77e0d0[_0x1a860e(0x167)](_0x1a860e(0x161)));if(_0x1da8be[_0x1a860e(0x169)]===0x0){await sock[_0x1a860e(0x173)](from,{'text':_0x1e04f0+_0x1a860e(0x15b)+_0x246672+'*.'},{'quoted':msg});return;}const _0x24392b=_0x1da8be[_0x1a860e(0x15a)](0x0,_0xbda172);let _0x3131d2=0x0;for(const _0x1dfcf7 of _0x24392b){try{const _0x1644db=await a66_0x38bb4c(_0x1dfcf7),_0xe6c616=Buffer[_0x1a860e(0x175)](await _0x1644db[_0x1a860e(0x176)]());if(_0xe6c616[_0x1a860e(0x169)]<0x1388)continue;await sock[_0x1a860e(0x173)](from,{'image':_0xe6c616,'caption':_0x1a860e(0x16e)+_0x246672+_0x1a860e(0x17b)+(_0x3131d2+0x1)+'/'+_0xbda172+')'},{'quoted':msg}),_0x3131d2++,await new Promise(_0x4cc65=>setTimeout(_0x4cc65,0x3e8));}catch(_0x565245){console['error'](_0x1a860e(0x178),_0x565245[_0x1a860e(0x17f)]);}}_0x3131d2===0x0?await sock['sendMessage'](from,{'text':_0x1a860e(0x182)+_0x1e04f0+_0x1a860e(0x17e)},{'quoted':msg}):(await sock[_0x1a860e(0x173)](from,{'text':_0x1a860e(0x182)+_0x1e04f0+_0x3131d2+'/'+_0xbda172+_0x1a860e(0x15e)+_0x246672+'*.'},{'quoted':msg}),console['log']('✅\x20'+_0x3131d2+'/'+_0xbda172+_0x1a860e(0x179)+_0x246672+'\x22'));}catch(_0x33da77){console['error'](_0x1a860e(0x164),_0x33da77),await sock[_0x1a860e(0x173)](from,{'text':_0x1e04f0+_0x1a860e(0x15d)},{'quoted':msg});}}function a66_0x124a(){const _0x2b21bd=['search','834FnCbyy','❌\x20Erreur\x20.img\x20:','1418528tasPOT','>\x20Knut\x20XMD\x20','startsWith','map','length','text','11709520DHzUOe','apply','420NVWuJu','>\x20Knut\x20XMD:\x20🖼️\x20*','filter','constructor','101043NGGTFS','15339TtAjrQ','sendMessage','join','from','arrayBuffer','3754125GbgxMl','Erreur\x20image\x20:','\x20images\x20envoyées\x20pour\x20\x22','*\x20image(s)\x20pour\x20:\x20*','*\x20(','toString','matchAll','Aucune\x20image\x20valide\x20trouvée.','message','46ynHLCL','min','>\x20Knut\x20XMD:\x20','(((.+)+)+)+$','remoteJid','key','&form=HDRSC2','slice','Aucune\x20image\x20trouvée\x20pour\x20:\x20*','img','Une\x20erreur\x20est\x20survenue\x20lors\x20de\x20la\x20recherche\x20d\x27image.','\x20image(s)\x20envoyée(s)\x20pour\x20*','4588472qLjxOm','54365HrmlxS','http'];a66_0x124a=function(){return _0x2b21bd;};return a66_0x124a();}
+import fetch from "node-fetch";
+
+export const name = "img";
+
+export async function execute(sock, msg, args, prefix = ".") {
+  const from = msg.key.remoteJid;
+
+  try {
+    // 🧠 Vérifier si un mot-clé est fourni
+    if (!args[0]) {
+      await sock.sendMessage(from, {
+        text: `${prefix}Utilisation : .img <mot-clé> [nombre]\n\nExemples :\n• .img naruto\n• .img voiture 5`
+      }, { quoted: msg });
+      return;
+    }
+
+    // 🧩 Extraire le mot-clé et le nombre d’images
+    const lastArg = args[args.length - 1];
+    const count = !isNaN(lastArg) ? Math.min(parseInt(lastArg), 10) : 5; // max 10, par défaut 5
+    const query = !isNaN(lastArg) ? args.slice(0, -1).join(" ") : args.join(" ");
+
+    await sock.sendMessage(from, {
+      text: `> Knut XMD ${prefix}Recherche de *${count}* image(s) pour : *${query}*...\n> ⏳ Veuillez patienter...`
+    }, { quoted: msg });
+
+    // 🌐 Requête vers Bing Images
+    const bingUrl = `https://www.bing.com/images/search?q=${encodeURIComponent(query)}&form=HDRSC2`;
+    const res = await fetch(bingUrl);
+    const html = await res.text();
+
+    // 📸 Extraire les URLs d’images valides
+    const imageUrls = [...html.matchAll(/murl&quot;:&quot;(.*?)&quot;/g)]
+      .map(m => m[1])
+      .filter(u => u.startsWith("http"));
+
+    if (imageUrls.length === 0) {
+      await sock.sendMessage(from, {
+        text: `${prefix}Aucune image trouvée pour : *${query}*.`
+      }, { quoted: msg });
+      return;
+    }
+
+    // 🖼️ Envoi des images
+    const imagesToSend = imageUrls.slice(0, count);
+    let sent = 0;
+
+    for (const img of imagesToSend) {
+      try {
+        const response = await fetch(img);
+        const buffer = Buffer.from(await response.arrayBuffer());
+
+        // 🔍 Ignorer les miniatures trop petites
+        if (buffer.length < 5000) continue;
+
+        await sock.sendMessage(from, {
+          image: buffer,
+          caption: `> Knut XMD: 🖼️ *${query}* (${sent + 1}/${count})`
+        }, { quoted: msg });
+
+        sent++;
+        await new Promise(r => setTimeout(r, 1000)); // délai 1s entre envois
+      } catch (e) {
+        console.error("Erreur image :", e.message);
+      }
+    }
+
+    // ✅ Résumé final
+    if (sent === 0) {
+      await sock.sendMessage(from, {
+        text: `> Knut XMD: ${prefix}Aucune image valide trouvée.`
+      }, { quoted: msg });
+    } else {
+      await sock.sendMessage(from, {
+        text: `> Knut XMD: ${prefix}${sent}/${count} image(s) envoyée(s) pour *${query}*.`
+      }, { quoted: msg });
+      console.log(`✅ ${sent}/${count} images envoyées pour "${query}"`);
+    }
+
+  } catch (err) {
+    console.error("❌ Erreur .img :", err);
+    await sock.sendMessage(from, {
+      text: `${prefix}Une erreur est survenue lors de la recherche d'image.`
+    }, { quoted: msg });
+  }
+}

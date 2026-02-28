@@ -1,1 +1,124 @@
-const a77_0x45e14f=a77_0x4f25;(function(_0x40dbf0,_0x282353){const _0x54be32=a77_0x4f25,_0x3c36ea=_0x40dbf0();while(!![]){try{const _0x21a8f3=parseInt(_0x54be32(0x13b))/0x1+parseInt(_0x54be32(0x155))/0x2+-parseInt(_0x54be32(0x167))/0x3*(-parseInt(_0x54be32(0x130))/0x4)+parseInt(_0x54be32(0x16a))/0x5+parseInt(_0x54be32(0x153))/0x6+parseInt(_0x54be32(0x152))/0x7*(parseInt(_0x54be32(0x15c))/0x8)+-parseInt(_0x54be32(0x15b))/0x9*(parseInt(_0x54be32(0x14d))/0xa);if(_0x21a8f3===_0x282353)break;else _0x3c36ea['push'](_0x3c36ea['shift']());}catch(_0x5ad34a){_0x3c36ea['push'](_0x3c36ea['shift']());}}}(a77_0x2ff7,0x7b41a));const a77_0x4104c9=(function(){let _0x54b22c=!![];return function(_0x1eb2d8,_0x51e557){const _0xa1734d=_0x54b22c?function(){const _0x2ec2ea=a77_0x4f25;if(_0x51e557){const _0x5c5e35=_0x51e557[_0x2ec2ea(0x168)](_0x1eb2d8,arguments);return _0x51e557=null,_0x5c5e35;}}:function(){};return _0x54b22c=![],_0xa1734d;};}()),a77_0x36d783=a77_0x4104c9(this,function(){const _0x306c7c=a77_0x4f25;return a77_0x36d783[_0x306c7c(0x151)]()[_0x306c7c(0x166)]('(((.+)+)+)+$')[_0x306c7c(0x151)]()[_0x306c7c(0x139)](a77_0x36d783)['search']('(((.+)+)+)+$');});a77_0x36d783();import a77_0x26f6d6 from'fs';import a77_0x1eb6ae from'path';function a77_0x2ff7(){const _0x24c977=['activé','\x20dans\x20ce\x20groupe.','État\x20:\x20','>\x20Knut\x20XMD:\x20Knuta\x20(IA\x20Vocale)\x0a\x0a','owners','toLowerCase','•\x20knuta\x20help\x20\x20→\x20ℹ️\x20Aide','10335810UlSmlq','Mode\x20:\x20Silencieux','⏱️\x20*Cooldown\x20:*\x208\x20secondes\x20par\x20utilisateur\x0a','l\x27IA\x20+\x20synthèse\x20vocale\x20(fichier\x20audio).\x0a\x0a','toString','76853zGEmKO','4319670lnKZzn','sendMessage','1833480tdtnOE','knuta','•\x20on\x20\x20→\x20✅\x20Activer\x0a','status','🔊\x20*Synthèse\x20:*\x20Google\x20TTS\x20(français)\x0a','✅\x20activé','27oUPsZu','232muFYxE','map','>\x20Knut\x20XMD:\x20Aide\x20Knuta\x0a\x0a','Répond\x20automatiquement\x20aux\x20messages\x20avec\x0a','replace','•\x20status\x20→\x20📊\x20Voir\x20le\x20statut','Erreur\x20knuta:','•\x20off\x20→\x20🛑\x20Désactiver\x0a','🤖\x20*Mode\x20silencieux\x20:*\x20Pas\x20de\x20message\x20d\x27attente\x0a\x0a','includes','search','18489jvPCxZ','apply','participant','2104785vVmJFN','Désactivé','•\x20knuta\x20on\x20\x20\x20\x20→\x20✅\x20Activer\x0a','🤖\x20*IA\x20utilisée\x20:*\x20Chatbot\x20API\x0a','•\x20knuta\x20status\x20→\x20📊\x20Statut\x0a','332IcIVRj','>\x20Knut\x20XMD\x20:\x20⚠️\x20Knuta\x20est\x20déjà\x20🛑\x20désactivé.','Synthèse\x20:\x20Google\x20TTS\x0a','🛑\x20désactivé','📌\x20*Description\x20:*\x0a','>\x20Knut\x20XMD\x20:\x20⚠️\x20Knuta\x20est\x20déjà\x20✅\x20activé.','help','off','IA\x20:\x20Chatbot\x20API\x0a','constructor','désactivé','718039wNRiIt','@g.us','endsWith','Utilisation\x20:\x0a','🎯\x20*Mode\x20:*\x20Silencieux\x20(pas\x20de\x20message\x20d\x27attente)\x0a\x0a','•\x20knuta\x20off\x20\x20\x20→\x20🛑\x20Désactiver\x0a','État\x20actuel\x20:\x20','resolve','>\x20Knut\x20XMD\x20:\x20Cette\x20commande\x20est\x20réservée\x20aux\x20groupes.','>\x20Knut\x20XMD\x20:\x20Accès\x20refusé.\x20Owner\x20ou\x20sudo\x20requis.','Activé'];a77_0x2ff7=function(){return _0x24c977;};return a77_0x2ff7();}import{getGroupProtections,setGroupProtection}from'../groupManager.js';import{loadSudo}from'../index.js';const GROUP_FILE=a77_0x1eb6ae[a77_0x45e14f(0x142)]('./group.json');function a77_0x4f25(_0x1e268e,_0x290363){_0x1e268e=_0x1e268e-0x12e;const _0x58cf52=a77_0x2ff7();let _0x36d783=_0x58cf52[_0x1e268e];return _0x36d783;}export const name=a77_0x45e14f(0x156);export async function execute(sock,msg,args,from){const _0x2dc8c2=a77_0x45e14f;try{if(!from[_0x2dc8c2(0x13d)](_0x2dc8c2(0x13c))){await sock[_0x2dc8c2(0x154)](from,{'text':_0x2dc8c2(0x143)},{'quoted':msg});return;}const _0x492499=msg['key'][_0x2dc8c2(0x169)]||from,_0x361a91=_0x492499['split']('@')[0x0][_0x2dc8c2(0x160)](/[^0-9]/g,''),_0x5bc086=(global[_0x2dc8c2(0x14a)]||[])[_0x2dc8c2(0x15d)](_0x15b70e=>_0x15b70e[_0x2dc8c2(0x160)](/[^0-9]/g,'')),_0x154b41=loadSudo()[_0x2dc8c2(0x15d)](_0x2ea247=>_0x2ea247['replace'](/[^0-9]/g,'')),_0x4d5c68=_0x5bc086['includes'](_0x361a91),_0x149c03=_0x154b41[_0x2dc8c2(0x165)](_0x361a91);if(!_0x4d5c68&&!_0x149c03){await sock['sendMessage'](from,{'text':_0x2dc8c2(0x144)},{'quoted':msg});return;}const _0x27932c=getGroupProtections(from),_0x219b59=_0x27932c[_0x2dc8c2(0x156)]||![],_0x128e33=args[0x0]?.[_0x2dc8c2(0x14b)]();if(!_0x128e33||!['on','off',_0x2dc8c2(0x158),_0x2dc8c2(0x136)][_0x2dc8c2(0x165)](_0x128e33)){const _0x7a4c=_0x219b59?_0x2dc8c2(0x15a):_0x2dc8c2(0x133);await sock['sendMessage'](from,{'text':_0x2dc8c2(0x149)+(_0x2dc8c2(0x141)+_0x7a4c+'\x0a\x0a')+'🔊\x20Répond\x20automatiquement\x20aux\x20messages\x0a'+'avec\x20l\x27IA\x20+\x20synthèse\x20vocale\x20(audio).\x0a\x0a'+_0x2dc8c2(0x14f)+_0x2dc8c2(0x164)+_0x2dc8c2(0x13e)+_0x2dc8c2(0x16c)+_0x2dc8c2(0x140)+_0x2dc8c2(0x12f)+_0x2dc8c2(0x14c)},{'quoted':msg});return;}if(_0x128e33===_0x2dc8c2(0x136)){await sock[_0x2dc8c2(0x154)](from,{'text':_0x2dc8c2(0x15e)+_0x2dc8c2(0x134)+_0x2dc8c2(0x15f)+_0x2dc8c2(0x150)+_0x2dc8c2(0x12e)+_0x2dc8c2(0x159)+_0x2dc8c2(0x14f)+_0x2dc8c2(0x13f)+'📋\x20*Commandes\x20:*\x0a'+_0x2dc8c2(0x157)+_0x2dc8c2(0x163)+_0x2dc8c2(0x161)},{'quoted':msg});return;}if(_0x128e33===_0x2dc8c2(0x158)){const _0x4f9a68=_0x219b59?'✅':'🛑',_0x4e9afc=_0x219b59?_0x2dc8c2(0x145):_0x2dc8c2(0x16b);await sock[_0x2dc8c2(0x154)](from,{'text':'>\x20Knut\x20XMD:\x20Knuta\x20-\x20Statut\x0a\x0a'+(_0x2dc8c2(0x148)+_0x4f9a68+'\x20'+_0x4e9afc+'\x0a')+('Groupe\x20:\x20'+from['split']('@')[0x0]+'\x0a')+_0x2dc8c2(0x138)+_0x2dc8c2(0x132)+'Cooldown\x20:\x208\x20secondes\x0a'+_0x2dc8c2(0x14e)},{'quoted':msg});return;}const _0x46c26b=_0x128e33==='on';if(_0x128e33==='on'&&_0x219b59){await sock[_0x2dc8c2(0x154)](from,{'text':_0x2dc8c2(0x135)},{'quoted':msg});return;}if(_0x128e33===_0x2dc8c2(0x137)&&!_0x219b59){await sock['sendMessage'](from,{'text':_0x2dc8c2(0x131)},{'quoted':msg});return;}setGroupProtection(from,_0x2dc8c2(0x156),_0x46c26b);const _0x1ff045=_0x46c26b?'✅':'🛑';await sock[_0x2dc8c2(0x154)](from,{'text':'>\x20Knut\x20XMD:\x20Knuta\x20'+_0x1ff045+'\x20'+(_0x46c26b?_0x2dc8c2(0x146):_0x2dc8c2(0x13a))+_0x2dc8c2(0x147)},{'quoted':msg});}catch(_0x58e255){console['error'](_0x2dc8c2(0x162),_0x58e255),await sock['sendMessage'](from,{'text':'>\x20Knut\x20XMD\x20:\x20Une\x20erreur\x20est\x20survenue.'},{'quoted':msg});}}
+import fs from "fs";
+import path from "path";
+import { getGroupProtections, setGroupProtection } from "../groupManager.js";
+import { loadSudo } from "../index.js";
+
+const GROUP_FILE = path.resolve("./group.json");
+
+export const name = "knuta";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === GROUPE UNIQUEMENT ===
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Cette commande est réservée aux groupes." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER L'EXPÉDITEUR ===
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // === VÉRIFICATION DES DROITS (OWNER ET SUDO UNIQUEMENT) ===
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+
+    if (!isOwner && !isSudo) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Accès refusé. Owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER LES PROTECTIONS DU GROUPE ===
+    const protections = getGroupProtections(from);
+    const currentStatus = protections.knuta || false;
+
+    // === ARGUMENT ===
+    const arg = args[0]?.toLowerCase();
+
+    if (!arg || !["on", "off", "status", "help"].includes(arg)) {
+      const status = currentStatus ? "✅ activé" : "🛑 désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Knuta (IA Vocale)\n\n` +
+              `État actuel : ${status}\n\n` +
+              `🔊 Répond automatiquement aux messages\n` +
+              `avec l'IA + synthèse vocale (audio).\n\n` +
+              `⏱️ *Cooldown :* 8 secondes par utilisateur\n` +
+              `🤖 *Mode silencieux :* Pas de message d'attente\n\n` +
+              `Utilisation :\n` +
+              `• knuta on    → ✅ Activer\n` +
+              `• knuta off   → 🛑 Désactiver\n` +
+              `• knuta status → 📊 Statut\n` +
+              `• knuta help  → ℹ️ Aide`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === HELP ===
+    if (arg === "help") {
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Aide Knuta\n\n` +
+              `📌 *Description :*\n` +
+              `Répond automatiquement aux messages avec\n` +
+              `l'IA + synthèse vocale (fichier audio).\n\n` +
+              `🤖 *IA utilisée :* Chatbot API\n` +
+              `🔊 *Synthèse :* Google TTS (français)\n` +
+              `⏱️ *Cooldown :* 8 secondes par utilisateur\n` +
+              `🎯 *Mode :* Silencieux (pas de message d'attente)\n\n` +
+              `📋 *Commandes :*\n` +
+              `• on  → ✅ Activer\n` +
+              `• off → 🛑 Désactiver\n` +
+              `• status → 📊 Voir le statut`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === STATUS ===
+    if (arg === "status") {
+      const statusEmoji = currentStatus ? "✅" : "🛑";
+      const statusText = currentStatus ? "Activé" : "Désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Knuta - Statut\n\n` +
+              `État : ${statusEmoji} ${statusText}\n` +
+              `Groupe : ${from.split('@')[0]}\n` +
+              `IA : Chatbot API\n` +
+              `Synthèse : Google TTS\n` +
+              `Cooldown : 8 secondes\n` +
+              `Mode : Silencieux`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === ON / OFF ===
+    const newState = arg === "on";
+    
+    if (arg === "on" && currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ Knuta est déjà ✅ activé." 
+      }, { quoted: msg });
+      return;
+    }
+    
+    if (arg === "off" && !currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ Knuta est déjà 🛑 désactivé." 
+      }, { quoted: msg });
+      return;
+    }
+
+    setGroupProtection(from, "knuta", newState);
+    const statusEmoji = newState ? "✅" : "🛑";
+    
+    await sock.sendMessage(from, { 
+      text: `> Knut XMD: Knuta ${statusEmoji} ${newState ? "activé" : "désactivé"} dans ce groupe.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur knuta:", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Une erreur est survenue." }, { quoted: msg });
+  }
+}

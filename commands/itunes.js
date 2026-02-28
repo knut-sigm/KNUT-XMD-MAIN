@@ -1,1 +1,56 @@
-const a71_0x300f1d=a71_0x5e7c;(function(_0x21f7b6,_0x3fed29){const _0x19cbc7=a71_0x5e7c,_0x3bee48=_0x21f7b6();while(!![]){try{const _0x38e636=-parseInt(_0x19cbc7(0xa6))/0x1+-parseInt(_0x19cbc7(0xb0))/0x2+-parseInt(_0x19cbc7(0xa4))/0x3+parseInt(_0x19cbc7(0xa2))/0x4*(-parseInt(_0x19cbc7(0x8d))/0x5)+parseInt(_0x19cbc7(0xa1))/0x6*(parseInt(_0x19cbc7(0x97))/0x7)+-parseInt(_0x19cbc7(0xab))/0x8*(parseInt(_0x19cbc7(0xa3))/0x9)+parseInt(_0x19cbc7(0x90))/0xa;if(_0x38e636===_0x3fed29)break;else _0x3bee48['push'](_0x3bee48['shift']());}catch(_0x5e1355){_0x3bee48['push'](_0x3bee48['shift']());}}}(a71_0x49b9,0x7f08d));const a71_0x26ea60=(function(){let _0x6f132=!![];return function(_0x1a011a,_0x1e2095){const _0xc21829=_0x6f132?function(){const _0x344ab2=a71_0x5e7c;if(_0x1e2095){const _0x2667c2=_0x1e2095[_0x344ab2(0xa0)](_0x1a011a,arguments);return _0x1e2095=null,_0x2667c2;}}:function(){};return _0x6f132=![],_0xc21829;};}()),a71_0x50b85b=a71_0x26ea60(this,function(){const _0x2e5a82=a71_0x5e7c;return a71_0x50b85b[_0x2e5a82(0x9d)]()[_0x2e5a82(0x9f)]('(((.+)+)+)+$')[_0x2e5a82(0x9d)]()[_0x2e5a82(0x8f)](a71_0x50b85b)[_0x2e5a82(0x9f)](_0x2e5a82(0x93));});a71_0x50b85b();function a71_0x49b9(){const _0x1d0bfa=['trackViewUrl','results','5JFNanS','remoteJid','constructor','20171130QWaAFQ','key','\x0a💽\x20','(((.+)+)+)+$','itunes','toFixed','join','42RRYNMw','❌\x20Knut\x20XMD\x20iTunes\x20Error:\x20','\x0a⏱️\x20','&entity=song&limit=5','\x20min\x0a🔗\x20','>\x20Knut\x20XMD\x20⚠️\x20Usage:\x20.itunes\x20artist\x20name','toString','sendMessage','search','apply','474084QULYOK','1387640sYGtMn','3732543SZGaFq','2087214ugeDXB','trackTimeMillis','129151ixyeUU','trackName','length','message','https://itunes.apple.com/search?term=','8jgthmk','Search\x20music\x20on\x20iTunes','collectionName','json','>\x20Knut\x20XMD\x20❌\x20No\x20results\x20found.','768676unDyvJ'];a71_0x49b9=function(){return _0x1d0bfa;};return a71_0x49b9();}export const name=a71_0x300f1d(0x94);function a71_0x5e7c(_0x48e55a,_0x513756){_0x48e55a=_0x48e55a-0x8d;const _0x7f5452=a71_0x49b9();let _0x50b85b=_0x7f5452[_0x48e55a];return _0x50b85b;}export const description=a71_0x300f1d(0xac);export async function execute(sock,_0x1f4d0a,args){const _0x4066e8=a71_0x300f1d;try{const _0x492c9d=_0x1f4d0a['key'][_0x4066e8(0x8e)];if(!args[_0x4066e8(0xa8)])return sock[_0x4066e8(0x9e)](_0x492c9d,{'text':_0x4066e8(0x9c)},{'quoted':_0x1f4d0a});const _0x419eda=args[_0x4066e8(0x96)]('\x20'),_0x26c95c=_0x4066e8(0xaa)+encodeURIComponent(_0x419eda)+_0x4066e8(0x9a),_0x480bf7=await fetch(_0x26c95c),_0x3ea962=await _0x480bf7[_0x4066e8(0xae)]();if(!_0x3ea962['results']||_0x3ea962[_0x4066e8(0xb2)][_0x4066e8(0xa8)]===0x0)return sock['sendMessage'](_0x492c9d,{'text':_0x4066e8(0xaf)},{'quoted':_0x1f4d0a});let msg='🎧\x20*iTunes\x20Search\x20Results*\x0a\x0a';_0x3ea962['results']['forEach']((_0x866c7b,_0x38a89d)=>{const _0x46eca3=_0x4066e8;msg+=_0x38a89d+0x1+'.\x20🎵\x20'+_0x866c7b[_0x46eca3(0xa7)]+'\x0a👤\x20'+_0x866c7b['artistName']+_0x46eca3(0x92)+_0x866c7b[_0x46eca3(0xad)]+_0x46eca3(0x99)+(_0x866c7b[_0x46eca3(0xa5)]/0xea60)[_0x46eca3(0x95)](0x2)+_0x46eca3(0x9b)+_0x866c7b[_0x46eca3(0xb1)]+'\x0a\x0a';}),await sock['sendMessage'](_0x492c9d,{'text':msg['trim']()},{'quoted':_0x1f4d0a});}catch(_0x30aee7){await sock['sendMessage'](_0x1f4d0a[_0x4066e8(0x91)][_0x4066e8(0x8e)],{'text':_0x4066e8(0x98)+_0x30aee7[_0x4066e8(0xa9)]},{'quoted':_0x1f4d0a});}}
+export const name = "itunes";
+export const description = "Search music on iTunes";
+
+export async function execute(sock, m, args) {
+  try {
+    const jid = m.key.remoteJid;
+
+    if (!args.length) {
+      return sock.sendMessage(
+        jid,
+        { text: "> Knut XMD ⚠️ Usage: .itunes artist name" },
+        { quoted: m }
+      );
+    }
+
+    const query = args.join(" ");
+    const url = `https://itunes.apple.com/search?term=${encodeURIComponent(query)}&entity=song&limit=5`;
+
+    const res = await fetch(url);
+    const data = await res.json();
+
+    if (!data.results || data.results.length === 0) {
+      return sock.sendMessage(
+        jid,
+        { text: "> Knut XMD ❌ No results found." },
+        { quoted: m }
+      );
+    }
+
+    let msg = `🎧 *iTunes Search Results*\n\n`;
+
+    data.results.forEach((song, i) => {
+      msg +=
+`${i + 1}. 🎵 ${song.trackName}
+👤 ${song.artistName}
+💽 ${song.collectionName}
+⏱️ ${(song.trackTimeMillis / 60000).toFixed(2)} min
+🔗 ${song.trackViewUrl}
+
+`;
+    });
+
+    await sock.sendMessage(
+      jid,
+      { text: msg.trim() },
+      { quoted: m }
+    );
+
+  } catch (e) {
+    await sock.sendMessage(
+      m.key.remoteJid,
+      { text: `❌ Knut XMD iTunes Error: ${e.message}` },
+      { quoted: m }
+    );
+  }
+}

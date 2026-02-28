@@ -1,1 +1,44 @@
-function a89_0x4137(_0x407f66,_0x285d23){_0x407f66=_0x407f66-0x1c7;const _0x2016a8=a89_0x1c16();let _0x445e35=_0x2016a8[_0x407f66];return _0x445e35;}const a89_0x2c42d8=a89_0x4137;(function(_0x3449d7,_0x351d04){const _0x3a37be=a89_0x4137,_0x236780=_0x3449d7();while(!![]){try{const _0x2107ce=-parseInt(_0x3a37be(0x1ed))/0x1+parseInt(_0x3a37be(0x1c9))/0x2*(parseInt(_0x3a37be(0x1dc))/0x3)+parseInt(_0x3a37be(0x1d8))/0x4*(parseInt(_0x3a37be(0x1d2))/0x5)+-parseInt(_0x3a37be(0x1d1))/0x6*(parseInt(_0x3a37be(0x1c7))/0x7)+-parseInt(_0x3a37be(0x1dd))/0x8*(parseInt(_0x3a37be(0x1ea))/0x9)+parseInt(_0x3a37be(0x1da))/0xa*(parseInt(_0x3a37be(0x1de))/0xb)+parseInt(_0x3a37be(0x1e7))/0xc;if(_0x2107ce===_0x351d04)break;else _0x236780['push'](_0x236780['shift']());}catch(_0x1c96b9){_0x236780['push'](_0x236780['shift']());}}}(a89_0x1c16,0x5474b));const a89_0x27ee4a=(function(){let _0x571572=!![];return function(_0x28d26b,_0x443d93){const _0x37d8c4=_0x571572?function(){const _0x5e3795=a89_0x4137;if(_0x443d93){const _0xa2203b=_0x443d93[_0x5e3795(0x1cf)](_0x28d26b,arguments);return _0x443d93=null,_0xa2203b;}}:function(){};return _0x571572=![],_0x37d8c4;};}()),a89_0x445e35=a89_0x27ee4a(this,function(){const _0x58b185=a89_0x4137;return a89_0x445e35[_0x58b185(0x1ee)]()[_0x58b185(0x1cb)](_0x58b185(0x1ce))[_0x58b185(0x1ee)]()['constructor'](a89_0x445e35)[_0x58b185(0x1cb)](_0x58b185(0x1ce));});a89_0x445e35();export const name=a89_0x2c42d8(0x1db);function a89_0x1c16(){const _0x1ed46c=['Erreur\x20anime\x20:','\x0a📅\x20Sortie:\x20','https://api.jikan.moe/v4/anime?q=','synopsis','episodes','\x0a━━━━━━━━━━━━━━━━━━\x0a📺\x20Type:\x20','year','>\x20Knut\x20XMD\x20:\x20Service\x20anime\x20indisponible.','1711704DQNQpM','error','score','17370aUYGfz','N/A','\x0a📝\x20Synopsis:\x20','68757WmQslp','toString','4266143LBgRsC','>\x20🎭\x20Knut\x20XMD\x20:\x20Usage:\x20!anime\x20<nom>\x0aEx:\x20!manga\x20Naruto','2ZDxYnp','join','search','\x0a⭐\x20Score:\x20','remoteJid','(((.+)+)+)+$','apply','sendMessage','6VuBPPe','33375ALfrZi','type','title','key','\x0a📊\x20Épisodes:\x20','length','64dfuxPU','data','3070mXmSao','manga','688266TFVcHX','80DmVDgh','20229UcMWlr'];a89_0x1c16=function(){return _0x1ed46c;};return a89_0x1c16();}export async function execute(sock,msg,args){const _0x7c454b=a89_0x2c42d8,from=msg[_0x7c454b(0x1d5)][_0x7c454b(0x1cd)];try{if(!args[_0x7c454b(0x1d7)]){await sock['sendMessage'](from,{'text':_0x7c454b(0x1c8)},{'quoted':msg});return;}const _0x1c36ee=args[_0x7c454b(0x1ca)]('\x20'),_0x38e5fb=_0x7c454b(0x1e1)+encodeURIComponent(_0x1c36ee)+'&limit=1',_0x4c609d=await fetch(_0x38e5fb),_0x56e74b=await _0x4c609d['json']();if(!_0x56e74b[_0x7c454b(0x1d9)]||_0x56e74b[_0x7c454b(0x1d9)][_0x7c454b(0x1d7)]===0x0){await sock['sendMessage'](from,{'text':'>\x20❌\x20Knut\x20XMD\x20:\x20manga\x20non\x20trouvé.'},{'quoted':msg});return;}const _0x5bfeef=_0x56e74b[_0x7c454b(0x1d9)][0x0],_0x13c64d='>\x20🎭\x20Knut\x20XMD\x20:\x20'+_0x5bfeef[_0x7c454b(0x1d4)]+_0x7c454b(0x1e4)+_0x5bfeef[_0x7c454b(0x1d3)]+_0x7c454b(0x1e0)+(_0x5bfeef[_0x7c454b(0x1e5)]||_0x7c454b(0x1eb))+_0x7c454b(0x1cc)+(_0x5bfeef[_0x7c454b(0x1e9)]||_0x7c454b(0x1eb))+_0x7c454b(0x1d6)+(_0x5bfeef[_0x7c454b(0x1e3)]||'En\x20cours')+_0x7c454b(0x1ec)+(_0x5bfeef[_0x7c454b(0x1e2)]?.['substring'](0x0,0x96)||'N/A')+'...\x0a🔗\x20'+_0x5bfeef['url'];await sock[_0x7c454b(0x1d0)](from,{'text':_0x13c64d},{'quoted':msg});}catch(_0x242095){console[_0x7c454b(0x1e8)](_0x7c454b(0x1df),_0x242095),await sock[_0x7c454b(0x1d0)](from,{'text':_0x7c454b(0x1e6)},{'quoted':msg});}}
+export const name = "manga";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  try {
+    if (!args.length) {
+      await sock.sendMessage(from, { 
+        text: "> 🎭 Knut XMD : Usage: !anime <nom>\nEx: !manga Naruto" 
+      }, { quoted: msg });
+      return;
+    }
+    
+    const search = args.join(" ");
+    
+    // API Jikan (MyAnimeList)
+    const url = `https://api.jikan.moe/v4/anime?q=${encodeURIComponent(search)}&limit=1`;
+    
+    const response = await fetch(url);
+    const data = await response.json();
+    
+    if (!data.data || data.data.length === 0) {
+      await sock.sendMessage(from, { text: "> ❌ Knut XMD : manga non trouvé." }, { quoted: msg });
+      return;
+    }
+    
+    const anime = data.data[0];
+    
+    const reply = `> 🎭 Knut XMD : ${anime.title}
+━━━━━━━━━━━━━━━━━━
+📺 Type: ${anime.type}
+📅 Sortie: ${anime.year || "N/A"}
+⭐ Score: ${anime.score || "N/A"}
+📊 Épisodes: ${anime.episodes || "En cours"}
+📝 Synopsis: ${anime.synopsis?.substring(0, 150) || "N/A"}...
+🔗 ${anime.url}`;
+    
+    await sock.sendMessage(from, { text: reply }, { quoted: msg });
+    
+  } catch (err) {
+    console.error("Erreur anime :", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Service anime indisponible." }, { quoted: msg });
+  }
+}

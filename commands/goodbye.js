@@ -1,1 +1,120 @@
-const a60_0x5e5912=a60_0x39ef;(function(_0x240c14,_0x40a641){const _0x478195=a60_0x39ef,_0x5696b7=_0x240c14();while(!![]){try{const _0x3db295=parseInt(_0x478195(0x11c))/0x1*(parseInt(_0x478195(0x102))/0x2)+parseInt(_0x478195(0x11f))/0x3+-parseInt(_0x478195(0x107))/0x4*(-parseInt(_0x478195(0x10c))/0x5)+parseInt(_0x478195(0x11b))/0x6+parseInt(_0x478195(0x134))/0x7*(parseInt(_0x478195(0x105))/0x8)+-parseInt(_0x478195(0x12e))/0x9+-parseInt(_0x478195(0x116))/0xa*(parseInt(_0x478195(0x108))/0xb);if(_0x3db295===_0x40a641)break;else _0x5696b7['push'](_0x5696b7['shift']());}catch(_0x228132){_0x5696b7['push'](_0x5696b7['shift']());}}}(a60_0xa2d2,0xbeae8));const a60_0x4ef612=(function(){let _0x29d9da=!![];return function(_0x4cf091,_0x5481b6){const _0x28851a=_0x29d9da?function(){const _0x4f7e94=a60_0x39ef;if(_0x5481b6){const _0x12277a=_0x5481b6[_0x4f7e94(0x12c)](_0x4cf091,arguments);return _0x5481b6=null,_0x12277a;}}:function(){};return _0x29d9da=![],_0x28851a;};}()),a60_0x585b15=a60_0x4ef612(this,function(){const _0x5411ff=a60_0x39ef;return a60_0x585b15[_0x5411ff(0x128)]()['search'](_0x5411ff(0x115))[_0x5411ff(0x128)]()['constructor'](a60_0x585b15)[_0x5411ff(0x106)](_0x5411ff(0x115));});a60_0x585b15();import a60_0x2404ea from'fs';function a60_0xa2d2(){const _0x546af2=['Utilisation\x20:\x0a','>\x20Knut\x20XMD\x20:\x20⚠️\x20Le\x20goodbye\x20est\x20déjà\x20🛑\x20désactivé.','endsWith','158cwvTAI','map','>\x20Knut\x20XMD\x20:\x20Une\x20erreur\x20est\x20survenue.','320KTDGra','search','4652pJPoZm','40667qRRTtD','./group.json','Images\x20:\x2022\x20images\x20aléatoires','•\x20goodbye\x20off\x20\x20\x20→\x20🛑\x20Désactiver\x0a','4870KCfmDN','key','replace','•\x20status\x20→\x20📊\x20Voir\x20le\x20statut','désactivé','includes','Distingue\x20départ\x20volontaire\x20et\x20expulsion.\x0a\x0a','owners','>\x20Knut\x20XMD:\x20Aide\x20Goodbye\x0a\x0a','(((.+)+)+)+$','9070UDVsrC','>\x20Knut\x20XMD\x20:\x20Cette\x20commande\x20est\x20réservée\x20aux\x20groupes.','activé','quitte\x20ou\x20est\x20expulsé\x20du\x20groupe.\x0a','>\x20Knut\x20XMD\x20:\x20Accès\x20refusé.\x20Owner\x20ou\x20sudo\x20requis.','7451202sSJRZn','13643OrwrVT','❌\x20Envoie\x20un\x20message\x20quand\x20un\x20membre\x0a','Groupe\x20:\x20','2113812paObDw','📋\x20*Commandes\x20:*\x0a','🖼️\x20*Images\x20:*\x2022\x20images\x20aléatoires\x0a\x0a','•\x20goodbye\x20status\x20→\x20📊\x20Statut\x0a','Activé','État\x20actuel\x20:\x20','🖼️\x20*22\x20images\x20aléatoires*\x0a\x0a','•\x20Départ\x20volontaire\x0a','split','toString','sendMessage','status','help','apply','Distingue\x20:\x0a','4123251wIemcO','•\x20goodbye\x20help\x20\x20→\x20ℹ️\x20Aide','🛑\x20désactivé','>\x20Knut\x20XMD:\x20Goodbye\x0a\x0a','goodbye','•\x20off\x20→\x20🛑\x20Désactiver\x0a','76181qphXnR','resolve','✅\x20activé'];a60_0xa2d2=function(){return _0x546af2;};return a60_0xa2d2();}function a60_0x39ef(_0x5f2a90,_0x35582f){_0x5f2a90=_0x5f2a90-0xfd;const _0x120c3d=a60_0xa2d2();let _0x585b15=_0x120c3d[_0x5f2a90];return _0x585b15;}import a60_0x2473f2 from'path';import{getGroupProtections,setGroupProtection}from'../groupManager.js';import{loadSudo}from'../index.js';const GROUP_FILE=a60_0x2473f2[a60_0x5e5912(0xfd)](a60_0x5e5912(0x109));export const name='goodbye';export async function execute(sock,msg,args,from){const _0x1ce74d=a60_0x5e5912;try{if(!from[_0x1ce74d(0x101)]('@g.us')){await sock[_0x1ce74d(0x129)](from,{'text':_0x1ce74d(0x117)},{'quoted':msg});return;}const _0x21e962=msg[_0x1ce74d(0x10d)]['participant']||from,_0x30eb92=_0x21e962[_0x1ce74d(0x127)]('@')[0x0][_0x1ce74d(0x10e)](/[^0-9]/g,''),_0x1101b6=(global[_0x1ce74d(0x113)]||[])[_0x1ce74d(0x103)](_0x30c91a=>_0x30c91a['replace'](/[^0-9]/g,'')),_0x29152b=loadSudo()[_0x1ce74d(0x103)](_0x5d30af=>_0x5d30af[_0x1ce74d(0x10e)](/[^0-9]/g,'')),_0x27261a=_0x1101b6['includes'](_0x30eb92),_0x43bce8=_0x29152b['includes'](_0x30eb92);if(!_0x27261a&&!_0x43bce8){await sock[_0x1ce74d(0x129)](from,{'text':_0x1ce74d(0x11a)},{'quoted':msg});return;}const _0x278fcc=getGroupProtections(from),_0x4e2c2e=_0x278fcc[_0x1ce74d(0x132)]||![],_0x1ba03d=args[0x0]?.['toLowerCase']();if(!_0x1ba03d||!['on','off',_0x1ce74d(0x12a),_0x1ce74d(0x12b)][_0x1ce74d(0x111)](_0x1ba03d)){const _0x1de053=_0x4e2c2e?_0x1ce74d(0xfe):_0x1ce74d(0x130);await sock[_0x1ce74d(0x129)](from,{'text':_0x1ce74d(0x131)+(_0x1ce74d(0x124)+_0x1de053+'\x0a\x0a')+_0x1ce74d(0x11d)+_0x1ce74d(0x119)+_0x1ce74d(0x112)+_0x1ce74d(0x125)+_0x1ce74d(0xff)+'•\x20goodbye\x20on\x20\x20\x20\x20→\x20✅\x20Activer\x0a'+_0x1ce74d(0x10b)+_0x1ce74d(0x122)+_0x1ce74d(0x12f)},{'quoted':msg});return;}if(_0x1ba03d===_0x1ce74d(0x12b)){await sock[_0x1ce74d(0x129)](from,{'text':_0x1ce74d(0x114)+'📌\x20*Description\x20:*\x0a'+'Envoie\x20un\x20message\x20quand\x20un\x20membre\x20quitte\x20le\x20groupe.\x0a'+_0x1ce74d(0x12d)+_0x1ce74d(0x126)+'•\x20Expulsion\x20(avec\x20mention\x20de\x20l\x27auteur)\x0a\x0a'+_0x1ce74d(0x121)+_0x1ce74d(0x120)+'•\x20on\x20\x20→\x20✅\x20Activer\x0a'+_0x1ce74d(0x133)+_0x1ce74d(0x10f)},{'quoted':msg});return;}if(_0x1ba03d==='status'){const _0x1453f7=_0x4e2c2e?'✅':'🛑',_0x466f66=_0x4e2c2e?_0x1ce74d(0x123):'Désactivé';await sock[_0x1ce74d(0x129)](from,{'text':'>\x20Knut\x20XMD:\x20Goodbye\x20-\x20Statut\x0a\x0a'+('État\x20:\x20'+_0x1453f7+'\x20'+_0x466f66+'\x0a')+(_0x1ce74d(0x11e)+from['split']('@')[0x0]+'\x0a')+_0x1ce74d(0x10a)},{'quoted':msg});return;}const _0x75924a=_0x1ba03d==='on';if(_0x1ba03d==='on'&&_0x4e2c2e){await sock[_0x1ce74d(0x129)](from,{'text':'>\x20Knut\x20XMD\x20:\x20⚠️\x20Le\x20goodbye\x20est\x20déjà\x20✅\x20activé.'},{'quoted':msg});return;}if(_0x1ba03d==='off'&&!_0x4e2c2e){await sock[_0x1ce74d(0x129)](from,{'text':_0x1ce74d(0x100)},{'quoted':msg});return;}setGroupProtection(from,_0x1ce74d(0x132),_0x75924a);const _0x375277=_0x75924a?'✅':'🛑';await sock['sendMessage'](from,{'text':'>\x20Knut\x20XMD:\x20Goodbye\x20'+_0x375277+'\x20'+(_0x75924a?_0x1ce74d(0x118):_0x1ce74d(0x110))+'\x20dans\x20ce\x20groupe.'},{'quoted':msg});}catch(_0xc76711){console['error']('Erreur\x20goodbye:',_0xc76711),await sock[_0x1ce74d(0x129)](from,{'text':_0x1ce74d(0x104)},{'quoted':msg});}}
+import fs from "fs";
+import path from "path";
+import { getGroupProtections, setGroupProtection } from "../groupManager.js";
+import { loadSudo } from "../index.js";
+
+const GROUP_FILE = path.resolve("./group.json");
+
+export const name = "goodbye";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === GROUPE UNIQUEMENT ===
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Cette commande est réservée aux groupes." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER L'EXPÉDITEUR ===
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // === VÉRIFICATION DES DROITS (OWNER ET SUDO UNIQUEMENT) ===
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+
+    if (!isOwner && !isSudo) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Accès refusé. Owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER LES PROTECTIONS DU GROUPE ===
+    const protections = getGroupProtections(from);
+    const currentStatus = protections.goodbye || false;
+
+    // === ARGUMENT ===
+    const arg = args[0]?.toLowerCase();
+
+    if (!arg || !["on", "off", "status", "help"].includes(arg)) {
+      const status = currentStatus ? "✅ activé" : "🛑 désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Goodbye\n\n` +
+              `État actuel : ${status}\n\n` +
+              `❌ Envoie un message quand un membre\n` +
+              `quitte ou est expulsé du groupe.\n` +
+              `Distingue départ volontaire et expulsion.\n\n` +
+              `🖼️ *22 images aléatoires*\n\n` +
+              `Utilisation :\n` +
+              `• goodbye on    → ✅ Activer\n` +
+              `• goodbye off   → 🛑 Désactiver\n` +
+              `• goodbye status → 📊 Statut\n` +
+              `• goodbye help  → ℹ️ Aide`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === HELP ===
+    if (arg === "help") {
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Aide Goodbye\n\n` +
+              `📌 *Description :*\n` +
+              `Envoie un message quand un membre quitte le groupe.\n` +
+              `Distingue :\n` +
+              `• Départ volontaire\n` +
+              `• Expulsion (avec mention de l'auteur)\n\n` +
+              `🖼️ *Images :* 22 images aléatoires\n\n` +
+              `📋 *Commandes :*\n` +
+              `• on  → ✅ Activer\n` +
+              `• off → 🛑 Désactiver\n` +
+              `• status → 📊 Voir le statut`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === STATUS ===
+    if (arg === "status") {
+      const statusEmoji = currentStatus ? "✅" : "🛑";
+      const statusText = currentStatus ? "Activé" : "Désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Goodbye - Statut\n\n` +
+              `État : ${statusEmoji} ${statusText}\n` +
+              `Groupe : ${from.split('@')[0]}\n` +
+              `Images : 22 images aléatoires`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === ON / OFF ===
+    const newState = arg === "on";
+    
+    if (arg === "on" && currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ Le goodbye est déjà ✅ activé." 
+      }, { quoted: msg });
+      return;
+    }
+    
+    if (arg === "off" && !currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ Le goodbye est déjà 🛑 désactivé." 
+      }, { quoted: msg });
+      return;
+    }
+
+    setGroupProtection(from, "goodbye", newState);
+    const statusEmoji = newState ? "✅" : "🛑";
+    
+    await sock.sendMessage(from, { 
+      text: `> Knut XMD: Goodbye ${statusEmoji} ${newState ? "activé" : "désactivé"} dans ce groupe.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur goodbye:", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Une erreur est survenue." }, { quoted: msg });
+  }
+}

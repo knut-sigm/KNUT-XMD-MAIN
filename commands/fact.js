@@ -1,1 +1,31 @@
-function a56_0x3554(){const _0x33fc04=['json','2309560ZThaaw','572bvVHvF','1244367hPxCUr','(((.+)+)+)+$','1168seyyPg','text','198158NmlKfq','message','662868SINMHN','sendMessage','search','2116242lrkoyt','💡\x20Knut\x20XMD\x20Fact:\x0a\x0a','toString','>\x20Knut\x20XMD\x20❌\x20Impossible\x20de\x20récupérer\x20un\x20fait.','key','remoteJid','18361PZGxhj','29035ctkDFC','apply'];a56_0x3554=function(){return _0x33fc04;};return a56_0x3554();}(function(_0x2410ea,_0x1e0a65){const _0x4088fe=a56_0x36d0,_0x2537cd=_0x2410ea();while(!![]){try{const _0x571878=-parseInt(_0x4088fe(0x1f4))/0x1+parseInt(_0x4088fe(0x1ee))/0x2+-parseInt(_0x4088fe(0x1f9))/0x3+-parseInt(_0x4088fe(0x1ef))/0x4*(-parseInt(_0x4088fe(0x1eb))/0x5)+-parseInt(_0x4088fe(0x1f6))/0x6+-parseInt(_0x4088fe(0x1ea))/0x7*(parseInt(_0x4088fe(0x1f2))/0x8)+parseInt(_0x4088fe(0x1f0))/0x9;if(_0x571878===_0x1e0a65)break;else _0x2537cd['push'](_0x2537cd['shift']());}catch(_0xd4946e){_0x2537cd['push'](_0x2537cd['shift']());}}}(a56_0x3554,0xb15a4));const a56_0xc4bf1f=(function(){let _0x59d1a4=!![];return function(_0x305fa8,_0x44216a){const _0x583135=_0x59d1a4?function(){const _0x2d68e0=a56_0x36d0;if(_0x44216a){const _0x576d60=_0x44216a[_0x2d68e0(0x1ec)](_0x305fa8,arguments);return _0x44216a=null,_0x576d60;}}:function(){};return _0x59d1a4=![],_0x583135;};}()),a56_0xc68622=a56_0xc4bf1f(this,function(){const _0x3941d1=a56_0x36d0;return a56_0xc68622[_0x3941d1(0x1e6)]()[_0x3941d1(0x1f8)](_0x3941d1(0x1f1))['toString']()['constructor'](a56_0xc68622)[_0x3941d1(0x1f8)](_0x3941d1(0x1f1));});a56_0xc68622();export const name='fact';function a56_0x36d0(_0x4acfa0,_0x587432){_0x4acfa0=_0x4acfa0-0x1e5;const _0xa85438=a56_0x3554();let _0xc68622=_0xa85438[_0x4acfa0];return _0xc68622;}export const description='Get\x20a\x20random\x20useless\x20fact';export async function execute(sock,_0x1c37f3,args){const _0x4f300d=a56_0x36d0;try{const _0x4aa0ee=_0x1c37f3['key']['remoteJid'],_0x558b36=await fetch('https://uselessfacts.jsph.pl/random.json?language=en'),_0x36ca85=await _0x558b36[_0x4f300d(0x1ed)]();if(!_0x36ca85||!_0x36ca85[_0x4f300d(0x1f3)])return await sock[_0x4f300d(0x1f7)](_0x4aa0ee,{'text':_0x4f300d(0x1e7)},{'quoted':_0x1c37f3});await sock['sendMessage'](_0x4aa0ee,{'text':_0x4f300d(0x1e5)+_0x36ca85[_0x4f300d(0x1f3)]},{'quoted':_0x1c37f3});}catch(_0x5a0586){await sock[_0x4f300d(0x1f7)](_0x1c37f3[_0x4f300d(0x1e8)][_0x4f300d(0x1e9)],{'text':'❌\x20Knut\x20XMD\x20Fact\x20Error:\x20'+_0x5a0586[_0x4f300d(0x1f5)]},{'quoted':_0x1c37f3});}}
+export const name = "fact";
+export const description = "Get a random useless fact";
+
+export async function execute(sock, m, args) {
+  try {
+    const jid = m.key.remoteJid;
+
+    const res = await fetch("https://uselessfacts.jsph.pl/random.json?language=en");
+    const data = await res.json();
+
+    if (!data || !data.text) {
+      return await sock.sendMessage(
+        jid,
+        { text: "> Knut XMD ❌ Impossible de récupérer un fait." },
+        { quoted: m }
+      );
+    }
+
+    await sock.sendMessage(
+      jid,
+      { text: `💡 Knut XMD Fact:\n\n${data.text}` },
+      { quoted: m }
+    );
+  } catch (err) {
+    await sock.sendMessage(
+      m.key.remoteJid,
+      { text: `❌ Knut XMD Fact Error: ${err.message}` },
+      { quoted: m }
+    );
+  }
+}

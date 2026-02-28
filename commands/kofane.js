@@ -1,1 +1,378 @@
-function a81_0x51c7(_0x401e3f,_0x53bca0){_0x401e3f=_0x401e3f-0x12f;const _0x387793=a81_0x11f0();let _0x1b2f66=_0x387793[_0x401e3f];return _0x1b2f66;}const a81_0x1fdb15=a81_0x51c7;(function(_0x24ca90,_0x56029c){const _0x45be38=a81_0x51c7,_0x1a244d=_0x24ca90();while(!![]){try{const _0x2c4758=parseInt(_0x45be38(0x16e))/0x1+-parseInt(_0x45be38(0x16d))/0x2*(parseInt(_0x45be38(0x13b))/0x3)+parseInt(_0x45be38(0x184))/0x4*(parseInt(_0x45be38(0x168))/0x5)+parseInt(_0x45be38(0x171))/0x6+parseInt(_0x45be38(0x185))/0x7*(-parseInt(_0x45be38(0x138))/0x8)+parseInt(_0x45be38(0x15e))/0x9+-parseInt(_0x45be38(0x17f))/0xa;if(_0x2c4758===_0x56029c)break;else _0x1a244d['push'](_0x1a244d['shift']());}catch(_0x3c6586){_0x1a244d['push'](_0x1a244d['shift']());}}}(a81_0x11f0,0x8dfd0));import a81_0x47761f from'fs/promises';import a81_0x5dab0a from'path';const QUESTIONS_FILE='./kofane.json',PLAYERS_FILE=a81_0x1fdb15(0x131),COOLDOWN=0x1388,cooldowns=new Map();let questions=[],players=[];async function loadData(){const _0x42f1e4=a81_0x1fdb15,_0x40b303=(function(){let _0x592378=!![];return function(_0x447c03,_0x5d13b2){const _0x26ff34=_0x592378?function(){if(_0x5d13b2){const _0x33c787=_0x5d13b2['apply'](_0x447c03,arguments);return _0x5d13b2=null,_0x33c787;}}:function(){};return _0x592378=![],_0x26ff34;};}()),_0x1c7eb4=_0x40b303(this,function(){const _0x2d467e=a81_0x51c7;return _0x1c7eb4[_0x2d467e(0x16f)]()[_0x2d467e(0x17a)](_0x2d467e(0x16b))['toString']()[_0x2d467e(0x176)](_0x1c7eb4)[_0x2d467e(0x17a)]('(((.+)+)+)+$');});_0x1c7eb4();try{const _0x43ca32=await a81_0x47761f[_0x42f1e4(0x17d)](QUESTIONS_FILE,_0x42f1e4(0x17e));questions=JSON['parse'](_0x43ca32);try{const _0x25cd46=await a81_0x47761f['readFile'](PLAYERS_FILE,'utf-8');players=JSON[_0x42f1e4(0x174)](_0x25cd46);}catch{players=[],await savePlayers();}console['log'](_0x42f1e4(0x146)+questions[_0x42f1e4(0x16a)]+_0x42f1e4(0x18d)+players[_0x42f1e4(0x16a)]+'\x20joueurs');}catch(_0x548a1c){console[_0x42f1e4(0x135)](_0x42f1e4(0x152),_0x548a1c),questions=[],players=[];}}async function savePlayers(){const _0x381e14=a81_0x1fdb15;await a81_0x47761f[_0x381e14(0x15d)](PLAYERS_FILE,JSON[_0x381e14(0x173)](players,null,0x2),_0x381e14(0x17e));}function getRandomQuestion(){const _0xb865f0=a81_0x1fdb15;if(questions[_0xb865f0(0x16a)]===0x0)return null;const _0x39c83b=Math[_0xb865f0(0x139)](Math[_0xb865f0(0x182)]()*questions[_0xb865f0(0x16a)]);return questions[_0x39c83b];}function getRandomPlayer(){const _0x27b671=a81_0x1fdb15;if(players[_0x27b671(0x16a)]===0x0)return null;const _0x499d60=Math[_0x27b671(0x139)](Math['random']()*players[_0x27b671(0x16a)]);return players[_0x499d60];}function checkCooldown(_0x4206b6){const _0xdf2dac=a81_0x1fdb15,_0xac5c1f=cooldowns[_0xdf2dac(0x141)](_0x4206b6);if(!_0xac5c1f)return!![];const _0x1d9cc9=Date['now'](),_0xe1a14f=_0x1d9cc9-_0xac5c1f;return _0xe1a14f>COOLDOWN;}function formatJid(_0x442910){const _0x6b6c24=a81_0x1fdb15;if(_0x442910[_0x6b6c24(0x17b)](_0x6b6c24(0x187)))return _0x442910;if(_0x442910[_0x6b6c24(0x17b)]('@'))return _0x442910;return _0x442910['replace'](/\D/g,'')+_0x6b6c24(0x187);}export const name=a81_0x1fdb15(0x151);export const aliases=['k',a81_0x1fdb15(0x177)];export async function execute(sock,msg,args){const _0x5a7b67=a81_0x1fdb15,from=msg['key'][_0x5a7b67(0x137)],_0xf766da=from[_0x5a7b67(0x140)](_0x5a7b67(0x166));if(!_0xf766da)return await sock['sendMessage'](from,{'text':'❌\x20Cette\x20commande\x20fonctionne\x20uniquement\x20dans\x20les\x20groupes\x20!'},{'quoted':msg});const _0x363acc=args[0x0]?.[_0x5a7b67(0x165)]();if(_0x363acc==='add'||_0x363acc==='ajouter')return await handleAddPlayer(sock,msg,args);if(_0x363acc==='del'||_0x363acc===_0x5a7b67(0x180)||_0x363acc==='supprimer')return await handleRemovePlayer(sock,msg,args);if(_0x363acc===_0x5a7b67(0x186)||_0x363acc===_0x5a7b67(0x13f)||_0x363acc===_0x5a7b67(0x148))return await handleListPlayers(sock,msg);if(_0x363acc===_0x5a7b67(0x15a)||_0x363acc===_0x5a7b67(0x175))return await handleResetPlayers(sock,msg);if(_0x363acc===_0x5a7b67(0x178)||_0x363acc===_0x5a7b67(0x136))return await handleHelp(sock,msg);return await handleMainGame(sock,msg,from);}async function handleMainGame(sock,msg,_0x112a85){const _0x5c9b6a=a81_0x1fdb15;if(!checkCooldown(_0x112a85)){const _0x4adcef=COOLDOWN-(Date['now']()-cooldowns[_0x5c9b6a(0x141)](_0x112a85));return await sock['sendMessage'](_0x112a85,{'text':'⏳\x20Attends\x20'+Math['ceil'](_0x4adcef/0x3e8)+_0x5c9b6a(0x130)},{'quoted':msg});}questions[_0x5c9b6a(0x16a)]===0x0&&await loadData();if(players[_0x5c9b6a(0x16a)]===0x0)return await sock[_0x5c9b6a(0x145)](_0x112a85,{'text':'❌\x20Aucun\x20joueur\x20dans\x20la\x20liste\x20!\x0a\x0a'+_0x5c9b6a(0x149)+_0x5c9b6a(0x179)+_0x5c9b6a(0x133)},{'quoted':msg});const _0x5321c7=getRandomQuestion();if(!_0x5321c7)return await sock[_0x5c9b6a(0x145)](_0x112a85,{'text':_0x5c9b6a(0x14a)},{'quoted':msg});const _0x10c65c=getRandomPlayer();if(!_0x10c65c)return await sock[_0x5c9b6a(0x145)](_0x112a85,{'text':_0x5c9b6a(0x144)},{'quoted':msg});cooldowns[_0x5c9b6a(0x18c)](_0x112a85,Date[_0x5c9b6a(0x15b)]());const _0x259634=['🔥','🎲','😈','😏','🫦','💋',_0x5c9b6a(0x167),'👅'],_0x598855=[];for(let _0x499b8a=0x0;_0x499b8a<0x3;_0x499b8a++){_0x598855[_0x5c9b6a(0x188)](_0x259634[Math[_0x5c9b6a(0x139)](Math[_0x5c9b6a(0x182)]()*_0x259634['length'])]);}const _0x4334cc=_0x598855[_0x5c9b6a(0x161)]('\x20'),_0x4986c4=_0x4334cc+'\x0a\x0a'+_0x5c9b6a(0x155)+('@'+_0x10c65c[_0x5c9b6a(0x17c)]('@')[0x0]+'\x20répond\x20à\x20cette\x20vérité\x20:\x0a\x0a')+('\x22'+_0x5321c7['question']+'\x22\x0a\x0a')+_0x5c9b6a(0x13d)+(_0x5c9b6a(0x14e)+players[_0x5c9b6a(0x16a)]);await sock[_0x5c9b6a(0x145)](_0x112a85,{'text':_0x4986c4,'mentions':[_0x10c65c]},{'quoted':msg});}async function handleAddPlayer(sock,msg,args){const _0x4cc219=a81_0x1fdb15,from=msg[_0x4cc219(0x170)][_0x4cc219(0x137)];players[_0x4cc219(0x16a)]===0x0&&await loadData();let _0x56edf8=null;if(args[0x1]&&args[0x1][_0x4cc219(0x183)]('@')){const _0x2cfa60=msg[_0x4cc219(0x143)]?.[_0x4cc219(0x156)]?.[_0x4cc219(0x160)]?.[_0x4cc219(0x159)];_0x2cfa60&&_0x2cfa60[_0x4cc219(0x16a)]>0x0&&(_0x56edf8=_0x2cfa60[0x0]);}else{if(msg[_0x4cc219(0x143)]?.[_0x4cc219(0x156)]?.['contextInfo']?.['participant'])_0x56edf8=msg[_0x4cc219(0x143)][_0x4cc219(0x156)][_0x4cc219(0x160)][_0x4cc219(0x142)];else args[0x1]&&(_0x56edf8=formatJid(args[0x1]));}if(!_0x56edf8)return await sock[_0x4cc219(0x145)](from,{'text':'❌\x20Usage\x20:\x0a'+_0x4cc219(0x179)+'•\x20`!kofane\x20add`\x20(en\x20réponse\x20à\x20un\x20message)\x0a'+_0x4cc219(0x157)},{'quoted':msg});if(players['includes'](_0x56edf8))return await sock['sendMessage'](from,{'text':'⚠️\x20@'+_0x56edf8['split']('@')[0x0]+'\x20est\x20déjà\x20dans\x20la\x20liste\x20des\x20joueurs\x20!'},{'quoted':msg});players[_0x4cc219(0x188)](_0x56edf8),await savePlayers(),await sock['sendMessage'](from,{'text':'✅\x20@'+_0x56edf8[_0x4cc219(0x17c)]('@')[0x0]+'\x20a\x20été\x20ajouté\x20à\x20la\x20liste\x20des\x20joueurs\x20!\x0a'+(_0x4cc219(0x13a)+players[_0x4cc219(0x16a)]),'mentions':[_0x56edf8]},{'quoted':msg});}async function handleRemovePlayer(sock,msg,args){const _0x4a6c21=a81_0x1fdb15,from=msg[_0x4a6c21(0x170)][_0x4a6c21(0x137)];players['length']===0x0&&await loadData();let _0x809bb2=null;if(args[0x1]&&args[0x1]['startsWith']('@')){const _0x3a135a=msg[_0x4a6c21(0x143)]?.[_0x4a6c21(0x156)]?.['contextInfo']?.[_0x4a6c21(0x159)];_0x3a135a&&_0x3a135a[_0x4a6c21(0x16a)]>0x0&&(_0x809bb2=_0x3a135a[0x0]);}else{if(msg[_0x4a6c21(0x143)]?.[_0x4a6c21(0x156)]?.[_0x4a6c21(0x160)]?.[_0x4a6c21(0x142)])_0x809bb2=msg[_0x4a6c21(0x143)]['extendedTextMessage'][_0x4a6c21(0x160)]['participant'];else args[0x1]&&(_0x809bb2=formatJid(args[0x1]));}if(!_0x809bb2)return await sock[_0x4a6c21(0x145)](from,{'text':'❌\x20Usage\x20:\x0a'+_0x4a6c21(0x15c)+_0x4a6c21(0x169)+'•\x20`!kofane\x20del\x201234567890`'},{'quoted':msg});const _0x5ecbc7=players['indexOf'](_0x809bb2);if(_0x5ecbc7===-0x1)return await sock[_0x4a6c21(0x145)](from,{'text':'❌\x20@'+_0x809bb2[_0x4a6c21(0x17c)]('@')[0x0]+_0x4a6c21(0x18a)},{'quoted':msg});players[_0x4a6c21(0x18b)](_0x5ecbc7,0x1),await savePlayers(),await sock[_0x4a6c21(0x145)](from,{'text':_0x4a6c21(0x162)+_0x809bb2[_0x4a6c21(0x17c)]('@')[0x0]+_0x4a6c21(0x15f)+(_0x4a6c21(0x164)+players[_0x4a6c21(0x16a)]),'mentions':[_0x809bb2]},{'quoted':msg});}async function handleListPlayers(sock,msg){const _0x94d1c8=a81_0x1fdb15,from=msg[_0x94d1c8(0x170)][_0x94d1c8(0x137)];players[_0x94d1c8(0x16a)]===0x0&&await loadData();if(players[_0x94d1c8(0x16a)]===0x0)return await sock['sendMessage'](from,{'text':_0x94d1c8(0x154)+'Aucun\x20joueur\x20dans\x20la\x20liste\x20!\x0a\x0a'+_0x94d1c8(0x13c)+_0x94d1c8(0x179)+_0x94d1c8(0x14b)},{'quoted':msg});let _0x3f212c='📋\x20*LISTE\x20DES\x20JOUEURS\x20KOFANE*\x0a\x0a';players[_0x94d1c8(0x132)]((_0x492069,_0x1368b4)=>{const _0x4f0e27=_0x94d1c8,_0x57f641=_0x492069[_0x4f0e27(0x17c)]('@')[0x0];_0x3f212c+=_0x1368b4+0x1+_0x4f0e27(0x150)+_0x57f641+'\x0a';}),_0x3f212c+='\x0a🎮\x20Total\x20:\x20'+players[_0x94d1c8(0x16a)]+_0x94d1c8(0x14f),await sock[_0x94d1c8(0x145)](from,{'text':_0x3f212c,'mentions':players},{'quoted':msg});}async function handleResetPlayers(sock,msg){const _0x5352e0=a81_0x1fdb15,from=msg[_0x5352e0(0x170)][_0x5352e0(0x137)],_0xd4c926=msg[_0x5352e0(0x170)][_0x5352e0(0x142)]||from,_0x216b7c=!![];if(!_0x216b7c)return await sock['sendMessage'](from,{'text':_0x5352e0(0x181)},{'quoted':msg});players=[],await savePlayers(),await sock['sendMessage'](from,{'text':_0x5352e0(0x163)+_0x5352e0(0x13e)+_0x5352e0(0x12f)},{'quoted':msg});}async function handleHelp(sock,msg){const _0x2b6e1f=a81_0x1fdb15,_0x36d073='🎮\x20*AIDE\x20-\x20COMMANDES\x20KOFANE*\x0a\x0a'+_0x2b6e1f(0x172)+_0x2b6e1f(0x147)+'•\x20`!kofane\x20add\x20@mention`\x20-\x20Ajoute\x20un\x20joueur\x0a'+_0x2b6e1f(0x14d)+_0x2b6e1f(0x158)+_0x2b6e1f(0x134)+_0x2b6e1f(0x14c)+_0x2b6e1f(0x16c)+_0x2b6e1f(0x153)+'2.\x20`!kofane\x20add`\x20(en\x20réponse\x20à\x20un\x20message)\x0a'+'3.\x20`!kofane\x20add\x201234567890`\x20(avec\x20le\x20numéro)\x0a\x0a'+'🎯\x20*Le\x20jeu\x20utilise\x20uniquement\x20les\x20joueurs\x20ajoutés\x20!*';await sock[_0x2b6e1f(0x145)](msg['key']['remoteJid'],{'text':_0x36d073},{'quoted':msg});}function a81_0x11f0(){const _0x2f4140=['toString','key','2768268jHrdaM','🎲\x20*Commandes\x20disponibles:*\x0a\x0a','stringify','parse','clear','constructor','truth','help','•\x20`!kofane\x20add\x20@mention`\x0a','search','includes','split','readFile','utf-8','80940saZGQH','remove','❌\x20Cette\x20commande\x20est\x20réservée\x20aux\x20administrateurs\x20!','random','startsWith','28YuESON','7wruLAP','liste','@s.whatsapp.net','push','✅\x20Commande\x20Kofane\x20chargée\x20!','\x20n\x27est\x20pas\x20dans\x20la\x20liste\x20des\x20joueurs\x20!','splice','set','\x20questions,\x20','Utilisez\x20`!kofane\x20add`\x20pour\x20ajouter\x20de\x20nouveaux\x20joueurs.','\x20secondes\x20avant\x20de\x20rejouer\x20!','./kgame.json','forEach','•\x20`!kofane\x20add`\x20(en\x20réponse\x20à\x20un\x20message)','•\x20`!kofane\x20reset`\x20-\x20Réinitialise\x20la\x20liste\x20(admin)\x0a','error','aide','remoteJid','7101368nrOOSd','floor','🎮\x20Joueurs\x20total\x20:\x20','367491usvhsS','Ajoutez\x20des\x20joueurs\x20avec:\x0a','_Sois\x20honnête...\x20on\x20veut\x20tous\x20savoir\x20!\x20🫣_\x0a\x0a','Tous\x20les\x20joueurs\x20ont\x20été\x20supprimés\x20de\x20la\x20liste.\x0a','list','endsWith','get','participant','message','❌\x20Erreur:\x20aucun\x20joueur\x20disponible\x20!','sendMessage','✅\x20Kofane:\x20','•\x20`!kofane`\x20-\x20Pose\x20une\x20question\x20aléatoire\x20à\x20un\x20joueur\x0a','players','Ajoute\x20des\x20joueurs\x20avec:\x0a','❌\x20Aucune\x20question\x20disponible\x20!\x0aVérifiez\x20le\x20fichier\x20kofane.json','•\x20`!kofane\x20add`\x20(en\x20réponse)','•\x20`!kofane\x20help`\x20-\x20Affiche\x20cette\x20aide\x0a\x0a','•\x20`!kofane\x20del\x20@mention`\x20-\x20Supprime\x20un\x20joueur\x0a','📊\x20Joueurs\x20dans\x20le\x20jeu\x20:\x20','\x20joueur(s)','.\x20@','kofane','❌\x20Erreur\x20chargement\x20données:','1.\x20`!kofane\x20add\x20@mention`\x20(mentionnez\x20la\x20personne)\x0a','📋\x20*LISTE\x20DES\x20JOUEURS*\x0a\x0a','>\x20🎲\x20*QUESTION\x20KOFANE*\x20🎲\x0a\x0a','extendedTextMessage','•\x20`!kofane\x20add\x201234567890`','•\x20`!kofane\x20liste`\x20-\x20Liste\x20tous\x20les\x20joueurs\x0a','mentionedJid','reset','now','•\x20`!kofane\x20del\x20@mention`\x0a','writeFile','1278297BBMldr','\x20a\x20été\x20supprimé\x20de\x20la\x20liste\x20des\x20joueurs\x20!\x0a','contextInfo','join','🗑️\x20@','🔄\x20*Liste\x20des\x20joueurs\x20réinitialisée\x20!*\x0a\x0a','🎮\x20Joueurs\x20restants\x20:\x20','toLowerCase','@g.us','👁️','623155HBHomG','•\x20`!kofane\x20del`\x20(en\x20réponse\x20à\x20un\x20message)\x0a','length','(((.+)+)+)+$','📌\x20*Comment\x20ajouter\x20des\x20joueurs:*\x0a','4gQMJsS','246515WyFjMi'];a81_0x11f0=function(){return _0x2f4140;};return a81_0x11f0();}await loadData(),console['log'](a81_0x1fdb15(0x189));
+import fs from 'fs/promises';
+import path from 'path';
+
+// Configuration
+const QUESTIONS_FILE = './kofane.json';
+const PLAYERS_FILE = './kgame.json';
+const COOLDOWN = 5000; // 5 secondes entre deux !kofane
+
+// Cache
+const cooldowns = new Map();
+let questions = [];
+let players = [];
+
+// Charger les données
+async function loadData() {
+  try {
+    // Charger les questions
+    const questionsData = await fs.readFile(QUESTIONS_FILE, 'utf-8');
+    questions = JSON.parse(questionsData);
+    
+    // Charger les joueurs (ou créer le fichier s'il n'existe pas)
+    try {
+      const playersData = await fs.readFile(PLAYERS_FILE, 'utf-8');
+      players = JSON.parse(playersData);
+    } catch {
+      players = [];
+      await savePlayers();
+    }
+    
+    console.log(`✅ Kofane: ${questions.length} questions, ${players.length} joueurs`);
+  } catch (error) {
+    console.error('❌ Erreur chargement données:', error);
+    questions = [];
+    players = [];
+  }
+}
+
+// Sauvegarder les joueurs
+async function savePlayers() {
+  await fs.writeFile(PLAYERS_FILE, JSON.stringify(players, null, 2), 'utf-8');
+}
+
+// Obtenir une question aléatoire
+function getRandomQuestion() {
+  if (questions.length === 0) return null;
+  const randomIndex = Math.floor(Math.random() * questions.length);
+  return questions[randomIndex];
+}
+
+// Obtenir un joueur aléatoire
+function getRandomPlayer() {
+  if (players.length === 0) return null;
+  const randomIndex = Math.floor(Math.random() * players.length);
+  return players[randomIndex];
+}
+
+// Vérifier le cooldown
+function checkCooldown(jid) {
+  const lastTime = cooldowns.get(jid);
+  if (!lastTime) return true;
+  
+  const now = Date.now();
+  const diff = now - lastTime;
+  return diff > COOLDOWN;
+}
+
+// Formater le JID
+function formatJid(input) {
+  if (input.includes('@s.whatsapp.net')) return input;
+  if (input.includes('@')) return input;
+  return `${input.replace(/\D/g, '')}@s.whatsapp.net`;
+}
+
+// ============ COMMANDE PRINCIPALE ============
+export const name = "kofane";
+export const aliases = ["k", "truth"];
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+  const isGroup = from.endsWith('@g.us');
+  
+  // Vérifier si on est dans un groupe
+  if (!isGroup) {
+    return await sock.sendMessage(from, {
+      text: "❌ Cette commande fonctionne uniquement dans les groupes !"
+    }, { quoted: msg });
+  }
+  
+  // Sous-commandes
+  const subCommand = args[0]?.toLowerCase();
+  
+  // !kofane add - Ajouter un joueur
+  if (subCommand === 'add' || subCommand === 'ajouter') {
+    return await handleAddPlayer(sock, msg, args);
+  }
+  
+  // !kofane del - Supprimer un joueur
+  if (subCommand === 'del' || subCommand === 'remove' || subCommand === 'supprimer') {
+    return await handleRemovePlayer(sock, msg, args);
+  }
+  
+  // !kofane liste - Lister les joueurs
+  if (subCommand === 'liste' || subCommand === 'list' || subCommand === 'players') {
+    return await handleListPlayers(sock, msg);
+  }
+  
+  // !kofane reset - Réinitialiser la liste
+  if (subCommand === 'reset' || subCommand === 'clear') {
+    return await handleResetPlayers(sock, msg);
+  }
+  
+  // !kofane help - Aide
+  if (subCommand === 'help' || subCommand === 'aide') {
+    return await handleHelp(sock, msg);
+  }
+  
+  // !kofane (commande principale)
+  return await handleMainGame(sock, msg, from);
+}
+
+// ============ HANDLERS ============
+
+async function handleMainGame(sock, msg, groupJid) {
+  // Vérifier le cooldown
+  if (!checkCooldown(groupJid)) {
+    const remaining = COOLDOWN - (Date.now() - cooldowns.get(groupJid));
+    return await sock.sendMessage(groupJid, {
+      text: `⏳ Attends ${Math.ceil(remaining/1000)} secondes avant de rejouer !`
+    }, { quoted: msg });
+  }
+  
+  // Charger les données si nécessaire
+  if (questions.length === 0) {
+    await loadData();
+  }
+  
+  // Vérifier s'il y a des joueurs
+  if (players.length === 0) {
+    return await sock.sendMessage(groupJid, {
+      text: "❌ Aucun joueur dans la liste !\n\n" +
+            "Ajoute des joueurs avec:\n" +
+            "• `!kofane add @mention`\n" +
+            "• `!kofane add` (en réponse à un message)"
+    }, { quoted: msg });
+  }
+  
+  // Vérifier s'il y a des questions
+  const question = getRandomQuestion();
+  if (!question) {
+    return await sock.sendMessage(groupJid, {
+      text: "❌ Aucune question disponible !\nVérifiez le fichier kofane.json"
+    }, { quoted: msg });
+  }
+  
+  // Choisir un joueur aléatoire
+  const player = getRandomPlayer();
+  if (!player) {
+    return await sock.sendMessage(groupJid, {
+      text: "❌ Erreur: aucun joueur disponible !"
+    }, { quoted: msg });
+  }
+  
+  // Mettre à jour le cooldown
+  cooldowns.set(groupJid, Date.now());
+  
+  // Générer des emojis aléatoires
+  const emojis = ["🔥", "🎲", "😈", "😏", "🫦", "💋", "👁️", "👅"];
+  const randomEmojis = [];
+  for (let i = 0; i < 3; i++) {
+    randomEmojis.push(emojis[Math.floor(Math.random() * emojis.length)]);
+  }
+  const emojiString = randomEmojis.join(" ");
+  
+  // Créer le message
+  const message = 
+    `${emojiString}\n\n` +
+    `> 🎲 *QUESTION KOFANE* 🎲\n\n` +
+    `@${player.split('@')[0]} répond à cette vérité :\n\n` +
+    `"${question.question}"\n\n` +
+    `_Sois honnête... on veut tous savoir ! 🫣_\n\n` +
+    `📊 Joueurs dans le jeu : ${players.length}`;
+  
+  // Envoyer avec mention
+  await sock.sendMessage(groupJid, {
+    text: message,
+    mentions: [player]
+  }, { quoted: msg });
+}
+
+async function handleAddPlayer(sock, msg, args) {
+  const from = msg.key.remoteJid;
+  
+  // Charger les joueurs si nécessaire
+  if (players.length === 0) {
+    await loadData();
+  }
+  
+  let targetJid = null;
+  
+  // Cas 1: Mention dans la commande
+  if (args[1] && args[1].startsWith('@')) {
+    const mention = msg.message?.extendedTextMessage?.contextInfo?.mentionedJid;
+    if (mention && mention.length > 0) {
+      targetJid = mention[0];
+    }
+  }
+  // Cas 2: Réponse à un message
+  else if (msg.message?.extendedTextMessage?.contextInfo?.participant) {
+    targetJid = msg.message.extendedTextMessage.contextInfo.participant;
+  }
+  // Cas 3: JID directement dans les arguments
+  else if (args[1]) {
+    targetJid = formatJid(args[1]);
+  }
+  
+  if (!targetJid) {
+    return await sock.sendMessage(from, {
+      text: "❌ Usage :\n" +
+            "• `!kofane add @mention`\n" +
+            "• `!kofane add` (en réponse à un message)\n" +
+            "• `!kofane add 1234567890`"
+    }, { quoted: msg });
+  }
+  
+  // Vérifier si le joueur est déjà dans la liste
+  if (players.includes(targetJid)) {
+    return await sock.sendMessage(from, {
+      text: `⚠️ @${targetJid.split('@')[0]} est déjà dans la liste des joueurs !`
+    }, { quoted: msg });
+  }
+  
+  // Ajouter le joueur
+  players.push(targetJid);
+  await savePlayers();
+  
+  await sock.sendMessage(from, {
+    text: `✅ @${targetJid.split('@')[0]} a été ajouté à la liste des joueurs !\n` +
+          `🎮 Joueurs total : ${players.length}`,
+    mentions: [targetJid]
+  }, { quoted: msg });
+}
+
+async function handleRemovePlayer(sock, msg, args) {
+  const from = msg.key.remoteJid;
+  
+  // Charger les joueurs si nécessaire
+  if (players.length === 0) {
+    await loadData();
+  }
+  
+  let targetJid = null;
+  
+  // Cas 1: Mention dans la commande
+  if (args[1] && args[1].startsWith('@')) {
+    const mention = msg.message?.extendedTextMessage?.contextInfo?.mentionedJid;
+    if (mention && mention.length > 0) {
+      targetJid = mention[0];
+    }
+  }
+  // Cas 2: Réponse à un message
+  else if (msg.message?.extendedTextMessage?.contextInfo?.participant) {
+    targetJid = msg.message.extendedTextMessage.contextInfo.participant;
+  }
+  // Cas 3: JID directement dans les arguments
+  else if (args[1]) {
+    targetJid = formatJid(args[1]);
+  }
+  
+  if (!targetJid) {
+    return await sock.sendMessage(from, {
+      text: "❌ Usage :\n" +
+            "• `!kofane del @mention`\n" +
+            "• `!kofane del` (en réponse à un message)\n" +
+            "• `!kofane del 1234567890`"
+    }, { quoted: msg });
+  }
+  
+  // Vérifier si le joueur est dans la liste
+  const index = players.indexOf(targetJid);
+  if (index === -1) {
+    return await sock.sendMessage(from, {
+      text: `❌ @${targetJid.split('@')[0]} n'est pas dans la liste des joueurs !`
+    }, { quoted: msg });
+  }
+  
+  // Supprimer le joueur
+  players.splice(index, 1);
+  await savePlayers();
+  
+  await sock.sendMessage(from, {
+    text: `🗑️ @${targetJid.split('@')[0]} a été supprimé de la liste des joueurs !\n` +
+          `🎮 Joueurs restants : ${players.length}`,
+    mentions: [targetJid]
+  }, { quoted: msg });
+}
+
+async function handleListPlayers(sock, msg) {
+  const from = msg.key.remoteJid;
+  
+  // Charger les joueurs si nécessaire
+  if (players.length === 0) {
+    await loadData();
+  }
+  
+  if (players.length === 0) {
+    return await sock.sendMessage(from, {
+      text: "📋 *LISTE DES JOUEURS*\n\n" +
+            "Aucun joueur dans la liste !\n\n" +
+            "Ajoutez des joueurs avec:\n" +
+            "• `!kofane add @mention`\n" +
+            "• `!kofane add` (en réponse)"
+    }, { quoted: msg });
+  }
+  
+  let listText = "📋 *LISTE DES JOUEURS KOFANE*\n\n";
+  
+  players.forEach((player, index) => {
+    const number = player.split('@')[0];
+    listText += `${index + 1}. @${number}\n`;
+  });
+  
+  listText += `\n🎮 Total : ${players.length} joueur(s)`;
+  
+  await sock.sendMessage(from, {
+    text: listText,
+    mentions: players
+  }, { quoted: msg });
+}
+
+async function handleResetPlayers(sock, msg) {
+  const from = msg.key.remoteJid;
+  const sender = msg.key.participant || from;
+  
+  // Vérifier si c'est un admin (simplifié)
+  // Vous pouvez ajouter votre propre logique de vérification admin
+  const isAdmin = true; // À remplacer par votre logique admin
+  
+  if (!isAdmin) {
+    return await sock.sendMessage(from, {
+      text: "❌ Cette commande est réservée aux administrateurs !"
+    }, { quoted: msg });
+  }
+  
+  // Réinitialiser la liste
+  players = [];
+  await savePlayers();
+  
+  await sock.sendMessage(from, {
+    text: "🔄 *Liste des joueurs réinitialisée !*\n\n" +
+          "Tous les joueurs ont été supprimés de la liste.\n" +
+          "Utilisez `!kofane add` pour ajouter de nouveaux joueurs."
+  }, { quoted: msg });
+}
+
+async function handleHelp(sock, msg) {
+  const helpText = 
+    "🎮 *AIDE - COMMANDES KOFANE*\n\n" +
+    "🎲 *Commandes disponibles:*\n\n" +
+    "• `!kofane` - Pose une question aléatoire à un joueur\n" +
+    "• `!kofane add @mention` - Ajoute un joueur\n" +
+    "• `!kofane del @mention` - Supprime un joueur\n" +
+    "• `!kofane liste` - Liste tous les joueurs\n" +
+    "• `!kofane reset` - Réinitialise la liste (admin)\n" +
+    "• `!kofane help` - Affiche cette aide\n\n" +
+    "📌 *Comment ajouter des joueurs:*\n" +
+    "1. `!kofane add @mention` (mentionnez la personne)\n" +
+    "2. `!kofane add` (en réponse à un message)\n" +
+    "3. `!kofane add 1234567890` (avec le numéro)\n\n" +
+    "🎯 *Le jeu utilise uniquement les joueurs ajoutés !*";
+  
+  await sock.sendMessage(msg.key.remoteJid, {
+    text: helpText
+  }, { quoted: msg });
+}
+
+// Charger les données au démarrage
+await loadData();
+console.log("✅ Commande Kofane chargée !");

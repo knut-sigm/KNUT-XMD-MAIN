@@ -1,1 +1,50 @@
-const a78_0x413407=a78_0x482c;(function(_0x108844,_0x3a16a3){const _0x472ae7=a78_0x482c,_0x24e7c7=_0x108844();while(!![]){try{const _0x19d0c1=parseInt(_0x472ae7(0x133))/0x1*(parseInt(_0x472ae7(0x129))/0x2)+parseInt(_0x472ae7(0x113))/0x3*(-parseInt(_0x472ae7(0x132))/0x4)+parseInt(_0x472ae7(0x135))/0x5*(parseInt(_0x472ae7(0x128))/0x6)+-parseInt(_0x472ae7(0x123))/0x7+-parseInt(_0x472ae7(0x131))/0x8*(-parseInt(_0x472ae7(0x127))/0x9)+parseInt(_0x472ae7(0x115))/0xa+parseInt(_0x472ae7(0x114))/0xb*(-parseInt(_0x472ae7(0x12d))/0xc);if(_0x19d0c1===_0x3a16a3)break;else _0x24e7c7['push'](_0x24e7c7['shift']());}catch(_0x16c4af){_0x24e7c7['push'](_0x24e7c7['shift']());}}}(a78_0x11a7,0x596e3));function a78_0x11a7(){const _0x1b875d=['sendMessage','64dkfHnv','1212UMkciH','1XEyIrF','constructor','5kpBwHq','2859WhIqkU','144661gXtEex','5154920WaSwjR','Activé','Utilisation\x20:\x0a','•\x20`!knutchat-ib\x20off`\x20→\x20Désactiver\x0a','search','off','(((.+)+)+)+$','>\x20Knut\x20XMD\x20:Commande\x20inconnue.\x20Utilise\x20`on`,\x20`off`\x20ou\x20`status`.','toString','enabled','remoteJid','@s.whatsapp.net','*Statut\x20KnutChat\x20en\x20DM*\x20:\x20','knutchat-ib','2484090WHXhfF','>\x20Knut\x20XMD\x20:KnutChat\x20en\x20DM\x20(IB)\x20désactivé\x20!','key','•\x20`!knutchat-ib\x20on`\x20→\x20Activer\x0a','764271atqhZC','35250sCdQwk','880930KBxPBo','>\x20Knut\x20XMD\x20:KnutChat\x20en\x20DM\x20(IB)\x20activé\x20!','knutChatIB','>\x20Knut\x20XMD\x20:KnutChat\x20en\x20DM\x20(IB)*\x0a\x0a','576CBaxER','apply','Statut\x20:\x20'];a78_0x11a7=function(){return _0x1b875d;};return a78_0x11a7();}function a78_0x482c(_0x3e24a3,_0x4c51f9){_0x3e24a3=_0x3e24a3-0x113;const _0x58436d=a78_0x11a7();let _0x272244=_0x58436d[_0x3e24a3];return _0x272244;}const a78_0x54e9ac=(function(){let _0x30f639=!![];return function(_0x14de52,_0x3f56c0){const _0x934274=_0x30f639?function(){const _0x8ffced=a78_0x482c;if(_0x3f56c0){const _0x2cfcd2=_0x3f56c0[_0x8ffced(0x12e)](_0x14de52,arguments);return _0x3f56c0=null,_0x2cfcd2;}}:function(){};return _0x30f639=![],_0x934274;};}()),a78_0x272244=a78_0x54e9ac(this,function(){const _0x50ffbf=a78_0x482c;return a78_0x272244[_0x50ffbf(0x11d)]()[_0x50ffbf(0x119)]('(((.+)+)+)+$')[_0x50ffbf(0x11d)]()[_0x50ffbf(0x134)](a78_0x272244)[_0x50ffbf(0x119)](_0x50ffbf(0x11b));});a78_0x272244();export default{'name':a78_0x413407(0x122),'description':'Activer/désactiver\x20KnutChat\x20en\x20DM\x20(IB)','cooldown':0x3,'isOwner':!![],async 'execute'(sock,msg,args){const _0x3ce526=a78_0x413407,from=msg[_0x3ce526(0x125)][_0x3ce526(0x11f)],_0x21a9d0=from['endsWith'](_0x3ce526(0x120));if(!global['knutChatIB'])global[_0x3ce526(0x12b)]={'enabled':!![]};if(!args[0x0]){await sock[_0x3ce526(0x130)](from,{'text':_0x3ce526(0x12c)+(_0x3ce526(0x12f)+(global[_0x3ce526(0x12b)][_0x3ce526(0x11e)]?'Activé':'Désactivé')+'\x0a\x0a')+_0x3ce526(0x117)+_0x3ce526(0x126)+_0x3ce526(0x118)+'•\x20`!knutchat-ib\x20status`\x20→\x20Voir\x20l\x27état'},{'quoted':msg});return;}const _0x14cd59=args[0x0]['toLowerCase']();if(_0x14cd59==='on')global[_0x3ce526(0x12b)][_0x3ce526(0x11e)]=!![],await sock[_0x3ce526(0x130)](from,{'text':_0x3ce526(0x12a)},{'quoted':msg});else{if(_0x14cd59===_0x3ce526(0x11a))global[_0x3ce526(0x12b)][_0x3ce526(0x11e)]=![],await sock[_0x3ce526(0x130)](from,{'text':_0x3ce526(0x124)},{'quoted':msg});else _0x14cd59==='status'?await sock['sendMessage'](from,{'text':_0x3ce526(0x121)+(global[_0x3ce526(0x12b)]['enabled']?_0x3ce526(0x116):'Désactivé')},{'quoted':msg}):await sock['sendMessage'](from,{'text':_0x3ce526(0x11c)},{'quoted':msg});}}};
+// =================== commands/knutchat-ib.js ===================
+
+export default {
+  name: "knutchat-ib",
+  description: "Activer/désactiver KnutChat en DM (IB)",
+  cooldown: 3,
+  isOwner: true, // Réservé au propriétaire
+
+  async execute(sock, msg, args) {
+    const from = msg.key.remoteJid;
+    const isDM = from.endsWith("@s.whatsapp.net");
+
+    // État global pour KnutChat en DM
+    if (!global.knutChatIB) global.knutChatIB = { enabled: true };
+
+    if (!args[0]) {
+      await sock.sendMessage(from, {
+        text: `> Knut XMD :KnutChat en DM (IB)*\n\n` +
+              `Statut : ${global.knutChatIB.enabled ? "Activé" : "Désactivé"}\n\n` +
+              `Utilisation :\n` +
+              `• \`!knutchat-ib on\` → Activer\n` +
+              `• \`!knutchat-ib off\` → Désactiver\n` +
+              `• \`!knutchat-ib status\` → Voir l'état`
+      }, { quoted: msg });
+      return;
+    }
+
+    const action = args[0].toLowerCase();
+
+    if (action === "on") {
+      global.knutChatIB.enabled = true;
+      await sock.sendMessage(from, {
+        text: "> Knut XMD :KnutChat en DM (IB) activé !"
+      }, { quoted: msg });
+    } else if (action === "off") {
+      global.knutChatIB.enabled = false;
+      await sock.sendMessage(from, {
+        text: "> Knut XMD :KnutChat en DM (IB) désactivé !"
+      }, { quoted: msg });
+    } else if (action === "status") {
+      await sock.sendMessage(from, {
+        text: `*Statut KnutChat en DM* : ${global.knutChatIB.enabled ? "Activé" : "Désactivé"}`
+      }, { quoted: msg });
+    } else {
+      await sock.sendMessage(from, {
+        text: "> Knut XMD :Commande inconnue. Utilise `on`, `off` ou `status`."
+      }, { quoted: msg });
+    }
+  }
+};

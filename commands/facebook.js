@@ -1,1 +1,127 @@
-const a55_0x5439a3=a55_0xc767;(function(_0x17d3ac,_0x125752){const _0x2d395e=a55_0xc767,_0x25fdc=_0x17d3ac();while(!![]){try{const _0xf9aeb6=-parseInt(_0x2d395e(0xcb))/0x1*(parseInt(_0x2d395e(0xfb))/0x2)+-parseInt(_0x2d395e(0xe9))/0x3+parseInt(_0x2d395e(0xe4))/0x4+-parseInt(_0x2d395e(0xe0))/0x5*(-parseInt(_0x2d395e(0xce))/0x6)+-parseInt(_0x2d395e(0xf0))/0x7+-parseInt(_0x2d395e(0xd6))/0x8+-parseInt(_0x2d395e(0xde))/0x9*(-parseInt(_0x2d395e(0xdf))/0xa);if(_0xf9aeb6===_0x125752)break;else _0x25fdc['push'](_0x25fdc['shift']());}catch(_0x56926f){_0x25fdc['push'](_0x25fdc['shift']());}}}(a55_0x19ba,0x9d719));const a55_0x30a4a0=(function(){let _0x3136fd=!![];return function(_0x46ccb5,_0x26fd7d){const _0x5c8037=_0x3136fd?function(){const _0x43f1a9=a55_0xc767;if(_0x26fd7d){const _0x5beabb=_0x26fd7d[_0x43f1a9(0xe7)](_0x46ccb5,arguments);return _0x26fd7d=null,_0x5beabb;}}:function(){};return _0x3136fd=![],_0x5c8037;};}()),a55_0x3dc25e=a55_0x30a4a0(this,function(){const _0x33d0fd=a55_0xc767;return a55_0x3dc25e['toString']()[_0x33d0fd(0xed)](_0x33d0fd(0xd2))[_0x33d0fd(0xe3)]()[_0x33d0fd(0xca)](a55_0x3dc25e)[_0x33d0fd(0xed)](_0x33d0fd(0xd2));});function a55_0xc767(_0x340933,_0xc8dc6b){_0x340933=_0x340933-0xca;const _0x1afbc0=a55_0x19ba();let _0x3dc25e=_0x1afbc0[_0x340933];return _0x3dc25e;}a55_0x3dc25e();import a55_0x2ea7db from'axios';import a55_0x296e44 from'fs';import a55_0x18e1c6 from'path';function a55_0x19ba(){const _0x398f58=['2374XLuNJX','constructor','619ocBSxA','sd_video','https://api.princetechn.com/api/download/facebook?apikey=prince&url=','13116YkNHnd','>\x20✅\x20KNUT\x20XMD\x0a>\x20📹\x20Qualité:\x20','join','m.facebook.com','(((.+)+)+)+$','result','>\x20❌\x20KNUT\x20XMD:\x20Lien\x20Facebook\x20invalide.','responseUrl','4946992gQOAAb','>\x20📥\x20KNUT\x20XMD:\x20Donne\x20un\x20lien\x20Facebook\x20valide.\x0aExemple\x20:\x20.fb\x20https://facebook.com/...','get','finish','createWriteStream','hd_video','mkdirSync','sendMessage','60129MgqWTT','4180ehBDwa','1790RMlDPU','.mp4','fb_','toString','2927248jhCSMb','fb.watch','existsSync','apply','>\x20❌\x20KNUT\x20XMD:\x20Impossible\x20d\x27analyser\x20la\x20vidéo.','3599157XbngVT','request','data','key','search','>\x20❌\x20KNUT\x20XMD:\x20Aucun\x20flux\x20vidéo\x20disponible.','\x0a>\x20📦\x20Taille:\x20','7765261svreek','../temp','stream','FACEBOOK\x20ERROR:','now','error','res','size','facebook.com','statSync','dirname'];a55_0x19ba=function(){return _0x398f58;};return a55_0x19ba();}import{fileURLToPath}from'url';const __filename=fileURLToPath(import.meta.url),__dirname=a55_0x18e1c6[a55_0x5439a3(0xfa)](__filename);export const name='facebook';export const alias=['fb'];export async function execute(sock,msg,args){const _0x3494ec=a55_0x5439a3,from=msg[_0x3494ec(0xec)]['remoteJid'];try{const _0x334f31=args[_0x3494ec(0xd0)]('\x20')['trim']();if(!_0x334f31)return sock['sendMessage'](from,{'text':_0x3494ec(0xd7)},{'quoted':msg});const _0x10a1d9=[_0x3494ec(0xf8),_0x3494ec(0xe5),_0x3494ec(0xd1)],_0x446f53=_0x10a1d9['some'](_0x378183=>_0x334f31['includes'](_0x378183));if(!_0x446f53)return sock['sendMessage'](from,{'text':_0x3494ec(0xd4)},{'quoted':msg});await sock[_0x3494ec(0xdd)](from,{'text':'>\x20⏳\x20KNUT\x20XMD\x20télécharge\x20la\x20vidéo...'},{'quoted':msg});let _0x41f778=_0x334f31;try{const _0x3db00e=await a55_0x2ea7db[_0x3494ec(0xd8)](_0x334f31,{'maxRedirects':0x5,'timeout':0x3a98});_0x41f778=_0x3db00e?.[_0x3494ec(0xea)]?.[_0x3494ec(0xf6)]?.[_0x3494ec(0xd5)]||_0x334f31;}catch{_0x41f778=_0x334f31;}const _0xc1c96a=_0x3494ec(0xcd)+encodeURIComponent(_0x41f778),_0x2b80b4=await a55_0x2ea7db[_0x3494ec(0xd8)](_0xc1c96a,{'timeout':0x7530});if(!_0x2b80b4[_0x3494ec(0xeb)]?.['success']||!_0x2b80b4[_0x3494ec(0xeb)]?.[_0x3494ec(0xd3)])return sock['sendMessage'](from,{'text':_0x3494ec(0xe8)},{'quoted':msg});const _0x51459c=_0x2b80b4[_0x3494ec(0xeb)]['result'],_0x5d9a52=_0x51459c[_0x3494ec(0xdb)]||_0x51459c[_0x3494ec(0xcc)];if(!_0x5d9a52)return sock[_0x3494ec(0xdd)](from,{'text':_0x3494ec(0xee)},{'quoted':msg});const _0x203417=a55_0x18e1c6[_0x3494ec(0xd0)](__dirname,_0x3494ec(0xf1));!a55_0x296e44[_0x3494ec(0xe6)](_0x203417)&&a55_0x296e44[_0x3494ec(0xdc)](_0x203417,{'recursive':!![]});const _0x2bdcc0=a55_0x18e1c6[_0x3494ec(0xd0)](_0x203417,_0x3494ec(0xe2)+Date[_0x3494ec(0xf4)]()+_0x3494ec(0xe1)),_0x427ef2=await a55_0x2ea7db['get'](_0x5d9a52,{'responseType':_0x3494ec(0xf2),'timeout':0xea60}),_0x2022c3=a55_0x296e44[_0x3494ec(0xda)](_0x2bdcc0);_0x427ef2[_0x3494ec(0xeb)]['pipe'](_0x2022c3),await new Promise((_0x5ac866,_0x114778)=>{const _0x3b5618=_0x3494ec;_0x2022c3['on'](_0x3b5618(0xd9),_0x5ac866),_0x2022c3['on'](_0x3b5618(0xf5),_0x114778);});const _0x1d7c19=(a55_0x296e44[_0x3494ec(0xf9)](_0x2bdcc0)[_0x3494ec(0xf7)]/(0x400*0x400))['toFixed'](0x2);await sock[_0x3494ec(0xdd)](from,{'video':{'url':_0x2bdcc0},'mimetype':'video/mp4','caption':_0x3494ec(0xcf)+(_0x5d9a52===_0x51459c[_0x3494ec(0xdb)]?'HD':'SD')+_0x3494ec(0xef)+_0x1d7c19+'\x20MB'},{'quoted':msg}),a55_0x296e44['unlinkSync'](_0x2bdcc0);}catch(_0x4da3e4){console[_0x3494ec(0xf5)](_0x3494ec(0xf3),_0x4da3e4),await sock[_0x3494ec(0xdd)](from,{'text':'>\x20⚠️\x20KNUT\x20XMD:\x20Erreur\x20pendant\x20le\x20téléchargement.'},{'quoted':msg});}}
+import axios from "axios";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export const name = "facebook";
+export const alias = ["fb"];
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  try {
+    const url = args.join(" ").trim();
+
+    if (!url) {
+      return sock.sendMessage(
+        from,
+        {
+          text: "> 📥 KNUT XMD: Donne un lien Facebook valide.\nExemple : .fb https://facebook.com/..."
+        },
+        { quoted: msg }
+      );
+    }
+
+    const validDomains = ["facebook.com", "fb.watch", "m.facebook.com"];
+    const isValid = validDomains.some(d => url.includes(d));
+
+    if (!isValid) {
+      return sock.sendMessage(
+        from,
+        { text: "> ❌ KNUT XMD: Lien Facebook invalide." },
+        { quoted: msg }
+      );
+    }
+
+    await sock.sendMessage(
+      from,
+      { text: "> ⏳ KNUT XMD télécharge la vidéo..." },
+      { quoted: msg }
+    );
+
+    // 🔄 Résolution redirection
+    let finalUrl = url;
+    try {
+      const redirect = await axios.get(url, {
+        maxRedirects: 5,
+        timeout: 15000
+      });
+      finalUrl = redirect?.request?.res?.responseUrl || url;
+    } catch {
+      finalUrl = url;
+    }
+
+    // 🌐 API
+    const api = `https://api.princetechn.com/api/download/facebook?apikey=prince&url=${encodeURIComponent(finalUrl)}`;
+    const res = await axios.get(api, { timeout: 30000 });
+
+    if (!res.data?.success || !res.data?.result) {
+      return sock.sendMessage(
+        from,
+        { text: "> ❌ KNUT XMD: Impossible d'analyser la vidéo." },
+        { quoted: msg }
+      );
+    }
+
+    const data = res.data.result;
+    const videoUrl = data.hd_video || data.sd_video;
+
+    if (!videoUrl) {
+      return sock.sendMessage(
+        from,
+        { text: "> ❌ KNUT XMD: Aucun flux vidéo disponible." },
+        { quoted: msg }
+      );
+    }
+
+    // 📁 Temp folder
+    const tempDir = path.join(__dirname, "../temp");
+    if (!fs.existsSync(tempDir)) {
+      fs.mkdirSync(tempDir, { recursive: true });
+    }
+
+    const filePath = path.join(tempDir, `fb_${Date.now()}.mp4`);
+
+    // 📥 Download stream
+    const videoRes = await axios.get(videoUrl, {
+      responseType: "stream",
+      timeout: 60000
+    });
+
+    const writer = fs.createWriteStream(filePath);
+    videoRes.data.pipe(writer);
+
+    await new Promise((resolve, reject) => {
+      writer.on("finish", resolve);
+      writer.on("error", reject);
+    });
+
+    const sizeMB = (fs.statSync(filePath).size / (1024 * 1024)).toFixed(2);
+
+    // 📤 Envoi vidéo
+    await sock.sendMessage(
+      from,
+      {
+        video: { url: filePath },
+        mimetype: "video/mp4",
+        caption: `> ✅ KNUT XMD\n> 📹 Qualité: ${videoUrl === data.hd_video ? "HD" : "SD"}\n> 📦 Taille: ${sizeMB} MB`
+      },
+      { quoted: msg }
+    );
+
+    // 🗑️ Nettoyage
+    fs.unlinkSync(filePath);
+
+  } catch (error) {
+    console.error("FACEBOOK ERROR:", error);
+
+    await sock.sendMessage(
+      from,
+      { text: "> ⚠️ KNUT XMD: Erreur pendant le téléchargement." },
+      { quoted: msg }
+    );
+  }
+}

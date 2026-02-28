@@ -1,1 +1,73 @@
-const a79_0x1a26c9=a79_0x21de;(function(_0x4510cc,_0x186ba7){const _0x1a071e=a79_0x21de,_0x56aa16=_0x4510cc();while(!![]){try{const _0x1efcc0=-parseInt(_0x1a071e(0xb6))/0x1+-parseInt(_0x1a071e(0xd6))/0x2+-parseInt(_0x1a071e(0xd1))/0x3+-parseInt(_0x1a071e(0xb0))/0x4+parseInt(_0x1a071e(0xc9))/0x5+-parseInt(_0x1a071e(0xcc))/0x6+parseInt(_0x1a071e(0xc6))/0x7;if(_0x1efcc0===_0x186ba7)break;else _0x56aa16['push'](_0x56aa16['shift']());}catch(_0x14a127){_0x56aa16['push'](_0x56aa16['shift']());}}}(a79_0x3df1,0x55636));function a79_0x3df1(){const _0x56c0ff=['participant','participants','905469fXBarz','autoai','>\x20Knut\x20XMD\x20-\x20Auto-Knut-Chat\x0a\x0a📊\x20État\x20:\x20','error','toLowerCase','155652KmmRWe','some','knutchat','endsWith','❌\x20Accès\x20refusé.\x20Admin,\x20owner\x20ou\x20sudo\x20requis.','akc','❌\x20Une\x20erreur\x20est\x20survenue.','🟢\x20Activé','toString','\x0a\x0a📝\x20Usage\x20:\x20!autoknutchat\x20on/off','🔴\x20Désactivé','Knut\x20répondra\x20automatiquement\x20à\x20tous\x20les\x20messages\x20(sauf\x20aux\x20admins).','état','split','1749700Mqfqpc','replace','status','❌\x20Erreur\x20autoknutchat:','❌\x20Cette\x20commande\x20est\x20réservée\x20aux\x20groupes.','>\x20Knut\x20XMD:\x20Auto-Knut-Chat\x20','274123IhbxnJ','🟢\x20activé','sendMessage','admin','@g.us','resolve','off','includes','\x0a\x0a⚙️\x20Configuration\x20:\x0a','•\x20Cooldown\x20:\x205\x20secondes\x0a•\x20Longueur\x20min\x20:\x203\x20caractères\x0a•\x20Ignore\x20les\x20commandes\x0a•\x20Ignore\x20les\x20admins\x0a•\x20API\x20:\x20David\x20Cyril\x20Tech','constructor','autoKnutChat','(((.+)+)+)+$','apply','map','\x0a\x0aUtilisation\x20:\x20`!autoknutchat\x20on`\x20ou\x20`!autoknutchat\x20off`\x0a💡\x20Alias:\x20!akc,\x20!autoknut,\x20!autoai','10644417MsxRuT','🔴\x20désactivé','groupMetadata','1485625zgfzDT','search','./group.json','2260854VbaGWh','owners','\x20dans\x20ce\x20groupe.\x0a\x0a'];a79_0x3df1=function(){return _0x56c0ff;};return a79_0x3df1();}function a79_0x21de(_0x3393e8,_0x37ae1c){_0x3393e8=_0x3393e8-0xa9;const _0x4e78a7=a79_0x3df1();let _0x859812=_0x4e78a7[_0x3393e8];return _0x859812;}const a79_0x3f2bf0=(function(){let _0x566165=!![];return function(_0x3f30a6,_0x51cdee){const _0x59fcc7=_0x566165?function(){const _0x415fc2=a79_0x21de;if(_0x51cdee){const _0x275577=_0x51cdee[_0x415fc2(0xc3)](_0x3f30a6,arguments);return _0x51cdee=null,_0x275577;}}:function(){};return _0x566165=![],_0x59fcc7;};}()),a79_0x859812=a79_0x3f2bf0(this,function(){const _0x3abffa=a79_0x21de;return a79_0x859812['toString']()[_0x3abffa(0xca)]('(((.+)+)+)+$')[_0x3abffa(0xaa)]()[_0x3abffa(0xc0)](a79_0x859812)[_0x3abffa(0xca)](_0x3abffa(0xc2));});a79_0x859812();import a79_0x3d5a25 from'fs';import a79_0x5a2063 from'path';import{getGroupProtections,setGroupProtection}from'../groupManager.js';import{loadSudo}from'../index.js';const GROUP_FILE=a79_0x5a2063[a79_0x1a26c9(0xbb)](a79_0x1a26c9(0xcb));export const name=a79_0x1a26c9(0xd8);export const aliases=[a79_0x1a26c9(0xdb),'autoknut',a79_0x1a26c9(0xd2)];export async function execute(sock,msg,args,from){const _0x39edcf=a79_0x1a26c9;try{if(!from[_0x39edcf(0xd9)](_0x39edcf(0xba))){await sock[_0x39edcf(0xb8)](from,{'text':_0x39edcf(0xb4)},{'quoted':msg});return;}const _0x3758ac=msg['key'][_0x39edcf(0xcf)]||from,_0xda1dad=_0x3758ac[_0x39edcf(0xaf)]('@')[0x0]['replace'](/[^0-9]/g,''),_0x2ba2c4=(global[_0x39edcf(0xcd)]||[])[_0x39edcf(0xc4)](_0x2dc594=>_0x2dc594[_0x39edcf(0xb1)](/[^0-9]/g,'')),_0x37b4d7=loadSudo()[_0x39edcf(0xc4)](_0x25788a=>_0x25788a[_0x39edcf(0xb1)](/[^0-9]/g,'')),_0x1420ef=_0x2ba2c4[_0x39edcf(0xbd)](_0xda1dad),_0x1a3e89=_0x37b4d7[_0x39edcf(0xbd)](_0xda1dad),_0x1a1ac2=await isGroupAdmin(sock,from,_0x3758ac);if(!_0x1420ef&&!_0x1a3e89&&!_0x1a1ac2){await sock[_0x39edcf(0xb8)](from,{'text':_0x39edcf(0xda)},{'quoted':msg});return;}const _0x1f4d68=args[0x0]?.[_0x39edcf(0xd5)]();if(!_0x1f4d68||!['on',_0x39edcf(0xbc),_0x39edcf(0xae),_0x39edcf(0xb2)][_0x39edcf(0xbd)](_0x1f4d68)){const _0xe78dfc=getGroupProtections(from)[_0x39edcf(0xc1)]?_0x39edcf(0xa9):_0x39edcf(0xac);await sock['sendMessage'](from,{'text':'>\x20Knut\x20XMD:\x20Auto-Knut-Chat\x0a\x0a📊\x20État\x20:\x20'+_0xe78dfc+_0x39edcf(0xc5)},{'quoted':msg});return;}if(_0x1f4d68==='on'||_0x1f4d68===_0x39edcf(0xbc)){const _0x57eda7=_0x1f4d68==='on';setGroupProtection(from,_0x39edcf(0xc1),_0x57eda7),await sock[_0x39edcf(0xb8)](from,{'text':_0x39edcf(0xb5)+(_0x57eda7?_0x39edcf(0xb7):_0x39edcf(0xc7))+_0x39edcf(0xce)+(_0x57eda7?_0x39edcf(0xad):'Knut\x20ne\x20répondra\x20plus\x20automatiquement.')},{'quoted':msg});}else{if(_0x1f4d68===_0x39edcf(0xae)||_0x1f4d68==='status'){const _0x32cba=getGroupProtections(from)[_0x39edcf(0xc1)]?'🟢\x20Activé':_0x39edcf(0xac),_0x103eba=_0x39edcf(0xbf);await sock[_0x39edcf(0xb8)](from,{'text':_0x39edcf(0xd3)+_0x32cba+_0x39edcf(0xbe)+_0x103eba+_0x39edcf(0xab)},{'quoted':msg});}}}catch(_0x4d9d87){console[_0x39edcf(0xd4)](_0x39edcf(0xb3),_0x4d9d87),await sock['sendMessage'](from,{'text':_0x39edcf(0xdc)},{'quoted':msg});}}async function isGroupAdmin(sock,_0x5b949c,_0x1e7e73){const _0x208761=a79_0x1a26c9;try{const _0x4d0a44=await sock[_0x208761(0xc8)](_0x5b949c);return _0x4d0a44[_0x208761(0xd0)][_0x208761(0xd7)](_0x31e1b3=>_0x31e1b3['id']===_0x1e7e73&&_0x31e1b3[_0x208761(0xb9)]);}catch{return![];}}
+// =================== COMMANDE AUTO-KNUT-CHAT ===================
+// Fichier : commandes/autoknutchat.js
+
+import fs from "fs";
+import path from "path";
+import { getGroupProtections, setGroupProtection } from "../groupManager.js";
+import { loadSudo } from "../index.js";
+
+const GROUP_FILE = path.resolve("./group.json");
+
+export const name = "knutchat";
+export const aliases = ["akc", "autoknut", "autoai"];
+
+export async function execute(sock, msg, args, from) {
+  try {
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { text: "❌ Cette commande est réservée aux groupes." }, { quoted: msg });
+      return;
+    }
+
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+    const isAdmin = await isGroupAdmin(sock, from, sender);
+
+    if (!isOwner && !isSudo && !isAdmin) {
+      await sock.sendMessage(from, { text: "❌ Accès refusé. Admin, owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    const arg = args[0]?.toLowerCase();
+    if (!arg || !["on", "off", "état", "status"].includes(arg)) {
+      const current = getGroupProtections(from).autoKnutChat ? "🟢 Activé" : "🔴 Désactivé";
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Auto-Knut-Chat\n\n📊 État : ${current}\n\nUtilisation : \`!autoknutchat on\` ou \`!autoknutchat off\`\n💡 Alias: !akc, !autoknut, !autoai`
+      }, { quoted: msg });
+      return;
+    }
+
+    if (arg === "on" || arg === "off") {
+      const newState = arg === "on";
+      setGroupProtection(from, "autoKnutChat", newState);
+
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Auto-Knut-Chat ${newState ? "🟢 activé" : "🔴 désactivé"} dans ce groupe.\n\n${newState ? "Knut répondra automatiquement à tous les messages (sauf aux admins)." : "Knut ne répondra plus automatiquement."}`
+      }, { quoted: msg });
+    } else if (arg === "état" || arg === "status") {
+      const current = getGroupProtections(from).autoKnutChat ? "🟢 Activé" : "🔴 Désactivé";
+      const configInfo = `• Cooldown : 5 secondes\n• Longueur min : 3 caractères\n• Ignore les commandes\n• Ignore les admins\n• API : David Cyril Tech`;
+      
+      await sock.sendMessage(from, {
+        text: `> Knut XMD - Auto-Knut-Chat\n\n📊 État : ${current}\n\n⚙️ Configuration :\n${configInfo}\n\n📝 Usage : !autoknutchat on/off`
+      }, { quoted: msg });
+    }
+
+  } catch (err) {
+    console.error("❌ Erreur autoknutchat:", err);
+    await sock.sendMessage(from, { text: "❌ Une erreur est survenue." }, { quoted: msg });
+  }
+}
+
+async function isGroupAdmin(sock, groupJid, userJid) {
+  try {
+    const metadata = await sock.groupMetadata(groupJid);
+    return metadata.participants.some(p => p.id === userJid && p.admin);
+  } catch {
+    return false;
+  }
+}

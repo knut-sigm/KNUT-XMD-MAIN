@@ -1,1 +1,42 @@
-function a92_0x434b(){const _0x3c3654=['3932796ceDfHu','N/A','length','toLowerCase','370806RSbwbS','search','json','5189975EdnbMz','constructor','https://exercisedb.p.rapidapi.com/exercises/target/','toString','muscu','target','Erreur\x20exercise\x20:','remoteJid','2152850JdXJOy','>\x20Knut\x20XMD\x20:\x20Service\x20exercices\x20indisponible.','2745085dpxzNR','407720FcVrsn','bodyPart','\x0a━━━━━━━━━━━━━━━━━━\x0a🎯\x20Cible:\x20','...\x0a🔗\x20Gif:\x20','apply','instructions','split','equipment','sendMessage','\x0a🎭\x20Équipement:\x20','gifUrl','>\x20🏋️\x20Knut\x20XMD\x20:\x20','60pQJeet','>\x20❌\x20Knut\x20XMD\x20:\x20Exercice\x20non\x20trouvé.','TON_API_KEY','error','(((.+)+)+)+$','101760fhVglg'];a92_0x434b=function(){return _0x3c3654;};return a92_0x434b();}const a92_0x3162e5=a92_0x2ea1;(function(_0x2dcfb5,_0x45746a){const _0x3f58d9=a92_0x2ea1,_0x326cfd=_0x2dcfb5();while(!![]){try{const _0xab4323=parseInt(_0x3f58d9(0x207))/0x1+-parseInt(_0x3f58d9(0x212))/0x2+parseInt(_0x3f58d9(0x1fd))/0x3*(-parseInt(_0x3f58d9(0x202))/0x4)+parseInt(_0x3f58d9(0x214))/0x5+parseInt(_0x3f58d9(0x203))/0x6+parseInt(_0x3f58d9(0x20a))/0x7+-parseInt(_0x3f58d9(0x1f1))/0x8;if(_0xab4323===_0x45746a)break;else _0x326cfd['push'](_0x326cfd['shift']());}catch(_0x1703b5){_0x326cfd['push'](_0x326cfd['shift']());}}}(a92_0x434b,0xa624c));const a92_0x476a8e=(function(){let _0x8df533=!![];return function(_0x345805,_0x5837c7){const _0x45f6fb=_0x8df533?function(){const _0x28f6a8=a92_0x2ea1;if(_0x5837c7){const _0x53125d=_0x5837c7[_0x28f6a8(0x1f5)](_0x345805,arguments);return _0x5837c7=null,_0x53125d;}}:function(){};return _0x8df533=![],_0x45f6fb;};}()),a92_0xf55d66=a92_0x476a8e(this,function(){const _0x197174=a92_0x2ea1;return a92_0xf55d66[_0x197174(0x20d)]()[_0x197174(0x208)](_0x197174(0x201))[_0x197174(0x20d)]()[_0x197174(0x20b)](a92_0xf55d66)[_0x197174(0x208)]('(((.+)+)+)+$');});a92_0xf55d66();function a92_0x2ea1(_0x1d1b6a,_0x7f34bc){_0x1d1b6a=_0x1d1b6a-0x1f1;const _0x1a2bac=a92_0x434b();let _0xf55d66=_0x1a2bac[_0x1d1b6a];return _0xf55d66;}export const name=a92_0x3162e5(0x20e);export async function execute(sock,msg,args){const _0xe9dd6b=a92_0x3162e5,from=msg['key'][_0xe9dd6b(0x211)];try{const _0x4638c3=args[0x0]?.[_0xe9dd6b(0x206)]()||'biceps',_0xdbd2ad=_0xe9dd6b(0x20c)+_0x4638c3,_0x1eeeab=await fetch(_0xdbd2ad,{'headers':{'X-RapidAPI-Key':_0xe9dd6b(0x1ff),'X-RapidAPI-Host':'exercisedb.p.rapidapi.com'}}),_0x425391=await _0x1eeeab[_0xe9dd6b(0x209)]();if(!_0x425391||_0x425391[_0xe9dd6b(0x205)]===0x0){await sock[_0xe9dd6b(0x1f9)](from,{'text':_0xe9dd6b(0x1fe)},{'quoted':msg});return;}const _0xc20705=_0x425391[0x0],_0x47ae2c=_0xe9dd6b(0x1fc)+_0xc20705['name']+_0xe9dd6b(0x1f3)+_0xc20705[_0xe9dd6b(0x20f)]+'\x0a💪\x20Muscle:\x20'+_0xc20705[_0xe9dd6b(0x1f2)]+_0xe9dd6b(0x1fa)+_0xc20705[_0xe9dd6b(0x1f8)]+'\x0a📝\x20Instructions:\x20'+(_0xc20705[_0xe9dd6b(0x1f6)]?.[_0xe9dd6b(0x1f7)]('.')[0x0]||_0xe9dd6b(0x204))+_0xe9dd6b(0x1f4)+_0xc20705[_0xe9dd6b(0x1fb)];await sock[_0xe9dd6b(0x1f9)](from,{'text':_0x47ae2c},{'quoted':msg});}catch(_0x286a5e){console[_0xe9dd6b(0x200)](_0xe9dd6b(0x210),_0x286a5e),await sock[_0xe9dd6b(0x1f9)](from,{'text':_0xe9dd6b(0x213)},{'quoted':msg});}}
+export const name = "muscu";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  try {
+    const muscle = args[0]?.toLowerCase() || "biceps";
+    
+    // API ExercisesDB (gratuit)
+    const url = `https://exercisedb.p.rapidapi.com/exercises/target/${muscle}`;
+    
+    const response = await fetch(url, {
+      headers: {
+        'X-RapidAPI-Key': 'TON_API_KEY',
+        'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+      }
+    });
+    
+    const data = await response.json();
+    
+    if (!data || data.length === 0) {
+      await sock.sendMessage(from, { text: "> ❌ Knut XMD : Exercice non trouvé." }, { quoted: msg });
+      return;
+    }
+    
+    const exercise = data[0];
+    
+    const reply = `> 🏋️ Knut XMD : ${exercise.name}
+━━━━━━━━━━━━━━━━━━
+🎯 Cible: ${exercise.target}
+💪 Muscle: ${exercise.bodyPart}
+🎭 Équipement: ${exercise.equipment}
+📝 Instructions: ${exercise.instructions?.split('.')[0] || "N/A"}...
+🔗 Gif: ${exercise.gifUrl}`;
+    
+    await sock.sendMessage(from, { text: reply }, { quoted: msg });
+    
+  } catch (err) {
+    console.error("Erreur exercise :", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Service exercices indisponible." }, { quoted: msg });
+  }
+}

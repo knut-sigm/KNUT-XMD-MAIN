@@ -1,1 +1,40 @@
-const a91_0x148da2=a91_0x3f16;(function(_0x31781e,_0x4c47bf){const _0x960c6=a91_0x3f16,_0x20376f=_0x31781e();while(!![]){try{const _0x5ac025=parseInt(_0x960c6(0x18f))/0x1+-parseInt(_0x960c6(0x173))/0x2+-parseInt(_0x960c6(0x183))/0x3+-parseInt(_0x960c6(0x194))/0x4*(parseInt(_0x960c6(0x188))/0x5)+parseInt(_0x960c6(0x17b))/0x6*(-parseInt(_0x960c6(0x17e))/0x7)+parseInt(_0x960c6(0x190))/0x8*(parseInt(_0x960c6(0x17a))/0x9)+parseInt(_0x960c6(0x179))/0xa;if(_0x5ac025===_0x4c47bf)break;else _0x20376f['push'](_0x20376f['shift']());}catch(_0x51eaeb){_0x20376f['push'](_0x20376f['shift']());}}}(a91_0x3e20,0x5c338));const a91_0x570843=(function(){let _0x34c18b=!![];return function(_0x6f195a,_0x1a6cf2){const _0x374c27=_0x34c18b?function(){const _0x1cca90=a91_0x3f16;if(_0x1a6cf2){const _0x28bc11=_0x1a6cf2[_0x1cca90(0x171)](_0x6f195a,arguments);return _0x1a6cf2=null,_0x28bc11;}}:function(){};return _0x34c18b=![],_0x374c27;};}()),a91_0x248b7c=a91_0x570843(this,function(){const _0x3c0909=a91_0x3f16;return a91_0x248b7c[_0x3c0909(0x189)]()[_0x3c0909(0x16d)](_0x3c0909(0x16a))[_0x3c0909(0x189)]()[_0x3c0909(0x192)](a91_0x248b7c)['search']('(((.+)+)+)+$');});a91_0x248b7c();import a91_0x4c1054 from'axios';function a91_0x3e20(){const _0x6817c0=['meteo','description','fr-FR','humidity','1563105AYIWcD','temp','>\x20Knut\x20XMD:⚠️\x20Désolé,\x20je\x20n’ai\x20pas\x20pu\x20récupérer\x20la\x20météo\x20pour\x20cette\x20ville.','*\x20🌍\x0a>\x20───────────────────\x0a>\x20🌤️\x20*Conditions*\x20:\x20','❌\x20Erreur\x20météo\x20:','30dnzVDn','toString','pressure','speed','sendMessage','join','&appid=','141680xplMux','56056aCFwQl','wind','constructor','main','110392YKZmFI','°C\x20🧥\x0a>\x20💧\x20*Humidité*\x20:\x20','(((.+)+)+)+$','4902c0f2550f58298ad4146a92b65e10','get','search','key','&units=metric&lang=fr','remoteJid','apply','\x0a>\x20╚─────────────────╝','222716uGxbog','toLocaleTimeString','>\x20╔────────METEO────────╗\x0a>\x20🌆\x20*Météo\x20à\x20','https://api.openweathermap.org/data/2.5/weather?q=','data','error','11556620HGRiSs','207mOHBlD','848598fugztD','>\x20Knut\x20XMD:❌\x20Utilisation\x20:\x20meteo\x20<ville>','\x0a>\x20🌡️\x20*Température*\x20:\x20','14HRmTMp'];a91_0x3e20=function(){return _0x6817c0;};return a91_0x3e20();}function a91_0x3f16(_0xf1c16a,_0x376b25){_0xf1c16a=_0xf1c16a-0x16a;const _0x3b08a4=a91_0x3e20();let _0x248b7c=_0x3b08a4[_0xf1c16a];return _0x248b7c;}export const name=a91_0x148da2(0x17f);export async function execute(sock,msg,args){const _0x26853d=a91_0x148da2;try{const from=msg[_0x26853d(0x16e)][_0x26853d(0x170)],_0x76c6d0=args[_0x26853d(0x18d)]('\x20');if(!_0x76c6d0){await sock['sendMessage'](from,{'text':_0x26853d(0x17c)},{'quoted':msg});return;}const _0x135682=_0x26853d(0x16b),_0x2b58d3=await a91_0x4c1054[_0x26853d(0x16c)](_0x26853d(0x176)+encodeURIComponent(_0x76c6d0)+_0x26853d(0x18e)+_0x135682+_0x26853d(0x16f)),_0x5efedd=_0x2b58d3[_0x26853d(0x177)],_0x3b7caa=_0x26853d(0x175)+_0x5efedd['name']+_0x26853d(0x186)+_0x5efedd['weather'][0x0][_0x26853d(0x180)]+_0x26853d(0x17d)+_0x5efedd['main'][_0x26853d(0x184)]+'°C\x20🌞\x0a>\x20🌡️\x20*Ressenti*\x20:\x20'+_0x5efedd[_0x26853d(0x193)]['feels_like']+_0x26853d(0x195)+_0x5efedd[_0x26853d(0x193)][_0x26853d(0x182)]+'%\x20💦\x0a>\x20🌬️\x20*Vent*\x20:\x20'+_0x5efedd[_0x26853d(0x191)][_0x26853d(0x18b)]+'\x20m/s\x20🍃\x0a>\x20📊\x20*Pression*\x20:\x20'+_0x5efedd[_0x26853d(0x193)][_0x26853d(0x18a)]+'\x20hPa\x20📉\x0a>\x20───────────────────\x0a>\x20⏰\x20Dernière\x20mise\x20à\x20jour\x20:\x20'+new Date(_0x5efedd['dt']*0x3e8)[_0x26853d(0x174)](_0x26853d(0x181))+_0x26853d(0x172);await sock['sendMessage'](from,{'text':_0x3b7caa},{'quoted':msg});}catch(_0x53c95e){console[_0x26853d(0x178)](_0x26853d(0x187),_0x53c95e),await sock[_0x26853d(0x18c)](msg[_0x26853d(0x16e)][_0x26853d(0x170)],{'text':_0x26853d(0x185)},{'quoted':msg});}}
+import axios from "axios";
+
+export const name = "meteo";
+
+export async function execute(sock, msg, args) {
+  try {
+    const from = msg.key.remoteJid;
+    const city = args.join(" ");
+
+    if (!city) {
+      await sock.sendMessage(from, { text: "> Knut XMD:❌ Utilisation : meteo <ville>" }, { quoted: msg });
+      return;
+    }
+
+    const apiKey = "4902c0f2550f58298ad4146a92b65e10"; // Remplace par ta clé OpenWeather
+    const response = await axios.get(
+      `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric&lang=fr`
+    );
+
+    const weather = response.data;
+    const weatherText = `> ╔────────METEO────────╗
+> 🌆 *Météo à ${weather.name}* 🌍
+> ───────────────────
+> 🌤️ *Conditions* : ${weather.weather[0].description}
+> 🌡️ *Température* : ${weather.main.temp}°C 🌞
+> 🌡️ *Ressenti* : ${weather.main.feels_like}°C 🧥
+> 💧 *Humidité* : ${weather.main.humidity}% 💦
+> 🌬️ *Vent* : ${weather.wind.speed} m/s 🍃
+> 📊 *Pression* : ${weather.main.pressure} hPa 📉
+> ───────────────────
+> ⏰ Dernière mise à jour : ${new Date(weather.dt * 1000).toLocaleTimeString("fr-FR")}
+> ╚─────────────────╝`;
+
+    await sock.sendMessage(from, { text: weatherText }, { quoted: msg });
+
+  } catch (error) {
+    console.error("❌ Erreur météo :", error);
+    await sock.sendMessage(msg.key.remoteJid, { text: "> Knut XMD:⚠️ Désolé, je n’ai pas pu récupérer la météo pour cette ville." }, { quoted: msg });
+  }
+}
