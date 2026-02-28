@@ -1,1 +1,30 @@
-(function(_0x3784e7,_0x35e23c){const _0x334480=a103_0xd5f0,_0x3f826b=_0x3784e7();while(!![]){try{const _0xf9400a=-parseInt(_0x334480(0x1f1))/0x1+-parseInt(_0x334480(0x1e2))/0x2+parseInt(_0x334480(0x1de))/0x3*(-parseInt(_0x334480(0x1f3))/0x4)+-parseInt(_0x334480(0x1e4))/0x5+parseInt(_0x334480(0x1ea))/0x6+-parseInt(_0x334480(0x1ee))/0x7*(parseInt(_0x334480(0x1ef))/0x8)+-parseInt(_0x334480(0x1e7))/0x9*(-parseInt(_0x334480(0x1eb))/0xa);if(_0xf9400a===_0x35e23c)break;else _0x3f826b['push'](_0x3f826b['shift']());}catch(_0x40e1cd){_0x3f826b['push'](_0x3f826b['shift']());}}}(a103_0x72d6,0x255af));const a103_0xc12ed6=(function(){let _0x2dab00=!![];return function(_0xabee97,_0x4154c3){const _0x471b99=_0x2dab00?function(){if(_0x4154c3){const _0x231698=_0x4154c3['apply'](_0xabee97,arguments);return _0x4154c3=null,_0x231698;}}:function(){};return _0x2dab00=![],_0x471b99;};}()),a103_0x5779f1=a103_0xc12ed6(this,function(){const _0xce0e69=a103_0xd5f0;return a103_0x5779f1[_0xce0e69(0x1e8)]()[_0xce0e69(0x1f4)](_0xce0e69(0x1f2))[_0xce0e69(0x1e8)]()[_0xce0e69(0x1f0)](a103_0x5779f1)[_0xce0e69(0x1f4)](_0xce0e69(0x1f2));});a103_0x5779f1();function a103_0xd5f0(_0x1cf8f2,_0x516d62){_0x1cf8f2=_0x1cf8f2-0x1dd;const _0x18712f=a103_0x72d6();let _0x5779f1=_0x18712f[_0x1cf8f2];return _0x5779f1;}function a103_0x72d6(){const _0x5077f5=['1304fcJPWP','constructor','274651sBADPa','(((.+)+)+)+$','232268shERbg','search','split','6wNjFLq','>\x20Knut\x20XMD:\x20❌\x20Une\x20erreur\x20est\x20survenue\x20lors\x20de\x20l\x27exécution\x20de\x20la\x20commande.','remoteJid','groupMetadata','535088RHXBJu','error','73920WwNhjG','key','sendMessage','9fjDqIv','toString','>\x20Knut\x20XMD:\x20Commande\x20de\x20groupe.','1268718BITliC','9116530sLdLks','owner','endsWith','12754pYYgNy'];a103_0x72d6=function(){return _0x5077f5;};return a103_0x72d6();}export const name='principal';export async function execute(sock,msg,args){const _0x45713d=a103_0xd5f0;try{const from=msg[_0x45713d(0x1e5)][_0x45713d(0x1e0)];if(!from[_0x45713d(0x1ed)]('@g.us'))return await sock[_0x45713d(0x1e6)](from,{'text':_0x45713d(0x1e9)});const _0x46d694=await sock[_0x45713d(0x1e1)](from),_0x3f9756=_0x46d694[_0x45713d(0x1ec)];if(!_0x3f9756)return await sock[_0x45713d(0x1e6)](from,{'text':'>\x20Knut\x20XMD:\x20❌\x20Createur\x20absent\x20.'});await sock[_0x45713d(0x1e6)](from,{'text':'>\x20Knut\x20XMD:\x20Le\x20créateur\x20du\x20groupe\x20est\x20:\x20@'+_0x3f9756[_0x45713d(0x1dd)]('@')[0x0],'mentions':[_0x3f9756]});}catch(_0x5d612e){console[_0x45713d(0x1e3)]('❌\x20Erreur\x20tagcreator\x20:',_0x5d612e),await sock['sendMessage'](msg[_0x45713d(0x1e5)][_0x45713d(0x1e0)],{'text':_0x45713d(0x1df)});}}
+export const name = "principal";
+
+export async function execute(sock, msg, args) {
+  try {
+    const from = msg.key.remoteJid;
+
+    // Vérifie si c'est un groupe (@g.us)
+    if (!from.endsWith("@g.us")) {
+      return await sock.sendMessage(from, { text: "> Knut XMD: Commande de groupe." });
+    }
+
+    // Récupère les métadonnées du groupe
+    const groupMetadata = await sock.groupMetadata(from);
+    const creatorId = groupMetadata.owner; // ID du créateur principal
+
+    if (!creatorId) {
+      return await sock.sendMessage(from, { text: "> Knut XMD: ❌ Createur absent ." });
+    }
+
+    // Tag du créateur
+    await sock.sendMessage(from, {
+      text: `> Knut XMD: Le créateur du groupe est : @${creatorId.split("@")[0]}`,
+      mentions: [creatorId]
+    });
+
+  } catch (err) {
+    console.error("❌ Erreur tagcreator :", err);
+    await sock.sendMessage(msg.key.remoteJid, { text: "> Knut XMD: ❌ Une erreur est survenue lors de l'exécution de la commande." });
+  }
+}

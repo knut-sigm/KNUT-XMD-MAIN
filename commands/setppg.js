@@ -1,1 +1,73 @@
-const a116_0x4b54c8=a116_0x2661;function a116_0x2661(_0x5f2730,_0x8fdd98){_0x5f2730=_0x5f2730-0x1f1;const _0x510967=a116_0x35d2();let _0x483f3d=_0x510967[_0x5f2730];return _0x483f3d;}(function(_0x49754b,_0x261282){const _0x352e9b=a116_0x2661,_0x435abb=_0x49754b();while(!![]){try{const _0x3235b4=parseInt(_0x352e9b(0x1fe))/0x1*(-parseInt(_0x352e9b(0x202))/0x2)+-parseInt(_0x352e9b(0x200))/0x3*(parseInt(_0x352e9b(0x203))/0x4)+-parseInt(_0x352e9b(0x1f3))/0x5+-parseInt(_0x352e9b(0x1fd))/0x6*(-parseInt(_0x352e9b(0x207))/0x7)+parseInt(_0x352e9b(0x1f9))/0x8+parseInt(_0x352e9b(0x1f8))/0x9+-parseInt(_0x352e9b(0x20a))/0xa;if(_0x3235b4===_0x261282)break;else _0x435abb['push'](_0x435abb['shift']());}catch(_0x33676f){_0x435abb['push'](_0x435abb['shift']());}}}(a116_0x35d2,0x2cedc));const a116_0x3e9723=(function(){let _0x115591=!![];return function(_0x51e6c7,_0x331937){const _0x44ede4=_0x115591?function(){const _0x149ff1=a116_0x2661;if(_0x331937){const _0x205a75=_0x331937[_0x149ff1(0x1fa)](_0x51e6c7,arguments);return _0x331937=null,_0x205a75;}}:function(){};return _0x115591=![],_0x44ede4;};}()),a116_0x483f3d=a116_0x3e9723(this,function(){const _0x5d8a6f=a116_0x2661;return a116_0x483f3d['toString']()[_0x5d8a6f(0x1fc)](_0x5d8a6f(0x209))['toString']()['constructor'](a116_0x483f3d)[_0x5d8a6f(0x1fc)](_0x5d8a6f(0x209));});a116_0x483f3d();import{downloadContentFromMessage}from'@whiskeysockets/baileys';export const name=a116_0x4b54c8(0x1f5);function a116_0x35d2(){const _0x2ced62=['@g.us','298593ApYrLG','quotedMessage','26198gjoqRF','4yCrUkT','message','image','key','738437kOlaAB','updateProfilePicture','(((.+)+)+)+$','2421230NHHfvR','extendedTextMessage','endsWith','>\x20Knut\x20XMD:\x20⚠️\x20Cette\x20commande\x20doit\x20être\x20utilisée\x20dans\x20un\x20groupe.','concat','imageMessage','error','150050VMFdAg','sendMessage','setppg','❌\x20Erreur\x20setppgc\x20:','>\x20Knut\x20XMD:\x20❌\x20Impossible\x20de\x20changer\x20la\x20photo\x20de\x20profil\x20du\x20groupe.','2184705JDvMTW','1869232tOqZds','apply','>\x20Knut\x20XMD:\x20⚠️\x20Réponds\x20à\x20une\x20image\x20pour\x20changer\x20la\x20photo\x20de\x20profil\x20du\x20groupe.','search','6VEVwQs','2mjxcTO'];a116_0x35d2=function(){return _0x2ced62;};return a116_0x35d2();}export async function execute(sock,msg,args){const _0x4b4fee=a116_0x4b54c8,from=msg[_0x4b4fee(0x206)]['remoteJid'];if(!from[_0x4b4fee(0x20c)](_0x4b4fee(0x1ff)))return await sock[_0x4b4fee(0x1f4)](from,{'text':_0x4b4fee(0x20d)},{'quoted':msg});const _0x435ad5=msg[_0x4b4fee(0x204)]?.[_0x4b4fee(0x20b)]?.['contextInfo'];if(!_0x435ad5||!_0x435ad5[_0x4b4fee(0x201)]?.['imageMessage'])return await sock['sendMessage'](from,{'text':_0x4b4fee(0x1fb)},{'quoted':msg});try{const _0x56bc15=_0x435ad5[_0x4b4fee(0x201)][_0x4b4fee(0x1f1)],_0x341051=await downloadContentFromMessage(_0x56bc15,_0x4b4fee(0x205));let _0x554796=Buffer['from']([]);for await(const _0x19397c of _0x341051){_0x554796=Buffer[_0x4b4fee(0x20e)]([_0x554796,_0x19397c]);}await sock[_0x4b4fee(0x208)](from,_0x554796),await sock['sendMessage'](from,{'text':'>\x20Knut\x20XMD:\x20✅\x20La\x20photo\x20de\x20profil\x20du\x20groupe\x20a\x20été\x20mise\x20à\x20jour\x20avec\x20succès\x20!'},{'quoted':msg});}catch(_0x315c60){console[_0x4b4fee(0x1f2)](_0x4b4fee(0x1f6),_0x315c60),await sock[_0x4b4fee(0x1f4)](from,{'text':_0x4b4fee(0x1f7)},{'quoted':msg});}}
+import { downloadContentFromMessage } from "@whiskeysockets/baileys";
+
+export const name = "setppg";
+
+export async function execute(sock, msg, args) {
+
+  const from = msg.key.remoteJid;
+
+  // Vérifie que la commande est lancée dans un groupe
+
+  if (!from.endsWith("@g.us")) {
+
+    return await sock.sendMessage(from, {
+
+      text: "> Knut XMD: ⚠️ Cette commande doit être utilisée dans un groupe."
+
+    }, { quoted: msg });
+
+  }
+
+  // Vérifie si on a bien répondu à une image
+
+  const ctxInfo = msg.message?.extendedTextMessage?.contextInfo;
+
+  if (!ctxInfo || !ctxInfo.quotedMessage?.imageMessage) {
+
+    return await sock.sendMessage(from, {
+
+      text: "> Knut XMD: ⚠️ Réponds à une image pour changer la photo de profil du groupe."
+
+    }, { quoted: msg });
+
+  }
+
+  try {
+
+    const quoted = ctxInfo.quotedMessage.imageMessage;
+
+    // Télécharger l'image
+
+    const stream = await downloadContentFromMessage(quoted, "image");
+
+    let buffer = Buffer.from([]);
+
+    for await (const chunk of stream) {
+
+      buffer = Buffer.concat([buffer, chunk]);
+
+    }
+
+    // Mettre à jour la photo de profil du groupe
+
+    await sock.updateProfilePicture(from, buffer);
+
+    await sock.sendMessage(from, {
+
+      text: "> Knut XMD: ✅ La photo de profil du groupe a été mise à jour avec succès !"
+
+    }, { quoted: msg });
+
+  } catch (err) {
+
+    console.error("❌ Erreur setppgc :", err);
+
+    await sock.sendMessage(from, {
+
+      text: "> Knut XMD: ❌ Impossible de changer la photo de profil du groupe."
+
+    }, { quoted: msg });
+
+  }
+
+}

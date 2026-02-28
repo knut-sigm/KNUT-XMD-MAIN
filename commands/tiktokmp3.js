@@ -1,1 +1,107 @@
-const a133_0x5d5f21=a133_0x6961;(function(_0x3c64cd,_0x36bbc8){const _0x3a3943=a133_0x6961,_0x21a4d4=_0x3c64cd();while(!![]){try{const _0x312cc3=parseInt(_0x3a3943(0x1c1))/0x1+-parseInt(_0x3a3943(0x1b6))/0x2+parseInt(_0x3a3943(0x1be))/0x3*(parseInt(_0x3a3943(0x1ba))/0x4)+-parseInt(_0x3a3943(0x1af))/0x5+-parseInt(_0x3a3943(0x1bb))/0x6*(-parseInt(_0x3a3943(0x1bf))/0x7)+parseInt(_0x3a3943(0x1c7))/0x8+parseInt(_0x3a3943(0x1c9))/0x9*(-parseInt(_0x3a3943(0x1c2))/0xa);if(_0x312cc3===_0x36bbc8)break;else _0x21a4d4['push'](_0x21a4d4['shift']());}catch(_0x5345eb){_0x21a4d4['push'](_0x21a4d4['shift']());}}}(a133_0x4f8d,0x9a801));function a133_0x6961(_0x56b202,_0x3a9d3f){_0x56b202=_0x56b202-0x1ae;const _0x55e176=a133_0x4f8d();let _0x48e4b0=_0x55e176[_0x56b202];return _0x48e4b0;}const a133_0x5673d3=(function(){let _0x58460d=!![];return function(_0x2e808c,_0x4b6ec8){const _0x83486f=_0x58460d?function(){const _0x2ede2c=a133_0x6961;if(_0x4b6ec8){const _0x19e364=_0x4b6ec8[_0x2ede2c(0x1b4)](_0x2e808c,arguments);return _0x4b6ec8=null,_0x19e364;}}:function(){};return _0x58460d=![],_0x83486f;};}()),a133_0x48e4b0=a133_0x5673d3(this,function(){const _0x585d21=a133_0x6961;return a133_0x48e4b0[_0x585d21(0x1b1)]()['search'](_0x585d21(0x1b8))[_0x585d21(0x1b1)]()[_0x585d21(0x1b0)](a133_0x48e4b0)[_0x585d21(0x1c0)](_0x585d21(0x1b8));});a133_0x48e4b0();export const name='tiktokmp3';export const aliases=['ttmp3',a133_0x5d5f21(0x1ae)];export async function execute(sock,msg,args){const _0x1fa777=a133_0x5d5f21;try{const from=msg['key'][_0x1fa777(0x1b5)];if(!args||args[_0x1fa777(0x1bd)]===0x0){await sock[_0x1fa777(0x1c8)](from,{'text':_0x1fa777(0x1c6)},{'quoted':msg});return;}const _0x100ca3=args[0x0];if(!_0x100ca3[_0x1fa777(0x1ca)](_0x1fa777(0x1c4))){await sock[_0x1fa777(0x1c8)](from,{'text':'>\x20⚠️\x20KNUT\x20XMD:\x20Lien\x20TikTok\x20invalide.'},{'quoted':msg});return;}const _0x499001=await sock['sendMessage'](from,{'text':_0x1fa777(0x1c3)},{'quoted':msg});await new Promise(_0x3a50a=>setTimeout(_0x3a50a,0x5dc));const _0x3d1bec=_0x1fa777(0x1b2);await sock['sendMessage'](from,{'audio':{'url':_0x3d1bec},'mimetype':_0x1fa777(0x1bc),'fileName':_0x1fa777(0x1c5),'ptt':![]},{'quoted':_0x499001}),await sock[_0x1fa777(0x1c8)](from,{'text':_0x1fa777(0x1cb)},{'quoted':_0x499001});}catch(_0x50e16a){console[_0x1fa777(0x1b9)]('❌\x20Erreur\x20tiktokmp3\x20:',_0x50e16a),await sock[_0x1fa777(0x1c8)](msg[_0x1fa777(0x1b3)][_0x1fa777(0x1b5)],{'text':_0x1fa777(0x1b7)+(_0x50e16a['message']||'Échec\x20du\x20téléchargement')},{'quoted':msg});}};function a133_0x4f8d(){const _0x5770b8=['tiktok.com','tiktok_audio.mp3','>\x20⚠️\x20KNUT\x20XMD:\x20Veuillez\x20fournir\x20un\x20lien\x20TikTok.\x0aEx:\x20.tiktokmp3\x20https://tiktok.com/@user/video/123456789','8645392ktETnQ','sendMessage','1548DoTcxG','includes','>\x20✅\x20KNUT\x20XMD:\x20Audio\x20TikTok\x20envoyé\x20!','tiktokaudio','3875520HUXbIF','constructor','toString','https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3','key','apply','remoteJid','2306634fiKsaR','>\x20⚠️\x20KNUT\x20XMD:\x20Erreur:\x20','(((.+)+)+)+$','error','4713308ZSstZm','6crZpsm','audio/mp4','length','3ZcLFqw','146209yiPSgN','search','907446YWYRHm','36400wwkScS','>\x20🎵\x20𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔\x20𝑎𝑢𝑑𝑖𝑜...'];a133_0x4f8d=function(){return _0x5770b8;};return a133_0x4f8d();}
+export const name = "tiktokmp3";
+export const aliases = ["ttmp3", "tiktokaudio"];
+
+export async function execute(sock, msg, args) {
+  try {
+    const from = msg.key.remoteJid;
+    
+    // Vérifier si l'URL est fournie
+    if (!args || args.length === 0) {
+      await sock.sendMessage(from, { 
+        text: "> ⚠️ KNUT XMD: Veuillez fournir un lien TikTok.\nEx: .tiktokmp3 https://tiktok.com/@user/video/123456789" 
+      }, { quoted: msg });
+      return;
+    }
+
+    // Extraire l'URL
+    const url = args[0];
+    
+    // Vérifier si c'est une URL TikTok
+    if (!url.includes("tiktok.com")) {
+      await sock.sendMessage(from, { 
+        text: "> ⚠️ KNUT XMD: Lien TikTok invalide." 
+      }, { quoted: msg });
+      return;
+    }
+
+    // Message de traitement
+    const processingMsg = await sock.sendMessage(from, { 
+      text: "> 🎵 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑𝑖𝑛𝑔 𝑎𝑢𝑑𝑖𝑜..." 
+    }, { quoted: msg });
+
+    // ICI - INTÉGRER VOTRE LOGIQUE DE TÉLÉCHARGEMENT
+    // Exemple avec un service d'API TikTok
+    
+    /*
+    // 1. Obtenir les données TikTok
+    const tiktokData = await getTikTokAudio(url);
+    
+    // 2. Vérifier si l'audio est disponible
+    if (!tiktokData.audioUrl) {
+      throw new Error("Audio non disponible");
+    }
+    
+    // 3. Télécharger l'audio
+    const audioBuffer = await fetch(tiktokData.audioUrl)
+      .then(res => res.arrayBuffer())
+      .then(buffer => Buffer.from(buffer));
+    
+    // 4. Envoyer l'audio
+    await sock.sendMessage(from, {
+      audio: audioBuffer,
+      mimetype: 'audio/mp4',
+      fileName: `tiktok_${Date.now()}.mp3`,
+      ptt: false
+    }, { quoted: processingMsg });
+    */
+    
+    // POUR TEST - Simulation avec un fichier audio de test
+    // À REMPLACER PAR VOTRE LOGIQUE RÉELLE
+    
+    // Simulation de délai
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    // Envoi d'un audio de test (exemple avec une URL)
+    // REMPLACEZ CE CODE PAR VOTRE AUDIO TIKTOK RÉEL
+    
+    const audioTestUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"; // URL de test
+    
+    await sock.sendMessage(from, {
+      audio: { url: audioTestUrl },
+      mimetype: 'audio/mp4',
+      fileName: 'tiktok_audio.mp3',
+      ptt: false
+    }, { quoted: processingMsg });
+    
+    // Message de confirmation
+    await sock.sendMessage(from, {
+      text: "> ✅ KNUT XMD: Audio TikTok envoyé !"
+    }, { quoted: processingMsg });
+
+  } catch (err) {
+    console.error("❌ Erreur tiktokmp3 :", err);
+    
+    await sock.sendMessage(msg.key.remoteJid, {
+      text: `> ⚠️ KNUT XMD: Erreur: ${err.message || "Échec du téléchargement"}`
+    }, { quoted: msg });
+  }
+};
+
+// Fonction à implémenter pour télécharger l'audio TikTok
+/*
+async function getTikTokAudio(url) {
+  // Options possibles :
+  
+  // 1. Utiliser une API (recommandé)
+  // Ex: const apiUrl = `https://api.tiklydown.eu.org/download?url=${encodeURIComponent(url)}`;
+  // const response = await fetch(apiUrl);
+  // return await response.json();
+  
+  // 2. Utiliser un scraper
+  // Ex: const tiktokScraper = await import('tiktok-scraper');
+  // const video = await tiktokScraper.getVideoMeta(url);
+  // return { audioUrl: video.music.playUrl };
+  
+  throw new Error("Fonction getTikTokAudio non implémentée");
+}
+*/

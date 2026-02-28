@@ -1,1 +1,273 @@
-function a101_0x3eca(){const _0x5760f6=['309LqjGBI','16LMPIPF','YOUTUBE_API_KEY','David:\x20','>\x20⚠️\x20KNUT\x20XMD:\x20','env','videos','get','ytmp3','FASTAPI','search','&format=mp3','url','apply','✅\x20Téléchargement\x20réussi\x20avec\x20','https://apis.davidcyril.name.ng/download/ytmp3','Keith:\x20','toString','log','>\x20⬇️\x20KNUT\x20XMD:\x20Téléchargement\x20en\x20cours...','YouTube\x20API\x20failed,\x20falling\x20back\x20to\x20yt-search','Izumi:\x20','❌\x20Erreur\x20play\x20:','video','⏱\x20*Durée:*\x20','8283869WYBmxY','application/json','sendMessage','length','Erreur:\x20','/ytmp3?url=','DAVID','?url=','Audio','4810830hXSYTx','high','/youtube?url=','title','service','push','thumbnail','👤\x20*Auteur:*\x20','error','song','downloadUrl','🎵\x20*Titre:*\x20','Aucune\x20vidéo\x20trouvée','Tous\x20les\x20services\x20ont\x20échoué:','Izumi\x20failed','3070002UYGiAk','result','220587WLfQzK','Inconnu','2823982JnNCbT','>\x20⚠️\x20KNUT\x20XMD:\x20Utilisation\x20:\x20.play\x20<titre\x20ou\x20lien\x20YouTube>','Aucune\x20vidéo','15VZEemP','thumbnails','Okatsu:\x20','https://www.youtube.com/watch?v=','Aucune\x20vidéo\x20trouvée\x20pour\x20votre\x20recherche.','videoId','includes','1158godXzm','results','N/A','message','27hqSoqQ','snippet','key','status','Keith\x20failed','(((.+)+)+)+$','author','https://izumiiiiiiii.dpdns.org/downloader','AIzaSyDV11sdmCCdyyToNU-XRFMbKgAA4IEDOS0','8DnxREf','https://okatsu-rolezapiiz.vercel.app/downloader','KEITH','.mp3','30311004sCLqlt','download_url','play','&fmt=mp3','>\x20🔍\x20KNUT\x20XMD:\x20Recherche\x20en\x20cours...','items','Okatsu\x20failed','YOUTUBE','OKATSU','/dlmp3?url=','download'];a101_0x3eca=function(){return _0x5760f6;};return a101_0x3eca();}const a101_0x3b1c1f=a101_0x1dd2;(function(_0x2a8a03,_0x4cfd3b){const _0x11cdfa=a101_0x1dd2,_0x1651b5=_0x2a8a03();while(!![]){try{const _0x3ae8f7=-parseInt(_0x11cdfa(0x104))/0x1*(parseInt(_0x11cdfa(0x143))/0x2)+parseInt(_0x11cdfa(0x137))/0x3*(parseInt(_0x11cdfa(0xf5))/0x4)+parseInt(_0x11cdfa(0x13c))/0x5*(-parseInt(_0x11cdfa(0x135))/0x6)+parseInt(_0x11cdfa(0x139))/0x7*(-parseInt(_0x11cdfa(0x105))/0x8)+parseInt(_0x11cdfa(0x147))/0x9*(parseInt(_0x11cdfa(0x126))/0xa)+-parseInt(_0x11cdfa(0x11d))/0xb+parseInt(_0x11cdfa(0xf9))/0xc;if(_0x3ae8f7===_0x4cfd3b)break;else _0x1651b5['push'](_0x1651b5['shift']());}catch(_0x48249c){_0x1651b5['push'](_0x1651b5['shift']());}}}(a101_0x3eca,0xcda8d));const a101_0x49909e=(function(){let _0x431676=!![];return function(_0x12d1e8,_0x3c5315){const _0x1b6705=_0x431676?function(){const _0x495779=a101_0x1dd2;if(_0x3c5315){const _0x2ce389=_0x3c5315[_0x495779(0x111)](_0x12d1e8,arguments);return _0x3c5315=null,_0x2ce389;}}:function(){};return _0x431676=![],_0x1b6705;};}()),a101_0x3afbb9=a101_0x49909e(this,function(){const _0x49ab6e=a101_0x1dd2;return a101_0x3afbb9['toString']()[_0x49ab6e(0x10e)](_0x49ab6e(0xf1))[_0x49ab6e(0x115)]()['constructor'](a101_0x3afbb9)[_0x49ab6e(0x10e)]('(((.+)+)+)+$');});a101_0x3afbb9();import a101_0x5e1e3e from'axios';function a101_0x1dd2(_0x58bf8f,_0x196ed1){_0x58bf8f=_0x58bf8f-0xf0;const _0x54aa48=a101_0x3eca();let _0x3afbb9=_0x54aa48[_0x58bf8f];return _0x3afbb9;}import a101_0x7c1d5b from'yt-search';const API_KEYS={'YOUTUBE':process[a101_0x3b1c1f(0x109)][a101_0x3b1c1f(0x106)]||a101_0x3b1c1f(0xf4)},APIS={'FASTAPI':'https://api.danscot.dev/api','IZUMI':a101_0x3b1c1f(0xf3),'OKATSU':a101_0x3b1c1f(0xf6),'KEITH':'https://apis-keith.vercel.app/download','DAVID':a101_0x3b1c1f(0x113)},AXIOS_DEFAULTS={'timeout':0xea60,'headers':{'User-Agent':'Mozilla/5.0','Accept':a101_0x3b1c1f(0x11e)}};async function tryRequest(_0x492fd1,_0x5aea60=0x3){let _0x1bc8b8;for(let _0x2f2ef9=0x1;_0x2f2ef9<=_0x5aea60;_0x2f2ef9++){try{return await _0x492fd1();}catch(_0x1762bb){_0x1bc8b8=_0x1762bb;if(_0x2f2ef9<_0x5aea60)await new Promise(_0x34b1ee=>setTimeout(_0x34b1ee,_0x2f2ef9*0x3e8));}}throw _0x1bc8b8;}async function searchYouTube(_0x117a51){const _0x15b0c6=a101_0x3b1c1f;if(API_KEYS[_0x15b0c6(0x100)])try{const {data:_0xb63373}=await a101_0x5e1e3e[_0x15b0c6(0x10b)]('https://www.googleapis.com/youtube/v3/search',{'params':{'part':_0x15b0c6(0x148),'q':_0x117a51,'type':_0x15b0c6(0x11b),'maxResults':0x1,'key':API_KEYS['YOUTUBE']}});if(_0xb63373[_0x15b0c6(0xfe)]?.['length'])return{'url':_0x15b0c6(0x13f)+_0xb63373[_0x15b0c6(0xfe)][0x0]['id'][_0x15b0c6(0x141)],'title':_0xb63373['items'][0x0][_0x15b0c6(0x148)]['title'],'thumbnail':_0xb63373[_0x15b0c6(0xfe)][0x0]['snippet'][_0x15b0c6(0x13d)][_0x15b0c6(0x127)]?.[_0x15b0c6(0x110)],'author':_0xb63373[_0x15b0c6(0xfe)][0x0]['snippet']['channelTitle'],'duration':'N/A'};}catch(_0x46f60c){console[_0x15b0c6(0x116)](_0x15b0c6(0x118));}const _0x522b58=await a101_0x7c1d5b(_0x117a51);if(_0x522b58[_0x15b0c6(0x10a)]?.[_0x15b0c6(0x120)])return{'url':_0x522b58[_0x15b0c6(0x10a)][0x0][_0x15b0c6(0x110)],'title':_0x522b58['videos'][0x0][_0x15b0c6(0x129)],'thumbnail':_0x522b58[_0x15b0c6(0x10a)][0x0][_0x15b0c6(0x12c)],'author':_0x522b58[_0x15b0c6(0x10a)][0x0][_0x15b0c6(0xf2)]?.['name']||_0x15b0c6(0x138),'duration':_0x522b58['videos'][0x0]['timestamp']||_0x15b0c6(0x145)};throw new Error(_0x15b0c6(0x132));}async function downloadAudio(_0x5ab723,_0x190d97=''){const _0x5a0f91=a101_0x3b1c1f,_0x57ac16=[],_0x5a9610=[async()=>{const _0x570e44=a101_0x1dd2;try{const {data:_0x58f0d9}=await a101_0x5e1e3e[_0x570e44(0x10b)](APIS[_0x570e44(0x123)]+_0x570e44(0x124)+encodeURIComponent(_0x5ab723));if(_0x58f0d9['success']&&_0x58f0d9[_0x570e44(0x136)]?.[_0x570e44(0xfa)])return{'url':_0x58f0d9[_0x570e44(0x136)][_0x570e44(0xfa)],'title':_0x58f0d9[_0x570e44(0x136)]['title']||_0x190d97||_0x570e44(0x125),'service':'DAVID'};throw new Error('David\x20API\x20failed');}catch(_0x149bfb){_0x57ac16[_0x570e44(0x12b)](_0x570e44(0x107)+_0x149bfb[_0x570e44(0x146)]);throw _0x149bfb;}},async()=>{const _0x520663=a101_0x1dd2;try{const {data:_0x312277}=await tryRequest(()=>a101_0x5e1e3e['get'](APIS[_0x520663(0x10d)]+'/youtube/downl/?url='+encodeURIComponent(_0x5ab723)+_0x520663(0xfc),AXIOS_DEFAULTS));if(_0x312277['status']==='ok'&&_0x312277[_0x520663(0x144)]?.[_0x520663(0xfa)])return{'url':_0x312277[_0x520663(0x144)]['download_url'],'title':_0x312277[_0x520663(0x144)]['title']||_0x190d97||_0x520663(0x125),'service':'FASTAPI'};throw new Error('FastAPI\x20failed');}catch(_0x503efd){_0x57ac16['push']('FastAPI:\x20'+_0x503efd[_0x520663(0x146)]);throw _0x503efd;}},async()=>{const _0x47f5ff=a101_0x1dd2;try{const {data:_0x4c063f}=await tryRequest(()=>a101_0x5e1e3e[_0x47f5ff(0x10b)](APIS['IZUMI']+_0x47f5ff(0x128)+encodeURIComponent(_0x5ab723)+_0x47f5ff(0x10f),AXIOS_DEFAULTS));if(_0x4c063f[_0x47f5ff(0x136)]?.[_0x47f5ff(0x103)])return{'url':_0x4c063f[_0x47f5ff(0x136)][_0x47f5ff(0x103)],'title':_0x4c063f['result']['title']||_0x190d97||'Audio','service':'IZUMI'};throw new Error(_0x47f5ff(0x134));}catch(_0x5d767d){_0x57ac16['push'](_0x47f5ff(0x119)+_0x5d767d[_0x47f5ff(0x146)]);throw _0x5d767d;}},async()=>{const _0x1b2dfd=a101_0x1dd2;try{const {data:_0x45b75c}=await tryRequest(()=>a101_0x5e1e3e['get'](APIS[_0x1b2dfd(0xf7)]+_0x1b2dfd(0x102)+encodeURIComponent(_0x5ab723),AXIOS_DEFAULTS));if(_0x45b75c[_0x1b2dfd(0x14a)]&&_0x45b75c[_0x1b2dfd(0x136)]?.[_0x1b2dfd(0x130)])return{'url':_0x45b75c[_0x1b2dfd(0x136)]['downloadUrl'],'title':_0x45b75c[_0x1b2dfd(0x136)][_0x1b2dfd(0x129)]||_0x190d97||_0x1b2dfd(0x125),'service':_0x1b2dfd(0xf7)};throw new Error(_0x1b2dfd(0xf0));}catch(_0x5e5cc3){_0x57ac16[_0x1b2dfd(0x12b)](_0x1b2dfd(0x114)+_0x5e5cc3[_0x1b2dfd(0x146)]);throw _0x5e5cc3;}},async()=>{const _0x1dfd44=a101_0x1dd2;try{const {data:_0x299afa}=await tryRequest(()=>a101_0x5e1e3e[_0x1dfd44(0x10b)](APIS[_0x1dfd44(0x101)]+_0x1dfd44(0x122)+encodeURIComponent(_0x5ab723),AXIOS_DEFAULTS));if(_0x299afa['dl'])return{'url':_0x299afa['dl'],'title':_0x299afa[_0x1dfd44(0x129)]||_0x190d97||_0x1dfd44(0x125),'service':'OKATSU'};throw new Error(_0x1dfd44(0xff));}catch(_0x4eecf8){_0x57ac16['push'](_0x1dfd44(0x13e)+_0x4eecf8[_0x1dfd44(0x146)]);throw _0x4eecf8;}}];for(const _0x2cd322 of _0x5a9610){try{const _0x69f252=await _0x2cd322();return console[_0x5a0f91(0x116)](_0x5a0f91(0x112)+_0x69f252[_0x5a0f91(0x12a)]),_0x69f252;}catch(_0x1e2efd){console[_0x5a0f91(0x116)]('❌\x20Échec:\x20'+_0x1e2efd[_0x5a0f91(0x146)]);}}console[_0x5a0f91(0x12e)](_0x5a0f91(0x133),_0x57ac16);throw new Error('Tous\x20les\x20services\x20de\x20téléchargement\x20ont\x20échoué');}export const name=a101_0x3b1c1f(0xfb);export const aliases=[a101_0x3b1c1f(0x12f),'music','audio',a101_0x3b1c1f(0x10c)];export async function execute(sock,msg,args){const _0x56de74=a101_0x3b1c1f;try{const from=msg[_0x56de74(0x149)]['remoteJid'],_0x2b90b5=args['join']('\x20');if(!args[_0x56de74(0x120)])return await sock[_0x56de74(0x11f)](from,{'text':_0x56de74(0x13a)},{'quoted':msg});const _0x220f5d=await sock[_0x56de74(0x11f)](from,{'text':_0x56de74(0xfd)},{'quoted':msg}),_0x4fd498=await searchYouTube(_0x2b90b5),_0x3944cc=_0x56de74(0x131)+_0x4fd498[_0x56de74(0x129)]+'\x0a'+(_0x56de74(0x12d)+(_0x4fd498[_0x56de74(0xf2)]||'Inconnu')+'\x0a')+(_0x56de74(0x11c)+_0x4fd498['duration']+'\x0a\x0a')+_0x56de74(0x117);_0x4fd498['thumbnail']?await sock[_0x56de74(0x11f)](from,{'image':{'url':_0x4fd498[_0x56de74(0x12c)]},'caption':_0x3944cc},{'quoted':msg}):await sock[_0x56de74(0x11f)](from,{'text':_0x3944cc},{'quoted':msg});const _0x2d997d=await downloadAudio(_0x4fd498[_0x56de74(0x110)],_0x4fd498[_0x56de74(0x129)]);await sock[_0x56de74(0x11f)](from,{'audio':{'url':_0x2d997d['url']},'mimetype':'audio/mpeg','fileName':_0x2d997d[_0x56de74(0x129)]['replace'](/[^\w\s]/gi,'')+_0x56de74(0xf8),'ptt':![]},{'quoted':msg}),await sock[_0x56de74(0x11f)](from,{'text':'>\x20✅\x20KNUT\x20XMD:\x20Télechargement\x20terminé'},{'quoted':msg});}catch(_0x562480){console['error'](_0x56de74(0x11a),_0x562480);let _0x5435b0=_0x56de74(0x108);if(_0x562480['message'][_0x56de74(0x142)](_0x56de74(0x13b)))_0x5435b0+=_0x56de74(0x140);else _0x562480[_0x56de74(0x146)][_0x56de74(0x142)]('tous\x20les\x20services')?_0x5435b0+='Impossible\x20de\x20télécharger\x20l\x27audio\x20pour\x20le\x20moment.\x20Veuillez\x20réessayer\x20plus\x20tard.':_0x5435b0+=_0x56de74(0x121)+_0x562480[_0x56de74(0x146)];await sock['sendMessage'](msg[_0x56de74(0x149)]['remoteJid'],{'text':_0x5435b0},{'quoted':msg});}};
+import axios from 'axios';
+import yts from 'yt-search';
+
+// Configuration
+const API_KEYS = { 
+    YOUTUBE: process.env.YOUTUBE_API_KEY || "AIzaSyDV11sdmCCdyyToNU-XRFMbKgAA4IEDOS0" 
+};
+const APIS = {
+    FASTAPI: "https://api.danscot.dev/api",
+    IZUMI: "https://izumiiiiiiii.dpdns.org/downloader",
+    OKATSU: "https://okatsu-rolezapiiz.vercel.app/downloader",
+    KEITH: "https://apis-keith.vercel.app/download",
+    DAVID: "https://apis.davidcyril.name.ng/download/ytmp3"
+};
+const AXIOS_DEFAULTS = { 
+    timeout: 60000, 
+    headers: { 
+        'User-Agent': 'Mozilla/5.0', 
+        Accept: 'application/json' 
+    } 
+};
+
+async function tryRequest(getter, attempts = 3) {
+    let lastError;
+    for (let i = 1; i <= attempts; i++) {
+        try { 
+            return await getter(); 
+        } catch (e) { 
+            lastError = e; 
+            if (i < attempts) await new Promise(r => setTimeout(r, i * 1000)); 
+        }
+    }
+    throw lastError;
+}
+
+async function searchYouTube(query) {
+    // Essayer d'abord avec YouTube API si disponible
+    if (API_KEYS.YOUTUBE) {
+        try {
+            const { data } = await axios.get("https://www.googleapis.com/youtube/v3/search", { 
+                params: { 
+                    part: "snippet", 
+                    q: query, 
+                    type: "video", 
+                    maxResults: 1, 
+                    key: API_KEYS.YOUTUBE 
+                } 
+            });
+            
+            if (data.items?.length) {
+                return { 
+                    url: `https://www.youtube.com/watch?v=${data.items[0].id.videoId}`, 
+                    title: data.items[0].snippet.title, 
+                    thumbnail: data.items[0].snippet.thumbnails.high?.url,
+                    author: data.items[0].snippet.channelTitle,
+                    duration: "N/A"
+                };
+            }
+        } catch (e) {
+            console.log("YouTube API failed, falling back to yt-search");
+        }
+    }
+    
+    // Fallback sur yt-search
+    const search = await yts(query);
+    if (search.videos?.length) {
+        return { 
+            url: search.videos[0].url, 
+            title: search.videos[0].title, 
+            thumbnail: search.videos[0].thumbnail,
+            author: search.videos[0].author?.name || "Inconnu",
+            duration: search.videos[0].timestamp || "N/A"
+        };
+    }
+    
+    throw new Error("Aucune vidéo trouvée");
+}
+
+async function downloadAudio(videoUrl, title = "") {
+    const errors = [];
+    
+    // Liste de tous les services à essayer
+    const services = [
+        // Service David Cyril
+        async () => {
+            try {
+                const { data } = await axios.get(`${APIS.DAVID}?url=${encodeURIComponent(videoUrl)}`);
+                if (data.success && data.result?.download_url) {
+                    return { 
+                        url: data.result.download_url, 
+                        title: data.result.title || title || "Audio",
+                        service: "DAVID"
+                    };
+                }
+                throw new Error('David API failed');
+            } catch (e) {
+                errors.push(`David: ${e.message}`);
+                throw e;
+            }
+        },
+        
+        // Service FastAPI
+        async () => {
+            try {
+                const { data } = await tryRequest(() => 
+                    axios.get(`${APIS.FASTAPI}/youtube/downl/?url=${encodeURIComponent(videoUrl)}&fmt=mp3`, AXIOS_DEFAULTS)
+                );
+                if (data.status === 'ok' && data.results?.download_url) {
+                    return { 
+                        url: data.results.download_url, 
+                        title: data.results.title || title || "Audio",
+                        service: "FASTAPI"
+                    };
+                }
+                throw new Error('FastAPI failed');
+            } catch (e) {
+                errors.push(`FastAPI: ${e.message}`);
+                throw e;
+            }
+        },
+        
+        // Service Izumi
+        async () => {
+            try {
+                const { data } = await tryRequest(() => 
+                    axios.get(`${APIS.IZUMI}/youtube?url=${encodeURIComponent(videoUrl)}&format=mp3`, AXIOS_DEFAULTS)
+                );
+                if (data.result?.download) {
+                    return { 
+                        url: data.result.download, 
+                        title: data.result.title || title || "Audio",
+                        service: "IZUMI"
+                    };
+                }
+                throw new Error('Izumi failed');
+            } catch (e) {
+                errors.push(`Izumi: ${e.message}`);
+                throw e;
+            }
+        },
+        
+        // Service Keith
+        async () => {
+            try {
+                const { data } = await tryRequest(() => 
+                    axios.get(`${APIS.KEITH}/dlmp3?url=${encodeURIComponent(videoUrl)}`, AXIOS_DEFAULTS)
+                );
+                if (data.status && data.result?.downloadUrl) {
+                    return { 
+                        url: data.result.downloadUrl, 
+                        title: data.result.title || title || "Audio",
+                        service: "KEITH"
+                    };
+                }
+                throw new Error('Keith failed');
+            } catch (e) {
+                errors.push(`Keith: ${e.message}`);
+                throw e;
+            }
+        },
+        
+        // Service Okatsu
+        async () => {
+            try {
+                const { data } = await tryRequest(() => 
+                    axios.get(`${APIS.OKATSU}/ytmp3?url=${encodeURIComponent(videoUrl)}`, AXIOS_DEFAULTS)
+                );
+                if (data.dl) {
+                    return { 
+                        url: data.dl, 
+                        title: data.title || title || "Audio",
+                        service: "OKATSU"
+                    };
+                }
+                throw new Error('Okatsu failed');
+            } catch (e) {
+                errors.push(`Okatsu: ${e.message}`);
+                throw e;
+            }
+        }
+    ];
+    
+    // Essayer chaque service jusqu'à ce qu'un fonctionne
+    for (const service of services) {
+        try {
+            const result = await service();
+            console.log(`✅ Téléchargement réussi avec ${result.service}`);
+            return result;
+        } catch (e) {
+            console.log(`❌ Échec: ${e.message}`);
+            // Continuer avec le service suivant
+        }
+    }
+    
+    // Si tous les services ont échoué
+    console.error("Tous les services ont échoué:", errors);
+    throw new Error("Tous les services de téléchargement ont échoué");
+}
+
+export const name = "play";
+export const aliases = ["song", "music", "audio", "ytmp3"];
+
+export async function execute(sock, msg, args) {
+    try {
+        const from = msg.key.remoteJid;
+        const query = args.join(" ");
+
+        // Vérification des arguments
+        if (!args.length) {
+            return await sock.sendMessage(from, { 
+                text: "> ⚠️ KNUT XMD: Utilisation : .play <titre ou lien YouTube>" 
+            }, { quoted: msg });
+        }
+
+        // Message de recherche
+        const searchMsg = await sock.sendMessage(from, { 
+            text: "> 🔍 KNUT XMD: Recherche en cours..." 
+        }, { quoted: msg });
+
+        // Recherche de la vidéo
+        const video = await searchYouTube(query);
+
+        // Envoi des informations de la vidéo
+        const infoText = `🎵 *Titre:* ${video.title}\n` +
+                        `👤 *Auteur:* ${video.author || "Inconnu"}\n` +
+                        `⏱ *Durée:* ${video.duration}\n\n` +
+                        `> ⬇️ KNUT XMD: Téléchargement en cours...`;
+
+        if (video.thumbnail) {
+            await sock.sendMessage(from, {
+                image: { url: video.thumbnail },
+                caption: infoText
+            }, { quoted: msg });
+        } else {
+            await sock.sendMessage(from, { 
+                text: infoText 
+            }, { quoted: msg });
+        }
+
+        // Téléchargement de l'audio
+        const audio = await downloadAudio(video.url, video.title);
+
+        // Envoi du fichier audio
+        await sock.sendMessage(from, {
+            audio: { url: audio.url },
+            mimetype: 'audio/mpeg',
+            fileName: `${audio.title.replace(/[^\w\s]/gi, '')}.mp3`,
+            ptt: false
+        }, { quoted: msg });
+
+        // Message de confirmation avec le service utilisé
+        await sock.sendMessage(from, { 
+            text: `> ✅ KNUT XMD: Télechargement terminé` 
+        }, { quoted: msg });
+
+    } catch (err) {
+        console.error("❌ Erreur play :", err);
+        
+        let errorMsg = "> ⚠️ KNUT XMD: ";
+        
+        if (err.message.includes("Aucune vidéo")) {
+            errorMsg += "Aucune vidéo trouvée pour votre recherche.";
+        } else if (err.message.includes("tous les services")) {
+            errorMsg += "Impossible de télécharger l'audio pour le moment. Veuillez réessayer plus tard.";
+        } else {
+            errorMsg += `Erreur: ${err.message}`;
+        }
+        
+        await sock.sendMessage(msg.key.remoteJid, {
+            text: errorMsg
+        }, { quoted: msg });
+    }
+};

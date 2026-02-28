@@ -1,1 +1,62 @@
-const a137_0x4c31e5=a137_0x26e1;(function(_0x1c56ad,_0x5ac712){const _0x21f5a8=a137_0x26e1,_0x45b56b=_0x1c56ad();while(!![]){try{const _0x3ec800=parseInt(_0x21f5a8(0x152))/0x1+-parseInt(_0x21f5a8(0x135))/0x2+parseInt(_0x21f5a8(0x139))/0x3+parseInt(_0x21f5a8(0x14b))/0x4*(-parseInt(_0x21f5a8(0x133))/0x5)+parseInt(_0x21f5a8(0x147))/0x6+-parseInt(_0x21f5a8(0x145))/0x7+-parseInt(_0x21f5a8(0x13d))/0x8;if(_0x3ec800===_0x5ac712)break;else _0x45b56b['push'](_0x45b56b['shift']());}catch(_0x244cf7){_0x45b56b['push'](_0x45b56b['shift']());}}}(a137_0x5bfa,0xc63de));const a137_0x23e302=(function(){let _0x2e55f9=!![];return function(_0x4aa52c,_0x541ae1){const _0x371470=_0x2e55f9?function(){const _0x345893=a137_0x26e1;if(_0x541ae1){const _0x2100a2=_0x541ae1[_0x345893(0x13e)](_0x4aa52c,arguments);return _0x541ae1=null,_0x2100a2;}}:function(){};return _0x2e55f9=![],_0x371470;};}()),a137_0x1fd36f=a137_0x23e302(this,function(){const _0xc34e5d=a137_0x26e1;return a137_0x1fd36f[_0xc34e5d(0x12f)]()['search']('(((.+)+)+)+$')[_0xc34e5d(0x12f)]()[_0xc34e5d(0x150)](a137_0x1fd36f)['search'](_0xc34e5d(0x153));});a137_0x1fd36f();function a137_0x5bfa(){const _0x5e6936=['(((.+)+)+)+$','toString','join','./temp','save','115MbdESn','message','1213162QxFHen','quotedMessage','key','unlinkSync','2993910cFugbT','remoteJid','•\x20`.tts\x20Bonjour\x20tout\x20le\x20monde`\x0a','.mp3','6780920WBoULV','apply','readFileSync','error','extendedTextMessage','❌\x20KNUT\x20XMD\x20TTS\x20Error:','•\x20Répondre\x20à\x20un\x20message\x20:\x20`.tts`','mkdirSync','801696TzcBdz','audio/mpeg','2060520wCFiwD','contextInfo','Fun','now','34412EIpODv','sendMessage','tts','existsSync','tts_','constructor','❌\x20*KNUT\x20XMD\x20TTS*\x0a\x0a','1237201gBElTH'];a137_0x5bfa=function(){return _0x5e6936;};return a137_0x5bfa();}import a137_0x4072b2 from'fs';function a137_0x26e1(_0x2699ea,_0x4674d4){_0x2699ea=_0x2699ea-0x12f;const _0x2b78df=a137_0x5bfa();let _0x1fd36f=_0x2b78df[_0x2699ea];return _0x1fd36f;}import a137_0x37ec27 from'path';import a137_0x266082 from'node-gtts';export const name=a137_0x4c31e5(0x14d);export const description='Text\x20to\x20Speech\x20FR\x20(voix\x20féminine)';export const category=a137_0x4c31e5(0x149);export async function execute(sock,msg,args){const _0x2c4a55=a137_0x4c31e5;try{const from=msg[_0x2c4a55(0x137)]['remoteJid'],_0x54c7e7=_0x2c4a55(0x131);if(!a137_0x4072b2[_0x2c4a55(0x14e)](_0x54c7e7))a137_0x4072b2[_0x2c4a55(0x144)](_0x54c7e7);let _0x8c5f7=msg[_0x2c4a55(0x134)]?.[_0x2c4a55(0x141)]?.[_0x2c4a55(0x148)]?.[_0x2c4a55(0x136)]?.['conversation']||msg['message']?.[_0x2c4a55(0x141)]?.[_0x2c4a55(0x148)]?.['quotedMessage']?.['extendedTextMessage']?.['text']||args[_0x2c4a55(0x130)]('\x20');if(!_0x8c5f7)return await sock['sendMessage'](from,{'text':_0x2c4a55(0x151)+'Utilisation\x20:\x0a'+_0x2c4a55(0x13b)+_0x2c4a55(0x143)},{'quoted':msg});const _0x467838=a137_0x266082('fr'),_0x2c9373=a137_0x37ec27[_0x2c4a55(0x130)](_0x54c7e7,_0x2c4a55(0x14f)+Date[_0x2c4a55(0x14a)]()+_0x2c4a55(0x13c));_0x467838[_0x2c4a55(0x132)](_0x2c9373,_0x8c5f7,async()=>{const _0x427b1b=_0x2c4a55;await sock['sendMessage'](from,{'audio':a137_0x4072b2[_0x427b1b(0x13f)](_0x2c9373),'mimetype':_0x427b1b(0x146),'ptt':![]},{'quoted':msg}),a137_0x4072b2[_0x427b1b(0x138)](_0x2c9373);});}catch(_0x81b0df){console[_0x2c4a55(0x140)](_0x2c4a55(0x142),_0x81b0df),await sock[_0x2c4a55(0x14c)](msg['key'][_0x2c4a55(0x13a)],{'text':'❌\x20*KNUT\x20XMD*:\x20Erreur\x20TTS.'},{'quoted':msg});}}
+import fs from "fs";
+import path from "path";
+import gTTS from "node-gtts";
+
+export const name = "tts";
+export const description = "Text to Speech FR (voix féminine)";
+export const category = "Fun";
+
+export async function execute(sock, msg, args) {
+  try {
+    const from = msg.key.remoteJid;
+    const tempDir = "./temp";
+    if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir);
+
+    // Récupération du texte (reply ou args)
+    let text =
+      msg.message?.extendedTextMessage?.contextInfo?.quotedMessage?.conversation ||
+      msg.message?.extendedTextMessage?.contextInfo?.quotedMessage?.extendedTextMessage?.text ||
+      args.join(" ");
+
+    if (!text) {
+      return await sock.sendMessage(
+        from,
+        {
+          text:
+            "❌ *KNUT XMD TTS*\n\n" +
+            "Utilisation :\n" +
+            "• `.tts Bonjour tout le monde`\n" +
+            "• Répondre à un message : `.tts`"
+        },
+        { quoted: msg }
+      );
+    }
+
+    // Initialisation TTS français
+    const tts = gTTS("fr");
+    const filePath = path.join(tempDir, `tts_${Date.now()}.mp3`);
+
+    // Génération audio
+    tts.save(filePath, text, async () => {
+      await sock.sendMessage(
+        from,
+        {
+          audio: fs.readFileSync(filePath),
+          mimetype: "audio/mpeg",
+          ptt: false
+        },
+        { quoted: msg }
+      );
+
+      fs.unlinkSync(filePath);
+    });
+
+  } catch (err) {
+    console.error("❌ KNUT XMD TTS Error:", err);
+    await sock.sendMessage(
+      msg.key.remoteJid,
+      { text: "❌ *KNUT XMD*: Erreur TTS." },
+      { quoted: msg }
+    );
+  }
+}

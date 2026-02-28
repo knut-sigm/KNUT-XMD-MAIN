@@ -1,1 +1,79 @@
-const a108_0x5a2ea6=a108_0x1482;(function(_0x4c05a4,_0x4a4f39){const _0x446707=a108_0x1482,_0x16c75b=_0x4c05a4();while(!![]){try{const _0x31363f=-parseInt(_0x446707(0x161))/0x1+-parseInt(_0x446707(0x148))/0x2*(-parseInt(_0x446707(0x14c))/0x3)+-parseInt(_0x446707(0x15d))/0x4+parseInt(_0x446707(0x15f))/0x5+-parseInt(_0x446707(0x15a))/0x6+parseInt(_0x446707(0x16e))/0x7+parseInt(_0x446707(0x15e))/0x8*(parseInt(_0x446707(0x144))/0x9);if(_0x31363f===_0x4a4f39)break;else _0x16c75b['push'](_0x16c75b['shift']());}catch(_0x59d7d0){_0x16c75b['push'](_0x16c75b['shift']());}}}(a108_0x34b8,0x2fdaa));const a108_0x4a4b80=(function(){let _0x1b94a8=!![];return function(_0x5dde0b,_0x572823){const _0x6a470=_0x1b94a8?function(){const _0x106d93=a108_0x1482;if(_0x572823){const _0x3fadbe=_0x572823[_0x106d93(0x170)](_0x5dde0b,arguments);return _0x572823=null,_0x3fadbe;}}:function(){};return _0x1b94a8=![],_0x6a470;};}()),a108_0x322ea6=a108_0x4a4b80(this,function(){const _0x31f818=a108_0x1482;return a108_0x322ea6[_0x31f818(0x153)]()[_0x31f818(0x16a)](_0x31f818(0x14d))[_0x31f818(0x153)]()['constructor'](a108_0x322ea6)[_0x31f818(0x16a)](_0x31f818(0x14d));});function a108_0x34b8(){const _0x5d48ff=['>\x20Knut\x20XMD:\x20*ÉTAT\x20PROTECTIONS\x202*\x0a\x0a','getStats','includes','antiDeleteGroupes','\x20\x20\x20Contacts\x20:\x20','autowrite','owners','💬\x20Anti-Delete\x20IB\x20\x20\x20\x20:\x20','252IjiWkV','\x20\x20\x20Bot\x20IB\x20:\x20','•\x20autorecording\x0a','totalMessages','4cKtrcB','Erreur\x20protection2:','participant','\x20\x20\x20Simulations\x20:\x20','180087QelJvS','(((.+)+)+)+$','totalSimulations','>\x20Knut\x20XMD\x20:\x20Accès\x20refusé.\x20Owner\x20ou\x20sudo\x20requis.','totalAudiosSent','map','autorecording','toString','💚\x20Auto\x20Status\x20Like\x20\x20:\x20','•\x20antidelete-ib\x0a','>\x20Knut\x20XMD\x20:\x20Une\x20erreur\x20est\x20survenue.','•\x20antidelete-groups\x0a','simple','totalStatusLikes','65562rnLdvy','status','🎵\x20Audio\x20Response\x20\x20\x20\x20:\x20','1390944xdEHcA','60584ulmade','924020dlKbIQ','antiDeleteIB','238601NXCpKk','\x20\x20\x20Médias\x20:\x20','protection2','>\x20Commandes\x20disponibles\x20:\x0a','sendMessage','protectionSystem','\x20\x20\x20Likes\x20:\x20','isEnabled','replace','search','🎙️\x20Auto\x20Recording\x20\x20\x20\x20:\x20','totalMedia','key','1934576LBkqTt','•\x20protection2','apply'];a108_0x34b8=function(){return _0x5d48ff;};return a108_0x34b8();}a108_0x322ea6();function a108_0x1482(_0x584d96,_0x16a48f){_0x584d96=_0x584d96-0x143;const _0x151bbe=a108_0x34b8();let _0x322ea6=_0x151bbe[_0x584d96];return _0x322ea6;}import a108_0x487d4b from'fs';import a108_0xe548bc from'path';import{loadSudo}from'../index.js';export const name=a108_0x5a2ea6(0x163);export async function execute(sock,msg,args,from){const _0x239389=a108_0x5a2ea6;try{const _0x387a72=msg[_0x239389(0x16d)][_0x239389(0x14a)]||from,_0x415bd3=_0x387a72['split']('@')[0x0][_0x239389(0x169)](/[^0-9]/g,''),_0x29da11=(global[_0x239389(0x177)]||[])[_0x239389(0x151)](_0x10f96e=>_0x10f96e[_0x239389(0x169)](/[^0-9]/g,'')),_0x509c08=loadSudo()['map'](_0x4f5cb7=>_0x4f5cb7[_0x239389(0x169)](/[^0-9]/g,'')),_0x32ffbd=_0x29da11['includes'](_0x415bd3),_0x125c31=_0x509c08[_0x239389(0x173)](_0x415bd3);if(!_0x32ffbd&&!_0x125c31){await sock[_0x239389(0x165)](from,{'text':_0x239389(0x14f)},{'quoted':msg});return;}if(!global[_0x239389(0x166)]){await sock[_0x239389(0x165)](from,{'text':'>\x20Knut\x20XMD\x20:\x20Système\x20de\x20protection\x20non\x20initialisé.'},{'quoted':msg});return;}const _0x308128=global[_0x239389(0x166)],_0x3e53e9=_0x308128[_0x239389(0x172)](),_0x2ae7a7=_0x308128[_0x239389(0x174)]?.[_0x239389(0x172)]()||{'totalMessages':0x0,'totalMedia':0x0,'isEnabled':![],'mode':_0x239389(0x158)},_0x28cc33=_0x308128[_0x239389(0x160)]?.['getStats']()||{'totalContacts':0x0,'totalMessages':0x0,'totalMedia':0x0,'isEnabled':![],'botNumber':'Non\x20défini'},_0x29d156=_0x3e53e9[_0x239389(0x15b)]['audiorespons']?'✅':'🛑',_0x2da763=_0x3e53e9[_0x239389(0x15b)][_0x239389(0x176)]?'✅':'🛑',_0x387f14=_0x3e53e9[_0x239389(0x15b)][_0x239389(0x152)]?'✅':'🛑',_0x435045=_0x3e53e9['status']['autostatuslike']?'✅':'🛑',_0xc01406=_0x2ae7a7['isEnabled']?'✅':'🛑',_0x2dca6c=_0x28cc33[_0x239389(0x168)]?'✅':'🛑',_0x7e06ee=_0x2ae7a7['mode']==='simple'?'📢\x20Groupe':'👤\x20Owner\x20IB',_0xd65a16=_0x239389(0x171)+(_0x239389(0x15c)+_0x29d156+'\x0a')+('\x20\x20\x20Mentions\x20:\x20'+_0x3e53e9['totalMentions']+'\x0a')+('\x20\x20\x20Audios\x20:\x20'+_0x3e53e9[_0x239389(0x150)]+'\x0a\x0a')+('⌨️\x20Auto\x20Write\x20\x20\x20\x20\x20\x20\x20\x20:\x20'+_0x2da763+'\x0a')+(_0x239389(0x14b)+_0x3e53e9[_0x239389(0x14e)]+'\x0a\x0a')+(_0x239389(0x16b)+_0x387f14+'\x0a\x0a')+(_0x239389(0x154)+_0x435045+'\x0a')+(_0x239389(0x167)+_0x3e53e9[_0x239389(0x159)]+'\x0a\x0a')+('👥\x20Anti-Delete\x20Groups\x20:\x20'+_0xc01406+'\x0a')+('\x20\x20\x20Mode\x20:\x20'+_0x7e06ee+'\x0a')+('\x20\x20\x20Messages\x20:\x20'+_0x2ae7a7['totalMessages']+'\x0a')+(_0x239389(0x162)+_0x2ae7a7['totalMedia']+'\x0a\x0a')+(_0x239389(0x143)+_0x2dca6c+'\x0a')+(_0x239389(0x175)+_0x28cc33['totalContacts']+'\x0a')+('\x20\x20\x20Messages\x20:\x20'+_0x28cc33[_0x239389(0x147)]+'\x0a')+(_0x239389(0x162)+_0x28cc33[_0x239389(0x16c)]+'\x0a')+(_0x239389(0x145)+_0x28cc33['botNumber']+'\x0a\x0a')+_0x239389(0x164)+'•\x20audiorespon\x0a'+'•\x20autowrite\x0a'+_0x239389(0x146)+'•\x20autostatuslike\x0a'+_0x239389(0x157)+_0x239389(0x155)+_0x239389(0x16f);await sock['sendMessage'](from,{'text':_0xd65a16},{'quoted':msg});}catch(_0x39f0a3){console['error'](_0x239389(0x149),_0x39f0a3),await sock['sendMessage'](from,{'text':_0x239389(0x156)},{'quoted':msg});}}
+import fs from "fs";
+import path from "path";
+import { loadSudo } from "../index.js";
+
+export const name = "protection2";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === RÉCUPÉRER L'EXPÉDITEUR ===
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // === VÉRIFICATION DES DROITS (OWNER ET SUDO UNIQUEMENT) ===
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+
+    if (!isOwner && !isSudo) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Accès refusé. Owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    // === VÉRIFIER SYSTÈME DE PROTECTION ===
+    if (!global.protectionSystem) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Système de protection non initialisé." }, { quoted: msg });
+      return;
+    }
+
+    const ps = global.protectionSystem;
+    const mainStats = ps.getStats();
+    const groupesStats = ps.antiDeleteGroupes?.getStats() || { totalMessages: 0, totalMedia: 0, isEnabled: false, mode: 'simple' };
+    const ibStats = ps.antiDeleteIB?.getStats() || { totalContacts: 0, totalMessages: 0, totalMedia: 0, isEnabled: false, botNumber: 'Non défini' };
+
+    const audioStatus = mainStats.status.audiorespons ? "✅" : "🛑";
+    const writeStatus = mainStats.status.autowrite ? "✅" : "🛑";
+    const recordStatus = mainStats.status.autorecording ? "✅" : "🛑";
+    const likeStatus = mainStats.status.autostatuslike ? "✅" : "🛑";
+    const groupesStatus = groupesStats.isEnabled ? "✅" : "🛑";
+    const ibStatus = ibStats.isEnabled ? "✅" : "🛑";
+
+    const modeText = groupesStats.mode === "simple" ? "📢 Groupe" : "👤 Owner IB";
+
+    const message = 
+      `> Knut XMD: *ÉTAT PROTECTIONS 2*\n\n` +
+      `🎵 Audio Response    : ${audioStatus}\n` +
+      `   Mentions : ${mainStats.totalMentions}\n` +
+      `   Audios : ${mainStats.totalAudiosSent}\n\n` +
+      `⌨️ Auto Write        : ${writeStatus}\n` +
+      `   Simulations : ${mainStats.totalSimulations}\n\n` +
+      `🎙️ Auto Recording    : ${recordStatus}\n\n` +
+      `💚 Auto Status Like  : ${likeStatus}\n` +
+      `   Likes : ${mainStats.totalStatusLikes}\n\n` +
+      `👥 Anti-Delete Groups : ${groupesStatus}\n` +
+      `   Mode : ${modeText}\n` +
+      `   Messages : ${groupesStats.totalMessages}\n` +
+      `   Médias : ${groupesStats.totalMedia}\n\n` +
+      `💬 Anti-Delete IB    : ${ibStatus}\n` +
+      `   Contacts : ${ibStats.totalContacts}\n` +
+      `   Messages : ${ibStats.totalMessages}\n` +
+      `   Médias : ${ibStats.totalMedia}\n` +
+      `   Bot IB : ${ibStats.botNumber}\n\n` +
+      `> Commandes disponibles :\n` +
+      `• audiorespon\n` +
+      `• autowrite\n` +
+      `• autorecording\n` +
+      `• autostatuslike\n` +
+      `• antidelete-groups\n` +
+      `• antidelete-ib\n` +
+      `• protection2`;
+
+    await sock.sendMessage(from, { text: message }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur protection2:", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Une erreur est survenue." }, { quoted: msg });
+  }
+}

@@ -1,1 +1,37 @@
-const a132_0x137656=a132_0x339a;(function(_0x56028f,_0x27f8b8){const _0x36741b=a132_0x339a,_0x3431d3=_0x56028f();while(!![]){try{const _0x1c77d0=parseInt(_0x36741b(0x139))/0x1*(-parseInt(_0x36741b(0x132))/0x2)+parseInt(_0x36741b(0x131))/0x3*(-parseInt(_0x36741b(0x13c))/0x4)+parseInt(_0x36741b(0x134))/0x5+-parseInt(_0x36741b(0x13b))/0x6*(-parseInt(_0x36741b(0x129))/0x7)+-parseInt(_0x36741b(0x133))/0x8*(-parseInt(_0x36741b(0x12f))/0x9)+parseInt(_0x36741b(0x142))/0xa*(parseInt(_0x36741b(0x13f))/0xb)+parseInt(_0x36741b(0x141))/0xc*(-parseInt(_0x36741b(0x135))/0xd);if(_0x1c77d0===_0x27f8b8)break;else _0x3431d3['push'](_0x3431d3['shift']());}catch(_0x37c1a1){_0x3431d3['push'](_0x3431d3['shift']());}}}(a132_0xb869,0x95521));function a132_0xb869(){const _0x391e0a=['389616LmwLjC','4017760zXpSks','26ggoqNO','sendMessage','Error:','(((.+)+)+)+$','1xgAfKc','>\x20⏳\x20Téléchargement\x20audio\x20TikTok...','1182738MyHJPl','8QYAffa','constructor','key','2624281NXLfoQ','apply','14293908IlNJuB','50MrYIBo','tiktokaudio','toString','21bTHQex','>\x20❌\x20Échec','audio/mpeg','https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3','search','>\x20❌\x20Lien\x20TikTok\x20requis','153VJjqQJ','tiktok.mp3','300579IFooHO','442778sqekBx'];a132_0xb869=function(){return _0x391e0a;};return a132_0xb869();}const a132_0x288945=(function(){let _0x19c272=!![];return function(_0x5c019b,_0x12c162){const _0x513e7a=_0x19c272?function(){const _0x47c11a=a132_0x339a;if(_0x12c162){const _0x1ab105=_0x12c162[_0x47c11a(0x140)](_0x5c019b,arguments);return _0x12c162=null,_0x1ab105;}}:function(){};return _0x19c272=![],_0x513e7a;};}()),a132_0x57f6d0=a132_0x288945(this,function(){const _0x1aae29=a132_0x339a;return a132_0x57f6d0[_0x1aae29(0x128)]()[_0x1aae29(0x12d)]('(((.+)+)+)+$')[_0x1aae29(0x128)]()[_0x1aae29(0x13d)](a132_0x57f6d0)['search'](_0x1aae29(0x138));});a132_0x57f6d0();export const name=a132_0x137656(0x127);export async function execute(sock,msg,args){const _0x4301b0=a132_0x137656;try{const from=msg[_0x4301b0(0x13e)]['remoteJid'];if(!args||args['length']===0x0){await sock[_0x4301b0(0x136)](from,{'text':_0x4301b0(0x12e)},{'quoted':msg});return;}const _0x275fd4=args[0x0],_0x2c6673=await sock[_0x4301b0(0x136)](from,{'text':_0x4301b0(0x13a)},{'quoted':msg});await new Promise(_0x21b708=>setTimeout(_0x21b708,0x9c4)),await sock[_0x4301b0(0x136)](from,{'audio':{'url':_0x4301b0(0x12c)},'fileName':_0x4301b0(0x130),'mimetype':_0x4301b0(0x12b)},{'quoted':_0x2c6673});}catch(_0x5c2fb6){console['error'](_0x4301b0(0x137),_0x5c2fb6),await sock[_0x4301b0(0x136)](msg[_0x4301b0(0x13e)]['remoteJid'],{'text':_0x4301b0(0x12a)},{'quoted':msg});}}function a132_0x339a(_0x2a34a8,_0x2abd0a){_0x2a34a8=_0x2a34a8-0x127;const _0x2ecb9f=a132_0xb869();let _0x57f6d0=_0x2ecb9f[_0x2a34a8];return _0x57f6d0;};
+export const name = "tiktokaudio";
+
+export async function execute(sock, msg, args) {
+  try {
+    const from = msg.key.remoteJid;
+    
+    if (!args || args.length === 0) {
+      await sock.sendMessage(from, { text: "> ❌ Lien TikTok requis" }, { quoted: msg });
+      return;
+    }
+
+    const url = args[0];
+    
+    // Un seul message de traitement
+    const processing = await sock.sendMessage(from, { 
+      text: "> ⏳ Téléchargement audio TikTok..." 
+    }, { quoted: msg });
+
+    // Simulation du téléchargement
+    await new Promise(resolve => setTimeout(resolve, 2500));
+
+    // Envoi direct de l'audio (simulation)
+    await sock.sendMessage(from, {
+      audio: { 
+        url: "https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3" 
+      },
+      fileName: 'tiktok.mp3',
+      mimetype: 'audio/mpeg'
+    }, { quoted: processing });
+
+  } catch (err) {
+    console.error("Error:", err);
+    await sock.sendMessage(msg.key.remoteJid, {
+      text: "> ❌ Échec"
+    }, { quoted: msg });
+  }
+};

@@ -1,1 +1,33 @@
-const a128_0x54b5a8=a128_0x2fd8;(function(_0x2173de,_0x309ef7){const _0x1c6e53=a128_0x2fd8,_0x1f6585=_0x2173de();while(!![]){try{const _0x3f2ff6=-parseInt(_0x1c6e53(0xeb))/0x1*(-parseInt(_0x1c6e53(0xd3))/0x2)+-parseInt(_0x1c6e53(0xe1))/0x3+parseInt(_0x1c6e53(0xd4))/0x4+parseInt(_0x1c6e53(0xe7))/0x5*(parseInt(_0x1c6e53(0xda))/0x6)+-parseInt(_0x1c6e53(0xdd))/0x7*(parseInt(_0x1c6e53(0xd9))/0x8)+-parseInt(_0x1c6e53(0xd7))/0x9*(parseInt(_0x1c6e53(0xec))/0xa)+-parseInt(_0x1c6e53(0xd6))/0xb*(-parseInt(_0x1c6e53(0xee))/0xc);if(_0x3f2ff6===_0x309ef7)break;else _0x1f6585['push'](_0x1f6585['shift']());}catch(_0x35a7a3){_0x1f6585['push'](_0x1f6585['shift']());}}}(a128_0x21be,0x80b5e));const a128_0x10b07a=(function(){let _0x4fceb0=!![];return function(_0x100f3b,_0x186aaf){const _0x5ddcf0=_0x4fceb0?function(){const _0x530b0d=a128_0x2fd8;if(_0x186aaf){const _0x57ce0f=_0x186aaf[_0x530b0d(0xea)](_0x100f3b,arguments);return _0x186aaf=null,_0x57ce0f;}}:function(){};return _0x4fceb0=![],_0x5ddcf0;};}()),a128_0x57a99e=a128_0x10b07a(this,function(){const _0x11a07c=a128_0x2fd8;return a128_0x57a99e[_0x11a07c(0xde)]()[_0x11a07c(0xed)]('(((.+)+)+)+$')['toString']()[_0x11a07c(0xe0)](a128_0x57a99e)['search'](_0x11a07c(0xe2));});a128_0x57a99e();import{Sticker,StickerTypes}from'wa-sticker-formatter';import{downloadContentFromMessage}from'@whiskeysockets/baileys';export const name=a128_0x54b5a8(0xe8);function a128_0x2fd8(_0x3018fa,_0x4a888f){_0x3018fa=_0x3018fa-0xd3;const _0x457cb8=a128_0x21be();let _0x57a99e=_0x457cb8[_0x3018fa];return _0x57a99e;}export async function execute(sock,_0x511f28,args){const _0x43df4b=a128_0x54b5a8;try{const _0x3d12e9=_0x511f28['message']?.['extendedTextMessage']?.[_0x43df4b(0xe3)]?.[_0x43df4b(0xdf)]?.['stickerMessage'];if(!_0x3d12e9){await sock[_0x43df4b(0xd5)](_0x511f28[_0x43df4b(0xe9)][_0x43df4b(0xd8)],{'text':_0x43df4b(0xe4)},{'quoted':_0x511f28});return;}const _0x426c55=await downloadContentFromMessage(_0x3d12e9,'sticker');let _0x10fe97=Buffer[_0x43df4b(0xe5)]([]);for await(const _0x3ed909 of _0x426c55){_0x10fe97=Buffer[_0x43df4b(0xef)]([_0x10fe97,_0x3ed909]);}const _0x5f360d=new Sticker(_0x10fe97,{'pack':'By','author':_0x511f28['pushName']||_0x43df4b(0xe6),'type':StickerTypes['FULL'],'quality':0x46});await sock['sendMessage'](_0x511f28['key']['remoteJid'],{'sticker':await _0x5f360d['build']()},{'quoted':_0x511f28});}catch(_0x2dcef1){await sock['sendMessage'](_0x511f28['key']['remoteJid'],{'text':_0x43df4b(0xdb)+_0x2dcef1[_0x43df4b(0xdc)]},{'quoted':_0x511f28});}}function a128_0x21be(){const _0x3c716b=['quotedMessage','constructor','2864109FtdeDq','(((.+)+)+)+$','contextInfo','>\x20Knut\x20XMD:⚠️\x20Réponds\x20à\x20un\x20sticker\x20pour\x20le\x20modifier.','from','Knut\x20XMD','1454315YDnGEc','take','key','apply','13tYjcJh','24690xeAMhQ','search','1260CGZldT','concat','55158PpDUzX','4034808rbVUqt','sendMessage','162679yCwqJK','3294HmoaIW','remoteJid','16AaQIMa','6WMEcTq','❌\x20Erreur\x20take\x20:\x20','message','2888837GaLODr','toString'];a128_0x21be=function(){return _0x3c716b;};return a128_0x21be();}
+import { Sticker, StickerTypes } from "wa-sticker-formatter";
+import { downloadContentFromMessage } from "@whiskeysockets/baileys";
+
+export const name = "take";
+export async function execute(sock, m, args) {
+  try {
+    const quoted = m.message?.extendedTextMessage?.contextInfo?.quotedMessage?.stickerMessage;
+    if (!quoted) {
+      await sock.sendMessage(m.key.remoteJid, { text: "> Knut XMD:⚠️ Réponds à un sticker pour le modifier." }, { quoted: m });
+      return;
+    }
+
+    // Téléchargement du sticker
+    const stream = await downloadContentFromMessage(quoted, "sticker");
+    let buffer = Buffer.from([]);
+    for await (const chunk of stream) {
+      buffer = Buffer.concat([buffer, chunk]);
+    }
+
+    // Re-création du sticker avec ton pseudo
+    const sticker = new Sticker(buffer, {
+      pack: "By",
+      author: m.pushName || "Knut XMD",
+      type: StickerTypes.FULL,
+      quality: 70,
+    });
+
+    await sock.sendMessage(m.key.remoteJid, { sticker: await sticker.build() }, { quoted: m });
+
+  } catch (e) {
+    await sock.sendMessage(m.key.remoteJid, { text: "❌ Erreur take : " + e.message }, { quoted: m });
+  }
+}

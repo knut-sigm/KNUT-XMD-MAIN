@@ -1,1 +1,45 @@
-(function(_0x29a605,_0x23042b){const _0x19dcd4=a117_0x477a,_0x43d53f=_0x29a605();while(!![]){try{const _0x28a9e2=parseInt(_0x19dcd4(0x173))/0x1*(-parseInt(_0x19dcd4(0x177))/0x2)+-parseInt(_0x19dcd4(0x17e))/0x3*(parseInt(_0x19dcd4(0x16e))/0x4)+parseInt(_0x19dcd4(0x164))/0x5+-parseInt(_0x19dcd4(0x16f))/0x6*(parseInt(_0x19dcd4(0x163))/0x7)+parseInt(_0x19dcd4(0x175))/0x8*(parseInt(_0x19dcd4(0x176))/0x9)+-parseInt(_0x19dcd4(0x16c))/0xa+-parseInt(_0x19dcd4(0x178))/0xb*(-parseInt(_0x19dcd4(0x16a))/0xc);if(_0x28a9e2===_0x23042b)break;else _0x43d53f['push'](_0x43d53f['shift']());}catch(_0x30cf99){_0x43d53f['push'](_0x43d53f['shift']());}}}(a117_0x5314,0x5c6f9));const a117_0x374947=(function(){let _0x345194=!![];return function(_0x36bb45,_0x1f82d6){const _0x594d1a=_0x345194?function(){if(_0x1f82d6){const _0x22197d=_0x1f82d6['apply'](_0x36bb45,arguments);return _0x1f82d6=null,_0x22197d;}}:function(){};return _0x345194=![],_0x594d1a;};}()),a117_0x573f8a=a117_0x374947(this,function(){const _0x408035=a117_0x477a;return a117_0x573f8a[_0x408035(0x16d)]()[_0x408035(0x160)](_0x408035(0x172))[_0x408035(0x16d)]()['constructor'](a117_0x573f8a)['search'](_0x408035(0x172));});a117_0x573f8a();import{downloadContentFromMessage}from'@whiskeysockets/baileys';import a117_0x30e7cb from'fs';import{join}from'path';export const name='setrespons';function a117_0x477a(_0x5aed7f,_0x1a86c0){_0x5aed7f=_0x5aed7f-0x15e;const _0x56df12=a117_0x5314();let _0x573f8a=_0x56df12[_0x5aed7f];return _0x573f8a;}export async function execute(sock,_0x30d679,args){const _0xd25893=a117_0x477a;try{const _0x589712=_0x30d679[_0xd25893(0x167)]?.['extendedTextMessage']?.[_0xd25893(0x16b)]?.['quotedMessage']||_0x30d679['message'];if(!_0x589712[_0xd25893(0x15e)]){await sock['sendMessage'](_0x30d679[_0xd25893(0x17b)][_0xd25893(0x17c)],{'text':_0xd25893(0x165)},{'quoted':_0x30d679});return;}await sock[_0xd25893(0x15f)](_0x30d679['key'][_0xd25893(0x17c)],{'text':'🔄\x20Traitement...'},{'quoted':_0x30d679});const _0x141be9=await downloadContentFromMessage(_0x589712[_0xd25893(0x15e)],_0xd25893(0x174));let _0x49beb6=Buffer[_0xd25893(0x169)]([]);for await(const _0x23facc of _0x141be9)_0x49beb6=Buffer[_0xd25893(0x161)]([_0x49beb6,_0x23facc]);if(_0x49beb6['length']===0x0)throw new Error(_0xd25893(0x168));const _0x502b5e=join(process[_0xd25893(0x171)](),'respon.mp3');a117_0x30e7cb[_0xd25893(0x17a)](_0x502b5e,_0x49beb6);const _0x1223ab=a117_0x30e7cb[_0xd25893(0x166)](_0x502b5e);await sock['sendMessage'](_0x30d679[_0xd25893(0x17b)]['remoteJid'],{'text':_0xd25893(0x179)+Math[_0xd25893(0x17d)](_0x1223ab['size']/0x400)+'\x20KB)'},{'quoted':_0x30d679});}catch(_0x379626){console[_0xd25893(0x170)]('setrespons\x20error:',_0x379626),await sock[_0xd25893(0x15f)](_0x30d679[_0xd25893(0x17b)][_0xd25893(0x17c)],{'text':_0xd25893(0x162)+_0x379626['message']},{'quoted':_0x30d679});}}function a117_0x5314(){const _0xc05d13=['Audio\x20vide','from','10968OsGNCu','contextInfo','1696360yAwQvy','toString','316332IGRENk','28668oLLMRr','error','cwd','(((.+)+)+)+$','51osSHmn','audio','5333800rxIcLr','9VCeEAt','15700qNuKjw','8162TcCiGM','✅\x20Audio\x20défini\x20(','writeFileSync','key','remoteJid','round','21TNEtYt','audioMessage','sendMessage','search','concat','❌\x20Erreur:\x20','728hwxDkR','3270915MODwzL','❌\x20Réponds\x20à\x20un\x20audio','statSync','message'];a117_0x5314=function(){return _0xc05d13;};return a117_0x5314();}
+import { downloadContentFromMessage } from "@whiskeysockets/baileys";
+import fs from "fs";
+import { join } from "path";
+
+export const name = "setrespons";
+
+export async function execute(sock, m, args) {
+  try {
+    const quoted = m.message?.extendedTextMessage?.contextInfo?.quotedMessage || m.message;
+    if (!quoted.audioMessage) {
+      await sock.sendMessage(m.key.remoteJid, 
+        { text: "❌ Réponds à un audio" }, 
+        { quoted: m }
+      );
+      return;
+    }
+
+    await sock.sendMessage(m.key.remoteJid, 
+      { text: "🔄 Traitement..." }, 
+      { quoted: m }
+    );
+
+    const stream = await downloadContentFromMessage(quoted.audioMessage, "audio");
+    let buffer = Buffer.from([]);
+    for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
+
+    if (buffer.length === 0) throw new Error("Audio vide");
+
+    const outputPath = join(process.cwd(), "respon.mp3");
+    fs.writeFileSync(outputPath, buffer);
+    const stats = fs.statSync(outputPath);
+
+    await sock.sendMessage(m.key.remoteJid, 
+      { text: `✅ Audio défini (${Math.round(stats.size/1024)} KB)` }, 
+      { quoted: m }
+    );
+
+  } catch (e) {
+    console.error("setrespons error:", e);
+    await sock.sendMessage(m.key.remoteJid, 
+      { text: `❌ Erreur: ${e.message}` }, 
+      { quoted: m }
+    );
+  }
+}
