@@ -43,7 +43,7 @@
     "yt-search": "^2.10.4",
     "music-metadata": "^7.14.0",
     "jimp": "^1.6.0",
-    "mumaker": "^2.0.1",
+    "mumaker": "^2.0.0",
     "os": "^0.1.2",
     "util": "^0.12.5",
     "buffer": "^6.0.3",
