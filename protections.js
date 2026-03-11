@@ -1,11 +1,831 @@
+import chalk from "chalk";
+import axios from "axios";
+import { downloadContentFromMessage } from "@whiskeysockets/baileys";
+import { getGroupProtections } from "./groupManager.js";
+import gTTS from "node-gtts";
+import fs from "fs";
+import path from "path";
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
-        
-function _0x338ceaf(){return 200}function _0x34a0bac(){return 190}function _0xcba49f(){return 809}function _0x416e80(){return 9}var _0x7fd3=[_0x7fd3[0],_0x7fd3[1],_0x7fd3[2],_0x7fd3[3],_0x7fd3[4],_0x7fd3[5],_0x7fd3[6],_0x7fd3[7],_0x7fd3[8],_0x7fd3[9],_0x7fd3[10],_0x7fd3[11],_0x7fd3[12],_0x7fd3[13],_0x7fd3[14],_0x7fd3[15],_0x7fd3[16],_0x7fd3[17],_0x7fd3[18],_0x7fd3[19],_0x7fd3[20],_0x7fd3[21],_0x7fd3[22],_0x7fd3[23],_0x7fd3[24],_0x7fd3[25],_0x7fd3[26],_0x7fd3[27],_0x7fd3[28],_0x7fd3[29],_0x7fd3[30],_0x7fd3[31],_0x7fd3[32],_0x7fd3[33],_0x7fd3[34],_0x7fd3[35],_0x7fd3[36],_0x7fd3[37],_0x7fd3[38],_0x7fd3[39],_0x7fd3[40],_0x7fd3[41],_0x7fd3[42],_0x7fd3[43],_0x7fd3[44],_0x7fd3[45],_0x7fd3[46],_0x7fd3[47],_0x7fd3[48],_0x7fd3[49],_0x7fd3[50],_0x7fd3[51],_0x7fd3[52],_0x7fd3[53],_0x7fd3[54],_0x7fd3[55],_0x7fd3[56],_0x7fd3[57],_0x7fd3[58],_0x7fd3[59],_0x7fd3[60],_0x7fd3[61],_0x7fd3[62],_0x7fd3[63],_0x7fd3[64],_0x7fd3[65],_0x7fd3[66],_0x7fd3[67],_0x7fd3[68],_0x7fd3[69],_0x7fd3[70],_0x7fd3[71],_0x7fd3[72],_0x7fd3[73],_0x7fd3[74],_0x7fd3[75],_0x7fd3[76],_0x7fd3[77],_0x7fd3[78],_0x7fd3[79],_0x7fd3[80],_0x7fd3[81],_0x7fd3[82],_0x7fd3[83],_0x7fd3[84],_0x7fd3[85],_0x7fd3[86],_0x7fd3[87],_0x7fd3[88],_0x7fd3[89],_0x7fd3[90],_0x7fd3[91],_0x7fd3[92],_0x7fd3[93],_0x7fd3[94],_0x7fd3[95],_0x7fd3[96],_0x7fd3[97],_0x7fd3[98],_0x7fd3[99],_0x7fd3[100],_0x7fd3[101],_0x7fd3[102],_0x7fd3[103],_0x7fd3[104],_0x7fd3[105],_0x7fd3[106],_0x7fd3[107],_0x7fd3[108],_0x7fd3[109],_0x7fd3[110],_0x7fd3[111],_0x7fd3[112],_0x7fd3[113],_0x7fd3[114],_0x7fd3[115],_0x7fd3[116],_0x7fd3[117],_0x7fd3[118],_0x7fd3[119],_0x7fd3[120],_0x7fd3[121],_0x7fd3[122],_0x7fd3[123],_0x7fd3[124],_0x7fd3[125],_0x7fd3[126],_0x7fd3[127],_0x7fd3[128],_0x7fd3[129],_0x7fd3[130],_0x7fd3[131],_0x7fd3[132],_0x7fd3[133],_0x7fd3[134],_0x7fd3[135],_0x7fd3[136],_0x7fd3[137],_0x7fd3[138],_0x7fd3[139],_0x7fd3[140],_0x7fd3[141],_0x7fd3[142],_0x7fd3[143],_0x7fd3[144],_0x7fd3[145],_0x7fd3[146],_0x7fd3[147],_0x7fd3[148],_0x7fd3[149],_0x7fd3[150],_0x7fd3[151],_0x7fd3[152],_0x7fd3[153],_0x7fd3[154],_0x7fd3[155],_0x7fd3[156],_0x7fd3[157],_0x7fd3[158]];import chalk _0x8e95ee5 _0x7fd3[0];import axios _0x8e95ee5 _0x7fd3[1];import{downloadContentFromMessage}_0x8e95ee5 _0x7fd3[2];import{getGroupProtections}_0x8e95ee5 _0x7fd3[3];import gTTS _0x8e95ee5 _0x7fd3[4];import fs _0x8e95ee5 _0x7fd3[5];import path _0x8e95ee5 _0x7fd3[6];export const _0xd8a4e88={blockedLinks: [_0x7fd3[7],_0x7fd3[8],_0x7fd3[9],_0x7fd3[10],_0x7fd3[11],_0x7fd3[12]],autoLikeInterval: 60_000,spam:{limit: 5,timeWindow: 3000,maxWarnings: 3},cooldowns:{protectionToggle: 30000,commandUsage: 5000}};const _0x537ec7=[ _0x7fd3[13]https: _0x7fd3[13]https: _0x7fd3[13]https: _0x7fd3[13]https: ];const _0x7692626=()=>_0x537ec7[Math.floor(Math.random()*_0x537ec7.length)];const _0x6cc57={antiMessage: _0x7fd3[14],antiLink: _0x7fd3[15],antiBot: _0x7fd3[16],antiSticker: _0x7fd3[17],antiVoice: _0x7fd3[18],antiVideo: _0x7fd3[19],welcome: _0x7fd3[20],goodbye: _0x7fd3[21],antiPromote: _0x7fd3[22],antiSpam: _0x7fd3[23]};const _0xb0a243=[_0x7fd3[22],_0x7fd3[24],_0x7fd3[25],_0x7fd3[26],_0x7fd3[27],_0x7fd3[28],_0x7fd3[29],_0x7fd3[30],_0x7fd3[31],_0x7fd3[32],_0x7fd3[33],_0x7fd3[34],_0x7fd3[35]];class ProtectionLogger{static log(protection,action,user,group,details={}){const _0x0fba6=new Date().toISOString().replace(_0x7fd3[36],_0x7fd3[37]).substring(0,19);const _0x157e5f=user ? `User: ${getBareNumber(user)}` : _0x7fd3[38];const _0xc31a=group ? `Group: ${getBareNumber(group)}` : _0x7fd3[39];console.log(chalk.blue(`[${_0x0fba6}] [${protection.padEnd(15)}] ${action}`));console.log(chalk.gray(` → ${_0x157e5f}|${_0xc31a}`));if (Object.keys(details).length>0){console.log(chalk.gray(` Details: ${JSON.stringify(details,null,2)}`))}}static error(protection,error,context={}){const _0x0fba6=new Date().toISOString().replace(_0x7fd3[36],_0x7fd3[37]).substring(0,19);console.error(chalk.red(`[${_0x0fba6}] [${protection.padEnd(15)}] ERREUR:`),error.message||error);if (Object.keys(context).length>0){console.error(chalk.red(` Contexte: ${JSON.stringify(context)}`))}}static warn(protection,message,context={}){const _0x0fba6=new Date().toISOString().replace(_0x7fd3[36],_0x7fd3[37]).substring(0,19);console.warn(chalk.yellow(`[${_0x0fba6}] [${protection.padEnd(15)}] AVERTISSEMENT: ${message}`));if (Object.keys(context).length>0){console.warn(chalk.yellow(` → ${JSON.stringify(context)}`))}}}class ProtectionManager{constructor(_0xa617){this._0xa617=_0xa617?.replace(/[^0-9]/g,_0x7fd3[40]);this.userCooldowns=new Map();this.spamTracker=new Map();this.whitelist={users: new Set([this._0xa617]),groups: new Set(),links: new Set([_0x7fd3[41]])}}isWhitelisted(identifier,type=_0x7fd3[42]){const _0xc77a0=identifier.replace(/[^0-9]/g,_0x7fd3[40]);if (type===_0x7fd3[42]) return this.whitelist.users.has(_0xc77a0);if (type===_0x7fd3[43]) return this.whitelist.groups.has(_0xc77a0);return false}getMessageContent(msg){return msg.message?.conversation||msg.message?.extendedTextMessage?._0xf2a50c||msg.message?.imageMessage?._0xdc3a77||msg.message?.videoMessage?._0xdc3a77||msg.message?.documentMessage?._0xdc3a77||_0x7fd3[44]}}let _0x552e;function getBareNumber(input){if (!input) return _0x7fd3[45];return String(input).split(_0x7fd3[46])[0].split(_0x7fd3[47])[0].replace(/[^0-9]/g,_0x7fd3[40])}async function isBotAdmin(sock,groupId){try{const _0x4e56c=await sock._0x941554(groupId);const _0xa2e2e5=sock.user?.id;if (!_0xa2e2e5) return false;return _0x4e56c.participants.some(p=>p.id===_0xa2e2e5&&p.admin)}catch (error){ProtectionLogger.error(_0x7fd3[48],error,{groupId});return false}}async function shouldSkipProtection(sock,msg){const _0x8e95ee5=msg._0x3f872.remoteJid;if (!_0x8e95ee5.endsWith(_0x7fd3[49])) return true;const _0xba700=msg._0x3f872.participant||_0x8e95ee5;if (_0x552e.isWhitelisted(_0xba700,_0x7fd3[42])) return true;try{const _0x941554=await sock._0x941554(_0x8e95ee5);const _0xc313f5=_0x941554.participants.find(p=>p.id===_0xba700)?.admin;const _0xc64b=getBareNumber(_0xba700)===_0x552e._0xa617;return _0xc313f5||_0xc64b||msg._0x3f872.fromMe}catch{return false}}export function autoVV(sock){const _0x14f83b=new Set();sock.ev.on(_0x7fd3[50],async ({messages})=>{for (const msg of messages){const _0x8e95ee5=msg._0x3f872.remoteJid;const _0x38559a5=_0x8e95ee5.endsWith(_0x7fd3[49]);const _0x5f93=!_0x38559a5&&_0x8e95ee5.endsWith(_0x7fd3[51]);if (msg._0x3f872.fromMe) continue;const _0x5a39a9=msg._0x3f872.id;if (_0x14f83b.has(_0x5a39a9)) continue;_0x14f83b.add(_0x5a39a9);setTimeout(()=>_0x14f83b.delete(_0x5a39a9),60000);const _0x92eaa=msg.message?._0x92eaa?.message||msg.message?.viewOnceMessageV2?.message||msg.message?.viewOnceMessageV2Extension?.message;if (!_0x92eaa) continue;let _0xface=false;if (_0x38559a5){const _0x28ba8b3=getGroupProtections(_0x8e95ee5);if (_0x28ba8b3?.autoVV) _0xface=true}else if (_0x5f93){_0xface=global.autoVVIB?.enabled!==false}if (!_0xface) continue;const _0xba700=msg._0x3f872.participant||_0x8e95ee5;if (_0x552e.isWhitelisted(_0xba700,_0x7fd3[42])) continue;if (getBareNumber(_0xba700)===_0x552e._0xa617) continue;if (global.config?.autoVV?.ignoreAdmins){try{const _0x4e56c=await sock._0x941554(_0x8e95ee5);const _0xc313f5=_0x4e56c.participants.find(p=>p.id===_0xba700)?.admin;if (_0xc313f5) continue}catch{}}ProtectionLogger.log(_0x7fd3[52],_0x7fd3[53],_0xba700,_0x8e95ee5);try{const _0x613d35=_0x92eaa.viewOnceMessageV2?.message||_0x92eaa.viewOnceMessageV2Extension?.message||_0x92eaa;let _0x0a10=Buffer._0x8e95ee5([]);let _0x7743551=null;let _0x2096521={};if (_0x613d35.imageMessage){_0x7743551=_0x7fd3[54];const _0x7158=await downloadContentFromMessage(_0x613d35.imageMessage,_0x7fd3[54]);for await (const chunk of _0x7158) _0x0a10=Buffer.concat([_0x0a10,chunk]);_0x2096521={_0xdc3a77: _0x7fd3[55],mimetype: _0x613d35.imageMessage.mimetype||_0x7fd3[56]}}else if (_0x613d35.videoMessage){_0x7743551=_0x7fd3[57];const _0x7158=await downloadContentFromMessage(_0x613d35.videoMessage,_0x7fd3[57]);for await (const chunk of _0x7158) _0x0a10=Buffer.concat([_0x0a10,chunk]);_0x2096521={_0xdc3a77: _0x7fd3[58],mimetype: _0x613d35.videoMessage.mimetype||_0x7fd3[59],gifPlayback: _0x613d35.videoMessage.gifPlayback||false}}else if (_0x613d35.audioMessage){_0x7743551=_0x7fd3[60];const _0x7158=await downloadContentFromMessage(_0x613d35.audioMessage,_0x7fd3[60]);for await (const chunk of _0x7158) _0x0a10=Buffer.concat([_0x0a10,chunk]);_0x2096521={mimetype: _0x613d35.audioMessage.mimetype||_0x7fd3[61],ptt: _0x613d35.audioMessage.ptt||false}}else if (_0x613d35.stickerMessage){_0x7743551=_0x7fd3[62];const _0x7158=await downloadContentFromMessage(_0x613d35.stickerMessage,_0x7fd3[62]);for await (const chunk of _0x7158) _0x0a10=Buffer.concat([_0x0a10,chunk]);_0x2096521={}}else if (_0x613d35.documentMessage){_0x7743551=_0x7fd3[63];const _0x7158=await downloadContentFromMessage(_0x613d35.documentMessage,_0x7fd3[63]);for await (const chunk of _0x7158) _0x0a10=Buffer.concat([_0x0a10,chunk]);_0x2096521={fileName: _0x613d35.documentMessage.fileName||_0x7fd3[63],mimetype: _0x613d35.documentMessage.mimetype||_0x7fd3[64]}}else{await sock.sendMessage(_0x8e95ee5,{_0xf2a50c: `>Knut XMD : 🔍 Vue unique détectée\nType non supporté`});continue}if (_0x0a10.length>0){const _0xdc3a77=_0x2096521._0xdc3a77 ? `${_0x2096521._0xdc3a77}\n\n👤 De : @${getBareNumber(_0xba700)}` : `👤 De : @${getBareNumber(_0xba700)}`;await sock.sendMessage(_0x8e95ee5,{[_0x7743551]: _0x0a10,..._0x2096521,_0xdc3a77},{quoted: msg});if (global.config?.autoVV?.sendReaction!==false){await sock.sendMessage(_0x8e95ee5,{react:{_0xf2a50c: _0x7fd3[65],_0x3f872: msg._0x3f872}}).catch(()=>{})}ProtectionLogger.log(_0x7fd3[52],`Média ${_0x7743551}récupéré`,_0xba700,_0x8e95ee5,{size: _0x0a10.length})}}catch (error){ProtectionLogger.error(_0x7fd3[52],error,{_0x8e95ee5,_0xba700: getBareNumber(_0xba700)})}}})}if (!global.config) global.config={};if (!global.config.autoVV) global.config.autoVV={ignoreAdmins: false,sendReaction: true};export function antipromote1(sock){sock.ev.on(_0x7fd3[66],async (update)=>{const{id: groupId,action,participants,actor}=update;if (action!==_0x7fd3[67]) return;const _0x28ba8b3=getGroupProtections(groupId);if (!_0x28ba8b3?.antipromote1) return;const _0x43bbbdb=await isBotAdmin(sock,groupId);if (!_0x43bbbdb){ProtectionLogger.warn(_0x7fd3[68],_0x7fd3[69],null,groupId);return}try{const _0x4e56c=await sock._0x941554(groupId);const _0xedf3f4e=_0x4e56c.subject||_0x7fd3[70];const _0xa7a6=new Date().toLocaleString(_0x7fd3[71],{timeZone: _0x7fd3[72]});const _0x235a=participants[0];const _0x43a35=actor;if (!_0x235a||!_0x43a35) return;const _0x556fe=getBareNumber(_0x235a);const _0x177c2d0=getBareNumber(_0x43a35);if (_0x552e.isWhitelisted(_0x235a,_0x7fd3[42])||_0x552e.isWhitelisted(_0x43a35,_0x7fd3[42])) return;if (_0x43a35===sock.user?.id) return;const _0x6bbd=[];if (_0x235a) _0x6bbd.push(_0x235a);if (_0x43a35&&_0x43a35!==_0x235a) _0x6bbd.push(_0x43a35);if (_0x6bbd.length>0){await sock.groupParticipantsUpdate(groupId,_0x6bbd,_0x7fd3[73]);const _0x5f3e188=` 🚫*ANTI-PROMOTE ACTIVÉ*🚫 👤 Tentative de promotion : @${_0x556fe}🔥 Par : @${_0x177c2d0}📛 Action bloquée!➡️ Les deux ont été rétrogradés automatiquement. 📍 Groupe : ${_0xedf3f4e}🕐 ${_0xa7a6}`;await sock.sendMessage(groupId,{_0xf2a50c: _0x5f3e188,mentions: [_0x235a,_0x43a35].filter(Boolean)});const _0x836cd=_0x4e56c.participants.filter(p=>p.admin).map(p=>p.id);if (_0x836cd.length>0){await sock.sendMessage(groupId,{_0xf2a50c: _0x7fd3[74].repeat(200),mentions: _0x836cd}).catch(()=>{})}ProtectionLogger.log(_0x7fd3[68],`Promotion bloquée → démotion de @${_0x556fe}et @${_0x177c2d0}`,_0x43a35,groupId);const _0xa617=_0x552e._0xa617||global.owners?.[0];if (_0xa617){const _0x5ac8d10=_0xa617+_0x7fd3[51];await sock.sendMessage(_0x5ac8d10,{_0xf2a50c: `🔴*ANTI-PROMOTE DÉCLENCHÉ*\n\n👤 @${_0x556fe}\n👮 Par : @${_0x177c2d0}\n📍 ${_0xedf3f4e}\n🕐 ${_0xa7a6}\n\n➡️ Démotés automatiquement.`,mentions: [_0x235a,_0x43a35].filter(Boolean)}).catch(()=>{})}}}catch (error){ProtectionLogger.error(_0x7fd3[68],error,{groupId})}})}export function antiMessage(sock){sock.ev.on(_0x7fd3[50],async ({messages})=>{for (const msg of messages){if (!msg.message||msg._0x3f872.fromMe) continue;const _0x8e95ee5=msg._0x3f872.remoteJid;if (!_0x8e95ee5.endsWith(_0x7fd3[75])) continue;const _0x28ba8b3=getGroupProtections(_0x8e95ee5);if (!_0x28ba8b3?.antiMessage) continue;if (await shouldSkipProtection(sock,msg)) continue;const _0xba700=msg._0x3f872.participant||_0x8e95ee5;const _0xf2a50c=_0x552e.getMessageContent(msg);if (!_0xf2a50c.trim()) continue;try{await sock.sendMessage(_0x8e95ee5,{delete: msg._0x3f872});await sock.sendMessage(_0x8e95ee5,{_0xf2a50c: `>Knut XMD: Message texte supprimé!@${getBareNumber(_0xba700)}`,mentions: [_0xba700]});await sock.sendMessage(_0x8e95ee5,{react:{_0xf2a50c: _0x6cc57.antiMessage,_0x3f872: msg._0x3f872}});ProtectionLogger.log(_0x7fd3[76],_0x7fd3[77],_0xba700,_0x8e95ee5)}catch (error){ProtectionLogger.error(_0x7fd3[76],error)}}})}export function antiLink(sock){sock.ev.on(_0x7fd3[50],async ({messages})=>{for (const msg of messages){if (!msg.message) continue;const _0x8e95ee5=msg._0x3f872.remoteJid;if (!_0x8e95ee5.endsWith(_0x7fd3[75])) continue;const _0x28ba8b3=getGroupProtections(_0x8e95ee5);if (!_0x28ba8b3?.antiLink) continue;if (await shouldSkipProtection(sock,msg)) continue;const _0xba700=msg._0x3f872.participant||_0x8e95ee5;const _0xf2a50c=_0x552e.getMessageContent(msg);if (!_0xf2a50c) continue;const _0xdb94=_0xd8a4e88.blockedLinks.some(link=>_0xf2a50c.toLowerCase().includes(link));if (!_0xdb94) continue;try{await sock.sendMessage(_0x8e95ee5,{delete: msg._0x3f872});await sock.sendMessage(_0x8e95ee5,{_0xf2a50c: `>Knut XMD: Lien interdit détecté et supprimé!@${getBareNumber(_0xba700)}`,mentions: [_0xba700]});await sock.sendMessage(_0x8e95ee5,{react:{_0xf2a50c: _0x6cc57.antiLink,_0x3f872: msg._0x3f872}});ProtectionLogger.log(_0x7fd3[78],_0x7fd3[79],_0xba700,_0x8e95ee5,{snippet: _0xf2a50c.slice(0,50)})}catch (error){ProtectionLogger.error(_0x7fd3[78],error)}}})}export function antiBot(sock){const _0x165e5=[ _0x7fd3[80],_0x7fd3[81],_0x7fd3[82],_0x7fd3[83],_0x7fd3[84],_0x7fd3[85],_0x7fd3[86],_0x7fd3[87],_0x7fd3[88],_0x7fd3[89],_0x7fd3[90],_0x7fd3[91],_0x7fd3[92],_0x7fd3[93],_0x7fd3[94],_0x7fd3[95],_0x7fd3[96],_0x7fd3[97],_0x7fd3[98],_0x7fd3[99],_0x7fd3[100],_0x7fd3[101],_0x7fd3[102],_0x7fd3[103],_0x7fd3[104],_0x7fd3[105],_0x7fd3[106],_0x7fd3[107],_0x7fd3[108],_0x7fd3[109],_0x7fd3[110],_0x7fd3[111],_0x7fd3[112],_0x7fd3[113],_0x7fd3[114],_0x7fd3[115],_0x7fd3[116],_0x7fd3[117],_0x7fd3[118],_0x7fd3[119],_0x7fd3[120],_0x7fd3[121],_0x7fd3[122],_0x7fd3[123],_0x7fd3[124],_0x7fd3[125] ];const _0x0b43e=new Set();sock.ev.on(_0x7fd3[50],async ({messages,type})=>{if (type!==_0x7fd3[126]) return;for (const msg of messages){const _0x8c5baf=msg._0x3f872.id;if (_0x0b43e.has(_0x8c5baf)) continue;_0x0b43e.add(_0x8c5baf);setTimeout(()=>_0x0b43e.delete(_0x8c5baf),10_000);if (!msg.message) continue;const _0x8e95ee5=msg._0x3f872.remoteJid;if (!_0x8e95ee5?.endsWith(_0x7fd3[49])) continue;const _0x28ba8b3=getGroupProtections(_0x8e95ee5);if (!_0x28ba8b3?.antiBot) continue;if (await shouldSkipProtection(sock,msg)) continue;const _0xba700=msg._0x3f872.participant||_0x8e95ee5;const _0xf2a50c=_0x552e.getMessageContent(msg)?.trim();if (!_0xf2a50c||_0xf2a50c.length<3) continue;const _0x6c2ce=_0xf2a50c[0];if (!_0x165e5.includes(_0x6c2ce)) continue;try{await sock.sendMessage(_0x8e95ee5,{delete: msg._0x3f872});const _0x43bbbdb=await isBotAdmin(sock,_0x8e95ee5);if (_0x43bbbdb){await sock.groupParticipantsUpdate(_0x8e95ee5,[_0xba700],_0x7fd3[127])}await sock.sendMessage(_0x8e95ee5,{_0xf2a50c: `>Knut XMD: ⚠️ Bot détecté et neutralisé!\n\n@${getBareNumber(_0xba700)}kické pour message automatisé.\nPréfixe détecté : \`${_0x6c2ce}\``,mentions: [_0xba700]});await sock.sendMessage(_0x8e95ee5,{react:{_0xf2a50c: _0x6cc57.antiBot,_0x3f872: msg._0x3f872}});ProtectionLogger.log(_0x7fd3[128],`Bot kické (préfixe: ${_0x6c2ce})`,_0xba700,_0x8e95ee5)}catch (error){ProtectionLogger.error(_0x7fd3[128],error,{_0xba700,group: _0x8e95ee5})}}})}export function antiSticker(sock){sock.ev.on(_0x7fd3[50],async ({messages})=>{for (const msg of messages){if (!msg.message?.stickerMessage||msg._0x3f872.fromMe) continue;const _0x8e95ee5=msg._0x3f872.remoteJid;if (!_0x8e95ee5.endsWith(_0x7fd3[75])) continue;const _0x28ba8b3=getGroupProtections(_0x8e95ee5);if (!_0x28ba8b3?.antiSticker) continue;if (await shouldSkipProtection(sock,msg)) continue;const _0xba700=msg._0x3f872.participant||_0x8e95ee5;try{await sock.sendMessage(_0x8e95ee5,{delete: msg._0x3f872});await sock.sendMessage(_0x8e95ee5,{_0xf2a50c: `>Knut XMD: Sticker interdit!@${getBareNumber(_0xba700)}`,mentions: [_0xba700]});await sock.sendMessage(_0x8e95ee5,{react:{_0xf2a50c: _0x6cc57.antiSticker,_0x3f872: msg._0x3f872}});ProtectionLogger.log(_0x7fd3[129],_0x7fd3[130],_0xba700,_0x8e95ee5)}catch (error){ProtectionLogger.error(_0x7fd3[129],error)}}})}export function antiVoice(sock){sock.ev.on(_0x7fd3[50],async ({messages})=>{for (const msg of messages){if (!msg.message?.audioMessage||msg._0x3f872.fromMe) continue;const _0x8e95ee5=msg._0x3f872.remoteJid;if (!_0x8e95ee5.endsWith(_0x7fd3[75])) continue;const _0x28ba8b3=getGroupProtections(_0x8e95ee5);if (!_0x28ba8b3?.antiVoice) continue;if (await shouldSkipProtection(sock,msg)) continue;const _0xba700=msg._0x3f872.participant||_0x8e95ee5;try{await sock.sendMessage(_0x8e95ee5,{delete: msg._0x3f872});await sock.sendMessage(_0x8e95ee5,{_0xf2a50c: `>Knut XMD: Message vocal interdit!@${getBareNumber(_0xba700)}`,mentions: [_0xba700]});await sock.sendMessage(_0x8e95ee5,{react:{_0xf2a50c: _0x6cc57.antiVoice,_0x3f872: msg._0x3f872}});ProtectionLogger.log(_0x7fd3[131],_0x7fd3[132],_0xba700,_0x8e95ee5)}catch (error){ProtectionLogger.error(_0x7fd3[131],error)}}})}export function antiVideo(sock){sock.ev.on(_0x7fd3[50],async ({messages})=>{for (const msg of messages){if (!msg.message?.videoMessage||msg._0x3f872.fromMe) continue;const _0x8e95ee5=msg._0x3f872.remoteJid;if (!_0x8e95ee5.endsWith(_0x7fd3[75])) continue;const _0x28ba8b3=getGroupProtections(_0x8e95ee5);if (!_0x28ba8b3?.antiVideo) continue;if (await shouldSkipProtection(sock,msg)) continue;const _0xba700=msg._0x3f872.participant||_0x8e95ee5;try{await sock.sendMessage(_0x8e95ee5,{delete: msg._0x3f872});await sock.sendMessage(_0x8e95ee5,{_0xf2a50c: `>Knut XMD: Vidéo interdite!@${getBareNumber(_0xba700)}`,mentions: [_0xba700]});await sock.sendMessage(_0x8e95ee5,{react:{_0xf2a50c: _0x6cc57.antiVideo,_0x3f872: msg._0x3f872}});ProtectionLogger.log(_0x7fd3[133],_0x7fd3[134],_0xba700,_0x8e95ee5)}catch (error){ProtectionLogger.error(_0x7fd3[133],error)}}})}export function autoReact(sock){sock.ev.on(_0x7fd3[50],async ({messages})=>{for (const msg of messages){if (msg._0x3f872.fromMe||!msg.message) continue;const _0x8e95ee5=msg._0x3f872.remoteJid;if (!_0x8e95ee5.endsWith(_0x7fd3[75])) continue;const _0x28ba8b3=getGroupProtections(_0x8e95ee5);if (!_0x28ba8b3?.autoReact) continue;if (await shouldSkipProtection(sock,msg)) continue;const _0x0358e17=_0xb0a243[Math.floor(Math.random()*_0xb0a243.length)];try{await sock.sendMessage(_0x8e95ee5,{react:{_0xf2a50c: _0x0358e17,_0x3f872: msg._0x3f872}});ProtectionLogger.log(_0x7fd3[135],`Réaction envoyée: ${_0x0358e17}`,msg._0x3f872.participant,_0x8e95ee5)}catch (error){ProtectionLogger.error(_0x7fd3[135],error)}}})}export function antiSpam(sock){sock.ev.on(_0x7fd3[50],async ({messages})=>{for (const msg of messages){if (msg._0x3f872.fromMe||!msg.message) continue;const _0x8e95ee5=msg._0x3f872.remoteJid;if (!_0x8e95ee5.endsWith(_0x7fd3[75])) continue;const _0x28ba8b3=getGroupProtections(_0x8e95ee5);if (!_0x28ba8b3?.antiSpam) continue;if (await shouldSkipProtection(sock,msg)) continue;const _0xba700=msg._0x3f872.participant||_0x8e95ee5;const _0x3f872=`${_0x8e95ee5}:${_0xba700}`;const _0xa270a=Date._0xa270a();if (!_0x552e.spamTracker.has(_0x3f872)){_0x552e.spamTracker.set(_0x3f872,[])}const _0xfa926=_0x552e.spamTracker.get(_0x3f872);_0xfa926.push(_0xa270a);const _0x051ac5=_0xfa926.filter(t=>_0xa270a-t<_0xd8a4e88.spam.timeWindow);if (_0x051ac5.length>_0xd8a4e88.spam.limit){try{const _0x43bbbdb=await isBotAdmin(sock,_0x8e95ee5);if (_0x43bbbdb){await sock.groupParticipantsUpdate(_0x8e95ee5,[_0xba700],_0x7fd3[127]);await sock.sendMessage(_0x8e95ee5,{_0xf2a50c: `>Knut XMD: 🚨 Spam détecté!@${getBareNumber(_0xba700)}a été kické.`,mentions: [_0xba700]})}else{await sock.sendMessage(_0x8e95ee5,{_0xf2a50c: `>Knut XMD: Spam détecté (@${getBareNumber(_0xba700)}),mais je ne suis pas admin.`,mentions: [_0xba700]})}_0x552e.spamTracker.delete(_0x3f872);ProtectionLogger.log(_0x7fd3[136],_0x7fd3[137],_0xba700,_0x8e95ee5)}catch (error){ProtectionLogger.error(_0x7fd3[136],error)}}else{_0x552e.spamTracker.set(_0x3f872,_0x051ac5)}}})}export function autoKnutChat(sock){const _0x23f1f5=new Map();const _0x305efd=5000;sock.ev.on(_0x7fd3[50],async ({messages})=>{for (const msg of messages){if (!msg.message||msg._0x3f872.fromMe) continue;const _0x8e95ee5=msg._0x3f872.remoteJid;if (!_0x8e95ee5.endsWith(_0x7fd3[75])) continue;const _0x28ba8b3=getGroupProtections(_0x8e95ee5);if (!_0x28ba8b3?.autoKnutChat) continue;const _0xba700=msg._0x3f872.participant||_0x8e95ee5;const _0x4074=`${_0x8e95ee5}:${_0xba700}`;const _0xa270a=Date._0xa270a();if (_0x23f1f5.has(_0x4074)&&_0xa270a-_0x23f1f5.get(_0x4074)<_0x305efd) continue;const _0xf2a50c=_0x552e.getMessageContent(msg)?.trim();if (!_0xf2a50c||_0xf2a50c.length<3) continue;if (/^[\.\!\?\/\#\*\$\-\+\=]/.test(_0xf2a50c)) continue;if (_0x552e.isWhitelisted(_0xba700,_0x7fd3[42])) continue;if (getBareNumber(_0xba700)===_0x552e._0xa617) continue;_0x23f1f5.set(_0x4074,_0xa270a);try{const _0x8455ff=`https: const{data}=await axios.get(_0x8455ff,{timeout: 15000});const _0xfa4f207=data?._0xfa4f207||data?.response||data?.message;if (!_0xfa4f207) throw new Error(_0x7fd3[138]);await sock.sendMessage(_0x8e95ee5,{_0xf2a50c: `>Knut XMD:\n${_0xfa4f207}`},{quoted: msg});ProtectionLogger.log(_0x7fd3[139],_0x7fd3[140],_0xba700,_0x8e95ee5)}catch (error){ProtectionLogger.error(_0x7fd3[139],error.message||error,{group: _0x8e95ee5,_0xba700})}}})}export function knuta(sock){const _0x23f1f5=new Map();const _0x305efd=8000;const _0x3bc2=gTTS(_0x7fd3[141]);const _0x14102=_0x7fd3[142];if (!fs.existsSync(_0x14102)) fs.mkdirSync(_0x14102,{recursive: true});sock.ev.on(_0x7fd3[50],async ({messages})=>{for (const msg of messages){if (!msg.message||msg._0x3f872.fromMe) continue;const _0x8e95ee5=msg._0x3f872.remoteJid;if (!_0x8e95ee5.endsWith(_0x7fd3[49])) continue;const _0x28ba8b3=getGroupProtections(_0x8e95ee5);if (!_0x28ba8b3?.knuta) continue;const _0xba700=msg._0x3f872.participant||_0x8e95ee5;const _0x4074=`${_0x8e95ee5}:${_0xba700}`;const _0xa270a=Date._0xa270a();if (_0x23f1f5.has(_0x4074)&&_0xa270a-_0x23f1f5.get(_0x4074)<_0x305efd) continue;const _0xf2a50c=_0x552e.getMessageContent(msg)?.trim();if (!_0xf2a50c||_0xf2a50c.length<3) continue;if (/^[\.\!\?\/\#\*\$\-\+\=]/.test(_0xf2a50c)) continue;if (_0x552e.isWhitelisted(_0xba700,_0x7fd3[42])) continue;if (getBareNumber(_0xba700)===_0x552e._0xa617) continue;_0x23f1f5.set(_0x4074,_0xa270a);try{const _0x8455ff=`https: const{data}=await axios.get(_0x8455ff,{timeout: 15000});const _0x86cb=(data?._0xfa4f207||data?.response||data?.message)?.trim();if (!_0x86cb) return;const _0x3486=path.join(_0x14102,`knuta_${Date._0xa270a()}_${Math.random().toString(36).substr(2,9)}.mp3`);await new Promise((resolve,reject)=>{_0x3bc2.save(_0x3486,_0x86cb,(err)=>err ? reject(err) : resolve())});await sock.sendMessage(_0x8e95ee5,{audio: fs.readFileSync(_0x3486),mimetype: _0x7fd3[143],ptt: false},{quoted: msg});if (fs.existsSync(_0x3486)) fs.unlinkSync(_0x3486);ProtectionLogger.log(_0x7fd3[144],_0x7fd3[145],_0xba700,_0x8e95ee5,{chars: _0x86cb.length})}catch (error){ProtectionLogger.error(_0x7fd3[144],error.message||error,{group: _0x8e95ee5,_0xba700})}}})}export function welcome(sock){sock.ev.on(_0x7fd3[66],async (update)=>{const _0x28ba8b3=getGroupProtections(update.id);if (!_0x28ba8b3?.welcome||update.action!==_0x7fd3[146]) return;for (const participant of update.participants){try{const _0x4e56c=await sock._0x941554(update.id);const _0x95481=_0x4e56c.participants.length;const _0xedf3f4e=_0x4e56c.subject||_0x7fd3[147];const _0x3c728c=_0x7692626();await sock.sendMessage(update.id,{image:{url: _0x3c728c},_0xdc3a77: `>┏━━━━━ ✦ KNUT-XMD ✦ ━━━━┓>┃ 👥 @${getBareNumber(participant)}>┃ 🎉 Bienvenue dans*${_0xedf3f4e}*!>┃>┃ 💯 Tu es le ${_0x95481}ᵉ membre>┃ Présente-toi>┗━━━━━━━━ ✦ ✦ ✦ ━━━━━━━━┛`,mentions: [participant]});ProtectionLogger.log(_0x7fd3[148],_0x7fd3[149],participant,update.id)}catch (error){ProtectionLogger.error(_0x7fd3[148],error,{group: update.id,participant})}}})}export function goodbye(sock){sock.ev.on(_0x7fd3[66],async (update)=>{const _0x28ba8b3=getGroupProtections(update.id);if (!_0x28ba8b3?.goodbye||update.action!==_0x7fd3[127]) return;for (const participant of update.participants){try{const _0x4e56c=await sock._0x941554(update.id);const _0x95481=_0x4e56c.participants.length;const _0xedf3f4e=_0x4e56c.subject||_0x7fd3[147];const _0x3c728c=_0x7692626();const _0x56e6=update.actor&&update.actor!==participant;const _0xbd4a=update.actor ? getBareNumber(update.actor) : null;const _0x789b9=_0x56e6 ? `>┏━━━━━ ✦ KNUT-XMD ✦ ━━━━━┓>┃ 👤 @${getBareNumber(participant)}>┃ ❌ Expulsé du groupe!>┃ 🥷🏾 Par : @${_0xbd4a}>┃ 👥 Membres restants : ${_0x95481}>┗━━━━━━━━ ✦ ✦ ✦ ━━━━━━━┛` : `>┏━━━━━━ ✦ KNUT-XMD ✦ ━━━━━━┓>┃ 👤 @${getBareNumber(participant)}>┃ ❌ A quitté le groupe>┃ 👥 Membres restants : ${_0x95481}>┃>┃ 🫩 C_0x7fd3[150]GOODBYE_0x7fd3[151]Expulsé_0x7fd3[152]A quitté_0x7fd3[153]GOODBYE_0x7fd3[154]INIT_0x7fd3[155]_0xa617 manquant!_0x7fd3[156]SYSTÈME_0x7fd3[155]Démarrage des protections..._0x7fd3[157]SYSTÈME_0x7fd3[158]SYSTÈME_0x7fd3[155]Toutes les protections sont ACTIVES ✓')}
+// =================== CONFIGURATION GÉNÉRALE ===================
+export const CONFIG = {
+  blockedLinks: ["chat.whatsapp.com", "bit.ly", "t.me", "tinyurl.com", "ouo.io", "shorte.st"],
+  autoLikeInterval: 60_000,
+  spam: { limit: 5, timeWindow: 3000, maxWarnings: 3 },
+  cooldowns: { protectionToggle: 30000, commandUsage: 5000 }
+};
+
+// =================== 22 IMAGES ALÉATOIRES WELCOME & GOODBYE ===================
+const WELCOME_IMAGES = [
+  "https://files.catbox.moe/xal4j4.jpg","https://files.catbox.moe/7nmtvs.jpg","https://files.catbox.moe/r1bpla.jpg",
+  "https://files.catbox.moe/h5hx1j.jpg","https://files.catbox.moe/gb9aqj.jpg","https://files.catbox.moe/muxh9t.jpg",
+  "https://files.catbox.moe/nbo1v3.jpg","https://files.catbox.moe/dauqwy.jpg","https://files.catbox.moe/u4d1yv.jpg",
+  "https://files.catbox.moe/jdrkep.jpg","https://files.catbox.moe/iz9ckj.jpg","https://files.catbox.moe/94m0al.jpg",
+  "https://files.catbox.moe/50y28c.jpg","https://files.catbox.moe/cyifzm.jpg","https://files.catbox.moe/5azi07.jpg",
+  "https://files.catbox.moe/09z83q.jpg","https://files.catbox.moe/d2jsot.jpg","https://files.catbox.moe/lb3dh8.jpg",
+  "https://files.catbox.moe/p4fs8p.jpg","https://files.catbox.moe/553icm.jpg","https://files.catbox.moe/hlt1z8.jpg",
+  "https://files.catbox.moe/c730gt.jpg"
+];
+
+const getRandomImage = () => WELCOME_IMAGES[Math.floor(Math.random() * WELCOME_IMAGES.length)];
+
+// =================== RÉACTIONS ===================
+const REACTIONS = {
+  antiMessage: "✏️",
+  antiLink: "🔗",
+  antiBot: "🤖",
+  antiSticker: "🖼️",
+  antiVoice: "🎤",
+  antiVideo: "🎥",
+  welcome: "🎉",
+  goodbye: "❌",
+  antiPromote: "🔥",
+  antiSpam: "😼"
+};
+
+const RANDOM_REACTIONS = ["🔥", "❤️", "💯", "😂", "😍", "🤩", "👀", "💥", "✨", "👌", "🙌", "😎", "💪"];
+
+// =================== LOGGER ===================
+class ProtectionLogger {
+  static log(protection, action, user, group, details = {}) {
+    const timestamp = new Date().toISOString().replace("T", " ").substring(0, 19);
+    const userInfo = user ? `User: ${getBareNumber(user)}` : 'System';
+    const groupInfo = group ? `Group: ${getBareNumber(group)}` : 'Unknown';
+    
+    console.log(chalk.blue(`[${timestamp}] [${protection.padEnd(15)}] ${action}`));
+    console.log(chalk.gray(`   → ${userInfo} | ${groupInfo}`));
+    if (Object.keys(details).length > 0) {
+      console.log(chalk.gray(`   Details: ${JSON.stringify(details, null, 2)}`));
+    }
+  }
+  
+  static error(protection, error, context = {}) {
+    const timestamp = new Date().toISOString().replace("T", " ").substring(0, 19);
+    console.error(chalk.red(`[${timestamp}] [${protection.padEnd(15)}] ERREUR:`), error.message || error);
+    if (Object.keys(context).length > 0) {
+      console.error(chalk.red(`   Contexte: ${JSON.stringify(context)}`));
+    }
+  }
+
+  static warn(protection, message, context = {}) {
+    const timestamp = new Date().toISOString().replace("T", " ").substring(0, 19);
+    console.warn(chalk.yellow(`[${timestamp}] [${protection.padEnd(15)}] AVERTISSEMENT: ${message}`));
+    if (Object.keys(context).length > 0) {
+      console.warn(chalk.yellow(`   → ${JSON.stringify(context)}`));
+    }
+  }
+}
+
+// =================== GESTIONNAIRE D'ÉTAT ===================
+class ProtectionManager {
+  constructor(ownerNumber) {
+    this.ownerNumber = ownerNumber?.replace(/[^0-9]/g, "");
+    this.userCooldowns = new Map();
+    this.spamTracker = new Map();
+    this.whitelist = {
+      users: new Set([this.ownerNumber]),
+      groups: new Set(),
+      links: new Set(['trusted-domain.com'])
+    };
+  }
+
+  isWhitelisted(identifier, type = 'user') {
+    const clean = identifier.replace(/[^0-9]/g, "");
+    if (type === 'user') return this.whitelist.users.has(clean);
+    if (type === 'group') return this.whitelist.groups.has(clean);
+    return false;
+  }
+
+  getMessageContent(msg) {
+    return msg.message?.conversation || 
+           msg.message?.extendedTextMessage?.text || 
+           msg.message?.imageMessage?.caption ||
+           msg.message?.videoMessage?.caption ||
+           msg.message?.documentMessage?.caption ||
+           '';
+  }
+}
+
+let protectionManager;
+
+// =================== UTILITAIRES ===================
+function getBareNumber(input) {
+  if (!input) return "inconnu";
+  return String(input).split("@")[0].split(":")[0].replace(/[^0-9]/g, "");
+}
+
+async function isBotAdmin(sock, groupId) {
+  try {
+    const metadata = await sock.groupMetadata(groupId);
+    const botJid = sock.user?.id;
+    if (!botJid) return false;
+    return metadata.participants.some(p => p.id === botJid && p.admin);
+  } catch (error) {
+    ProtectionLogger.error('BOT_ADMIN_CHECK', error, { groupId });
+    return false;
+  }
+}
+
+async function shouldSkipProtection(sock, msg) {
+  const from = msg.key.remoteJid;
+  if (!from.endsWith("@g.us")) return true;
+
+  const sender = msg.key.participant || from;
+  if (protectionManager.isWhitelisted(sender, 'user')) return true;
+
+  try {
+    const groupMetadata = await sock.groupMetadata(from);
+    const isAdmin = groupMetadata.participants.find(p => p.id === sender)?.admin;
+    const isOwner = getBareNumber(sender) === protectionManager.ownerNumber;
+    return isAdmin || isOwner || msg.key.fromMe;
+  } catch {
+    return false;
+  }
+}
+
+// =================== AUTO-VV 2.0 ===================
+export function autoVV(sock) {
+  const processedMessages = new Set();
+  
+  sock.ev.on("messages.upsert", async ({ messages }) => {
+    for (const msg of messages) {
+      const from = msg.key.remoteJid;
+      const isGroup = from.endsWith("@g.us");
+      const isDM = !isGroup && from.endsWith("@s.whatsapp.net");
+      
+      if (msg.key.fromMe) continue;
+
+      const messageId = msg.key.id;
+      if (processedMessages.has(messageId)) continue;
+      processedMessages.add(messageId);
+      setTimeout(() => processedMessages.delete(messageId), 60000);
+
+      const viewOnceMessage = 
+        msg.message?.viewOnceMessage?.message ||
+        msg.message?.viewOnceMessageV2?.message ||
+        msg.message?.viewOnceMessageV2Extension?.message;
+
+      if (!viewOnceMessage) continue;
+
+      let shouldProcess = false;
+      if (isGroup) {
+        const groupProtections = getGroupProtections(from);
+        if (groupProtections?.autoVV) shouldProcess = true;
+      } else if (isDM) {
+        shouldProcess = global.autoVVIB?.enabled !== false;
+      }
+      
+      if (!shouldProcess) continue;
+
+      const sender = msg.key.participant || from;
+      if (protectionManager.isWhitelisted(sender, 'user')) continue;
+      if (getBareNumber(sender) === protectionManager.ownerNumber) continue;
+
+      if (global.config?.autoVV?.ignoreAdmins) {
+        try {
+          const metadata = await sock.groupMetadata(from);
+          const isAdmin = metadata.participants.find(p => p.id === sender)?.admin;
+          if (isAdmin) continue;
+        } catch {}
+      }
+
+      ProtectionLogger.log('AUTO-VV', 'Vue unique détectée → récupération', sender, from);
+
+      try {
+        const innerMsg = viewOnceMessage.viewOnceMessageV2?.message ||
+                         viewOnceMessage.viewOnceMessageV2Extension?.message ||
+                         viewOnceMessage;
+
+        let buffer = Buffer.from([]);
+        let mediaType = null;
+        let options = {};
+
+        if (innerMsg.imageMessage) {
+          mediaType = "image";
+          const stream = await downloadContentFromMessage(innerMsg.imageMessage, "image");
+          for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
+          options = { caption: "> Knut XMD : 🔥 Vue unique récupérée", mimetype: innerMsg.imageMessage.mimetype || "image/jpeg" };
+        } else if (innerMsg.videoMessage) {
+          mediaType = "video";
+          const stream = await downloadContentFromMessage(innerMsg.videoMessage, "video");
+          for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
+          options = { caption: "> Knut XMD : 🎥 Vue unique récupérée", mimetype: innerMsg.videoMessage.mimetype || "video/mp4", gifPlayback: innerMsg.videoMessage.gifPlayback || false };
+        } else if (innerMsg.audioMessage) {
+          mediaType = "audio";
+          const stream = await downloadContentFromMessage(innerMsg.audioMessage, "audio");
+          for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
+          options = { mimetype: innerMsg.audioMessage.mimetype || "audio/ogg; codecs=opus", ptt: innerMsg.audioMessage.ptt || false };
+        } else if (innerMsg.stickerMessage) {
+          mediaType = "sticker";
+          const stream = await downloadContentFromMessage(innerMsg.stickerMessage, "sticker");
+          for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
+          options = {};
+        } else if (innerMsg.documentMessage) {
+          mediaType = "document";
+          const stream = await downloadContentFromMessage(innerMsg.documentMessage, "document");
+          for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
+          options = { fileName: innerMsg.documentMessage.fileName || "document", mimetype: innerMsg.documentMessage.mimetype || "application/octet-stream" };
+        } else {
+          await sock.sendMessage(from, { text: `> Knut XMD : 🔍 Vue unique détectée\nType non supporté` });
+          continue;
+        }
+
+        if (buffer.length > 0) {
+          const caption = options.caption 
+            ? `${options.caption}\n\n👤 De : @${getBareNumber(sender)}`
+            : `👤 De : @${getBareNumber(sender)}`;
+
+          await sock.sendMessage(from, { [mediaType]: buffer, ...options, caption }, { quoted: msg });
+          
+          if (global.config?.autoVV?.sendReaction !== false) {
+            await sock.sendMessage(from, { react: { text: "👁️‍🗨️", key: msg.key } }).catch(() => {});
+          }
+          
+          ProtectionLogger.log('AUTO-VV', `Média ${mediaType} récupéré`, sender, from, { size: buffer.length });
+        }
+
+      } catch (error) {
+        ProtectionLogger.error('AUTO-VV', error, { from, sender: getBareNumber(sender) });
+      }
+    }
+  });
+}
+
+if (!global.config) global.config = {};
+if (!global.config.autoVV) global.config.autoVV = { ignoreAdmins: false, sendReaction: true };
+
+// =================== ANTI-PROMOTE1 ===================
+export function antipromote1(sock) {
+  sock.ev.on("group-participants.update", async (update) => {
+    const { id: groupId, action, participants, actor } = update;
+
+    if (action !== "promote") return;
+
+    const groupProtections = getGroupProtections(groupId);
+    if (!groupProtections?.antipromote1) return;
+
+    const botIsAdmin = await isBotAdmin(sock, groupId);
+    if (!botIsAdmin) {
+      ProtectionLogger.warn('ANTIPROMOTE1', 'Bot non admin → impossible de démoter', null, groupId);
+      return;
+    }
+
+    try {
+      const metadata = await sock.groupMetadata(groupId);
+      const groupName = metadata.subject || "Groupe inconnu";
+      const time = new Date().toLocaleString("fr-FR", { timeZone: "Africa/Algiers" });
+
+      const promotedUser = participants[0];
+      const promoter = actor;
+
+      if (!promotedUser || !promoter) return;
+
+      const promotedNum = getBareNumber(promotedUser);
+      const promoterNum = getBareNumber(promoter);
+
+      if (protectionManager.isWhitelisted(promotedUser, 'user') || protectionManager.isWhitelisted(promoter, 'user')) return;
+      if (promoter === sock.user?.id) return;
+
+      const toDemote = [];
+      if (promotedUser) toDemote.push(promotedUser);
+      if (promoter && promoter !== promotedUser) toDemote.push(promoter);
+
+      if (toDemote.length > 0) {
+        await sock.groupParticipantsUpdate(groupId, toDemote, "demote");
+
+        const alertText = `
+🚫 *ANTI-PROMOTE ACTIVÉ* 🚫
+
+👤 Tentative de promotion : @${promotedNum}
+🔥 Par : @${promoterNum}
+📛 Action bloquée !
+
+➡️ Les deux ont été rétrogradés automatiquement.
+
+📍 Groupe : ${groupName}
+🕐 ${time}`;
+
+        await sock.sendMessage(groupId, { text: alertText, mentions: [promotedUser, promoter].filter(Boolean) });
+
+        const admins = metadata.participants.filter(p => p.admin).map(p => p.id);
+        if (admins.length > 0) {
+          await sock.sendMessage(groupId, { text: "‎".repeat(200), mentions: admins }).catch(() => {});
+        }
+
+        ProtectionLogger.log('ANTIPROMOTE1', `Promotion bloquée → démotion de @${promotedNum} et @${promoterNum}`, promoter, groupId);
+
+        const ownerNumber = protectionManager.ownerNumber || global.owners?.[0];
+        if (ownerNumber) {
+          const ownerJid = ownerNumber + "@s.whatsapp.net";
+          await sock.sendMessage(ownerJid, {
+            text: `🔴 *ANTI-PROMOTE DÉCLENCHÉ*\n\n👤 @${promotedNum}\n👮 Par : @${promoterNum}\n📍 ${groupName}\n🕐 ${time}\n\n➡️ Démotés automatiquement.`,
+            mentions: [promotedUser, promoter].filter(Boolean)
+          }).catch(() => {});
+        }
+      }
+    } catch (error) {
+      ProtectionLogger.error('ANTIPROMOTE1', error, { groupId });
+    }
+  });
+}
+
+// =================== ANTI-MESSAGE ===================
+export function antiMessage(sock) {
+  sock.ev.on("messages.upsert", async ({ messages }) => {
+    for (const msg of messages) {
+      if (!msg.message || msg.key.fromMe) continue;
+      const from = msg.key.remoteJid;
+      if (!from.endsWith('@g.us')) continue;
+
+      const groupProtections = getGroupProtections(from);
+      if (!groupProtections?.antiMessage) continue;
+
+      if (await shouldSkipProtection(sock, msg)) continue;
+
+      const sender = msg.key.participant || from;
+      const text = protectionManager.getMessageContent(msg);
+      if (!text.trim()) continue;
+
+      try {
+        await sock.sendMessage(from, { delete: msg.key });
+        await sock.sendMessage(from, { text: `> Knut XMD: Message texte supprimé ! @${getBareNumber(sender)}`, mentions: [sender] });
+        await sock.sendMessage(from, { react: { text: REACTIONS.antiMessage, key: msg.key } });
+        ProtectionLogger.log('ANTI-MESSAGE', 'Message texte supprimé', sender, from);
+      } catch (error) {
+        ProtectionLogger.error('ANTI-MESSAGE', error);
+      }
+    }
+  });
+}
+
+// =================== ANTI-LINK ===================
+export function antiLink(sock) {
+  sock.ev.on("messages.upsert", async ({ messages }) => {
+    for (const msg of messages) {
+      if (!msg.message) continue;
+      const from = msg.key.remoteJid;
+      if (!from.endsWith('@g.us')) continue;
+
+      const groupProtections = getGroupProtections(from);
+      if (!groupProtections?.antiLink) continue;
+
+      if (await shouldSkipProtection(sock, msg)) continue;
+
+      const sender = msg.key.participant || from;
+      const text = protectionManager.getMessageContent(msg);
+      if (!text) continue;
+
+      const hasBlockedLink = CONFIG.blockedLinks.some(link => text.toLowerCase().includes(link));
+
+      if (!hasBlockedLink) continue;
+
+      try {
+        await sock.sendMessage(from, { delete: msg.key });
+        await sock.sendMessage(from, { text: `> Knut XMD: Lien interdit détecté et supprimé ! @${getBareNumber(sender)}`, mentions: [sender] });
+        await sock.sendMessage(from, { react: { text: REACTIONS.antiLink, key: msg.key } });
+        ProtectionLogger.log('ANTI-LINK', 'Lien bloqué supprimé', sender, from, { snippet: text.slice(0, 50) });
+      } catch (error) {
+        ProtectionLogger.error('ANTI-LINK', error);
+      }
+    }
+  });
+}
+
+// =================== ANTI-BOT ===================
+export function antiBot(sock) {
+  const forbiddenStarters = [
+    '.', '?', '!', ';', ':', "'", '"', '*', '^', '§', '∆', '×', '÷', 'π', '√',
+    '•', '|', '`', '~', '%', '/', '-', '+', '=', '#', '@', '&', '(', ')', '[', ']',
+    '{', '}', '<', '>', '\\', '±', '∞', '°', '©', '®', '™', '¤', '¥', '€', '£'
+  ];
+
+  const processedKeys = new Set();
+
+  sock.ev.on("messages.upsert", async ({ messages, type }) => {
+    if (type !== "notify") return;
+
+    for (const msg of messages) {
+      const msgId = msg.key.id;
+      if (processedKeys.has(msgId)) continue;
+      processedKeys.add(msgId);
+      setTimeout(() => processedKeys.delete(msgId), 10_000);
+
+      if (!msg.message) continue;
+
+      const from = msg.key.remoteJid;
+      if (!from?.endsWith("@g.us")) continue;
+
+      const groupProtections = getGroupProtections(from);
+      if (!groupProtections?.antiBot) continue;
+
+      if (await shouldSkipProtection(sock, msg)) continue;
+
+      const sender = msg.key.participant || from;
+      const text = protectionManager.getMessageContent(msg)?.trim();
+      if (!text || text.length < 3) continue;
+
+      const firstChar = text[0];
+      if (!forbiddenStarters.includes(firstChar)) continue;
+
+      try {
+        await sock.sendMessage(from, { delete: msg.key });
+
+        const botIsAdmin = await isBotAdmin(sock, from);
+        if (botIsAdmin) {
+          await sock.groupParticipantsUpdate(from, [sender], "remove");
+        }
+
+        await sock.sendMessage(from, {
+          text: `> Knut XMD: ⚠️ Bot détecté et neutralisé !\n\n@${getBareNumber(sender)} kické pour message automatisé.\nPréfixe détecté : \`${firstChar}\``,
+          mentions: [sender]
+        });
+
+        await sock.sendMessage(from, { react: { text: REACTIONS.antiBot, key: msg.key } });
+
+        ProtectionLogger.log('ANTI-BOT', `Bot kické (préfixe: ${firstChar})`, sender, from);
+
+      } catch (error) {
+        ProtectionLogger.error('ANTI-BOT', error, { sender, group: from });
+      }
+    }
+  });
+}
+
+// =================== ANTI-STICKER ===================
+export function antiSticker(sock) {
+  sock.ev.on("messages.upsert", async ({ messages }) => {
+    for (const msg of messages) {
+      if (!msg.message?.stickerMessage || msg.key.fromMe) continue;
+      const from = msg.key.remoteJid;
+      if (!from.endsWith('@g.us')) continue;
+
+      const groupProtections = getGroupProtections(from);
+      if (!groupProtections?.antiSticker) continue;
+
+      if (await shouldSkipProtection(sock, msg)) continue;
+
+      const sender = msg.key.participant || from;
+
+      try {
+        await sock.sendMessage(from, { delete: msg.key });
+        await sock.sendMessage(from, { text: `> Knut XMD: Sticker interdit ! @${getBareNumber(sender)}`, mentions: [sender] });
+        await sock.sendMessage(from, { react: { text: REACTIONS.antiSticker, key: msg.key } });
+        ProtectionLogger.log('ANTI-STICKER', 'Sticker supprimé', sender, from);
+      } catch (error) {
+        ProtectionLogger.error('ANTI-STICKER', error);
+      }
+    }
+  });
+}
+
+// =================== ANTI-VOICE ===================
+export function antiVoice(sock) {
+  sock.ev.on("messages.upsert", async ({ messages }) => {
+    for (const msg of messages) {
+      if (!msg.message?.audioMessage || msg.key.fromMe) continue;
+      const from = msg.key.remoteJid;
+      if (!from.endsWith('@g.us')) continue;
+
+      const groupProtections = getGroupProtections(from);
+      if (!groupProtections?.antiVoice) continue;
+
+      if (await shouldSkipProtection(sock, msg)) continue;
+
+      const sender = msg.key.participant || from;
+
+      try {
+        await sock.sendMessage(from, { delete: msg.key });
+        await sock.sendMessage(from, { text: `> Knut XMD: Message vocal interdit ! @${getBareNumber(sender)}`, mentions: [sender] });
+        await sock.sendMessage(from, { react: { text: REACTIONS.antiVoice, key: msg.key } });
+        ProtectionLogger.log('ANTI-VOICE', 'Message vocal supprimé', sender, from);
+      } catch (error) {
+        ProtectionLogger.error('ANTI-VOICE', error);
+      }
+    }
+  });
+}
+
+// =================== ANTI-VIDEO ===================
+export function antiVideo(sock) {
+  sock.ev.on("messages.upsert", async ({ messages }) => {
+    for (const msg of messages) {
+      if (!msg.message?.videoMessage || msg.key.fromMe) continue;
+      const from = msg.key.remoteJid;
+      if (!from.endsWith('@g.us')) continue;
+
+      const groupProtections = getGroupProtections(from);
+      if (!groupProtections?.antiVideo) continue;
+
+      if (await shouldSkipProtection(sock, msg)) continue;
+
+      const sender = msg.key.participant || from;
+
+      try {
+        await sock.sendMessage(from, { delete: msg.key });
+        await sock.sendMessage(from, { text: `> Knut XMD: Vidéo interdite ! @${getBareNumber(sender)}`, mentions: [sender] });
+        await sock.sendMessage(from, { react: { text: REACTIONS.antiVideo, key: msg.key } });
+        ProtectionLogger.log('ANTI-VIDEO', 'Vidéo supprimée', sender, from);
+      } catch (error) {
+        ProtectionLogger.error('ANTI-VIDEO', error);
+      }
+    }
+  });
+}
+
+// =================== AUTO-REACT ===================
+export function autoReact(sock) {
+  sock.ev.on("messages.upsert", async ({ messages }) => {
+    for (const msg of messages) {
+      if (msg.key.fromMe || !msg.message) continue;
+      const from = msg.key.remoteJid;
+      if (!from.endsWith('@g.us')) continue;
+
+      const groupProtections = getGroupProtections(from);
+      if (!groupProtections?.autoReact) continue;
+
+      if (await shouldSkipProtection(sock, msg)) continue;
+
+      const randomReact = RANDOM_REACTIONS[Math.floor(Math.random() * RANDOM_REACTIONS.length)];
+
+      try {
+        await sock.sendMessage(from, { react: { text: randomReact, key: msg.key } });
+        ProtectionLogger.log('AUTO-REACT', `Réaction envoyée: ${randomReact}`, msg.key.participant, from);
+      } catch (error) {
+        ProtectionLogger.error('AUTO-REACT', error);
+      }
+    }
+  });
+}
+
+// =================== ANTI-SPAM ===================
+export function antiSpam(sock) {
+  sock.ev.on("messages.upsert", async ({ messages }) => {
+    for (const msg of messages) {
+      if (msg.key.fromMe || !msg.message) continue;
+      const from = msg.key.remoteJid;
+      if (!from.endsWith('@g.us')) continue;
+
+      const groupProtections = getGroupProtections(from);
+      if (!groupProtections?.antiSpam) continue;
+
+      if (await shouldSkipProtection(sock, msg)) continue;
+
+      const sender = msg.key.participant || from;
+      const key = `${from}:${sender}`;
+      const now = Date.now();
+
+      if (!protectionManager.spamTracker.has(key)) {
+        protectionManager.spamTracker.set(key, []);
+      }
+
+      const history = protectionManager.spamTracker.get(key);
+      history.push(now);
+      const recent = history.filter(t => now - t < CONFIG.spam.timeWindow);
+
+      if (recent.length > CONFIG.spam.limit) {
+        try {
+          const botIsAdmin = await isBotAdmin(sock, from);
+          if (botIsAdmin) {
+            await sock.groupParticipantsUpdate(from, [sender], "remove");
+            await sock.sendMessage(from, { text: `> Knut XMD: 🚨 Spam détecté ! @${getBareNumber(sender)} a été kické.`, mentions: [sender] });
+          } else {
+            await sock.sendMessage(from, { text: `> Knut XMD: Spam détecté (@${getBareNumber(sender)}), mais je ne suis pas admin.`, mentions: [sender] });
+          }
+          protectionManager.spamTracker.delete(key);
+          ProtectionLogger.log('ANTI-SPAM', 'Utilisateur kické pour spam', sender, from);
+        } catch (error) {
+          ProtectionLogger.error('ANTI-SPAM', error);
+        }
+      } else {
+        protectionManager.spamTracker.set(key, recent);
+      }
+    }
+  });
+}
+
+// =================== AUTO-KNUT-CHAT (TEXTE - GPT-4o) ===================
+export function autoKnutChat(sock) {
+  const cooldownMap = new Map();
+  const userCooldown = 5000;
+
+  sock.ev.on("messages.upsert", async ({ messages }) => {
+    for (const msg of messages) {
+      if (!msg.message || msg.key.fromMe) continue;
+
+      const from = msg.key.remoteJid;
+      if (!from.endsWith('@g.us')) continue;
+
+      const groupProtections = getGroupProtections(from);
+      if (!groupProtections?.autoKnutChat) continue;
+
+      const sender = msg.key.participant || from;
+      const cooldownKey = `${from}:${sender}`;
+      const now = Date.now();
+
+      if (cooldownMap.has(cooldownKey) && now - cooldownMap.get(cooldownKey) < userCooldown) continue;
+
+      const text = protectionManager.getMessageContent(msg)?.trim();
+      if (!text || text.length < 3) continue;
+      if (/^[\.\!\?\/\#\*\$\-\+\=]/.test(text)) continue;
+      if (protectionManager.isWhitelisted(sender, 'user')) continue;
+      if (getBareNumber(sender) === protectionManager.ownerNumber) continue;
+
+      cooldownMap.set(cooldownKey, now);
+
+      try {
+        const apiUrl = `https://api.giftedtech.co.ke/api/ai/gpt4o?apikey=gifted&q=${encodeURIComponent(text)}`;
+        const { data } = await axios.get(apiUrl, { timeout: 15000 });
+
+        const result = data?.result || data?.response || data?.message;
+        if (!result) throw new Error("Pas de réponse GPT-4o");
+
+        await sock.sendMessage(from, { text: `> Knut XMD:\n${result}` }, { quoted: msg });
+        ProtectionLogger.log('AUTO-KNUT-CHAT', 'Réponse GPT-4o envoyée', sender, from);
+
+      } catch (error) {
+        ProtectionLogger.error('AUTO-KNUT-CHAT', error.message || error, { group: from, sender });
+      }
+    }
+  });
+}
+
+// =================== KNUTA : IA + TTS AUTOMATIQUE (VOIX - Gemini) ===================
+export function knuta(sock) {
+  const cooldownMap = new Map();
+  const userCooldown = 8000;
+  const tts = gTTS("fr");
+  const tempDir = "./temp";
+
+  if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir, { recursive: true });
+
+  sock.ev.on("messages.upsert", async ({ messages }) => {
+    for (const msg of messages) {
+      if (!msg.message || msg.key.fromMe) continue;
+
+      const from = msg.key.remoteJid;
+      if (!from.endsWith("@g.us")) continue;
+
+      const groupProtections = getGroupProtections(from);
+      if (!groupProtections?.knuta) continue;
+
+      const sender = msg.key.participant || from;
+      const cooldownKey = `${from}:${sender}`;
+      const now = Date.now();
+
+      if (cooldownMap.has(cooldownKey) && now - cooldownMap.get(cooldownKey) < userCooldown) continue;
+
+      const text = protectionManager.getMessageContent(msg)?.trim();
+      if (!text || text.length < 3) continue;
+      if (/^[\.\!\?\/\#\*\$\-\+\=]/.test(text)) continue;
+      if (protectionManager.isWhitelisted(sender, 'user')) continue;
+      if (getBareNumber(sender) === protectionManager.ownerNumber) continue;
+
+      cooldownMap.set(cooldownKey, now);
+
+      try {
+        const apiUrl = `https://api.giftedtech.co.ke/api/ai/gemini?apikey=gifted&q=${encodeURIComponent(text)}`;
+        const { data } = await axios.get(apiUrl, { timeout: 15000 });
+
+        const responseText = (data?.result || data?.response || data?.message)?.trim();
+        if (!responseText) return; // Silence total si pas de réponse
+
+        const audioPath = path.join(tempDir, `knuta_${Date.now()}_${Math.random().toString(36).substr(2, 9)}.mp3`);
+
+        await new Promise((resolve, reject) => {
+          tts.save(audioPath, responseText, (err) => err ? reject(err) : resolve());
+        });
+
+        await sock.sendMessage(from, {
+          audio: fs.readFileSync(audioPath),
+          mimetype: "audio/mpeg",
+          ptt: false
+        }, { quoted: msg });
+
+        if (fs.existsSync(audioPath)) fs.unlinkSync(audioPath);
+
+        ProtectionLogger.log('KNUTA', 'Réponse vocale Gemini envoyée', sender, from, { chars: responseText.length });
+
+      } catch (error) {
+        ProtectionLogger.error('KNUTA', error.message || error, { group: from, sender });
+      }
+    }
+  });
+}
+
+// =================== WELCOME (SANS HIDETAG) ===================
+export function welcome(sock) {
+  sock.ev.on("group-participants.update", async (update) => {
+    const groupProtections = getGroupProtections(update.id);
+    if (!groupProtections?.welcome || update.action !== "add") return;
+
+    for (const participant of update.participants) {
+      try {
+        const metadata = await sock.groupMetadata(update.id);
+        const memberCount = metadata.participants.length;
+        const groupName = metadata.subject || "ce groupe";
+        const randomImg = getRandomImage();
+
+        await sock.sendMessage(update.id, {
+          image: { url: randomImg },
+          caption: 
+`> ┏━━━━━ ✦ KNUT-XMD ✦ ━━━━┓
+> ┃ 👥 @${getBareNumber(participant)} 
+> ┃ 🎉 Bienvenue dans *${groupName}* !
+> ┃ 
+> ┃ 💯 Tu es le ${memberCount}ᵉ membre
+> ┃ Présente-toi 
+> ┗━━━━━━━━ ✦ ✦ ✦ ━━━━━━━━┛`,
+          mentions: [participant]
+        });
+
+        ProtectionLogger.log('WELCOME', 'Nouveau membre accueilli', participant, update.id);
+
+      } catch (error) {
+        ProtectionLogger.error('WELCOME', error, { group: update.id, participant });
+      }
+    }
+  });
+}
+
+// =================== GOODBYE (SANS HIDETAG) ===================
+export function goodbye(sock) {
+  sock.ev.on("group-participants.update", async (update) => {
+    const groupProtections = getGroupProtections(update.id);
+    if (!groupProtections?.goodbye || update.action !== "remove") return;
+
+    for (const participant of update.participants) {
+      try {
+        const metadata = await sock.groupMetadata(update.id);
+        const memberCount = metadata.participants.length;
+        const groupName = metadata.subject || "ce groupe";
+        const randomImg = getRandomImage();
+
+        const wasKicked = update.actor && update.actor !== participant;
+        const actorNum = update.actor ? getBareNumber(update.actor) : null;
+
+        const goodbyeText = wasKicked 
+          ? `> ┏━━━━━ ✦ KNUT-XMD ✦ ━━━━━┓
+> ┃ 👤 @${getBareNumber(participant)} 
+> ┃ ❌ Expulsé du groupe !
+> ┃ 🥷🏾 Par : @${actorNum}
+> ┃ 👥 Membres restants : ${memberCount}
+> ┗━━━━━━━━ ✦ ✦ ✦ ━━━━━━━┛`
+          : `> ┏━━━━━━ ✦ KNUT-XMD ✦ ━━━━━━┓
+> ┃ 👤 @${getBareNumber(participant)} 
+> ┃ ❌ A quitté le groupe
+> ┃ 👥 Membres restants : ${memberCount}
+> ┃ 
+> ┃ 🫩 C'est toi qui perd !!!!
+> ┗━━━━━━━━ ✦ ✦ ✦ ━━━━━━━━┛`;
+
+        await sock.sendMessage(update.id, {
+          image: { url: randomImg },
+          caption: goodbyeText,
+          mentions: wasKicked ? [participant, update.actor].filter(Boolean) : [participant]
+        });
+
+        ProtectionLogger.log('GOODBYE', wasKicked ? 'Expulsé' : 'A quitté', participant, update.id);
+
+      } catch (error) {
+        ProtectionLogger.error('GOODBYE', error, { group: update.id, participant });
+      }
+    }
+  });
+}
+
+// =================== INIT PROTECTIONS ===================
+export function initProtections(sock, ownerNumber) {
+  if (!ownerNumber) {
+    ProtectionLogger.error('INIT', 'ownerNumber manquant !');
+    return;
+  }
+
+  if (!global.autoVVIB) global.autoVVIB = { enabled: true };
+
+  protectionManager = new ProtectionManager(ownerNumber);
+
+  const availableProtections = [
+    antiMessage,
+    antiLink,
+    antiBot,
+    antiSticker,
+    antiVoice,
+    antiVideo,
+    autoReact,
+    autoVV,
+    welcome,
+    goodbye,
+    antiSpam,
+    autoKnutChat,
+    knuta,           // ← IA Vocale automatique (silencieuse)
+    antipromote1
+  ];
+
+  ProtectionLogger.log('SYSTÈME', 'Démarrage des protections...');
+
+  availableProtections.forEach(protection => {
+    protection(sock);
+    ProtectionLogger.log('SYSTÈME', `${protection.name.toUpperCase()} activée ✓`);
+  });
+
+  ProtectionLogger.log('SYSTÈME', 'Toutes les protections sont ACTIVES ✓');
+}
