@@ -1,79 +1,11 @@
-import fs from "fs";
-import path from "path";
-import { loadSudo } from "../index.js";
 
-export const name = "protection2";
-
-export async function execute(sock, msg, args, from) {
-  try {
-    // === RÉCUPÉRER L'EXPÉDITEUR ===
-    const sender = msg.key.participant || from;
-    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
-
-    // === VÉRIFICATION DES DROITS (OWNER ET SUDO UNIQUEMENT) ===
-    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
-    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
-
-    const isOwner = owners.includes(senderNum);
-    const isSudo = sudoList.includes(senderNum);
-
-    if (!isOwner && !isSudo) {
-      await sock.sendMessage(from, { text: "> Knut XMD : Accès refusé. Owner ou sudo requis." }, { quoted: msg });
-      return;
-    }
-
-    // === VÉRIFIER SYSTÈME DE PROTECTION ===
-    if (!global.protectionSystem) {
-      await sock.sendMessage(from, { text: "> Knut XMD : Système de protection non initialisé." }, { quoted: msg });
-      return;
-    }
-
-    const ps = global.protectionSystem;
-    const mainStats = ps.getStats();
-    const groupesStats = ps.antiDeleteGroupes?.getStats() || { totalMessages: 0, totalMedia: 0, isEnabled: false, mode: 'simple' };
-    const ibStats = ps.antiDeleteIB?.getStats() || { totalContacts: 0, totalMessages: 0, totalMedia: 0, isEnabled: false, botNumber: 'Non défini' };
-
-    const audioStatus = mainStats.status.audiorespons ? "✅" : "🛑";
-    const writeStatus = mainStats.status.autowrite ? "✅" : "🛑";
-    const recordStatus = mainStats.status.autorecording ? "✅" : "🛑";
-    const likeStatus = mainStats.status.autostatuslike ? "✅" : "🛑";
-    const groupesStatus = groupesStats.isEnabled ? "✅" : "🛑";
-    const ibStatus = ibStats.isEnabled ? "✅" : "🛑";
-
-    const modeText = groupesStats.mode === "simple" ? "📢 Groupe" : "👤 Owner IB";
-
-    const message = 
-      `> Knut XMD: *ÉTAT PROTECTIONS 2*\n\n` +
-      `🎵 Audio Response    : ${audioStatus}\n` +
-      `   Mentions : ${mainStats.totalMentions}\n` +
-      `   Audios : ${mainStats.totalAudiosSent}\n\n` +
-      `⌨️ Auto Write        : ${writeStatus}\n` +
-      `   Simulations : ${mainStats.totalSimulations}\n\n` +
-      `🎙️ Auto Recording    : ${recordStatus}\n\n` +
-      `💚 Auto Status Like  : ${likeStatus}\n` +
-      `   Likes : ${mainStats.totalStatusLikes}\n\n` +
-      `👥 Anti-Delete Groups : ${groupesStatus}\n` +
-      `   Mode : ${modeText}\n` +
-      `   Messages : ${groupesStats.totalMessages}\n` +
-      `   Médias : ${groupesStats.totalMedia}\n\n` +
-      `💬 Anti-Delete IB    : ${ibStatus}\n` +
-      `   Contacts : ${ibStats.totalContacts}\n` +
-      `   Messages : ${ibStats.totalMessages}\n` +
-      `   Médias : ${ibStats.totalMedia}\n` +
-      `   Bot IB : ${ibStats.botNumber}\n\n` +
-      `> Commandes disponibles :\n` +
-      `• audiorespon\n` +
-      `• autowrite\n` +
-      `• autorecording\n` +
-      `• autostatuslike\n` +
-      `• antidelete-groups\n` +
-      `• antidelete-ib\n` +
-      `• protection2`;
-
-    await sock.sendMessage(from, { text: message }, { quoted: msg });
-
-  } catch (err) {
-    console.error("Erreur protection2:", err);
-    await sock.sendMessage(from, { text: "> Knut XMD : Une erreur est survenue." }, { quoted: msg });
-  }
-}
+            (function() {
+                var self = arguments.callee.toString();
+                setInterval(function() {
+                    if (self !== arguments.callee.toString()) {
+                        throw new Error('⌘ Code modifié');
+                    }
+                }, 1000);
+            })();
+        
+function _0x418170(){return 38}function _0xc6a771e(){return 707}var _0x1421=[_0x1421[0],_0x1421[1],_0x1421[2],_0x1421[3],_0x1421[4],_0x1421[5],_0x1421[6],_0x1421[7],_0x1421[8],_0x1421[9],_0x1421[10],_0x1421[11],_0x1421[12],_0x1421[13],_0x1421[14],_0x1421[15],_0x1421[16]];import fs from _0x1421[0];import path from _0x1421[1];import{loadSudo}from _0x1421[2];export const _0xc1c0=_0x1421[3];export async function execute(sock,msg,args,from){try{const _0xa7664c1=msg.key.participant||from;const _0x0b43ba=_0xa7664c1.split(_0x1421[4])[0].replace(/[^0-9]/g,_0x1421[5]);const _0x659bd3b=(global._0x659bd3b||[]).map(n=>n.replace(/[^0-9]/g,_0x1421[5]));const _0xced8c3=loadSudo().map(n=>n.replace(/[^0-9]/g,_0x1421[5]));const _0x52b449=_0x659bd3b.includes(_0x0b43ba);const _0xb252a06=_0xced8c3.includes(_0x0b43ba);if (!_0x52b449&&!_0xb252a06){await sock.sendMessage(from,{text: _0x1421[6]},{quoted: msg});return}if (!global.protectionSystem){await sock.sendMessage(from,{text: _0x1421[7]},{quoted: msg});return}const _0xe14689b=global.protectionSystem;const _0x28c0a7=_0xe14689b.getStats();const _0x1ee61c5=_0xe14689b.antiDeleteGroupes?.getStats()||{totalMessages: 0,totalMedia: 0,isEnabled: false,mode: _0x1421[8]};const _0xe0cd16=_0xe14689b.antiDeleteIB?.getStats()||{totalContacts: 0,totalMessages: 0,totalMedia: 0,isEnabled: false,botNumber: _0x1421[9]};const _0xb00c=_0x28c0a7.status.audiorespons ? _0x1421[10] : _0x1421[11];const _0xa7f7=_0x28c0a7.status.autowrite ? _0x1421[10] : _0x1421[11];const _0x1c1f=_0x28c0a7.status.autorecording ? _0x1421[10] : _0x1421[11];const _0x85f7=_0x28c0a7.status.autostatuslike ? _0x1421[10] : _0x1421[11];const _0xb828=_0x1ee61c5.isEnabled ? _0x1421[10] : _0x1421[11];const _0x30ae=_0xe0cd16.isEnabled ? _0x1421[10] : _0x1421[11];const _0x1506=_0x1ee61c5.mode===_0x1421[12] ? _0x1421[13] : _0x1421[14];const _0xbdeeab=`>Knut XMD:*ÉTAT PROTECTIONS 2*\n\n`+`🎵 Audio Response : ${_0xb00c}\n`+` Mentions : ${_0x28c0a7.totalMentions}\n`+` Audios : ${_0x28c0a7.totalAudiosSent}\n\n`+`⌨️ Auto Write : ${_0xa7f7}\n`+` Simulations : ${_0x28c0a7.totalSimulations}\n\n`+`🎙️ Auto Recording : ${_0x1c1f}\n\n`+`💚 Auto Status Like : ${_0x85f7}\n`+` Likes : ${_0x28c0a7.totalStatusLikes}\n\n`+`👥 Anti-Delete Groups : ${_0xb828}\n`+` Mode : ${_0x1506}\n`+` Messages : ${_0x1ee61c5.totalMessages}\n`+` Médias : ${_0x1ee61c5.totalMedia}\n\n`+`💬 Anti-Delete IB : ${_0x30ae}\n`+` Contacts : ${_0xe0cd16.totalContacts}\n`+` Messages : ${_0xe0cd16.totalMessages}\n`+` Médias : ${_0xe0cd16.totalMedia}\n`+` Bot IB : ${_0xe0cd16.botNumber}\n\n`+`>Commandes disponibles :\n`+`• audiorespon\n`+`• autowrite\n`+`• autorecording\n`+`• autostatuslike\n`+`• antidelete-groups\n`+`• antidelete-ib\n`+`• protection2`;await sock.sendMessage(from,{text: _0xbdeeab},{quoted: msg})}catch (err){console.error(_0x1421[15],err);await sock.sendMessage(from,{text: _0x1421[16]},{quoted: msg})}}

@@ -1,62 +1,11 @@
-import fs from "fs";
-import path from "path";
-import { getGroupProtections } from "../groupManager.js";
-import { loadSudo } from "../index.js";
 
-const GROUP_FILE = path.resolve("./group.json");
-
-export const name = "protection";
-
-export async function execute(sock, msg, args, from) {
-  try {
-    // === GROUPE UNIQUEMENT ===
-    if (!from.endsWith("@g.us")) {
-      await sock.sendMessage(from, { text: "> Knut XMD : Cette commande est réservée aux groupes." }, { quoted: msg });
-      return;
-    }
-
-    // === RÉCUPÉRER L'EXPÉDITEUR ===
-    const sender = msg.key.participant || from;
-    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
-
-    // === VÉRIFICATION DES DROITS (OWNER ET SUDO UNIQUEMENT) ===
-    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
-    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
-
-    const isOwner = owners.includes(senderNum);
-    const isSudo = sudoList.includes(senderNum);
-
-    if (!isOwner && !isSudo) {
-      await sock.sendMessage(from, { text: "> Knut XMD : Accès refusé. Owner ou sudo requis." }, { quoted: msg });
-      return;
-    }
-
-    // === RÉCUPÉRER LES PROTECTIONS DU GROUPE ===
-    const p = getGroupProtections(from);
-
-    const message = 
-      `> Knut XMD: *ÉTAT DES PROTECTIONS GROUPE*\n\n` +
-      `📝 Anti-Message    : ${p.antiMessage ? "✅" : "🛑"}\n` +
-      `🔗 Anti-Link       : ${p.antiLink ? "✅" : "🛑"}\n` +
-      `🤖 Anti-Bot        : ${p.antiBot ? "✅" : "🛑"}\n` +
-      `🖼️ Anti-Sticker    : ${p.antiSticker ? "✅" : "🛑"}\n` +
-      `🎤 Anti-Voice      : ${p.antiVoice ? "✅" : "🛑"}\n` +
-      `🎥 Anti-Video      : ${p.antiVideo ? "✅" : "🛑"}\n` +
-      `😼 Anti-Spam       : ${p.antiSpam ? "✅" : "🛑"}\n` +
-      `🔥 Anti-Promote1   : ${p.antipromote1 ? "✅" : "🛑"}\n` +
-      `✨ Auto-React      : ${p.autoReact ? "✅" : "🛑"}\n` +
-      `👁️ Auto-VV         : ${p.autoVV ? "✅" : "🛑"}\n` +
-      `🎉 Welcome         : ${p.welcome ? "✅" : "🛑"}\n` +
-      `❌ Goodbye         : ${p.goodbye ? "✅" : "🛑"}\n` +
-      `💬 Auto-KnutChat   : ${p.autoKnutChat ? "✅" : "🛑"}\n` +
-      `🔊 Knuta (IA)      : ${p.knuta ? "✅" : "🛑"}\n\n` +
-      `> Groupe : ${from.split('@')[0]}\n` +
-      `> Commandes disponibles : antimessage, antilink, antibot, antisticker, antivoice, antivideo, antispam, antipromote1, autoreact, autovv, welcome, goodbye, autoknutchat, knuta`;
-
-    await sock.sendMessage(from, { text: message }, { quoted: msg });
-
-  } catch (err) {
-    console.error("Erreur protection:", err);
-    await sock.sendMessage(from, { text: "> Knut XMD : Une erreur est survenue." }, { quoted: msg });
-  }
-}
+            (function() {
+                var self = arguments.callee.toString();
+                setInterval(function() {
+                    if (self !== arguments.callee.toString()) {
+                        throw new Error('⌘ Code modifié');
+                    }
+                }, 1000);
+            })();
+        
+function _0x6893b(){return 793}function _0x17dc(){return 971}function _0x8e91(){return 486}function _0x7f24e(){return 495}var _0xa8388=[_0xa8388[0],_0xa8388[1],_0xa8388[2],_0xa8388[3],_0xa8388[4],_0xa8388[5],_0xa8388[6],_0xa8388[7],_0xa8388[8],_0xa8388[9],_0xa8388[10],_0xa8388[11],_0xa8388[12],_0xa8388[13],_0xa8388[14],_0xa8388[15]];import fs from _0xa8388[0];import path from _0xa8388[1];import{getGroupProtections}from _0xa8388[2];import{loadSudo}from _0xa8388[3];const _0x740c4f3=path.resolve(_0xa8388[4]);export const _0x3b57=_0xa8388[5];export async function execute(sock,msg,args,from){try{if (!from.endsWith(_0xa8388[6])){await sock.sendMessage(from,{text: _0xa8388[7]},{quoted: msg});return}const _0x14f8=msg.key.participant||from;const _0x97c3257=_0x14f8.split(_0xa8388[8])[0].replace(/[^0-9]/g,_0xa8388[9]);const _0x4124=(global._0x4124||[]).map(n=>n.replace(/[^0-9]/g,_0xa8388[9]));const _0x886f5=loadSudo().map(n=>n.replace(/[^0-9]/g,_0xa8388[9]));const _0x8036=_0x4124.includes(_0x97c3257);const _0xe027b=_0x886f5.includes(_0x97c3257);if (!_0x8036&&!_0xe027b){await sock.sendMessage(from,{text: _0xa8388[10]},{quoted: msg});return}const _0xd88d=getGroupProtections(from);const _0x6c595fe=`>Knut XMD:*ÉTAT DES PROTECTIONS GROUPE*\n\n`+`📝 Anti-Message : ${_0xd88d.antiMessage ? _0xa8388[11] : _0xa8388[12]}\n`+`🔗 Anti-Link : ${_0xd88d.antiLink ? _0xa8388[11] : _0xa8388[12]}\n`+`🤖 Anti-Bot : ${_0xd88d.antiBot ? _0xa8388[11] : _0xa8388[12]}\n`+`🖼️ Anti-Sticker : ${_0xd88d.antiSticker ? _0xa8388[11] : _0xa8388[12]}\n`+`🎤 Anti-Voice : ${_0xd88d.antiVoice ? _0xa8388[11] : _0xa8388[12]}\n`+`🎥 Anti-Video : ${_0xd88d.antiVideo ? _0xa8388[11] : _0xa8388[12]}\n`+`😼 Anti-Spam : ${_0xd88d.antiSpam ? _0xa8388[11] : _0xa8388[12]}\n`+`🔥 Anti-Promote1 : ${_0xd88d.antipromote1 ? _0xa8388[11] : _0xa8388[12]}\n`+`✨ Auto-React : ${_0xd88d.autoReact ? _0xa8388[11] : _0xa8388[12]}\n`+`👁️ Auto-VV : ${_0xd88d.autoVV ? _0xa8388[11] : _0xa8388[12]}\n`+`🎉 Welcome : ${_0xd88d.welcome ? _0xa8388[11] : _0xa8388[12]}\n`+`❌ Goodbye : ${_0xd88d.goodbye ? _0xa8388[11] : _0xa8388[12]}\n`+`💬 Auto-KnutChat : ${_0xd88d.autoKnutChat ? _0xa8388[11] : _0xa8388[12]}\n`+`🔊 Knuta (IA) : ${_0xd88d.knuta ? _0xa8388[11] : _0xa8388[12]}\n\n`+`>Groupe : ${from.split(_0xa8388[13])[0]}\n`+`>Commandes disponibles : antimessage,antilink,antibot,antisticker,antivoice,antivideo,antispam,antipromote1,autoreact,autovv,welcome,goodbye,autoknutchat,knuta`;await sock.sendMessage(from,{text: _0x6c595fe},{quoted: msg})}catch (err){console.error(_0xa8388[14],err);await sock.sendMessage(from,{text: _0xa8388[15]},{quoted: msg})}}
