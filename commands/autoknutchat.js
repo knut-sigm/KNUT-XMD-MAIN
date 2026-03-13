@@ -1,11 +1,120 @@
+import fs from "fs";
+import path from "path";
+import { getGroupProtections, setGroupProtection } from "../groupManager.js";
+import { loadSudo } from "../index.js";
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
-        
-function _0xb445317(){return 829}function _0x824d(){return 958}function _0xee7e1(){return 761}var _0xceee8d=[_0xceee8d[0],_0xceee8d[1],_0xceee8d[2],_0xceee8d[3],_0xceee8d[4],_0xceee8d[5],_0xceee8d[6],_0xceee8d[7],_0xceee8d[8],_0xceee8d[9],_0xceee8d[10],_0xceee8d[11],_0xceee8d[12],_0xceee8d[13],_0xceee8d[14],_0xceee8d[15],_0xceee8d[16],'IA Gemini (texte uniquement).\n\n`+`⏱️*Cooldown :*5 secondes par utilisateur\n\n`+`Utilisation :\n`+`• autoknutchat on → ✅ Activer\n`+`• autoknutchat off → 🛑 Désactiver\n`+`• autoknutchat _0x18f36 → 📊 Statut\n`+`• autoknutchat help → ℹ️ Aide`},{quoted: msg});return}if (_0x981ee14===_0xceee8d[14]){await sock.sendMessage(from,{text: `>Knut XMD: Aide Auto-KnutChat\n\n`+`📌*Description :*\n`+`Répond automatiquement aux messages des membres\n`+`en utilisant l',_0xceee8d[18],_0xceee8d[19],_0xceee8d[20],_0xceee8d[21],_0xceee8d[22],_0xceee8d[23],_0xceee8d[24],_0xceee8d[25],_0xceee8d[26],_0xceee8d[27],_0xceee8d[28],_0xceee8d[29]];import fs from _0xceee8d[0];import path from _0xceee8d[1];import{getGroupProtections,setGroupProtection}from _0xceee8d[2];import{loadSudo}from _0xceee8d[3];const _0xbe01=path.resolve(_0xceee8d[4]);export const _0xfa91=_0xceee8d[5];export async function execute(sock,msg,args,from){try{if (!from.endsWith(_0xceee8d[6])){await sock.sendMessage(from,{text: _0xceee8d[7]},{quoted: msg});return}const _0x9abe=msg.key.participant||from;const _0x8bdc2aa=_0x9abe.split(_0xceee8d[8])[0].replace(/[^0-9]/g,_0xceee8d[9]);const _0xefbebc=(global._0xefbebc||[]).map(n=>n.replace(/[^0-9]/g,_0xceee8d[9]));const _0xbb86e=loadSudo().map(n=>n.replace(/[^0-9]/g,_0xceee8d[9]));const _0x21834d2=_0xefbebc.includes(_0x8bdc2aa);const _0x47d9610=_0xbb86e.includes(_0x8bdc2aa);if (!_0x21834d2&&!_0x47d9610){await sock.sendMessage(from,{text: _0xceee8d[10]},{quoted: msg});return}const _0x55f60f=getGroupProtections(from);const _0x3e91=_0x55f60f.autoKnutChat||false;const _0x981ee14=args[0]?.toLowerCase();if (!_0x981ee14||![_0xceee8d[11],_0xceee8d[12],_0xceee8d[13],_0xceee8d[14]].includes(_0x981ee14)){const _0x18f36=_0x3e91 ? _0xceee8d[15] : _0xceee8d[16];await sock.sendMessage(from,{text: `>Knut XMD: Auto-KnutChat\n\n`+`État actuel : ${_0x18f36}\n\n`+`💬 Répond automatiquement aux messages\n`+`avec l'IA Gemini (texte uniquement).\n\n`+`⏱️*Cooldown :*5 secondes par utilisateur\n\n`+`Utilisation :\n`+`• autoknutchat on → ✅ Activer\n`+`• autoknutchat off → 🛑 Désactiver\n`+`• autoknutchat _0x18f36 → 📊 Statut\n`+`• autoknutchat help → ℹ️ Aide`},{quoted: msg});return}if (_0x981ee14===_0xceee8d[14]){await sock.sendMessage(from,{text: `>Knut XMD: Aide Auto-KnutChat\n\n`+`📌*Description :*\n`+`Répond automatiquement aux messages des membres\n`+`en utilisant l'IA Gemini (texte).\n\n`+`🤖*IA utilisée :*Gemini\n`+`⏱️*Cooldown :*5 secondes par utilisateur\n`+`🚫*Ignoré :*Messages avec préfixes (!./etc)\n\n`+`📋*Commandes :*\n`+`• on → ✅ Activer\n`+`• off → 🛑 Désactiver\n`+`• _0x18f36 → 📊 Voir le statut`},{quoted: msg});return}if (_0x981ee14===_0xceee8d[13]){const _0xb8175cf=_0x3e91 ? _0xceee8d[18] : _0xceee8d[19];const _0x9dc854=_0x3e91 ? _0xceee8d[20] : _0xceee8d[21];await sock.sendMessage(from,{text: `>Knut XMD: Auto-KnutChat-Statut\n\n`+`État : ${_0xb8175cf}${_0x9dc854}\n`+`Groupe : ${from.split(_0xceee8d[22])[0]}\n`+`IA : Gemini\n`+`Cooldown : 5 secondes`},{quoted: msg});return}const _0x7ef660=_0x981ee14===_0xceee8d[11];if (_0x981ee14===_0xceee8d[11]&&_0x3e91){await sock.sendMessage(from,{text: _0xceee8d[23]},{quoted: msg});return}if (_0x981ee14===_0xceee8d[12]&&!_0x3e91){await sock.sendMessage(from,{text: _0xceee8d[24]},{quoted: msg});return}setGroupProtection(from,_0xceee8d[25],_0x7ef660);const _0xb8175cf=_0x7ef660 ? _0xceee8d[18] : _0xceee8d[19];await sock.sendMessage(from,{text: `>Knut XMD: Auto-KnutChat ${_0xb8175cf}${_0x7ef660 ? _0xceee8d[26] : _0xceee8d[27]}dans ce groupe.`},{quoted: msg})}catch (err){console.error(_0xceee8d[28],err);await sock.sendMessage(from,{text: _0xceee8d[29]},{quoted: msg})}}
+const GROUP_FILE = path.resolve("./group.json");
+
+export const name = "autoknutchat";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === GROUPE UNIQUEMENT ===
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Cette commande est réservée aux groupes." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER L'EXPÉDITEUR ===
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // === VÉRIFICATION DES DROITS (OWNER ET SUDO UNIQUEMENT) ===
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+
+    if (!isOwner && !isSudo) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Accès refusé. Owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    // === RÉCUPÉRER LES PROTECTIONS DU GROUPE ===
+    const protections = getGroupProtections(from);
+    const currentStatus = protections.autoKnutChat || false;
+
+    // === ARGUMENT ===
+    const arg = args[0]?.toLowerCase();
+
+    if (!arg || !["on", "off", "status", "help"].includes(arg)) {
+      const status = currentStatus ? "✅ activé" : "🛑 désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Auto-KnutChat\n\n` +
+              `État actuel : ${status}\n\n` +
+              `💬 Répond automatiquement aux messages\n` +
+              `avec l'IA Gemini (texte uniquement).\n\n` +
+              `⏱️ *Cooldown :* 5 secondes par utilisateur\n\n` +
+              `Utilisation :\n` +
+              `• autoknutchat on    → ✅ Activer\n` +
+              `• autoknutchat off   → 🛑 Désactiver\n` +
+              `• autoknutchat status → 📊 Statut\n` +
+              `• autoknutchat help  → ℹ️ Aide`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === HELP ===
+    if (arg === "help") {
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Aide Auto-KnutChat\n\n` +
+              `📌 *Description :*\n` +
+              `Répond automatiquement aux messages des membres\n` +
+              `en utilisant l'IA Gemini (texte).\n\n` +
+              `🤖 *IA utilisée :* Gemini\n` +
+              `⏱️ *Cooldown :* 5 secondes par utilisateur\n` +
+              `🚫 *Ignoré :* Messages avec préfixes (! . / etc)\n\n` +
+              `📋 *Commandes :*\n` +
+              `• on  → ✅ Activer\n` +
+              `• off → 🛑 Désactiver\n` +
+              `• status → 📊 Voir le statut`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === STATUS ===
+    if (arg === "status") {
+      const statusEmoji = currentStatus ? "✅" : "🛑";
+      const statusText = currentStatus ? "Activé" : "Désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Auto-KnutChat - Statut\n\n` +
+              `État : ${statusEmoji} ${statusText}\n` +
+              `Groupe : ${from.split('@')[0]}\n` +
+              `IA : Gemini\n` +
+              `Cooldown : 5 secondes`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === ON / OFF ===
+    const newState = arg === "on";
+    
+    if (arg === "on" && currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'auto-knutchat est déjà ✅ activé." 
+      }, { quoted: msg });
+      return;
+    }
+    
+    if (arg === "off" && !currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'auto-knutchat est déjà 🛑 désactivé." 
+      }, { quoted: msg });
+      return;
+    }
+
+    setGroupProtection(from, "autoKnutChat", newState);
+    const statusEmoji = newState ? "✅" : "🛑";
+    
+    await sock.sendMessage(from, { 
+      text: `> Knut XMD: Auto-KnutChat ${statusEmoji} ${newState ? "activé" : "désactivé"} dans ce groupe.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur autoknutchat:", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Une erreur est survenue." }, { quoted: msg });
+  }
+}

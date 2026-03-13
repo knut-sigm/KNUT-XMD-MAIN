@@ -1,11 +1,57 @@
+import fetch from "node-fetch";
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
-        
-function _0x3d26c(){return 519}function _0x82f75(){return 910}function _0xa3821(){return 879}var _0x5318d=[_0x5318d[0],_0x5318d[1],_0x5318d[2],_0x5318d[3],_0x5318d[4],_0x5318d[5],_0x5318d[6],_0x5318d[7],_0x5318d[8],_0x5318d[9],_0x5318d[10],_0x5318d[11],_0x5318d[12]];import axios from _0x5318d[0];export const _0x03c3fa=_0x5318d[1];export async function execute(sock,msg,args,from){try{const _0x3fa9e=args.join(_0x5318d[2]);if (!_0x3fa9e){await sock.sendMessage(from,{text: _0x5318d[3]},{quoted: msg});return}const _0xcee1=await sock.sendMessage(from,{text: `⏳ Recherche des paroles pour _0x5318d[4]...`},{quoted: msg});const _0xb2336=`https: const _0xef84272=await axios.get(_0xb2336,{timeout: 15000});if (!_0xef84272.data||!_0xef84272.data.status===200){throw new Error(_0x5318d[5])}const _0x31a1e45=_0xef84272.data._0x31a1e45||{};if (!_0x31a1e45||Object.keys(_0x31a1e45).length===0){await sock.sendMessage(from,{text: `❌ Aucune parole trouvée pour _0x5318d[4].`},{quoted: msg});return}let _0x974d7=`🎵*RECHERCHE DE PAROLES*🎵\n\n`;if (_0x31a1e45.title){_0x974d7+=`*${_0x31a1e45.title}*\n`}else{_0x974d7+=`*${_0x3fa9e}*\n`}if (_0x31a1e45.artist){_0x974d7+=`👤 Artiste: ${_0x31a1e45.artist}\n`}if (_0x31a1e45.album){_0x974d7+=`💿 Album: ${_0x31a1e45.album}\n`}if (_0x31a1e45.year){_0x974d7+=`📅 Année: ${_0x31a1e45.year}\n`}_0x974d7+=`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;if (_0x31a1e45._0x9d68f){let _0x9d68f=_0x31a1e45._0x9d68f;if (_0x9d68f.length>3000){_0x9d68f=_0x9d68f.substring(0,3000)+_0x5318d[6]}_0x974d7+=`${_0x9d68f}\n`}else{_0x974d7+=`_Aucune parole disponible_\n`}_0x974d7+=`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;if (_0x31a1e45.source){_0x974d7+=`\n📌 Source: ${_0x31a1e45.source}`}_0x974d7+=`\n>Knut XMD : Recherche de paroles`;await sock.sendMessage(from,{text: _0x974d7},{quoted: msg})}catch (error){console.error(_0x5318d[7],error);let _0x0fc20=_0x5318d[8];if (error.code===_0x5318d[9]){_0x0fc20+=_0x5318d[10]}else if (error._0xef84272?.status===403){_0x0fc20+=_0x5318d[11]}else if (error._0xef84272){_0x0fc20+=`Code: ${error._0xef84272.status}\n`}else if (error.request){_0x0fc20+=_0x5318d[12]}else{_0x0fc20+=`${error.message}\n`}_0x0fc20+=`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;_0x0fc20+=`>Knut XMD : Réessaie plus tard`;await sock.sendMessage(from,{text: _0x0fc20},{quoted: msg})}}
+export const name = "lyrics";
+
+export async function execute(sock, msg, args) {
+  try {
+    const from = msg.key.remoteJid;
+    const songTitle = args.join(" ").trim();
+
+    if (!songTitle) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD:🔍 Veuillez entrer le nom de la chanson pour obtenir les paroles !\n\nExemple : . lyrics Shape of You" 
+      }, { quoted: msg });
+      return;
+    }
+
+    const sentMsg = await sock.sendMessage(from, { text:"> Knut XMD: 🎵 Recherche des paroles..." }, { quoted: msg });
+
+    const apiUrl = `https://lyricsapi.fly.dev/api/lyrics?q=${encodeURIComponent(songTitle)}`;
+    const res = await fetch(apiUrl);
+
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error(errText);
+    }
+
+    const data = await res.json();
+    const lyrics = data?.result?.lyrics;
+
+    if (!lyrics) {
+      await sock.sendMessage(from, {
+        text: `> Knut MD:❌ aucune parole trouvée pour : "${songTitle}"`
+      }, { quoted: msg });
+      return;
+    }
+
+    // Limite à 4096 caractères
+    const maxChars = 4096;
+    const output = lyrics.length > maxChars ? lyrics.slice(0, maxChars - 3) + "..." : lyrics;
+
+    await sock.sendMessage(from, {
+      text: `
+> ╔───── LYRICS ─────╗
+> Knut XMD: Titre trouvé 
+🎶 Chanson : ${songTitle}
+> ───────────────────
+${output}
+> ╚─────────────────╝`
+    }, { quoted: sentMsg });
+
+  } catch (error) {
+    console.error("❌ Erreur dans la commande lyrics :", error);
+    await sock.sendMessage(msg.key.remoteJid, {
+      text: `> Knut XMD:❌ Une erreur est survenue lors de la récupération des paroles pour "${args.join(" ")}".`
+    }, { quoted: msg });
+  }
+}

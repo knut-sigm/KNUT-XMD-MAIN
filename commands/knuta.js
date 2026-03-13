@@ -1,11 +1,74 @@
+import fs from "fs";
+import path from "path";
+import { getGroupProtections, setGroupProtection } from "../groupManager.js";
+import { loadSudo } from "../index.js";
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
-        
-function _0x27b023(){return 103}function _0x5f625(){return 767}var _0x039b=[_0x039b[0],_0x039b[1],_0x039b[2],_0x039b[3],_0x039b[4],_0x039b[5],_0x039b[6],_0x039b[7],_0x039b[8],_0x039b[9],_0x039b[10],_0x039b[11],_0x039b[12],_0x039b[13],_0x039b[14],_0x039b[15],_0x039b[16],_0x039b[17],_0x039b[18],_0x039b[19],_0x039b[20]];import{getGroupProtections,setGroupProtection}from _0x039b[0];import{loadSudo}from _0x039b[1];export const _0x9e9b=_0x039b[2];export async function execute(sock,msg,args,from){try{if (!from.endsWith(_0x039b[3])){await sock.sendMessage(from,{text: _0x039b[4]},{quoted: msg});return}const _0xb828ac=msg.key.participant||from;const _0xa3c8fb=_0xb828ac.split(_0x039b[5])[0].replace(/[^0-9]/g,_0x039b[6]);const _0xd3e3dc=(global._0xd3e3dc||[]).map(n=>n.replace(/[^0-9]/g,_0x039b[6]));const _0x66bc0a9=loadSudo().map(n=>n.replace(/[^0-9]/g,_0x039b[6]));const _0x554a=_0xd3e3dc.includes(_0xa3c8fb);const _0x0bb3bf8=_0x66bc0a9.includes(_0xa3c8fb);if (!_0x554a&&!_0x0bb3bf8){await sock.sendMessage(from,{text: _0x039b[7]},{quoted: msg});return}const _0x519e04=getGroupProtections(from);const _0xb1ce5c8=_0x519e04.knuta||false;const _0xa47de=args[0]?.toLowerCase();if (!_0xa47de||![_0x039b[8],_0x039b[9],_0x039b[10]].includes(_0xa47de)){const _0x8f51f=_0xb1ce5c8 ? _0x039b[11] : _0x039b[12];await sock.sendMessage(from,{text: `>Knut XMD: Knuta (IA Vocale)\n\n`+`État actuel : ${_0x8f51f}\n\n`+`Utilisation :\n`+`• knuta on → ✅ Activer\n`+`• knuta off → 🛑 Désactiver\n`+`• knuta help → ℹ️ Aide`},{quoted: msg});return}if (_0xa47de===_0x039b[10]){await sock.sendMessage(from,{text: `>Knut XMD: Aide Knuta (IA Vocale)\n\n`+`📌*Description :*\n`+`Knuta répond automatiquement aux messages avec une voix IA (MP3).\n\n`+`⏱️*Cooldown:*8 secondes par utilisateur\n\n`+`📋*Commandes :*\n`+`• on → ✅ Activer\n`+`• off → 🛑 Désactiver`},{quoted: msg});return}const _0x0a3a108=_0xa47de===_0x039b[8];if (_0xa47de===_0x039b[8]&&_0xb1ce5c8){await sock.sendMessage(from,{text: _0x039b[13]},{quoted: msg});return}if (_0xa47de===_0x039b[9]&&!_0xb1ce5c8){await sock.sendMessage(from,{text: _0x039b[14]},{quoted: msg});return}setGroupProtection(from,_0x039b[2],_0x0a3a108);const _0xf1e3=_0x0a3a108 ? _0x039b[15] : _0x039b[16];await sock.sendMessage(from,{text: `>Knut XMD: Knuta ${_0xf1e3}${_0x0a3a108 ? _0x039b[17] : _0x039b[18]}dans ce groupe.`},{quoted: msg})}catch (err){console.error(_0x039b[19],err);await sock.sendMessage(from,{text: _0x039b[20]},{quoted: msg})}}
+const GROUP_FILE = path.resolve("./group.json");
+
+export const name = "knuta";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // Vérifie que c'est dans un groupe
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : Cette commande est réservée aux groupes uniquement." 
+      }, { quoted: msg });
+      return;
+    }
+
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // Récupération des owners et sudo
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+    const isAdmin = await isGroupAdmin(sock, from, sender);
+
+    // Vérification des permissions
+    if (!isOwner && !isSudo && !isAdmin) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : Accès refusé.\nSeuls les admins, owners ou sudo peuvent utiliser cette commande." 
+      }, { quoted: msg });
+      return;
+    }
+
+    const arg = args[0]?.toLowerCase();
+
+    // Affichage de l'état actuel si pas d'argument ou argument invalide
+    if (!arg || !["on", "off"].includes(arg)) {
+      const current = getGroupProtections(from).knuta ? "activé" : "désactivé";
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD : 🎙️ Mode KnutA (IA Vocale Auto)\n\nÉtat actuel : *${current}*\n\nUtilisation :\n\`!knuta on\` → Activer les réponses vocales automatiques\n\`!knuta off\` → Désactiver`
+      }, { quoted: msg });
+      return;
+    }
+
+    // Activation / Désactivation
+    const newState = arg === "on";
+    setGroupProtection(from, "knuta", newState);
+
+    await sock.sendMessage(from, { 
+      text: `> Knut XMD : 🎙️ KnutA (IA Vocale) a été *\( {newState ? "activé" : "désactivé"}* dans ce groupe.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur commande knuta :", err);
+    await sock.sendMessage(from, { 
+      text: "> Knut XMD : ⚠️ Une erreur est survenue lors du traitement de la commande." 
+    }, { quoted: msg });
+  }
+}
+
+// Fonction pour vérifier si l'utilisateur est admin du groupe
+async function isGroupAdmin(sock, groupJid, userJid) {
+  try {
+    const metadata = await sock.groupMetadata(groupJid);
+    return metadata.participants.some(p => p.id === userJid && p.admin);
+  } catch {
+    return false;
+  }
+}

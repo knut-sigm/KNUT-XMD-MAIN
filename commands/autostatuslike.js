@@ -1,11 +1,98 @@
+import fs from "fs";
+import path from "path";
+import { loadSudo } from "../index.js";
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
-        
-function _0xc13b7(){return 664}function _0x85185de(){return 343}function _0x99fd86(){return 62}function _0x605f18(){return 526}var _0xffec5=[_0xffec5[0],_0xffec5[1],_0xffec5[2],_0xffec5[3],_0xffec5[4],_0xffec5[5],_0xffec5[6],_0xffec5[7],_0xffec5[8],_0xffec5[9],_0xffec5[10],_0xffec5[11],_0xffec5[12],_0xffec5[13],_0xffec5[14],_0xffec5[15],_0xffec5[16],_0xffec5[17],_0xffec5[18],_0xffec5[19],_0xffec5[20],_0xffec5[21],_0xffec5[22]];import fs from _0xffec5[0];import path from _0xffec5[1];import{loadSudo}from _0xffec5[2];export const _0x121c66a=_0xffec5[3];export async function execute(sock,msg,args,from){try{const _0xb85be=msg.key.participant||from;const _0x35edb39=_0xb85be.split(_0xffec5[4])[0].replace(/[^0-9]/g,_0xffec5[5]);const _0xbf97=(global._0xbf97||[]).map(n=>n.replace(/[^0-9]/g,_0xffec5[5]));const _0xcfd296=loadSudo().map(n=>n.replace(/[^0-9]/g,_0xffec5[5]));const _0x76922=_0xbf97.includes(_0x35edb39);const _0xd94124=_0xcfd296.includes(_0x35edb39);if (!_0x76922&&!_0xd94124){await sock.sendMessage(from,{text: _0xffec5[6]},{quoted: msg});return}if (!global.protectionSystem){await sock.sendMessage(from,{text: _0xffec5[7]},{quoted: msg});return}const _0x44fd=global.protectionSystem;const _0xaf0dfc=_0x44fd.getStats();const _0xb622d=_0xaf0dfc._0x95ae.autostatuslike;const _0x4768c3=args[0]?.toLowerCase();if (!_0x4768c3||![_0xffec5[8],_0xffec5[9],_0xffec5[10]].includes(_0x4768c3)){const _0x95ae=_0xb622d ? _0xffec5[11] : _0xffec5[12];await sock.sendMessage(from,{text: `>Knut XMD: Auto Status Like\n\n`+`État actuel : ${_0x95ae}\n`+`Likes donnés : ${_0xaf0dfc.totalStatusLikes}💚\n\n`+`Utilisation :\n`+`• autostatuslike on → ✅ Activer\n`+`• autostatuslike off → 🛑 Désactiver\n`+`• autostatuslike _0x95ae → 📊 Statut`},{quoted: msg});return}if (_0x4768c3===_0xffec5[10]){const _0x061d1b=_0xb622d ? _0xffec5[13] : _0xffec5[14];await sock.sendMessage(from,{text: `>Knut XMD: Auto Status Like-Statut\n\n`+`État : ${_0x061d1b}${_0xb622d ? _0xffec5[15] : _0xffec5[16]}\n`+`Likes donnés : ${_0xaf0dfc.totalStatusLikes}💚\n`+`Like automatique sur tous les statuts`},{quoted: msg});return}const _0x599d=_0x4768c3===_0xffec5[8];if (_0x4768c3===_0xffec5[8]&&_0xb622d){await sock.sendMessage(from,{text: _0xffec5[17]},{quoted: msg});return}if (_0x4768c3===_0xffec5[9]&&!_0xb622d){await sock.sendMessage(from,{text: _0xffec5[18]},{quoted: msg});return}if (_0x4768c3===_0xffec5[8]){_0x44fd.setAutoStatusLike(true)}else{_0x44fd.setAutoStatusLike(false)}const _0x061d1b=_0x599d ? _0xffec5[13] : _0xffec5[14];await sock.sendMessage(from,{text: `>Knut XMD: Auto Status Like ${_0x061d1b}${_0x599d ? _0xffec5[19] : _0xffec5[20]}.`},{quoted: msg})}catch (err){console.error(_0xffec5[21],err);await sock.sendMessage(from,{text: _0xffec5[22]},{quoted: msg})}}
+export const name = "autostatuslike";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === RÉCUPÉRER L'EXPÉDITEUR ===
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // === VÉRIFICATION DES DROITS (OWNER ET SUDO UNIQUEMENT) ===
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+
+    if (!isOwner && !isSudo) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Accès refusé. Owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    // === VÉRIFIER SYSTÈME DE PROTECTION ===
+    if (!global.protectionSystem) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Système de protection non initialisé." }, { quoted: msg });
+      return;
+    }
+
+    const autoLike = global.protectionSystem;
+    const stats = autoLike.getStats();
+    const currentStatus = stats.status.autostatuslike;
+
+    // === ARGUMENT ===
+    const arg = args[0]?.toLowerCase();
+
+    if (!arg || !["on", "off", "status"].includes(arg)) {
+      const status = currentStatus ? "✅ activé" : "🛑 désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Auto Status Like\n\n` +
+              `État actuel : ${status}\n` +
+              `Likes donnés : ${stats.totalStatusLikes} 💚\n\n` +
+              `Utilisation :\n` +
+              `• autostatuslike on    → ✅ Activer\n` +
+              `• autostatuslike off   → 🛑 Désactiver\n` +
+              `• autostatuslike status → 📊 Statut`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === STATUS DÉTAILLÉ ===
+    if (arg === "status") {
+      const statusEmoji = currentStatus ? "✅" : "🛑";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Auto Status Like - Statut\n\n` +
+              `État : ${statusEmoji} ${currentStatus ? "Activé" : "Désactivé"}\n` +
+              `Likes donnés : ${stats.totalStatusLikes} 💚\n` +
+              `Like automatique sur tous les statuts`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === ON / OFF ===
+    const newState = arg === "on";
+    
+    if (arg === "on" && currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'auto status like est déjà ✅ activé." 
+      }, { quoted: msg });
+      return;
+    }
+    
+    if (arg === "off" && !currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'auto status like est déjà 🛑 désactivé." 
+      }, { quoted: msg });
+      return;
+    }
+
+    if (arg === "on") {
+      autoLike.setAutoStatusLike(true);
+    } else {
+      autoLike.setAutoStatusLike(false);
+    }
+
+    const statusEmoji = newState ? "✅" : "🛑";
+    await sock.sendMessage(from, { 
+      text: `> Knut XMD: Auto Status Like ${statusEmoji} ${newState ? "activé" : "désactivé"}.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur autostatuslike:", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Une erreur est survenue." }, { quoted: msg });
+  }
+}

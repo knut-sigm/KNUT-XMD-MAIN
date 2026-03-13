@@ -1,11 +1,102 @@
+import axios from "axios";
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
-        
-function _0x876c(){return 21}function _0xe6982(){return 31}function _0x21f4d3(){return 114}function _0x59aa(){return 524}var _0x460835=[_0x460835[0],_0x460835[1],_0x460835[2],_0x460835[3],_0x460835[4],_0x460835[5],_0x460835[6],_0x460835[7]];import axios from _0x460835[0];export const _0x20c2=_0x460835[1];export async function execute(sock,msg,args,from){try{const _0xc82079c=await sock.sendMessage(from,{text: _0x460835[2]},{quoted: msg});const _0x57d3fe=_0x460835[3]❌ Aucune actualité sportive disponible pour le moment._0x460835[4]Erreur commande infosport:_0x460835[5]❌ Erreur lors de la récupération des actualités.\n_0x460835[6]⏱️ Délai d'attente dépassé.\n_0x460835[7]Le serveur ne répond pas.\n"}else{_0xdb9fa1+=`${error.message}\n`}_0xdb9fa1+=`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;_0xdb9fa1+=`>Knut XMD : Réessaie plus tard`;await sock.sendMessage(from,{text: _0xdb9fa1},{quoted: msg})}}
+export const name = "infosport";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === ENVOI D'UN MESSAGE DE CHARGEMENT ===
+    const loadingMsg = await sock.sendMessage(from, { 
+      text: "⏳ Chargement des actualités sportives..." 
+    }, { quoted: msg });
+
+    // === APPEL À L'API GIFTEDTECH ===
+    const apiUrl = "https://api.giftedtech.co.ke/api/football/news?apikey=gifted";
+    const { data } = await axios.get(apiUrl, { timeout: 15000 });
+
+    // === VÉRIFICATION DE LA RÉPONSE ===
+    if (!data.success || !data.result || !data.result.items || data.result.items.length === 0) {
+      await sock.sendMessage(from, { 
+        text: "❌ Aucune actualité sportive disponible pour le moment." 
+      }, { quoted: msg });
+      return;
+    }
+
+    const articles = data.result.items;
+    const totalArticles = data.result.pager?.totalCount || articles.length;
+    const pageActuelle = data.result.pager?.page || 1;
+
+    // === ENTÊTE ===
+    let messageText = `📰 *INFOSPORT - ACTUALITÉS* 📰\n\n`;
+    messageText += `📅 ${new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}\n`;
+    messageText += `📊 ${articles.length} actualités • Page ${pageActuelle}\n`;
+    messageText += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+
+    // === AFFICHER TOUS LES ARTICLES ===
+    articles.forEach((article, index) => {
+      // Formater la date de publication
+      const datePub = new Date(parseInt(article.createdAt));
+      const dateFR = datePub.toLocaleDateString('fr-FR', { 
+        hour: '2-digit', 
+        minute: '2-digit',
+        day: 'numeric',
+        month: 'short'
+      });
+
+      // Titre en gras
+      messageText += `*${index + 1}. ${article.title}*\n`;
+      
+      // Résumé de l'article
+      if (article.summary) {
+        messageText += `📌 ${article.summary}\n`;
+      }
+      
+      // Métadonnées
+      messageText += `🕐 ${dateFR}`;
+      
+      // Statistiques de vues/commentaires si disponibles
+      if (article.stat) {
+        const stats = [];
+        if (article.stat.viewCount > 0) stats.push(`👁️ ${article.stat.viewCount}`);
+        if (article.stat.commentCount > 0) stats.push(`💬 ${article.stat.commentCount}`);
+        if (stats.length > 0) messageText += ` • ${stats.join(' • ')}`;
+      }
+      
+      messageText += `\n`;
+      messageText += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+    });
+
+    // === PIED DE PAGE AVEC PAGINATION ===
+    if (data.result.pager?.hasMore) {
+      messageText += `\n📌 Page ${pageActuelle} • Utilise *!infosport next* pour voir plus d'articles\n`;
+    }
+    
+    messageText += `\n> Knut XMD : Actualités sportives (${articles.length} articles)`;
+
+    // === ENVOYER LE RÉSULTAT ===
+    await sock.sendMessage(from, { 
+      text: messageText 
+    }, { quoted: msg });
+
+  } catch (error) {
+    console.error("Erreur commande infosport:", error);
+    
+    let errorMessage = "❌ Erreur lors de la récupération des actualités.\n";
+    
+    if (error.code === 'ECONNABORTED') {
+      errorMessage += "⏱️ Délai d'attente dépassé.\n";
+    } else if (error.response) {
+      errorMessage += `Code: ${error.response.status}\n`;
+    } else if (error.request) {
+      errorMessage += "Le serveur ne répond pas.\n";
+    } else {
+      errorMessage += `${error.message}\n`;
+    }
+    
+    errorMessage += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+    errorMessage += `> Knut XMD : Réessaie plus tard`;
+    
+    await sock.sendMessage(from, { 
+      text: errorMessage 
+    }, { quoted: msg });
+  }
+}

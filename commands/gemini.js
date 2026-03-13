@@ -1,11 +1,56 @@
+import axios from "axios";
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
-        
-function _0xfa781f9(){return 458}function _0x0e5c33(){return 470}var _0xa29989=[_0xa29989[0],_0xa29989[1],_0xa29989[2],_0xa29989[3],_0xa29989[4],_0xa29989[5],_0xa29989[6],_0xa29989[7],_0xa29989[8],_0xa29989[9],_0xa29989[10],_0xa29989[11],_0xa29989[12]];import axios from _0xa29989[0];export const _0xc0520e6=_0xa29989[1];export async function execute(sock,msg,args,from){try{const _0xf55b54=args.join(_0xa29989[2]).trim();if (!_0xf55b54){return await sock.sendMessage(from,{text: _0xa29989[3]},{quoted: msg})}const _0xc202=await sock.sendMessage(from,{text: _0xa29989[4]},{quoted: msg});const _0xc0ab=`https: const _0x05fde=await axios.get(_0xc0ab,{timeout: 30000});if (!_0x05fde.data||!_0x05fde.data.success){throw new Error(_0xa29989[5])}const _0x2247=_0x05fde.data.result||_0x05fde.data.message||_0xa29989[6];const _0x8db7903=`>*Gemini AI-Knut XMD*\n\n${_0x2247}`;await sock.sendMessage(from,{text: _0x8db7903},{quoted: msg})}catch (error){console.error(_0xa29989[7],error);let _0xa4f1e=_0xa29989[8];if (error.code===_0xa29989[9]){_0xa4f1e+=_0xa29989[10]}else if (error._0x05fde?.status===403){_0xa4f1e+=_0xa29989[11]}else if (error._0x05fde?.status===404){_0xa4f1e+=_0xa29989[12]}else{_0xa4f1e+=`Détails: ${error.message}`}await sock.sendMessage(from,{text: _0xa4f1e},{quoted: msg})}}
+export const name = "gemini";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    const question = args.join(" ").trim();
+
+    // === VÉRIFICATION SI UNE QUESTION EST FOURNIE ===
+    if (!question) {
+      return await sock.sendMessage(from, {
+        text: "> 🤖 *Gemini AI* - Utilisation:\n!gemini <ta question>\n\nExemple: !gemini Quelle est la capitale du Japon ?"
+      }, { quoted: msg });
+    }
+
+    // === MESSAGE DE CHARGEMENT ===
+    const loadingMsg = await sock.sendMessage(from, {
+      text: "⏳ Gemini réfléchit à ta question..."
+    }, { quoted: msg });
+
+    // === APPEL À L'API GEMINI ===
+    const apiUrl = `https://api.giftedtech.co.ke/api/ai/gemini?apikey=gifted&q=${encodeURIComponent(question)}`;
+    const response = await axios.get(apiUrl, { timeout: 30000 });
+
+    // === VÉRIFICATION DE LA RÉPONSE ===
+    if (!response.data || !response.data.success) {
+      throw new Error("Réponse invalide de l'API");
+    }
+
+    // === EXTRACTION DE LA RÉPONSE ===
+    const replyText = response.data.result || response.data.message || "Pas de réponse";
+
+    // === CONSTRUCTION DU MESSAGE FINAL ===
+    const finalText = `> *Gemini AI - Knut XMD*\n\n${replyText}`;
+
+    // === ENVOI DE LA RÉPONSE ===
+    await sock.sendMessage(from, { text: finalText }, { quoted: msg });
+
+  } catch (error) {
+    console.error("❌ Erreur Gemini:", error);
+    
+    let errorMessage = "> ⚠️ *Erreur Gemini*\n\n";
+    
+    if (error.code === 'ECONNABORTED') {
+      errorMessage += "⏱️ Délai d'attente dépassé (30 secondes).";
+    } else if (error.response?.status === 403) {
+      errorMessage += "🔒 Accès interdit à l'API. Vérifie la clé `gifted`.";
+    } else if (error.response?.status === 404) {
+      errorMessage += "❌ API non trouvée.";
+    } else {
+      errorMessage += `Détails: ${error.message}`;
+    }
+    
+    await sock.sendMessage(from, { text: errorMessage }, { quoted: msg });
+  }
+}

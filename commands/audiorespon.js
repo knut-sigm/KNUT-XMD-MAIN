@@ -1,11 +1,128 @@
+import fs from "fs";
+import path from "path";
+import { loadSudo } from "../index.js";
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
-        
-function _0x344b(){return 182}function _0xe493b0f(){return 636}function _0x0ec8e6(){return 565}function _0xa8dc(){return 71}var _0x46d1=[_0x46d1[0],_0x46d1[1],_0x46d1[2],_0x46d1[3],_0x46d1[4],_0x46d1[5],_0x46d1[6],_0x46d1[7],_0x46d1[8],_0x46d1[9],_0x46d1[10],_0x46d1[11],_0x46d1[12],_0x46d1[13],_0x46d1[14],_0x46d1[15],_0x46d1[16],_0x46d1[17],_0x46d1[18],_0x46d1[19],_0x46d1[20],_0x46d1[21],_0x46d1[22],_0x46d1[23],_0x46d1[24],_0x46d1[25],_0x46d1[26],_0x46d1[27],_0x46d1[28],_0x46d1[29],_0x46d1[30],_0x46d1[31]];import fs from _0x46d1[0];import path from _0x46d1[1];import{loadSudo}from _0x46d1[2];const _0xb73f469=path.resolve(_0x46d1[3]);export const _0xb924=_0x46d1[4];export async function execute(sock,msg,args,from){try{const _0x79b09=msg.key.participant||from;const _0x64c997=_0x79b09.split(_0x46d1[5])[0].replace(/[^0-9]/g,_0x46d1[6]);const _0x52e4b=(global._0x52e4b||[]).map(n=>n.replace(/[^0-9]/g,_0x46d1[6]));const _0xf0826=loadSudo().map(n=>n.replace(/[^0-9]/g,_0x46d1[6]));const _0x8ba8=_0x52e4b.includes(_0x64c997);const _0x3ec7309=_0xf0826.includes(_0x64c997);if (!_0x8ba8&&!_0x3ec7309){await sock.sendMessage(from,{text: _0x46d1[7]},{quoted: msg});return}if (!global.protectionSystem){await sock.sendMessage(from,{text: _0x46d1[8]},{quoted: msg});return}const _0xf7f4=global.protectionSystem;const _0x677a=_0xf7f4.getStats();const _0xc702a=_0x677a._0xd100702.audiorespons;const _0xe97df=args[0]?.toLowerCase();if (!_0xe97df||![_0x46d1[9],_0x46d1[10],_0x46d1[11],_0x46d1[12]].includes(_0xe97df)){const _0x4fca3=fs.existsSync(_0xb73f469);const _0xf123f=_0x4fca3 ? _0x46d1[13] : _0x46d1[14];const _0xd100702=_0xc702a ? _0x46d1[15] : _0x46d1[16];await sock.sendMessage(from,{text: `>Knut XMD: Audio Response\n\n`+`État actuel : ${_0xd100702}\n`+`Fichier : ${_0xf123f}\n`+`Mentions : ${_0x677a.totalMentions}\n`+`Audios envoyés : ${_0x677a.totalAudiosSent}\n\n`+`Utilisation :\n`+`• audiorespon on → ✅ Activer\n`+`• audiorespon off → 🛑 Désactiver\n`+`• audiorespon test → 🎵 Envoyer un test\n`+`• audiorespon _0xd100702 → 📊 Statut détaillé`},{quoted: msg});return}if (_0xe97df===_0x46d1[12]){const _0x4fca3=fs.existsSync(_0xb73f469);const _0xf123f=_0x4fca3 ? _0x46d1[17] : _0x46d1[18];const _0x677a=_0xf7f4.getStats();const _0x20f0=_0xc702a ? _0x46d1[19] : _0x46d1[20];await sock.sendMessage(from,{text: `>Knut XMD: Audio Response-Statut\n\n`+`État : ${_0x20f0}${_0xc702a ? _0x46d1[21] : _0x46d1[22]}\n`+`Fichier : ${_0xf123f}\n`+`Mentions reçues : ${_0x677a.totalMentions}\n`+`Audios envoyés : ${_0x677a.totalAudiosSent}\n`+`Erreurs : ${_0x677a.errors}\n`+`Owner LID : ${_0x677a.ownerLid||_0x46d1[23]}`},{quoted: msg});return}if (_0xe97df===_0x46d1[11]){if (!fs.existsSync(_0xb73f469)){await sock.sendMessage(from,{text: _0x46d1[24]},{quoted: msg});return}await sock.sendMessage(from,{text: _0x46d1[25]},{quoted: msg});await _0xf7f4.sendTestAudio(from);return}const _0x5a7d7=_0xe97df===_0x46d1[9];if (_0xe97df===_0x46d1[9]&&_0xc702a){await sock.sendMessage(from,{text: _0x46d1[26]},{quoted: msg});return}if (_0xe97df===_0x46d1[10]&&!_0xc702a){await sock.sendMessage(from,{text: _0x46d1[27]},{quoted: msg});return}if (_0xe97df===_0x46d1[9]){_0xf7f4.setResponsStatus(true)}else{_0xf7f4.setResponsStatus(false)}const _0x20f0=_0x5a7d7 ? _0x46d1[19] : _0x46d1[20];await sock.sendMessage(from,{text: `>Knut XMD: Audio Response ${_0x20f0}${_0x5a7d7 ? _0x46d1[28] : _0x46d1[29]}.`},{quoted: msg})}catch (err){console.error(_0x46d1[30],err);await sock.sendMessage(from,{text: _0x46d1[31]},{quoted: msg})}}
+const AUDIO_FILE = path.resolve("./respon.mp3");
+
+export const name = "audiorespon";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === RÉCUPÉRER L'EXPÉDITEUR ===
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    // === VÉRIFICATION DES DROITS (OWNER ET SUDO UNIQUEMENT) ===
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+
+    if (!isOwner && !isSudo) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Accès refusé. Owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    // === VÉRIFIER SYSTÈME DE PROTECTION ===
+    if (!global.protectionSystem) {
+      await sock.sendMessage(from, { text: "> Knut XMD : Système de protection non initialisé." }, { quoted: msg });
+      return;
+    }
+
+    const audioRespons = global.protectionSystem;
+    const stats = audioRespons.getStats();
+    const currentStatus = stats.status.audiorespons;
+
+    // === ARGUMENT ===
+    const arg = args[0]?.toLowerCase();
+
+    if (!arg || !["on", "off", "test", "status"].includes(arg)) {
+      const audioExists = fs.existsSync(AUDIO_FILE);
+      const audioStatus = audioExists ? "✅ Fichier OK" : "❌ Fichier manquant";
+      const status = currentStatus ? "✅ activé" : "🛑 désactivé";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Audio Response\n\n` +
+              `État actuel : ${status}\n` +
+              `Fichier : ${audioStatus}\n` +
+              `Mentions : ${stats.totalMentions}\n` +
+              `Audios envoyés : ${stats.totalAudiosSent}\n\n` +
+              `Utilisation :\n` +
+              `• audiorespon on    → ✅ Activer\n` +
+              `• audiorespon off   → 🛑 Désactiver\n` +
+              `• audiorespon test  → 🎵 Envoyer un test\n` +
+              `• audiorespon status → 📊 Statut détaillé`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === STATUS DÉTAILLÉ ===
+    if (arg === "status") {
+      const audioExists = fs.existsSync(AUDIO_FILE);
+      const audioStatus = audioExists ? "✅ OK" : "❌ Manquant";
+      const stats = audioRespons.getStats();
+      const statusEmoji = currentStatus ? "✅" : "🛑";
+      
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Audio Response - Statut\n\n` +
+              `État : ${statusEmoji} ${currentStatus ? "Activé" : "Désactivé"}\n` +
+              `Fichier : ${audioStatus}\n` +
+              `Mentions reçues : ${stats.totalMentions}\n` +
+              `Audios envoyés : ${stats.totalAudiosSent}\n` +
+              `Erreurs : ${stats.errors}\n` +
+              `Owner LID : ${stats.ownerLid || "Non défini"}`
+      }, { quoted: msg });
+      return;
+    }
+
+    // === TEST ===
+    if (arg === "test") {
+      if (!fs.existsSync(AUDIO_FILE)) {
+        await sock.sendMessage(from, { 
+          text: "> Knut XMD : ❌ Fichier 'respon.mp3' introuvable." 
+        }, { quoted: msg });
+        return;
+      }
+
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : 🎵 Envoi du fichier audio de test..." 
+      }, { quoted: msg });
+      
+      await audioRespons.sendTestAudio(from);
+      return;
+    }
+
+    // === ON / OFF ===
+    const newState = arg === "on";
+    
+    if (arg === "on" && currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'audio response est déjà ✅ activé." 
+      }, { quoted: msg });
+      return;
+    }
+    
+    if (arg === "off" && !currentStatus) {
+      await sock.sendMessage(from, { 
+        text: "> Knut XMD : ⚠️ L'audio response est déjà 🛑 désactivé." 
+      }, { quoted: msg });
+      return;
+    }
+
+    if (arg === "on") {
+      audioRespons.setResponsStatus(true);
+    } else {
+      audioRespons.setResponsStatus(false);
+    }
+
+    const statusEmoji = newState ? "✅" : "🛑";
+    await sock.sendMessage(from, { 
+      text: `> Knut XMD: Audio Response ${statusEmoji} ${newState ? "activé" : "désactivé"}.`
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("Erreur audiorespon:", err);
+    await sock.sendMessage(from, { text: "> Knut XMD : Une erreur est survenue." }, { quoted: msg });
+  }
+}

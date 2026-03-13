@@ -1,11 +1,86 @@
+import fs from "fs";
+import dotenv from "dotenv";
+dotenv.config();
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
-        
-function _0x9303e(){return 294}function _0x74ed34(){return 447}var _0x01bff=[_0x01bff[0],_0x01bff[1],_0x01bff[2],_0x01bff[3],_0x01bff[4],_0x01bff[5],_0x01bff[6],_0x01bff[7],_0x01bff[8],_0x01bff[9],_0x01bff[10],_0x01bff[11],_0x01bff[12],_0x01bff[13],_0x01bff[14],_0x01bff[15],_0x01bff[16],_0x01bff[17],_0x01bff[18],_0x01bff[19]];import fs _0x63adaa _0x01bff[0];import dotenv _0x63adaa _0x01bff[1];dotenv.config();export const _0x710dd2=_0x01bff[2];export async function execute(sock,msg,args){const _0x63adaa=msg.key.remoteJid;if (!_0x63adaa.endsWith(_0x01bff[3])){return await sock.sendMessage(_0x63adaa,{text: _0x01bff[4]},{quoted: msg})}try{const _0xb337=await sock._0xb337(_0x63adaa);const _0x21f8d64=_0xb337._0x21f8d64||[];const _0x0af3=(sock?.user?.id?.split?.(_0x01bff[5])?.[0]||sock?.user?._0x2b6b4?.split?.(_0x01bff[5])?.[0]||_0x01bff[6])+_0x01bff[7];const _0xcca6=msg.key.participant||msg.participant||_0x63adaa;const _0x556b=_0x01bff[8];if (!fs.existsSync(_0x556b)){console.error(_0x01bff[9]);return await sock.sendMessage(_0x63adaa,{text: _0x01bff[10]},{quoted: msg})}const _0xb4098b4=JSON.parse(fs.readFileSync(_0x556b,_0x01bff[11]));const _0x49d98cf=Array.isArray(_0xb4098b4.owners) ? _0xb4098b4.owners : [];if (_0x49d98cf.length===0){console.error(_0x01bff[12]);return await sock.sendMessage(_0x63adaa,{text: _0x01bff[13]},{quoted: msg})}const _0xb7c237=_0x49d98cf.map(n=>n.replace(/\D/g,_0x01bff[6])+_0x01bff[7]);const _0x19f77c=p=>{const _0x8db498=p?.admin||p?._0x19f77c||p?.isSuperAdmin;return _0x8db498===true||_0x8db498===_0x01bff[14]||_0x8db498===_0x01bff[15]};const _0x6b7f8d=_0x21f8d64 .filter(p=>{const _0x2b6b4=p?.id||p?._0x2b6b4||p?.participant;if (!_0x2b6b4) return false;return _0x19f77c(p)&&_0x2b6b4!==_0x0af3&&!_0xb7c237.includes(_0x2b6b4)&&_0x2b6b4!==_0xcca6}) .map(p=>p.id);if (_0x6b7f8d.length===0){return await sock.sendMessage(_0x63adaa,{text: _0x01bff[16]},{quoted: msg})}await sock.groupParticipantsUpdate(_0x63adaa,_0x6b7f8d,_0x01bff[17]);await sock.sendMessage(_0x63adaa,{text: `>Knut XMD: 🔽*${_0x6b7f8d.length}admin(s) rétrogradé(s).*(Bot,propriétaires et auteur exclus)`,mentions: _0x6b7f8d},{quoted: msg})}catch (err){console.error(_0x01bff[18],err);await sock.sendMessage(_0x63adaa,{text: _0x01bff[19]},{quoted: msg})}}
+export const name = "demoteall";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  // Vérifie si la commande est utilisée dans un groupe
+  if (!from.endsWith("@g.us")) {
+    return await sock.sendMessage(from, {
+      text: "🚫 *Commande réservée aux groupes seulement.*"
+    }, { quoted: msg });
+  }
+
+  try {
+    const groupMetadata = await sock.groupMetadata(from);
+    const participants = groupMetadata.participants || [];
+
+    // --- Identifiants essentiels ---
+    const botJid =
+      (sock?.user?.id?.split?.(":")?.[0] || sock?.user?.jid?.split?.(":")?.[0] || "") +
+      "@s.whatsapp.net";
+
+    const sender = msg.key.participant || msg.participant || from;
+
+    // --- Charger les propriétaires depuis un fichier JSON ---
+    const configPath = "./config.json";
+    if (!fs.existsSync(configPath)) {
+      console.error("⚠️ config.json introuvable !");
+      return await sock.sendMessage(from, {
+        text: "> Knut XMD: ⚠️ Le fichier config.json est introuvable."
+      }, { quoted: msg });
+    }
+
+    const configData = JSON.parse(fs.readFileSync(configPath, "utf-8"));
+    const OWNER_NUMBERS = Array.isArray(configData.owners) ? configData.owners : [];
+
+    if (OWNER_NUMBERS.length === 0) {
+      console.error("⚠️ Aucun numéro de propriétaire trouvé dans config.json !");
+      return await sock.sendMessage(from, {
+        text: "> Knut XMD: ⚠️ Aucun numéro de propriétaire n’est configuré dans config.json."
+      }, { quoted: msg });
+    }
+
+    // Formater les JIDs des propriétaires
+    const OWNER_JIDS = OWNER_NUMBERS.map(n => n.replace(/\D/g, "") + "@s.whatsapp.net");
+
+    // --- Fonction utilitaire pour détecter les admins ---
+    const isAdmin = p => {
+      const adminFlag = p?.admin || p?.isAdmin || p?.isSuperAdmin;
+      return adminFlag === true || adminFlag === "admin" || adminFlag === "superadmin";
+    };
+
+    // --- Liste des admins à rétrograder (exclure bot, owners, auteur) ---
+    const toDemote = participants
+      .filter(p => {
+        const jid = p?.id || p?.jid || p?.participant;
+        if (!jid) return false;
+        return isAdmin(p) && jid !== botJid && !OWNER_JIDS.includes(jid) && jid !== sender;
+      })
+      .map(p => p.id);
+
+    if (toDemote.length === 0) {
+      return await sock.sendMessage(from, {
+        text: "> Knut XMD: ✅ Aucun admin à rétrograder"
+      }, { quoted: msg });
+    }
+
+    // --- Exécution du demote ---
+    await sock.groupParticipantsUpdate(from, toDemote, "demote");
+
+    // --- Confirmation ---
+    await sock.sendMessage(from, {
+      text: `> Knut XMD: 🔽 *${toDemote.length} admin(s) rétrogradé(s).* (Bot, propriétaires et auteur exclus)`,
+      mentions: toDemote
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("❌ Erreur demoteall :", err);
+    await sock.sendMessage(from, {
+      text: "❌ *Erreur lors de l'exécution de demoteall.* Vérifie mes permissions ou réessaye."
+    }, { quoted: msg });
+  }
+}

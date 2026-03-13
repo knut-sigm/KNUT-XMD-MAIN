@@ -1,11 +1,88 @@
+import axios from "axios";
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
-        
-function _0x592c1(){return 898}function _0x230661d(){return 633}function _0x42f0c(){return 275}var _0x5722a2=[_0x5722a2[0],_0x5722a2[1],_0x5722a2[2],_0x5722a2[3],_0x5722a2[4],_0x5722a2[5],_0x5722a2[6],_0x5722a2[7],_0x5722a2[8],_0x5722a2[9],_0x5722a2[10],_0x5722a2[11],_0x5722a2[12],_0x5722a2[13],_0x5722a2[14],_0x5722a2[15],_0x5722a2[16],_0x5722a2[17],_0x5722a2[18],_0x5722a2[19],_0x5722a2[20],_0x5722a2[21],_0x5722a2[22]];import axios from _0x5722a2[0];export const _0xb0d9=_0x5722a2[1];export async function execute(sock,msg,args,from){try{const _0x3723be=args.join(_0x5722a2[2]).trim();if (!_0x3723be){return await sock.sendMessage(from,{text: _0x5722a2[3]},{quoted: msg})}const _0x454f=await sock.sendMessage(from,{text: _0x5722a2[4]},{quoted: msg});const _0x74765=`https: const _0xc013=await axios.get(_0x74765,{timeout: 30000});if (!_0xc013.data){throw new Error(_0x5722a2[5])}let _0x54e73=_0x5722a2[6];if (_0xc013.data.success&&_0xc013.data.result){_0x54e73=_0xc013.data.result}else if (_0xc013.data._0xc013){_0x54e73=_0xc013.data._0xc013}else if (_0xc013.data.message){_0x54e73=_0xc013.data.message}else if (_0xc013.data.answer){_0x54e73=_0xc013.data.answer}else if (_0xc013.data.data){_0x54e73=_0xc013.data.data}else if (typeof _0xc013.data===_0x5722a2[7]){_0x54e73=_0xc013.data}else{_0x54e73=JSON.stringify(_0xc013.data,null,2)}if (!_0x54e73||_0x54e73.trim()===_0x5722a2[6]){throw new Error(_0x5722a2[8])}const _0xcfe8e=`>*DeepSeek AI-Knut XMD*\n\n${_0x54e73}`;await sock.sendMessage(from,{text: _0xcfe8e},{quoted: msg})}catch (error){console.error(_0x5722a2[9],error);let _0xd4429=_0x5722a2[10];if (error.code===_0x5722a2[11]){_0xd4429+=_0x5722a2[12]}else if (error._0xc013?.status===403){_0xd4429+=_0x5722a2[13];_0xd4429+=_0x5722a2[14];_0xd4429+=_0x5722a2[15];_0xd4429+=_0x5722a2[16];_0xd4429+=_0x5722a2[17];_0xd4429+=_0x5722a2[18];_0xd4429+=_0x5722a2[19]}else if (error._0xc013?.status===404){_0xd4429+=_0x5722a2[20]}else if (error._0xc013?.status===429){_0xd4429+=_0x5722a2[21]}else if (error._0xc013?.status===500){_0xd4429+=_0x5722a2[22]}else{_0xd4429+=`Détails: ${error.message}`}await sock.sendMessage(from,{text: _0xd4429},{quoted: msg})}}
+export const name = "deepseek";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    const question = args.join(" ").trim();
+
+    // === VÉRIFICATION SI UNE QUESTION EST FOURNIE ===
+    if (!question) {
+      return await sock.sendMessage(from, {
+        text: "> 🤖 *DeepSeek AI* - Utilisation:\n!deepseek <ta question>\n\nExemple: !deepseek Explique l'intelligence artificielle"
+      }, { quoted: msg });
+    }
+
+    // === MESSAGE DE CHARGEMENT ===
+    const loadingMsg = await sock.sendMessage(from, {
+      text: "⏳ DeepSeek réfléchit à ta question..."
+    }, { quoted: msg });
+
+    // === APPEL À L'API DEEPSEEK (OVERCHAT) ===
+    const apiUrl = `https://api.giftedtech.co.ke/api/ai/overchat?apikey=gifted&q=${encodeURIComponent(question)}`;
+    const response = await axios.get(apiUrl, { timeout: 30000 });
+
+    // === VÉRIFICATION DE LA RÉPONSE ===
+    if (!response.data) {
+      throw new Error("Réponse invalide de l'API");
+    }
+
+    // === EXTRACTION DE LA RÉPONSE (À ADAPTER SELON LE FORMAT RÉEL) ===
+    let replyText = "";
+    
+    // Essayer différents formats possibles
+    if (response.data.success && response.data.result) {
+      replyText = response.data.result;
+    } else if (response.data.response) {
+      replyText = response.data.response;
+    } else if (response.data.message) {
+      replyText = response.data.message;
+    } else if (response.data.answer) {
+      replyText = response.data.answer;
+    } else if (response.data.data) {
+      replyText = response.data.data;
+    } else if (typeof response.data === 'string') {
+      replyText = response.data;
+    } else {
+      // Si aucun format connu, on affiche tout
+      replyText = JSON.stringify(response.data, null, 2);
+    }
+
+    if (!replyText || replyText.trim() === "") {
+      throw new Error("Réponse vide de l'API");
+    }
+
+    // === CONSTRUCTION DU MESSAGE FINAL ===
+    const finalText = `> *DeepSeek AI - Knut XMD*\n\n${replyText}`;
+
+    // === ENVOI DE LA RÉPONSE ===
+    await sock.sendMessage(from, { text: finalText }, { quoted: msg });
+
+  } catch (error) {
+    console.error("❌ Erreur DeepSeek:", error);
+    
+    let errorMessage = "> ⚠️ *Erreur DeepSeek*\n\n";
+    
+    if (error.code === 'ECONNABORTED') {
+      errorMessage += "⏱️ Délai d'attente dépassé (30 secondes).";
+    } else if (error.response?.status === 403) {
+      errorMessage += "🔒 Accès interdit à l'API DeepSeek.\n";
+      errorMessage += "Causes possibles:\n";
+      errorMessage += "• Clé API `gifted` invalide\n";
+      errorMessage += "• API restreinte\n\n";
+      errorMessage += "Solutions:\n";
+      errorMessage += "• Vérifie la clé API\n";
+      errorMessage += "• Teste l'URL dans ton navigateur";
+    } else if (error.response?.status === 404) {
+      errorMessage += "❌ API DeepSeek non trouvée.";
+    } else if (error.response?.status === 429) {
+      errorMessage += "⏳ Trop de requêtes. Réessaie dans quelques instants.";
+    } else if (error.response?.status === 500) {
+      errorMessage += "🔧 Erreur serveur interne.";
+    } else {
+      errorMessage += `Détails: ${error.message}`;
+    }
+    
+    await sock.sendMessage(from, { text: errorMessage }, { quoted: msg });
+  }
+}

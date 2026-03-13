@@ -1,11 +1,73 @@
+// =================== COMMANDE AUTO-KNUT-CHAT ===================
+// Fichier : commandes/autoknutchat.js
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
-        
-function _0xe4a13b(){return 713}function _0xaf5a(){return 674}var _0x4ade5=[_0x4ade5[0],_0x4ade5[1],_0x4ade5[2],_0x4ade5[3],_0x4ade5[4],_0x4ade5[5],_0x4ade5[6],_0x4ade5[7],_0x4ade5[8],_0x4ade5[9],_0x4ade5[10],_0x4ade5[11],_0x4ade5[12],_0x4ade5[13],_0x4ade5[14],_0x4ade5[15],_0x4ade5[16],_0x4ade5[17],_0x4ade5[18],_0x4ade5[19],_0x4ade5[20],_0x4ade5[21]];import{getGroupProtections,setGroupProtection}from _0x4ade5[0];import{loadSudo}from _0x4ade5[1];export const _0xf46c=_0x4ade5[2];export async function execute(sock,msg,args,from){try{if (!from.endsWith(_0x4ade5[3])){await sock.sendMessage(from,{text: _0x4ade5[4]},{quoted: msg});return}const _0xc648b9c=msg.key.participant||from;const _0x3e7d7c=_0xc648b9c.split(_0x4ade5[5])[0].replace(/[^0-9]/g,_0x4ade5[6]);const _0x5d7acb2=(global._0x5d7acb2||[]).map(n=>n.replace(/[^0-9]/g,_0x4ade5[6]));const _0xf8965=loadSudo().map(n=>n.replace(/[^0-9]/g,_0x4ade5[6]));const _0xebdd17d=_0x5d7acb2.includes(_0x3e7d7c);const _0xb421=_0xf8965.includes(_0x3e7d7c);if (!_0xebdd17d&&!_0xb421){await sock.sendMessage(from,{text: _0x4ade5[7]},{quoted: msg});return}const _0xfc4704=getGroupProtections(from);const _0x2584e3=_0xfc4704.autoKnutChat||false;const _0x3cb18=args[0]?.toLowerCase();if (!_0x3cb18||![_0x4ade5[8],_0x4ade5[9],_0x4ade5[10]].includes(_0x3cb18)){const _0xc8c2bb=_0x2584e3 ? _0x4ade5[11] : _0x4ade5[12];await sock.sendMessage(from,{text: `>Knut XMD: Auto KnutChat (IA Texte)\n\n`+`État actuel : ${_0xc8c2bb}\n\n`+`Utilisation :\n`+`• knutchat on → ✅ Activer\n`+`• knutchat off → 🛑 Désactiver\n`+`• knutchat help → ℹ️ Aide`},{quoted: msg});return}if (_0x3cb18===_0x4ade5[10]){await sock.sendMessage(from,{text: `>Knut XMD: Aide Auto KnutChat (IA Texte)\n\n`+`📌*Description :*\n`+`Répond automatiquement aux messages avec du texte généré par IA.\n\n`+`⏱️*Cooldown:*5 secondes par utilisateur\n\n`+`📋*Commandes :*\n`+`• on → ✅ Activer\n`+`• off → 🛑 Désactiver`},{quoted: msg});return}const _0x13cd=_0x3cb18===_0x4ade5[8];if (_0x3cb18===_0x4ade5[8]&&_0x2584e3){await sock.sendMessage(from,{text: _0x4ade5[13]},{quoted: msg});return}if (_0x3cb18===_0x4ade5[9]&&!_0x2584e3){await sock.sendMessage(from,{text: _0x4ade5[14]},{quoted: msg});return}setGroupProtection(from,_0x4ade5[15],_0x13cd);const _0xa273a3=_0x13cd ? _0x4ade5[16] : _0x4ade5[17];await sock.sendMessage(from,{text: `>Knut XMD: Auto KnutChat ${_0xa273a3}${_0x13cd ? _0x4ade5[18] : _0x4ade5[19]}dans ce groupe.`},{quoted: msg})}catch (err){console.error(_0x4ade5[20],err);await sock.sendMessage(from,{text: _0x4ade5[21]},{quoted: msg})}}
+import fs from "fs";
+import path from "path";
+import { getGroupProtections, setGroupProtection } from "../groupManager.js";
+import { loadSudo } from "../index.js";
+
+const GROUP_FILE = path.resolve("./group.json");
+
+export const name = "knutchat";
+export const aliases = ["akc", "autoknut", "autoai"];
+
+export async function execute(sock, msg, args, from) {
+  try {
+    if (!from.endsWith("@g.us")) {
+      await sock.sendMessage(from, { text: "❌ Cette commande est réservée aux groupes." }, { quoted: msg });
+      return;
+    }
+
+    const sender = msg.key.participant || from;
+    const senderNum = sender.split("@")[0].replace(/[^0-9]/g, "");
+
+    const owners = (global.owners || []).map(n => n.replace(/[^0-9]/g, ""));
+    const sudoList = loadSudo().map(n => n.replace(/[^0-9]/g, ""));
+    const isOwner = owners.includes(senderNum);
+    const isSudo = sudoList.includes(senderNum);
+    const isAdmin = await isGroupAdmin(sock, from, sender);
+
+    if (!isOwner && !isSudo && !isAdmin) {
+      await sock.sendMessage(from, { text: "❌ Accès refusé. Admin, owner ou sudo requis." }, { quoted: msg });
+      return;
+    }
+
+    const arg = args[0]?.toLowerCase();
+    if (!arg || !["on", "off", "état", "status"].includes(arg)) {
+      const current = getGroupProtections(from).autoKnutChat ? "🟢 Activé" : "🔴 Désactivé";
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Auto-Knut-Chat\n\n📊 État : ${current}\n\nUtilisation : \`!autoknutchat on\` ou \`!autoknutchat off\`\n💡 Alias: !akc, !autoknut, !autoai`
+      }, { quoted: msg });
+      return;
+    }
+
+    if (arg === "on" || arg === "off") {
+      const newState = arg === "on";
+      setGroupProtection(from, "autoKnutChat", newState);
+
+      await sock.sendMessage(from, { 
+        text: `> Knut XMD: Auto-Knut-Chat ${newState ? "🟢 activé" : "🔴 désactivé"} dans ce groupe.\n\n${newState ? "Knut répondra automatiquement à tous les messages (sauf aux admins)." : "Knut ne répondra plus automatiquement."}`
+      }, { quoted: msg });
+    } else if (arg === "état" || arg === "status") {
+      const current = getGroupProtections(from).autoKnutChat ? "🟢 Activé" : "🔴 Désactivé";
+      const configInfo = `• Cooldown : 5 secondes\n• Longueur min : 3 caractères\n• Ignore les commandes\n• Ignore les admins\n• API : David Cyril Tech`;
+      
+      await sock.sendMessage(from, {
+        text: `> Knut XMD - Auto-Knut-Chat\n\n📊 État : ${current}\n\n⚙️ Configuration :\n${configInfo}\n\n📝 Usage : !autoknutchat on/off`
+      }, { quoted: msg });
+    }
+
+  } catch (err) {
+    console.error("❌ Erreur autoknutchat:", err);
+    await sock.sendMessage(from, { text: "❌ Une erreur est survenue." }, { quoted: msg });
+  }
+}
+
+async function isGroupAdmin(sock, groupJid, userJid) {
+  try {
+    const metadata = await sock.groupMetadata(groupJid);
+    return metadata.participants.some(p => p.id === userJid && p.admin);
+  } catch {
+    return false;
+  }
+}
