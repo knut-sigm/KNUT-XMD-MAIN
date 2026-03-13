@@ -1,11 +1,133 @@
+import axios from "axios";
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
+export const name = "tiktok-search";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === RÉCUPÉRER LE TERME DE RECHERCHE ===
+    const searchQuery = args.join(" ");
+    
+    if (!searchQuery) {
+      await sock.sendMessage(from, { 
+        text: "❌ Utilisation: !tiktok-search <terme de recherche>\n\nExemple: !tiktok-search messi" 
+      }, { quoted: msg });
+      return;
+    }
+
+    // === ENVOI D'UN MESSAGE DE CHARGEMENT ===
+    const loadingMsg = await sock.sendMessage(from, { 
+      text: `⏳ Recherche de vidéos TikTok pour "${searchQuery}"...` 
+    }, { quoted: msg });
+
+    // === APPEL À L'API TIKTOK SEARCH ===
+    const apiUrl = `https://api.giftedtech.co.ke/api/search/tiktoksearch?apikey=gifted&query=${encodeURIComponent(searchQuery)}`;
+    const response = await axios.get(apiUrl, { timeout: 15000 });
+
+    // === VÉRIFICATION DE LA RÉPONSE ===
+    if (!response.data || !response.data.status === 200) {
+      throw new Error("Réponse invalide de l'API");
+    }
+
+    // === TRAITEMENT DES RÉSULTATS ===
+    const results = response.data.result || [];
+    
+    if (!results || results.length === 0) {
+      await sock.sendMessage(from, { 
+        text: `❌ Aucun résultat trouvé pour "${searchQuery}".` 
+      }, { quoted: msg });
+      return;
+    }
+
+    // === CONSTRUCTION DU MESSAGE ===
+    let messageText = `🎵 *TIKTOK SEARCH* 🎵\n\n`;
+    messageText += `🔍 Recherche: *${searchQuery}*\n`;
+    messageText += `📊 Résultats: ${results.length} vidéos\n`;
+    messageText += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+
+    // Afficher les premiers résultats (limite à 10 pour éviter un message trop long)
+    const maxResults = Math.min(results.length, 10);
+    
+    for (let i = 0; i < maxResults; i++) {
+      const video = results[i];
+      
+      messageText += `*${i + 1}. ${video.title || 'Sans titre'}*\n`;
+      
+      if (video.author) {
+        messageText += `👤 Par: ${video.author.nickname || video.author.unique_id || 'Inconnu'}\n`;
+      }
+      
+      if (video.stats) {
+        const stats = [];
+        if (video.stats.playCount) stats.push(`▶️ ${formatNumber(video.stats.playCount)}`);
+        if (video.stats.likeCount) stats.push(`❤️ ${formatNumber(video.stats.likeCount)}`);
+        if (video.stats.commentCount) stats.push(`💬 ${formatNumber(video.stats.commentCount)}`);
+        if (video.stats.shareCount) stats.push(`🔄 ${formatNumber(video.stats.shareCount)}`);
         
-function _0x79dd3e8(){return 411}function _0x3417(){return 407}var _0x8792=[_0x8792[0],_0x8792[1],_0x8792[2],_0x8792[3],_0x8792[4],_0x8792[5],_0x8792[6],_0x8792[7],_0x8792[8],_0x8792[9],_0x8792[10],_0x8792[11],_0x8792[12],_0x8792[13],_0x8792[14],_0x8792[15],_0x8792[16],_0x8792[17],_0x8792[18],_0x8792[19]];import axios from _0x8792[0];export const _0x7029388=_0x8792[1];export async function execute(sock,msg,args,from){try{const _0x8a36=args.join(_0x8792[2]);if (!_0x8a36){await sock.sendMessage(from,{text: _0x8792[3]},{quoted: msg});return}const _0x45fc7=await sock.sendMessage(from,{text: `⏳ Recherche de vidéos TikTok pour _0x8792[4]...`},{quoted: msg});const _0xdda82db=`https: const _0x7de6b1b=await axios.get(_0xdda82db,{timeout: 15000});if (!_0x7de6b1b.data||!_0x7de6b1b.data.status===200){throw new Error(_0x8792[5])}const _0xaa187=_0x7de6b1b.data.result||[];if (!_0xaa187||_0xaa187.length===0){await sock.sendMessage(from,{text: `❌ Aucun résultat trouvé pour _0x8792[4].`},{quoted: msg});return}let _0xc708268=`🎵*TIKTOK SEARCH*🎵\n\n`;_0xc708268+=`🔍 Recherche:*${_0x8a36}*\n`;_0xc708268+=`📊 Résultats: ${_0xaa187.length}vidéos\n`;_0xc708268+=`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;const _0x89086f=Math.min(_0xaa187.length,10);for (let _0xcfd6ca=0;_0xcfd6ca<_0x89086f;_0xcfd6ca++){const _0x1a50492=_0xaa187[_0xcfd6ca];_0xc708268+=`*${_0xcfd6ca+1}. ${_0x1a50492.title||_0x8792[6]}*\n`;if (_0x1a50492.author){_0xc708268+=`👤 Par: ${_0x1a50492.author.nickname||_0x1a50492.author.unique_id||_0x8792[7]}\n`}if (_0x1a50492._0xc87da){const _0xc87da=[];if (_0x1a50492._0xc87da.playCount) _0xc87da.push(`▶️ ${formatNumber(_0x1a50492._0xc87da.playCount)}`);if (_0x1a50492._0xc87da.likeCount) _0xc87da.push(`❤️ ${formatNumber(_0x1a50492._0xc87da.likeCount)}`);if (_0x1a50492._0xc87da.commentCount) _0xc87da.push(`💬 ${formatNumber(_0x1a50492._0xc87da.commentCount)}`);if (_0x1a50492._0xc87da.shareCount) _0xc87da.push(`🔄 ${formatNumber(_0x1a50492._0xc87da.shareCount)}`);if (_0xc87da.length>0){_0xc708268+=`📊 ${_0xc87da.join(_0x8792[8])}\n`}}if (_0x1a50492._0x9b165){const _0x9b165=formatDuration(_0x1a50492._0x9b165);_0xc708268+=`⏱️ Durée: ${_0x9b165}\n`}if (_0x1a50492.url||_0x1a50492.videoUrl){_0xc708268+=`🔗 Lien: ${_0x1a50492.url||_0x1a50492.videoUrl}\n`}_0xc708268+=`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`}if (_0xaa187.length>_0x89086f){_0xc708268+=`\n📌 ... et ${_0xaa187.length-_0x89086f}autres résultats (limite affichée: 10)\n`}_0xc708268+=`\n>Knut XMD : Recherche TikTok`;await sock.sendMessage(from,{text: _0xc708268},{quoted: msg})}catch (error){console.error(_0x8792[9],error);let _0x5044e2=_0x8792[10];if (error.code===_0x8792[11]){_0x5044e2+=_0x8792[12]}else if (error._0x7de6b1b?.status===403){_0x5044e2+=_0x8792[13]}else if (error._0x7de6b1b){_0x5044e2+=`Code: ${error._0x7de6b1b.status}\n`}else if (error.request){_0x5044e2+=_0x8792[14]}else{_0x5044e2+=`${error.message}\n`}_0x5044e2+=`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;_0x5044e2+=`>Knut XMD : Réessaie plus tard`;await sock.sendMessage(from,{text: _0x5044e2},{quoted: msg})}}function formatNumber(num){if (!num) return _0x8792[15];if (num>=1000000) return (num/1000000).toFixed(1)+_0x8792[16];if (num>=1000) return (num/1000).toFixed(1)+_0x8792[17];return num.toString()}function formatDuration(seconds){if (!seconds) return _0x8792[18];const _0xeb7ff91=Math.floor(seconds/60);const _0x28cc3ab=Math.floor(seconds % 60);return `${_0xeb7ff91.toString().padStart(2,_0x8792[19])}:${_0x28cc3ab.toString().padStart(2,_0x8792[19])}`}
+        if (stats.length > 0) {
+          messageText += `📊 ${stats.join(' • ')}\n`;
+        }
+      }
+      
+      if (video.duration) {
+        const duration = formatDuration(video.duration);
+        messageText += `⏱️ Durée: ${duration}\n`;
+      }
+      
+      if (video.url || video.videoUrl) {
+        messageText += `🔗 Lien: ${video.url || video.videoUrl}\n`;
+      }
+      
+      messageText += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+    }
+
+    if (results.length > maxResults) {
+      messageText += `\n📌 ... et ${results.length - maxResults} autres résultats (limite affichée: 10)\n`;
+    }
+
+    messageText += `\n> Knut XMD : Recherche TikTok`;
+
+    // === ENVOYER LE RÉSULTAT ===
+    await sock.sendMessage(from, { 
+      text: messageText 
+    }, { quoted: msg });
+
+  } catch (error) {
+    console.error("Erreur commande tiktok-search:", error);
+    
+    let errorMessage = "❌ Erreur lors de la recherche TikTok.\n";
+    
+    if (error.code === 'ECONNABORTED') {
+      errorMessage += "⏱️ Délai d'attente dépassé.\n";
+    } else if (error.response?.status === 403) {
+      errorMessage += "🔒 Accès interdit à l'API. Vérifie la clé API.\n";
+    } else if (error.response) {
+      errorMessage += `Code: ${error.response.status}\n`;
+    } else if (error.request) {
+      errorMessage += "Le serveur ne répond pas.\n";
+    } else {
+      errorMessage += `${error.message}\n`;
+    }
+    
+    errorMessage += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+    errorMessage += `> Knut XMD : Réessaie plus tard`;
+    
+    await sock.sendMessage(from, { 
+      text: errorMessage 
+    }, { quoted: msg });
+  }
+}
+
+// === FONCTIONS UTILITAIRES ===
+function formatNumber(num) {
+  if (!num) return "0";
+  if (num >= 1000000) return (num / 1000000).toFixed(1) + "M";
+  if (num >= 1000) return (num / 1000).toFixed(1) + "k";
+  return num.toString();
+}
+
+function formatDuration(seconds) {
+  if (!seconds) return "00:00";
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+}

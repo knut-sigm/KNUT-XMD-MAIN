@@ -1,8 +1,20 @@
 export const name = "menu";
+import fs from "fs";
+import path from "path";
 
 export async function execute(sock, msg, args) {
+
   try {
+
     const from = msg.key.remoteJid;
+
+    let thumbBuffer;
+    try {
+      thumbBuffer = fs.readFileSync(path.resolve("knut.jpg"));
+    } catch (err) {
+      console.error("❌ knut.jpg not found:", err.message);
+      thumbBuffer = null;
+    }
 
     // Uptime du bot
     const totalSeconds = process.uptime();
@@ -11,28 +23,11 @@ export async function execute(sock, msg, args) {
     const seconds = Math.floor(totalSeconds % 60);
     const uptime = `${hours}h ${minutes}m ${seconds}s`;
 
-    // 🔍 Détection du lieu où la commande est tapée
-    let lieu = "💬 _Discussion privée_";
-    
-    // Vérifier si c'est un groupe (remoteJid se termine par @g.us)
-    if (from.endsWith("@g.us")) {
-      try {
-        // Récupérer les infos du groupe
-        const groupMetadata = await sock.groupMetadata(from);
-        const nomGroupe = groupMetadata.subject || "Groupe inconnu";
-        lieu = `👥 _${nomGroupe}_`;
-      } catch (error) {
-        console.error("Erreur récupération infos groupe:", error);
-        lieu = "👥 _Groupe_";
-      }
-    }
-
     const text = `> ╔════════════════════╗
     🐺⚫ KNUT-XMD V4 ⚫🐺
 > ╚════════════════════╝
 
 > 🥷🏾 *Utilisateur* : ${msg.pushName || "Invité"}
-> ${lieu}
 > ⚙️ *Mode*        : 🔒 Privé
 > ⏱️ *Uptime*      : ${uptime}
 > 📱 *Version*     : 4.0
@@ -44,7 +39,7 @@ export async function execute(sock, msg, args) {
 
 > ╔────── IA ──────╗
 > ➤ knut (question)
- 
+> ➤ imagine 
 > ➤ k-video
 > ➤ knutts
 > ➤ ai
@@ -55,9 +50,6 @@ export async function execute(sock, msg, args) {
 > ╔──── UTILITY ─────╗
 > ➤ anime-stick
 > ➤ anime-quote
-> ➤ animequote
-> ➤ animu
-> ➤ imagine
 > ➤ artist
 > ➤ calc
 > ➤ car
@@ -68,14 +60,11 @@ export async function execute(sock, msg, args) {
 > ➤ horoscope
 > ➤ prefix
 > ➤ delete
-> ➤ dlt
 > ➤ vv
 > ➤ vv2
 > ➤ device
-> ➤ devicegc
 > ➤ countryinfos
 > ➤ infos
-> ➤ infosgroup
 > ➤ take
 > ➤ lid
 > ➤ meteo
@@ -85,43 +74,22 @@ export async function execute(sock, msg, args) {
 > ➤ translate
 > ➤ time
 > ➤ lyrics 
-> ➤ lyrictts
+> ➤ lyrics2
 > ➤ ping
 > ➤ whois
 > ➤ autoreact
-> ➤ autorecording
-> ➤ autowrite
 > ➤ setpp
-> ➤ checkphone
-> ➤ phonecheck
-> ➤ definition
-> ➤ delay
-> ➤ news
-> ➤ owner
-> ➤ photo
-> ➤ resetlink
-> ➤ respons
-> ➤ save
-> ➤ autostatuslike
-> ➤ autovv
-> ➤ statutlike
-> ➤ update
-> ➤ url
 > ╚─────────────────╝
 
 > ╔────── SUDO ──────╗
 > ➤ delsudo
 > ➤ listsudo
 > ➤ setsudo
-> ➤ checkban
-> ➤ unblock
 > ╚─────────────────╝
 
 > ╔───── GROUPS ─────╗
-> ➤ arcane (purge)
 > ➤ add
 > ➤ audiorespons
-> ➤ audiorespon
 > ➤ demote @
 > ➤ demoteall
 > ➤ gclink
@@ -146,19 +114,9 @@ export async function execute(sock, msg, args) {
 > ➤ tagadmin
 > ➤ tagall
 > ➤ writetoall
-> ➤ writeall
 > ➤ wasted
 > ➤ welcome 
 > ➤ goodbye 
-> ➤ join
-> ➤ kclose
-> ➤ knutchat-ib
-> ➤ antidelete-groups
-> ➤ antidelete-ib
-> ➤ antidelete
-> ➤ alertadmin
-> ➤ autoknutchat
-
 > ╚──────────────────╝
 
 > ╔──── DOWNLOAD ────╗
@@ -168,17 +126,12 @@ export async function execute(sock, msg, args) {
 > ➤ play
 > ➤ apk
 > ➤ tiktok
-> ➤ tiktokaudio
-> ➤ tiktokmp3
-> ➤ ttmp3
-> ➤ instagram 
-> ➤ facebook
+> ➤ Instagram 
 > ➤ down-url
 > ➤ url
 > ➤ youtube 
 > ➤ yt
 > ➤ telegram-stick
-> ➤ spotify
 > ╚──────────────────╝
 
 > ╔───── SECURITY ─────╗
@@ -190,21 +143,8 @@ export async function execute(sock, msg, args) {
 > ➤ antimessage 
 > ➤ antivoice 
 > ➤ antiaudio 
-> ➤ antivideo
 > ➤ antisticker 
-> ➤ antiporn
-> ➤ antipromote
-> ➤ antispam
-> ➤ antitagall
-> ➤ antiunknow
-> ➤ antiunkwon
-> ➤ protection
-> ➤ protection2
-> ➤ protections2
 > ➤ protectionstate
-> ➤ mysecurity
-> ➤ security
-> ➤ warnadmin
 > ╚───────────────────╝
 
 > ╔───── MEDIAS ─────╗
@@ -215,52 +155,67 @@ export async function execute(sock, msg, args) {
 > ➤ logo
 > ➤ tts
 > ➤ tomp4
-> ➤ hd
-> ➤ textmaker
 > ╚──────────────────╝
 
 > ╔─────────FUN───────╗
 > ➤ anime
 > ➤ baiseall
-> ➤ kofane 
 > ➤ blur
 > ➤ hentai
 > ➤ xvid
 > ➤ xxx
-> ➤ amour
-> ➤ game
 > ╚───────────────────╝
-
 
 > Dev  Knut`;
 
-    // 📸 Envoi du menu avec ./knut.jpg (à la racine)
+    // Envoi du menu avec image + voir la chaîne
     await sock.sendMessage(
       from,
       {
-        image: { url: "./knut.jpg" },
+        image: { url: "https://files.catbox.moe/5t635s.jpg" },
         caption: text,
-        gifPlayback: true
+        gifPlayback: true,
+        contextInfo: {
+          isForwarded: true,
+          forwardedNewsletterMessageInfo: {
+            newsletterJid: "120363422093642600@newsletter",
+            newsletterName: "Knut XMD"
+          },
+          externalAdReply: {
+            title: "⚫ KNUT-XMD-V4",
+            body: "Rejoignez nous ici !!!",
+            mediaType: 1,
+            thumbnail: thumbBuffer,
+            renderLargerThumbnail: false,
+            mediaUrl: "knut.jpg",
+            sourceUrl: "knut.jpg",
+            thumbnailUrl: "https://whatsapp.com/channel/0029Vb75xwOADTOBVjSgJV0k"
+          }
+        }
       },
       { quoted: msg }
     );
 
-    // 🎵 Envoi de l'audio ./knut.mp3 (à la racine)
+    // Envoi de l'audio (sans contextInfo)
     await sock.sendMessage(
       from,
       {
-        audio: { url: "./knut.mp3" },
+        audio: { url: "./knut.jpg" },
         mimetype: "audio/mpeg"
       },
       { quoted: msg }
     );
 
   } catch (err) {
+
     console.error("❌ Erreur commande menu :", err);
+
     await sock.sendMessage(
       msg.key.remoteJid,
-      { text: "> ⚠️ Impossible d’afficher le menu." },
+      { text: "> ⚠️ Impossible d'afficher le menu." },
       { quoted: msg }
     );
+
   }
+
 }

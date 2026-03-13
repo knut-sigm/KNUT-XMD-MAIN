@@ -1,11 +1,72 @@
+import dotenv from "dotenv";
+dotenv.config();
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
-        
-function _0xd9d9d69(){return 370}function _0xf22040f(){return 35}function _0xeee2(){return 890}function _0xb31d810(){return 833}var _0xf381d35=[_0xf381d35[0],_0xf381d35[1],_0xf381d35[2],_0xf381d35[3],_0xf381d35[4],_0xf381d35[5],_0xf381d35[6],_0xf381d35[7],_0xf381d35[8],_0xf381d35[9],_0xf381d35[10],_0xf381d35[11],_0xf381d35[12],_0xf381d35[13],_0xf381d35[14],_0xf381d35[15],_0xf381d35[16],_0xf381d35[17],_0xf381d35[18],_0xf381d35[19]];import fs _0x5eaab _0xf381d35[0];import dotenv _0x5eaab _0xf381d35[1];dotenv.config();export const _0x259d=_0xf381d35[2];export async function execute(sock,msg,args){const _0x5eaab=msg.key.remoteJid;if (!_0x5eaab.endsWith(_0xf381d35[3])){return await sock.sendMessage(_0x5eaab,{text: _0xf381d35[4]},{quoted: msg})}try{const _0x1efa6=await sock._0x1efa6(_0x5eaab);const _0x2da5dc=_0x1efa6._0x2da5dc||[];const _0xa3cb=(sock?.user?.id?.split?.(_0xf381d35[5])?.[0]||sock?.user?._0xdc4ca7f?.split?.(_0xf381d35[5])?.[0]||_0xf381d35[6])+_0xf381d35[7];const _0x1a878c=msg.key.participant||msg.participant||_0x5eaab;const _0x7b8b=_0xf381d35[8];if (!fs.existsSync(_0x7b8b)){console.error(_0xf381d35[9]);return await sock.sendMessage(_0x5eaab,{text: _0xf381d35[10]},{quoted: msg})}const _0x89a0=JSON.parse(fs.readFileSync(_0x7b8b,_0xf381d35[11]));const _0xaf732=Array.isArray(_0x89a0.owners) ? _0x89a0.owners : [];if (_0xaf732.length===0){console.error(_0xf381d35[12]);return await sock.sendMessage(_0x5eaab,{text: _0xf381d35[13]},{quoted: msg})}const _0xe9aa47=_0xaf732.map(n=>n.replace(/\D/g,_0xf381d35[6])+_0xf381d35[7]);const _0x828bf3=p=>{const _0xc99e11e=p?.admin||p?._0x828bf3||p?.isSuperAdmin;return _0xc99e11e===true||_0xc99e11e===_0xf381d35[14]||_0xc99e11e===_0xf381d35[15]};const _0xd31d=_0x2da5dc .filter(p=>{const _0xdc4ca7f=p?.id||p?._0xdc4ca7f||p?.participant;if (!_0xdc4ca7f) return false;return!_0x828bf3(p)&&_0xdc4ca7f!==_0xa3cb&&!_0xe9aa47.includes(_0xdc4ca7f)&&_0xdc4ca7f!==_0x1a878c}) .map(p=>p.id);if (_0xd31d.length===0){return await sock.sendMessage(_0x5eaab,{text: _0xf381d35[16]},{quoted: msg})}await sock.groupParticipantsUpdate(_0x5eaab,_0xd31d,_0xf381d35[17]);await sock.sendMessage(_0x5eaab,{text: `>Knut XMD: 🔼*${_0xd31d.length}membre(s) promu(s) en admin.*(Bot,propriétaires et auteur exclus)`,mentions: _0xd31d},{quoted: msg})}catch (err){console.error(_0xf381d35[18],err);await sock.sendMessage(_0x5eaab,{text: _0xf381d35[19]},{quoted: msg})}}
+export const name = "promoteall";
+
+export async function execute(sock, msg, args) {
+  const from = msg.key.remoteJid;
+
+  // Vérifie si c’est un groupe
+  if (!from.endsWith("@g.us")) {
+    return await sock.sendMessage(from, {
+      text: "> Knut XMD: 🚫 Commande réservée aux groupes seulement."
+    }, { quoted: msg });
+  }
+
+  try {
+    const groupMetadata = await sock.groupMetadata(from);
+    const participants = groupMetadata.participants || [];
+
+    // --- JIDs essentiels ---
+    const botJid =
+      (sock?.user?.id?.split?.(":")?.[0] || sock?.user?.jid?.split?.(":")?.[0] || "") +
+      "@s.whatsapp.net";
+
+    const OWNER_NUMBER = process.env.NUMBER?.replace(/\D/g, "");
+    const OWNER_JID = OWNER_NUMBER ? `${OWNER_NUMBER}@s.whatsapp.net` : null;
+
+    const sender = msg.key.participant || msg.participant || from;
+
+    if (!OWNER_JID) {
+      console.error("⚠️ Le numéro du propriétaire (NUMBER) n'est pas défini dans .env !");
+      return await sock.sendMessage(from, {
+        text: "> Knut XMD: ⚠️ Le numéro du propriétaire n’est pas configuré."
+      }, { quoted: msg });
+    }
+
+    // --- Fonction utilitaire pour vérifier si admin ---
+    const isAdmin = p => {
+      const adminFlag = p?.admin || p?.isAdmin || p?.isSuperAdmin;
+      return adminFlag === true || adminFlag === "admin" || adminFlag === "superadmin";
+    };
+
+    // --- Liste des membres à promouvoir (exclure bot, owner et auteur déjà admin) ---
+    const toPromote = participants
+      .filter(p => {
+        const jid = p?.id || p?.jid || p?.participant;
+        if (!jid) return false;
+        return !isAdmin(p) && jid !== botJid && jid !== OWNER_JID;
+      })
+      .map(p => p.id);
+
+    if (toPromote.length === 0) {
+      return await sock.sendMessage(from, {
+        text: "> Knut XMD: ✅ Tous les membres sont déjà administrateurs"
+      }, { quoted: msg });
+    }
+
+    // --- Promotion des membres ---
+    await sock.groupParticipantsUpdate(from, toPromote, "promote");
+
+    await sock.sendMessage(from, {
+      text: `🟢 *${toPromote.length} membre(s) promu(s) administrateur(s).* (Bot et propriétaire exclus)`,
+      mentions: toPromote
+    }, { quoted: msg });
+
+  } catch (err) {
+    console.error("❌ Erreur promoteall :", err);
+    await sock.sendMessage(from, {
+      text: "❌ *Erreur lors de l'exécution de promoteall.* Vérifie mes permissions ou réessaye."
+    }, { quoted: msg });
+  }
+}

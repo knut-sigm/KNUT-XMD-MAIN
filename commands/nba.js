@@ -1,11 +1,101 @@
+import axios from "axios";
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
-        
-function _0x02e8(){return 779}function _0x9b6a5e3(){return 787}function _0x4affee(){return 791}function _0x410e(){return 565}var _0xc8330=[_0xc8330[0],_0xc8330[1],_0xc8330[2],_0xc8330[3],_0xc8330[4],_0xc8330[5],_0xc8330[6],_0xc8330[7],_0xc8330[8],_0xc8330[9],_0xc8330[10],_0xc8330[11],_0xc8330[12],_0xc8330[13],_0xc8330[14],_0xc8330[15],_0xc8330[16],_0xc8330[17],_0xc8330[18],_0xc8330[19]];import axios from _0xc8330[0];export const _0xa53a14c=_0xc8330[1];export async function execute(sock,msg,args,from){try{const _0x17f6b4=await sock.sendMessage(from,{text: _0xc8330[2]},{quoted: msg});const _0x19784c4=_0xc8330[3]❌ Aucun score NBA disponible pour le moment._0xc8330[4]Live_0xc8330[5]In Progress_0xc8330[6]Full Time_0xc8330[5]Finished_0xc8330[7]⏱️_0xc8330[8]Full Time_0xc8330[9]Finished_0xc8330[10]✅_0xc8330[11]Live_0xc8330[9]In Progress_0xc8330[10]🔴_0xc8330[12]0_0xc8330[13]0_0xc8330[9]Full Time_0xc8330[14]Full Time_0xc8330[15]Terminé_0xc8330[16]Erreur commande nba:_0xc8330[17]❌ Erreur lors de la récupération des scores NBA.\n_0xc8330[18]⏱️ Délai d'attente dépassé.\n_0xc8330[19]Le serveur ne répond pas.\n"}else{_0xc1e827+=`${error.message}\n`}_0xc1e827+=`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;_0xc1e827+=`>Knut XMD : Réessaie plus tard`;await sock.sendMessage(from,{text: _0xc1e827},{quoted: msg})}}
+export const name = "nba";
+
+export async function execute(sock, msg, args, from) {
+  try {
+    // === ENVOI D'UN MESSAGE DE CHARGEMENT ===
+    const loadingMsg = await sock.sendMessage(from, { 
+      text: "⏳ Chargement des scores NBA..." 
+    }, { quoted: msg });
+
+    // === APPEL À L'API GIFTEDTECH ===
+    const apiUrl = "https://api.giftedtech.co.ke/api/football/basketball-live?apikey=gifted";
+    const { data } = await axios.get(apiUrl, { timeout: 15000 });
+
+    // === VÉRIFICATION DE LA RÉPONSE ===
+    if (!data.success || !data.result || !data.result.matches || data.result.matches.length === 0) {
+      await sock.sendMessage(from, { 
+        text: "❌ Aucun score NBA disponible pour le moment." 
+      }, { quoted: msg });
+      return;
+    }
+
+    const matches = data.result.matches;
+    const totalMatches = data.result.totalMatches || matches.length;
+
+    // === ENTÊTE ===
+    let messageText = `🏀 *NBA - SCORES EN DIRECT* 🏀\n\n`;
+    messageText += `📅 ${new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}\n`;
+    messageText += `📊 Total: ${totalMatches} matchs\n`;
+    messageText += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+
+    // === STATISTIQUES RAPIDES ===
+    const liveMatches = matches.filter(m => m.status === "Live" || m.status === "In Progress").length;
+    const finishedMatches = matches.filter(m => m.status === "Full Time" || m.status === "Finished").length;
+    const upcomingMatches = totalMatches - liveMatches - finishedMatches;
+    
+    messageText += `🔴 En direct: ${liveMatches} | ✅ Terminés: ${finishedMatches} | ⏱️ À venir: ${upcomingMatches}\n`;
+    messageText += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+
+    // === AFFICHER TOUS LES MATCHS SANS LIMITE ===
+    matches.forEach((match, index) => {
+      // Déterminer l'emoji du statut
+      let statusEmoji = "⏱️";
+      if (match.status === "Full Time" || match.status === "Finished") statusEmoji = "✅";
+      else if (match.status === "Live" || match.status === "In Progress") statusEmoji = "🔴";
+      
+      // Formater la date/heure
+      const matchDate = new Date(match.startTime);
+      const heureFR = matchDate.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+      
+      // Construire le bloc du match
+      messageText += `*${index + 1}. ${match.homeTeam} vs ${match.awayTeam}*\n`;
+      messageText += `🏀 NBA\n`;
+      
+      // Afficher le score
+      if (match.homeScore !== "0" || match.awayScore !== "0" || match.status === "Full Time") {
+        messageText += `📌 Score: ${match.homeScore} - ${match.awayScore}\n`;
+      } else {
+        messageText += `📌 Heure: ${heureFR}\n`;
+      }
+      
+      // Afficher le statut
+      messageText += `${statusEmoji} ${match.status === "Full Time" ? "Terminé" : match.status || 'À venir'}\n`;
+      messageText += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+    });
+
+    // === PIED DE PAGE ===
+    messageText += `\n📊 *RÉSUMÉ NBA*\n`;
+    messageText += `🔴 ${liveMatches} en direct | ✅ ${finishedMatches} terminés | ⏱️ ${upcomingMatches} à venir\n`;
+    messageText += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+    messageText += `> Knut XMD : Scores NBA complets (${totalMatches} matchs)`;
+
+    // === ENVOYER LE RÉSULTAT ===
+    await sock.sendMessage(from, { 
+      text: messageText 
+    }, { quoted: msg });
+
+  } catch (error) {
+    console.error("Erreur commande nba:", error);
+    
+    let errorMessage = "❌ Erreur lors de la récupération des scores NBA.\n";
+    
+    if (error.code === 'ECONNABORTED') {
+      errorMessage += "⏱️ Délai d'attente dépassé.\n";
+    } else if (error.response) {
+      errorMessage += `Code: ${error.response.status}\n`;
+    } else if (error.request) {
+      errorMessage += "Le serveur ne répond pas.\n";
+    } else {
+      errorMessage += `${error.message}\n`;
+    }
+    
+    errorMessage += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+    errorMessage += `> Knut XMD : Réessaie plus tard`;
+    
+    await sock.sendMessage(from, { 
+      text: errorMessage 
+    }, { quoted: msg });
+  }
+}

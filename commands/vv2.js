@@ -1,11 +1,103 @@
+import fs from "fs";
+import path from "path";
+import { downloadContentFromMessage } from "@whiskeysockets/baileys";
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
-        
-function _0x529a45(){return 89}function _0xb3c7f(){return 775}function _0x3c2009(){return 815}function _0xf37175a(){return 198}var _0x1ab3d5=[_0x1ab3d5[0],_0x1ab3d5[1],_0x1ab3d5[2],_0x1ab3d5[3],_0x1ab3d5[4],_0x1ab3d5[5],_0x1ab3d5[6],_0x1ab3d5[7],_0x1ab3d5[8],_0x1ab3d5[9],_0x1ab3d5[10],_0x1ab3d5[11],_0x1ab3d5[12],_0x1ab3d5[13],_0x1ab3d5[14],_0x1ab3d5[15]];import fs from _0x1ab3d5[0];import path from _0x1ab3d5[1];import{downloadContentFromMessage}from _0x1ab3d5[2];const _0xe8cbe=path.join(process.cwd(),_0x1ab3d5[3]);let _0xde5b={users:{},owners: []};try{_0xde5b=JSON.parse(fs.readFileSync(_0xe8cbe))}catch (err){console.error(_0x1ab3d5[4],err)}export const _0xccced=_0x1ab3d5[5];export async function execute(sock,m,args){try{const _0x41dd592=m.message?.extendedTextMessage?.contextInfo?.quotedMessage;if (!_0x41dd592){return await sock.sendMessage( m.key.remoteJid,{text: _0x1ab3d5[6]},{_0x41dd592: m})}const _0x3d8fe0=_0x41dd592.viewOnceMessageV2?.message||_0x41dd592.viewOnceMessageV2Extension?.message||_0x41dd592;if (!Array.isArray(_0xde5b.owners)||_0xde5b.owners.length===0){return await sock.sendMessage( m.key.remoteJid,{text: _0x1ab3d5[7]},{_0x41dd592: m})}let _0x289c4=Buffer.from([]);let _0xe2afc5e=null;let _0x814163=`>Knut XMD : Media récupéré depuis ${m.key.remoteJid}`;if (_0x3d8fe0.imageMessage){const _0x5174=await downloadContentFromMessage(_0x3d8fe0.imageMessage,_0x1ab3d5[8]);for await (const chunk of _0x5174) _0x289c4=Buffer.concat([_0x289c4,chunk]);_0xe2afc5e=_0x1ab3d5[8]}else if (_0x3d8fe0.videoMessage){const _0x5174=await downloadContentFromMessage(_0x3d8fe0.videoMessage,_0x1ab3d5[9]);for await (const chunk of _0x5174) _0x289c4=Buffer.concat([_0x289c4,chunk]);_0xe2afc5e=_0x1ab3d5[9]}else if (_0x3d8fe0.audioMessage){const _0x5174=await downloadContentFromMessage(_0x3d8fe0.audioMessage,_0x1ab3d5[10]);for await (const chunk of _0x5174) _0x289c4=Buffer.concat([_0x289c4,chunk]);_0xe2afc5e=_0x1ab3d5[10]}else{return await sock.sendMessage( m.key.remoteJid,{text: _0x1ab3d5[11]},{_0x41dd592: m})}for (const ownerNumber of _0xde5b.owners){const _0x0a97a=ownerNumber.includes(_0x1ab3d5[12]) ? ownerNumber : `${ownerNumber}@s.whatsapp.net`;if (_0xe2afc5e===_0x1ab3d5[8]){await sock.sendMessage(_0x0a97a,{image: _0x289c4,_0x814163})}else if (_0xe2afc5e===_0x1ab3d5[9]){await sock.sendMessage(_0x0a97a,{video: _0x289c4,_0x814163})}else if (_0xe2afc5e===_0x1ab3d5[10]){await sock.sendMessage(_0x0a97a,{audio: _0x289c4,mimetype: _0x1ab3d5[13],ptt: _0x3d8fe0.audioMessage?.ptt||false})}}await sock.sendMessage( m.key.remoteJid,{text: _0x1ab3d5[14]},{_0x41dd592: m})}catch (e){await sock.sendMessage( m.key.remoteJid,{text: _0x1ab3d5[15]+e.message},{_0x41dd592: m})}}
+// 🔥 Lecture directe depuis la racine du projet
+const configPath = path.join(process.cwd(), "config.json");
+
+let config = { users: {}, owners: [] };
+try {
+  config = JSON.parse(fs.readFileSync(configPath));
+} catch (err) {
+  console.error("Erreur lecture config.json :", err);
+}
+
+export const name = "vv2";
+
+export async function execute(sock, m, args) {
+  try {
+    const quoted = m.message?.extendedTextMessage?.contextInfo?.quotedMessage;
+    if (!quoted) {
+      return await sock.sendMessage(
+        m.key.remoteJid,
+        { text: "> Knut XMD :⚠️ Répondez à une photo, vidéo ou audio vue unique." },
+        { quoted: m }
+      );
+    }
+
+    const innerMsg =
+      quoted.viewOnceMessageV2?.message ||
+      quoted.viewOnceMessageV2Extension?.message ||
+      quoted;
+
+    // 🔥 Respect exact de ta structure
+    if (!Array.isArray(config.owners) || config.owners.length === 0) {
+      return await sock.sendMessage(
+        m.key.remoteJid,
+        { text: "> Knut XMD :❌ Aucun owner configuré." },
+        { quoted: m }
+      );
+    }
+
+    let buffer = Buffer.from([]);
+    let mediaType = null;
+    let caption = `> Knut XMD : Media récupéré depuis ${m.key.remoteJid}`;
+
+    if (innerMsg.imageMessage) {
+      const stream = await downloadContentFromMessage(innerMsg.imageMessage, "image");
+      for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
+      mediaType = "image";
+    }
+    else if (innerMsg.videoMessage) {
+      const stream = await downloadContentFromMessage(innerMsg.videoMessage, "video");
+      for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
+      mediaType = "video";
+    }
+    else if (innerMsg.audioMessage) {
+      const stream = await downloadContentFromMessage(innerMsg.audioMessage, "audio");
+      for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
+      mediaType = "audio";
+    }
+    else {
+      return await sock.sendMessage(
+        m.key.remoteJid,
+        { text: "> Knut XMD :❌ Pas un média vue unique valide." },
+        { quoted: m }
+      );
+    }
+
+    // 🚀 Envoi à tous les owners
+    for (const ownerNumber of config.owners) {
+      const ownerJid = ownerNumber.includes("@")
+        ? ownerNumber
+        : `${ownerNumber}@s.whatsapp.net`;
+
+      if (mediaType === "image") {
+        await sock.sendMessage(ownerJid, { image: buffer, caption });
+      }
+      else if (mediaType === "video") {
+        await sock.sendMessage(ownerJid, { video: buffer, caption });
+      }
+      else if (mediaType === "audio") {
+        await sock.sendMessage(ownerJid, {
+          audio: buffer,
+          mimetype: "audio/mp4",
+          ptt: innerMsg.audioMessage?.ptt || false
+        });
+      }
+    }
+
+    await sock.sendMessage(
+      m.key.remoteJid,
+      { text: "> Knut XMD : ✅ Media envoyé aux owners." },
+      { quoted: m }
+    );
+
+  } catch (e) {
+    await sock.sendMessage(
+      m.key.remoteJid,
+      { text: "❌ Erreur vv : " + e.message },
+      { quoted: m }
+    );
+  }
+}

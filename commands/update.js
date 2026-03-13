@@ -1,11 +1,479 @@
+import fs from 'fs-extra';
+import path from 'path';
+import { execSync, exec, spawn } from 'child_process';
+import { fileURLToPath } from 'url';
 
-            (function() {
-                var self = arguments.callee.toString();
-                setInterval(function() {
-                    if (self !== arguments.callee.toString()) {
-                        throw new Error('⌘ Code modifié');
-                    }
-                }, 1000);
-            })();
+// Get current directory
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const REPO_URL = 'https://github.com/knut-sigm/KNUT-XMD-MAIN.git';
+
+// Fichiers/dossiers à préserver (NE PAS ÉCRASER)
+const preserveItems = [
+  'session',
+  'config.json',
+  'sudo.json',
+  'modeprefix.json',
+  'group.json',
+  'jid.json',
+  'respons.json',
+  '.env',
+  'node_modules',
+  'package-lock.json',
+  'yarn.lock',
+  'knut.jpg',
+  'ecosystem.config.js'
+];
+
+// Dossiers à complètement ÉCRASER avec la version GitHub
+const overwriteFolders = [
+  'commands',     // 👈 Le dossier commands sera COMPLÈTEMENT remplacé
+  'lib',
+  'plugins',
+  'helpers',
+  'utils',
+  'scripts'
+];
+
+// Fichiers racine à préserver (ne pas écraser)
+const preserveRootFiles = [
+  'index.js',      // On préserve l'index.js actuel
+  ...preserveItems
+];
+
+// Détection de l'environnement
+function detectEnvironment() {
+  const env = {
+    isPterodactyl: false,
+    isPM2: false,
+    pm2Name: null,
+    isDocker: false,
+    isSystemd: false
+  };
+
+  // Détection Pterodactyl
+  if (process.env.PTERODACTYL_SERVER_ID || 
+      process.env.SERVER_ID || 
+      fs.existsSync('/home/container')) {
+    env.isPterodactyl = true;
+    console.log('🏠 Environnement détecté: Pterodactyl');
+  }
+
+  // Détection Docker
+  if (fs.existsSync('/.dockerenv') || process.env.DOCKER_CONTAINER) {
+    env.isDocker = true;
+    console.log('🐳 Environnement détecté: Docker');
+  }
+
+  // Détection PM2
+  try {
+    const pm2List = execSync('pm2 list', { encoding: 'utf8', stdio: ['pipe', 'pipe', 'ignore'] });
+    if (pm2List.includes('knut-xmd') || pm2List.includes('index')) {
+      env.isPM2 = true;
+      
+      if (pm2List.includes('knut-xmd')) {
+        env.pm2Name = 'knut-xmd';
+      } else {
+        const match = pm2List.match(/[│\s]+([^\s]+)[│\s]+.*online/);
+        env.pm2Name = match ? match[1] : 'index';
+      }
+      console.log(`🚀 Environnement détecté: PM2 (${env.pm2Name})`);
+    }
+  } catch {
+    // Pas de PM2
+  }
+
+  // Détection Systemd
+  try {
+    if (process.env.INVOCATION_ID || fs.existsSync('/run/systemd/system')) {
+      env.isSystemd = true;
+      console.log('⚙️ Environnement détecté: Systemd');
+    }
+  } catch {}
+
+  return env;
+}
+
+// Redémarrer automatiquement selon l'environnement
+async function autoRestart(env, sock, from) {
+  console.log('🔄 Redémarrage automatique en cours...');
+
+  // Envoyer message de redémarrage
+  try {
+    await sock.sendMessage(
+      from,
+      { text: '> Knut XMD : 🔄 Mises à jours installés... Cliquez sur restart dans le panel' },
+      { quoted: null }
+    );
+  } catch (e) {
+    // Ignorer erreur d'envoi
+  }
+
+  // Petit délai pour que le message soit envoyé
+  await new Promise(resolve => setTimeout(resolve, 2000));
+
+  // 1. CAS PTERODACTYL
+  if (env.isPterodactyl) {
+    console.log('🔄 Redémarrage Pterodactyl...');
+    
+    try {
+      // Méthode 1: Touch restart.txt (signal pour Pterodactyl)
+      fs.writeFileSync(path.join(__dirname, 'restart.txt'), new Date().toISOString());
+      console.log('✅ Signal de redémarrage envoyé (restart.txt)');
+    } catch (e) {}
+
+    // Méthode 2: Process exit (Pterodactyl redémarre automatiquement)
+    setTimeout(() => {
+      process.exit(0);
+    }, 3000);
+    
+    return;
+  }
+
+  // 2. CAS PM2
+  if (env.isPM2) {
+    console.log(`🔄 Redémarrage PM2 (${env.pm2Name})...`);
+    
+    try {
+      // Redémarrer via PM2
+      execSync(`pm2 restart ${env.pm2Name}`, { stdio: 'inherit' });
+      console.log('✅ PM2 a redémarré le processus');
+      
+      // Sauvegarder la config PM2
+      try {
+        execSync('pm2 save', { stdio: 'ignore' });
+      } catch (e) {}
+      
+      // Le processus sera remplacé par PM2, on quitte celui-ci
+      setTimeout(() => {
+        process.exit(0);
+      }, 1000);
+      
+    } catch (error) {
+      console.error('❌ Erreur PM2 restart:', error.message);
+      // Fallback: redémarrage simple
+      setTimeout(() => {
+        process.exit(0);
+      }, 3000);
+    }
+    
+    return;
+  }
+
+  // 3. CAS DOCKER
+  if (env.isDocker) {
+    console.log('🐳 Redémarrage Docker...');
+    
+    try {
+      // Dans Docker, on peut utiliser kill pour redémarrer
+      process.kill(process.pid, 'SIGTERM');
+    } catch (e) {
+      setTimeout(() => {
+        process.exit(0);
+      }, 3000);
+    }
+    
+    return;
+  }
+
+  // 4. CAS SYSTEMD
+  if (env.isSystemd) {
+    console.log('⚙️ Redémarrage Systemd...');
+    
+    try {
+      // Si le service s'appelle knut-xmd
+      exec('systemctl --user restart knut-xmd 2>/dev/null || systemctl restart knut-xmd 2>/dev/null', (err) => {
+        if (err) {
+          // Fallback
+          setTimeout(() => {
+            process.exit(0);
+          }, 3000);
+        }
+      });
+    } catch (e) {
+      setTimeout(() => {
+        process.exit(0);
+      }, 3000);
+    }
+    
+    return;
+  }
+
+  // 5. CAS STANDARD (auto-redémarrage)
+  console.log('🔄 Redémarrage standard avec auto-relance...');
+  
+  try {
+    // Lancer un nouveau processus avant de quitter
+    const newProcess = spawn('node', ['index.js'], {
+      detached: true,
+      stdio: 'inherit',
+      cwd: __dirname
+    });
+    newProcess.unref();
+    console.log('✅ Nouveau processus lancé avec PID:', newProcess.pid);
+    
+    // Sauvegarder le PID pour référence
+    fs.writeFileSync(path.join(__dirname, 'current.pid'), newProcess.pid.toString());
+    
+  } catch (e) {
+    console.error('❌ Erreur lancement nouveau processus:', e.message);
+  }
+
+  // Quitter l'ancien processus
+  setTimeout(() => {
+    console.log('👋 Arrêt de l\'ancien processus...');
+    process.exit(0);
+  }, 3000);
+}
+
+// Créer un script de redémarrage pour Pterodactyl
+function createPterodactylRestartScript() {
+  const scriptPath = path.join(__dirname, 'restart.sh');
+  
+  if (!fs.existsSync(scriptPath)) {
+    const scriptContent = `#!/bin/bash
+# Script de redémarrage automatique pour Pterodactyl
+echo "🔄 Redémarrage du bot KNUT XMD..."
+touch restart.txt
+echo "✅ Signal envoyé - Le panneau Pterodactyl va redémarrer le bot"
+sleep 2
+exit 0
+`;
+    
+    fs.writeFileSync(scriptPath, scriptContent);
+    fs.chmodSync(scriptPath, '755');
+    console.log('✅ Script restart.sh créé');
+  }
+}
+
+export default {
+  name: 'update',
+  alias: ['gitpull', 'up', 'maj', 'pull', 'actualiser', 'restart'],
+  category: 'Owner',
+  description: 'Mettre à jour le bot depuis GitHub (redémarrage auto)',
+  usage: 'update',
+  ownerOnly: true,
+
+  async execute(sock, m, args, from, context = {}) {
+    try {
+      // Détecter l'environnement
+      const env = detectEnvironment();
+      
+      // Créer script d'aide pour Pterodactyl
+      if (env.isPterodactyl) {
+        createPterodactylRestartScript();
+      }
+
+      // Message de début
+      await sock.sendMessage(
+        from,
+        { text: '> Knut XMD : 🔄 Mise à jour en cours... Veuillez patienter.' },
+        { quoted: m }
+      );
+
+      console.log('🔄 Mise à jour du bot...');
+
+      // Sauvegarder l'index.js actuel
+      const currentFile = __filename;
+      const currentContent = fs.readFileSync(currentFile, 'utf8');
+      const currentBasename = path.basename(currentFile);
+      
+      // Sauvegarder les fichiers de configuration
+      console.log('📦 Sauvegarde des fichiers de configuration...');
+      const backupDir = path.join(__dirname, '.config_backup');
+      fs.ensureDirSync(backupDir);
+
+      // Sauvegarder les fichiers à préserver
+      for (const item of preserveItems) {
+        const itemPath = path.join(__dirname, item);
+        if (fs.existsSync(itemPath)) {
+          const backupPath = path.join(backupDir, item);
+          if (fs.lstatSync(itemPath).isDirectory()) {
+            fs.copySync(itemPath, backupPath);
+          } else {
+            fs.copyFileSync(itemPath, backupPath);
+          }
+          console.log(`   ✅ Sauvegardé: ${item}`);
+        }
+      }
+
+      // Vérifier si c'est un dépôt git
+      const isGitRepo = fs.existsSync(path.join(__dirname, '.git'));
+      
+      if (!isGitRepo) {
+        // Première installation
+        console.log('📦 Premier clonage du dépôt...');
+        const tempClonePath = path.join(__dirname, 'temp_clone');
         
-function _0x204b66c(){return 891}function _0x5f43a5(){return 507}function _0x434b3(){return 779}function _0x9771a28(){return 549}var _0xb4f20=[_0xb4f20[0],_0xb4f20[1],_0xb4f20[2],_0xb4f20[3],_0xb4f20[4],_0xb4f20[5],_0xb4f20[6],_0xb4f20[7],_0xb4f20[8],_0xb4f20[9],_0xb4f20[10],_0xb4f20[11],_0xb4f20[12],_0xb4f20[13],_0xb4f20[14],_0xb4f20[15],_0xb4f20[16],_0xb4f20[17],_0xb4f20[18],_0xb4f20[19],_0xb4f20[20],_0xb4f20[21],_0xb4f20[22],_0xb4f20[23],_0xb4f20[24],_0xb4f20[25],_0xb4f20[26],_0xb4f20[27],_0xb4f20[28],_0xb4f20[29],_0xb4f20[30],_0xb4f20[31],_0xb4f20[32],_0xb4f20[33],_0xb4f20[34],_0xb4f20[35],_0xb4f20[36],_0xb4f20[37],_0xb4f20[38],_0xb4f20[39],_0xb4f20[40],_0xb4f20[41],_0xb4f20[42],_0xb4f20[43],_0xb4f20[44],_0xb4f20[45],_0xb4f20[46],_0xb4f20[47],_0xb4f20[48],_0xb4f20[49],_0xb4f20[50],_0xb4f20[51],_0xb4f20[52],_0xb4f20[53],_0xb4f20[54],_0xb4f20[55],_0xb4f20[56],_0xb4f20[57],_0xb4f20[58],_0xb4f20[59],_0xb4f20[60],_0xb4f20[61],_0xb4f20[62],_0xb4f20[63],_0xb4f20[64],_0xb4f20[65],_0xb4f20[66],_0xb4f20[67],_0xb4f20[68],_0xb4f20[69],_0xb4f20[70],_0xb4f20[71],_0xb4f20[72],_0xb4f20[73],_0xb4f20[74],_0xb4f20[75],_0xb4f20[76],_0xb4f20[77],_0xb4f20[78],_0xb4f20[79],_0xb4f20[80],_0xb4f20[81],_0xb4f20[82],_0xb4f20[83],_0xb4f20[84],_0xb4f20[85],_0xb4f20[86],_0xb4f20[87],_0xb4f20[88],_0xb4f20[89],_0xb4f20[90],_0xb4f20[91],_0xb4f20[92],_0xb4f20[93],_0xb4f20[94],_0xb4f20[95],_0xb4f20[96],_0xb4f20[97],_0xb4f20[98],_0xb4f20[99],_0xb4f20[100],_0xb4f20[101],_0xb4f20[102],_0xb4f20[103],_0xb4f20[104],_0xb4f20[105],_0xb4f20[106]];import fs from _0xb4f20[0];import path from _0xb4f20[1];import{execSync,exec,spawn}from _0xb4f20[2];import{fileURLToPath}from _0xb4f20[3];const _0x59853=fileURLToPath(import.meta.url);const _0x64060a=path.dirname(_0x59853);const _0x91cf830=_0xb4f20[4]session_0xb4f20[5]config.json_0xb4f20[5]sudo.json_0xb4f20[5]modeprefix.json_0xb4f20[5]group.json_0xb4f20[5]jid.json_0xb4f20[5]respons.json_0xb4f20[5]._0x8a20_0xb4f20[5]node_modules_0xb4f20[5]package-lock.json_0xb4f20[5]yarn.lock_0xb4f20[5]knut.jpg_0xb4f20[5]ecosystem.config.js_0xb4f20[6]commands_0xb4f20[7]lib_0xb4f20[5]plugins_0xb4f20[5]helpers_0xb4f20[5]utils_0xb4f20[5]scripts_0xb4f20[8]index.js_0xb4f20[9]/home/container_0xb4f20[10]🏠 Environnement détecté: Pterodactyl_0xb4f20[11]/.dockerenv_0xb4f20[12]🐳 Environnement détecté: Docker_0xb4f20[13]pm2 list_0xb4f20[14]utf8_0xb4f20[15]pipe_0xb4f20[16]pipe_0xb4f20[16]ignore_0xb4f20[17]knut-xmd_0xb4f20[18]index_0xb4f20[19]knut-xmd_0xb4f20[20]knut-xmd_0xb4f20[21]index_0xb4f20[22]/run/systemd/system_0xb4f20[23]⚙️ Environnement détecté: Systemd_0xb4f20[24]🔄 Redémarrage automatique en cours..._0xb4f20[25]>Knut XMD : 🔄 Mises à jours installés... Cliquez sur restart dans le panel_0xb4f20[26]🔄 Redémarrage Pterodactyl..._0xb4f20[27]restart.txt_0xb4f20[28]✅ Signal de redémarrage envoyé (restart.txt)_0xb4f20[29]inherit_0xb4f20[30]✅ PM2 a redémarré le processus_0xb4f20[31]pm2 save_0xb4f20[32]ignore_0xb4f20[33]❌ Erreur PM2 restart:_0xb4f20[34]🐳 Redémarrage Docker..._0xb4f20[35]SIGTERM_0xb4f20[36]⚙️ Redémarrage Systemd..._0xb4f20[37]systemctl--user restart knut-xmd 2>/dev/null||systemctl restart knut-xmd 2>/dev/null_0xb4f20[38]🔄 Redémarrage standard avec auto-relance..._0xb4f20[39]node_0xb4f20[40]index.js_0xb4f20[41]inherit_0xb4f20[42]✅ Nouveau processus lancé avec PID:_0xb4f20[43]current.pid_0xb4f20[44]❌ Erreur lancement nouveau processus:_0xb4f20[45]👋 Arrêt de l\_0xb4f20[46]);process.exit(0)},3000)}function createPterodactylRestartScript(){const _0xa8d49cb=path.join(_0x64060a,_0xb4f20[47]);if (!fs.existsSync(_0xa8d49cb)){const _0x8b9d=`#!/bin/bash # Script de redémarrage automatique pour Pterodactyl echo _0xb4f20[48] touch restart.txt echo _0xb4f20[49] sleep 2 exit 0 `;fs.writeFileSync(_0xa8d49cb,_0x8b9d);fs.chmodSync(_0xa8d49cb,_0xb4f20[50]);console.log(_0xb4f20[51])}}export default{name: _0xb4f20[52],alias: ['gitpull_0xb4f20[16]up_0xb4f20[16]maj_0xb4f20[16]pull_0xb4f20[16]actualiser_0xb4f20[16]restart'],category: _0xb4f20[59],description: _0xb4f20[60],usage: _0xb4f20[52],ownerOnly: true,async execute(sock,m,args,from,context={}){try{const _0x8a20=detectEnvironment();if (_0x8a20.isPterodactyl){createPterodactylRestartScript()}await sock.sendMessage( from,{text: _0xb4f20[61]},{quoted: m});console.log(_0xb4f20[62]);const _0x5c8c=_0x59853;const _0xef50d5=fs.readFileSync(_0x5c8c,_0xb4f20[63]);const _0x22a7e2=path.basename(_0x5c8c);console.log(_0xb4f20[64]);const _0x4f76=path.join(_0x64060a,_0xb4f20[65]);fs.ensureDirSync(_0x4f76);for (const item of _0x9ca4ea4){const _0x40c88=path.join(_0x64060a,item);if (fs.existsSync(_0x40c88)){const _0x2760e=path.join(_0x4f76,item);if (fs.lstatSync(_0x40c88).isDirectory()){fs.copySync(_0x40c88,_0x2760e)}else{fs.copyFileSync(_0x40c88,_0x2760e)}console.log(` ✅ Sauvegardé: ${item}`)}}const _0xaa2637=fs.existsSync(path.join(_0x64060a,_0xb4f20[66]));if (!_0xaa2637){console.log(_0xb4f20[67]);const _0x3dfad8d=path.join(_0x64060a,_0xb4f20[68]);execSync(`git clone ${_0x91cf830}${_0x3dfad8d}`,{stdio: _0xb4f20[69]});console.log(_0xb4f20[70]);for (const folder of _0x35cb){const _0xd9c6b=path.join(_0x64060a,folder);if (fs.existsSync(_0xd9c6b)){console.log(` 🗑️ Suppression de ${folder}(sera remplacé par version GitHub)`);fs.removeSync(_0xd9c6b)}}const _0xe85d=fs.readdirSync(_0x3dfad8d);for (const file of _0xe85d){const _0x83c35=path.join(_0x3dfad8d,file);const _0x71796=path.join(_0x64060a,file);if (_0xfa4c61.includes(file)){console.log(` ⏭️ Préservation de ${file}(fichier local conservé)`);continue}if (fs.existsSync(_0x71796)){fs.removeSync(_0x71796)}fs.copySync(_0x83c35,_0x71796);console.log(` ✅ Copié: ${file}`)}fs.writeFileSync(_0x5c8c,_0xef50d5);console.log(` ✅ Restauré: ${_0x22a7e2}`);fs.removeSync(_0x3dfad8d)}else{console.log(_0xb4f20[71]);try{execSync('git pull_0xb4f20[32]inherit'});console.log(_0xb4f20[73])}catch (error){console.log(_0xb4f20[74]);try{execSync('git stash_0xb4f20[32]inherit'});execSync('git pull origin main--no-edit_0xb4f20[32]inherit'});try{execSync('git stash pop_0xb4f20[32]inherit'})}catch (stashError){console.log(_0xb4f20[78]);execSync('git stash drop_0xb4f20[32]ignore'})}console.log(_0xb4f20[81])}catch (pullError){console.log(_0xb4f20[82]);execSync('git fetch--all_0xb4f20[32]inherit'});execSync('git reset--hard origin/main_0xb4f20[32]inherit'});console.log(_0xb4f20[85])}}console.log(_0xb4f20[86]);const _0x3c1d=path.join(_0x64060a,_0xb4f20[87]);if (!fs.existsSync(_0x3c1d)){execSync(`git clone--depth 1 ${_0x91cf830}${_0x3c1d}`,{stdio: _0xb4f20[80]})}for (const folder of _0x35cb){const _0x3e0c=path.join(_0x64060a,folder);const _0xb11a8=path.join(_0x3c1d,folder);if (fs.existsSync(_0xb11a8)){console.log(` 🔄 Mise à jour de ${folder}...`);if (fs.existsSync(_0x3e0c)){fs.removeSync(_0x3e0c)}fs.copySync(_0xb11a8,_0x3e0c);console.log(` ✅ ${folder}mis à jour`)}}fs.removeSync(_0x3c1d)}console.log(_0xb4f20[88]);for (const item of _0x9ca4ea4){const _0x2760e=path.join(_0x4f76,item);const _0x71796=path.join(_0x64060a,item);if (fs.existsSync(_0x2760e)){if (fs.lstatSync(_0x2760e).isDirectory()){fs.copySync(_0x2760e,_0x71796)}else{fs.copyFileSync(_0x2760e,_0x71796)}console.log(` ✅ Restauré: ${item}`)}}fs.removeSync(_0x4f76);console.log(_0xb4f20[89]);try{execSync('npm install--legacy-peer-deps_0xb4f20[32]inherit'});console.log(_0xb4f20[91])}catch (npmError){console.error(_0xb4f20[92],npmError.message);await sock.sendMessage( from,{text: _0xb4f20[93]},{quoted: m})}console.log(_0xb4f20[94]);await sock.sendMessage( from,{text: _0xb4f20[95]},{quoted: m});console.log(`[UPDATE] Effectué par ${m.pushName||_0xb4f20[59]}-${new Date().toLocaleString()}`);console.log(`📊 Environnement: ${_0x8a20.isPterodactyl ? _0xb4f20[96] : _0x8a20.isPM2 ? _0xb4f20[97] : _0xb4f20[98]}`);await autoRestart(_0x8a20,sock,from)}catch (err){console.error(_0xb4f20[99],err.message);const _0xcdd38a6=['.config_backup_0xb4f20[16]temp_clone_0xb4f20[16].temp_check'];for (const dir of _0xcdd38a6){if (fs.existsSync(path.join(_0x64060a,dir))){fs.removeSync(path.join(_0x64060a,dir))}}let _0x0bfe3=_0xb4f20[100];if (err.message?.includes(_0xb4f20[101])) _0x0bfe3=_0xb4f20[102];else if (err.message?.includes(_0xb4f20[103])) _0x0bfe3=_0xb4f20[104];else if (err.message?.includes(_0xb4f20[105])) _0x0bfe3=_0xb4f20[106];await sock.sendMessage( from,{text: `>Knut XMD : ❌ ${_0x0bfe3}`},{quoted: m})}}};
+        execSync(`git clone ${REPO_URL} ${tempClonePath}`, { stdio: 'inherit' });
+        
+        console.log('📋 Copie des fichiers...');
+        
+        // 1. D'abord, supprimer les dossiers à écraser s'ils existent
+        for (const folder of overwriteFolders) {
+          const folderPath = path.join(__dirname, folder);
+          if (fs.existsSync(folderPath)) {
+            console.log(`   🗑️ Suppression de ${folder} (sera remplacé par version GitHub)`);
+            fs.removeSync(folderPath);
+          }
+        }
+        
+        // 2. Copier TOUS les fichiers du clone (y compris commands)
+        const files = fs.readdirSync(tempClonePath);
+        
+        for (const file of files) {
+          const srcPath = path.join(tempClonePath, file);
+          const destPath = path.join(__dirname, file);
+          
+          // Ne PAS écraser les fichiers racine préservés
+          if (preserveRootFiles.includes(file)) {
+            console.log(`   ⏭️ Préservation de ${file} (fichier local conservé)`);
+            continue;
+          }
+          
+          // Pour tous les autres fichiers/dossiers, écraser
+          if (fs.existsSync(destPath)) {
+            fs.removeSync(destPath);
+          }
+          fs.copySync(srcPath, destPath);
+          console.log(`   ✅ Copié: ${file}`);
+        }
+        
+        // 3. Restaurer l'index.js actuel
+        fs.writeFileSync(currentFile, currentContent);
+        console.log(`   ✅ Restauré: ${currentBasename}`);
+        
+        fs.removeSync(tempClonePath);
+        
+      } else {
+        // Mise à jour normale
+        console.log('♻️ Mise à jour du dépôt existant...');
+        
+        try {
+          // Essayer git pull normal
+          execSync('git pull', { stdio: 'inherit' });
+          console.log('✅ Dépôt mis à jour avec git pull');
+        } catch (error) {
+          console.log('⚠️ Git pull a échoué, tentative avec stash...');
+          
+          try {
+            execSync('git stash', { stdio: 'inherit' });
+            execSync('git pull origin main --no-edit', { stdio: 'inherit' });
+            
+            try {
+              execSync('git stash pop', { stdio: 'inherit' });
+            } catch (stashError) {
+              console.log('⚠️ Conflits détectés, utilisation de la version distante');
+              execSync('git stash drop', { stdio: 'ignore' });
+            }
+            
+            console.log('✅ Dépôt mis à jour avec stash');
+          } catch (pullError) {
+            console.log('⚠️ Échec, tentative fetch reset...');
+            
+            execSync('git fetch --all', { stdio: 'inherit' });
+            execSync('git reset --hard origin/main', { stdio: 'inherit' });
+            
+            console.log('✅ Dépôt réinitialisé sur origin/main');
+          }
+        }
+        
+        // Après git pull, on s'assure que les dossiers à écraser sont bien ceux de GitHub
+        console.log('📋 Vérification des dossiers à synchroniser...');
+        
+        // Recréer un clone temporaire pour récupérer les dossiers spécifiques si nécessaire
+        const tempCheckPath = path.join(__dirname, '.temp_check');
+        if (!fs.existsSync(tempCheckPath)) {
+          execSync(`git clone --depth 1 ${REPO_URL} ${tempCheckPath}`, { stdio: 'ignore' });
+        }
+        
+        // Pour chaque dossier à écraser, on le remplace par la version GitHub
+        for (const folder of overwriteFolders) {
+          const localFolderPath = path.join(__dirname, folder);
+          const githubFolderPath = path.join(tempCheckPath, folder);
+          
+          if (fs.existsSync(githubFolderPath)) {
+            console.log(`   🔄 Mise à jour de ${folder}...`);
+            if (fs.existsSync(localFolderPath)) {
+              fs.removeSync(localFolderPath);
+            }
+            fs.copySync(githubFolderPath, localFolderPath);
+            console.log(`   ✅ ${folder} mis à jour`);
+          }
+        }
+        
+        fs.removeSync(tempCheckPath);
+      }
+
+      // Restaurer les fichiers de configuration
+      console.log('📋 Restauration des fichiers de configuration...');
+      for (const item of preserveItems) {
+        const backupPath = path.join(backupDir, item);
+        const destPath = path.join(__dirname, item);
+        if (fs.existsSync(backupPath)) {
+          if (fs.lstatSync(backupPath).isDirectory()) {
+            fs.copySync(backupPath, destPath);
+          } else {
+            fs.copyFileSync(backupPath, destPath);
+          }
+          console.log(`   ✅ Restauré: ${item}`);
+        }
+      }
+
+      // Nettoyer le dossier de sauvegarde
+      fs.removeSync(backupDir);
+
+      // Installer les dépendances
+      console.log('📦 Installation des dépendances...');
+      try {
+        execSync('npm install --legacy-peer-deps', { stdio: 'inherit' });
+        console.log('✅ Dépendances installées');
+      } catch (npmError) {
+        console.error('❌ Erreur npm:', npmError.message);
+        await sock.sendMessage(
+          from,
+          { text: '> Knut XMD : ⚠️ Erreur lors de l\'installation des dépendances.' },
+          { quoted: m }
+        );
+      }
+
+      console.log('✅ Mise à jour terminée avec succès');
+
+      // Message de fin (simplifié car auto-restart)
+      await sock.sendMessage(
+        from,
+        { text: '> Knut XMD : ✅ Mise à jour terminée !\n\n🔄 Redémarrage automatique en cours...' },
+        { quoted: m }
+      );
+
+      console.log(`[UPDATE] Effectué par ${m.pushName || 'Owner'} - ${new Date().toLocaleString()}`);
+      console.log(`📊 Environnement: ${env.isPterodactyl ? 'Pterodactyl' : env.isPM2 ? 'PM2' : 'Standard'}`);
+
+      // REDÉMARRAGE AUTOMATIQUE
+      await autoRestart(env, sock, from);
+
+    } catch (err) {
+      console.error('[UPDATE ERROR]', err.message);
+
+      // Nettoyer
+      const dirsToClean = ['.config_backup', 'temp_clone', '.temp_check'];
+      for (const dir of dirsToClean) {
+        if (fs.existsSync(path.join(__dirname, dir))) {
+          fs.removeSync(path.join(__dirname, dir));
+        }
+      }
+
+      let reason = 'Impossible de mettre à jour le bot.';
+      if (err.message?.includes('git')) reason = 'Échec Git. Vérifiez votre connexion.';
+      else if (err.message?.includes('permission')) reason = 'Permission refusée.';
+      else if (err.message?.includes('ENOSPC')) reason = 'Espace disque insuffisant.';
+
+      await sock.sendMessage(
+        from,
+        { text: `> Knut XMD : ❌ ${reason}` },
+        { quoted: m }
+      );
+    }
+  }
+};
