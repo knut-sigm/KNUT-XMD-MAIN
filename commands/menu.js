@@ -270,7 +270,7 @@ const text = `> ╔════════════════════�
             renderLargerThumbnail: false,
             mediaUrl: "knut.jpg",
             sourceUrl: "knut.jpg",
-            thumbnailUrl: "https://whatsapp.com/channel/0029Vb75xwOADTOBVjSgJV0k"
+            thumbnailUrl: "https://whatsapp.com/channel/0029Vb8IHqFIyPtKytSFfr3u"
           }
         }
       },
