@@ -268,8 +268,8 @@ const text = `> ╔════════════════════�
             mediaType: 1,
             thumbnail: thumbBuffer,
             renderLargerThumbnail: false,
-            mediaUrl: "knut.jpg",
-            sourceUrl: "knut.jpg",
+            mediaUrl: "./knut.jpg",
+            sourceUrl: "./knut.jpg",
             thumbnailUrl: "https://whatsapp.com/channel/0029Vb8IHqFIyPtKytSFfr3u"
           }
         }
