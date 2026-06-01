@@ -253,7 +253,7 @@ const text = `> ╔════════════════════�
     await sock.sendMessage(
       from,
       {
-        image: fs.readFileSync(path.resolve("knut.jpg")),
+        image: fs.readFileSync(path.resolve("./knut.jpg")),
         caption: text,
         gifPlayback: true,
         contextInfo: {
