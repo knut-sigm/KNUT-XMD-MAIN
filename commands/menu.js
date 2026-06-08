@@ -10,14 +10,14 @@ export async function execute(sock, msg, args) {
 
     let thumbBuffer;
     try {
-      thumbBuffer = fs.readFileSync(path.resolve("knut.jpg"));
+      thumbBuffer = fs.readFileSync(path.resolve("./knut.jpg"));
     } catch (err) {
       console.error("❌ knut.jpg not found:", err.message);
       thumbBuffer = null;
     }
 
     // Vérifier si le fichier audio existe
-    let audioPath = path.resolve("knut.mp3");
+    let audioPath = path.resolve("./knut.mp3");
     if (!fs.existsSync(audioPath)) {
       console.error("❌ knut.mp3 not found at:", audioPath);
     }
